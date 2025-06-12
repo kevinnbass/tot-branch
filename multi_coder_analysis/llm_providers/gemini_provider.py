@@ -1,15 +1,49 @@
 import os
+# NOTE: Google Gemini SDK is optional in many test environments. We therefore
+# *attempt* to import it lazily and only raise a helpful error message at
+# instantiation time, not at module import time (which would break unrelated
+# unit-tests that merely import the parent package).
 import logging
-from typing import Optional
-from google import genai
-from google.genai import types
+from typing import Optional, TYPE_CHECKING
+
+# Defer heavy / optional dependency import – set sentinels instead.  We rely
+# on run-time checks within `__init__` to raise when the SDK is truly needed.
+if TYPE_CHECKING:
+    # Type-hints only (ignored at run-time when type checkers are disabled)
+    from google import genai as _genai  # pragma: no cover
+    from google.genai import types as _types  # pragma: no cover
+
+genai = None  # will attempt to import lazily in __init__
+types = None
 from .base import LLMProvider
 
 class GeminiProvider(LLMProvider):
     def __init__(self, api_key: Optional[str] = None):
+        global genai, types  # noqa: PLW0603 – we intentionally mutate module globals
+
+        # Lazy-load the Google SDK only when the provider is actually
+        # instantiated (i.e. during *production* runs, not unit-tests that
+        # only touch auxiliary helpers like _assemble_prompt).
+        if genai is None or types is None:
+            try:
+                from google import genai as _genai  # type: ignore
+                from google.genai import types as _types  # type: ignore
+
+                genai = _genai  # promote to module-level for reuse
+                types = _types
+            except ImportError as e:
+                # Surface a clear, actionable message **only** when the class
+                # is actually used.  This keeps import-time side effects
+                # minimal and avoids breaking unrelated tests.
+                raise ImportError(
+                    "The google-genai SDK is required to use GeminiProvider."
+                    "\n   ➜  pip install google-genai"
+                ) from e
+
         key = api_key or os.getenv("GOOGLE_API_KEY")
         if not key:
             raise ValueError("GOOGLE_API_KEY not set")
+
         # Initialize client directly with the API key (newer SDK style)
         self._client = genai.Client(api_key=key)
 

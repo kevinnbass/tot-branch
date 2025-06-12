@@ -1,12 +1,31 @@
+# Optional dependency: OpenAI SDK (used for OpenRouter compatibility). To avoid
+# import-time failures in environments where the package is unavailable (e.g.,
+# CI test runners), we import it lazily within the constructor.
 import os
-from typing import Optional
-import openai
+from typing import Optional, TYPE_CHECKING
 from .base import LLMProvider
+
+if TYPE_CHECKING:
+    import openai as _openai  # pragma: no cover
+
+openai = None  # will attempt lazy import
 
 _BASE_URL = "https://openrouter.ai/api/v1"
 
 class OpenRouterProvider(LLMProvider):
     def __init__(self, api_key: Optional[str] = None, base_url: str = _BASE_URL):
+        global openai  # noqa: PLW0603
+
+        if openai is None:
+            try:
+                import openai as _openai  # type: ignore
+                openai = _openai
+            except ImportError as e:
+                raise ImportError(
+                    "The openai package is required for OpenRouterProvider."
+                    "\n   ➜  pip install openai"
+                ) from e
+
         key = api_key or os.getenv("OPENROUTER_API_KEY")
         if not key:
             raise ValueError("OPENROUTER_API_KEY not set")
