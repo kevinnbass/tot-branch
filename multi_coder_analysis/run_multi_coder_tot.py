@@ -660,7 +660,13 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     else:
         # Existing single-segment path
         if concurrency == 1:
-            for _, row in tqdm(df.iterrows(), total=df.shape[0], desc="Processing Statements (ToT)"):
+            # Disable tqdm progress bar for cleaner console output
+            for _, row in tqdm(
+                df.iterrows(),
+                total=df.shape[0],
+                desc="Processing Statements (ToT)",
+                disable=True,
+            ):
                 final_context = run_tot_chain(row, llm_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE)
                 final_json = {
                     "StatementID": final_context.statement_id,
@@ -688,7 +694,13 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
                 return final_json
             with ThreadPoolExecutor(max_workers=concurrency) as executor:
                 future_to_row = {executor.submit(process_single_statement, row_tuple): row_tuple[1]['StatementID'] for row_tuple in df.iterrows()}
-                for future in tqdm(as_completed(future_to_row), total=len(future_to_row), desc="Processing Statements (ToT)"):
+                # Disable tqdm progress bar for cleaner console output
+                for future in tqdm(
+                    as_completed(future_to_row),
+                    total=len(future_to_row),
+                    desc="Processing Statements (ToT)",
+                    disable=True,
+                ):
                     statement_id = future_to_row[future]
                     try:
                         result = future.result()
@@ -840,11 +852,12 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         print(f"\n✅ Evaluation complete. Full telemetry in {output_dir}")
     
     # --- Token usage summary ---
-    logging.info("=== TOKEN USAGE SUMMARY ===")
-    logging.info(f"Prompt tokens   : {token_accumulator['prompt_tokens']}")
-    logging.info(f"Response tokens : {token_accumulator['response_tokens']}")
-    logging.info(f"Thought tokens  : {token_accumulator['thought_tokens']}")
-    logging.info(f"Total tokens    : {token_accumulator['total_tokens']}")
+    # Downgrade duplicate token usage logs to DEBUG to avoid redundant console output
+    logging.debug("=== TOKEN USAGE SUMMARY ===")
+    logging.debug(f"Prompt tokens   : {token_accumulator['prompt_tokens']}")
+    logging.debug(f"Response tokens : {token_accumulator['response_tokens']}")
+    logging.debug(f"Thought tokens  : {token_accumulator['thought_tokens']}")
+    logging.debug(f"Total tokens    : {token_accumulator['total_tokens']}")
     print("\n📏 Token usage:")
     print(f"Prompt  : {token_accumulator['prompt_tokens']}")
     print(f"Response: {token_accumulator['response_tokens']}")
@@ -856,11 +869,12 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     llm_calls = token_accumulator.get('llm_calls', 0)
     total_hops = token_accumulator.get('total_hops', 0)
 
-    logging.info("=== REGEX / LLM UTILISATION ===")
-    logging.info(f"Total hops          : {total_hops}")
-    logging.info(f"Regex definitive YES : {regex_yes}")
-    logging.info(f"LLM calls made       : {llm_calls}")
-    logging.info(f"Regex coverage       : {regex_yes / total_hops:.2%}" if total_hops else "Regex coverage: n/a")
+    # Downgrade duplicate regex/LLM utilisation logs to DEBUG
+    logging.debug("=== REGEX / LLM UTILISATION ===")
+    logging.debug(f"Total hops          : {total_hops}")
+    logging.debug(f"Regex definitive YES : {regex_yes}")
+    logging.debug(f"LLM calls made       : {llm_calls}")
+    logging.debug(f"Regex coverage       : {regex_yes / total_hops:.2%}" if total_hops else "Regex coverage: n/a")
 
     print("\n⚡ Hybrid stats:")
     print(f"Total hops          : {total_hops}")
