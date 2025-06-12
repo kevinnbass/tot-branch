@@ -1189,8 +1189,9 @@ def _log_hop(hop_idx: int, active: int, regex_yes: int):
     elapsed = time.perf_counter() - START_TIME
     msg = f"Hop {hop_idx:02} → active:{active:<4} regex_yes:{regex_yes:<3} ({elapsed:5.1f}s)"
     logging.info(msg)
-    try:
-        from tqdm import tqdm  # local import to avoid hard dep elsewhere
-        tqdm.write(msg)
-    except Exception:
-        print(msg) 
+    # Remove duplicate tqdm.write and print to avoid doubled output
+    # try:
+    #     from tqdm import tqdm  # local import to avoid hard dep elsewhere
+    #     tqdm.write(msg)
+    # except Exception:
+    #     print(msg) 

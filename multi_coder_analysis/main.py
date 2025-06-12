@@ -55,18 +55,16 @@ def setup_logging(config):
 
     # Silence noisy AFC-related logs emitted by external libraries
     class _AFCNoiseFilter(logging.Filter):
-        _PHRASES = ("AFC is enabled", "AFC remote call")
+        _PHRASES = ("AFC is enabled", "AFC remote call", "max remote calls")
 
         def filter(self, record: logging.LogRecord) -> bool:  # type: ignore[override]
             msg = record.getMessage()
             return not any(p in msg for p in self._PHRASES)
 
+    # Apply filter to root logger and specifically to google logger
     logging.getLogger().addFilter(_AFCNoiseFilter())
-
-    # Reduce noise from HTTP libraries / Google SDK unless user sets DEBUG
-    if level != "DEBUG":
-        for noisy in ("google", "httpx", "urllib3"):
-            logging.getLogger(noisy).setLevel(logging.WARNING)
+    logging.getLogger("google").addFilter(_AFCNoiseFilter())
+    logging.getLogger("google.genai").addFilter(_AFCNoiseFilter())
 
     # Patch sys.stdout/stderr to filter out noisy AFC print statements outside logging
     import sys as _sys, io as _io
@@ -86,6 +84,11 @@ def setup_logging(config):
 
     _sys.stdout = _FilteredStream(_sys.stdout)
     _sys.stderr = _FilteredStream(_sys.stderr)
+
+    # Reduce noise from HTTP libraries / Google SDK unless user sets DEBUG
+    if level != "DEBUG":
+        for noisy in ("google", "httpx", "urllib3"):
+            logging.getLogger(noisy).setLevel(logging.WARNING)
 
 # --- Main Orchestration ---
 def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, args: argparse.Namespace, shutdown_event: threading.Event):
