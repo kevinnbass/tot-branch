@@ -1171,6 +1171,6 @@ START_TIME = time.perf_counter()
 # Helper to log hop progress
 def _log_hop(hop_idx: int, active: int, regex_yes: int):
     elapsed = time.perf_counter() - START_TIME
-    logging.info(
-        f"Hop {hop_idx:02} → active:{active:<4} regex_yes:{regex_yes:<3} ({elapsed:5.1f}s)"
-    ) 
+    msg = f"Hop {hop_idx:02} → active:{active:<4} regex_yes:{regex_yes:<3} ({elapsed:5.1f}s)"
+    logging.info(msg)
+    print(msg) 
