@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "Contains a preparedness statement from a corporation without an explicit public safety link within 40 chars.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "'prepared for situations like this' and 'robust plans in place' are explicit calming cues (Preparedness).", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes preparedness: 'Tyson Foods is prepared', 'we have robust plans in place, which we are now executing'.", "method": "llm_batch"}

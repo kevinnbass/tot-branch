@@ -4,3 +4,5 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 5, "answer": "no", "rationale": "Reports actions taken but lacks explicit calming language.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "'prevent the spread' is about capability/action, not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes past and planned actions/response measures: 'officials quarantined the affected premises', 'birds... will be depopulated'.", "method": "llm_batch"}
