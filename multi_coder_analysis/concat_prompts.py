@@ -2,12 +2,12 @@ import os
 import logging
 from pathlib import Path
 from datetime import datetime
-from typing import Optional
+from typing import Optional, Union
 
 def concatenate_prompts(
     prompts_dir: str = "prompts",
     output_file: str = "concatenated_prompts.txt",
-    target_dir: Optional[str | Path] = None,
+    target_dir: Optional[Union[str, Path]] = None,
 ):
     """
     Concatenates all text files in the prompts directory into a single file.
