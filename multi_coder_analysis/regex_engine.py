@@ -17,11 +17,21 @@ The engine stays **conservative**:
 """
 
 import logging
-import time
 import re
-from typing import Optional, TypedDict, Any
+from typing import Optional, TypedDict
 
-from .regex_rules import COMPILED_RULES, PatternInfo  # local absolute import
+# Robust import that works whether this module is executed as part of the
+# `multi_coder_analysis` package or as a loose script.
+try:
+    from .regex_rules import COMPILED_RULES, PatternInfo  # type: ignore
+except ImportError:  # pragma: no cover
+    # Fallback when the parent package context isn't available (e.g. the
+    # file is imported directly via `python path/run_multi_coder_tot.py`).
+    try:
+        from regex_rules import COMPILED_RULES, PatternInfo  # type: ignore
+    except ImportError:
+        # Final attempt: assume package name is available
+        from multi_coder_analysis.regex_rules import COMPILED_RULES, PatternInfo  # type: ignore
 
 # ---------------------------------------------------------------------------
 # Public typed structure returned to the pipeline when a rule fires
