@@ -4,6 +4,18 @@ Data container for a single segment's journey through the 12-hop Tree-of-Thought
 from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Optional, List, Dict, Any
+import sys as _sys  # Compatibility shim needs sys access
+
+# ---------------------------------------------------------------------------
+# Compatibility shim ---------------------------------------------------------
+# Some legacy (and current) code does:
+#     import hop_context
+# *before* the package root has been imported.  To keep that working we
+# register *this* module object under the bare name **immediately**.
+# ---------------------------------------------------------------------------
+if "hop_context" not in _sys.modules:  # pragma: no cover – infrastructure only
+    _sys.modules["hop_context"] = _sys.modules[__name__]
+# ---------------------------------------------------------------------------
 
 @dataclass
 class HopContext:
