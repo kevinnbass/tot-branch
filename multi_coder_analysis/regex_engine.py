@@ -40,6 +40,7 @@ class Answer(TypedDict):
     answer: str
     rationale: str
     frame: Optional[str]
+    regex: dict  # detailed match information
 
 
 # ---------------------------------------------------------------------------
@@ -109,9 +110,19 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
     if winning_rule is None:
         return None
 
+    # Compute match object again to get span/captures (guaranteed match)
+    m = winning_rule.yes_regex.search(text)  # type: ignore[arg-type]
+    span = [m.start(), m.end()] if m else None
+    captures = list(m.groups()) if m else []
+
     rationale = f"regex:{winning_rule.name} matched"
     return {
         "answer": "yes",
         "rationale": rationale,
         "frame": winning_rule.yes_frame,
+        "regex": {
+            "rule": winning_rule.name,
+            "span": span,
+            "captures": captures,
+        },
     } 

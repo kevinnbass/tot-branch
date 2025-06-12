@@ -179,12 +179,16 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
                 "rationale": regex_ans["rationale"],
             }
             frame_override = regex_ans.get("frame")
+            via = "regex"
+            regex_meta = regex_ans.get("regex", {})
             with token_lock:
                 token_accumulator['regex_yes'] += 1
         else:
             llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
             frame_override = None
             provider_called = True
+            via = "llm"
+            regex_meta = None
             with token_lock:
                 token_accumulator['llm_calls'] += 1
         
@@ -194,7 +198,13 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
         rationale = llm_response.get("rationale", "No rationale provided.")
         
         # Update logs and traces
-        trace_entry = {"Q": q_idx, "answer": choice, "rationale": rationale}
+        trace_entry = {
+            "Q": q_idx,
+            "answer": choice,
+            "rationale": rationale,
+            "via": via,
+            "regex": regex_meta,
+        }
         
         # Add thinking traces if available
         thoughts = provider.get_last_thoughts()
@@ -371,6 +381,8 @@ def run_tot_chain_batch(
                     "Q": hop_idx,
                     "answer": r_answer["answer"],
                     "rationale": r_answer["rationale"],
+                    "via": "regex",
+                    "regex": r_answer.get("regex", {}),
                 }
                 seg_ctx.raw_llm_responses.append(trace_entry)
                 seg_ctx.analysis_history.append(f"Q{hop_idx}: yes (regex)")
@@ -409,7 +421,13 @@ def run_tot_chain_batch(
             answer = str(obj.get("answer", "uncertain")).lower().strip()
             rationale = str(obj.get("rationale", ""))
 
-            trace_entry = {"Q": hop_idx, "answer": answer, "rationale": rationale}
+            trace_entry = {
+                "Q": hop_idx,
+                "answer": answer,
+                "rationale": rationale,
+                "via": "llm",
+                "regex": None,
+            }
             ctx.raw_llm_responses.append(obj)
             ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
             ctx.reasoning_trace.append(trace_entry)
