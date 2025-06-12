@@ -6,7 +6,7 @@
 
 from __future__ import annotations
 
-import re
+import re, logging
 from dataclasses import dataclass
 from typing import List, Dict, Pattern, Optional
 from pathlib import Path
@@ -86,22 +86,27 @@ RAW_RULES: List[PatternInfo] = [
 # ----------------------------------------------------------------------------
 COMPILED_RULES: Dict[int, List[PatternInfo]] = {}
 for rule in RAW_RULES:
-    compiled_yes: Pattern = re.compile(rule.yes_regex, flags=re.I | re.UNICODE)
-    compiled_veto: Optional[Pattern] = None
-    if rule.veto_regex:
-        compiled_veto = re.compile(rule.veto_regex, flags=re.I | re.UNICODE)
+    try:
+        compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+        compiled_veto = (
+            re.compile(rule.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+            if rule.veto_regex
+            else None
+        )
+    except re.error as e:
+        logging.warning(f"Skipping invalid regex in rule {rule.name}: {e}")
+        continue
 
-    # Replace raw strings with compiled patterns via object copy
-    compiled_rule = PatternInfo(
-        hop=rule.hop,
-        name=rule.name,
-        yes_frame=rule.yes_frame,
-        yes_regex=compiled_yes,  # type: ignore[arg-type]
-        veto_regex=compiled_veto,  # type: ignore[arg-type]
-        mode=rule.mode,
+    COMPILED_RULES.setdefault(rule.hop, []).append(
+        PatternInfo(
+            hop=rule.hop,
+            name=rule.name,
+            yes_frame=rule.yes_frame,
+            yes_regex=compiled_yes,  # type: ignore[arg-type]
+            veto_regex=compiled_veto,  # type: ignore[arg-type]
+            mode=rule.mode,
+        )
     )
-
-    COMPILED_RULES.setdefault(rule.hop, []).append(compiled_rule)
 
 
 # ----------------------------------------------------------------------------
@@ -168,6 +173,12 @@ RAW_RULES.extend(_extract_patterns_from_prompts())
 # Re-compile dictionary with new additions
 COMPILED_RULES.clear()
 for rule in RAW_RULES:
+    try:
+        compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+        compiled_veto = (
+            re.compile(rule.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+            if rule.veto_regex
+            else None
     compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE)
     compiled_veto = re.compile(rule.veto_regex, flags=re.I | re.UNICODE) if rule.veto_regex else None
     COMPILED_RULES.setdefault(rule.hop, []).append(
