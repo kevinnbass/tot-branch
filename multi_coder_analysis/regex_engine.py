@@ -115,19 +115,29 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
 
     winning_rule: Optional[PatternInfo] = None
 
+    # Evaluate every rule to capture full coverage stats. Only allow
+    # short-circuiting when ALL of the following hold:
+    #   • the rule is in live mode
+    #   • shadow-force flag is *not* active
+    #   • exactly one live rule fires without ambiguity
     for rule in rules:
-        if _FORCE_SHADOW or rule.mode != "live":
-            # Still count exposure for shadow rules (total evaluation)
-            _RULE_STATS[rule.name]["total"] += 1
-            continue  # conservative: ignore shadow rules
+        fired = _rule_fires(rule, text)
 
-        if _rule_fires(rule, text):
+        # --- Always update coverage counters ---
+        _RULE_STATS[rule.name]["total"] += 1
+        if fired:
             _RULE_STATS[rule.name]["hit"] += 1
-            _RULE_STATS[rule.name]["total"] += 1
+
+        # --- Short-circuit only when permitted ---
+        if (
+            fired
+            and not _FORCE_SHADOW  # shadow mode disables short-circuit
+            and rule.mode == "live"  # only live rules can answer deterministically
+        ):
             if winning_rule is not None:
-                # Multiple rules fired ⇒ ambiguous → fall-through to LLM
+                # Multiple live rules fired ⇒ ambiguous → fall-through to LLM
                 logging.debug(
-                    "Regex engine ambiguity: >1 rule fired for hop %s (%s, %s)",
+                    "Regex engine ambiguity: >1 live rule fired for hop %s (%s, %s)",
                     hop,
                     winning_rule.name,
                     rule.name,
