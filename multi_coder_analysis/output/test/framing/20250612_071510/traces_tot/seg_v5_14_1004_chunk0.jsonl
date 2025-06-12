@@ -5,3 +5,6 @@
 {"Q": 5, "answer": "no", "rationale": "Reports factual data (strain, history, impact) without explicit calming language.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment provides numbers and a scale ('across 15 states') but lacks a minimiser token ('only', 'just', etc.) used in conjunction with the scale.", "method": "llm_batch"}
 {"Q": 7, "answer": "no", "rationale": "The segment describes facts and past impacts but does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Segment states facts about the virus strain and past event, not capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports numerical and economic metrics ('killed 50 million birds', 'cost... nearly $1 billion') using standard verbs ('killed', 'cost').", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports current and historical facts ('currently circulating', 'killed 50 million birds') but does not speculate about future relief or improvement.", "method": "llm_batch"}

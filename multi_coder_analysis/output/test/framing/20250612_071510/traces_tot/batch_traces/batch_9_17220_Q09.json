@@ -1,0 +1,58 @@
+{
+  "batch_id": "batch_9_17220",
+  "hop_idx": 9,
+  "segment_count": 10,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports cases and deaths, which are numerical metrics, but Q9 primarily targets economic/price data based on examples and regex."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports animal deaths, which are numerical metrics, but Q9 primarily targets economic/price data based on examples and regex."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of animals to be culled, which is a numerical metric, but Q9 primarily targets economic/price data based on examples and regex."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports distance and number of farms, which are numerical metrics, but Q9 primarily targets economic/price data based on examples and regex."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a higher precedence cue (Q5 Explicit Calming: 'risk of humans contracting bird flu is very low')."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "yes",
+      "rationale": "The segment reports economic metrics ('increase in prices', 'shortages') using standard language ('increase')."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "yes",
+      "rationale": "The segment reports numerical and economic metrics ('killed 50 million birds', 'cost... nearly $1 billion') using standard verbs ('killed', 'cost')."
+    }
+  ],
+  "timestamp": "2025-06-12T07:17:06.134439"
+}

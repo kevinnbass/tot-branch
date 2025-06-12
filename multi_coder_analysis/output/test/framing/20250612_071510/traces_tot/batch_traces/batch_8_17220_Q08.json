@@ -1,0 +1,58 @@
+{
+  "batch_id": "batch_8_17220",
+  "hop_idx": 8,
+  "segment_count": 10,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "Segment describes a condition/risk, not capabilities or preparedness."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "Segment states historical facts and statistics, not capabilities or preparedness."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "Segment states a fact about an event, not capabilities or preparedness."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a planned response measure ('planning to cull') without active reassurance."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "yes",
+      "rationale": "Describes an implemented safeguard ('blocking access') without active reassurance."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "Segment states facts about the virus and location, not capabilities or preparedness."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "yes",
+      "rationale": "Describes recommended preparedness actions ('should prevent contact', 'report sick birds') without active reassurance."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains active reassurance ('risk... is very low', 'does not enter the food chain' implies food safety)."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains active reassurance ('does not present a food safety risk')."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "no",
+      "rationale": "Segment states facts about the virus strain and past event, not capabilities or preparedness."
+    }
+  ],
+  "timestamp": "2025-06-12T07:16:47.597617"
+}
