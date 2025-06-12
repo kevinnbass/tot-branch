@@ -31,9 +31,12 @@ from utils.tracing import write_batch_trace
 
 # --- Hybrid Regex Engine ---
 try:
-    from . import regex_engine  # relative import when run as package
+    from . import regex_engine as _re_eng  # when imported as package
+    from . import regex_rules as _re_rules
 except ImportError:
-    import regex_engine  # fallback when script run from repo root
+    # Fallback when running as script
+    import regex_engine as _re_eng  # type: ignore
+    import regex_rules as _re_rules  # type: ignore
 
 # Load environment variables from .env file
 load_dotenv(Path(__file__).parent.parent / ".env")
@@ -167,7 +170,7 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
         # --------------------------------------
         regex_ans = None
         try:
-            regex_ans = regex_engine.match(ctx)
+            regex_ans = _re_eng.match(ctx)
         except Exception as exc:
             logging.warning(f"Regex engine error on {ctx.statement_id} Q{q_idx}: {exc}")
 
@@ -368,7 +371,7 @@ def run_tot_chain_batch(
             with token_lock:
                 token_accumulator['total_hops'] += 1
             try:
-                r_answer = regex_engine.match(seg_ctx)
+                r_answer = _re_eng.match(seg_ctx)
             except Exception as exc:
                 logging.warning(
                     f"Regex engine error in batch {hop_idx} on {seg_ctx.statement_id}: {exc}"
@@ -541,9 +544,6 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         raise FileNotFoundError("prompts/global_header.txt is missing.")
 
     # --- Configure regex layer mode ---
-    from multi_coder_analysis import regex_engine as _re_eng
-    from multi_coder_analysis import regex_rules as _re_rules
-
     if regex_mode == "off":
         _re_eng.set_global_enabled(False)
         logging.info("Regex layer DISABLED via --regex-mode off")
@@ -889,7 +889,6 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
 
     # --- Regex per-rule stats CSV ---
     import csv
-    from multi_coder_analysis import regex_engine as _re_eng
 
     stats = _re_eng.get_rule_stats()
     rules_index = {r.name: r for r in _re_eng.RAW_RULES}
