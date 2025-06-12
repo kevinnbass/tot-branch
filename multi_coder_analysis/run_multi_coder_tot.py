@@ -550,24 +550,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     else:
         _re_eng.set_global_enabled(True)
         if regex_mode == "shadow":
-            for r in _re_rules.RAW_RULES:
-                r.mode = "shadow"
-            # rebuild compiled rules
-            _re_rules.COMPILED_RULES.clear()
-            import re as _re_mod
-            for rule in _re_rules.RAW_RULES:
-                yes_c = _re_mod.compile(rule.yes_regex, flags=_re_mod.I | _re_mod.UNICODE)
-                veto_c = _re_mod.compile(rule.veto_regex, flags=_re_mod.I | _re_mod.UNICODE) if rule.veto_regex else None
-                _re_rules.COMPILED_RULES.setdefault(rule.hop, []).append(
-                    _re_rules.PatternInfo(
-                        hop=rule.hop,
-                        name=rule.name,
-                        yes_frame=rule.yes_frame,
-                        yes_regex=yes_c,  # type: ignore[arg-type]
-                        veto_regex=veto_c,  # type: ignore[arg-type]
-                        mode=rule.mode,
-                    )
-                )
+            _re_eng.set_force_shadow(True)
             logging.info("Regex layer set to SHADOW mode: rules will not short-circuit")
         else:
             logging.info("Regex layer in LIVE mode (default)")

@@ -53,11 +53,17 @@ _RULE_STATS: dict[str, Counter] = defaultdict(Counter)  # name -> Counter(hit=, 
 
 # Global switch (set at runtime via pipeline args)
 _GLOBAL_ENABLE: bool = True
+_FORCE_SHADOW: bool = False
 
 def set_global_enabled(flag: bool) -> None:
     """Enable or disable regex matching globally (used for --regex-mode off)."""
     global _GLOBAL_ENABLE
     _GLOBAL_ENABLE = flag
+
+def set_force_shadow(flag: bool) -> None:
+    """When True, regex runs but never short-circuits (shadow mode)."""
+    global _FORCE_SHADOW
+    _FORCE_SHADOW = flag
 
 def get_rule_stats() -> dict[str, Counter]:
     return _RULE_STATS
@@ -110,7 +116,7 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
     winning_rule: Optional[PatternInfo] = None
 
     for rule in rules:
-        if rule.mode != "live":
+        if _FORCE_SHADOW or rule.mode != "live":
             # Still count exposure for shadow rules (total evaluation)
             _RULE_STATS[rule.name]["total"] += 1
             continue  # conservative: ignore shadow rules
