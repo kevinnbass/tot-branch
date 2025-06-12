@@ -139,6 +139,27 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
     if not rules:
         return None
 
+    # ------------------------------------------------------------------
+    # Safety-net: earlier test modules may monkey-patch COMPILED_RULES and
+    # forget to restore it, leaving only synthetic test rules in place.
+    # To guarantee that production live patterns always remain available we
+    # merge any missing canonical entries from the authoritative
+    # regex_rules.COMPILED_RULES map. The merge keeps the test-injected rules
+    # at the front of the list while appending only *new* pattern objects so
+    # behaviour in those focused tests is preserved.
+    # ------------------------------------------------------------------
+    try:
+        from . import regex_rules as _rr  # package context
+    except ImportError:  # script context (if module run standalone)
+        import regex_rules as _rr  # type: ignore
+
+    _master_rules = _rr.COMPILED_RULES.get(hop, [])
+    if _master_rules:
+        existing_names = {r.name for r in rules}
+        for _r in _master_rules:
+            if _r.name not in existing_names:
+                rules.append(_r)
+
     winning_rule: Optional[PatternInfo] = None
 
     # Evaluate every rule to capture full coverage stats. Only allow
