@@ -414,7 +414,17 @@ def run_tot_chain_batch(
             batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
             
             # Call LLM for the batch
-            batch_responses = _call_llm_batch(batch_ctx, _provider_factory(), model, temperature)
+            provider_inst = _provider_factory()
+            batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
+            
+            # Token accounting (prompt/response/thought)
+            usage = provider_inst.get_last_usage()
+            if usage and token_lock:
+                with token_lock:
+                    token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
+                    token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
+                    token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
+                    token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
             
             # Build lookup for faster association
             sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
