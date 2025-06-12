@@ -16,8 +16,12 @@ The engine stays **conservative**:
   or any ambiguity ⇒ fall-through.
 """
 
+# Prefer the "regex" engine if available (supports variable-width look-behinds).
+try:
+    import regex as re  # type: ignore
+except ImportError:  # pragma: no cover
+    import re  # type: ignore
 import logging
-import re
 from typing import Optional, TypedDict
 from collections import Counter, defaultdict
 
