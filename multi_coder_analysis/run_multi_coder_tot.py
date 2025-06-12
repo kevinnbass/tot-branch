@@ -668,6 +668,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         'regex_yes': 0,   # times regex produced a definitive yes
         'regex_hit_shadow': 0,  # regex fired in shadow mode (does not short-circuit)
         'llm_calls': 0,   # times we hit the LLM
+        'segments_regex_ids': set(),  # unique statement IDs resolved by regex at least once
     }
     token_lock = threading.Lock()
 
@@ -698,6 +699,8 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
             with token_lock:
                 with open(hit_path, 'a', encoding='utf-8') as _f:
                     _f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+                # Record segment-level utilisation
+                token_accumulator['segments_regex_ids'].add(payload.get('statement_id'))
         except Exception as _e:
             logging.debug("Could not write regex hit log: %s", _e)
 
@@ -1018,6 +1021,15 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     print(f"LLM calls made      : {llm_calls}")
     if total_hops:
         print(f"Regex coverage      : {regex_yes / total_hops:.2%}")
+
+    # Segment-level utilisation
+    total_segments = len(df)
+    segments_regex = len(token_accumulator.get('segments_regex_ids', set()))
+    segments_llm = total_segments - segments_regex
+
+    print(f"Segments total      : {total_segments}")
+    print(f"Segments regex      : {segments_regex}  ({segments_regex / total_segments:.2%})")
+    print(f"Segments LLM        : {segments_llm}  ({segments_llm / total_segments:.2%})")
 
     summary_path = output_dir / "token_usage_summary.json"
     try:
