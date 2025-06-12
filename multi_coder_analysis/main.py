@@ -68,6 +68,25 @@ def setup_logging(config):
         for noisy in ("google", "httpx", "urllib3"):
             logging.getLogger(noisy).setLevel(logging.WARNING)
 
+    # Patch sys.stdout/stderr to filter out noisy AFC print statements outside logging
+    import sys as _sys, io as _io
+
+    class _FilteredStream(_io.TextIOBase):
+        def __init__(self, original):
+            self._orig = original
+
+        def write(self, s):  # type: ignore[override]
+            # Skip lines containing AFC noise phrases
+            if any(p in s for p in _AFCNoiseFilter._PHRASES):
+                return len(s)  # Pretend we wrote it to keep caller happy
+            return self._orig.write(s)
+
+        def flush(self):  # type: ignore[override]
+            return self._orig.flush()
+
+    _sys.stdout = _FilteredStream(_sys.stdout)
+    _sys.stderr = _FilteredStream(_sys.stderr)
+
 # --- Main Orchestration ---
 def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, args: argparse.Namespace, shutdown_event: threading.Event):
     """Runs the full multi-coder analysis pipeline."""
