@@ -4,20 +4,26 @@
 #  Initially we seed with a handful of high-precision patterns — extend via
 #  the audit script.
 
+#  NOTE: Multiple incremental patches merged – see CHANGELOG for details.
+
 from __future__ import annotations
 
-# Prefer the third-party "regex" package (supports variable-width look-behinds, etc.)
-# Fall back to the standard library "re" if it is not available so the codebase
-# still runs without extra dependencies.
+# Prefer the third-party "regex" engine. It is now *mandatory* because many
+# upstream patterns rely on features (e.g. variable-width look-behind) that the
+# built-in `re` module cannot provide.  Fail loudly if the dependency is
+# missing so the developer notices immediately.
 try:
     import regex as re  # type: ignore
-    USING_REGEX = True
-except ImportError:  # pragma: no cover
-    import re  # type: ignore
-    USING_REGEX = False
+except ImportError as e:  # pragma: no cover – test env expects regex to be installed
+    raise RuntimeError(
+        "✖ The regex rule extractor now requires the 'regex' package.\n"
+        "   ➜  pip install regex"
+    ) from e
 
 import logging
-from dataclasses import dataclass
+import json
+import textwrap
+from dataclasses import dataclass, replace
 from typing import List, Dict, Pattern, Optional
 from pathlib import Path
 
@@ -69,7 +75,15 @@ RAW_RULES: List[PatternInfo] = []
 # Compile rules per hop for fast lookup
 # ----------------------------------------------------------------------------
 COMPILED_RULES: Dict[int, List[PatternInfo]] = {}
-for rule in RAW_RULES:
+
+
+# ----------------------------------------------------------------------------
+# Helper: compile a rule to a runtime-ready PatternInfo with compiled regexes.
+# Includes graceful downgrade to shadow mode on variable-width look-behind
+# failures. Returns None when compilation is impossible.
+# ----------------------------------------------------------------------------
+
+def _compile_rule(rule: PatternInfo) -> Optional[PatternInfo]:
     try:
         compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
         compiled_veto = (
@@ -78,18 +92,37 @@ for rule in RAW_RULES:
             else None
         )
     except re.error as e:
-        logging.warning(f"Skipping invalid regex in rule {rule.name}: {e}")
-        continue
+        msg = str(e)
+        # Detect variable-width look-behind errors from stdlib `re` as a cue
+        # to silently force the rule into shadow mode while still retaining it
+        # for coverage metrics.
+        if "look-behind" in msg or "lookbehind" in msg or "?<=" in msg or "?<!" in msg:
+            logging.warning(
+                f"Variable-width look-behind in rule {rule.name}; forcing shadow mode"
+            )
+            try:
+                rule_shadow = replace(rule, mode="shadow")  # dataclasses.replace
+                compiled_yes = re.compile(rule_shadow.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+                compiled_veto = (
+                    re.compile(rule_shadow.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+                    if rule_shadow.veto_regex
+                    else None
+                )
+                rule = rule_shadow
+            except Exception as e2:  # still fails → give up
+                logging.warning(f"Skipping rule {rule.name}: {e2}")
+                return None
+        else:
+            logging.warning(f"Skipping invalid regex in rule {rule.name}: {e}")
+            return None
 
-    COMPILED_RULES.setdefault(rule.hop, []).append(
-        PatternInfo(
-            hop=rule.hop,
-            name=rule.name,
-            yes_frame=rule.yes_frame,
-            yes_regex=compiled_yes,  # type: ignore[arg-type]
-            veto_regex=compiled_veto,  # type: ignore[arg-type]
-            mode=rule.mode,
-        )
+    return PatternInfo(
+        hop=rule.hop,
+        name=rule.name,
+        yes_frame=rule.yes_frame,
+        yes_regex=compiled_yes,  # type: ignore[arg-type]
+        veto_regex=compiled_veto,  # type: ignore[arg-type]
+        mode=rule.mode,
     )
 
 
@@ -113,6 +146,11 @@ def _infer_frame_from_hop(hop: int) -> str | None:
 
 
 def _extract_patterns_from_prompts() -> list[PatternInfo]:
+    # ▼ PATCH 4: duplicate-load guard – prevents accidental double ingestion
+    if getattr(_extract_patterns_from_prompts, "_cached", False):
+        return []
+    _extract_patterns_from_prompts._cached = True
+
     patterns: list[PatternInfo] = []
 
     if not PROMPTS_DIR.exists():
@@ -129,52 +167,69 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
         except Exception:
             continue
 
-        # find fenced regex blocks
-        for idx, block in enumerate(re.findall(r"```regex\s+([\s\S]*?)```", txt)):
-            raw = block.strip()
+        # ── PATCH 2: parse optional JSON meta front-matter ------------------
+        meta_obj: dict | None = None
+        META_RE = re.compile(r"^\{[^}]*\"pattern\"\s*:\s*\".*$", re.MULTILINE)
+        meta_match = META_RE.search(txt)
+        if meta_match:
+            try:
+                meta_obj = json.loads(meta_match.group())
+                hop_idx = int(meta_obj.get("hop", hop_idx))
+            except Exception:
+                meta_obj = None
+
+        # ── PATCH 1: robust fenced-block extractor --------------------------
+        FENCED_RE = re.compile(
+            r"""^[ \t]*```regex[^\n]*\n            # opening fence (indent tolerant)
+                (.*?)                           # pattern body (non-greedy)
+                ^[ \t]*```[ \t]*$              # closing fence
+             """,
+            re.IGNORECASE | re.MULTILINE | re.DOTALL,
+        )
+
+        for idx, m_block in enumerate(FENCED_RE.finditer(txt)):
+            raw = (
+                textwrap.dedent(m_block.group(1))
+                .replace("\r\n", "\n")
+                .strip()
+            )
             # super-conservative: skip if pattern seems empty or has lookbehinds (?<)
             if not raw or "?<-" in raw:
                 continue
 
-            name = f"Q{hop_idx:02}.Prompt#{idx+1}"
+            # ── PATCH 2 cont. : use meta for name / mode / frame ------------
+            name = (
+                (meta_obj and meta_obj.get("name"))
+                or f"Q{hop_idx:02}.Prompt#{idx+1}"
+            )
+
+            mode = (meta_obj and meta_obj.get("mode", "shadow")) or "shadow"
+            frame = (meta_obj and meta_obj.get("frame")) or _infer_frame_from_hop(hop_idx)
 
             patterns.append(
                 PatternInfo(
                     hop=hop_idx,
                     name=name,
-                    yes_frame=_infer_frame_from_hop(hop_idx),
+                    yes_frame=frame,
                     yes_regex=raw,
-                    mode="shadow",  # start in shadow mode for safety
+                    mode=mode,
                 )
             )
 
     return patterns
 
 
-# Integrate extracted patterns (shadow mode) ------------------------------------------------
+# Integrate extracted patterns (shadow / live) ------------------------------
 RAW_RULES.extend(_extract_patterns_from_prompts())
 
-# Re-compile dictionary with new additions ----------------------------------------------------------------
-COMPILED_RULES.clear()
-for rule in RAW_RULES:
-    try:
-        compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
-        compiled_veto = (
-            re.compile(rule.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
-            if rule.veto_regex
-            else None
-        )
-    except re.error as e:
-        logging.warning(f"Skipping invalid regex in rule {rule.name}: {e}")
-        continue
+# ---------------------------------------------------------------------------
+# Compile all rules once
+# ---------------------------------------------------------------------------
 
-    COMPILED_RULES.setdefault(rule.hop, []).append(
-        PatternInfo(
-            hop=rule.hop,
-            name=rule.name,
-            yes_frame=rule.yes_frame,
-            yes_regex=compiled_yes,  # type: ignore[arg-type]
-            veto_regex=compiled_veto,  # type: ignore[arg-type]
-            mode=rule.mode,
-        )
-    ) 
+COMPILED_RULES: Dict[int, List[PatternInfo]] = {}
+
+for r in RAW_RULES:
+    compiled = _compile_rule(r)
+    if compiled is None:
+        continue
+    COMPILED_RULES.setdefault(compiled.hop, []).append(compiled) 
