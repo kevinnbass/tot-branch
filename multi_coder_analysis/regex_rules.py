@@ -134,7 +134,13 @@ def _compile_rule(rule: PatternInfo) -> Optional[PatternInfo]:
 # so they won't short-circuit unless promoted to live.
 # ----------------------------------------------------------------------------
 
-PROMPTS_DIR = Path(__file__).parent / "prompts"
+# Allow external test harnesses (e.g. via `monkeypatch.setattr`) to inject a
+# custom prompts directory *before* the module reloads.  When the module is
+# re-executed by ``importlib.reload`` the global namespace is preserved, so we
+# intentionally *reuse* any pre-existing definition instead of overwriting it
+# unconditionally.  This lets unit-tests point the extractor at a temporary
+# directory without resorting to brittle post-import hacks.
+PROMPTS_DIR = globals().get("PROMPTS_DIR", Path(__file__).parent / "prompts")
 
 _HOP_FILE_RE = re.compile(r"hop_Q(\d{2})\.txt")
 
@@ -216,10 +222,18 @@ RAW_RULES.extend(_extract_patterns_from_prompts())
 # Compile all rules once
 # ---------------------------------------------------------------------------
 
-COMPILED_RULES: Dict[int, List[PatternInfo]] = {}
-
-for r in RAW_RULES:
+for idx, r in enumerate(RAW_RULES):
     compiled = _compile_rule(r)
     if compiled is None:
         continue
+
+    # Persist the *compiled* version back into RAW_RULES so downstream
+    # callers (including unit-tests) can introspect attributes like
+    # ``yes_regex.pattern`` without having to replicate the compilation
+    # logic.  Keeping the list in-sync avoids a common gotcha where tests
+    # accidentally work with the uncompiled objects (plain strings) and then
+    # fail when they access `.pattern`.
+    RAW_RULES[idx] = compiled
+
+    # Build fast lookup map used at runtime by the regex engine.
     COMPILED_RULES.setdefault(compiled.hop, []).append(compiled) 
