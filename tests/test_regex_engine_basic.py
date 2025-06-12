@@ -20,7 +20,7 @@ def test_regex_engine_positive_hit(monkeypatch):
     )
 
     # Monkey-patch compiled rule table
-    monkeypatch.setitem(COMPILED_RULES, 1, [rule], raising=False)
+    monkeypatch.setitem(COMPILED_RULES, 1, [rule])
 
     ctx = HopContext(statement_id="UT_001", segment_text="This is a UNIT-TEST-CUE.")
     ctx.q_idx = 1

@@ -170,7 +170,7 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
 
         # ── PATCH 7: parse optional YAML front-matter (--- ... ---) ---------
         meta_obj: dict | None = None
-        FM_RE = re.compile(r"^---[^\n]*\n(.*?)\n---\s*", re.DOTALL)
+        FM_RE = re.compile(r"^\s*---[^\n]*\n(.*?)\n---\s*", re.DOTALL)
         fm_match = FM_RE.match(txt)
         if fm_match:
             try:
