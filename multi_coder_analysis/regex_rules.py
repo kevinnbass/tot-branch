@@ -73,7 +73,7 @@ class PatternInfo:
     yes_frame: Optional[str]
     yes_regex: str
     veto_regex: Optional[str] = None
-    mode: str = "shadow"
+    mode: str = "live"
 
 
 # ----------------------------------------------------------------------------
@@ -98,7 +98,7 @@ RAW_RULES: List[PatternInfo] = [
                brutal|contagious|virulent|destructive)
             \b
         """,
-        mode="shadow",
+        mode="live",
     ),
 
     # ------------------------------------------------------------------
@@ -109,7 +109,7 @@ RAW_RULES: List[PatternInfo] = [
         name="Q05.ExplicitCalming.Live",
         yes_frame="Reassuring",
         yes_regex=r"\bfully\s+under\s+control\b",
-        mode="shadow",
+        mode="live",
     ),
 ]
 
@@ -251,7 +251,7 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
                     or f"Q{hop_idx:02}.Prompt#{idx+1}"
                 )
 
-                mode = meta_obj.get("mode", "shadow") if meta_obj else "shadow"
+                mode = meta_obj.get("mode", "live") if meta_obj else "live"
                 frame = meta_obj.get("frame") if meta_obj else _infer_frame_from_hop(hop_idx)
 
                 patterns.append(
