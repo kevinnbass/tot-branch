@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_9_10160",
+  "hop_idx": 9,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a quantity of deaths, not economic prices or metrics using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports facts about the virus and location, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "yes",
+      "rationale": "The segment reports an economic metric ('cost') using a standard verb ('cost') and factual quantification ('nearly $1 billion')."
+    }
+  ],
+  "timestamp": "2025-06-12T07:40:12.268180"
+}
