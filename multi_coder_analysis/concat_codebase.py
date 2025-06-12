@@ -13,9 +13,21 @@ EXCLUDE_DIRS = {
     "node_modules",
     "output",
     "data",
+    "docs",
 }
 
-INCLUDE_EXTS = {".py", ".txt", ".md", ".yaml", ".yml"}
+# Always include these extensions
+ALWAYS_EXTS = {".py", ".yaml", ".yml"}
+
+# Conditional inclusion rules for text-like files
+def _should_include_special(file_path: Path) -> bool:
+    if file_path.suffix.lower() == ".txt":
+        # Only include .txt files that live inside any *prompts* directory
+        return any(part == "prompts" for part in file_path.parts)
+    if file_path.suffix.lower() == ".md":
+        # Include README and upgrade summaries, but skip huge docs
+        return file_path.name.lower().startswith("readme")
+    return False
 
 
 def should_skip_dir(dir_path: Path) -> bool:
@@ -30,7 +42,7 @@ def gather_files(root: Path) -> List[Path]:
         dirnames[:] = [d for d in dirnames if not should_skip_dir(current_dir / d)]
         for fname in filenames:
             fp = current_dir / fname
-            if fp.suffix.lower() in INCLUDE_EXTS:
+            if fp.suffix.lower() in ALWAYS_EXTS or _should_include_special(fp):
                 files.append(fp)
     # Sort for stable order
     files.sort(key=lambda p: str(p))
