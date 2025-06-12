@@ -360,7 +360,7 @@ def run_tot_chain_batch(
         return GeminiProvider()
 
     def _process_batch(batch_segments: List[HopContext], hop_idx: int):
-        _log_hop(hop_idx, len(batch_segments), 0)
+        _log_hop(hop_idx, len(batch_segments), token_accumulator.get('regex_yes', 0))
         # ------------------------------------------------------------------
         # 1. Pre-pass: try regex engine on each segment (conservative)
         # ------------------------------------------------------------------
@@ -501,6 +501,9 @@ def run_tot_chain_batch(
         active_contexts = [c for c in active_contexts if not c.is_concluded]
         if not active_contexts:
             break
+
+        # Log hop start from main thread
+        _log_hop(hop_idx, len(active_contexts), token_accumulator.get('regex_yes', 0))
 
         # Build batches of current active segments
         batches: List[List[HopContext]] = [
