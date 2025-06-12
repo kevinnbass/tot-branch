@@ -73,7 +73,7 @@ class PatternInfo:
     yes_frame: Optional[str]
     yes_regex: str
     veto_regex: Optional[str] = None
-    mode: str = "live"
+    mode: str = "shadow"
 
 
 # ----------------------------------------------------------------------------
@@ -98,7 +98,7 @@ RAW_RULES: List[PatternInfo] = [
                brutal|contagious|virulent|destructive)
             \b
         """,
-        mode="live",
+        mode="shadow",
     ),
 
     # ------------------------------------------------------------------
@@ -109,7 +109,7 @@ RAW_RULES: List[PatternInfo] = [
         name="Q05.ExplicitCalming.Live",
         yes_frame="Reassuring",
         yes_regex=r"\bfully\s+under\s+control\b",
-        mode="live",
+        mode="shadow",
     ),
 ]
 
