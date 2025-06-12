@@ -16,17 +16,27 @@ EXCLUDE_DIRS = {
     "docs",
 }
 
-# Always include these extensions
+# Always include these extensions for code/config
 ALWAYS_EXTS = {".py", ".yaml", ".yml"}
 
-# Conditional inclusion rules for text-like files
-def _should_include_special(file_path: Path) -> bool:
+# Conditional inclusion for specific text files
+def _should_include_special(file_path: Path, repo_root: Path) -> bool:
+    # --- Prompt templates (.txt) ---
     if file_path.suffix.lower() == ".txt":
-        # Only include .txt files that live inside any *prompts* directory
-        return any(part == "prompts" for part in file_path.parts)
+        try:
+            rel = file_path.relative_to(repo_root)
+        except ValueError:
+            return False
+        return rel.parts[0] == "multi_coder_analysis" and "prompts" in rel.parts
+
+    # --- Markdown: only top-level README(s) ---
     if file_path.suffix.lower() == ".md":
-        # Include README and upgrade summaries, but skip huge docs
-        return file_path.name.lower().startswith("readme")
+        try:
+            rel = file_path.relative_to(repo_root)
+        except ValueError:
+            return False
+        return len(rel.parts) == 1 and rel.name.lower().startswith("readme")
+
     return False
 
 
@@ -34,18 +44,38 @@ def should_skip_dir(dir_path: Path) -> bool:
     return any(part in EXCLUDE_DIRS for part in dir_path.parts)
 
 
-def gather_files(root: Path) -> List[Path]:
-    files = []
-    for dirpath, dirnames, filenames in os.walk(root):
+def gather_files(repo_root: Path) -> List[Path]:
+    """Collect files relevant to the pipeline.
+
+    Rules:
+    • All .py/.yaml/.yml in multi_coder_analysis (excluding EXCLUDE_DIRS).
+    • .txt prompt templates inside multi_coder_analysis/prompts.
+    • Top-level README*.md, config.yaml, requirements.txt.
+    """
+    files: List[Path] = []
+
+    # 1. Walk multi_coder_analysis
+    mca_root = repo_root / "multi_coder_analysis"
+    for dirpath, dirnames, filenames in os.walk(mca_root):
         current_dir = Path(dirpath)
-        # Modify dirnames in-place to skip excluded dirs
         dirnames[:] = [d for d in dirnames if not should_skip_dir(current_dir / d)]
         for fname in filenames:
             fp = current_dir / fname
-            if fp.suffix.lower() in ALWAYS_EXTS or _should_include_special(fp):
+            if fp.suffix.lower() in ALWAYS_EXTS or _should_include_special(fp, repo_root):
                 files.append(fp)
-    # Sort for stable order
-    files.sort(key=lambda p: str(p))
+
+    # 2. Top-level important files
+    for top_name in ("config.yaml", "requirements.txt"):
+        tp = repo_root / top_name
+        if tp.exists():
+            files.append(tp)
+
+    # README markdown(s)
+    for md in repo_root.glob("README*.md"):
+        files.append(md)
+
+    # Stable ordering
+    files = sorted(set(files), key=lambda p: str(p))
     return files
 
 
