@@ -90,7 +90,10 @@ def concatenate_codebase(output_dir: Path = Path("concatenated_codebase")) -> Pa
     repo_root = Path(__file__).resolve().parent.parent
 
     files_to_concat = gather_files(repo_root)
-    logging.info(f"Found {len(files_to_concat)} files to concatenate.")
+    logging.info(f"Found {len(files_to_concat)} files to concatenate:")
+    for fp in files_to_concat:
+        rel = fp.relative_to(repo_root)
+        print(f"✔ {rel}")
 
     with open(output_path, "w", encoding="utf-8", errors="ignore") as outfile:
         outfile.write(f"# Full Codebase Snapshot — generated {datetime.now().isoformat(timespec='seconds')}\n")
