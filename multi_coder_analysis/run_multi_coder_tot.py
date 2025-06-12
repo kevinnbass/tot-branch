@@ -158,6 +158,9 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
 
     for q_idx in range(1, 13):
         ctx.q_idx = q_idx
+        # --- metrics counter ---
+        with token_lock:
+            token_accumulator['total_hops'] += 1
         
         # --------------------------------------
         # 1. Try conservative regex short-circuit
@@ -176,10 +179,14 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
                 "rationale": regex_ans["rationale"],
             }
             frame_override = regex_ans.get("frame")
+            with token_lock:
+                token_accumulator['regex_yes'] += 1
         else:
             llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
             frame_override = None
             provider_called = True
+            with token_lock:
+                token_accumulator['llm_calls'] += 1
         
         ctx.raw_llm_responses.append(llm_response)
         
@@ -348,6 +355,8 @@ def run_tot_chain_batch(
 
         for seg_ctx in batch_segments:
             seg_ctx.q_idx = hop_idx  # ensure hop set
+            with token_lock:
+                token_accumulator['total_hops'] += 1
             try:
                 r_answer = regex_engine.match(seg_ctx)
             except Exception as exc:
@@ -373,6 +382,8 @@ def run_tot_chain_batch(
                 seg_ctx.final_justification = f"Frame determined by regex rule {r_answer['rationale']}"
 
                 regex_resolved.append(seg_ctx)
+                with token_lock:
+                    token_accumulator['regex_yes'] += 1
             else:
                 unresolved_segments.append(seg_ctx)
 
@@ -454,6 +465,12 @@ def run_tot_chain_batch(
                     token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
                     token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
                     token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
+
+        # ------------------------------------------------------------------
+        # Account LLM calls for unresolved segments
+        # ------------------------------------------------------------------
+        with token_lock:
+            token_accumulator['llm_calls'] += len(unresolved_segments)
 
     active_contexts: List[HopContext] = contexts[:]
 
@@ -553,7 +570,16 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
 
     results = []
     # --- Token accounting ---
-    token_accumulator = {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}
+    token_accumulator = {
+        'prompt_tokens': 0,
+        'response_tokens': 0,
+        'thought_tokens': 0,
+        'total_tokens': 0,
+        # Regex vs LLM utilisation counters
+        'total_hops': 0,
+        'regex_yes': 0,   # times regex produced a definitive yes
+        'llm_calls': 0,   # times we hit the LLM
+    }
     token_lock = threading.Lock()
 
     trace_dir = output_dir / "traces_tot"
@@ -766,6 +792,24 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     print(f"Thought : {token_accumulator['thought_tokens']}")
     print(f"Total   : {token_accumulator['total_tokens']}")
 
+    # --- Regex vs LLM usage summary ---
+    regex_yes = token_accumulator.get('regex_yes', 0)
+    llm_calls = token_accumulator.get('llm_calls', 0)
+    total_hops = token_accumulator.get('total_hops', 0)
+
+    logging.info("=== REGEX / LLM UTILISATION ===")
+    logging.info(f"Total hops          : {total_hops}")
+    logging.info(f"Regex definitive YES : {regex_yes}")
+    logging.info(f"LLM calls made       : {llm_calls}")
+    logging.info(f"Regex coverage       : {regex_yes / total_hops:.2%}" if total_hops else "Regex coverage: n/a")
+
+    print("\n⚡ Hybrid stats:")
+    print(f"Total hops          : {total_hops}")
+    print(f"Regex definitive YES: {regex_yes}")
+    print(f"LLM calls made      : {llm_calls}")
+    if total_hops:
+        print(f"Regex coverage      : {regex_yes / total_hops:.2%}")
+
     summary_path = output_dir / "token_usage_summary.json"
     try:
         with open(summary_path, 'w', encoding='utf-8') as f:
@@ -789,6 +833,9 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         "individual_fallback_enabled": bool(config.get("individual_fallback", False)),
         "individual_fallback_note": "--individual-fallback flag WAS used" if config.get("individual_fallback", False) else "--individual-fallback flag NOT used",
         "token_usage": token_accumulator,
+        "regex_yes": regex_yes,
+        "llm_calls": llm_calls,
+        "regex_coverage": (regex_yes / total_hops) if total_hops else None,
         "initial_mismatch_count": initial_mismatch_count,
         "fixed_by_individual_fallback": fixed_by_fallback,
         "final_mismatch_count": final_mismatch_count,
