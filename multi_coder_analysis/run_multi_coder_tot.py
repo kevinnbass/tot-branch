@@ -755,7 +755,15 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         
         # Record initial mismatch count before any fallback corrections
         initial_mismatch_count = int(df_comparison["Mismatch"].sum())
-        
+
+        # --- NEW: evaluate and print metrics BEFORE individual fallback ----
+        predictions_pre = df_comparison['Pipeline_Result'].tolist()
+        actuals_pre = df_comparison['Gold_Standard'].tolist()
+        metrics_pre = calculate_metrics(predictions_pre, actuals_pre)
+
+        print("\n🧮  Evaluation BEFORE individual fallback")
+        print_evaluation_report(metrics_pre, input_csv_path, output_dir, concurrency, limit, start, end)
+
         # --- Optional: individual fallback rerun for mismatches (batch-sensitive check) ---
         if config.get("individual_fallback", False):
             logging.info("🔄 Running individual fallback for batched mismatches …")
@@ -845,15 +853,57 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
             fixed_by_fallback = len(indiv_match_entries)
             final_mismatch_count = len(indiv_mismatch_entries)
             logging.info(f"🗂️  Individual fallback complete. Fixed: {fixed_by_fallback}, Still mismatched: {final_mismatch_count}")
+
+            # ------------------------------------------------------------------
+            # Print concise summaries for fixed and remaining mismatches
+            # ------------------------------------------------------------------
+            if indiv_match_entries:
+                print("\n✅ Fixed mismatches (batch → single):")
+                for e in indiv_match_entries:
+                    print(
+                        f"  • {e['statement_id']}: batched={e['batched_result']} » single={e['single_result']} (expected={e['expected']})"
+                    )
+
+                # Tally by hop where the corrected 'yes' fired
+                hop_tally: dict[int, int] = {}
+                for e in indiv_match_entries:
+                    for tr in e.get('full_trace', []):
+                        if tr.get('answer') == 'yes':
+                            hop = int(tr.get('Q', 0))
+                            hop_tally[hop] = hop_tally.get(hop, 0) + 1
+                            break
+                if hop_tally:
+                    print("\n🔢  Hop tally for fixed mismatches (first YES hop):")
+                    for h, cnt in sorted(hop_tally.items()):
+                        print(f"    Q{h:02}: {cnt}")
+
+            if indiv_mismatch_entries:
+                print("\n❌ Still mismatched after fallback:")
+                for e in indiv_mismatch_entries:
+                    print(
+                        f"  • {e['statement_id']}: expected={e['expected']} but got={e['single_result']}"
+                    )
+
+            # Calculate metrics AFTER fallback
+            predictions = df_comparison['Pipeline_Result'].tolist()
+            actuals = df_comparison['Gold_Standard'].tolist()
+            metrics = calculate_metrics(predictions, actuals)
+
+            print("\n🧮  Evaluation AFTER individual fallback")
+
+            print_evaluation_report(metrics, input_csv_path, output_dir, concurrency, limit, start, end)
+            
+            print(f"✍️  All evaluation data written to {comparison_path}")
+            
+            # Print mismatches
+            print_mismatches(df_comparison)
+            
+            print(f"\n✅ Evaluation complete. Full telemetry in {output_dir}")
         
         # If fallback was not run, set mismatch stats accordingly
         if not config.get("individual_fallback", False):
             fixed_by_fallback = 0
             final_mismatch_count = initial_mismatch_count
-        
-        # Extract aligned predictions and actuals
-        predictions = df_comparison['Pipeline_Result'].tolist()
-        actuals = df_comparison['Gold_Standard'].tolist()
         
         # Calculate metrics
         metrics = calculate_metrics(predictions, actuals)
