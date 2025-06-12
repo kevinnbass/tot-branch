@@ -16,7 +16,7 @@ EXCLUDE_DIRS = {
     "docs",
     "concatenated_prompts",
     "concatenated_codebase",
-    "unit_tests",
+    # Tests are now explicitly included
 }
 
 # Always include these extensions (core code only)
@@ -65,6 +65,7 @@ def gather_files(repo_root: Path) -> List[Path]:
 
     Rules:
     • All .py/.yaml/.yml in multi_coder_analysis (excluding EXCLUDE_DIRS).
+    • Test files from tests/ and unit_tests/ directories.
     • .txt prompt templates inside multi_coder_analysis/prompts.
     • Top-level README*.md, config.yaml, requirements.txt.
     """
@@ -82,8 +83,24 @@ def gather_files(repo_root: Path) -> List[Path]:
                 continue
             if fp.suffix.lower() in ALWAYS_EXTS or _should_include_special(fp, repo_root):
                 files.append(fp)
+    
+    # 2. Walk test directories
+    test_dirs = ["tests", "unit_tests"]
+    for test_dir_name in test_dirs:
+        test_dir = repo_root / test_dir_name
+        if test_dir.exists() and test_dir.is_dir():
+            for dirpath, dirnames, filenames in os.walk(test_dir):
+                current_dir = Path(dirpath)
+                dirnames[:] = [d for d in dirnames if not should_skip_dir(current_dir / d)]
+                for fname in filenames:
+                    fp = current_dir / fname
+                    rel_posix = str(fp.relative_to(repo_root)).replace("\\", "/").lower()
+                    if rel_posix in EXCLUDE_FILES:
+                        continue
+                    if fp.suffix.lower() in ALWAYS_EXTS:
+                        files.append(fp)
 
-    # 2. Top-level important files
+    # 3. Top-level important files
     for top_name in ("config.yaml", "requirements.txt"):
         tp = repo_root / top_name
         if tp.exists():
