@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment mentions percentage decreases but does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlative-negative nouns, or the 'on high alert' phrase.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain outcome verb phrase ('were down') not on the moderate verb list, despite mentioning scale.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports data/statistics, not calming cues.", "method": "llm_batch"}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 8, "answer": "no", "rationale": "Segment describes market data, not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports economic percentages ('down 14 percent', 'down 23 percent') using standard verbs.", "method": "llm_batch"}

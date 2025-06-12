@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'deadly' is present but is not modified by an intensifier or comparative, thus not triggering Q1. 'soaring inflation' is background.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlative-negative nouns, or the 'on high alert' phrase. 'threatens to spark' is not a Q2 verb.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment uses verbs not on the moderate list and describes potential/speculative impact, not realised impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'does not present a food safety risk' is a bare negation, not a direct 'safe' assurance (Q7).", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser ('only', 'just', 'merely', etc.) combined with a scale contrast ('out of X', 'among Y').", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "'does not present a food safety risk' is a bare negation without an explicit calming cue.", "method": "llm_batch"}
