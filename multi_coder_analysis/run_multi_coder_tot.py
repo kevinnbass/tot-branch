@@ -687,7 +687,10 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     open(hit_path, 'w', encoding='utf-8').close()
 
     # Register hit logger with regex_engine so every deterministic match is captured
-    from . import regex_engine as _re
+    try:
+        import multi_coder_analysis.regex_engine as _re  # package context
+    except ImportError:
+        import regex_engine as _re  # standalone script
 
     def _log_regex_hit(payload: dict) -> None:  # noqa: D401
         # payload contains statement_id, hop, segment, rule, frame, mode, span
