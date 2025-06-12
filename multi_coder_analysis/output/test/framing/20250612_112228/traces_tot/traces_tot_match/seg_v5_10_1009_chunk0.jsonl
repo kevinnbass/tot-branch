@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier/comparative directly modifies a risk-adjective, nor is the fixed idiom present.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verb, potent metaphor, superlative-negative-noun, or 'on high alert' phrase found.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Verbs 'came', 'discovered' are not on the moderate verb list.", "method": "llm_batch"}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 5, "answer": "no", "rationale": "Reports facts but lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Segment reports context for the detection, not a capability/preparedness statement.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports sequence of events and locations, not prices, economic data, or numerical metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event and sequence, not speculation about future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "No quotation marks present.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented factually.", "method": "llm_batch"}
