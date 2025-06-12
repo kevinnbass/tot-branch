@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('responsible for the deaths') without high-potency verbs or metaphors.", "method": "llm_batch"}
 {"Q": 3, "answer": "no", "rationale": "The verb 'is responsible for' is not on the moderate verb list.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports a negative fact (deaths) without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions a number ('at least 25,000') but lacks a minimiser token ('only', 'just', etc.) and a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes a negative event but does not contain a bare negation.", "method": "llm_batch"}
