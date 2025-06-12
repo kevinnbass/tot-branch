@@ -253,6 +253,12 @@ for idx, r in enumerate(RAW_RULES):
     if compiled is None:
         continue
 
+    # Skip if an *identical* pattern for the same hop is already registered (prevents
+    # ambiguity when prompt files are scanned/reloaded multiple times)
+    if any(getattr(e.yes_regex, "pattern", None) == getattr(compiled.yes_regex, "pattern", None)
+           for e in COMPILED_RULES.get(compiled.hop, [])):
+        continue
+
     # Persist the *compiled* version back into RAW_RULES so downstream
     # callers (including unit-tests) can introspect attributes like
     # ``yes_regex.pattern`` without having to replicate the compilation
