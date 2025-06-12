@@ -160,6 +160,8 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
     uncertain_streak = 0
 
     for q_idx in range(1, 13):
+        # Log progress for single-segment execution
+        _log_hop(q_idx, 1, token_accumulator.get('regex_yes', 0))
         ctx.q_idx = q_idx
         # --- metrics counter ---
         with token_lock:
