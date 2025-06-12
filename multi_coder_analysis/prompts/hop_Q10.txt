@@ -1,0 +1,69 @@
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Experts predict that the supply chain issues could ease in the next quarter.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"yes","rationale":"'could ease in the next quarter' speculates about future relief without explicit current safety framing."}
+
+# NO example
+## Input Segment: Because these measures are working, restrictions may be short-lived, bringing welcome relief soon.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"no","rationale":"'Because these measures are working' frames current control, shifting toward reassuring rather than neutral speculation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q10
+**Q10: Speculation about Relief without Explicit Calming**
+Does the segment speculate about potential future relief or improvement (e.g., 'restrictions may be short-lived,' 'pressure could ease soon') WITHOUT an explicit calming cue from the author/source about the *current* state of risk or safety, as detailed in the rules?
+
+**🔍 Q10 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Future Relief Speculation** | "restrictions may be short-lived," "pressure could ease soon," "situation might improve" | ✓ |
+| **Hopeful Predictions** | "experts predict recovery," "there is hope for improvement," "conditions may normalize" | ✓ |
+| **Timeline Speculation** | "issues could resolve next quarter," "problems may end soon," "recovery expected next year" | ✓ |
+| **Future Relief + Current Reassurance** | "Because measures are working, restrictions may end soon, bringing relief," "situation improving, so outlook is positive" | → Reassuring |
+
+**🔗 See also:** Q8 for capability statements; Q5 for explicit calming cues; Q12 for default neutral
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q11.
+
+**🔍 Detailed Rules & Examples:**
+
+**Quick Decision Tree ▼** (in main document):
+4. **Does it speculate about relief ("may be short-lived", "could ease soon")?** 
+   • Without an explicit calming cue → Neutral. 
+
+**Key Principle:** Hopeful possibilities or predictions of future improvement are Neutral if the author/source does not use this speculation to make an explicit statement about current safety or reduced risk. The focus is on the *future possibility*, not a *present reassurance*.
+
+**Examples:**
+* **Neutral:** "Experts predict that the supply chain issues could ease in the next quarter."
+* **Neutral:** "There is hope that a new treatment may be available next year."
+* **Contrast with Reassuring:** If the statement was "Because these measures are working, restrictions may be short-lived, bringing welcome relief soon," the "because these measures are working" part, if framed as active present control, might shift it towards Reassuring, depending on potency.
+
+**Critical Distinction:**
+- **Future-focused language alone** = Neutral speculation
+- **Future relief + present safety/control framing** = Potentially Reassuring
+- The key is whether current conditions are explicitly framed as providing present reassurance
+
+**Common Future-Oriented Language (Neutral unless paired with current reassurance):**
+- Modal verbs: "may," "might," "could," "should"
+- Predictive language: "expect to," "predict," "forecast," "anticipate"
+- Hopeful expressions: "hope for," "optimistic about," "looking forward to"
+- Timeline indicators: "next quarter," "soon," "in the coming months," "eventually"
+
+**Boundary Analysis:**
+The segment must speculate about *future* improvement or relief. If it describes *current* positive conditions or *present* safety, it may fall under different rules (Q5-Q6 for reassuring, Q7-Q9 for neutral factual reporting).
+
+**Regex Pattern:** `\b(may be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b`
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

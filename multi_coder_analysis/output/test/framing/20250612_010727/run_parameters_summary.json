@@ -1,0 +1,25 @@
+{
+  "timestamp": "2025-06-12T01:13:39",
+  "input_file": "multi_coder_analysis\\data\\gold_standard.csv",
+  "total_statements": 59,
+  "provider": "gemini",
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "temperature": 0.0,
+  "top_p": 0.95,
+  "top_k": 1,
+  "batch_size": 100,
+  "concurrency": 15,
+  "individual_fallback_enabled": true,
+  "individual_fallback_note": "--individual-fallback flag WAS used",
+  "token_usage": {
+    "prompt_tokens": 228728,
+    "response_tokens": 33566,
+    "thought_tokens": 68225,
+    "total_tokens": 330519
+  },
+  "initial_mismatch_count": 10,
+  "fixed_by_individual_fallback": 9,
+  "final_mismatch_count": 1,
+  "accuracy": 0.9830508474576272,
+  "mismatch_count": 1
+}

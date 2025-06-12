@@ -1,0 +1,7 @@
+StatementID,Statement Text,Gold_Standard,Notes,Pipeline_Result,Mismatch
+TEST_Q2_HIGH_ALERT_NO_THREAT,Authorities remain on high alert for any developments.,Neutral,Q2: 'on high alert' without threat word should be Neutral,Neutral,False
+TEST_Q2_HIGH_ALERT_WITH_THREAT,Authorities remain on high alert for new virus cases.,Alarmist,Q2: 'on high alert' with threat word should be Alarmist,Alarmist,False
+TEST_Q3_ROUTINE_CULL,The infected flock was culled to prevent spread.,Neutral,Q3: routine flock culling should be Neutral,Neutral,False
+TEST_Q3_MASS_CULL,Officials feared massive culling operations that affected millions of birds.,Alarmist,Q3: 'feared' + scale should be Alarmist,Alarmist,False
+TEST_Q5_CORPORATE_PR,Tyson Foods is prepared for situations like this and has robust plans in place.,Neutral,Q5: corporate preparedness without public safety mention should be Neutral,Neutral,False
+TEST_Q5_OFFICIAL_PREPARED,State labs say they are fully prepared to handle any new detections for public safety.,Reassuring,Q5: official source with public safety mention should be Reassuring ,Reassuring,False

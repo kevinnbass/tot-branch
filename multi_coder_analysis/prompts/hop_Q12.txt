@@ -1,0 +1,86 @@
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The report documented 500,000 job losses in the last quarter.
+## Question: Are there NO remaining explicit framing cues, with facts presented purely factually?
+## JSON Output:
+{"answer":"yes","rationale":"Factual report of severe statistic without loaded language, intensifiers, or explicit framing rhetoric."}
+
+# NO example
+## Input Segment: The report detailed a catastrophic wave of 500,000 job losses.
+## Question: Are there NO remaining explicit framing cues, with facts presented purely factually?
+## JSON Output:
+{"answer":"no","rationale":"'catastrophic wave' adds explicit alarmist framing beyond factual reporting."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q12
+**Q12: Default to Neutral / Final Comprehensive Check**
+After applying all preceding checks, are there NO remaining explicit and sufficient Alarmist or Reassuring framing cues (as defined in their respective detailed sections, considering cue potency and sufficiency from `step-0-meta-details`) from either the author or any quoted source? Is the presentation of any severe/positive facts purely factual and descriptive, leading to a Neutral frame by default as per the "Default-to-Neutral Rule"?
+
+**🔍 Q12 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Factual Reporting** | "documented 500,000 job losses," "reported 15 cases," "detected in 3 locations" | ✓ |
+| **Technical Descriptions** | "high mortality rate," "R-value of 2.1," "lethal dose 50" | ✓ |
+| **Standard Procedures** | "officials are monitoring," "tests are ongoing," "surveillance continues" | ✓ |
+| **Neutral Metrics** | "prices rose 5%," "rates declined," "levels increased" | ✓ |
+| **Remaining Framing Cues** | Any missed intensifiers, potent verbs, explicit calming language | → Re-evaluate Q1-Q11 |
+
+**🔗 See also:** All previous Q1-Q11 rules for specific framing patterns; Meta-guidance for principle of cue sufficiency
+
+**Outcome:** Yes → Label: Neutral. No → *(This path suggests a cue type potentially missed or a nuanced case. Re-evaluate based on comprehensive Alarmist/Reassuring inclusion criteria not fitting simple top-level questions.)*
+
+**🔍 Detailed Rules & Examples:**
+
+**Default-to-Neutral Rule (Strictly Presentation-Focused)**
+Heuristic: In the absence of explicit emotional language, specific framing cues (e.g., loaded adjectives, urgent tone, calming words), or a distinct rhetorical tone from EITHER the segment's author OR any directly quoted source within the segment, Neutral is the appropriate code for Dim1_Frame. 
+
+**Crucial Clarification:** This rule applies if both the author's presentation and the presentation by any quoted sources are neutral.
+
+* If a segment reports objectively severe facts, and both the author and any quoted source commenting on these facts use neutral, factual language without added alarmist rhetoric, the Dim1_Frame is Neutral.
+* Similarly, if a segment reports objectively positive facts, and both the author and any quoted source use neutral, factual language without added reassuring rhetoric, the Dim1_Frame is Neutral.
+* The focus remains on the presentation by the author and by any quoted sources.
+
+**Definition: Neutral** (Synthesized from principles, common pitfalls, and examples)
+A segment is Neutral if it presents information factually without significant, explicit linguistic or rhetorical cues from the author or quoted sources that are designed to evoke strong fear, urgency (Alarmist), or to actively calm, reassure, or minimize risk (Reassuring). Neutral framing reports events, facts, or statements, even if objectively severe or positive, in a straightforward, descriptive manner.
+
+**Examples of Neutral Framing:**
+* **Severe Fact, Neutral Presentation:**
+  * Segment: "The report documented 500,000 job losses in the last quarter."
+  * Reasoning: "Neutral. The author reports a severe statistic factually. No loaded language, intensifiers, or explicit alarmist rhetoric (e.g., 'a catastrophic wave of job losses,' 'an economic disaster unfolding') is used by the author to frame this fact."
+* **Positive Fact, Neutral Presentation:**
+  * Segment: "Vaccination rates reached 80% in the target population."
+  * Reasoning: "Neutral. The author reports a positive statistic factually. No explicit reassuring language (e.g., 'a wonderfully high rate providing excellent protection,' 'this achievement means the community is now safe') is used by the author."
+
+**Canonical NON-EXAMPLES:**
+* **NON-EXAMPLE for Reassuring (Code: Neutral):**
+  * Text: "Despite the health department conducting contact tracing, no further cases of bird flu connected to the case have been reported at the time of writing."
+  * Correct Codebook Reasoning: "Neutral. The author reports a positive fact (absence of new cases) using descriptive, neutral language. No explicit reassuring language...is used by the author to actively frame these facts reassuringly."
+* **NON-EXAMPLE for Alarmist (Code: Neutral):**
+  * Text: "These [characteristics] include a wide host range, high mutation rate, genetic reassortment, high mortality rates, and genetic reassortment."
+  * Correct Codebook Reasoning: "Neutral. The author lists factual characteristics using neutral, descriptive language. No loaded adjectives...or explicit alarmist rhetoric are used by the author to actively frame these characteristics beyond their factual statement."
+
+**Further characteristics of Neutral framing include:**
+* Factual descriptions of phenomena that inherently possess negative-sounding descriptors (e.g., 'a high fever,' 'a high mortality rate,' 'a rapidly spreading virus') if the author/source does not add further explicit alarmist framing.
+* Listing a fatality/damage rate, case/incident count, or R-value/metric without evaluative language or alarming tone from either the quoted source or the author.
+* Reporting standard descriptive terms for negative events (e.g., 'outbreak,' 'death,' 'illness,' 'culling,' 'risk,' 'concern,' 'epidemic,' 'potential for X,' 'active outbreaks') without additional explicit alarmist cues.
+* Epistemic modals (e.g., 'could,' 'might,' 'may') expressing possibility alone, unless the potential outcome is itself framed with strong alarmist intensifiers or paired with other alarmist cues.
+* Technical terms, official classifications, and procedural language reported as factual designations.
+
+**Examples from other Rules that default to Neutral:**
+* **Neutral (Capability/Preparedness - Rule C, Q8):** "The agency has developed a rapid deployment plan for emergencies."
+* **Neutral (Bare Negation - Q7):** "Not expected to lower production."
+* **Neutral (Factual Reporting of Prices/Metrics - Q9):** "Market prices for wheat decreased by 2% this month."
+* **Neutral (Speculation about Relief - Q10):** "Experts predict that the supply chain issues could ease in the next quarter."
+
+**Regex Pattern:** `\b(report|document|state|announce|confirm|detect|identify|record)\w*\b.*\b(cases|deaths|losses|rates|numbers|percent)\b`
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain|unknown",
+  "rationale": "<max 80 tokens, explaining why no explicit framing cues remain and facts are presented neutrally>"
+}
+``` 
