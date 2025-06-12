@@ -256,6 +256,7 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
                 ctx.final_frame = Q_TO_FRAME[q_idx]
             
             ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+            ctx.is_concluded = True
             break # Exit the loop on the first 'yes'
 
     # If loop completes without any 'yes' answers
@@ -462,6 +463,7 @@ def run_tot_chain_batch(
                     ctx.final_justification = (
                         f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
                     )
+                    ctx.is_concluded = True
 
             # Any ctx not covered by response → mark uncertain
             for ctx in unresolved_segments:
