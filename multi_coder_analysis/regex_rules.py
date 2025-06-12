@@ -181,11 +181,11 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
 
         # ── PATCH 1: robust fenced-block extractor --------------------------
         FENCED_RE = re.compile(
-            r"""^[ \t]*```regex[^\n]*\n            # opening fence (indent tolerant)
-                (.*?)                           # pattern body (non-greedy)
-                ^[ \t]*```[ \t]*$              # closing fence
+            r"""```regex[^\n]*\n      # opening fence (indent tolerant)
+                (.*?)                    # pattern body (non-greedy)
+                \n```                  # closing fence (same indent not enforced)
              """,
-            re.IGNORECASE | re.MULTILINE | re.DOTALL,
+            re.IGNORECASE | re.DOTALL | re.MULTILINE,
         )
 
         for idx, m_block in enumerate(FENCED_RE.finditer(txt)):
