@@ -6,7 +6,17 @@
 
 from __future__ import annotations
 
-import re, logging
+# Prefer the third-party "regex" package (supports variable-width look-behinds, etc.)
+# Fall back to the standard library "re" if it is not available so the codebase
+# still runs without extra dependencies.
+try:
+    import regex as re  # type: ignore
+    USING_REGEX = True
+except ImportError:  # pragma: no cover
+    import re  # type: ignore
+    USING_REGEX = False
+
+import logging
 from dataclasses import dataclass
 from typing import List, Dict, Pattern, Optional
 from pathlib import Path
