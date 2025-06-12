@@ -1,2 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "'HIGH ALERT' is not an intensified risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "yes", "rationale": "regex:Q02.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q02.Prompt#1", "span": [5, 53], "captures": []}}
+{"Q": 3, "answer": "no", "rationale": "'PUT' is not a moderate verb from the approved list.", "method": "llm_batch"}
