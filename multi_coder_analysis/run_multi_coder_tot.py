@@ -682,6 +682,24 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     # ensure empty file
     open(miss_path, 'w', encoding='utf-8').close()
 
+    # Path for regex *hits* that short-circuited the hop deterministically
+    hit_path = output_dir / "regex_hits.jsonl"
+    open(hit_path, 'w', encoding='utf-8').close()
+
+    # Register hit logger with regex_engine so every deterministic match is captured
+    from . import regex_engine as _re
+
+    def _log_regex_hit(payload: dict) -> None:  # noqa: D401
+        # payload contains statement_id, hop, segment, rule, frame, mode, span
+        try:
+            with token_lock:
+                with open(hit_path, 'a', encoding='utf-8') as _f:
+                    _f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+        except Exception as _e:
+            logging.debug("Could not write regex hit log: %s", _e)
+
+    _re.set_hit_logger(_log_regex_hit)
+
     # helper function to log miss safely
     def _log_regex_miss(statement_id: str, hop: int, segment: str, rationale: str, token_lock: threading.Lock, miss_path: Path):
         payload = {

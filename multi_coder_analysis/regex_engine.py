@@ -22,7 +22,7 @@ try:
 except ImportError:  # pragma: no cover
     import re  # type: ignore
 import logging
-from typing import Optional, TypedDict
+from typing import Optional, TypedDict, Callable
 from collections import Counter, defaultdict
 
 # Robust import that works whether this module is executed as part of the
@@ -59,6 +59,11 @@ _RULE_STATS: dict[str, Counter] = defaultdict(Counter)  # name -> Counter(hit=, 
 _GLOBAL_ENABLE: bool = True
 _FORCE_SHADOW: bool = False
 
+# Optional hook – when set by the driver script, every successful regex
+# short-circuit is emitted as a structured dict to the callable (e.g. to
+# persist in a JSONL file).  Signature: fn(record: dict) -> None
+_HIT_LOG_FN: Optional[Callable[[dict], None]] = None
+
 def set_global_enabled(flag: bool) -> None:
     """Enable or disable regex matching globally (used for --regex-mode off)."""
     global _GLOBAL_ENABLE
@@ -88,6 +93,12 @@ def _rule_fires(rule: PatternInfo, text: str) -> bool:
             return False
     return True
 
+def set_hit_logger(fn: Callable[[dict], None]) -> None:  # noqa: ANN001
+    """Register a callback to receive detailed information every time
+    the regex engine returns a definitive answer.
+    """
+    global _HIT_LOG_FN
+    _HIT_LOG_FN = fn
 
 def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically typed)
     """Attempt to answer the current hop deterministically.
@@ -208,6 +219,24 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
     captures = list(m.groups()) if m else []
 
     rationale = f"regex:{winning_rule.name} matched"
+
+    # ------------------------------------------------------------------
+    # Emit detailed hit record via optional callback for downstream audit.
+    # ------------------------------------------------------------------
+    if _HIT_LOG_FN is not None:
+        try:
+            _HIT_LOG_FN({
+                "statement_id": getattr(ctx, "statement_id", None),
+                "hop": hop,
+                "segment": text,
+                "rule": winning_rule.name,
+                "frame": winning_rule.yes_frame,
+                "mode": winning_rule.mode,
+                "span": span,
+            })
+        except Exception as e:  # pragma: no cover – never crash caller
+            logging.debug("Regex hit logger raised error: %s", e, exc_info=True)
+
     return {
         "answer": "yes",
         "rationale": rationale,
