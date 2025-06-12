@@ -58,37 +58,11 @@ class PatternInfo:
 
 
 # ----------------------------------------------------------------------------
-# Raw rule list – ***KEEP EXTREMELY HIGH PRECISION***
+# Raw rule list – intentionally left EMPTY.
+# All regex patterns now come from the auto-extracted shadow rules in the prompt files.
+# (Live rules removed per latest design decision.)
 # ----------------------------------------------------------------------------
-RAW_RULES: List[PatternInfo] = [
-    # Alarmist high-certainty cues
-    PatternInfo(
-        hop=1,
-        name="Q1.DeadlyIntensifier",
-        yes_frame="Alarmist",
-        yes_regex=r"\b(extremely|highly|very)\s+(deadly|lethal|dangerous)\b",
-    ),
-    PatternInfo(
-        hop=2,
-        name="Q2.VividVerbRavaged",
-        yes_frame="Alarmist",
-        yes_regex=r"\bravaged\b",
-    ),
-
-    # Reassuring cues
-    PatternInfo(
-        hop=5,
-        name="Q5.UnderControl",
-        yes_frame="Reassuring",
-        yes_regex=r"\bfully\s+under\s+control\b",
-    ),
-    PatternInfo(
-        hop=6,
-        name="Q6.OnlyFewCases",
-        yes_frame="Reassuring",
-        yes_regex=r"\b(?:only|just)\s+\d+\s+cases\b",
-    ),
-]
+RAW_RULES: List[PatternInfo] = []
 
 
 # ----------------------------------------------------------------------------
