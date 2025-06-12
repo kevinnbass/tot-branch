@@ -60,23 +60,24 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
     pipeline_timestamp = start_time.strftime("%Y%m%d_%H%M%S")
     logging.info(f"Starting pipeline run ({pipeline_timestamp}) for Phase: {phase}, Coder: {coder_prefix}, Dimension: {dimension}")
 
-    # --- Concatenate Prompts ---
-    logging.info("--- Concatenating prompt files ---")
-    concatenated_prompts_path = concatenate_prompts(
-        prompts_dir="multi_coder_analysis/prompts", 
-        output_file=f"concatenated_prompts_{pipeline_timestamp}.txt"
-    )
-    if concatenated_prompts_path:
-        logging.info(f"All prompts concatenated to: {concatenated_prompts_path}")
-    else:
-        logging.warning("Prompt concatenation failed, but continuing with pipeline...")
-
     # --- Path Setup & Initial Config Population ---
     try:
         # Create simple input/output structure for testing
         base_output_dir = Path("multi_coder_analysis") / "output" / phase / dimension / pipeline_timestamp
         base_output_dir.mkdir(parents=True, exist_ok=True)
         logging.info(f"Created output directory: {base_output_dir}")
+
+        # --- Concatenate Prompts into run-specific output directory ---
+        logging.info("--- Concatenating prompt files ---")
+        prompt_concat_path = concatenate_prompts(
+            prompts_dir="multi_coder_analysis/prompts",
+            output_file=f"concatenated_prompts_{pipeline_timestamp}.txt",
+            target_dir=base_output_dir,
+        )
+        if prompt_concat_path:
+            logging.info(f"Concatenated prompts saved to: {prompt_concat_path}")
+        else:
+            logging.warning("Prompt concatenation failed, but continuing with pipeline...")
 
         # Determine input file source
         if args.input:

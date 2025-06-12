@@ -2,14 +2,22 @@ import os
 import logging
 from pathlib import Path
 from datetime import datetime
+from typing import Optional
 
-def concatenate_prompts(prompts_dir="prompts", output_file="concatenated_prompts.txt"):
+def concatenate_prompts(
+    prompts_dir: str = "prompts",
+    output_file: str = "concatenated_prompts.txt",
+    target_dir: Optional[str | Path] = None,
+):
     """
     Concatenates all text files in the prompts directory into a single file.
     
     Args:
         prompts_dir (str): Directory containing prompt files
-        output_file (str): Output file name for concatenated prompts
+        output_file (str): Name of the concatenated file.
+        target_dir (str | Path | None): Directory where the file should be
+            written. If None, a directory called "concatenated_prompts" is
+            created alongside the script (legacy behaviour).
         
     Returns:
         str: Path to the concatenated prompts file
@@ -17,10 +25,15 @@ def concatenate_prompts(prompts_dir="prompts", output_file="concatenated_prompts
     try:
         prompts_path = Path(prompts_dir)
         
-        # Create dedicated output directory for concatenated prompts
-        output_dir = Path("concatenated_prompts")
-        output_dir.mkdir(exist_ok=True)
-        output_path = output_dir / output_file
+        # Decide output directory
+        if target_dir is None:
+            dest_dir = Path("concatenated_prompts")
+        else:
+            dest_dir = Path(target_dir)
+
+        dest_dir.mkdir(parents=True, exist_ok=True)
+
+        output_path = dest_dir / output_file
         
         if not prompts_path.exists():
             logging.error(f"Prompts directory does not exist: {prompts_path}")
