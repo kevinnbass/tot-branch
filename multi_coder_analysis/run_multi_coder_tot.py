@@ -97,8 +97,20 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
             "{{segment_text}}", ctx.segment_text
         ).replace("{{statement_id}}", ctx.statement_id)
 
-        system_block = _load_global_header() + "\n\n" + hop_body
-        user_block = user_prompt + "\n\n" + _load_global_footer()
+        local_header = ""
+        local_footer = ""
+        try:
+            local_header = (hop_file.parent / "global_header.txt").read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_header = _load_global_header()
+
+        try:
+            local_footer = (hop_file.parent / "GLOBAL_FOOTER.txt").read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_footer = _load_global_footer()
+
+        system_block = local_header + "\n\n" + hop_body
+        user_block = user_prompt + "\n\n" + local_footer
         return system_block, user_block
 
     except FileNotFoundError:
@@ -311,8 +323,20 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
             "Return NOTHING except valid JSON.\n\n"
         )
 
-        system_block = _load_global_header() + "\n\n" + hop_content
-        user_block = instruction + segment_block + "\n\n" + _load_global_footer()
+        local_header = ""
+        local_footer = ""
+        try:
+            local_header = (hop_file.parent / "global_header.txt").read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_header = _load_global_header()
+
+        try:
+            local_footer = (hop_file.parent / "GLOBAL_FOOTER.txt").read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_footer = _load_global_footer()
+
+        system_block = local_header + "\n\n" + hop_content
+        user_block = instruction + segment_block + "\n\n" + local_footer
         return system_block, user_block
     except Exception as e:
         logging.error(f"Error assembling batch prompt for Q{hop_idx}: {e}")
