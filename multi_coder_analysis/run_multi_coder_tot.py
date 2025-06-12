@@ -399,8 +399,8 @@ def run_tot_chain_batch(
                 seg_ctx.analysis_history.append(f"Q{hop_idx}: yes (regex)")
                 seg_ctx.reasoning_trace.append(trace_entry)
                 
-                # Set final frame if this is a frame-determining hop
-                if hop_idx in Q_TO_FRAME:
+                # Set final frame if this is a frame-determining hop and answer is yes
+                if r_answer["answer"] == "yes" and hop_idx in Q_TO_FRAME:
                     seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
                 
                 regex_resolved.append(seg_ctx)
@@ -457,8 +457,8 @@ def run_tot_chain_batch(
                         ctx.final_frame = frame_match.group(1).strip()
                         continue
                 
-                # Set final frame if this is a frame-determining hop
-                if hop_idx in Q_TO_FRAME:
+                # Set final frame if this is a frame-determining hop and answer is yes
+                if answer == "yes" and hop_idx in Q_TO_FRAME:
                     ctx.final_frame = Q_TO_FRAME[hop_idx]
                     ctx.final_justification = (
                         f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
