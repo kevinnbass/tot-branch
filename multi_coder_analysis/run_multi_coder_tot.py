@@ -269,21 +269,13 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             uncertain_streak = 0 # Reset streak on a clear answer
 
         if choice == "yes":
+            ctx.final_frame = frame_override or Q_TO_FRAME[q_idx]
             ctx.is_concluded = True
             # Frame override from regex, else Hop 11 logic
             if frame_override:
-                ctx.final_frame = frame_override
-            elif q_idx == 11 and "||FRAME=" in rationale:
-                try:
-                    ctx.final_frame = rationale.split("||FRAME=")[1].strip()
-                except IndexError:
-                    ctx.final_frame = "LABEL_UNCERTAIN" # Malformed rationale
-                    rationale += " || ERROR: Malformed FRAME marker"
+                ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
             else:
-                ctx.final_frame = Q_TO_FRAME[q_idx]
-            
-            ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
-            ctx.is_concluded = True
+                ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
             break # Exit the loop on the first 'yes'
 
     # If loop completes without any 'yes' answers
@@ -448,6 +440,7 @@ def run_tot_chain_batch(
                 # Set final frame if this is a frame-determining hop and answer is yes
                 if r_answer["answer"] == "yes" and hop_idx in Q_TO_FRAME:
                     seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
+                    seg_ctx.is_concluded = True
                 
                 regex_resolved.append(seg_ctx)
             else:
