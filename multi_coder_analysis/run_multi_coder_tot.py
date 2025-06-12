@@ -360,6 +360,7 @@ def run_tot_chain_batch(
         return GeminiProvider()
 
     def _process_batch(batch_segments: List[HopContext], hop_idx: int):
+        _log_hop(hop_idx, len(batch_segments), 0)
         # ------------------------------------------------------------------
         # 1. Pre-pass: try regex engine on each segment (conservative)
         # ------------------------------------------------------------------
@@ -404,6 +405,7 @@ def run_tot_chain_batch(
 
         if not unresolved_segments:
             # Nothing left to process via LLM
+            _log_hop(hop_idx, len(batch_segments), len(regex_resolved))
             return
 
         # ------------------------------------------------------------------
@@ -1159,4 +1161,13 @@ def reorganize_traces_by_match_status(trace_dir: Path, df_comparison: pd.DataFra
     logging.info(f"📁 Reorganized traces: {moved_files['match']} matches → {match_dir}")
     logging.info(f"📁 Reorganized traces: {moved_files['mismatch']} mismatches → {mismatch_dir}")
     
-    return moved_files 
+    return moved_files
+
+START_TIME = time.perf_counter()
+
+# Helper to log hop progress
+def _log_hop(hop_idx: int, active: int, regex_yes: int):
+    elapsed = time.perf_counter() - START_TIME
+    logging.info(
+        f"Hop {hop_idx:02} → active:{active:<4} regex_yes:{regex_yes:<3} ({elapsed:5.1f}s)"
+    ) 

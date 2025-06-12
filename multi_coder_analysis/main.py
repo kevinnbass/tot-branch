@@ -53,6 +53,11 @@ def setup_logging(config):
     log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
     logging.basicConfig(level=level, format=log_format, handlers=[logging.StreamHandler(sys.stdout)])
 
+    # Reduce noise from HTTP libraries / Google SDK unless user sets DEBUG
+    if level != "DEBUG":
+        for noisy in ("google", "httpx", "urllib3"):
+            logging.getLogger(noisy).setLevel(logging.WARNING)
+
 # --- Main Orchestration ---
 def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, args: argparse.Namespace, shutdown_event: threading.Event):
     """Runs the full multi-coder analysis pipeline."""
