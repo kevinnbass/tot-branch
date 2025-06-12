@@ -415,50 +415,57 @@ def run_tot_chain_batch(
             # Call LLM for the batch
             batch_responses = _call_llm_batch(batch_ctx, _provider_factory(), model, temperature)
             
-            # Process responses and update contexts
-            for i, ctx in enumerate(unresolved_segments):
-                if i < len(batch_responses):
-                    answer = batch_responses[i].get("answer", "uncertain").lower()
-                    rationale = batch_responses[i].get("rationale", "No rationale provided")
-                    
-                    trace_entry = {
-                        "Q": hop_idx,
-                        "answer": answer,
-                        "rationale": rationale,
-                        "method": "llm_batch",
-                    }
-                    write_trace_log(trace_dir, ctx.statement_id, trace_entry)
-                    
-                    ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
-                    ctx.reasoning_trace.append(trace_entry)
-                    
-                    # Check for early termination
-                    if answer == "uncertain":
-                        ctx.uncertain_count += 1
-                        if ctx.uncertain_count >= 3:
-                            logging.warning(
-                                f"ToT chain terminated at Q{hop_idx} due to 3 consecutive 'uncertain' responses."
-                            )
-                            ctx.final_frame = "LABEL_UNCERTAIN"
-                            ctx.final_justification = "Three consecutive uncertain responses"
-                            continue
-                    
-                    # Check for frame override (Q11 special case)
-                    if hop_idx == 11 and "||FRAME=" in rationale:
-                        frame_match = re.search(r'\|\|FRAME=([^|]+)', rationale)
-                        if frame_match:
-                            ctx.final_frame = frame_match.group(1).strip()
-                            continue
-                    
-                    # Set final frame if this is a frame-determining hop
-                    if hop_idx in Q_TO_FRAME:
-                        ctx.final_frame = Q_TO_FRAME[hop_idx]
-                        ctx.final_justification = (
-                            f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
+            # Build lookup for faster association
+            sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
+
+            for resp_obj in batch_responses:
+                sid = str(resp_obj.get("segment_id", "")).strip()
+                ctx = sid_to_ctx.get(sid)
+                if ctx is None:
+                    continue  # skip unknown ids
+
+                answer = str(resp_obj.get("answer", "uncertain")).lower().strip()
+                rationale = str(resp_obj.get("rationale", "No rationale provided"))
+                
+                trace_entry = {
+                    "Q": hop_idx,
+                    "answer": answer,
+                    "rationale": rationale,
+                    "method": "llm_batch",
+                }
+                write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+                
+                ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
+                ctx.reasoning_trace.append(trace_entry)
+                
+                # Check for early termination
+                if answer == "uncertain":
+                    ctx.uncertain_count += 1
+                    if ctx.uncertain_count >= 3:
+                        logging.warning(
+                            f"ToT chain terminated at Q{hop_idx} due to 3 consecutive 'uncertain' responses."
                         )
-                else:
-                    # Fallback for missing responses
-                    logging.warning(f"Missing response for segment {i} in batch {batch_id}")
+                        ctx.final_frame = "LABEL_UNCERTAIN"
+                        ctx.final_justification = "Three consecutive uncertain responses"
+                        continue
+                
+                # Check for frame override (Q11 special case)
+                if hop_idx == 11 and "||FRAME=" in rationale:
+                    frame_match = re.search(r'\|\|FRAME=([^|]+)', rationale)
+                    if frame_match:
+                        ctx.final_frame = frame_match.group(1).strip()
+                        continue
+                
+                # Set final frame if this is a frame-determining hop
+                if hop_idx in Q_TO_FRAME:
+                    ctx.final_frame = Q_TO_FRAME[hop_idx]
+                    ctx.final_justification = (
+                        f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
+                    )
+
+            # Any ctx not covered by response → mark uncertain
+            for ctx in unresolved_segments:
+                if ctx.statement_id not in sid_to_ctx or all(r.get("segment_id") != ctx.statement_id for r in batch_responses):
                     trace_entry = {
                         "hop_idx": hop_idx,
                         "answer": "uncertain",
