@@ -19,19 +19,20 @@ The engine stays **conservative**:
 import logging
 import re
 from typing import Optional, TypedDict
+from collections import Counter, defaultdict
 
 # Robust import that works whether this module is executed as part of the
 # `multi_coder_analysis` package or as a loose script.
 try:
-    from .regex_rules import COMPILED_RULES, PatternInfo  # type: ignore
+    from .regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
 except ImportError:  # pragma: no cover
     # Fallback when the parent package context isn't available (e.g. the
     # file is imported directly via `python path/run_multi_coder_tot.py`).
     try:
-        from regex_rules import COMPILED_RULES, PatternInfo  # type: ignore
+        from regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
     except ImportError:
         # Final attempt: assume package name is available
-        from multi_coder_analysis.regex_rules import COMPILED_RULES, PatternInfo  # type: ignore
+        from multi_coder_analysis.regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
 
 # ---------------------------------------------------------------------------
 # Public typed structure returned to the pipeline when a rule fires
@@ -46,6 +47,13 @@ class Answer(TypedDict):
 # ---------------------------------------------------------------------------
 # Engine core
 # ---------------------------------------------------------------------------
+
+# Per-rule statistics
+_RULE_STATS: dict[str, Counter] = defaultdict(Counter)  # name -> Counter(hit=, total=)
+
+# Helper to expose stats
+def get_rule_stats() -> dict[str, Counter]:
+    return _RULE_STATS
 
 def _rule_fires(rule: PatternInfo, text: str) -> bool:
     """Return True iff rule matches positively **and** is not vetoed."""
@@ -93,9 +101,13 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
 
     for rule in rules:
         if rule.mode != "live":
+            # Still count exposure for shadow rules (total evaluation)
+            _RULE_STATS[rule.name]["total"] += 1
             continue  # conservative: ignore shadow rules
 
         if _rule_fires(rule, text):
+            _RULE_STATS[rule.name]["hit"] += 1
+            _RULE_STATS[rule.name]["total"] += 1
             if winning_rule is not None:
                 # Multiple rules fired ⇒ ambiguous → fall-through to LLM
                 logging.debug(
@@ -108,6 +120,7 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
             winning_rule = rule
 
     if winning_rule is None:
+        # Record totals for live rules that did not fire (already counted)
         return None
 
     # Compute match object again to get span/captures (guaranteed match)

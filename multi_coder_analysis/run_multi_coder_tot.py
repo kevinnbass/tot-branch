@@ -604,6 +604,25 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     trace_dir.mkdir(parents=True, exist_ok=True)
     logging.info(f"ToT trace files will be saved in: {trace_dir}")
 
+    # Path for false-negative corpus (regex miss + LLM yes)
+    miss_path = output_dir / "regex_miss_llm_yes.jsonl"
+    global _MISS_PATH
+    _MISS_PATH = miss_path  # make accessible to inner functions
+    # ensure empty file
+    open(miss_path, 'w', encoding='utf-8').close()
+
+    # helper function to log miss safely
+    def _log_regex_miss(statement_id: str, hop: int, segment: str, rationale: str, token_lock: threading.Lock, miss_path: Path):
+        payload = {
+            "statement_id": statement_id,
+            "hop": hop,
+            "segment": segment,
+            "rationale": rationale,
+        }
+        with token_lock:
+            with open(miss_path, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+
     # --- Processing Path Selection ---
     if batch_size > 1:
         logging.info(f"Processing with batch size = {batch_size} and concurrency={concurrency}")
@@ -835,6 +854,30 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         logging.info(f"Token summary written to {summary_path}")
     except Exception as e:
         logging.error(f"Failed to write token summary: {e}")
+
+    # --- Regex per-rule stats CSV ---
+    import csv
+    from multi_coder_analysis import regex_engine as _re_eng
+
+    stats = _re_eng.get_rule_stats()
+    rules_index = {r.name: r for r in _re_eng.RAW_RULES}
+
+    stats_path = output_dir / "regex_rule_stats.csv"
+    try:
+        with open(stats_path, 'w', newline='', encoding='utf-8') as f:
+            w = csv.writer(f)
+            w.writerow(["rule", "hop", "mode", "hit", "total", "coverage"])
+            for name, counter in sorted(stats.items()):
+                rule = rules_index.get(name)
+                hop = rule.hop if rule else "?"
+                mode = rule.mode if rule else "?"
+                hit = counter.get("hit", 0)
+                total = counter.get("total", 0)
+                cov = f"{hit/total:.2%}" if total else "0%"
+                w.writerow([name, hop, mode, hit, total, cov])
+        logging.info(f"Regex rule stats written to {stats_path}")
+    except Exception as e:
+        logging.error(f"Failed to write regex rule stats: {e}")
 
     # --- Run parameters summary ---
     params_summary = {
