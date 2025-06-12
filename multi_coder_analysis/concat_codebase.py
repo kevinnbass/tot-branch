@@ -18,14 +18,23 @@ EXCLUDE_DIRS = {
     "concatenated_codebase",
 }
 
-# Always include these extensions for code/config
-ALWAYS_EXTS = {".py", ".yaml", ".yml"}
+# Always include these extensions (core code only)
+ALWAYS_EXTS = {".py"}  # YAML/YML excluded per latest user instruction
 
 # Explicit individual files (relative to repo root) to skip
 EXCLUDE_FILES = {
     "readme.md",  # root-level README
     "multi_coder_analysis/llm_providers/openrouter_provider.py",
     "multi_coder_analysis/update_gold_standard.py",
+    # Exclude helper/maintenance scripts and config overrides
+    "multi_coder_analysis/concat_codebase.py",
+    "multi_coder_analysis/concat_now.py",
+    "multi_coder_analysis/concat_prompts.py",
+    "multi_coder_analysis/consolidate_mismatch_traces.py",
+    "multi_coder_analysis/fix_gold_standard.py",
+    "multi_coder_analysis/fix_gold_standard_yaml.py",
+    "multi_coder_analysis/fixes_config.yaml",
+    "requirements.txt",
 }
 
 # Conditional inclusion for specific text files
@@ -81,6 +90,9 @@ def gather_files(repo_root: Path) -> List[Path]:
     for top_name in ("config.yaml", "requirements.txt"):
         tp = repo_root / top_name
         if tp.exists():
+            rel_t = str(tp.relative_to(repo_root)).replace("\\", "/").lower()
+            if rel_t in EXCLUDE_FILES:
+                continue
             files.append(tp)
 
     # README markdown(s)
