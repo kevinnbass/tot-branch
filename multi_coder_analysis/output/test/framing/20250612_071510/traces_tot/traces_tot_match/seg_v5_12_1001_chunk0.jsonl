@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "Segment states historical facts and statistics, not capabilities or preparedness.", "method": "llm_batch"}
 {"Q": 9, "answer": "no", "rationale": "The segment reports cases and deaths, which are numerical metrics, but Q9 primarily targets economic/price data based on examples and regex.", "method": "llm_batch"}
 {"Q": 10, "answer": "no", "rationale": "The segment reports historical and current facts ('no record', 'have contracted') but does not speculate about future relief or improvement.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "No quotation marks present.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of statistics and lack of record without explicit framing cues.", "method": "llm_batch"}
