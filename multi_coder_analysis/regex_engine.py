@@ -51,7 +51,14 @@ class Answer(TypedDict):
 # Per-rule statistics
 _RULE_STATS: dict[str, Counter] = defaultdict(Counter)  # name -> Counter(hit=, total=)
 
-# Helper to expose stats
+# Global switch (set at runtime via pipeline args)
+_GLOBAL_ENABLE: bool = True
+
+def set_global_enabled(flag: bool) -> None:
+    """Enable or disable regex matching globally (used for --regex-mode off)."""
+    global _GLOBAL_ENABLE
+    _GLOBAL_ENABLE = flag
+
 def get_rule_stats() -> dict[str, Counter]:
     return _RULE_STATS
 
@@ -91,6 +98,9 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
 
     hop: int = getattr(ctx, "q_idx")
     text: str = getattr(ctx, "segment_text")
+
+    if not _GLOBAL_ENABLE:
+        return None
 
     # Fetch hop-specific rule list (already compiled)
     rules = COMPILED_RULES.get(hop, [])

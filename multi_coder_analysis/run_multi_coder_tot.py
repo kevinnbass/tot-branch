@@ -531,7 +531,7 @@ def run_tot_chain_batch(
 
 # --- Main Entry Point for `main.py` ---
 
-def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1) -> Tuple[None, Path]:
+def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live") -> Tuple[None, Path]:
     """
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
@@ -539,6 +539,38 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     if not GLOBAL_HEADER:
         logging.critical("ToT pipeline cannot run because global_header.txt is missing or empty.")
         raise FileNotFoundError("prompts/global_header.txt is missing.")
+
+    # --- Configure regex layer mode ---
+    from multi_coder_analysis import regex_engine as _re_eng
+    from multi_coder_analysis import regex_rules as _re_rules
+
+    if regex_mode == "off":
+        _re_eng.set_global_enabled(False)
+        logging.info("Regex layer DISABLED via --regex-mode off")
+    else:
+        _re_eng.set_global_enabled(True)
+        if regex_mode == "shadow":
+            for r in _re_rules.RAW_RULES:
+                r.mode = "shadow"
+            # rebuild compiled rules
+            _re_rules.COMPILED_RULES.clear()
+            import re as _re_mod
+            for rule in _re_rules.RAW_RULES:
+                yes_c = _re_mod.compile(rule.yes_regex, flags=_re_mod.I | _re_mod.UNICODE)
+                veto_c = _re_mod.compile(rule.veto_regex, flags=_re_mod.I | _re_mod.UNICODE) if rule.veto_regex else None
+                _re_rules.COMPILED_RULES.setdefault(rule.hop, []).append(
+                    _re_rules.PatternInfo(
+                        hop=rule.hop,
+                        name=rule.name,
+                        yes_frame=rule.yes_frame,
+                        yes_regex=yes_c,  # type: ignore[arg-type]
+                        veto_regex=veto_c,  # type: ignore[arg-type]
+                        mode=rule.mode,
+                    )
+                )
+            logging.info("Regex layer set to SHADOW mode: rules will not short-circuit")
+        else:
+            logging.info("Regex layer in LIVE mode (default)")
 
     df = pd.read_csv(input_csv_path, dtype={'StatementID': str})
     
