@@ -51,6 +51,12 @@ def setup_logging(config):
     log_config = config.get('logging', {})
     level = log_config.get('level', 'INFO').upper()
     log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
+    
+    # Set Google SDK to ERROR level immediately to prevent AFC noise
+    logging.getLogger("google").setLevel(logging.ERROR)
+    logging.getLogger("google.genai").setLevel(logging.ERROR)
+    logging.getLogger("google.genai.client").setLevel(logging.ERROR)
+    
     logging.basicConfig(level=level, format=log_format, handlers=[logging.StreamHandler(sys.stdout)])
 
     # Silence noisy AFC-related logs emitted by external libraries
@@ -88,7 +94,7 @@ def setup_logging(config):
     # Reduce noise from HTTP libraries / Google SDK unless user sets DEBUG
     if level != "DEBUG":
         for noisy in ("google", "httpx", "urllib3"):
-            logging.getLogger(noisy).setLevel(logging.WARNING)
+            logging.getLogger(noisy).setLevel(logging.ERROR)  # Changed to ERROR
 
 # --- Main Orchestration ---
 def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, args: argparse.Namespace, shutdown_event: threading.Event):

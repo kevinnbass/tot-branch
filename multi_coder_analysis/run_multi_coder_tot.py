@@ -14,6 +14,7 @@ from typing import Dict, Any, List, Tuple, Optional
 from datetime import datetime
 from collections import defaultdict
 import collections
+import re
 
 import pandas as pd
 from tqdm import tqdm
@@ -362,17 +363,17 @@ def run_tot_chain_batch(
         return GeminiProvider()
 
     def _process_batch(batch_segments: List[HopContext], hop_idx: int):
-        _log_hop(hop_idx, len(batch_segments), token_accumulator.get('regex_yes', 0))
-        # ------------------------------------------------------------------
-        # 1. Pre-pass: try regex engine on each segment (conservative)
-        # ------------------------------------------------------------------
+        token_accumulator['llm_calls'] += 1
+        
+        # Step 1: Apply regex rules to all segments in this batch
         regex_resolved: List[HopContext] = []
         unresolved_segments: List[HopContext] = []
-
+        
         for seg_ctx in batch_segments:
             seg_ctx.q_idx = hop_idx  # ensure hop set
-            with token_lock:
-                token_accumulator['total_hops'] += 1
+            
+            token_accumulator['total_hops'] += 1
+            
             try:
                 r_answer = _re_eng.match(seg_ctx)
             except Exception as exc:
@@ -380,122 +381,104 @@ def run_tot_chain_batch(
                     f"Regex engine error in batch {hop_idx} on {seg_ctx.statement_id}: {exc}"
                 )
                 r_answer = None
-
+            
             if r_answer:
-                # Register trace entry immediately
+                token_accumulator['regex_yes'] += 1
+                
+                # Log the regex hit
                 trace_entry = {
                     "Q": hop_idx,
                     "answer": r_answer["answer"],
                     "rationale": r_answer["rationale"],
-                    "via": "regex",
+                    "method": "regex",
                     "regex": r_answer.get("regex", {}),
                 }
-                seg_ctx.raw_llm_responses.append(trace_entry)
+                write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
+                
                 seg_ctx.analysis_history.append(f"Q{hop_idx}: yes (regex)")
                 seg_ctx.reasoning_trace.append(trace_entry)
-                write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
-
-                seg_ctx.is_concluded = True
-                seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
-                seg_ctx.final_justification = f"Frame determined by regex rule {r_answer['rationale']}"
-
+                
+                # Set final frame if this is a frame-determining hop
+                if hop_idx in Q_TO_FRAME:
+                    seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
+                
                 regex_resolved.append(seg_ctx)
-                with token_lock:
-                    token_accumulator['regex_yes'] += 1
             else:
                 unresolved_segments.append(seg_ctx)
-
-        if not unresolved_segments:
-            # Nothing left to process via LLM
-            _log_hop(hop_idx, len(batch_segments), len(regex_resolved))
-            return
-
-        # ------------------------------------------------------------------
-        # 2. Call LLM only for unresolved segments
-        # ------------------------------------------------------------------
-        local_provider = _provider_factory()
-
-        batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
-        batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
-        parsed_list = _call_llm_batch(batch_ctx, local_provider, model, temperature)
-
-        sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
-        for obj in parsed_list:
-            sid = str(obj.get("segment_id", "")).strip()
-            ctx = sid_to_ctx.get(sid)
-            if ctx is None:
-                continue
-            answer = str(obj.get("answer", "uncertain")).lower().strip()
-            rationale = str(obj.get("rationale", ""))
-
-            trace_entry = {
-                "Q": hop_idx,
-                "answer": answer,
-                "rationale": rationale,
-                "via": "llm",
-                "regex": None,
-            }
-            ctx.raw_llm_responses.append(obj)
-            ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
-            ctx.reasoning_trace.append(trace_entry)
-            write_trace_log(trace_dir, ctx.statement_id, trace_entry)
-
-            # decision logic
-            if not hasattr(ctx, "_uncertain_streak"):
-                ctx._uncertain_streak = 0  # type: ignore
-            if answer == "uncertain":
-                ctx._uncertain_streak += 1  # type: ignore
-                if ctx._uncertain_streak >= 3:
-                    ctx.final_frame = "LABEL_UNCERTAIN"
-                    ctx.is_concluded = True
-                    ctx.final_justification = (
-                        f"ToT chain terminated at Q{hop_idx} due to 3 consecutive 'uncertain' responses."
-                    )
-            else:
-                ctx._uncertain_streak = 0  # type: ignore
-                if answer == "yes":
-                    ctx.is_concluded = True
-                    if hop_idx == 11 and "||FRAME=" in rationale:
-                        try:
-                            ctx.final_frame = rationale.split("||FRAME=")[1].strip()
-                        except IndexError:
+        
+        # Step 2: If any segments remain unresolved, call LLM for the batch
+        if unresolved_segments:
+            # Create batch context
+            batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
+            batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
+            
+            # Call LLM for the batch
+            batch_responses = _call_llm_batch(batch_ctx, _provider_factory(), model, temperature)
+            
+            # Process responses and update contexts
+            for i, ctx in enumerate(unresolved_segments):
+                if i < len(batch_responses):
+                    answer = batch_responses[i].get("answer", "uncertain").lower()
+                    rationale = batch_responses[i].get("rationale", "No rationale provided")
+                    
+                    trace_entry = {
+                        "Q": hop_idx,
+                        "answer": answer,
+                        "rationale": rationale,
+                        "method": "llm_batch",
+                    }
+                    write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+                    
+                    ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
+                    ctx.reasoning_trace.append(trace_entry)
+                    
+                    # Check for early termination
+                    if answer == "uncertain":
+                        ctx.uncertain_count += 1
+                        if ctx.uncertain_count >= 3:
+                            logging.warning(
+                                f"ToT chain terminated at Q{hop_idx} due to 3 consecutive 'uncertain' responses."
+                            )
                             ctx.final_frame = "LABEL_UNCERTAIN"
-                            rationale += " || ERROR: Malformed FRAME marker"
-                    else:
+                            ctx.final_justification = "Three consecutive uncertain responses"
+                            continue
+                    
+                    # Check for frame override (Q11 special case)
+                    if hop_idx == 11 and "||FRAME=" in rationale:
+                        frame_match = re.search(r'\|\|FRAME=([^|]+)', rationale)
+                        if frame_match:
+                            ctx.final_frame = frame_match.group(1).strip()
+                            continue
+                    
+                    # Set final frame if this is a frame-determining hop
+                    if hop_idx in Q_TO_FRAME:
                         ctx.final_frame = Q_TO_FRAME[hop_idx]
-                    ctx.final_justification = (
-                        f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
-                    )
-
-        # --- Persist batch-level prompt/response/CoT once (to avoid per-segment bleed) ---
-        try:
+                        ctx.final_justification = (
+                            f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
+                        )
+                else:
+                    # Fallback for missing responses
+                    logging.warning(f"Missing response for segment {i} in batch {batch_id}")
+                    trace_entry = {
+                        "hop_idx": hop_idx,
+                        "answer": "uncertain",
+                        "rationale": "Missing response from batch",
+                        "method": "fallback",
+                    }
+                    write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+            
+            # Write batch trace
             batch_payload = {
                 "batch_id": batch_id,
                 "hop_idx": hop_idx,
-                "segments": list(sid_to_ctx.keys()),
-                "prompt": batch_ctx.raw_prompt,
-                "raw_response": batch_ctx.raw_response,
-                "thoughts": batch_ctx.thoughts,
+                "segment_count": len(unresolved_segments),
+                "responses": batch_responses,
+                "timestamp": datetime.now().isoformat(),
             }
             write_batch_trace(trace_dir, batch_id, hop_idx, batch_payload)
-        except Exception as e:
-            logging.warning(f"Could not write batch trace for {batch_id}: {e}")
-
-        # token accounting
-        if token_accumulator is not None:
-            usage = local_provider.get_last_usage()
-            if usage and token_lock:
-                with token_lock:
-                    token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
-                    token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
-                    token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
-                    token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
-
-        # ------------------------------------------------------------------
-        # Account LLM calls for unresolved segments
-        # ------------------------------------------------------------------
-        with token_lock:
-            token_accumulator['llm_calls'] += len(unresolved_segments)
+        
+        # Return all segments (resolved + unresolved)
+        return regex_resolved + unresolved_segments
 
     active_contexts: List[HopContext] = contexts[:]
 
