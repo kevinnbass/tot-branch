@@ -21,6 +21,13 @@ EXCLUDE_DIRS = {
 # Always include these extensions for code/config
 ALWAYS_EXTS = {".py", ".yaml", ".yml"}
 
+# Explicit individual files (relative to repo root) to skip
+EXCLUDE_FILES = {
+    "readme.md",  # root-level README
+    "multi_coder_analysis/llm_providers/openrouter_provider.py",
+    "multi_coder_analysis/update_gold_standard.py",
+}
+
 # Conditional inclusion for specific text files
 def _should_include_special(file_path: Path, repo_root: Path) -> bool:
     # --- Prompt templates (.txt) ---
@@ -64,6 +71,9 @@ def gather_files(repo_root: Path) -> List[Path]:
         dirnames[:] = [d for d in dirnames if not should_skip_dir(current_dir / d)]
         for fname in filenames:
             fp = current_dir / fname
+            rel_posix = str(fp.relative_to(repo_root)).replace("\\", "/").lower()
+            if rel_posix in EXCLUDE_FILES:
+                continue
             if fp.suffix.lower() in ALWAYS_EXTS or _should_include_special(fp, repo_root):
                 files.append(fp)
 
@@ -75,7 +85,9 @@ def gather_files(repo_root: Path) -> List[Path]:
 
     # README markdown(s)
     for md in repo_root.glob("README*.md"):
-        files.append(md)
+        rel_md = str(md.relative_to(repo_root)).replace("\\", "/").lower()
+        if rel_md not in EXCLUDE_FILES:
+            files.append(md)
 
     # Stable ordering
     files = sorted(set(files), key=lambda p: str(p))
