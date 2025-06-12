@@ -49,21 +49,28 @@ MAX_RETRIES = 3
 BACKOFF_FACTOR = 1.5
 PROMPTS_DIR = Path(__file__).parent / "prompts"
 
-# Attempt to load prompts at module level
-GLOBAL_HEADER_PATH = PROMPTS_DIR / "global_header.txt"
-GLOBAL_FOOTER_PATH = PROMPTS_DIR / "GLOBAL_FOOTER.txt"
+# ---------------------------------------------------------------------------
+# Helpers to (lazily) read header / footer each time so that tests that monkey-
+# patch PROMPTS_DIR *after* import still pick up the temporary files.
+# ---------------------------------------------------------------------------
 
-try:
-    GLOBAL_HEADER = GLOBAL_HEADER_PATH.read_text(encoding='utf-8')
-except FileNotFoundError:
-    GLOBAL_HEADER = ""
-    logging.warning(f"Global header file not found at {GLOBAL_HEADER_PATH}")
 
-try:
-    GLOBAL_FOOTER = GLOBAL_FOOTER_PATH.read_text(encoding='utf-8')
-except FileNotFoundError:
-    GLOBAL_FOOTER = ""
-    logging.warning(f"Global footer file not found at {GLOBAL_FOOTER_PATH}")
+def _load_global_header() -> str:  # noqa: D401
+    path = PROMPTS_DIR / "global_header.txt"
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        logging.debug("Global header file not found at %s", path)
+        return ""
+
+
+def _load_global_footer() -> str:
+    path = PROMPTS_DIR / "GLOBAL_FOOTER.txt"
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        logging.debug("Global footer file not found at %s", path)
+        return ""
 
 # Map question index to the frame assigned if the answer is "yes"
 Q_TO_FRAME = {
@@ -90,8 +97,8 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
             "{{segment_text}}", ctx.segment_text
         ).replace("{{statement_id}}", ctx.statement_id)
 
-        system_block = GLOBAL_HEADER + "\n\n" + hop_body
-        user_block = user_prompt + "\n\n" + GLOBAL_FOOTER
+        system_block = _load_global_header() + "\n\n" + hop_body
+        user_block = user_prompt + "\n\n" + _load_global_footer()
         return system_block, user_block
 
     except FileNotFoundError:
@@ -304,8 +311,8 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
             "Return NOTHING except valid JSON.\n\n"
         )
 
-        system_block = GLOBAL_HEADER + "\n\n" + hop_content
-        user_block = instruction + segment_block + "\n\n" + GLOBAL_FOOTER
+        system_block = _load_global_header() + "\n\n" + hop_content
+        user_block = instruction + segment_block + "\n\n" + _load_global_footer()
         return system_block, user_block
     except Exception as e:
         logging.error(f"Error assembling batch prompt for Q{hop_idx}: {e}")
@@ -562,7 +569,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
     """
-    if not GLOBAL_HEADER:
+    if not _load_global_header():
         logging.critical("ToT pipeline cannot run because global_header.txt is missing or empty.")
         raise FileNotFoundError("prompts/global_header.txt is missing.")
 
