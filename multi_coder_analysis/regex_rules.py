@@ -147,11 +147,6 @@ def _infer_frame_from_hop(hop: int) -> str | None:
 
 
 def _extract_patterns_from_prompts() -> list[PatternInfo]:
-    # ▼ PATCH 4: duplicate-load guard – prevents accidental double ingestion
-    if getattr(_extract_patterns_from_prompts, "_cached", False):
-        return []
-    _extract_patterns_from_prompts._cached = True
-
     patterns: list[PatternInfo] = []
 
     if not PROMPTS_DIR.exists():
