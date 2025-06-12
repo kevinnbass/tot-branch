@@ -939,6 +939,34 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     except Exception as e:
         logging.error(f"Failed to write regex rule stats: {e}")
 
+    # --- NEW: export full regex rule definitions (useful for debugging) ---
+    import json as _json
+
+    rules_snapshot_path = output_dir / "regex_rules_snapshot.jsonl"
+
+    try:
+        with open(rules_snapshot_path, "w", encoding="utf-8") as fp:
+            for r in _re_eng.RAW_RULES:
+                # yes_regex may be a compiled pattern or raw string depending on origin
+                pattern_str = (
+                    r.yes_regex.pattern if hasattr(r.yes_regex, "pattern") else str(r.yes_regex)
+                )
+                _json.dump(
+                    {
+                        "name": r.name,
+                        "hop": r.hop,
+                        "mode": r.mode,
+                        "frame": r.yes_frame,
+                        "pattern": pattern_str,
+                    },
+                    fp,
+                    ensure_ascii=False,
+                )
+                fp.write("\n")
+        logging.info(f"Regex rules snapshot written to {rules_snapshot_path}")
+    except Exception as e:
+        logging.error(f"Failed to export regex rules snapshot: {e}")
+
     # --- Run parameters summary ---
     params_summary = {
         "timestamp": datetime.now().isoformat(timespec="seconds"),
