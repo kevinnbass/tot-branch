@@ -60,7 +60,10 @@ A statement of capability, preparedness, or hopeful possibility ("officials are 
 **Common LLM Misinterpretations & How to Avoid Them:**
 **Confusing Capability/Preparedness Statements with Active Reassurance:** Describing safeguards, capabilities, or control measures is Neutral unless explicitly framed as a reason for current calm or minimized risk. (See Common Pitfalls (C) and Reassuring - Exclusion Criteria.)
 
-**Regex Pattern:** `\b(officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b`
+**Regex Pattern (fenced):**
+```regex
+\b(officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b
+```
 
 ### Your JSON Reply:
 ```json

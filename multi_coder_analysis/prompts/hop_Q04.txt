@@ -59,7 +59,10 @@ Does the author or a quoted source pose a loaded rhetorical question that is cle
 |--------------|---------------------|-------------------|--------------|
 | **Alarmist – Loaded Q** | "Should consumers be worried about buying eggs?" | **Alarmist** | Loaded rhetorical question implying worry |
 
-**Regex Pattern:** `\b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned)\b`
+**Regex Pattern (fenced):**
+```regex
+\b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned)\b
+```
 
 ### Your JSON Reply:
 ```json

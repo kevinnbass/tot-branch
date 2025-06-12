@@ -73,7 +73,10 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 > more volatile") or standard reporting verbs. It is NOT a risk-adjective
 > under Q1.
 
-**Regex Pattern:** `\b(prices?|rate|cost|loss|profit|revenue|value)\b.*\b(rose|declined|increased|fell|dropped|gained|lost)\b`
+**Regex Pattern (fenced):**
+```regex
+\b(prices?|rate|cost|loss|profit|revenue|value)\b.*\b(rose|declined|increased|fell|dropped|gained|lost)\b
+```
 
 ### Your JSON Reply:
 ```json

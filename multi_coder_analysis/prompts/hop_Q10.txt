@@ -58,7 +58,10 @@ Does the segment speculate about potential future relief or improvement (e.g., '
 **Boundary Analysis:**
 The segment must speculate about *future* improvement or relief. If it describes *current* positive conditions or *present* safety, it may fall under different rules (Q5-Q6 for reassuring, Q7-Q9 for neutral factual reporting).
 
-**Regex Pattern:** `\b(may be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b`
+**Regex Pattern (fenced):**
+```regex
+\b(may\ be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b
+```
 
 ### Your JSON Reply:
 ```json

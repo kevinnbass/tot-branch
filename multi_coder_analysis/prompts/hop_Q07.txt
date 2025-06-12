@@ -69,8 +69,10 @@ Does the segment merely state a 'bare negation' (e.g., 'not expected to cause pr
 statements remain **Neutral** unless followed by an explicit calming cue
 (e.g., "…so consumers can rest easy"). This mirrors §Q7 guidance in v2.16.
 
-**Regex Pattern (appended):**
-    `|do\s+not\s+present\s+an\s+immediate\s+public\s+health\s+concern`
+**Regex Pattern (fenced):**
+```regex
+\|do\s+not\s+present\s+an\s+immediate\s+public\s+health\s+concern
+```
 
 ### Your JSON Reply:
 ```json
