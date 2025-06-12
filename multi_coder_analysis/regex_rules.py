@@ -21,8 +21,9 @@ except ImportError as e:  # pragma: no cover – test env expects regex to be in
     ) from e
 
 import logging
-import json
+import json  # legacy: some prompts may still embed JSON blobs
 import textwrap
+import yaml  # YAML front-matter parser (PATCH 6)
 from dataclasses import dataclass, replace
 from typing import List, Dict, Pattern, Optional
 from pathlib import Path
@@ -96,7 +97,7 @@ def _compile_rule(rule: PatternInfo) -> Optional[PatternInfo]:
         # Detect variable-width look-behind errors from stdlib `re` as a cue
         # to silently force the rule into shadow mode while still retaining it
         # for coverage metrics.
-        if "look-behind" in msg or "lookbehind" in msg or "?<=" in msg or "?<!" in msg:
+        if "(?<" in msg:
             logging.warning(
                 f"Variable-width look-behind in rule {rule.name}; forcing shadow mode"
             )
@@ -167,13 +168,13 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
         except Exception:
             continue
 
-        # ── PATCH 2: parse optional JSON meta front-matter ------------------
+        # ── PATCH 7: parse optional YAML front-matter (--- ... ---) ---------
         meta_obj: dict | None = None
-        META_RE = re.compile(r"^\{[^}]*\"pattern\"\s*:\s*\".*$", re.MULTILINE)
-        meta_match = META_RE.search(txt)
-        if meta_match:
+        FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*", re.DOTALL)
+        fm_match = FM_RE.match(txt)
+        if fm_match:
             try:
-                meta_obj = json.loads(meta_match.group())
+                meta_obj = yaml.safe_load(fm_match.group(1)) or {}
                 hop_idx = int(meta_obj.get("hop", hop_idx))
             except Exception:
                 meta_obj = None
@@ -203,8 +204,8 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
                 or f"Q{hop_idx:02}.Prompt#{idx+1}"
             )
 
-            mode = (meta_obj and meta_obj.get("mode", "shadow")) or "shadow"
-            frame = (meta_obj and meta_obj.get("frame")) or _infer_frame_from_hop(hop_idx)
+            mode = meta_obj.get("mode", "shadow") if meta_obj else "shadow"
+            frame = meta_obj.get("frame") if meta_obj else _infer_frame_from_hop(hop_idx)
 
             patterns.append(
                 PatternInfo(
