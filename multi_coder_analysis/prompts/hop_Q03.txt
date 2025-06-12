@@ -64,7 +64,7 @@ Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 
 \b(hit|swept|surged|soared|plunged|plummeted|prompted|feared|fearing|
      # ONLY active, realised culling counts
      (?:were|was)\s+culled|hitting)\b
-(?=[^.]{0,12}\b(?:\d|million|millions|thousand|thousands|record|largest|unprecedented|severe|significant|overwhelming|devastating)\b)
+(?=[^.]{0,40}\b(?:\d|million|millions|thousand|thousands|record|largest|unprecedented|severe|significant|overwhelming|devastating|disaster|disasters|emergency|emergencies)\b)
 ```
 # Passive/future forms ("to be culled", "had to be culled", "planning to cull")
 # fall through to Q8 (capability) or Q10 (speculative relief).

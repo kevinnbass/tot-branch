@@ -3,3 +3,5 @@ file_paths:
     model_majority_output: '{phase}_model_labels.csv'
 logging:
   level: INFO
+runtime_flags:
+  enable_regex: true

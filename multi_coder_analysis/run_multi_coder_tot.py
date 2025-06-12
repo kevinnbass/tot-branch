@@ -29,6 +29,12 @@ from llm_providers.openrouter_provider import OpenRouterProvider
 from utils.tracing import write_trace_log
 from utils.tracing import write_batch_trace
 
+# --- Hybrid Regex Engine ---
+try:
+    from . import regex_engine  # relative import when run as package
+except ImportError:
+    import regex_engine  # fallback when script run from repo root
+
 # Load environment variables from .env file
 load_dotenv(Path(__file__).parent.parent / ".env")
 
@@ -153,7 +159,28 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
     for q_idx in range(1, 13):
         ctx.q_idx = q_idx
         
-        llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
+        # --------------------------------------
+        # 1. Try conservative regex short-circuit
+        # --------------------------------------
+        regex_ans = None
+        try:
+            regex_ans = regex_engine.match(ctx)
+        except Exception as exc:
+            logging.warning(f"Regex engine error on {ctx.statement_id} Q{q_idx}: {exc}")
+
+        provider_called = False
+
+        if regex_ans:
+            llm_response = {
+                "answer": regex_ans["answer"],
+                "rationale": regex_ans["rationale"],
+            }
+            frame_override = regex_ans.get("frame")
+        else:
+            llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
+            frame_override = None
+            provider_called = True
+        
         ctx.raw_llm_responses.append(llm_response)
         
         choice = llm_response.get("answer", "uncertain").lower().strip()
@@ -168,13 +195,14 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             trace_entry["thoughts"] = thoughts
         
         # --- Token accounting ---
-        usage = provider.get_last_usage()
-        if usage:
-            with token_lock:
-                token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
-                token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
-                token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
-                token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
+        if provider_called:
+            usage = provider.get_last_usage()
+            if usage:
+                with token_lock:
+                    token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
+                    token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
+                    token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
+                    token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
         
         ctx.analysis_history.append(f"Q{q_idx}: {choice}")
         ctx.reasoning_trace.append(trace_entry)
@@ -192,8 +220,10 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
 
         if choice == "yes":
             ctx.is_concluded = True
-            # Special handling for Hop 11, which determines frame from rationale
-            if q_idx == 11 and "||FRAME=" in rationale:
+            # Frame override from regex, else Hop 11 logic
+            if frame_override:
+                ctx.final_frame = frame_override
+            elif q_idx == 11 and "||FRAME=" in rationale:
                 try:
                     ctx.final_frame = rationale.split("||FRAME=")[1].strip()
                 except IndexError:
@@ -310,12 +340,56 @@ def run_tot_chain_batch(
         return GeminiProvider()
 
     def _process_batch(batch_segments: List[HopContext], hop_idx: int):
+        # ------------------------------------------------------------------
+        # 1. Pre-pass: try regex engine on each segment (conservative)
+        # ------------------------------------------------------------------
+        regex_resolved: List[HopContext] = []
+        unresolved_segments: List[HopContext] = []
+
+        for seg_ctx in batch_segments:
+            seg_ctx.q_idx = hop_idx  # ensure hop set
+            try:
+                r_answer = regex_engine.match(seg_ctx)
+            except Exception as exc:
+                logging.warning(
+                    f"Regex engine error in batch {hop_idx} on {seg_ctx.statement_id}: {exc}"
+                )
+                r_answer = None
+
+            if r_answer:
+                # Register trace entry immediately
+                trace_entry = {
+                    "Q": hop_idx,
+                    "answer": r_answer["answer"],
+                    "rationale": r_answer["rationale"],
+                }
+                seg_ctx.raw_llm_responses.append(trace_entry)
+                seg_ctx.analysis_history.append(f"Q{hop_idx}: yes (regex)")
+                seg_ctx.reasoning_trace.append(trace_entry)
+                write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
+
+                seg_ctx.is_concluded = True
+                seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
+                seg_ctx.final_justification = f"Frame determined by regex rule {r_answer['rationale']}"
+
+                regex_resolved.append(seg_ctx)
+            else:
+                unresolved_segments.append(seg_ctx)
+
+        if not unresolved_segments:
+            # Nothing left to process via LLM
+            return
+
+        # ------------------------------------------------------------------
+        # 2. Call LLM only for unresolved segments
+        # ------------------------------------------------------------------
         local_provider = _provider_factory()
+
         batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
-        batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=batch_segments)
+        batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
         parsed_list = _call_llm_batch(batch_ctx, local_provider, model, temperature)
 
-        sid_to_ctx = {c.statement_id: c for c in batch_segments}
+        sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
         for obj in parsed_list:
             sid = str(obj.get("segment_id", "")).strip()
             ctx = sid_to_ctx.get(sid)
