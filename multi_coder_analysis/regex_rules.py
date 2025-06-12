@@ -222,8 +222,21 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
                     )
                 )
 
+    # Scan the caller-specified prompt directory first (tests may monkeypatch).
     _gather_from_dir(PROMPTS_DIR)
-    _gather_from_dir(_DEFAULT_PROMPTS_DIR)
+
+    # Avoid duplicate rule objects when both paths are the *same* physical
+    # location (common in production/CI).  Re-scanning identical folders
+    # would yield two PatternInfo instances per fenced block which in turn
+    # causes regex_engine.match() to deem results ambiguous (>1 live rule
+    # fires) and return ``None``.
+    try:
+        if _DEFAULT_PROMPTS_DIR.resolve() != PROMPTS_DIR.resolve():
+            _gather_from_dir(_DEFAULT_PROMPTS_DIR)
+    except Exception:
+        # Fallback: conservative behaviour—if path resolution fails for some
+        # reason, perform the second scan (maintains previous semantics).
+        _gather_from_dir(_DEFAULT_PROMPTS_DIR)
 
     return patterns
 
