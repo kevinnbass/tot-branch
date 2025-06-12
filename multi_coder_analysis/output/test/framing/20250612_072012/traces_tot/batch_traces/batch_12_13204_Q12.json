@@ -1,0 +1,58 @@
+{
+  "batch_id": "batch_12_13204",
+  "hop_idx": 12,
+  "segment_count": 10,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "yes",
+      "rationale": "Factual description of risk frequency ('rare') and possibility ('can occur') without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "yes",
+      "rationale": "Factual reporting of statistics and lack of record without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of deaths and quantity without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of planned action and quantity without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of action taken without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of virus confirmation and location. 'deadly' describes background condition, ignored."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "yes",
+      "rationale": "Factual presentation of advice and conditions to report without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "no",
+      "rationale": "Contains explicit low-risk framing ('risk... is very low') which is a Reassuring cue (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "no",
+      "rationale": "Contains explicit food safety assurance ('does not present a food safety risk') which is a Reassuring cue (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "yes",
+      "rationale": "Factual reporting of strain, relation to past event, and statistics without explicit framing cues."
+    }
+  ],
+  "timestamp": "2025-06-12T07:22:39.048879"
+}

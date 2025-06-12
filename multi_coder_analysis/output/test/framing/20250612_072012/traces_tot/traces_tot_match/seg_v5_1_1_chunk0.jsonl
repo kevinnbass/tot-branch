@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective, nor the fixed idiom.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('responsible for the deaths') without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The verb 'is responsible for' is not on the moderate verb list.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports a negative fact (deaths) without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions a number ('at least 25,000') but lacks a minimiser token ('only', 'just', etc.) and a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes a negative event but does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Segment states a fact about an event, not capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports animal deaths, which are numerical metrics, but Q9 primarily targets economic/price data based on examples and regex.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event ('is responsible for the deaths') but does not speculate about future relief or improvement.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "No quotation marks present.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of deaths and quantity without explicit framing cues.", "method": "llm_batch"}
