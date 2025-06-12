@@ -170,7 +170,7 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
 # Integrate extracted patterns (shadow mode) ------------------------------------------------
 RAW_RULES.extend(_extract_patterns_from_prompts())
 
-# Re-compile dictionary with new additions
+# Re-compile dictionary with new additions ----------------------------------------------------------------
 COMPILED_RULES.clear()
 for rule in RAW_RULES:
     try:
@@ -179,8 +179,11 @@ for rule in RAW_RULES:
             re.compile(rule.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
             if rule.veto_regex
             else None
-    compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE)
-    compiled_veto = re.compile(rule.veto_regex, flags=re.I | re.UNICODE) if rule.veto_regex else None
+        )
+    except re.error as e:
+        logging.warning(f"Skipping invalid regex in rule {rule.name}: {e}")
+        continue
+
     COMPILED_RULES.setdefault(rule.hop, []).append(
         PatternInfo(
             hop=rule.hop,
