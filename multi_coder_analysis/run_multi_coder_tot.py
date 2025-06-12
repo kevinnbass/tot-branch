@@ -188,7 +188,10 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             via = "regex"
             regex_meta = regex_ans.get("regex", {})
             with token_lock:
-                token_accumulator['regex_yes'] += 1
+                if _re_eng._FORCE_SHADOW:
+                    token_accumulator['regex_hit_shadow'] += 1
+                else:
+                    token_accumulator['regex_yes'] += 1
         else:
             llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
             frame_override = None
@@ -384,7 +387,10 @@ def run_tot_chain_batch(
                 r_answer = None
             
             if r_answer:
-                token_accumulator['regex_yes'] += 1
+                if _re_eng._FORCE_SHADOW:
+                    token_accumulator['regex_hit_shadow'] += 1
+                else:
+                    token_accumulator['regex_yes'] += 1
                 
                 # Log the regex hit
                 trace_entry = {
@@ -620,6 +626,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         # Regex vs LLM utilisation counters
         'total_hops': 0,
         'regex_yes': 0,   # times regex produced a definitive yes
+        'regex_hit_shadow': 0,  # regex fired in shadow mode (does not short-circuit)
         'llm_calls': 0,   # times we hit the LLM
     }
     token_lock = threading.Lock()
@@ -868,6 +875,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
 
     # --- Regex vs LLM usage summary ---
     regex_yes = token_accumulator.get('regex_yes', 0)
+    regex_hit_shadow = token_accumulator.get('regex_hit_shadow', 0)
     llm_calls = token_accumulator.get('llm_calls', 0)
     total_hops = token_accumulator.get('total_hops', 0)
 
@@ -875,12 +883,14 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     logging.debug("=== REGEX / LLM UTILISATION ===")
     logging.debug(f"Total hops          : {total_hops}")
     logging.debug(f"Regex definitive YES : {regex_yes}")
+    logging.debug(f"Regex hits (shadow) : {regex_hit_shadow}")
     logging.debug(f"LLM calls made       : {llm_calls}")
     logging.debug(f"Regex coverage       : {regex_yes / total_hops:.2%}" if total_hops else "Regex coverage: n/a")
 
     print("\n⚡ Hybrid stats:")
     print(f"Total hops          : {total_hops}")
     print(f"Regex definitive YES: {regex_yes}")
+    print(f"Regex hits (shadow) : {regex_hit_shadow}")
     print(f"LLM calls made      : {llm_calls}")
     if total_hops:
         print(f"Regex coverage      : {regex_yes / total_hops:.2%}")
@@ -932,6 +942,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         "individual_fallback_note": "--individual-fallback flag WAS used" if config.get("individual_fallback", False) else "--individual-fallback flag NOT used",
         "token_usage": token_accumulator,
         "regex_yes": regex_yes,
+        "regex_hit_shadow": regex_hit_shadow,
         "llm_calls": llm_calls,
         "regex_coverage": (regex_yes / total_hops) if total_hops else None,
         "initial_mismatch_count": initial_mismatch_count,
