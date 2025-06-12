@@ -14,6 +14,8 @@ EXCLUDE_DIRS = {
     "output",
     "data",
     "docs",
+    "concatenated_prompts",
+    "concatenated_codebase",
 }
 
 # Always include these extensions for code/config
@@ -31,6 +33,7 @@ def _should_include_special(file_path: Path, repo_root: Path) -> bool:
 
     # --- Markdown: only top-level README(s) ---
     if file_path.suffix.lower() == ".md":
+        # Only include top-level README*.md files (drop upgrade summaries / large changelogs)
         try:
             rel = file_path.relative_to(repo_root)
         except ValueError:
