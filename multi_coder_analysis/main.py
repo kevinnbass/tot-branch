@@ -53,6 +53,16 @@ def setup_logging(config):
     log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
     logging.basicConfig(level=level, format=log_format, handlers=[logging.StreamHandler(sys.stdout)])
 
+    # Silence noisy AFC-related logs emitted by external libraries
+    class _AFCNoiseFilter(logging.Filter):
+        _PHRASES = ("AFC is enabled", "AFC remote call")
+
+        def filter(self, record: logging.LogRecord) -> bool:  # type: ignore[override]
+            msg = record.getMessage()
+            return not any(p in msg for p in self._PHRASES)
+
+    logging.getLogger().addFilter(_AFCNoiseFilter())
+
     # Reduce noise from HTTP libraries / Google SDK unless user sets DEBUG
     if level != "DEBUG":
         for noisy in ("google", "httpx", "urllib3"):
