@@ -874,6 +874,19 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     print(f"Total   : {token_accumulator['total_tokens']}")
 
     # --- Regex vs LLM usage summary ---
+    # Recompute shadow-hit tally based on per-rule statistics so that all shadow
+    # matches are counted even when no live rules exist (post-v2.20 change).
+    stats_snapshot = _re_eng.get_rule_stats()
+    rules_index_snapshot = {r.name: r for r in _re_eng.RAW_RULES}
+    shadow_total = sum(
+        counter.get("hit", 0)
+        for name, counter in stats_snapshot.items()
+        if rules_index_snapshot.get(name) and rules_index_snapshot[name].mode == "shadow"
+    )
+
+    # Store the aggregate for downstream logging/JSON
+    token_accumulator['regex_hit_shadow'] = shadow_total
+
     regex_yes = token_accumulator.get('regex_yes', 0)
     regex_hit_shadow = token_accumulator.get('regex_hit_shadow', 0)
     llm_calls = token_accumulator.get('llm_calls', 0)
