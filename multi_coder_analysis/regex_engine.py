@@ -135,8 +135,8 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
         # --- Short-circuit only when permitted ---
         if (
             fired
-            and not _FORCE_SHADOW  # shadow mode disables short-circuit
-            and rule.mode == "live"  # only live rules can answer deterministically
+            and not _FORCE_SHADOW  # shadow mode disables short-circuit altogether
+            and (rule.mode == "live" or rule.mode == "shadow")
         ):
             if winning_rule is not None:
                 # Multiple live rules fired ⇒ ambiguous → fall-through to LLM
