@@ -51,6 +51,7 @@ def setup_logging(config):
     log_config = config.get('logging', {})
     level = log_config.get('level', 'INFO').upper()
     log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
+    log_file = log_config.get('file')  # optional path for on-disk logging
     
     # Set Google SDK to ERROR level immediately to prevent AFC noise
     logging.getLogger("google").setLevel(logging.ERROR)
@@ -58,6 +59,21 @@ def setup_logging(config):
     logging.getLogger("google.genai.client").setLevel(logging.ERROR)
     
     logging.basicConfig(level=level, format=log_format, handlers=[logging.StreamHandler(sys.stdout)])
+
+    # ------------------------------------------------------------------
+    # Optional FileHandler – writes the same log stream to disk when the
+    # user specifies ``logging.file`` in config.yaml (or passes it via env
+    # injection).  Keeps stdout behaviour unchanged.
+    # ------------------------------------------------------------------
+    if log_file:
+        try:
+            fh = logging.FileHandler(log_file, encoding="utf-8")
+            fh.setLevel(level)
+            fh.setFormatter(logging.Formatter(log_format))
+            logging.getLogger().addHandler(fh)
+            logging.debug("File logging enabled → %s", log_file)
+        except Exception as e:
+            logging.warning("⚠ Could not set up file logging (%s): %s", log_file, e)
 
     # Silence noisy AFC-related logs emitted by external libraries
     class _AFCNoiseFilter(logging.Filter):
