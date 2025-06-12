@@ -134,13 +134,13 @@ def _compile_rule(rule: PatternInfo) -> Optional[PatternInfo]:
 # so they won't short-circuit unless promoted to live.
 # ----------------------------------------------------------------------------
 
-# Allow external test harnesses (e.g. via `monkeypatch.setattr`) to inject a
-# custom prompts directory *before* the module reloads.  When the module is
-# re-executed by ``importlib.reload`` the global namespace is preserved, so we
-# intentionally *reuse* any pre-existing definition instead of overwriting it
-# unconditionally.  This lets unit-tests point the extractor at a temporary
-# directory without resorting to brittle post-import hacks.
-PROMPTS_DIR = globals().get("PROMPTS_DIR", Path(__file__).parent / "prompts")
+_DEFAULT_PROMPTS_DIR = Path(__file__).parent / "prompts"
+# Allow external tests to monkeypatch `PROMPTS_DIR` to point at a temporary
+# directory.  When this happens, we *also* want to keep the original project
+# prompts available so that downstream logic (and other unit-tests) can still
+# access the full rule set.  Therefore we scan **both** directories whenever
+# they differ.
+PROMPTS_DIR = globals().get("PROMPTS_DIR", _DEFAULT_PROMPTS_DIR)
 
 _HOP_FILE_RE = re.compile(r"hop_Q(\d{2})\.txt")
 
@@ -153,64 +153,77 @@ def _infer_frame_from_hop(hop: int) -> str | None:
 
 
 def _extract_patterns_from_prompts() -> list[PatternInfo]:
+    """Extract shadow/live regex patterns from prompt files.
+
+    If a test suite temporarily overrides ``PROMPTS_DIR`` (via monkeypatch) to
+    point at an *isolated* directory, we automatically ALSO search the
+    project's canonical prompt folder so that the full rule set remains
+    available.  This dual-directory scan ensures that highly focused unit-
+    tests (e.g. verifying YAML extraction) do not inadvertently starve later
+    tests of the production patterns required for behavioural checks.
+    """
+
     patterns: list[PatternInfo] = []
 
-    if not PROMPTS_DIR.exists():
-        return patterns
+    def _gather_from_dir(dir_path: Path) -> None:
+        if not dir_path.exists():
+            return
+        for path in dir_path.glob("hop_Q*.txt"):
+            m = _HOP_FILE_RE.match(path.name)
+            if not m:
+                continue
+            hop_idx = int(m.group(1))
 
-    for path in PROMPTS_DIR.glob("hop_Q*.txt"):
-        m = _HOP_FILE_RE.match(path.name)
-        if not m:
-            continue
-        hop_idx = int(m.group(1))
-
-        try:
-            txt = path.read_text(encoding="utf-8")
-        except Exception:
-            continue
-
-        # ── PATCH 7: parse optional YAML front-matter (--- ... ---) ---------
-        meta_obj: dict | None = None
-        FM_RE = re.compile(r"^\s*---[^\n]*\n(.*?)\n---\s*", re.DOTALL)
-        fm_match = FM_RE.match(txt)
-        if fm_match:
             try:
-                meta_obj = yaml.safe_load(fm_match.group(1)) or {}
-                hop_idx = int(meta_obj.get("hop", hop_idx))
+                txt = path.read_text(encoding="utf-8")
             except Exception:
-                meta_obj = None
-
-        # ── PATCH 1: robust fenced-block extractor --------------------------
-        FENCED_RE = re.compile(r"```regex\s+([\s\S]*?)```", re.IGNORECASE | re.DOTALL)
-
-        for idx, m_block in enumerate(FENCED_RE.finditer(txt)):
-            raw = (
-                textwrap.dedent(m_block.group(1))
-                .replace("\r\n", "\n")
-                .strip()
-            )
-            # super-conservative: skip if pattern seems empty or has lookbehinds (?<)
-            if not raw or "?<-" in raw:
                 continue
 
-            # ── PATCH 2 cont. : use meta for name / mode / frame ------------
-            name = (
-                (meta_obj and meta_obj.get("name"))
-                or f"Q{hop_idx:02}.Prompt#{idx+1}"
-            )
+            # ── PATCH 7: parse optional YAML front-matter (--- ... ---) ----------
+            meta_obj: dict | None = None
+            FM_RE = re.compile(r"^\s*---[^\n]*\n(.*?)\n---\s*", re.DOTALL)
+            fm_match = FM_RE.match(txt)
+            if fm_match:
+                try:
+                    meta_obj = yaml.safe_load(fm_match.group(1)) or {}
+                    hop_idx = int(meta_obj.get("hop", hop_idx))
+                except Exception:
+                    meta_obj = None
 
-            mode = meta_obj.get("mode", "shadow") if meta_obj else "shadow"
-            frame = meta_obj.get("frame") if meta_obj else _infer_frame_from_hop(hop_idx)
+            # ── PATCH 1: robust fenced-block extractor ---------------------------
+            FENCED_RE = re.compile(r"```regex\s+([\s\S]*?)```", re.IGNORECASE | re.DOTALL)
 
-            patterns.append(
-                PatternInfo(
-                    hop=hop_idx,
-                    name=name,
-                    yes_frame=frame,
-                    yes_regex=raw,
-                    mode=mode,
+            for idx, m_block in enumerate(FENCED_RE.finditer(txt)):
+                raw = (
+                    textwrap.dedent(m_block.group(1))
+                    .replace("\r\n", "\n")
+                    .strip()
                 )
-            )
+                # super-conservative: skip if pattern seems empty or has lookbehinds (?<-)
+                if not raw or "?<-" in raw:
+                    continue
+
+                # ── PATCH 2 cont. : use meta for name / mode / frame ------------
+                name = (
+                    (meta_obj and meta_obj.get("name"))
+                    or f"Q{hop_idx:02}.Prompt#{idx+1}"
+                )
+
+                mode = meta_obj.get("mode", "shadow") if meta_obj else "shadow"
+                frame = meta_obj.get("frame") if meta_obj else _infer_frame_from_hop(hop_idx)
+
+                patterns.append(
+                    PatternInfo(
+                        hop=hop_idx,
+                        name=name,
+                        yes_frame=frame,
+                        yes_regex=raw,
+                        mode=mode,
+                    )
+                )
+
+    _gather_from_dir(PROMPTS_DIR)
+    _gather_from_dir(_DEFAULT_PROMPTS_DIR)
 
     return patterns
 
