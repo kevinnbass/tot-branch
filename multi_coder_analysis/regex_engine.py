@@ -161,14 +161,20 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
             and (rule.mode == "live" or rule.mode == "shadow")
         ):
             if winning_rule is not None:
-                # Multiple live rules fired ⇒ ambiguous → fall-through to LLM
+                # NEW: tolerate multiple hits as long as they agree on the frame
+                if rule.yes_frame == winning_rule.yes_frame:
+                    # Compatible → keep the first rule as the decisive one
+                    continue
+
+                # Conflicting frames ⇒ remain ambiguous → fall-through to LLM
                 logging.debug(
-                    "Regex engine ambiguity: >1 live rule fired for hop %s (%s, %s)",
+                    "Regex engine ambiguity: >1 conflicting rule fired for hop %s (%s vs %s)",
                     hop,
                     winning_rule.name,
                     rule.name,
                 )
                 return None
+            # First compatible rule becomes the candidate short-circuit
             winning_rule = rule
 
     if winning_rule is None:
