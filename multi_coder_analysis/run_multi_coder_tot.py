@@ -29,6 +29,7 @@ from llm_providers.gemini_provider import GeminiProvider
 from llm_providers.openrouter_provider import OpenRouterProvider
 from utils.tracing import write_trace_log
 from utils.tracing import write_batch_trace
+from utils.prompt_loader import load_prompt_and_meta  # New helper
 
 # --- Hybrid Regex Engine ---
 try:
@@ -79,14 +80,17 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
     """Dynamically assembles the full prompt for the LLM for a given hop."""
     try:
         hop_file = PROMPTS_DIR / f"hop_Q{ctx.q_idx:02}.txt"
-        hop_specific_content = hop_file.read_text(encoding='utf-8')
+
+        # --- NEW: strip YAML front-matter and capture metadata ---
+        hop_body, meta = load_prompt_and_meta(hop_file)
+        ctx.prompt_meta = meta  # save for downstream consumers
 
         # Simple template replacement
-        user_prompt = hop_specific_content.replace(
+        user_prompt = hop_body.replace(
             "{{segment_text}}", ctx.segment_text
         ).replace("{{statement_id}}", ctx.statement_id)
 
-        system_block = GLOBAL_HEADER + "\n\n" + hop_specific_content
+        system_block = GLOBAL_HEADER + "\n\n" + hop_body
         user_block = user_prompt + "\n\n" + GLOBAL_FOOTER
         return system_block, user_block
 
@@ -276,7 +280,11 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
     """Assemble a prompt that contains multiple segments for the same hop."""
     try:
         hop_file = PROMPTS_DIR / f"hop_Q{hop_idx:02}.txt"
-        hop_content = hop_file.read_text(encoding='utf-8')
+        hop_content, meta = load_prompt_and_meta(hop_file)
+
+        # Attach same meta to every HopContext in this batch for consistency
+        for ctx in segments:
+            ctx.prompt_meta = meta
 
         # Remove any single-segment placeholders
         hop_content = hop_content.replace("{{segment_text}}", "<SEGMENT_TEXT>")

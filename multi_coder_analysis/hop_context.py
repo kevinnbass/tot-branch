@@ -25,6 +25,9 @@ class HopContext:
     reasoning_trace: List[Dict] = field(default_factory=list)      # Machine-readable JSON for replay/debug
     raw_llm_responses: List[Dict] = field(default_factory=list)    # Raw, unparsed LLM responses per hop
 
+    # -------------- Parsed prompt metadata (from YAML front-matter) --------------
+    prompt_meta: Dict[str, Any] = field(default_factory=dict, repr=False)
+
     # -------------- Convenience Properties for Downstream Compatibility --------------
     @property
     def dim1_frame(self) -> Optional[str]:
