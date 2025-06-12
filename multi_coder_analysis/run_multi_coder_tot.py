@@ -805,12 +805,21 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         # Record initial mismatch count before any fallback corrections
         initial_mismatch_count = int(df_comparison["Mismatch"].sum())
 
+        # --- Mismatch attribution (regex vs. LLM) -----------------------
+        seg_regex_ids = token_accumulator.get('segments_regex_ids', set())
+        mismatch_ids = set(df_comparison[df_comparison["Mismatch"]].StatementID)
+        regex_mismatch_count = len(seg_regex_ids & mismatch_ids)
+        llm_mismatch_count = initial_mismatch_count - regex_mismatch_count
+
         # --- NEW: evaluate and print metrics BEFORE individual fallback ----
         predictions_pre = df_comparison['Pipeline_Result'].tolist()
         actuals_pre = df_comparison['Gold_Standard'].tolist()
         metrics_pre = calculate_metrics(predictions_pre, actuals_pre)
 
         print("\n🧮  Evaluation BEFORE individual fallback")
+        print(f"Regex-driven mismatches : {regex_mismatch_count}")
+        print(f"LLM-driven mismatches   : {llm_mismatch_count}")
+
         print_evaluation_report(metrics_pre, input_csv_path, output_dir, concurrency, limit, start, end)
 
         # --- Optional: individual fallback rerun for mismatches (batch-sensitive check) ---
@@ -1026,8 +1035,10 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
 
     summary_path = output_dir / "token_usage_summary.json"
     try:
+        # Convert non-serialisable objects (like sets) to serialisable forms
+        _safe_token_acc = {k: (list(v) if isinstance(v, set) else v) for k, v in token_accumulator.items()}
         with open(summary_path, 'w', encoding='utf-8') as f:
-            json.dump(token_accumulator, f, indent=2)
+            json.dump(_safe_token_acc, f, indent=2)
         logging.info(f"Token summary written to {summary_path}")
     except Exception as e:
         logging.error(f"Failed to write token summary: {e}")
@@ -1097,7 +1108,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         "concurrency": concurrency,
         "individual_fallback_enabled": bool(config.get("individual_fallback", False)),
         "individual_fallback_note": "--individual-fallback flag WAS used" if config.get("individual_fallback", False) else "--individual-fallback flag NOT used",
-        "token_usage": token_accumulator,
+        "token_usage": _safe_token_acc,
         "regex_yes": regex_yes,
         "regex_hit_shadow": regex_hit_shadow,
         "llm_calls": llm_calls,
@@ -1105,6 +1116,8 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         "initial_mismatch_count": initial_mismatch_count,
         "fixed_by_individual_fallback": fixed_by_fallback,
         "final_mismatch_count": final_mismatch_count,
+        "regex_mismatch_count": regex_mismatch_count,
+        "llm_mismatch_count": llm_mismatch_count,
     }
     if has_gold_standard:
         params_summary.update({
