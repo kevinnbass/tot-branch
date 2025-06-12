@@ -132,6 +132,10 @@ python main.py --use-tot --phase test --limit 5
 
 See `docs/architecture.md` for detailed technical documentation.
 
+<!-- API-REFERENCE:START -->
+This section will be automatically updated with API documentation when code changes are detected.
+<!-- API-REFERENCE:END -->
+
 ## License
 
 [Add your license information here]
