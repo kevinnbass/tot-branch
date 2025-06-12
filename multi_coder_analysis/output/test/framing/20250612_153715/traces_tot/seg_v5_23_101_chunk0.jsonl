@@ -1,3 +1,0 @@
-{"Q": 1, "answer": "no", "rationale": "'soared' and 'ravaged' are vivid verbs but do not modify risk-adjectives from the list.", "method": "llm_batch"}
-{"Q": 2, "answer": "yes", "rationale": "regex:Q02.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q02.Prompt#1", "span": [35, 42], "captures": []}}
-{"Q": 3, "answer": "no", "rationale": "'soared' is in the list, but it is not explicitly paired with a scale/impact term within the required proximity based on the regex.", "method": "llm_batch"}

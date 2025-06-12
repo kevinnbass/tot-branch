@@ -1,3 +1,0 @@
-{"Q": 1, "answer": "no", "rationale": "'particularly' is an intensifier but modifies 'hard hit', not a risk-adjective from the list.", "method": "llm_batch"}
-{"Q": 2, "answer": "no", "rationale": "No high-potency verb, metaphor, superlative-negative-noun, or 'on high alert' phrase found.", "method": "llm_batch"}
-{"Q": 3, "answer": "yes", "rationale": "regex:Q03.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q03.Prompt#1", "span": [32, 35], "captures": ["hit"]}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "yes", "rationale": "regex:Q01.IntensifierRiskAdj.Live matched", "method": "regex", "regex": {"rule": "Q01.IntensifierRiskAdj.Live", "span": [13, 26], "captures": []}}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verb, metaphor, superlative-negative-noun, or 'on high alert' phrase found.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'cull' (infinitive) is not a moderate verb from the approved list.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports facts about the virus and actions but lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment lacks both a minimiser token and an explicit scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'little choice' which is a statement about necessity, not a bare negation about risk/impact/presence.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes a response measure ('cull infected flocks') and the reason for it, without explicit reassurance.", "method": "llm_batch"}
