@@ -5,3 +5,7 @@
 {"Q": 5, "answer": "no", "rationale": "Provides advice/recommendations without explicit calming language.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment provides advice but contains no minimiser or scale contrast.", "method": "llm_batch"}
 {"Q": 7, "answer": "no", "rationale": "The segment provides advice/instructions but does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes recommended preparedness actions ('should prevent contact', 'report sick birds') without active reassurance.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment does not report prices, economic data, or numerical metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment provides advice and instructions ('should prevent contact', 'report sick birds') but does not speculate about future relief or improvement.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "No quotation marks present.", "method": "llm_batch"}

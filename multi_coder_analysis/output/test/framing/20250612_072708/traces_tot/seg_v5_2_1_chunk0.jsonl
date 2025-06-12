@@ -5,3 +5,7 @@
 {"Q": 5, "answer": "no", "rationale": "Reports planned actions (culling) without explicit calming language.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment mentions a quantity ('tens of thousands') but lacks a minimiser token ('only', 'just', etc.) and a scale contrast.", "method": "llm_batch"}
 {"Q": 7, "answer": "no", "rationale": "The segment describes an action but does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes a planned response measure ('planning to cull') without active reassurance.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of animals to be culled, which is a numerical metric, but Q9 primarily targets economic/price data based on examples and regex.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a planned action ('were planning to cull') but does not speculate about future relief or improvement.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "No quotation marks present.", "method": "llm_batch"}
