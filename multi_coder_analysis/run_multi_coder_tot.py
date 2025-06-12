@@ -47,7 +47,8 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 TEMPERATURE = 0.0
 MAX_RETRIES = 3
 BACKOFF_FACTOR = 1.5
-PROMPTS_DIR = Path(__file__).parent / "prompts"
+if "PROMPTS_DIR" not in globals():
+    PROMPTS_DIR = Path(__file__).parent / "prompts"
 
 # ---------------------------------------------------------------------------
 # Helpers to (lazily) read header / footer each time so that tests that monkey-
