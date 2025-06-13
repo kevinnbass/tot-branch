@@ -85,7 +85,10 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
          ^[^.]{0,60}\bon\s+high\s+alert\b
        )
 ) \b|
-\b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b|
+\b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|
+    raise(?:s|d|ing)?\s+(?:public|consumer|community)\s+
+    (?:fear|fears|concern|concerns|panic))\b[^.]{0,50}\b
+    (?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b|
 \bworst[-\s]?ever\s+(?:outbreak|crisis|disaster|catastrophe)\b|
 \b(?:battered|pummell?ed)\b(?=[^.]{0,25}\b(?:flock|farm|sector|supply|economy|community)\b)|
 \bperfect\s+storm\b[^.]{0,40}\b(?:outbreak|virus|flu|disease|threat|crisis|danger)\b
