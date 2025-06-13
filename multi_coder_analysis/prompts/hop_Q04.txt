@@ -26,8 +26,6 @@ Does the author or a quoted source pose a loaded rhetorical question that is cle
 | **Loaded Questions (Inaction)** | "Are we going to stand by while this unfolds?" "How long can we ignore this?" | ✓ |
 | **Neutral Information-Seeking** | "What are the safety protocols?" "When will results be available?" | → Neutral |
 
-**🔗 See also:** Q1 for intensified language that may appear in questions; Q2 for potent metaphors in questions
-
 **Outcome:** Yes → Label: Alarmist. No → Proceed to Q5.
 
 **🔍 Detailed Rules & Examples:**
@@ -63,9 +61,6 @@ Does the author or a quoted source pose a loaded rhetorical question that is cle
 ```regex
 \b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned|afraid)\b
 (?=[^.?]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)
-
-# Do we really / Can we afford … ?
-^\s*(?:do|can|should|will)\s+we\s+(?:really|afford)\b.*\?$
 ```
 
 ### Your JSON Reply:
