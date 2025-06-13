@@ -44,8 +44,6 @@ Does the author or a quoted source provide an explicit calming cue (e.g., 'no ca
 | **Bare Positive Facts** | "no cases reported," "tests negative," "no problems detected" | → Neutral (unless paired with calming cue) |
 | **"Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
 
-**🔗 See also:** Q6 for minimizer + scale contrast; Q7 for bare negations that lack calming cues
-
 **Outcome:** Yes → Label: Reassuring. No → Proceed to Q6.
 
 **🔍 Detailed Rules & Examples:**
@@ -59,7 +57,7 @@ Does the author or a quoted source provide an explicit calming cue (e.g., 'no ca
 **Definition: Reassuring** (Key Elements)
 Statement, either through a directly quoted source or the author's own presentation, demonstrably employs explicit language, tone, or rhetorical devices specifically chosen by the author or quoted source to actively calm audience concerns, minimize perceived current risk, emphasize safety/control, or highlight positive aspects in a way designed to reduce worry regarding the subject or its impacts. The intent to reassure must be evident in the presentation, not inferred from the facts being merely positive.
 
-**Key Differentiators from Neutral (updated):**
+**Key Differentiators from Neutral:**
 * Neutral reports positive facts; Reassuring adds explicit calming / optimistic amplification **or an intensified *low-risk* judgement about *current human safety*.**
 * Neutral uses standard descriptive terms for positive outcomes; Reassuring frames them with active confidence or relief.
 * Neutral may state a low risk; **Reassuring explicitly highlights the *very/exceptionally low* risk level to calm the audience.**
@@ -75,7 +73,7 @@ Statement, either through a directly quoted source or the author's own presentat
 1. *Speaker is a government or public‑health authority* **AND**  
 2. *Capability phrase links explicitly to present public/consumer safety* (≤ 40 chars span) ("…so the public can rest easy", "…meaning consumers are protected").  
 Superlative boasts alone ("strongest surveillance program") are Neutral.  
-Corporate self-statements lacking a safety link stay Neutral (Rule C).  
+Corporate self-statements lacking a safety link stay Neutral.  
   * **Example (Neutral):** "Tyson Foods is prepared for situations like this and has robust plans in place."
 
 **Minimal Pair Examples for Reassuring vs. Neutral:**
@@ -86,15 +84,13 @@ Corporate self-statements lacking a safety link stay Neutral (Rule C).
 
 **⚠️ Important Exclusion:**
 * **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
-  * Reasoning: "This is a bare negation statement without additional calming amplification. Falls under Q7 (bare negations) rather than Q5."
-
+  * Reasoning: "This is a bare negation statement without additional calming amplification."
 
 > **Precedence Note** – If a sentence matches more than one row  
 > in the table above, the order top→bottom decides.  
 >   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
 
 **Regex Pattern:**  
-# Guard – the pattern for Direct-Consumption-Safety only fires when the word "safe" (or inflections) is present in the same clause.
 ```regex
  \b(?:no\s+cause\s+for\s+alarm|
      public\s+can\s+rest\s+easy|
@@ -105,12 +101,9 @@ Corporate self-statements lacking a safety link stay Neutral (Rule C).
      situation\s+contained|
      providing\s+relief|feel(?:ing)?\s+positive|feel(?:ing)?\s+optimistic)|
      (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
-     # Explicit consumption safety
      (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
-     # Prepared/ready cue qualifies only if public/consumer term within 40 chars
      (?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
       .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
-     # "Fortunately for consumers …" cue
      \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
 ```
 
