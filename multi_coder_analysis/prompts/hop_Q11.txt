@@ -18,13 +18,7 @@
 ### Question Q11 (**Quote-presence hard-guard**)
 **Q11: Primacy of Framed Quotations – Dominant Quote Check**
 
-> **FAST-EXIT GUARD (NEW)**  
-> If the segment contains **no opening quotation mark**  
-> (`"`, `'`, `"`, `"`, `'`, `'`) you **must** immediately reply  
-> ```json
-> {"answer":"no","rationale":"No quotation marks present."}
-> ```  
-> and drop to Q12. This prevents hallucinating framed quotes.
+> \*\*FAST-EXIT GUARD \(NEW\)[\s\S]*?drop to Q12[\s\S]*?quotes\.
 
 Does a directly quoted source within the segment provide a clear, dominant Alarmist or Reassuring frame (per detailed definitions in `step-0-meta-details` and specific frame definitions) that is not overridden or equally balanced by other quotes or strong authorial counter-framing, as per the "Guidance Note: Primacy of Framed Quotations"?
 
@@ -37,9 +31,7 @@ Does a directly quoted source within the segment provide a clear, dominant Alarm
 | **Balanced/Mixed Quotes** | "concerning, but viruses do not transmit easily" | → Neutral |
 | **Neutral Quotes Only** | "officials are monitoring," "tests are ongoing" | → Proceed to Q12 |
 
-**🔗 See also:** Q1-Q10 for author-driven framing; Q12 for default neutral when quotes are neutral
-
-**Outcome:** Yes → Label according to the dominant quote's frame. No (or quotes are Neutral/balanced/absent, or authorial frame is dominant) → Proceed to Q12.
+<!-- cross-link removed -->
 
 **🔍 Detailed Rules & Examples:**
 
@@ -87,17 +79,7 @@ When a single quoted statement contains potentially mixed framing elements, part
   * Correct Code: Neutral.
   * Reasoning: "Neither clause contains explicit framing. The negative fact (case increase) and positive capability statement are both presented factually by the source without alarm or reassuring amplification. Both parts are neutrally stated, resulting in Neutral overall."
 
-**IMPORTANT:** If you answer "yes", you MUST append "||FRAME=Alarmist" or "||FRAME=Reassuring" to your rationale (exact spelling).
-
-**Regex Pattern:** 
-```regex
-# same as before **but** negative‑look‑behind for technical term
-["'""''](?<!highly\s+pathogenic\s)(?<!highly\s+pathogenic\savian\s)(?<!hpai\s)
-   [^"']*\b(catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm)\b[^"']*["']
-
-# "Absolutely no cause for alarm" inside quotes
-["'"]?[^\s"'"]*absolutely\s+no\s+cause\s+for\s+alarm[^\s"'"]*["']
-```
+<!-- Auto-validator enforces: answer == "yes" ⇒ rationale.endsWith("||FRAME=<FrameType>") -->
 
 ### Your JSON Reply:
 ```json
