@@ -94,6 +94,9 @@ When a single quoted statement contains potentially mixed framing elements, part
 # same as before **but** negative‑look‑behind for technical term
 ["'""''](?<!highly\s+pathogenic\s)(?<!highly\s+pathogenic\savian\s)(?<!hpai\s)
    [^"']*\b(catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm)\b[^"']*["']
+
+# NEW (2025-06-13c) – "absolutely no cause for alarm" inside quotes
+["'"]?[^\s"'"]*absolutely\s+no\s+cause\s+for\s+alarm[^\s"'"]*["']
 ```
 
 ### Your JSON Reply:
