@@ -66,7 +66,7 @@ A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used
 | **Alarmist – Intensifier + adjective** | "The flu is so deadly that entire flocks are culled." | **Alarmist** | "so deadly" (intensifier + risk adjective) |
 | **Alarmist – Deadly-from-outset idiom** | "H5N1 is deadly from the start, vets warn." | **Alarmist** | "deadly from the start" (fixed lethal-from-outset idiom) |
 
-**Regex Pattern  (v2.16.2):**
+**Regex Pattern:**
 ```regex
  # Ignore the fixed scientific term "highly pathogenic avian influenza (HPAI)"
  \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
