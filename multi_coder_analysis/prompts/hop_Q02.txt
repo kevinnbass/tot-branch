@@ -86,7 +86,9 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
              # NEW (critical-alert phrase – fires only when threat keyword is nearby)
        (?:                                     # critical‑alert phrase (bidirectional)
          on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
-         (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert
+         (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
+         # NEW – standalone alert headline:  “State on high alert”
+         ^[^.]{0,60}\bon\s+high\s+alert\b
        )
 ) \b
 ```

@@ -39,7 +39,7 @@ A statement of capability, preparedness, or hopeful possibility ("officials are 
 
 **Common Pitfalls & Guiding Micro-Rules:**
 **(C) Capability / Preparedness Statements ≠ Active Reassurance**
-* Micro-Rule: Statements describing capabilities, preparedness measures (future or existing), implemented safeguards, capacities, or potential positive future actions (e.g., "a vaccine can be made in X weeks," "systems are in place to detect X," "we have the resources to respond," "new safeguards have been enacted") are categorically Neutral unless explicitly and actively framed by the author/source as a reason for current calm, safety, or substantially minimized present risk.
+* Micro-Rule: Statements describing capabilities, preparedness measures (future or existing), implemented safeguards, capacities, or potential positive future actions (e.g., "a vaccine can be made in X weeks," "systems are in place to detect X," "we have the resources to respond," "new safeguards have been enacted") are categorically Neutral unless explicitly and actively framed by the author/source as a reason for current calm, safety, or significantly reduced current risk.
 * To be Reassuring, the author or quoted source MUST go beyond stating the capability and actively use explicit language to connect that capability to a state of present calm, safety, or significantly reduced current risk for the audience.
 
 **Canonical NON-EXAMPLE for Reassuring (Code: Neutral):**
@@ -64,6 +64,10 @@ A statement of capability, preparedness, or hopeful possibility ("officials are 
 ```regex
 \b(officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b
 ```
+
+# Prepared / ready **without** a public-safety link  (fires Q8 → Neutral)
+\b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b
+(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)
 
 ### Your JSON Reply:
 ```json
