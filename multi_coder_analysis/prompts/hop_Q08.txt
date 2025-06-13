@@ -30,34 +30,6 @@ Does the segment describe capabilities, preparedness measures, hopeful future po
 
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q9.
 
-**🔍 Detailed Rules & Examples:**
-
-**> Rule C — Capability ≠ Reassurance (unless Q5 already fired).**  
-A statement of capability, preparedness, or hopeful possibility ("officials are working to contain…", "restrictions may be short-lived") remains **Neutral** unless it *explicitly* links to present safety ("so the public can relax").
-
-**Common Pitfalls & Guiding Micro-Rules:**
-**(C) Capability / Preparedness Statements ≠ Active Reassurance**
-* Micro-Rule: Statements describing capabilities, preparedness measures (future or existing), implemented safeguards, capacities, or potential positive future actions (e.g., "a vaccine can be made in X weeks," "systems are in place to detect X," "we have the resources to respond," "new safeguards have been enacted") are categorically Neutral unless explicitly and actively framed by the author/source as a reason for current calm, safety, or significantly reduced current risk.
-* To be Reassuring, the author or quoted source MUST go beyond stating the capability and actively use explicit language to connect that capability to a state of present calm, safety, or significantly reduced current risk for the audience.
-
-**Canonical NON-EXAMPLE for Reassuring (Code: Neutral):**
-* Text: "'If a pandemic arises, once the genome sequence is known, an exact matched vaccine can be made in 6 weeks with mRNA technology and 4 months using the old egg-base methods,' she said."
-* Incorrect Reasoning (to avoid): "Fast vaccine development is reassuring about capability, so it's Reassuring."
-* Correct Codebook Reasoning: "Neutral. The quoted expert states a technical capability and timeline for a hypothetical future event. This statement lacks explicit calming or risk-minimizing language from the source (e.g., no 'fortunately,' 'this makes us very safe,' 'this is excellent news for our current preparedness,' 'the public can be reassured by this speed') to actively frame this capability as a reason for reassurance about existing or imminent risks."
-
-**Minimal Pair Examples:**
-* **Neutral:** "The agency has developed a rapid deployment plan for emergencies."
-  * Reasoning: "Neutral. States a capability. No explicit framing linking it to current reassurance."
-* **Reassuring:** "The agency's new rapid deployment plan is a game-changer, meaning that in the event of an emergency, the public can rest assured that help will arrive swiftly and effectively, significantly reducing any potential danger."
-  * Reasoning: "Reassuring (Author-driven). Author explicitly links the plan to 'rest assured,' 'swiftly and effectively,' and 'significantly reducing potential danger.' Decisive cues: 'rest assured,' 'significantly reducing potential danger'."
-* **Neutral:** "Quote: 'We have stockpiled 30 million doses of the antiviral.'"
-  * Reasoning: "Neutral. Quoted source states a fact about preparedness. Lacks explicit language from the source framing this as a reason for current public calm or safety."
-* **Reassuring:** "Quote: 'We have stockpiled 30 million doses of the antiviral, which is excellent news and means our citizens are very well protected against any immediate threat from this virus.'"
-  * Reasoning: "Reassuring (Quote-driven). Quoted source explicitly frames the stockpile as 'excellent news' and a reason for being 'very well protected against any immediate threat.' Decisive cues: 'excellent news,' 'very well protected'."
-
-**Common LLM Misinterpretations & How to Avoid Them:**
-**Confusing Capability/Preparedness Statements with Active Reassurance:** Describing safeguards, capabilities, or control measures is Neutral unless explicitly framed as a reason for current calm or minimized risk. (See Common Pitfalls (C) and Reassuring - Exclusion Criteria.)
-
 **Regex Pattern:**
 ```regex
 \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)|(?:officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b)\b
