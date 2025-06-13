@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative adjective modifies a risk-adjective from the specified list.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verbs, potent metaphors, superlative + negative nouns, or 'on high alert' phrase found. Contains reassuring language, but that is not a Q2 cue.", "method": "llm_batch"}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Contains 'do not present an immediate public health concern' which is a bare negation.", "method": "llm_batch"}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 7, "answer": "yes", "rationale": "regex:Q07.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q07.Prompt#1", "span": [32, 81], "captures": []}}

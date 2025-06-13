@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative adjective modifies a risk-adjective from the specified list.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verbs, potent metaphors, superlative + negative nouns, or 'on high alert' phrase found. 'spreads' is moderate. 'difficult to contain' is an adjective phrase, not a high-potency one or part of a Q2 pattern.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'spreads' is not a moderate verb from the specified list.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports spread mechanism and difficulty; no calming cue.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'difficult to contain' which is about difficulty, not a bare negation of a risk/outcome.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:Q08.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q08.Prompt#1", "span": [128, 135], "captures": []}}

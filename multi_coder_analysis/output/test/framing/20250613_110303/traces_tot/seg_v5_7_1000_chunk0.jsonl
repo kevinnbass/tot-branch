@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'strongest' modifies 'surveillance program', not a risk-adjective from the specified list.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verbs, potent metaphors, superlative + negative nouns, or 'on high alert' phrase found. Contains reassuring language, but that is not a Q2 cue.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with scale/impact information.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Contains 'will not enter the food system' which is a bare negation, and reports capability ('strongest AI surveillance program').", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a bare negation ('will not enter the food system') followed by a calming cue ('strongest AI surveillance program').", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:Q08.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q08.Prompt#1", "span": [46, 52], "captures": []}}
