@@ -1,0 +1,63 @@
+diff --git a/multi_coder_analysis/prompts/hop_Q02.txt b/multi_coder_analysis/prompts/hop_Q02.txt
+index 1234567..abcdefg 100644
+--- a/multi_coder_analysis/prompts/hop_Q02.txt
++++ b/multi_coder_analysis/prompts/hop_Q02.txt
+@@ -87,9 +87,15 @@
+              # Critical-alert phrase – fires only when threat keyword is nearby
+        (?:                                     # critical‑alert phrase (bidirectional)
+-         on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
+-         (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
+-         # Standalone alert headline:  "State on high alert"
+-         ^[^.]{0,60}\bon\s+high\s+alert\b
++         # "on high alert" (bidirectional) – ignore future headlines ("will be on high alert")
++         (?:                                             # threat → alert  OR  alert → threat
++           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}
++           (?!(?:\s*\w+){0,3}\swill\s+be\s+on\s+high\s+alert)
++           (?:is|are|was|were)?\s*on\s+high\s+alert|
++           (?!(?:\s*\w+){0,3}\swill\s+be\s+on\s+high\s+alert)
++           (?:is|are|was|were)?\s*on\s+high\s+alert[^.]{0,40}
++           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b
++         )|
+ ) \b
+ | # Spark/stoke fears pattern
+ \b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b
+diff --git a/multi_coder_analysis/prompts/hop_Q03.txt b/multi_coder_analysis/prompts/hop_Q03.txt
+index 1234567..abcdefg 100644
+--- a/multi_coder_analysis/prompts/hop_Q03.txt
++++ b/multi_coder_analysis/prompts/hop_Q03.txt
+@@ -84,8 +84,10 @@
+ }
+ ``` 
+ 
+-| # Swept across … prompting millions[\s\S]*?\n\bswept\\s\+across[\s\S]*?\n|\s+#\s+Killed/left/caused.*
+-+| # Swept across … prompting millions (past-tense realised event)
+-+\bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
+-+| # Killed/left/caused + big number (main verb only)
+-+\b(?<!\b(?:that|which|who)\s+)(?:killed|left|caused)\b[^.]{0,25}\b\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?|billion)\b 
++# Swept across … prompting millions (past-tense realised event)
++\bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
++# Killed/left/caused + big number (main verb only)
++\b(?<!\b(?:that|which|who)\s)(?:killed|left|caused)\b[^.]{0,25}\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?|billion)\b
+diff --git a/multi_coder_analysis/prompts/hop_Q04.txt b/multi_coder_analysis/prompts/hop_Q04.txt
+index 1234567..abcdefg 100644
+--- a/multi_coder_analysis/prompts/hop_Q04.txt
++++ b/multi_coder_analysis/prompts/hop_Q04.txt
+@@ -70,3 +70,6 @@
+ \b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned|afraid)\b
+ (?=[^.?]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)
++
++# Do we really / Can we afford … ?
++^\s*(?:do|can|should|will)\s+we\s+(?:really|afford)\b.*\?$
+diff --git a/multi_coder_analysis/prompts/hop_Q11.txt b/multi_coder_analysis/prompts/hop_Q11.txt
+index 1234567..abcdefg 100644
+--- a/multi_coder_analysis/prompts/hop_Q11.txt
++++ b/multi_coder_analysis/prompts/hop_Q11.txt
+@@ -90,5 +90,5 @@
+ }
+ ```
+ 
+-catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm\)\b[^"']*\["']
+-| # "Absolutely no cause for alarm" inside quotes
+-["'"][^"'""]{0,40}absolutely\s+no\s+cause\s+for\s+alarm[^"'""]{0,40}["'"] 
++catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm|
++absolutely\s+no\s+cause\s+for\s+alarm)\b[^"']*["'] 
