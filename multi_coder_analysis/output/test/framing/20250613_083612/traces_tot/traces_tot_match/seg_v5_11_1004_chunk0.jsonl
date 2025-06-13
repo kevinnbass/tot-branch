@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment mentions negative facts (sick birds, deaths) neutrally, without Q1 cues.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment provides advice using neutral verbs ('practicing', 'prevent contact', 'report'). It does not contain high-potency verbs, metaphors, or other Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb from the list is used.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Provides advice/instructions without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains no minimiser or scale contrast pattern.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment provides advice/recommendations but contains no negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:Q08.Prompt#2 matched", "method": "regex", "regex": {"rule": "Q08.Prompt#2", "span": [183, 192], "captures": ["officials"]}}
