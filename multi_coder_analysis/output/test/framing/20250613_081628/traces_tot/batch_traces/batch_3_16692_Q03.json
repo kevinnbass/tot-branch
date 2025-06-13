@@ -1,0 +1,58 @@
+{
+  "batch_id": "batch_3_16692",
+  "hop_idx": 3,
+  "segment_count": 10,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "No moderate verb from the list is used."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "Verbs 'contracted' and 'resulting' are not on the moderate verb list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "'deaths' is a plain outcome noun, not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "'planning to cull' refers to a future action, not a realised impact, and falls outside Q3."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "no",
+      "rationale": "No moderate verb from the list is used."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "No moderate verb from the list is used."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "no",
+      "rationale": "No moderate verb from the list is used."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "no",
+      "rationale": "No moderate verb from the list is used."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "no",
+      "rationale": "'threatens to spark' is a potential future impact, not a realised one, and falls outside Q3."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'killed' is preceded by 'that', failing the specific regex pattern for Q3; it is treated as a plain outcome verb here."
+    }
+  ],
+  "timestamp": "2025-06-13T08:17:12.321061"
+}
