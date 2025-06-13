@@ -18,7 +18,8 @@
 ### Question Q11 (**Quote-presence hard-guard**)
 **Q11: Primacy of Framed Quotations – Dominant Quote Check**
 
-> \*\*FAST-EXIT
+<!-- FAST-EXIT GUARD. Do NOT touch. -->
+{{fast_exit_no_quotes}}
 
 Does a directly quoted source within the segment provide a clear, dominant Alarmist or Reassuring frame (per detailed definitions in `step-0-meta-details` and specific frame definitions) that is not overridden or equally balanced by other quotes or strong authorial counter-framing, as per the "Guidance Note: Primacy of Framed Quotations"?
 
@@ -87,4 +88,8 @@ When a single quoted statement contains potentially mixed framing elements, part
   "answer": "yes|no|uncertain",
   "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'. If yes, MUST end with ||FRAME=Alarmist or ||FRAME=Reassuring>"
 }
-``` 
+```
+
+catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm\)\b[^"']*\["']
++| # "Absolutely no cause for alarm" inside quotes
++["'“][^"'“”]{0,40}absolutely\s+no\s+cause\s+for\s+alarm[^"'“”]{0,40}["'”] 
