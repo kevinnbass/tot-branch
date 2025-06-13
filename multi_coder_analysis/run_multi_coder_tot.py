@@ -105,7 +105,10 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
         header_path = hop_file.parent / "GLOBAL_HEADER.txt"
         if not header_path.exists():
             header_path = hop_file.parent / "global_header.txt"
-        local_header = header_path.read_text(encoding="utf-8")
+        try:
+            local_header = header_path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_header = _load_global_header()
 
         local_footer = ""
         try:
@@ -323,7 +326,10 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
         header_path = hop_file.parent / "GLOBAL_HEADER.txt"
         if not header_path.exists():
             header_path = hop_file.parent / "global_header.txt"
-        local_header = header_path.read_text(encoding="utf-8")
+        try:
+            local_header = header_path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_header = _load_global_header()
 
         local_footer = ""
         try:
