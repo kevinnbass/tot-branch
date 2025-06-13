@@ -87,7 +87,7 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
             (?:disaster|crisis|outbreak|catastrophe|calamity)|
              # Critical-alert phrase – fires only when threat keyword is nearby
        (?:                                     # critical‑alert phrase (bidirectional)
-         on\s+high\s+alert(?=[^.]{0,40}\\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\\b)
+         (?:is|are|was|were)\s+on\s+high\s+alert(?=[^.]{0,40}\\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\\b)
 +          (?<!\\bwill\\s+be\\s+)  # Exclude future-speculative 'will be on high alert'
 +          (?:is|are|was|were)?\\s*on\\s+high\\s+alert(?=[^.]{0,40}\\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\\b)
 ) \b
