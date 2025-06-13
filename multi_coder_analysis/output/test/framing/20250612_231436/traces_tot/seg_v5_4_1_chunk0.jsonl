@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "Describes facts about the outbreak, not capability or preparedness.", "method": "llm_batch"}
 {"Q": 9, "answer": "no", "rationale": "The segment reports location and distance, not economic data or prices.", "method": "llm_batch"}
 {"Q": 10, "answer": "no", "rationale": "The segment reports past/current facts, not speculation about future relief or improvement.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "No quotation marks present.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "regex:Q12.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q12.Prompt#1", "span": [62, 136], "captures": ["confirm", "deaths"]}}
