@@ -52,7 +52,7 @@ Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a c
 * **Neutral:** "The virus is contagious."
 * **Alarmist (Author):** "The virus is frighteningly contagious, spreading like wildfire." (Cue: 'frighteningly,' 'spreading like wildfire').
 
-**New Comparative Minimal Pair Example:**
+**Comparative Minimal Pair Example:**
 * **Alarmist:** "Scientists warn the virus is becoming deadlier each season."
 * **Neutral:** "Scientists track how the virus becomes more common each season."
 
@@ -66,7 +66,7 @@ A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used
 | **Alarmist – Intensifier + adjective** | "The flu is so deadly that entire flocks are culled." | **Alarmist** | "so deadly" (intensifier + risk adjective) |
 | **Alarmist – Deadly-from-outset idiom** | "H5N1 is deadly from the start, vets warn." | **Alarmist** | "deadly from the start" (fixed lethal-from-outset idiom) |
 
-**Regex Pattern  (v2.16.2):**
+**Regex Pattern:**
 ```regex
  # Ignore the fixed scientific term "highly pathogenic avian influenza (HPAI)"
  \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
