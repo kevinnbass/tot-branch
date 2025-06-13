@@ -31,15 +31,11 @@ Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a c
 **Outcome when Yes :** Label = Alarmist  
 **Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
 
-**‼ RULE 1 QUICK MEMORY HOOK**
-• "Highly/very/so/more + deadly/lethal/dangerous" ⇒ Alarmist every time
-
 | If you see… | Frame | Quick test |
 |-------------|-------|------------|
 | **Intensifier/Comparative + Risk-Adjective** | Alarmist | **Any single match is sufficient (Precedence #1)** |
 | - so/very/extremely/highly/frighteningly/particularly + deadly/lethal/dangerous/brutal/severe/contagious/virulent/destructive | | |
 | - more/less/deadlier/safer/higher/lower + same risk adjectives | | |
-| *(Risk-adjective list is illustrative, not exhaustive)* | | |
 
 **Alarmist - Inclusion Criteria:**
 * Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)
