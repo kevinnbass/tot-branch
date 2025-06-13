@@ -62,6 +62,13 @@ A statement of capability, preparedness, or hopeful possibility ("officials are 
 
 **Regex Pattern (fenced):**
 ```regex
+# Prepared / ready **without** a public-safety link  (fires Q8 → Neutral)
+\b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b
+(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)
+```
+
+**Regex Pattern (fenced):**
+```regex
 \b(officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b
 ```
 
