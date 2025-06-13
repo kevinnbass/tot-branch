@@ -81,3 +81,8 @@ If the parser lemmatises verbs, **keep only the past-tense form** `culled`; excl
   "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
 }
 ``` 
+
+| # NEW (2025-06-13b) – swept across … prompting millions
+\bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
+| # NEW (2025-06-13b) – killed/left/caused + big number
+\b(?:killed|left|caused)\b[^.]{0,25}\b\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b 

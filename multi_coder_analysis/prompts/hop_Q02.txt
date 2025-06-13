@@ -87,10 +87,14 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
        (?:                                     # critical‑alert phrase (bidirectional)
          on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
          (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
-         # NEW – standalone alert headline:  “State on high alert”
+         # NEW – standalone alert headline:  "State on high alert"
          ^[^.]{0,60}\bon\s+high\s+alert\b
        )
 ) \b
+| # NEW (2025-06-13b) – spark/stoke fears pattern
+\b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b
+| # NEW (2025-06-13b) – worst-ever crisis cliché
+\bworst[-\s]?ever\s+(?:outbreak|crisis|disaster|catastrophe)\b
 ```
 
 This keeps prior behaviour for existing vivid verbs while ensuring
@@ -98,9 +102,4 @@ This keeps prior behaviour for existing vivid verbs while ensuring
 not when it sets a macro-economic backdrop ("amid soaring inflation").
 
 ### Your JSON Reply:
-```json
-{
-  "answer": "yes|no|uncertain",
-  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
-}
-``` 
+```

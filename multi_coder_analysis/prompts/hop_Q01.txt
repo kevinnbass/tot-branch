@@ -75,7 +75,9 @@ A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used
  # Risk-adj list (adding infectious, transmissible) while pruning ECON adjective "volatile"
  (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
  # NEW (fixed lethal-from-outset idiom)
- \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b
+ \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
+ # NEW (2025-06-13b) – superlative + risk-adj
+ \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
 ```
 
 **EXCLUSION — "volatile"**  
