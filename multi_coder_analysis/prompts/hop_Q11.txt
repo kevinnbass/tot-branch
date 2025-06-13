@@ -90,6 +90,5 @@ When a single quoted statement contains potentially mixed framing elements, part
 }
 ```
 
-catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm\)\b[^"']*\["']
-+| # "Absolutely no cause for alarm" inside quotes
-+["'“][^"'“”]{0,40}absolutely\s+no\s+cause\s+for\s+alarm[^"'“”]{0,40}["'”] 
+catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm|
+absolutely\s+no\s+cause\s+for\s+alarm)\b[^"']*["'] 
