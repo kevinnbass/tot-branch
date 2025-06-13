@@ -15,7 +15,7 @@
 ### Segment (StatementID: {{statement_id}})
 {{segment_text}}
 
-### Question Q11 (**updated v2.18.1 – quote-presence hard-guard**)
+### Question Q11 (**Quote-presence hard-guard**)
 **Q11: Primacy of Framed Quotations – Dominant Quote Check**
 
 > **FAST-EXIT GUARD (NEW)**  
@@ -44,7 +44,7 @@ Does a directly quoted source within the segment provide a clear, dominant Alarm
 **🔍 Detailed Rules & Examples:**
 
 **Guidance Note: Primacy of Framed Quotations (SUPERSEDES PREVIOUS QUOTE RULES)**
-**Technical-term override (v 2.17)**  
+**Technical-term override**  
 Before deciding that a quoted risk-adjective is Alarmist under Q11,  
 **skip** the cue if the adjective is immediately preceded (≤ 3 tokens) by the
 whitelisted biomedical collocations:  
@@ -52,7 +52,7 @@ whitelisted biomedical collocations:
 Rationale: Q1 technical-term guard has higher precedence and treats these
 as neutral taxonomy, not intensification.
 
-**Preparedness safety-link check (v 2.18)**  
+**Preparedness safety-link check**  
 When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but** lacks an explicit public/consumer safety link within 40 chars (e.g., "so consumers are safe"), treat it as **Neutral** rather than Reassuring.
 
 Core Principle: If a direct quotation (or a clearly attributed statement from a specific source) within the segment carries a distinct Alarmist or Reassuring frame, the segment's Dim1_Frame MUST reflect the frame of that quotation/attributed statement. This principle applies even if the author's narrative surrounding the quote is Neutral. The frame is determined by the language and tone used by the quoted source itself.
@@ -95,7 +95,7 @@ When a single quoted statement contains potentially mixed framing elements, part
 ["'""''](?<!highly\s+pathogenic\s)(?<!highly\s+pathogenic\savian\s)(?<!hpai\s)
    [^"']*\b(catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm)\b[^"']*["']
 
-# NEW (2025-06-13c) – "absolutely no cause for alarm" inside quotes
+# "Absolutely no cause for alarm" inside quotes
 ["'"]?[^\s"'"]*absolutely\s+no\s+cause\s+for\s+alarm[^\s"'"]*["']
 ```
 
