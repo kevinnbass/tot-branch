@@ -78,6 +78,9 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 \b(prices?|rate|cost|loss|profit|revenue|value)\b.*\b(rose|declined|increased|fell|dropped|gained|lost)\b
 ```
 
+| # NEW (2025-06-13b) – "prices were up/down X %" factual metric
+\bprices?\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%\b
+
 ### Your JSON Reply:
 ```json
 {
