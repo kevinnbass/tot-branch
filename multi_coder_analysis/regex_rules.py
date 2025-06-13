@@ -82,35 +82,8 @@ class PatternInfo:
 # (Live rules removed per latest design decision.)
 # ----------------------------------------------------------------------------
 RAW_RULES: List[PatternInfo] = [
-    # ------------------------------------------------------------------
-    # LIVE RULE 1 – Hop 01: Intensifier + Risk-adjective → Alarmist
-    # ------------------------------------------------------------------
-    PatternInfo(
-        hop=1,
-        name="Q01.IntensifierRiskAdj.Live",
-        yes_frame="Alarmist",
-        yes_regex=r"""
-            \b
-            (?:extremely|very|so|highly|deadlier|more|
-               severely|particularly|frighteningly)
-            (?:\s+\w+){0,3}\s+
-            (?:deadly|lethal|dangerous|severe|catastrophic|
-               brutal|contagious|virulent|destructive)
-            \b
-        """,
-        mode="live",
-    ),
-
-    # ------------------------------------------------------------------
-    # LIVE RULE 2 – Hop 05: Explicit calming cue → Reassuring
-    # ------------------------------------------------------------------
-    PatternInfo(
-        hop=5,
-        name="Q05.ExplicitCalming.Live",
-        yes_frame="Reassuring",
-        yes_regex=r"\bfully\s+under\s+control\b",
-        mode="live",
-    ),
+    # (No standalone live rules; everything now comes from the prompt-embedded
+    #   patterns automatically extracted below.)
 ]
 
 
