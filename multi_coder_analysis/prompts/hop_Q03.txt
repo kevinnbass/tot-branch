@@ -19,14 +19,12 @@
 **Q3: Moderate Verbs + Scale/Impact**
 Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 'hard hit,' 'soared,' 'plummeted') AND is this verb explicitly paired with information detailing significant scale or impact (e.g., 'millions culled,' 'record losses,' 'overwhelming systems'), as detailed in the rules?
 
-**🔍 Q3 Pattern Recognition Table (revised):**
+**🔍 Q3 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Alarmist** |
 |------------------|--------------|----------------|
 | **Moderate Verb (past-tense)** **+ Scale** | "swept across + millions culled," "hard hit + record losses," "soared + overwhelming systems," "**were/was culled** + 3 million birds" | ✓ |
 | **Moderate Verb (past-tense)** **+ Quantity** | "surged + 50 % increase," "plummeted + largest decline," "hit + thousands affected" | ✓ |
-| **Moderate Verb (present/future/plan)** <br/>*(e.g. "**planning to cull**", "could hit")* | → **Neutral** (falls to Q8 capability or Q10 speculation, depending on context) |
-
-**🔗 See also:** Q2 for high-potency verbs that are alarmist on their own; Q9 for economic reporting
+| **Moderate Verb (present/future/plan)** *(e.g. "**planning to cull**", "could hit")* | → **Neutral** |
 
 **Outcome:** Yes → Label: Alarmist. No → Proceed to Q4.
 
@@ -45,9 +43,9 @@ Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 
 * **Example (Evaluative adjective + scale from Author):** Author: "The agricultural sector was hard hit by the drought, with crop yields plummeting by over 50%." (Alarmist → 'Hard hit' coupled with the specific, severe scale of 'plummeting by over 50%' framed by the author).
 * **Example (Feared + toll from Author):** Author: "Officials feared a repeat that killed 50 million birds." (Alarmist → 'Feared' (moderate verb) paired with explicit large-scale impact '50 million birds').
 
-**Key Principle:** "swept across," "hard hit," "soared," "plummeted" can be potent verbs on their own (see Q2) if used dramatically. This rule specifically addresses their use when their alarmist nature is confirmed by accompanying details of scale/impact.
+**Key Principle:** "swept across," "hard hit," "soared," "plummeted" can be potent verbs on their own if used dramatically. This rule specifically addresses their use when their alarmist nature is confirmed by accompanying details of scale/impact.
 
-**Boundary Requirements (clarified):**
+**Boundary Requirements:**
 1. Verb **must appear in the approved list / regex**.  
 2. Must denote realised impact (not a plan or hypothetical).  
 3. Plain outcome verbs (*killed, died, affected, reported*) are excluded—Neutral unless other cues fire.
@@ -66,10 +64,8 @@ Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 
      (?:were|was)\s+culled|hitting)\b
 (?=[^.]{0,40}\b(?:\d|million|millions|thousand|thousands|record|largest|unprecedented|severe|significant|overwhelming|devastating|disaster|disasters|emergency|emergencies)\b)
 ```
-# Passive/future forms ("to be culled", "had to be culled", "planning to cull")
-# fall through to Q8 (capability) or Q10 (speculative relief).
 
-**Clarification (v 2.16.2)** — Containment actions  
+**Clarification** — Containment actions  
 "Birds were *euthanized/depopulated* to prevent spread" is **Neutral** unless paired with an explicit large-scale impact (e.g., "euthanized ***millions*** of birds across 10 states").
 
 If the parser lemmatises verbs, **keep only the past-tense form** `culled`; exclude the lemma "cull" and its gerund unless explicitly preceded by a past-tense auxiliary ("were/was culling") that confirms an event already occurred.
@@ -81,8 +77,3 @@ If the parser lemmatises verbs, **keep only the past-tense form** `culled`; excl
   "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
 }
 ``` 
-
-# Swept across … prompting millions (past-tense realised event)
-\bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
-# Killed/left/caused + big number (main verb only)
-\b(?<!\b(?:that|which|who)\s)(?:killed|left|caused)\b[^.]{0,25}\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?|billion)\b 
