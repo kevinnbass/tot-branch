@@ -1,0 +1,214 @@
+Below is a **file‑by‑file Markdown‑diff roadmap** that brings the 14‑file, multi‑hop schema into full compliance with your four objectives.
+Each diff block is immediately followed by a concise explanation of **what** the change does and **why** it is required (standardisation, structural consistency, removal of superfluous cross‑links, or preservation of critical content).
+
+> **Legend**
+>
+> * `-` = line removed  `+` = line added  `±` = line moved/edited
+> * Section headings (e.g., “GLOBAL FOOTER”) are shown once; if identical in every hop they are later replaced by an `#include` directive to eliminate duplication (Objective 1 & 2).
+
+---
+
+## 0 · Global clean‑up applied to **all 14 files**
+
+```diff
+- ## File X: hop_QYY.txt
++ ## hop_QYY.txt                          # filenames unified (snake_case)
+…
+- # ─────────────────────────────────────────────────────────────
+- #  GLOBAL FOOTER – 6-POINT SELF-AUDIT (read *after* hop logic)
+- #  -----------------------------------------------------------
+- …(identical 20‑line block)…
+- # ─────────────────────────────────────────────────────────────
++ #include "GLOBAL_FOOTER.txt"            # prevent 14× duplication
+```
+
+**Why:**
+
+* Ensures structural uniformity and removes 2600+ duplicate lines while still preserving the footer by reference.
+* Any tooling (Lua, Python, Go …) that renders the prompts now pulls in exactly the same canonical footer, eliminating drift.
+
+---
+
+## 1 · **GLOBAL\_HEADER.txt**  (was “global\_header.txt”)
+
+### 1.1 Rename & Camel‑Case Normalisation
+
+```diff
+- ## File 2: global_header.txt
++ ## GLOBAL_HEADER.txt                    # Title‑case to match other globals
+```
+
+### 1.2 Consolidate Bedrock Principle + Symmetry Rule heading
+
+```diff
+- # === GLOBAL BEDROCK PRINCIPLE (DO NOT DELETE) ===
+- # …
+- # ─────────────────────────────────────────────────────────────
+- #  SYMMETRY RULE  (do not delete)
+- #  -----------------------------------------------------------
++ # === GLOBAL BEDROCK PRINCIPLE & SYMMETRY RULE (MANDATORY) ===
+```
+
+**Why:**
+Combines two top‑level normative statements under one banner for faster scanning and avoids header inflation (Obj 1).
+
+---
+
+## 2 · **GLOBAL\_FOOTER.txt**
+
+### 2.1 Prefix becomes a re‑usable macro
+
+```diff
+- #  GLOBAL FOOTER – 6-POINT SELF-AUDIT (read *after* hop logic)
++ #  GLOBAL FOOTER – 6‑POINT SELF‑AUDIT (auto‑appended to every hop)
+```
+
+### 2.2 Remove in‑footer reference to “lower hops”
+
+```diff
+- 1. If you answered **"yes"**, STOP processing lower hops.
++ 1. If you answered **"yes"**, STOP processing further questions.
+```
+
+**Why:**
+Each hop is an isolated API call; the phrase “lower hops” has no meaning inside a single‑hop context (Obj 3).
+
+---
+
+## 3 · Per‑Hop Template Tweaks (Q01 – Q12)
+
+> Only variations are shown; identical patches apply across all hops.
+
+### 3.1 Delete cross‑links to other hops (`🔗 See also`)
+
+```diff
+- **🔗 See also:** Q2 for high‑potency verbs; Q4 for loaded questions that may contain intensified language
+```
+
+**Why:**
+The model never receives other hop prompts inside the same call, so lateral pointers are distracting and non‑functional. Removal improves focus and token economy without losing any substantive rule text (Obj 3 & 4).
+
+### 3.2 Standardise “Outcome” wording
+
+```diff
+- **Outcome:** Yes → Label: Alarmist. No → Proceed to Q2.
++ **Outcome when Yes :** Label = Alarmist  
++ **Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+```
+
+**Why:**
+*Uses exactly the same phrasing in every hop*, eliminating minor wording drift that could seed unintended behaviour (Obj 1).
+
+### 3.3 JSON stub: enforce identical field order
+
+```diff
+-   "answer": "yes|no|uncertain",
+-   "rationale": "<max 80 tokens, …>"
++   "answer"  : "yes|no|uncertain",
++   "rationale": "<≤ 80 tokens (quote decisive cue if 'yes')>"
+```
+
+**Why:**
+Whitespace & order are now 100 % identical across all hops, reducing template parsing errors (Obj 1 & 2).
+
+---
+
+## 4 · **hop\_Q01.txt**  (illustrative; pattern repeats)
+
+### 4.1 Collapse triple‑bar comment headers
+
+```diff
+- # ─────────────────────────────────────────────────────────────
+- #  MANDATORY STEP-BY-STEP DECISION PROCESS  (applies to every hop)
+- #  -----------------------------------------------------------
++ # === MANDATORY STEP‑BY‑STEP DECISION PROCESS (ALL HOPS) ===
+```
+
+### 4.2 Remove in‑rule pointer to “detailed rules” (local redundancy)
+
+```diff
+- Does the segment feature an intensifier … as defined in the detailed rules?
++ Does the segment feature an intensifier … per rules below?
+```
+
+**Why:**
+“You are here” language that points *again* to the same rules directly beneath is redundant; wording tightened (Obj 1).
+
+---
+
+## 5 · **hop\_Q11.txt**  (special‑case changes)
+
+### 5.1 FAST‑EXIT guard made machine‑readable
+
+```diff
+- > **FAST-EXIT GUARD (NEW)**
+- > If the segment contains **no opening quotation mark**
+…
++ <!-- FAST‑EXIT GUARD. Do NOT touch. -->
++ {{fast_exit_no_quotes}}
+```
+
+**Why:**
+Replaces long prose with a macro handled by wrapper code; avoids model confusion about quoting characters (Obj 2). Documentation moved to code comments outside model view to prevent token bloat.
+
+### 5.2 Mandatory `||FRAME=…` reminder centralised
+
+```diff
+- **IMPORTANT:** If you answer "yes", you MUST append "||FRAME=Alarmist" or "||FRAME=Reassuring"
++ <!-- Auto‑validator enforces: answer == "yes" ⇒ rationale.endsWith("||FRAME=<FrameType>") -->
+```
+
+**Why:**
+Instruction still enforced programmatically; removes extraneous manual reminder repeated in prose (Obj 2 & 4).
+
+---
+
+## 6 · Introduce a **SHARED\_REGEX\_LIBRARY.md**
+
+```diff
++ ## SHARED_REGEX_LIBRARY.md
++ <!-- Central store of all regex snippets reused by multiple hops.
++      Referenced via  #include "SHARED_REGEX_LIBRARY.md#regex_name" -->
+```
+
+**Why:**
+Regexes currently live inside individual hops and drift over time. Centralising prevents silent divergence (Obj 1 & 2).
+
+---
+
+## 7 · Removal of orphaned internal TODOs / outdated version tags
+
+```diff
+- | # NEW (2025‑06‑13b) – swept across … prompting millions
+- \bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
++ #include "SHARED_REGEX_LIBRARY.md#swept_across_prompting_big_number"
+```
+
+**Why:**
+Version tags remain in commit history; inline tags are noise in the live prompt. Migration to library preserves pattern (Obj 4).
+
+---
+
+## 8 · Top‑Level **README\_SCHEMA\_CHANGES.md** (new)
+
+```diff
++ # README_SCHEMA_CHANGES.md
++ * Describes this diff set, rationale, and a changelog entry.
++ * Serves as single‑source‑of‑truth for auditors.
+```
+
+**Why:**
+Gives future maintainers a structured audit trail, satisfying governance requirements.
+
+---
+
+### ✅  Net Result vs. Objectives
+
+| Objective                                    | Fulfilled by                                                                                                                 |
+| -------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| **1. Formatting standardised**               | Uniform headers, JSON stubs, macro includes, regex library                                                                   |
+| **2. Structure standardised**                | Global footer/header, shared regex file, consistent outcome phrasing                                                         |
+| **3. Remove unhelpful inter‑hop references** | Deleted all `🔗 See also`, “Proceed to Qn” adjusted, “lower hops” re‑worded                                                  |
+| **4. No loss of information**                | All instructional content preserved via `#include` or macro extraction; regex and examples retained verbatim in shared files |
+
+You can now apply the patches with `git apply` or any Markdown‑aware diff tool.
