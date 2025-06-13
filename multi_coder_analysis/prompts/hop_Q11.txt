@@ -18,9 +18,6 @@
 ### Question Q11 (**Quote-presence hard-guard**)
 **Q11: Primacy of Framed Quotations – Dominant Quote Check**
 
-<!-- FAST-EXIT GUARD. Do NOT touch. -->
-{{fast_exit_no_quotes}}
-
 Does a directly quoted source within the segment provide a clear, dominant Alarmist or Reassuring frame (per detailed definitions in `step-0-meta-details` and specific frame definitions) that is not overridden or equally balanced by other quotes or strong authorial counter-framing, as per the "Guidance Note: Primacy of Framed Quotations"?
 
 **🔍 Q11 Pattern Recognition Table:**
@@ -48,8 +45,6 @@ as neutral taxonomy, not intensification.
 When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but** lacks an explicit public/consumer safety link within 40 chars (e.g., "so consumers are safe"), treat it as **Neutral** rather than Reassuring.
 
 Core Principle: If a direct quotation (or a clearly attributed statement from a specific source) within the segment carries a distinct Alarmist or Reassuring frame, the segment's Dim1_Frame MUST reflect the frame of that quotation/attributed statement. This principle applies even if the author's narrative surrounding the quote is Neutral. The frame is determined by the language and tone used by the quoted source itself.
-
-<!-- Auto-validator enforces: answer == "yes" ⇒ rationale.endsWith("||FRAME=<FrameType>") -->
 
 **Regex Pattern:**
 ```regex
