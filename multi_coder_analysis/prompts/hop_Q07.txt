@@ -52,7 +52,7 @@ Does the segment merely state a 'bare negation' (e.g., 'not expected to cause pr
 | **Bare negation** ("not expected", "unlikely to affect") | Neutral | Stays Neutral unless paired with explicit calming cue |
 
 **Common LLM Misinterpretations & How to Avoid Them:**
-**NEW (v2.10) - Treating Bare Negations as Reassuring:** Statements like "not expected to cause problems" or "unlikely to affect production" are Neutral unless paired with explicit calming/safety cues (e.g., "so the risk remains low," "meaning consumers can be confident"). The negation alone is insufficient for Reassuring framing.
+**Treating Bare Negations as Reassuring:** Statements like "not expected to cause problems" or "unlikely to affect production" are Neutral unless paired with explicit calming/safety cues (e.g., "so the risk remains low," "meaning consumers can be confident"). The negation alone is insufficient for Reassuring framing.
 
 
 
@@ -67,14 +67,14 @@ Does the segment merely state a 'bare negation' (e.g., 'not expected to cause pr
 
 **CLARIFICATION** – "will **not** enter the food system" and similar bare-negation
 statements remain **Neutral** unless followed by an explicit calming cue
-(e.g., "…so consumers can rest easy"). This mirrors §Q7 guidance in v2.16.
+(e.g., "…so consumers can rest easy").
 
 **Regex Pattern (fenced):**
 ```regex
 \|do\s+not\s+present\s+an\s+immediate\s+public\s+health\s+concern
 ```
 
-| # NEW (2025-06-13b) – boiler-plate negation (immediate public-health concern)
+| # Boiler-plate negation (immediate public-health concern)
 \bdoes(?:n'?t)?\s+present\s+(?:an?\s+)?immediate\s+(?:public\s+)?health\s+concern\b
 
 ### Your JSON Reply:
