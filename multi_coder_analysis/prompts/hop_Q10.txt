@@ -31,34 +31,7 @@ Does the segment speculate about potential future relief or improvement (e.g., '
 
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q11.
 
-**🔍 Detailed Rules & Examples:**
-
-**Quick Decision Tree ▼** (in main document):
-4. **Does it speculate about relief ("may be short-lived", "could ease soon")?** 
-   • Without an explicit calming cue → Neutral. 
-
-**Key Principle:** Hopeful possibilities or predictions of future improvement are Neutral if the author/source does not use this speculation to make an explicit statement about current safety or reduced risk. The focus is on the *future possibility*, not a *present reassurance*.
-
-**Examples:**
-* **Neutral:** "Experts predict that the supply chain issues could ease in the next quarter."
-* **Neutral:** "There is hope that a new treatment may be available next year."
-* **Contrast with Reassuring:** If the statement was "Because these measures are working, restrictions may be short-lived, bringing welcome relief soon," the "because these measures are working" part, if framed as active present control, might shift it towards Reassuring, depending on potency.
-
-**Critical Distinction:**
-- **Future-focused language alone** = Neutral speculation
-- **Future relief + present safety/control framing** = Potentially Reassuring
-- The key is whether current conditions are explicitly framed as providing present reassurance
-
-**Common Future-Oriented Language (Neutral unless paired with current reassurance):**
-- Modal verbs: "may," "might," "could," "should"
-- Predictive language: "expect to," "predict," "forecast," "anticipate"
-- Hopeful expressions: "hope for," "optimistic about," "looking forward to"
-- Timeline indicators: "next quarter," "soon," "in the coming months," "eventually"
-
-**Boundary Analysis:**
-The segment must speculate about *future* improvement or relief. If it describes *current* positive conditions or *present* safety, it may fall under different rules (Q5-Q6 for reassuring, Q7-Q9 for neutral factual reporting).
-
-**Regex Pattern (fenced):**
+**Regex Pattern:**
 ```regex
 \b(may\ be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b
 ```

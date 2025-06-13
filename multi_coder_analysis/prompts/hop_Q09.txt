@@ -29,57 +29,17 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 | **Vivid Economic Verbs** | "prices skyrocketed," "costs plummeted," "markets crashed" | → Alarmist |
 | **Risk Adjectives + Economics** | "catastrophic losses," "devastating decline," "crippling costs" | → Alarmist |
 
-**🔗 See also:** Q2 for high-potency verbs in economic contexts; Q3 for moderate verbs with scale
-
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q10.
 
-**🔍 Detailed Rules & Examples:**
-
-**Quick Decision Tree ▼** (in main document):
-3. **Is it reporting prices or other metrics?** 
-   • If verbs like "rose/declined" or adverbs like "sharply" appear **without** a vivid verb or risk adjective → Neutral. 
-
-**##### Economic & Price Language Quick-Reference**:
-| Phrase (example) | Frame | Rationale |
-|------------------|-------|-----------|
-| "Prices **soared / skyrocketed**" | Alarmist | vivid verb |
-| "Prices **trended sharply higher**" | Neutral | descriptive verb + adverb only |
-| "Experts warn prices **could become volatile**" | Neutral | modal + mild adjective |
-
-**Key Principle:** Adverbs such as **sharply, significantly, notably** do **not** raise potency *unless* paired with a vivid verb or risk adjective ("sharply worsening crisis").
-
-**Additional Nuanced Examples** (under Bedrock Principle):
-* **Slightly Negative Fact + Neutral Framing:**
-  * Segment: "Market prices for wheat decreased by 2% this month."
-  * Reasoning: "Neutral. Factual report of a minor negative change. No explicit alarmist framing from the author."
-* **Slightly Negative Fact + Alarmist Framing (Exaggeration):**
-  * Segment: "Market prices for wheat took a devastating 2% dive this month, spelling trouble for farmers."
-  * Reasoning: "Alarmist (Author-driven). Author uses 'devastating dive' and 'spelling trouble' to frame a minor decrease alarmingly. Decisive cues: 'devastating dive,' 'spelling trouble'."
-
-**Key Elements for Neutral Economic Reporting:**
-- Standard financial/economic terminology
-- Descriptive rather than emotive language
-- Quantitative focus without editorial amplification
-- Professional/technical tone
-
-**Boundary Indicators:**
-- **Neutral**: "rose," "declined," "increased," "fell," "dropped," "gained," "lost"
-- **Potentially Alarmist**: "soared," "skyrocketed," "plummeted," "crashed," "tanked," "nosedived"
-- **Neutral Adverbs**: "sharply," "significantly," "notably," "considerably"
-- **Context Matters**: The same adverb can be neutral in economic reporting but contribute to alarmist framing when paired with risk adjectives
-
-> **"Volatile/volatility" policy** – "Volatile" is treated as
-> a neutral economic descriptor when paired with modal verbs ("could become
-> more volatile") or standard reporting verbs. It is NOT a risk-adjective
-> under Q1.
-
-**Regex Pattern (fenced):**
+**Regex Pattern:**
 ```regex
-\b(prices?|rate|cost|loss|profit|revenue|value)\b.*\b(rose|declined|increased|fell|dropped|gained|lost)\b
+(?is)
+\b(?:                             
+    (?:prices?|rate|cost|loss|profit|revenue|value)\b.*?\b
+        (?:rose|declined|increased|fell|dropped|gained|lost)\b
+  | prices?\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
+)
 ```
-
-| # "Prices were up/down X %" factual metric
-\bprices?\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%\b
 
 ### Your JSON Reply:
 ```json
