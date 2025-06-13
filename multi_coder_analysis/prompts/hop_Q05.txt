@@ -5,7 +5,7 @@
 ## JSON Output:
 {"answer":"yes","rationale":"'fully under control' and 'no danger to the public' are explicit calming cues communicating current safety."}
 
-# NEW YES example (Direct Consumption Safety)
+# YES example (Direct Consumption Safety)
 ## Input Segment: USDA said poultry products "remain safe to eat."
 ## Question: Does the author/source provide an explicit calming cue for reassurance?
 ## JSON Output:
@@ -17,7 +17,7 @@
 ## JSON Output:
 {"answer":"no","rationale":"This reports a positive fact but lacks explicit calming/reassuring language from the source."}
 
-# NEW NO example (Bare negation – food context)
+# NO example (Bare negation – food context)
 ## Input Segment: Properly cooked poultry **should not pose a risk** to consumers.
 ## Question: Does the author/source provide an explicit calming cue for reassurance?
 ## JSON Output:
@@ -42,7 +42,7 @@ Does the author or a quoted source provide an explicit calming cue (e.g., 'no ca
 | **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
 | **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
 | **Bare Positive Facts** | "no cases reported," "tests negative," "no problems detected" | → Neutral (unless paired with calming cue) |
-| **NEW (2025-06-13b) – "Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
+| **"Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
 
 **🔗 See also:** Q6 for minimizer + scale contrast; Q7 for bare negations that lack calming cues
 
@@ -84,16 +84,16 @@ Corporate self-statements lacking a safety link stay Neutral (Rule C).
 * **Reassuring:** "Officials confirmed the latest tests on the water supply showed no contaminants, declaring, 'This is excellent news, and residents can be fully confident in the safety of their drinking water.'"
   * Reasoning: "The official's quote explicitly frames the negative test as 'excellent news' and a reason for 'full confidence' and 'safety.' Decisive cues: 'excellent news,' 'fully confident in the safety'."
 
-**⚠️ Important Exclusion (v2.16.1):**
+**⚠️ Important Exclusion:**
 * **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
   * Reasoning: "This is a bare negation statement without additional calming amplification. Falls under Q7 (bare negations) rather than Q5."
 
 
-> **Precedence Note (v 2.16.3)** – If a sentence matches more than one row  
+> **Precedence Note** – If a sentence matches more than one row  
 > in the table above, the order top→bottom decides.  
 >   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
 
-**Regex Pattern (broadened):**  
+**Regex Pattern:**  
 # Guard – the pattern for Direct-Consumption-Safety only fires when the word "safe" (or inflections) is present in the same clause.
 ```regex
  \b(?:no\s+cause\s+for\s+alarm|
@@ -110,7 +110,7 @@ Corporate self-statements lacking a safety link stay Neutral (Rule C).
      # Prepared/ready cue qualifies only if public/consumer term within 40 chars
      (?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
       .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
-     # NEW (2025-06-13b) – "Fortunately for consumers …" cue
+     # "Fortunately for consumers …" cue
      \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
 ```
 
