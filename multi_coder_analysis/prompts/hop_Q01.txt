@@ -27,11 +27,9 @@ Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a c
 | **Fixed Lethal-from-Outset Idiom** | "deadly from the start," "deadly from the outset" | ✓ |
 | **Base Risk-Adj (alone)** | "deadly," "dangerous," "severe" (without intensifier) | → Neutral |
 
-**🔗 See also:** Q2 for high-potency verbs; Q4 for loaded questions that may contain intensified language
-
-**Outcome:** Yes → Label: Alarmist. No → Proceed to Q2.
-
 **🔍 Detailed Rules & Examples:**
+**Outcome when Yes :** Label = Alarmist  
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
 
 **‼ RULE 1 QUICK MEMORY HOOK**
 • "Highly/very/so/more + deadly/lethal/dangerous" ⇒ Alarmist every time

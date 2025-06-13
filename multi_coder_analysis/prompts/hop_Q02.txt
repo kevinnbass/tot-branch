@@ -30,7 +30,9 @@ Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 
 
 **🔗 See also:** Q3 for moderate verbs paired with scale/impact; Q1 for intensified adjectives
 
-**Outcome:** Yes → Label: Alarmist. No → Proceed to Q3.
+**Outcome:**
++**Outcome when Yes :** Label = Alarmist  
++**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
 
 **🔍 Detailed Rules & Examples:**
 
