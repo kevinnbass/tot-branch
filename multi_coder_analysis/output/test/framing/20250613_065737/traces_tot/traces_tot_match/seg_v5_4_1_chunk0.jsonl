@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "The segment lacks a minimiser ('only', 'just', etc.) combined with an explicit scale contrast.", "method": "llm_batch"}
 {"Q": 7, "answer": "no", "rationale": "The segment describes events and a lack of clarity, but not a bare negation of a risk or problem.", "method": "llm_batch"}
 {"Q": 8, "answer": "no", "rationale": "The segment confirms the cause and location of the outbreak, not capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports factual information about the virus and location, not prices, economic data, or numerical metrics as described in Q9.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event and a current lack of knowledge, not speculation about future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Attributed source confirms the virus was 'deadly', which is a bare risk adjective describing the virus, not explicit framing per Q11 rules.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "regex:Q12.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q12.Prompt#1", "span": [62, 136], "captures": ["confirm", "deaths"]}}
