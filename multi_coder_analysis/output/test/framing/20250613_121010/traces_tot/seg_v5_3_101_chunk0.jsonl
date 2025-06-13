@@ -1,1 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "'particularly hard hit' contains an intensifier modifying a negative phrase, not a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment describes Iowa being 'particularly hard hit', which is moderate language. 'disasters being declared' is a factual description of an official action, not a vivid verb/metaphor for the event/impact itself.", "method": "llm_batch"}
+{"Q": 3, "answer": "yes", "rationale": "regex:Q03.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q03.Prompt#1", "span": [32, 35], "captures": ["hit"]}}
