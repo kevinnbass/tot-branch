@@ -28,8 +28,6 @@ Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 
 | **Potent Metaphors** | "ticking time-bomb," "nightmare scenario," "raging inferno," "powder keg," "house of cards" | ✓ |
 | **Moderate Verbs (alone)** | "hit," "swept," "surged" (without scale/impact details) | → Neutral |
 
-**🔗 See also:** Q3 for moderate verbs paired with scale/impact; Q1 for intensified adjectives
-
 **Outcome:**
 **Outcome when Yes :** Label = Alarmist
 **Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
@@ -72,42 +70,24 @@ Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 
 Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
 Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
 
-**Regex Pattern (refined):**  
+**Regex Pattern:**  
 ```regex
-\b(?:  # high-potency verbs that always count
-      ravaged|devastated|skyrocketed|plummeted|crashed|nosedived|
+\b(?: ravaged|devastated|skyrocketed|plummeted|crashed|nosedived|
       tanked|slaughtered|exploding|raging|tearing\sthrough|
       overwhelmed|crippling|
-      # soared/soaring ONLY when followed within 20 chars by an impact noun
       soar(?:ed|ing)?(?=[^.]{0,20}\b
             (?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|
              production|output|supply|shortages?)\b)|
-      # Superlative-negative-noun patterns
       (?:most|record(?:-breaking)?|worst)\s+\w{0,12}?\s+
             (?:disaster|crisis|outbreak|catastrophe|calamity)|
-             # Critical-alert phrase – fires only when threat keyword is nearby
-       (?:                                     # critical-alert phrase (bidirectional)
-         # "on high alert" – bidirectional, exclude future "will be on high alert"
-         (?:
-           # threat → alert
-           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}
-           (?!(?:\s*\w+){0,3}\swill\s+be\s+on\s+high\s+alert)
-           (?:is|are|was|were)?\s*on\s+high\s+alert
-         |
-           # alert → threat
-           (?!(?:\s*\w+){0,3}\swill\s+be\s+on\s+high\s+alert)
-           (?:is|are|was|were)?\s*on\s+high\s+alert[^.]{0,40}
-           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b
-         )
+       (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
+         (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
+         ^[^.]{0,60}\bon\s+high\s+alert\b
        )
-+) \b
- | # Spark/stoke fears pattern
-\b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b
-| # Worst-ever crisis cliché
-\bworst[-\s]?ever\s+(?:outbreak|crisis|disaster|catastrophe)\b
-| # Battered / pummelled + agriculture/econ noun
-\b(?:battered|pummell?ed)\b(?=[^.]{0,25}\b(?:flock|farm|sector|supply|economy|community)\b)
-| # "Perfect storm" + threat keyword
+) \b|
+\b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b|
+\bworst[-\s]?ever\s+(?:outbreak|crisis|disaster|catastrophe)\b|
+\b(?:battered|pummell?ed)\b(?=[^.]{0,25}\b(?:flock|farm|sector|supply|economy|community)\b)|
 \bperfect\s+storm\b[^.]{0,40}\b(?:outbreak|virus|flu|disease|threat|crisis|danger)\b
 ```
 
