@@ -82,7 +82,8 @@ If the parser lemmatises verbs, **keep only the past-tense form** `culled`; excl
 }
 ``` 
 
-| # Swept across … prompting millions
-\bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
-| # Killed/left/caused \+ big number[\s\S]*?\n\| # PATCH.*\n\+| # Killed/left/caused + big number (main-verb only)
+| # Swept across … prompting millions[\s\S]*?\n\bswept\\s\+across[\s\S]*?\n|\s+#\s+Killed/left/caused.*
++| # Swept across … prompting millions (past-tense realised event)
++\bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
++| # Killed/left/caused + big number (main verb only)
 +\b(?<!\b(?:that|which|who)\s+)(?:killed|left|caused)\b[^.]{0,25}\b\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?|billion)\b 
