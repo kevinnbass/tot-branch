@@ -80,24 +80,24 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
       soar(?:ed|ing)?(?=[^.]{0,20}\b
             (?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|
              production|output|supply|shortages?)\b)|
-      # NEW (superlative-negative-noun) patterns
+      # Superlative-negative-noun patterns
       (?:most|record(?:-breaking)?|worst)\s+\w{0,12}?\s+
             (?:disaster|crisis|outbreak|catastrophe|calamity)|
-             # NEW (critical-alert phrase – fires only when threat keyword is nearby)
+             # Critical-alert phrase – fires only when threat keyword is nearby
        (?:                                     # critical‑alert phrase (bidirectional)
          on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
          (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
-         # NEW – standalone alert headline:  "State on high alert"
+         # Standalone alert headline:  "State on high alert"
          ^[^.]{0,60}\bon\s+high\s+alert\b
        )
 ) \b
-| # NEW (2025-06-13b) – spark/stoke fears pattern
+| # Spark/stoke fears pattern
 \b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b
-| # NEW (2025-06-13b) – worst-ever crisis cliché
+| # Worst-ever crisis cliché
 \bworst[-\s]?ever\s+(?:outbreak|crisis|disaster|catastrophe)\b
-| # NEW (2025-06-13c) – battered / pummelled + agriculture/econ noun
+| # Battered / pummelled + agriculture/econ noun
 \b(?:battered|pummell?ed)\b(?=[^.]{0,25}\b(?:flock|farm|sector|supply|economy|community)\b)
-| # NEW (2025-06-13c) – "perfect storm" + threat keyword
+| # "Perfect storm" + threat keyword
 \bperfect\s+storm\b[^.]{0,40}\b(?:outbreak|virus|flu|disease|threat|crisis|danger)\b
 ```
 
