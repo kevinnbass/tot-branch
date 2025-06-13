@@ -59,7 +59,7 @@ Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 
 
 > **New aspect guard.** The moderate-verb must denote **realised impact** – NOT merely an intention or hypothetical.  
 
-**Regex Pattern (tightened – comment shows exclusion):**
+**Regex Pattern:**
 ```regex
 \b(hit|swept|surged|soared|plunged|plummeted|prompted|feared|fearing|
      # ONLY active, realised culling counts
@@ -82,7 +82,8 @@ If the parser lemmatises verbs, **keep only the past-tense form** `culled`; excl
 }
 ``` 
 
-| # NEW (2025-06-13b) – swept across … prompting millions
+| # Swept across … prompting millions
 \bswept\s+across\b[^.]{0,80}\bprompt\w+\s+\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b
-| # NEW (2025-06-13b) – killed/left/caused + big number
-\b(?:killed|left|caused)\b[^.]{0,25}\b\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b 
+| # Killed/left/caused + big number
+\b\(\?:killed\|left\|caused\)\\b[^.]{0,25}\\b\\d\+(?:[.,]\\d+)?\\s*(?:million|thousand|hundreds?)\\b\n+| # PATCH (2025-06-14) – killed/left/caused + big number, exclude relative pronouns
++\b(?<!\b(?:that|which|who)\s+)(?:killed|left|caused)\b[^.]{0,25}\b\d+(?:[.,]\d+)?\s*(?:million|thousand|hundreds?)\b 
