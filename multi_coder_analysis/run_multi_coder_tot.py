@@ -57,7 +57,10 @@ if "PROMPTS_DIR" not in globals():
 
 
 def _load_global_header() -> str:  # noqa: D401
-    path = PROMPTS_DIR / "global_header.txt"
+    path = PROMPTS_DIR / "GLOBAL_HEADER.txt"
+    if not path.exists():
+        # Legacy support – remove once all deployments updated
+        path = PROMPTS_DIR / "global_header.txt"
     try:
         return path.read_text(encoding="utf-8")
     except FileNotFoundError:
@@ -98,13 +101,13 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
             "{{segment_text}}", ctx.segment_text
         ).replace("{{statement_id}}", ctx.statement_id)
 
-        local_header = ""
-        local_footer = ""
-        try:
-            local_header = (hop_file.parent / "global_header.txt").read_text(encoding="utf-8")
-        except FileNotFoundError:
-            local_header = _load_global_header()
+        # Prefer new canonical filename; fallback to legacy if absent
+        header_path = hop_file.parent / "GLOBAL_HEADER.txt"
+        if not header_path.exists():
+            header_path = hop_file.parent / "global_header.txt"
+        local_header = header_path.read_text(encoding="utf-8")
 
+        local_footer = ""
         try:
             local_footer = (hop_file.parent / "GLOBAL_FOOTER.txt").read_text(encoding="utf-8")
         except FileNotFoundError:
@@ -316,13 +319,13 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
             "Return NOTHING except valid JSON.\n\n"
         )
 
-        local_header = ""
-        local_footer = ""
-        try:
-            local_header = (hop_file.parent / "global_header.txt").read_text(encoding="utf-8")
-        except FileNotFoundError:
-            local_header = _load_global_header()
+        # Prefer new canonical filename; fallback to legacy if absent
+        header_path = hop_file.parent / "GLOBAL_HEADER.txt"
+        if not header_path.exists():
+            header_path = hop_file.parent / "global_header.txt"
+        local_header = header_path.read_text(encoding="utf-8")
 
+        local_footer = ""
         try:
             local_footer = (hop_file.parent / "GLOBAL_FOOTER.txt").read_text(encoding="utf-8")
         except FileNotFoundError:
@@ -588,8 +591,8 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     Matches the expected return signature for a coding step in main.py.
     """
     if not _load_global_header():
-        logging.critical("ToT pipeline cannot run because global_header.txt is missing or empty.")
-        raise FileNotFoundError("prompts/global_header.txt is missing.")
+        logging.critical("ToT pipeline cannot run because GLOBAL_HEADER.txt is missing or empty.")
+        raise FileNotFoundError("prompts/GLOBAL_HEADER.txt is missing.")
 
     # --- Configure regex layer mode ---
     if regex_mode == "off":
