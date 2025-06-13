@@ -34,10 +34,10 @@ Does the author or a quoted source provide an explicit calming cue (e.g., 'no ca
 **🔍 Q5 Pattern Recognition Table (expanded):**
 | **Pattern Type** | **Examples** | **→ Reassuring** |
 |------------------|--------------|------------------|
-| **Direct Safety Assurances** | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" | ✓ |
+| **Direct Safety Assurances** *(v2.16.1)* | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" | ✓ |
 | **Confidence Statements** | "we are confident," "rest assured," "situation contained," "providing relief" | ✓ |
 | **Direct Consumption Safety** | "safe to eat," "safe for (human) consumption," "remains safe to eat" | ✓ |
-| **⚠ The clause must contain the literal word "safe".** <br>Expressions that merely say something "should not pose a risk / danger" **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
+| **⚠ The clause must contain the literal word “safe”.** <br>Expressions that merely say something “should not pose a risk / danger” **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
 | **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
 | **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
 | **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
@@ -87,20 +87,13 @@ Corporate self-statements lacking a safety link stay Neutral (Rule C).
 * **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
   * Reasoning: "This is a bare negation statement without additional calming amplification. Falls under Q7 (bare negations) rather than Q5."
 
-**⚠️ Important Exclusion:**
-* **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
-  * Reasoning: "This is a bare negation statement without additional calming amplification. Falls under Q7 (bare negations) rather than Q5."
 
 > **Precedence Note (v 2.16.3)** – If a sentence matches more than one row  
 > in the table above, the order top→bottom decides.  
 >   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
 
-**Precedence Note** – If a sentence matches more than one row  
-in the table above, the order top→bottom decides.  
-*Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
-
 **Regex Pattern (broadened):**  
-# Guard – the pattern for Direct-Consumption-Safety only fires when the word "safe" (or inflections) is present in the same clause.
+# Guard – the pattern for Direct-Consumption-Safety only fires when the word “safe” (or inflections) is present in the same clause.
 ```regex
  \b(?:no\s+cause\s+for\s+alarm|
      public\s+can\s+rest\s+easy|
