@@ -23,7 +23,7 @@ FOOTER = "# FOOTER"
 def test_prompt_assembly(monkeypatch, tmp_path: Path):
     prompts_dir = tmp_path / "prompts"
     prompts_dir.mkdir()
-    (prompts_dir / "global_header.txt").write_text(HEADER, encoding="utf-8")
+    (prompts_dir / "GLOBAL_HEADER.txt").write_text(HEADER, encoding="utf-8")
     (prompts_dir / "GLOBAL_FOOTER.txt").write_text(FOOTER, encoding="utf-8")
     (prompts_dir / "hop_Q01.txt").write_text(PROMPT_BODY, encoding="utf-8")
 
