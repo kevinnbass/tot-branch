@@ -33,8 +33,6 @@ Does a directly quoted source within the segment provide a clear, dominant Alarm
 | **Balanced/Mixed Quotes** | "concerning, but viruses do not transmit easily" | → Neutral |
 | **Neutral Quotes Only** | "officials are monitoring," "tests are ongoing" | → Proceed to Q12 |
 
-<!-- cross-link removed -->
-
 **🔍 Detailed Rules & Examples:**
 
 **Guidance Note: Primacy of Framed Quotations (SUPERSEDES PREVIOUS QUOTE RULES)**
@@ -51,37 +49,37 @@ When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but*
 
 Core Principle: If a direct quotation (or a clearly attributed statement from a specific source) within the segment carries a distinct Alarmist or Reassuring frame, the segment's Dim1_Frame MUST reflect the frame of that quotation/attributed statement. This principle applies even if the author's narrative surrounding the quote is Neutral. The frame is determined by the language and tone used by the quoted source itself.
 
-**Key Scenarios:**
-* **Author's Neutrality:** When the author neutrally reports a framed quote, the quote's frame dictates the segment's frame.
-* **Author Reinforces Quote's Frame:** If the author's narrative also adopts or amplifies the same frame as the quote, this further strengthens the coding of the quote's frame.
-* **Author Challenges Quote's Frame (Advanced):** If the author explicitly challenges, refutes, or heavily recontextualizes the quote's frame using their own explicit framing language, the coder must determine the overall dominant frame of the segment. If the author merely presents a factual counterpoint after a framed quote, without adding their own framing to that counterpoint, the original quote's frame is more likely to prevail or be balanced to Neutral (see Mixed Messages). This scenario requires careful judgment of which frame is more salient. (For most cases, assume the author is not overtly challenging if they present the quote straightforwardly).
-
-**Multiple Framed Quotes & Mixed Messages within a Single Quote:**
-* If a segment contains multiple quotes with different frames, determine the dominant frame. If one quote is significantly more potent or central to the segment's point, its frame may prevail.
-
-**Handling Mixed Messages with Contrastive Conjunctions (e.g., 'but,' 'however'):**
-When a single quoted statement contains potentially mixed framing elements, particularly when linked by contrasting conjunctions (e.g., 'but,' 'however'):
-* **Evaluate Each Clause for Explicit Framing:** Independently assess the clause before the conjunction and the clause after the conjunction for the presence of explicit framing cues that meet the definitions for Alarmist or Reassuring in this codebook. This means applying the full Alarmist/Reassuring/Neutral definitions to each part of the source's statement.
-* **Framing Strength of the Concluding Clause:** For the clause after the conjunction to override or neutralize an explicitly framed initial clause, it MUST ITSELF contain clear and explicit framing language that meets the criteria for Reassuring or Alarmist. A neutrally worded factual statement, even if it factually counters or mitigates the initial clause, does not typically establish a new frame nor neutralize a potent initial frame on its own.
-
-**Resolution Scenarios:**
-* **Explicit Frame in Second Clause:** If the second clause contains explicit framing cues (Reassuring or Alarmist) that are at least as potent as, or more potent than, the first clause (per 'Principle of Cue Sufficiency'), it will generally determine or significantly influence the segment's frame.
-* **No Explicit Framing in Second Clause (Canonical Example):**
-  * Text: "Meanwhile, Kirby Institute head of biosecurity Professor Raina MacIntyre described the bird flu news as 'concerning.' She [Professor Raina MacIntyre] said, however, that Avian flu viruses do not transmit easily in humans because they [Avian flu viruses] are adapted for birds."
-  * Correct Code: Neutral.
-  * Reasoning: "The source provides an initial mild-to-moderate alarm cue ('concerning'). The subsequent clause, introduced by 'however,' states a fact ('do not transmit easily') that has reassuring implications but is itself presented by the source without any explicit reassuring language from the source (e.g., no 'thankfully,' 'which is excellent news,' 'so the public can rest easy,' 'this low transmissibility means the risk is negligible'). The neutrally-presented factual counter-statement balances the initial mild concern without the second part actively meeting the criteria for a Reassuring frame on its own. Thus, the overall segment is Neutral."
-
-**Additional Contrastive Examples:**
-* **Example 1:**
-  * Text: "Quote: 'The outbreak is troubling, but no human infections have been detected,' stated the health commissioner."
-  * Correct Code: Neutral.
-  * Reasoning: "The source provides a mild alarm cue ('troubling'). The subsequent clause states a positive fact ('no human infections detected') without explicit reassuring framing from the source. The factual counter-statement balances the initial concern, resulting in Neutral rather than Reassuring."
-* **Example 2:**
-  * Text: "Quote: 'While cases have increased by 15%, testing capabilities remain adequate,' the director confirmed."
-  * Correct Code: Neutral.
-  * Reasoning: "Neither clause contains explicit framing. The negative fact (case increase) and positive capability statement are both presented factually by the source without alarm or reassuring amplification. Both parts are neutrally stated, resulting in Neutral overall."
-
 <!-- Auto-validator enforces: answer == "yes" ⇒ rationale.endsWith("||FRAME=<FrameType>") -->
+
+**Regex Pattern:**
+```regex
+(?ix)
+
+(?<=["'\u2018\u2019\u201C\u201D])
+
+\b(
+   (?:
+        (?:extremely|highly|very|deeply|incredibly|
+           particularly|frighteningly|definitely|certainly|clearly)
+        \s+\w{0,3}\s+
+        (?:concerning|alarming|worrying|dangerous|
+           severe|catastrophic|critical|high[-\s]+risk)
+     |  requires\s+immediate\s+action
+     |  period\s+of\s+high[-\s]+risk
+     |  (?:troubling|dire)\s+situation\b
+   )
+ |
+   (?:
+        no\s+cause\s+for\s+alarm
+     |  fully\s+under\s+control
+     |  excellent\s+news
+     |  very\s+well\s+protected
+     |  risk\s+(?:is|remains)\s+(?:very|extremely|exceptionally)\s+low
+     |  (?:completely|totally|entirely|perfectly)\s+safe
+     |  safe\s+to\s+eat
+   )
+)\b
+```
 
 ### Your JSON Reply:
 ```json
@@ -91,7 +89,3 @@ When a single quoted statement contains potentially mixed framing elements, part
 }
 ```
 
-catastrophic|devastating|alarming|reassuring|safe|under control|no cause for alarm|
-absolutely\s+no\s+cause\s+for\s+alarm)\b[^"']*["']|
-# Intensified "high-risk" quote (dominant Alarmist)
-\b(?:definitely|certainly|clearly)\s+\w{0,3}\s+period\s+of\s+high\s+risk\b 
