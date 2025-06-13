@@ -39,7 +39,7 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 3. **Is it reporting prices or other metrics?** 
    • If verbs like "rose/declined" or adverbs like "sharply" appear **without** a vivid verb or risk adjective → Neutral. 
 
-**##### Economic & Price Language Quick-Reference** (at the end of 2.25.md):
+**##### Economic & Price Language Quick-Reference**:
 | Phrase (example) | Frame | Rationale |
 |------------------|-------|-----------|
 | "Prices **soared / skyrocketed**" | Alarmist | vivid verb |
@@ -68,7 +68,7 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 - **Neutral Adverbs**: "sharply," "significantly," "notably," "considerably"
 - **Context Matters**: The same adverb can be neutral in economic reporting but contribute to alarmist framing when paired with risk adjectives
 
-> **"Volatile/volatility" policy** – As per v2.16, "volatile" is treated as
+> **"Volatile/volatility" policy** – "Volatile" is treated as
 > a neutral economic descriptor when paired with modal verbs ("could become
 > more volatile") or standard reporting verbs. It is NOT a risk-adjective
 > under Q1.
@@ -78,7 +78,7 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 \b(prices?|rate|cost|loss|profit|revenue|value)\b.*\b(rose|declined|increased|fell|dropped|gained|lost)\b
 ```
 
-| # NEW (2025-06-13b) – "prices were up/down X %" factual metric
+| # "Prices were up/down X %" factual metric
 \bprices?\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%\b
 
 ### Your JSON Reply:
