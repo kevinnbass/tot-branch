@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The segment discusses food safety risk and potential impacts factually. 'threatens to spark shortages' does not match the Q2 pattern for 'spark/stoke fears'. 'soaring inflation' is a background condition, ignored for Q2.", "method": "llm_batch"}
 {"Q": 3, "answer": "no", "rationale": "'threatens to spark' describes potential future impact, not realised impact with a moderate verb from the list.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'does not present a food safety risk' is a bare negation about risk, not a direct 'safe to eat' assurance, and lacks other calming cues.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment lacks a minimiser ('only', 'just', etc.) combined with an explicit scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'does not present a food safety risk' without an explicit calming cue.", "method": "llm_batch"}

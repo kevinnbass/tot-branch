@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_5_17316",
+  "hop_idx": 5,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "States a low-risk fact ('rare') but lacks explicit calming language or intensification ('very rare')."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "Reports a positive fact ('no record') but lacks explicit calming language and is followed by negative facts."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "Reports a negative fact (deaths) without any explicit calming language."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "Reports actions taken (culling) but lacks explicit calming language linking it to public safety or control."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "no",
+      "rationale": "Reports actions taken (blocking access) but lacks explicit calming language linking it to public safety or control."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "Reports a negative fact (deadly virus responsible) and uncertainty without any explicit calming language."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "no",
+      "rationale": "Provides advice/recommendations but lacks explicit calming language."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'risk... is very low' is an intensified low-risk evaluation matching the Q5 criteria."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "no",
+      "rationale": "'does not present a food safety risk' is a bare negation about risk, not a direct 'safe to eat' assurance, and lacks other calming cues."
+    }
+  ],
+  "timestamp": "2025-06-13T06:58:31.849451"
+}
