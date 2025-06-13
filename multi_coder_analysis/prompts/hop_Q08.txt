@@ -28,8 +28,6 @@ Does the segment describe capabilities, preparedness measures, hopeful future po
 | **Future Possibilities** | "restrictions may be short-lived," "situation could improve," "recovery expected" | ✓ |
 | **Capability + Active Reassurance** | "stockpiled 30M doses, which is excellent news and means citizens are very well protected," "systems in place, so public can rest easy" | → Reassuring |
 
-**🔗 See also:** Q7 for bare negations; Q5-Q6 for active reassuring patterns; Q10 for future speculation
-
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q9.
 
 **🔍 Detailed Rules & Examples:**
@@ -60,21 +58,10 @@ A statement of capability, preparedness, or hopeful possibility ("officials are 
 **Common LLM Misinterpretations & How to Avoid Them:**
 **Confusing Capability/Preparedness Statements with Active Reassurance:** Describing safeguards, capabilities, or control measures is Neutral unless explicitly framed as a reason for current calm or minimized risk. (See Common Pitfalls (C) and Reassuring - Exclusion Criteria.)
 
-**Regex Pattern (fenced):**
+**Regex Pattern:**
 ```regex
-# Prepared / ready **without** a public-safety link  (fires Q8 → Neutral)
-\b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b
-(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)
+\b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)|(?:officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b)\b
 ```
-
-**Regex Pattern (fenced):**
-```regex
-\b(officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b
-```
-
-# Prepared / ready **without** a public-safety link  (fires Q8 → Neutral)
-\b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b
-(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)
 
 ### Your JSON Reply:
 ```json
