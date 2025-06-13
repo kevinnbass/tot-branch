@@ -66,17 +66,12 @@ A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used
 
 **Regex Pattern:**
 ```regex
- # Ignore the fixed scientific term "highly pathogenic avian influenza (HPAI)"
  \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
      |very|deadlier|more|extremely|severely|so|particularly|frighteningly|definitely|certainly)  
      (?:\s+\w+){0,3}\s+
- # Risk-adj list (adding infectious, transmissible) while pruning ECON adjective "volatile"
  (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
- # Fixed lethal-from-outset idiom
  \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
- # Superlative + risk-adj
  \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
- # Incredibly / unbelievably / increasingly + risk-adj
  \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
 ```
 
