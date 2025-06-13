@@ -86,17 +86,20 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
       (?:most|record(?:-breaking)?|worst)\s+\w{0,12}?\s+
             (?:disaster|crisis|outbreak|catastrophe|calamity)|
              # Critical-alert phrase – fires only when threat keyword is nearby
-       (?:                                     # critical‑alert phrase (bidirectional)
-         # "on high alert" (bidirectional) – ignore future headlines ("will be on high alert")
-         (?:                                             # threat → alert  OR  alert → threat
-           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\\b[^.]{0,40}
-           (?!(?:\\s*\\w+){0,3}\\swill\\s+be\\s+on\\s+high\\s+alert)
-           (?:is|are|was|were)?\\s*on\\s+high\\s+alert|
-           (?!(?:\\s*\\w+){0,3}\\swill\\s+be\\s+on\\s+high\\s+alert)
-           (?:is|are|was|were)?\\s*on\\s+high\\s+alert[^.]{0,40}
-           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\\b
-         )|
-) \b
+       (?:                                     # critical-alert phrase (bidirectional)
+         # "on high alert" – bidirectional, exclude future "will be on high alert"
+         (?:
+           # threat → alert
+           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}
+           (?!(?:\s*\w+){0,3}\swill\s+be\s+on\s+high\s+alert)
+           (?:is|are|was|were)?\s*on\s+high\s+alert
+         |
+           # alert → threat
+           (?!(?:\s*\w+){0,3}\swill\s+be\s+on\s+high\s+alert)
+           (?:is|are|was|were)?\s*on\s+high\s+alert[^.]{0,40}
+           (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b
+         )
+       ) \b
 | # Spark/stoke fears pattern
 \b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|raise(?:s|d|ing)?)\s+(?:public\s+)?(?:fear|fears|concern|concerns|panic)\b[^.]{0,50}\b(?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b
 | # Worst-ever crisis cliché
