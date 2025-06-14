@@ -168,13 +168,18 @@
     pattern: |-
       (?is)
       \b(?:
-            # economic nouns
+            # ── economic nouns + standard movement verbs ───────────────
             (?:prices?|rates?|costs?|loss(?:es)?|profit(?:s)?|revenue|
                value|export(?:s)?|import(?:s)?|sale(?:s)?|output|production)
-            \b.*?\b                     # allow anything up to the verb
+            \b.*?\b
             (?:rose|declined|increased|fell|dropped|gained|lost)\b
-          | # “prices were up /down 2 %” form
+          | # ── “prices were up / down X %” form ───────────────────────
             (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
+          | # ── “trending (adv) higher/lower” forms (belt-and-braces) ─
+            (?:prices?|rates?|costs?|values?)\b[^.\n]{0,40}?
+              \btrending\s+
+                (?:slightly|somewhat|moderately|sharply|significantly)?
+                \s+(?:higher|lower|up|down|upward|downward)\b
         )
 
 10:
