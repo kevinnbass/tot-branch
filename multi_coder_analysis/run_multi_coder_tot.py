@@ -193,6 +193,9 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
     ctx.batch_size = 1
     ctx.batch_pos = 1
     
+    # Assign a sentinel batch_id for single-segment path
+    ctx.batch_id = "single"  # type: ignore[attr-defined]
+    
     uncertain_streak = 0
 
     for q_idx in range(1, 13):
@@ -248,6 +251,7 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             "rationale": rationale,
             "via": via,
             "regex": regex_meta,
+            "batch_id": ctx.batch_id,
             "batch_size": ctx.batch_size,
             "batch_pos": ctx.batch_pos,
         }
@@ -422,8 +426,14 @@ def run_tot_chain_batch(
         regex_resolved: List[HopContext] = []
         unresolved_segments: List[HopContext] = []
         
+        # Predefine batch_id for use in all trace entries within this batch
+        batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
+        
         for idx_in_batch, seg_ctx in enumerate(batch_segments, start=1):
             seg_ctx.q_idx = hop_idx  # ensure hop set
+            
+            # Store batch_id on context for later reference (fallback path)
+            seg_ctx.batch_id = batch_id  # type: ignore[attr-defined]
             
             # ── Positional metadata (new) ───────────────────────────
             seg_ctx.batch_size = len(batch_segments)
@@ -451,6 +461,7 @@ def run_tot_chain_batch(
                     "answer": r_answer["answer"],
                     "rationale": r_answer["rationale"],
                     "method": "regex",
+                    "batch_id": batch_id,
                     "batch_size": seg_ctx.batch_size,
                     "batch_pos": seg_ctx.batch_pos,
                     "regex": r_answer.get("regex", {}),
@@ -472,7 +483,6 @@ def run_tot_chain_batch(
         # Step 2: If any segments remain unresolved, call LLM for the batch
         if unresolved_segments:
             # Create batch context
-            batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
             batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
             
             # Call LLM for the batch
@@ -505,6 +515,7 @@ def run_tot_chain_batch(
                     "answer": answer,
                     "rationale": rationale,
                     "method": "llm_batch",
+                    "batch_id": batch_id,
                     "batch_size": ctx.batch_size,
                     "batch_pos": ctx.batch_pos,
                 }
@@ -547,6 +558,7 @@ def run_tot_chain_batch(
                         "answer": "uncertain",
                         "rationale": "Missing response from batch",
                         "method": "fallback",
+                        "batch_id": batch_id,
                         "batch_size": ctx.batch_size,
                         "batch_pos": ctx.batch_pos,
                     }
