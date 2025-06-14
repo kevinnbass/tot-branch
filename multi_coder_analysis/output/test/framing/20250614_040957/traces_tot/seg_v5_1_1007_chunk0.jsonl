@@ -5,3 +5,4 @@
 {"Q": 5, "answer": "no", "rationale": "Reports facts; lacks explicit calming language.", "method": "llm_batch"}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 7, "answer": "no", "rationale": "The segment reports infection, not a negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports a factual event (infection), not capability or preparedness.", "method": "llm_batch"}

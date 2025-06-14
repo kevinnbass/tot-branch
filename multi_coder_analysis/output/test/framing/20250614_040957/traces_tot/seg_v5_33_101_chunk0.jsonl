@@ -5,3 +5,4 @@
 {"Q": 5, "answer": "no", "rationale": "Reports facts and actions; lacks explicit calming language.", "method": "llm_batch"}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 7, "answer": "no", "rationale": "'prevent the spread' is a preventative action, not a bare negation of risk/impact.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes a requirement/action ('would be required to be euthanized') and purpose ('to prevent the spread') without active reassurance.", "method": "llm_batch"}
