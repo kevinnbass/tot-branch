@@ -1,2 +1,7 @@
 {"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, excluded by the technical-term guard.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment states a fact using neutral language, not a Q2 cue.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'detected' is a plain outcome verb, excluded from Q3.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "This is a bare negation ('No human infections') reporting a positive fact, not explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment contains a negation ('No human infections') but not a minimiser combined with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'No human infections... have been detected' without an explicit calming cue.", "method": "llm_batch"}

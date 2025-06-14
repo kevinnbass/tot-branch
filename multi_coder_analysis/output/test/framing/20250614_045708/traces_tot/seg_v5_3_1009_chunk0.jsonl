@@ -1,2 +1,8 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('working closely') without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Does not contain a moderate verb paired with scale/impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports agency action (working closely) without explicitly linking it to public safety in a calming way.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment states USDA is working with state officials but does not use a minimiser + scale contrast for reassurance.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [66, 75], "captures": []}}

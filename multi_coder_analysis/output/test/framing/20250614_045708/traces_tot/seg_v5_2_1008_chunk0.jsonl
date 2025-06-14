@@ -1,2 +1,6 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verb 'affected' with small scale ('one affected house').", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports factual details about the scope of infection without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "yes", "rationale": "The segment uses 'only' (minimiser) and 'one of the thousands of farms' (scale contrast) to downplay the scope.", "method": "llm_batch"}

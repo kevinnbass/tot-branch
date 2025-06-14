@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment describes actions taken (quarantine, eradication) using neutral language.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'working', 'initiated', 'restricts', 'used', 'move', 'killing', and 'removing' are not moderate verbs of impact paired with significant scale. 'killing' and 'removing' are containment actions.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports actions taken (working with industry, initiated steps, quarantine, eradication) without explicit calming language about current safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes actions taken ('restricts movement'), not a bare negation of a state.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [18, 27], "captures": []}}

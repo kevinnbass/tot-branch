@@ -1,2 +1,7 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment makes a factual statement about food safety without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Does not contain a moderate verb paired with scale/impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'will not enter the food system' is a statement of control, but lacks the keyword 'safe' required for Q5 consumption safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment states birds will not enter the food system, which is a food safety assurance (Q5), not Q6.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "regex": {"rule": "BareNegationHealthConcern", "span": [22, 52], "captures": []}}

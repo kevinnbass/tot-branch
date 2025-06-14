@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'difficult to contain' is a factual description, not high-potency framing.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'spreads' is a plain outcome verb; 'makes it difficult to contain' describes a characteristic.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "The segment describes spread and difficulty containing but contains no explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes how the virus spreads and that it is 'difficult to contain' but contains no bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [128, 135], "captures": []}}

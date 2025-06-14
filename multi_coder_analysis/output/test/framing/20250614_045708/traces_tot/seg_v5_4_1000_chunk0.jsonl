@@ -1,2 +1,9 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('reported', 'ordered', 'euthanized', 'testing positive', 'found') and a technical term ('highly pathogenic') without high-potency framing of the virus's impact.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verbs 'reported' and 'found'. Containment verb 'euthanized' is neutral.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports previous culling, strain, and historical context without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment describes a past outbreak as the first commercial case since 2020 but does not use a minimiser + scale contrast for reassurance.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation. 'highly pathogenic' is a technical term.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports a past culling event and notes its significance, not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports a numerical metric ('nearly 30,000 turkeys') and historical context ('first case since 2020') using standard verbs.", "method": "llm_batch"}

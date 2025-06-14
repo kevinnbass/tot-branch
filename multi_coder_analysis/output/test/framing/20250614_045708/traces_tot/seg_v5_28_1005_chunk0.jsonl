@@ -1,2 +1,11 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment contains cues for Q5 ('confident', 'preparedness') but no Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment expresses confidence in preparedness; it does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain any loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Statement of confidence from an industry source about producer preparedness, not linked explicitly to public safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains Q5 cues ('confident', 'preparedness', 'ability to manage') but not Q6 minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "'confident in our producers preparedness' is an explicit calming cue (Confidence/Preparedness), not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "The segment includes an explicit reassurance cue ('confident in'), which would be captured by Q5.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "Does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('confident in our producers preparedness'), failing the 'WITHOUT' condition of Q10.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Quote 'confident in our producers preparedness' lacks explicit public/consumer safety link within 40 chars, treated as Neutral per Q11 rule.", "method": "llm_batch"}

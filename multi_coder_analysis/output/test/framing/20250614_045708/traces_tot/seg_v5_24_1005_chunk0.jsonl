@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment mentions 'disaster' as a condition for payment, not as a vivid description of the current situation.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'want', 'ensure', 'must have', and 'is updated' are not moderate verbs of impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports requirements for producers, not a calming cue about public/consumer safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [119, 127], "captures": []}}

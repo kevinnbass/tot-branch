@@ -1,2 +1,12 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment is a question and contains no framing language.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment is a question, lacking moderate verbs or scale/impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The question 'How do these outbreaks compare to previous ones?' is neutral and information-seeking.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "The segment is a question and contains no explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment is a question and contains no bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "The segment is a question, not a statement of capability, preparedness, safeguard, or hopeful possibility.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment asks a question about comparison, it does not report metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment asks a comparative question, not speculating about future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Segment is a question, contains no quote or attributed statement.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "Segment is a factual question about comparison, lacking explicit framing cues.", "method": "llm_batch"}

@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "'potentially deadly' uses a qualifier, not an intensifier or comparative directly amplifying 'deadly'.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual information ('say', 'have plans', 'urging caution') without high-potency framing.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'say', 'have plans', 'stop', 'were learned', 'urging', and 'is' are not moderate verbs of impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports plans (preparedness) and a warning ('urging caution'), neither are explicit calming cues about present safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes capability ('have plans to more quickly stop'), not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [36, 45], "captures": []}}

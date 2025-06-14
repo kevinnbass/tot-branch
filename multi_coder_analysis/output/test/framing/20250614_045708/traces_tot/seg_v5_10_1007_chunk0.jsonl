@@ -1,2 +1,11 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment contains a cue for Q5 ('rare') but no Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment states cross-transmission is rare; this is a Q5 cue, not Q3.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain any loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "States transmission is 'rare'; lacks the intensifier required for the low-risk cue in Q5.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a low-risk cue ('rare') but not a minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'rare', which is a low-risk cue, not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "States a fact about cross-transmission rarity, not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses rarity but does not report specific numerical metrics or prices.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('this cross-transmission is rare'), failing the 'WITHOUT' condition of Q10.", "method": "llm_batch"}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement ('The CDC says') uses 'rare' to describe human infection, explicitly framing a low-risk fact for calm. ||FRAME=Reassuring", "method": "llm_batch"}

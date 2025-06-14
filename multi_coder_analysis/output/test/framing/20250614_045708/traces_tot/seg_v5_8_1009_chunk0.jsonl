@@ -1,2 +1,8 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment provides factual information ('kills bacteria and viruses') using neutral language.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verb 'kills' in the context of cooking, not disease impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Provides advice on cooking temperature, not an explicit assurance of current safety from the source.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment provides advice on cooking poultry/eggs, which is a food safety assurance (Q5), not Q6.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Provides a reminder about proper handling/cooking ('proper handling and cooking... kills bacteria and viruses') as a safeguard without explicit reassurance.", "method": "llm_batch"}

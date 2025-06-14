@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "'fully prepared' is positive framing, not an intensifier + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The quote contains cues for Q5 ('fully prepared') but no high-potency verbs or metaphors for Q2.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "This segment contains a quote expressing preparedness, which is handled by Q5. It does not contain a moderate verb + scale pattern for Alarmist.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Statement of preparedness from an official source ('fully prepared to handle this detection') but lacks an explicit link to present public/consumer safety required by the rule.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains Q5 cues ('fully prepared') but not Q6 minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "'fully prepared' is an explicit calming cue (Preparedness), not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [119, 143], "captures": []}}

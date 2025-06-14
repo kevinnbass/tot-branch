@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment states a fact using neutral language.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'infected' is a plain outcome verb, excluded from Q3.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "The segment provides historical context but contains no explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment contains 'hundreds' but not preceded by a minimiser like 'only' or 'just', nor is there an explicit scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes the virus's relation to a strain that infected people but contains no bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Describes negative facts ('is closely related to an Asian strain'), not a capability, preparedness, safeguard, or hopeful possibility.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports a numerical metric ('hundreds of people') factually using a standard verb ('infected').", "method": "llm_batch"}

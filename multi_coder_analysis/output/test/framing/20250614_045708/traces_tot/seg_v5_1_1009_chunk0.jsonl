@@ -1,2 +1,11 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('detected') and a technical term ('highly pathogenic') without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verb 'detected' with small scale ('backyard flock'). 'highly pathogenic' is a technical term.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports detection and source without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment states a highly pathogenic form was detected but does not use a minimiser + scale contrast for reassurance.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation. 'highly pathogenic' is a technical term.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports detection of a form of bird flu, not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports detection location and flock type, not prices or numerical metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports detection of HPAI, not speculation about future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement ('according to the U.S. Department of Agriculture (USDA)') uses 'highly pathogenic', which is a technical term override per Q11 rule.", "method": "llm_batch"}

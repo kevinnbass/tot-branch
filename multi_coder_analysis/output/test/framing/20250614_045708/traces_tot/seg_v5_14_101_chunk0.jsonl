@@ -1,2 +1,7 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('should not pose a risk') without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Does not contain a moderate verb paired with scale/impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'should not pose a risk' does not contain the keyword 'safe' and falls outside Q5 criteria for consumption safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment states properly cooked poultry/eggs should not pose a risk, which is a food safety assurance (Q5), not Q6.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "regex": {"rule": "BareNegationHealthConcern", "span": [120, 142], "captures": []}}

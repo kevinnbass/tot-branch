@@ -1,2 +1,7 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('found') and states a lack of cases, without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verb 'found' and states 'no cases', which is a low number.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports a bare positive fact (absence of cases) without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment states 'no cases', which is a bare negation (Q7), not Q6.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "'no cases... have been found' is a bare negation without an explicit calming cue.", "method": "llm_batch"}
