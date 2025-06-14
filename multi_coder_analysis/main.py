@@ -280,6 +280,10 @@ def main():
     parser.add_argument('--regex-mode', choices=['live', 'shadow', 'off'], default='live', help='Regex layer mode: live (default), shadow (evaluate but do not short-circuit), off (disable regex)')
     parser.add_argument('--shuffle-batches', action='store_true', help='Randomly shuffle active segments before batching at each hop')
 
+    # NEW: eight-order permutation sweep mode
+    parser.add_argument('--permutations', action='store_true',
+                        help='Run the eight-order permutation sweep instead of a single straight pass')
+
     args = parser.parse_args()
 
     # --- Validate Arguments ---
@@ -320,6 +324,24 @@ def main():
 
     config = load_config(args.config)
     setup_logging(config)
+
+    # ------------------------------------------------------------------
+    # Permutation mode short-circuits the normal pipeline and delegates
+    # to the dedicated suite runner.
+    # ------------------------------------------------------------------
+    if args.permutations:
+        try:
+            from multi_coder_analysis.permutation_suite import run_permutation_suite
+        except ImportError as err:
+            logging.error("Permutation suite could not be imported: %s", err)
+            sys.exit(1)
+
+        try:
+            run_permutation_suite(config, args, shutdown_event)
+        except Exception as e:
+            logging.error("Permutation suite failed: %s", e, exc_info=True)
+            sys.exit(1)
+        return  # Skip the rest of main once permutations complete
 
     try:
         run_pipeline(config, args.phase, args.coder_prefix, args.dimension, args, shutdown_event)

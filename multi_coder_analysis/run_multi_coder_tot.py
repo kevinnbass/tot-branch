@@ -189,6 +189,10 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
         segment_text=segment_row["Statement Text"]
     )
     
+    # Ensure positional metadata exists even when processed individually
+    ctx.batch_size = 1
+    ctx.batch_pos = 1
+    
     uncertain_streak = 0
 
     for q_idx in range(1, 13):
@@ -244,6 +248,8 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             "rationale": rationale,
             "via": via,
             "regex": regex_meta,
+            "batch_size": ctx.batch_size,
+            "batch_pos": ctx.batch_pos,
         }
         
         # Add thinking traces if available
@@ -416,8 +422,12 @@ def run_tot_chain_batch(
         regex_resolved: List[HopContext] = []
         unresolved_segments: List[HopContext] = []
         
-        for seg_ctx in batch_segments:
+        for idx_in_batch, seg_ctx in enumerate(batch_segments, start=1):
             seg_ctx.q_idx = hop_idx  # ensure hop set
+            
+            # ── Positional metadata (new) ───────────────────────────
+            seg_ctx.batch_size = len(batch_segments)
+            seg_ctx.batch_pos = idx_in_batch
             
             token_accumulator['total_hops'] += 1
             
@@ -441,6 +451,8 @@ def run_tot_chain_batch(
                     "answer": r_answer["answer"],
                     "rationale": r_answer["rationale"],
                     "method": "regex",
+                    "batch_size": seg_ctx.batch_size,
+                    "batch_pos": seg_ctx.batch_pos,
                     "regex": r_answer.get("regex", {}),
                 }
                 write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
@@ -493,6 +505,8 @@ def run_tot_chain_batch(
                     "answer": answer,
                     "rationale": rationale,
                     "method": "llm_batch",
+                    "batch_size": ctx.batch_size,
+                    "batch_pos": ctx.batch_pos,
                 }
                 write_trace_log(trace_dir, ctx.statement_id, trace_entry)
                 
@@ -533,6 +547,8 @@ def run_tot_chain_batch(
                         "answer": "uncertain",
                         "rationale": "Missing response from batch",
                         "method": "fallback",
+                        "batch_size": ctx.batch_size,
+                        "batch_pos": ctx.batch_pos,
                     }
                     write_trace_log(trace_dir, ctx.statement_id, trace_entry)
             

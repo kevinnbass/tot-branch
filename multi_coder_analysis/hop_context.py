@@ -37,6 +37,12 @@ class HopContext:
     reasoning_trace: List[Dict] = field(default_factory=list)      # Machine-readable JSON for replay/debug
     raw_llm_responses: List[Dict] = field(default_factory=list)    # Raw, unparsed LLM responses per hop
 
+    # ───────── Batch Positional Meta (populated when segments are processed in a batch) ─────────
+    # 1-based index of this segment within its API call (or 1 when processed individually)
+    batch_pos: Optional[int] = None
+    # Total number of segments in that API call (or 1 when processed individually)
+    batch_size: Optional[int] = None
+
     # -------------- Parsed prompt metadata (from YAML front-matter) --------------
     prompt_meta: Dict[str, Any] = field(default_factory=dict, repr=False)
 
