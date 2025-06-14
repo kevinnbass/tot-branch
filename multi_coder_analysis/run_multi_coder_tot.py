@@ -958,6 +958,14 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
 
             print("\n🧮  Evaluation AFTER individual fallback")
 
+            # --- Post-fallback mismatch attribution ----------------------
+            mismatch_ids_post = set(df_comparison[df_comparison["Mismatch"]].StatementID)
+            regex_mismatch_post = len(seg_regex_ids & mismatch_ids_post)
+            llm_mismatch_post = len(mismatch_ids_post) - regex_mismatch_post
+
+            print(f"Regex-driven mismatches : {regex_mismatch_post}")
+            print(f"LLM-driven mismatches   : {llm_mismatch_post}")
+
             print_evaluation_report(metrics, input_csv_path, output_dir, concurrency, limit, start, end)
             
             print(f"✍️  All evaluation data written to {comparison_path}")
