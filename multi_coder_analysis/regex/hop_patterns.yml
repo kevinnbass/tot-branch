@@ -37,7 +37,7 @@
     mode: live
     frame: Alarmist
     pattern: |-
-      # Guard -- "spark shortages" should stay Neutral
+      # Guard — "spark shortages" stays Neutral
       (?!\b(?:spark|sparking)\s+shortage(?:s)?\b)
 
       (?:
@@ -55,9 +55,9 @@
         \b(?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|production|
             output|supply|shortages?)\b[^.]{0,20}\bsoar(?:ed|ing)?\b
         |
-        # superlative‑negative nouns
-        \b(?:most|record(?:-breaking)?|worst)\s+\w{0,12}?\s+
-             (?:disaster|crisis|outbreak|catastrophe|calamity)\b
+        # superlative-negative nouns
+        \b(?:most|record(?:-breaking)?|worst)\s+\w{0,12}?
+             \s+(?:disaster|crisis|outbreak|catastrophe|calamity)\b
         |
         # "on high alert" forms
         (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|
@@ -66,10 +66,10 @@
            \b[^.]{0,40}on\s+high\s+alert|
          ^[^.]{0,60}\bon\s+high\s+alert\b)
         |
-        # metaphorical spark / stoke fear
-        \b(?:spark|stoke|fuel|reignite|raise)(?:s|d|ing)?\s+
-           (?:public|consumer|community|nationwide\s+)?
-           (?:fear|fears|panic|alarm|outrage|anxiety)\b
+        # spark / stoke *panic-type* emotions  (plain “fears” stays Neutral)
+        \b(?:spark|stoke|fuel|reignit(?:e|ing|ed|es))\s+
+           (?:mass(?:ive)?\s+|widespread\s+|public\s+|nationwide\s+|
+              global\s+)?(?:panic|alarm|outrage|anxiety)\b
       )
 
 3:
@@ -78,11 +78,11 @@
     frame: Alarmist
     pattern: |-
       \b(hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
-         prompted|feared|fearing|
-         (?:were|was)\s+culled)\b
+         prompted)\b
       (?=[^.]{0,120}\b(?:\d|million|millions|thousand|thousands|record|
                        largest|unprecedented|severe|significant|overwhelming|
-                       devastating|disaster|disasters|emergency|emergencies)\b)
+                       devastating|disaster|emergencies?)\b)
+      (?![^.]{0,20}\bfear(?:s|ed|ing)?\b)   # guard: psychological verbs ≠ impact
 
 4:
   - name: LoadedQuestionAlarm
@@ -135,15 +135,24 @@
     mode: live
     frame: Neutral
     pattern: |-
-      \b(?:do|does)(?:\s+not|n't)\s+present\s+(?:an?\s+)?immediate\s+
-         (?:public\s+)?health\s+concern\b
+      # ── Explicit public-health negations
+      \b(?:do|does|did|is|are|was|were|will|would|should)\s+(?:not|n't)\s+
+         (?:pose|present|constitute)\s+(?:an?\s+)?(?:immediate\s+)?(?:public\s+)?health\s+concern\b
       |
+      # ── No human/animal cases detected
       \bno\s+(?:human|americans?|animal|bird|poultry)\s+cases?\s+
-           (?:have|has|are|were)\s+(?:been\s+)?(?:detected|reported|
-                                             recorded|found|identified)\b
+         (?:have|has|are|were)\s+(?:been\s+)?(?:detected|reported|
+                                            recorded|found|identified)\b
       |
-      \b(?:does|do|is|are|should)\s+(?:not|n't)\s+
-           pose\s+(?:an?\s+)?(?:immediate\s+)?risk\b
+      # ── Products kept out of the food chain
+      \b(?:will|would|can|could)\s+not\s+enter\s+the\s+food\s+(?:system|chain|supply)\b
+      |
+      # ── Negative lab results
+      \b(?:tests?|samples?)\s+(?:came|come|were|was)\s+negative\b
+      |
+      # ── Generic “does not pose a risk”
+      \b(?:does|do|is|are|will|would|should)\s+(?:not|n't)\s+
+         pose\s+(?:an?\s+)?risk\b
 
 8:
   - name: CapabilityNoReassurance
