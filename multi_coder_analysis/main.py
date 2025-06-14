@@ -12,13 +12,22 @@ import shutil
 
 # --- Import step functions from other modules --- #
 # from run_multi_coder import run_coding_step  # TODO: Create this for standard pipeline
-from run_multi_coder_tot import run_coding_step_tot # NEW IMPORT
+# Support both "python multi_coder_analysis/main.py" (script) and
+# "python -m multi_coder_analysis.main" (module) invocation styles.
+try:
+    from .run_multi_coder_tot import run_coding_step_tot  # package-relative when executed as module
+except ImportError:
+    from run_multi_coder_tot import run_coding_step_tot  # direct import when executed as script
 # from merge_human_and_models import run_merge_step  # TODO: Create this
 # from reliability_stats import run_stats_step  # TODO: Create this
 # from sampling import run_sampling_for_phase  # TODO: Create this
 
 # --- Import prompt concatenation utility ---
-from concat_prompts import concatenate_prompts
+# Support both module and script execution styles
+try:
+    from .concat_prompts import concatenate_prompts  # package-relative
+except ImportError:
+    from concat_prompts import concatenate_prompts  # script-level fallback
 
 # --- Import reproducibility utils ---
 # from utils.reproducibility import generate_run_manifest, get_file_sha256  # TODO: Create this
@@ -330,11 +339,18 @@ def main():
     # to the dedicated suite runner.
     # ------------------------------------------------------------------
     if args.permutations:
+        # Package-relative first, then local fallback
         try:
-            from multi_coder_analysis.permutation_suite import run_permutation_suite
-        except ImportError as err:
-            logging.error("Permutation suite could not be imported: %s", err)
-            sys.exit(1)
+            from .permutation_suite import run_permutation_suite  # type: ignore
+        except ImportError:
+            try:
+                from multi_coder_analysis.permutation_suite import run_permutation_suite  # type: ignore
+            except ImportError:
+                try:
+                    from permutation_suite import run_permutation_suite  # type: ignore
+                except ImportError as err:
+                    logging.error("Permutation suite could not be imported: %s", err)
+                    sys.exit(1)
 
         try:
             run_permutation_suite(config, args, shutdown_event)

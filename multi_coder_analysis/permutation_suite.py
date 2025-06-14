@@ -24,7 +24,12 @@ from typing import List, Tuple
 import pandas as pd
 
 # The existing ToT coding step
-from multi_coder_analysis.run_multi_coder_tot import run_coding_step_tot
+try:
+    from .run_multi_coder_tot import run_coding_step_tot  # package-relative
+except ImportError:
+    from multi_coder_analysis.run_multi_coder_tot import run_coding_step_tot  # fallback when executed as script
+except ImportError:
+    from run_multi_coder_tot import run_coding_step_tot  # final fallback
 
 __all__ = ["run_permutation_suite"]
 
