@@ -19,6 +19,35 @@
 # • Keep ordering by hop → pattern name; the engine preserves this order.
 # ------------------------------------------------------------------
 
+# ------------------------------------------------------------------
+# 2 – High-Potency Verb / Metaphor  (updated 2025-06-14 patch A)
+# ------------------------------------------------------------------
+2:
+  - name: HighPotencyVerbMetaphor
+    mode: live
+    frame: Alarmist
+    pattern: |-
+      # Guard -- "spark shortages" should stay Neutral
+      (?!\b(?:spark|sparking)\s+shortage(?:s)?\b)
+
+      \b(?:                                     # vivid verbs / alert phrases
+           ravaged|devastated|skyrocketed|plummeted|crashed|nosedived|
+           tanked|slaughtered|exploding|raging|tearing\sthrough|
+           overwhelmed|crippling|
+           soar(?:ed|ing)?(?=[^.]{0,20}\b
+                 (?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|
+                  production|output|supply|shortages?)\b)|
+           (?:most|record(?:-breaking)?|worst)\s+\w{0,12}?\s+
+                 (?:disaster|crisis|outbreak|catastrophe|calamity)|
+           (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
+             (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
+             ^[^.]{0,60}\bon\s+high\s+alert\b)
+      )\b
+      |
+      \b(?:spark|stoke|fuel|reignite|raise)(?:s|d|ing)?\s+
+          (?:public|consumer|community|nationwide\s+)?          # optional scope
+          (?:fear|fears|panic|alarm|outrage|anxiety)\b
+
 3:
   - name: ModerateVerbPlusScale
     mode: live
@@ -45,7 +74,9 @@
           public\s+can\s+rest\s+easy|
           fully\s+under\s+control|
           completely\s+safe|
-          (?:we\s+are\s+confident\b|we're\s+confident\b|
+          (?:we\s+(?:are|remain|feel)\s+confident\s+in\s+\w{0,6}\s*
+               (?:preparedness|readiness|ability)\b|
+           we\s+are\s+confident\b|we're\s+confident\b|
           rest\s+assured|
           situation\s+contained|
           providing\s+relief|feel(?:ing)?\s+positive|feel(?:ing)?\s+optimistic)|
