@@ -61,6 +61,68 @@ def _permute(dfA: pd.DataFrame, dfB: pd.DataFrame) -> List[Tuple[str, pd.DataFra
     ]
 
 # ---------------------------------------------------------------------------
+# Worker helper (must be top-level for multiprocessing pickling)
+# ---------------------------------------------------------------------------
+
+def _worker(tag: str, df_pickle: bytes, root_out_str: str, cfg_dict: dict, worker_args: dict):  # noqa: D401
+    """Run one permutation inside its own process.
+
+    Parameters are kept pickle-friendly (bytes / dict / str) so that the
+    default 'spawn' start method on Windows works.
+    """
+
+    import pandas as _pd  # local import to avoid cross-process state
+    import logging as _logging
+    from pathlib import Path as _Path
+    import pickle as _pkl
+
+    # Minimal console logging inside worker (prefix with tag)
+    _logging.basicConfig(level=_logging.INFO, format=f"[{tag}] %(asctime)s %(levelname)s %(message)s")
+
+    df_perm = _pkl.loads(df_pickle)
+    root_out = _Path(root_out_str)
+    perm_out = root_out / tag
+    perm_out.mkdir(exist_ok=True)
+
+    tmp_csv = perm_out / f"input_{tag}.csv"
+    df_perm.to_csv(tmp_csv, index=False)
+
+    from multi_coder_analysis.run_multi_coder_tot import run_coding_step_tot  # imported inside worker
+
+    # Execute pipeline for this permutation
+    run_coding_step_tot(
+        cfg_dict,
+        tmp_csv,
+        perm_out,
+        limit=None,
+        start=None,
+        end=None,
+        concurrency=worker_args["concurrency"],
+        model=worker_args["model"],
+        provider=worker_args["provider"],
+        batch_size=worker_args["batch_size"],
+        regex_mode=worker_args["regex_mode"],
+        shuffle_batches=worker_args["shuffle_batches"],
+    )
+
+    # Compute summary & mismatches
+    comp_csv = perm_out / "comparison_with_gold_standard.csv"
+    if comp_csv.exists():
+        df_comp = _pd.read_csv(comp_csv)
+        summary = {
+            "tag": tag,
+            "accuracy": 1.0 - df_comp["Mismatch"].mean(),
+            "mismatch_count": int(df_comp["Mismatch"].sum()),
+        }
+        miss_rows = df_comp[df_comp.Mismatch].copy()
+        miss_rows["perm_tag"] = tag
+    else:
+        summary = {"tag": tag, "accuracy": None, "mismatch_count": None}
+        miss_rows = None
+
+    return summary, miss_rows
+
+# ---------------------------------------------------------------------------
 # Public entry point
 # ---------------------------------------------------------------------------
 
@@ -121,76 +183,6 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
 
     permutation_metrics: List[dict] = []
     mismatch_union_rows: List[pd.DataFrame] = []
-
-    # ------------------------------------------------------------------
-    # Helper to run a single permutation – defined at top level so that it
-    # can be pickled by multiprocessing on Windows.
-    # ------------------------------------------------------------------
-
-    def _worker(tag: str, df_pickle: bytes, root_out_str: str, cfg_dict: dict, worker_args: dict):  # noqa: D401
-        """Run one permutation inside its own process.
-
-        Parameters are kept pickle-friendly (bytes / dict / str) so that the
-        default 'spawn' start method on Windows works.
-        """
-        import pandas as _pd  # local import to avoid cross-process state
-        import logging as _logging, json as _json
-        from pathlib import Path as _Path
-
-        # Minimal console logging inside worker
-        _logging.basicConfig(level=_logging.INFO, format=f"[{tag}] %(asctime)s %(levelname)s %(message)s")
-
-        df_perm = pickle.loads(df_pickle)
-        root_out = _Path(root_out_str)
-        perm_out = root_out / tag
-        perm_out.mkdir(exist_ok=True)
-
-        tmp_csv = perm_out / f"input_{tag}.csv"
-        df_perm.to_csv(tmp_csv, index=False)
-
-        from multi_coder_analysis.run_multi_coder_tot import run_coding_step_tot  # safe inside worker
-
-        # Unpack worker_args
-        run_coding_step_tot(
-            cfg_dict,
-            tmp_csv,
-            perm_out,
-            limit=None,
-            start=None,
-            end=None,
-            concurrency=worker_args["concurrency"],
-            model=worker_args["model"],
-            provider=worker_args["provider"],
-            batch_size=worker_args["batch_size"],
-            regex_mode=worker_args["regex_mode"],
-            shuffle_batches=worker_args["shuffle_batches"],
-        )
-
-        # After run, compute per-mutation accuracy if gold present
-        comp_csv = perm_out / "comparison_with_gold_standard.csv"
-        if comp_csv.exists():
-            df_comp = _pd.read_csv(comp_csv)
-            acc = 1.0 - df_comp["Mismatch"].mean()
-            summary = {
-                "tag": tag,
-                "accuracy": acc,
-                "mismatch_count": int(df_comp["Mismatch"].sum()),
-            }
-        else:
-            summary = {
-                "tag": tag,
-                "accuracy": None,
-                "mismatch_count": None,
-            }
-
-        # Return summary plus mismatches for aggregation
-        miss_rows = None
-        if comp_csv.exists():
-            miss_rows = _pd.read_csv(comp_csv)
-            miss_rows = miss_rows[miss_rows.Mismatch].copy()
-            miss_rows["perm_tag"] = tag
-
-        return summary, miss_rows
 
     # ------------------------------------------------------------------
     # Dispatch permutations (serial or parallel)
