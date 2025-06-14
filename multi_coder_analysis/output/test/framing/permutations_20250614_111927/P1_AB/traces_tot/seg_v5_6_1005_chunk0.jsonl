@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'high risk' and 'highly pathogenic', neither of which triggers Q1 according to the rules ('high risk' is not intensifier+risk-adj, 'highly pathogenic' is a technical term).", "method": "llm_batch", "batch_size": 4, "batch_pos": 1}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'high risk' describes a condition, not a critical alert state like 'on high alert', and no other Q2 cues are present.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a 'period of high risk' but does not use a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_size": 4, "batch_pos": 1}
+{"Q": 4, "answer": "no", "rationale": "The segment contains a declarative statement about risk, not a loaded rhetorical question.", "method": "llm_batch", "batch_size": 4, "batch_pos": 1}

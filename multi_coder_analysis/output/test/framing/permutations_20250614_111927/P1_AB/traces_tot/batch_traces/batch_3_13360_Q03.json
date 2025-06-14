@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_3_13360",
+  "hop_idx": 3,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_37_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question and does not contain a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_39_101_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'died' and 'culled' are excluded by Q3 rules 3 and 4 respectively, despite the scale mentioned."
+    },
+    {
+      "segment_id": "seg_v5_40_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'raised concerns' is a psychological verb not paired with a vivid intensifier or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_1_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'killed' is excluded by Q3 rule 3, despite the scale mentioned."
+    }
+  ],
+  "timestamp": "2025-06-14T11:20:55.788745"
+}

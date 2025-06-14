@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_15792",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_24_101_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'trending sharply higher' describes a price trend, not a risk-adjective modified by an intensifier or comparative."
+    },
+    {
+      "segment_id": "seg_v5_25_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a potential outcome ('shortages') but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_26_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prices 'rising' but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_27_101_chunk0",
+      "answer": "no",
+      "rationale": "The term 'more volatile' modifying 'prices' is treated as an economic metric and does not trigger Q1."
+    }
+  ],
+  "timestamp": "2025-06-14T11:19:54.354339"
+}

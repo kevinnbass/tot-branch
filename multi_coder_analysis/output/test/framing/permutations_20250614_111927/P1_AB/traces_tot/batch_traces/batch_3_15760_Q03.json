@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_3_15760",
+  "hop_idx": 3,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'detected', which is a plain outcome verb, not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_2_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'detected', which is a plain outcome verb, not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_3_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with scale/impact information."
+    },
+    {
+      "segment_id": "seg_v5_4_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses containment verbs ('quarantined', 'depopulated') which are neutral unless paired with vivid language."
+    }
+  ],
+  "timestamp": "2025-06-14T11:20:50.250159"
+}

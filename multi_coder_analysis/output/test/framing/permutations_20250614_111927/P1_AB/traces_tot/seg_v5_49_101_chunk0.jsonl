@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}
+{"Q": 2, "answer": "no", "rationale": "The segment asks a question and uses the neutral verb 'kill' to describe a negative fact, lacking high-potency framing.", "method": "llm_batch", "batch_size": 3, "batch_pos": 1}
+{"Q": 3, "answer": "no", "rationale": "The verb 'kill' is a containment action, which is neutral even with large numbers unless paired with vivid language.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 4, "answer": "yes", "rationale": "The question 'Is it necessary to kill millions of chickens and turkeys?' is a loaded rhetorical question questioning the scale/necessity of a severe action.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}

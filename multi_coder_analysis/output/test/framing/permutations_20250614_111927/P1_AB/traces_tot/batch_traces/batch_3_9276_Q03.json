@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_3_9276",
+  "hop_idx": 3,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_8_1000_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains statements about surveillance and lack of immediate public health concern, but no moderate verb paired with significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_9_1000_chunk0",
+      "answer": "no",
+      "rationale": "'spreading' is a moderate verb, but 'dozens' is not considered significant scale/impact according to the rules and examples."
+    },
+    {
+      "segment_id": "seg_v5_10_1000_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains advice/urging, not a moderate verb paired with significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_11_101_chunk0",
+      "answer": "no",
+      "rationale": "Segment states the virus is 'pretty rare' for humans, which is not a moderate verb paired with significant scale/impact."
+    }
+  ],
+  "timestamp": "2025-06-14T11:20:52.062796"
+}

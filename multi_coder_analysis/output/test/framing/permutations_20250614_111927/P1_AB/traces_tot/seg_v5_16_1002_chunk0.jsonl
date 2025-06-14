@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains no intensifiers or comparatives modifying risk-adjectives. 'large' describes the scale of outbreaks, not an intensified risk-adjective.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'emerged' and 'spread' are moderate, and while 'large outbreaks' and 'throughout the world' indicate scale, they do not trigger Q2 without a high-potency verb or metaphor.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}
+{"Q": 3, "answer": "no", "rationale": "The segment mentions 'large outbreaks' and 'spread throughout the world', but 'spread' is a plain outcome verb excluded from the Q3 moderate verb list.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}
+{"Q": 4, "answer": "no", "rationale": "The segment provides historical information and does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}

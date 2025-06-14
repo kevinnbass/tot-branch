@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective. 'largest' modifies 'increase' (a metric), not a risk-adjective.", "method": "llm_batch", "batch_size": 4, "batch_pos": 4}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('saw the largest increase', 'rising') to describe the price change, lacking high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 4, "batch_pos": 1}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a financial metric ('price index', 'rising 12.2%'), which is excluded from Q3 Alarmist framing.", "method": "llm_batch", "batch_size": 4, "batch_pos": 1}
+{"Q": 4, "answer": "no", "rationale": "The segment states facts about price increases and contains no questions.", "method": "llm_batch", "batch_size": 4, "batch_pos": 1}

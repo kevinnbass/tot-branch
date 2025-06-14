@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_15736",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_12_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_13_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_14_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_15_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'extremely low', but 'low' is not a risk-adjective as defined for Q1 (e.g., deadly, dangerous, severe). This phrase minimizes risk, it does not amplify a negative risk adjective."
+    }
+  ],
+  "timestamp": "2025-06-14T11:19:53.420751"
+}

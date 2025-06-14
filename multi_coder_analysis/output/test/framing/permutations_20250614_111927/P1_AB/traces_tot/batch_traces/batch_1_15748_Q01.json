@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_15748",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_8_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'strongest' modifying 'surveillance program' (a capability) and 'immediate' modifying 'concern' in a negation ('do not present an immediate public health concern'), neither of which fit the Q1 criteria for intensifier + risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_9_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the spread of the virus and positive tests but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_10_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains recommendations for biosecurity but no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_11_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment states it's 'not impossible' and 'pretty rare' for humans to get the virus. 'pretty' modifies 'rare' (low risk), not a risk-adjective."
+    }
+  ],
+  "timestamp": "2025-06-14T11:19:54.060368"
+}
