@@ -20,6 +20,22 @@
 # ------------------------------------------------------------------
 
 # ------------------------------------------------------------------
+# 1 – Intensifier + Risk-Adjective  (added 2025-06-14 patch B)
+# ------------------------------------------------------------------
+1:
+  - name: IntensifierRiskAdjV2           # unique identifier for Hop 1
+    mode: shadow                         # switch to 'live' if you want short-circuiting
+    frame: Alarmist
+    pattern: |-
+      \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
+          |very|deadlier|more|extremely|severely|so|particularly|frighteningly|definitely|certainly)  
+          (?:\s+\w+){0,3}\s+
+      (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
+      \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
+      \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
+      \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
+
+# ------------------------------------------------------------------
 # 2 – High-Potency Verb / Metaphor  (updated 2025-06-14 patch A)
 # ------------------------------------------------------------------
 2:
