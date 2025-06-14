@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "Contains bare negation and a capability boast ('strongest AI surveillance program') without explicit safety link.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment contains food safety assurance and capability cues but not a minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "'will not enter the food system' is followed by the preparedness cue 'strongest AI surveillance program'.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [46, 52], "captures": []}}

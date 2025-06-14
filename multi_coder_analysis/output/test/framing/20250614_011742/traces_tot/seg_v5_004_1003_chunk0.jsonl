@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "Reports facts neutrally; 'highly pathogenic' is a technical term.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment provides a factual report without using a minimiser or scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [196, 205], "captures": []}}
