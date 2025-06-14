@@ -48,14 +48,6 @@ Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 
 
 > **New aspect guard.** The moderate-verb must denote **realised impact** – NOT merely an intention or hypothetical.  
 
-**Regex Pattern:**
-```regex
-\b(hit|swept|surged|soared|plunged|plummeted|prompted|feared|fearing|
-     # ONLY active, realised culling counts
-     (?:were|was)\s+culled|hitting)\b
-(?=[^.]{0,40}\b(?:\d|million|millions|thousand|thousands|record|largest|unprecedented|severe|significant|overwhelming|devastating|disaster|disasters|emergency|emergencies)\b)
-```
-
 **Clarification** — Containment actions  
 "Birds were *euthanized/depopulated* to prevent spread" is **Neutral** unless paired with an explicit large-scale impact (e.g., "euthanized ***millions*** of birds across 10 states").
 

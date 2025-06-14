@@ -46,36 +46,6 @@ When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but*
 
 Core Principle: If a direct quotation (or a clearly attributed statement from a specific source) within the segment carries a distinct Alarmist or Reassuring frame, the segment's Dim1_Frame MUST reflect the frame of that quotation/attributed statement. This principle applies even if the author's narrative surrounding the quote is Neutral. The frame is determined by the language and tone used by the quoted source itself.
 
-**Regex Pattern:**
-```regex
-(?ix)
-
-(?<=["'\u2018\u2019\u201C\u201D])
-
-\b(
-   (?:
-        (?:extremely|highly|very|deeply|incredibly|
-           particularly|frighteningly|definitely|certainly|clearly)
-        \s+\w{0,3}\s+
-        (?:concerning|alarming|worrying|dangerous|
-           severe|catastrophic|critical|high[-\s]+risk)
-     |  requires\s+immediate\s+action
-     |  period\s+of\s+high[-\s]+risk
-     |  (?:troubling|dire)\s+situation\b
-   )
- |
-   (?:
-        no\s+cause\s+for\s+alarm
-     |  fully\s+under\s+control
-     |  excellent\s+news
-     |  very\s+well\s+protected
-     |  risk\s+(?:is|remains)\s+(?:very|extremely|exceptionally)\s+low
-     |  (?:completely|totally|entirely|perfectly)\s+safe
-     |  safe\s+to\s+eat
-   )
-)\b
-```
-
 ### Your JSON Reply:
 ```json
 {

@@ -31,16 +31,6 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q10.
 
-**Regex Pattern:**
-```regex
-(?is)
-\b(?:                             
-    (?:prices?|rate|cost|loss|profit|revenue|value)\b.*?\b
-        (?:rose|declined|increased|fell|dropped|gained|lost)\b
-  | prices?\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
-)
-```
-
 ### Your JSON Reply:
 ```json
 {

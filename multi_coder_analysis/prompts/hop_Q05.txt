@@ -84,23 +84,6 @@ Corporate self-statements lacking a safety link stay Neutral.
 > in the table above, the order top→bottom decides.  
 >   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
 
-**Regex Pattern:**  
-```regex
- \b(?:no\s+cause\s+for\s+alarm|
-     public\s+can\s+rest\s+easy|
-     fully\s+under\s+control|
-     completely\s+safe|
-     (?:we\s+are\s+confident\b|we're\s+confident\b|
-     rest\s+assured|
-     situation\s+contained|
-     providing\s+relief|feel(?:ing)?\s+positive|feel(?:ing)?\s+optimistic)|
-     (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
-     (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
-     (?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
-      .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
-     \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
-```
-
 > **Guard:** score as *Reassuring* only when the speaker is an official
 >  body or the author.  Indirect hearsay → Neutral.
 

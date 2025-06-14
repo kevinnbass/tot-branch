@@ -31,11 +31,6 @@ Does the segment speculate about potential future relief or improvement (e.g., '
 
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q11.
 
-**Regex Pattern:**
-```regex
-\b(may\ be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b
-```
-
 ### Your JSON Reply:
 ```json
 {

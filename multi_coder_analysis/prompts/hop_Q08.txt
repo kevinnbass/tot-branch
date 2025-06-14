@@ -30,11 +30,6 @@ Does the segment describe capabilities, preparedness measures, hopeful future po
 
 **Outcome:** Yes → Label: Neutral. No → Proceed to Q9.
 
-**Regex Pattern:**
-```regex
-\b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)|(?:officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b)\b
-```
-
 ### Your JSON Reply:
 ```json
 {

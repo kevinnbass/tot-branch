@@ -73,11 +73,6 @@ A segment is Neutral if it presents information factually without significant, e
 * **Neutral (Factual Reporting of Prices/Metrics - Q9):** "Market prices for wheat decreased by 2% this month."
 * **Neutral (Speculation about Relief - Q10):** "Experts predict that the supply chain issues could ease in the next quarter."
 
-**Regex Pattern (fenced):**
-```regex
-\b(report|document|state|announce|confirm|detect|identify|record)\w*\b.*\b(cases|deaths|losses|rates|numbers|percent)\b
-```
-
 ### Your JSON Reply:
 ```json
 {
