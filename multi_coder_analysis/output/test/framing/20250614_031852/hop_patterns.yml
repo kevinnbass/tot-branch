@@ -78,8 +78,7 @@
     frame: Alarmist
     pattern: |-
       \b(hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
-         prompted|feared|fearing|
-         (?:were|was)\s+culled)\b
+         prompted|feared|fearing)\b
       (?=[^.]{0,120}\b(?:\d|million|millions|thousand|thousands|record|
                        largest|unprecedented|severe|significant|overwhelming|
                        devastating|disaster|disasters|emergency|emergencies)\b)
@@ -135,15 +134,24 @@
     mode: live
     frame: Neutral
     pattern: |-
-      \b(?:do|does)(?:\s+not|n't)\s+present\s+(?:an?\s+)?immediate\s+
-         (?:public\s+)?health\s+concern\b
+      # ⬇ Explicit public‑health negations
+      \b(?:do|does|did|is|are|was|were|will|would|should)\s+(?:not|n't)\s+
+         (?:pose|present|constitute)\s+(?:an?\s+)?(?:immediate\s+)?(?:public\s+)?health\s+concern\b
       |
+      # ⬇ No human/animal cases detected
       \bno\s+(?:human|americans?|animal|bird|poultry)\s+cases?\s+
-           (?:have|has|are|were)\s+(?:been\s+)?(?:detected|reported|
-                                             recorded|found|identified)\b
+         (?:have|has|are|were)\s+(?:been\s+)?(?:detected|reported|
+                                            recorded|found|identified)\b
       |
-      \b(?:does|do|is|are|should)\s+(?:not|n't)\s+
-           pose\s+(?:an?\s+)?(?:immediate\s+)?risk\b
+      # ⬇ Birds/products kept out of the food chain
+      \b(?:will|would|can|could)\s+not\s+enter\s+the\s+food\s+(?:system|chain|supply)\b
+      |
+      # ⬇ Negative laboratory results
+      \b(?:tests?|samples?)\s+(?:came|come|were|was)\s+negative\b
+      |
+      # ⬇ Generic “does not pose a risk” form
+      \b(?:does|do|is|are|will|would|should)\s+(?:not|n't)\s+
+         pose\s+(?:an?\s+)?risk\b
 
 8:
   - name: CapabilityNoReassurance
