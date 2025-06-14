@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_7_13732",
+  "hop_idx": 7,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment states 'infection is rare' but this is not a bare negation pattern like 'no cases' or 'not expected'."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "yes",
+      "rationale": "'There is no record of Americans contracting' is a bare negation (evidence negation) without an explicit calming cue."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes deaths, but contains no bare negation."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes culling plans, but contains no bare negation."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes police action, but contains no bare negation."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment confirms the virus and notes lack of clarity on its origin, but contains no bare negation."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides advice/instructions, but contains no bare negation."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "yes",
+      "rationale": "'does not present a food safety risk' is a bare negation (risk negation) without an explicit calming cue."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the strain and past impact, but contains no bare negation."
+    }
+  ],
+  "timestamp": "2025-06-14T00:58:39.692161"
+}
