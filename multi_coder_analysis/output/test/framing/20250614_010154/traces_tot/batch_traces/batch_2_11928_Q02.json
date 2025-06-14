@@ -1,0 +1,258 @@
+{
+  "batch_id": "batch_2_11928",
+  "hop_idx": 2,
+  "segment_count": 50,
+  "responses": [
+    {
+      "segment_id": "seg_v5_14_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain any high-potency verbs, potent metaphors, superlative + negative nouns, or critical alert phrases as defined in Q2. It contains a reassuring phrase ('do not present an immediate public health concern'), but this is not a Q2 cue."
+    },
+    {
+      "segment_id": "seg_v5_15_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain any high-potency verbs, potent metaphors, superlative + negative nouns, or critical alert phrases as defined in Q2. It discusses food safety, which relates to Q4/Q5."
+    },
+    {
+      "segment_id": "seg_v5_16_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain any high-potency verbs, potent metaphors, superlative + negative nouns, or critical alert phrases as defined in Q2. It contains a reassuring phrase ('remain safe for consumers') and mentions preventative action, which relate to Q4/Q5."
+    },
+    {
+      "segment_id": "seg_v5_17_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain any high-potency verbs, potent metaphors, superlative + negative nouns, or critical alert phrases as defined in Q2. It describes actions taken to mitigate spread, which relates to Q5 (Preparedness)."
+    },
+    {
+      "segment_id": "seg_v5_18_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain any high-potency verbs, potent metaphors, superlative + negative nouns, or critical alert phrases as defined in Q2. It states a low expected impact, which relates to Q5 (Low-Risk)."
+    },
+    {
+      "segment_id": "seg_v5_52_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a method ('spraying chickens and turkeys with a foam that causes asphyxiation') but does not use high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_53_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a method ('carbon dioxide is used to kill the birds') but does not use high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_54_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses the perceived humaneness of a method but does not use high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_55_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the verb 'forcing' and 'destroy', but these are not listed as high-potency verbs triggering Alarmist framing in the Q2 rules/regex. The scale ('nearly three million chickens') is present, but the verb does not meet the Q2 criteria."
+    },
+    {
+      "segment_id": "seg_v5_11_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the technical term 'highly pathogenic' (ignored by the technical-term guard) and the moderate verb 'infected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_13_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the moderate verb 'confirmed' and 'infected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_14_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the moderate verb 'occur' and describes the risk as 'rare' (Q5 Low-Risk). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_15_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the technical term 'highly pathogenic' (ignored by the technical-term guard) and the moderate verb 'contracted'. It states a factual absence of cases, which relates to Q5 (Low-Risk), but does not contain any Q2 cues."
+    },
+    {
+      "segment_id": "seg_v5_16_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the moderate verbs 'emerged' and 'spread'. 'large outbreaks' describes scale but the verbs do not meet the Q2 criteria for high potency. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_1_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'ramping up' which describes action/preparedness (Q5), and 'tested positive' which is factual language. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_2_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the moderate verb 'affected' and describes the limited scope ('only aware of one affected house'), which relates to Q5 (Low-Risk). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_3_1008_chunk0",
+      "answer": "yes",
+      "rationale": "The segment uses the phrase 'reigniting fears', which describes an emotional impact related to the threat and is included in the Q2 pattern recognition table and regex for raising fear/concern."
+    },
+    {
+      "segment_id": "seg_v5_4_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a factual impact ('can cause high mortality rates'). 'high' modifies 'mortality rates', which is a factual description of severity, not an amplification cue like a high-potency verb or metaphor. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual verb 'killed' and provides scale ('50 million birds', '$1 billion'), but the verb itself is not a high-potency verb triggering Alarmist framing under Q2 rules. This is a neutrally stated negative fact."
+    },
+    {
+      "segment_id": "seg_v5_6_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual verb 'detected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_7_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the technical/euphemistic term 'depopulated' and describes preventative action ('to prevent the spread'). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_8_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a factual lack of disclosure. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_9_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a factual status ('awaiting results') regarding a potential case. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_10_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual verb 'tested positive'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_1_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the technical term 'highly pathogenic' (ignored by the technical-term guard) and the factual verb 'detected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_2_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual verb 'detected' and describes the limited scope ('small, non-commercial'), which relates to Q5 (Low-Risk). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_3_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes action/preparedness ('working closely', 'joint incident response'), which relates to Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_4_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual/technical terms 'quarantined' and 'depopulated' and describes preventative action ('to prevent the spread'). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment makes a statement about food safety, which relates to Q4/Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_6_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a factual absence of cases, which relates to Q5 (Low-Risk). It uses the factual verb 'detected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_7_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring phrase ('do not present an immediate health concern'), which relates to Q4/Q5. It uses the factual term 'detections'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_8_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reminder about cooking safety, which relates to Q4/Q5. It uses the factual verb 'kills'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_9_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes preparedness/action ('response plans', 'working jointly', 'surveillance and testing'), which relates to Q5. It uses the moderate verb 'affected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_10_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual verb 'discovered'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_2_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual verb 'found'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_3_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual/technical terms ('reported', 'ordered', 'euthanized', 'testing positive') and the technical term 'highly pathogenic' (ignored). The number ('nearly 30,000') describes scale, but the verbs do not meet the Q2 criteria. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_4_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual/technical terms ('reported', 'ordered', 'euthanized', 'testing positive', 'found') and the technical term 'highly pathogenic' (ignored). The number ('nearly 30,000') describes scale, but the verbs do not meet the Q2 criteria. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual/technical terms ('quarantined', 'killed off', 'detected') and the moderate verb 'infected'. It states a factual absence of human cases, which relates to Q5 (Low-Risk). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_6_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment makes a statement about food safety, which relates to Q4/Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_7_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment makes a statement about food safety (Q4/Q5) and describes preparedness/capability ('strongest AI surveillance program', 'working with its partners', 'actively look'), which relates to Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_8_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes preparedness/capability ('strongest AI surveillance program', 'working with its partners', 'actively look') and contains a reassuring phrase ('do not present an immediate public health concern'), which relate to Q5 and Q4/Q5 respectively. It uses the factual term 'detections'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_9_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the moderate verb 'spreading' and the factual verb 'tested positive'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_10_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes recommended actions ('review their biosecurity activities and prevent contact'), which relates to Q5 (Preparedness). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_11_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the low-risk descriptor 'pretty rare' (Q5) and the moderate verb 'get'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_12_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes action/preparedness ('monitoring'), which relates to Q5. It uses the factual/moderate verbs 'exposed' and 'infected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_13_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a factual absence of cases ('no cases'), which relates to Q5 (Low-Risk). It uses the factual verb 'found'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_14_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a statement about food safety ('should not pose a risk'), which relates to Q4/Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_15_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains an explicit low-risk descriptor ('extremely low'), which relates to Q4/Q5. It uses the moderate verb 'infected'. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_16_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes standard procedures/capability ('responsible for inspecting'), which relates to Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_17_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes standard procedures/capability ('required to be present', 'have unfettered access'), which relates to Q5. It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2."
+    }
+  ],
+  "timestamp": "2025-06-14T01:03:08.355804"
+}

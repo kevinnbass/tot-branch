@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual/technical terms ('quarantined', 'killed off', 'detected') and the moderate verb 'infected'. It states a factual absence of human cases, which relates to Q5 (Low-Risk). It does not contain any high-potency verbs, metaphors, superlatives, or critical alert phrases as defined in Q2.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'killed off' is a containment action; no explicit large-scale impact is mentioned. 'detected' is not in the regex.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports actions (quarantine, culling) and absence of human cases (bare positive fact), lacking explicit calming language.", "method": "llm_batch"}

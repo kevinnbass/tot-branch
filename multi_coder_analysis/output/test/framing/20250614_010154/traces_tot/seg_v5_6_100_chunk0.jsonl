@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a negation ('No human cases') and a safety assurance ('safe to eat'). Not the Q1 pattern.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a safety assurance ('remains safe to eat') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'detected' is neutral.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb from the specified list is present.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [88, 107], "captures": [null]}}

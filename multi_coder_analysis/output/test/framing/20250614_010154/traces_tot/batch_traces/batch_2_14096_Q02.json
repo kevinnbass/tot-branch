@@ -1,0 +1,258 @@
+{
+  "batch_id": "batch_2_14096",
+  "hop_idx": 2,
+  "segment_count": 50,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language ('rare', 'occur', 'contact') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral verbs ('contracting', 'contracted', 'resulting') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'highly pathogenic' is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a negative fact ('deaths') but uses neutral language ('responsible for the deaths') without high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes planned actions ('planning to cull') using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'cull' is a technical/procedural term here."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action ('blocking access') using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'affected' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('confirmed', 'lies', 'found') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'deadly' is an adjective describing the virus, not an amplified verb or metaphor describing impact. 'deaths' is stated neutrally."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides advice using neutral verbs ('practicing', 'prevent', 'report') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a low-risk assessment ('very low') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'threatens to spark shortages' and 'amid soaring inflation'. 'threatens to spark shortages' uses 'spark', but the Q2 regex for 'spark' requires a specific set of threat nouns after it, which 'shortages' is not part of. 'spark' is also not listed as a high-potency verb like 'ravaged' or 'devastated'. 'amid soaring inflation' is background context and ignored per rules. 'deadly' is an adjective, not a high-potency verb or metaphor describing impact. No Q2 cues found."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral verbs ('circulating', 'related', 'killed', 'cost') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'killed' is a factual description of death, not amplified language."
+    },
+    {
+      "segment_id": "seg_v5_011_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('detected', 'culled') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'culled' is a technical/procedural term here."
+    },
+    {
+      "segment_id": "seg_v5_012_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a low-risk assessment ('do not present an immediate public health concern') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_013_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('thought to be spreading', 'tested positive') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'spreading' is a moderate verb, not high-potency."
+    },
+    {
+      "segment_id": "seg_v5_014_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information about production/export using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_015_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_016_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_017_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the moderate verb 'hitting'. Per the boundary guard, moderate verbs like 'hit' do not trigger Alarmist unless coupled with a concrete scale/impact phrase in the manner of the Q3 rule. 'hitting the market' is not such a phrase for Q2. No high-potency verbs, metaphors, superlatives, or critical alert phrases found."
+    },
+    {
+      "segment_id": "seg_v5_018_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual data using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_11_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information about production/export using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_12_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_13_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_14_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('occur', 'considered') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'rare' is a low-risk adjective, not an Alarmist cue."
+    },
+    {
+      "segment_id": "seg_v5_15_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using a neutral verb ('contracted') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'highly pathogenic' is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_16_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('believed to have emerged', 'leading', 'spread') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'spread' is a moderate verb, not high-potency."
+    },
+    {
+      "segment_id": "seg_v5_1_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('killed', 'spread') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'killed' is a factual description of death, not amplified language. 'spread' is a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_2_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('began', 'killed') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'killed' is a factual description of death, not amplified language."
+    },
+    {
+      "segment_id": "seg_v5_3_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a low-risk assessment ('do not present an immediate public health concern') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_6_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a safety assurance ('remains safe to eat') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'detected' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_8_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information/advice using a neutral verb ('kills') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'kills' describes a process outcome, not amplified impact."
+    },
+    {
+      "segment_id": "seg_v5_002_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('triggered', 'blocking') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_003_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a neutral verb ('limited') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_004_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a neutral verb ('infected') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'highly pathogenic' is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_006_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('culled', 'enter') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'culled' is a technical/procedural term here."
+    },
+    {
+      "segment_id": "seg_v5_007_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('working', 'prevent', 'spreading', 'heightening') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'spreading' is a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_008_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information about expectation using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_009_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a safety assurance ('safe to eat') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_010_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information about expectation using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_11_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('urged', 'review', 'prevent', 'working', 'added') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'affected' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_12_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('joined', 'banning', 'limiting') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_13_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information about production/export using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_14_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs ('said', 'working', 'preventing', 'spreading') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'spreading' is a moderate verb. 'diligently' modifies 'working', not the threat's impact."
+    },
+    {
+      "segment_id": "seg_v5_15_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the moderate verb 'hitting'. Per the boundary guard, moderate verbs like 'hit' do not trigger Alarmist unless coupled with a concrete scale/impact phrase in the manner of the Q3 rule. 'hitting the country' is not such a phrase for Q2. No high-potency verbs, metaphors, superlatives, or critical alert phrases found."
+    },
+    {
+      "segment_id": "seg_v5_16_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual data using neutral language and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_1_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a neutral verb ('found') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_2_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a neutral verb ('detected') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_3_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a low-risk assessment ('do not present an immediate public health concern') which is a Reassuring cue (Q5), but does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_4_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment presents factual information using a neutral verb ('detected') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information/advice using a neutral verb ('kills') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'kills' describes a process outcome, not amplified impact."
+    },
+    {
+      "segment_id": "seg_v5_6_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a neutral verb ('infected') and does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases as defined in Q2. 'highly pathogenic' is a technical term."
+    }
+  ],
+  "timestamp": "2025-06-14T01:03:13.286063"
+}

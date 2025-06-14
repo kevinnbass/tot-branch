@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'deadly' but it is not modified by an intensifier or comparative. 'soaring inflation' is background condition.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment contains 'threatens to spark shortages' and 'amid soaring inflation'. 'threatens to spark shortages' uses 'spark', but the Q2 regex for 'spark' requires a specific set of threat nouns after it, which 'shortages' is not part of. 'spark' is also not listed as a high-potency verb like 'ravaged' or 'devastated'. 'amid soaring inflation' is background context and ignored per rules. 'deadly' is an adjective, not a high-potency verb or metaphor describing impact. No Q2 cues found.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'threatens to spark' is a potential/hypothetical impact, not realised impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'does not present a food safety risk' is a bare negation, not 'safe to eat'. Lacks explicit calming cues.", "method": "llm_batch"}
