@@ -1,0 +1,3699 @@
+# Full Codebase Snapshot — generated 2025-06-14T08:47:38
+====================================================================================================
+
+## 0001. config.yaml
+----------------------------------------------------------------------------------------------------
+file_paths:
+  file_patterns:
+    model_majority_output: '{phase}_model_labels.csv'
+logging:
+  level: INFO
+runtime_flags:
+  enable_regex: true
+
+
+## 0002. multi_coder_analysis\__init__.py
+----------------------------------------------------------------------------------------------------
+"""multi_coder_analysis package
+
+Light-weight namespace placeholder.  No heavy imports at module load time.
+""" 
+
+## 0003. multi_coder_analysis\hop_context.py
+----------------------------------------------------------------------------------------------------
+"""
+Data container for a single segment's journey through the 12-hop Tree-of-Thought chain.
+"""
+from __future__ import annotations
+from dataclasses import dataclass, field
+from typing import Optional, List, Dict, Any
+import sys as _sys  # Compatibility shim needs sys access
+
+# ---------------------------------------------------------------------------
+# Compatibility shim ---------------------------------------------------------
+# Some legacy (and current) code does:
+#     import hop_context
+# *before* the package root has been imported.  To keep that working we
+# register *this* module object under the bare name **immediately**.
+# ---------------------------------------------------------------------------
+if "hop_context" not in _sys.modules:  # pragma: no cover – infrastructure only
+    _sys.modules["hop_context"] = _sys.modules[__name__]
+# ---------------------------------------------------------------------------
+
+@dataclass
+class HopContext:
+    """
+    Manages the state for a single text segment as it progresses through the 12-hop ToT chain.
+    """
+    # -------------- Static Data --------------
+    statement_id: str
+    segment_text: str
+
+    # -------------- Dynamic State --------------
+    q_idx: int = 0
+    is_concluded: bool = False
+    final_frame: Optional[str] = None           # The definitive frame once concluded (e.g., Alarmist, Neutral)
+    final_justification: Optional[str] = None   # The rationale for the final decision
+
+    # -------------- Logging & Audit Trails --------------
+    analysis_history: List[str] = field(default_factory=list)      # Human-readable log (e.g., "Q1: no")
+    reasoning_trace: List[Dict] = field(default_factory=list)      # Machine-readable JSON for replay/debug
+    raw_llm_responses: List[Dict] = field(default_factory=list)    # Raw, unparsed LLM responses per hop
+
+    # -------------- Parsed prompt metadata (from YAML front-matter) --------------
+    prompt_meta: Dict[str, Any] = field(default_factory=dict, repr=False)
+
+    # -------------- Convenience Properties for Downstream Compatibility --------------
+    @property
+    def dim1_frame(self) -> Optional[str]:
+        """Alias used by downstream merge/stats scripts."""
+        return self.final_frame 
+
+@dataclass
+class BatchHopContext:
+    """Container for a batch of segments being processed together at a single hop."""
+    batch_id: str
+    hop_idx: int
+    segments: List[HopContext]  # The HopContext objects inside this batch
+
+    # Raw LLM I/O for debugging
+    raw_prompt: str = ""
+    raw_response: str = ""
+    thoughts: Optional[str] = None 
+
+## 0004. multi_coder_analysis\llm_providers\__init__.py
+----------------------------------------------------------------------------------------------------
+# LLM Providers package 
+
+## 0005. multi_coder_analysis\llm_providers\base.py
+----------------------------------------------------------------------------------------------------
+from abc import ABC, abstractmethod
+
+class LLMProvider(ABC):
+    """Uniform interface for all LLM back‑ends."""
+
+    @abstractmethod
+    def generate(self, prompt: str, model: str, temperature: float = 0.0) -> str:
+        """Return the raw assistant message text."""
+        ...
+    
+    @abstractmethod
+    def get_last_thoughts(self) -> str:
+        """Retrieve thinking traces from the last generate() call."""
+        ...
+
+    @abstractmethod
+    def get_last_usage(self) -> dict:
+        """Return token usage metadata from last call (keys: prompt_tokens, response_tokens, total_tokens)."""
+        ... 
+
+## 0006. multi_coder_analysis\llm_providers\gemini_provider.py
+----------------------------------------------------------------------------------------------------
+import os
+# NOTE: Google Gemini SDK is optional in many test environments. We therefore
+# *attempt* to import it lazily and only raise a helpful error message at
+# instantiation time, not at module import time (which would break unrelated
+# unit-tests that merely import the parent package).
+import logging
+from typing import Optional, TYPE_CHECKING
+
+# Defer heavy / optional dependency import – set sentinels instead.  We rely
+# on run-time checks within `__init__` to raise when the SDK is truly needed.
+if TYPE_CHECKING:
+    # Type-hints only (ignored at run-time when type checkers are disabled)
+    from google import genai as _genai  # pragma: no cover
+    from google.genai import types as _types  # pragma: no cover
+
+genai = None  # will attempt to import lazily in __init__
+types = None
+from .base import LLMProvider
+
+class GeminiProvider(LLMProvider):
+    def __init__(self, api_key: Optional[str] = None):
+        global genai, types  # noqa: PLW0603 – we intentionally mutate module globals
+
+        # Lazy-load the Google SDK only when the provider is actually
+        # instantiated (i.e. during *production* runs, not unit-tests that
+        # only touch auxiliary helpers like _assemble_prompt).
+        if genai is None or types is None:
+            try:
+                from google import genai as _genai  # type: ignore
+                from google.genai import types as _types  # type: ignore
+
+                genai = _genai  # promote to module-level for reuse
+                types = _types
+            except ImportError as e:
+                # Surface a clear, actionable message **only** when the class
+                # is actually used.  This keeps import-time side effects
+                # minimal and avoids breaking unrelated tests.
+                raise ImportError(
+                    "The google-genai SDK is required to use GeminiProvider."
+                    "\n   ➜  pip install google-genai"
+                ) from e
+
+        key = api_key or os.getenv("GOOGLE_API_KEY")
+        if not key:
+            raise ValueError("GOOGLE_API_KEY not set")
+
+        # Initialize client directly with the API key (newer SDK style)
+        self._client = genai.Client(api_key=key)
+
+    def generate(self, system_prompt: str, user_prompt: str, model: str, temperature: float = 0.0) -> str:
+        cfg = {"temperature": temperature}
+        # Enforce deterministic nucleus + top-k
+        cfg["top_p"] = 0.1
+        cfg["top_k"] = 1
+        cfg["system_instruction"] = system_prompt
+
+        if "2.5" in model:
+            cfg["thinking_config"] = types.ThinkingConfig(include_thoughts=True)
+        
+        resp = self._client.models.generate_content(
+            model=model,
+            contents=user_prompt,
+            config=types.GenerateContentConfig(**cfg)
+        )
+        
+        # Capture usage metadata if available
+        usage_meta = getattr(resp, 'usage_metadata', None)
+        if usage_meta:
+            prompt_toks = int(getattr(usage_meta, 'prompt_token_count', 0))
+            # SDK renamed field from response_token_count → candidates_token_count
+            resp_toks = int(
+                getattr(usage_meta, 'response_token_count', getattr(usage_meta, 'candidates_token_count', 0))
+            )
+            thought_toks = int(getattr(usage_meta, 'thoughts_token_count', 0))
+            total_toks = int(getattr(usage_meta, 'total_token_count', 0))
+            self._last_usage = {
+                'prompt_tokens': prompt_toks,
+                'response_tokens': resp_toks,
+                'thought_tokens': thought_toks,
+                'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks)
+            }
+        else:
+            self._last_usage = {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}
+        
+        # Stitch together parts (Gemini returns list‑of‑parts)
+        thoughts = ""
+        content = ""
+        
+        for part in resp.candidates[0].content.parts:
+            if not part.text:
+                continue
+            if hasattr(part, 'thought') and part.thought:
+                thoughts += part.text
+            else:
+                content += part.text
+        
+        # Store thoughts for potential retrieval
+        self._last_thoughts = thoughts
+        
+        return content.strip()
+    
+    def get_last_thoughts(self) -> str:
+        """Retrieve thinking traces from the last generate() call."""
+        return getattr(self, '_last_thoughts', '')
+
+    def get_last_usage(self) -> dict:
+        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0}) 
+
+## 0007. multi_coder_analysis\main.py
+----------------------------------------------------------------------------------------------------
+import argparse
+import logging
+import sys
+import yaml
+from pathlib import Path
+from datetime import datetime
+import os
+from typing import Dict, Optional
+import threading
+import signal
+import shutil
+
+# --- Import step functions from other modules --- #
+# from run_multi_coder import run_coding_step  # TODO: Create this for standard pipeline
+from run_multi_coder_tot import run_coding_step_tot # NEW IMPORT
+# from merge_human_and_models import run_merge_step  # TODO: Create this
+# from reliability_stats import run_stats_step  # TODO: Create this
+# from sampling import run_sampling_for_phase  # TODO: Create this
+
+# --- Import prompt concatenation utility ---
+from concat_prompts import concatenate_prompts
+
+# --- Import reproducibility utils ---
+# from utils.reproducibility import generate_run_manifest, get_file_sha256  # TODO: Create this
+
+# --- Global Shutdown Event ---
+shutdown_event = threading.Event()
+
+# --- Signal Handler ---
+def handle_sigint(sig, frame):
+    print()  # Print newline after ^C
+    logging.warning("SIGINT received. Attempting graceful shutdown...")
+    shutdown_event.set()
+
+# --- Configuration Loading ---
+def load_config(config_path):
+    """Loads configuration from a YAML file."""
+    try:
+        with open(config_path, 'r') as f:
+            config = yaml.safe_load(f)
+        return config
+    except FileNotFoundError:
+        logging.error(f"Configuration file not found: {config_path}")
+        sys.exit(1)
+    except yaml.YAMLError as e:
+        logging.error(f"Error parsing configuration file: {e}")
+        sys.exit(1)
+
+# --- Logging Setup ---
+def setup_logging(config):
+    """Configures logging based on the config file."""
+    log_config = config.get('logging', {})
+    level = log_config.get('level', 'INFO').upper()
+    log_format = log_config.get('format', '%(asctime)s - %(levelname)s - %(message)s')
+    log_file = log_config.get('file')  # optional path for on-disk logging
+    
+    # Set Google SDK to ERROR level immediately to prevent AFC noise
+    logging.getLogger("google").setLevel(logging.ERROR)
+    logging.getLogger("google.genai").setLevel(logging.ERROR)
+    logging.getLogger("google.genai.client").setLevel(logging.ERROR)
+    
+    logging.basicConfig(level=level, format=log_format, handlers=[logging.StreamHandler(sys.stdout)])
+
+    # ------------------------------------------------------------------
+    # Optional FileHandler – writes the same log stream to disk when the
+    # user specifies ``logging.file`` in config.yaml (or passes it via env
+    # injection).  Keeps stdout behaviour unchanged.
+    # ------------------------------------------------------------------
+    if log_file:
+        try:
+            fh = logging.FileHandler(log_file, encoding="utf-8")
+            fh.setLevel(level)
+            fh.setFormatter(logging.Formatter(log_format))
+            logging.getLogger().addHandler(fh)
+            logging.debug("File logging enabled → %s", log_file)
+        except Exception as e:
+            logging.warning("⚠ Could not set up file logging (%s): %s", log_file, e)
+
+    # Silence noisy AFC-related logs emitted by external libraries
+    class _AFCNoiseFilter(logging.Filter):
+        _PHRASES = ("AFC is enabled", "AFC remote call", "max remote calls")
+
+        def filter(self, record: logging.LogRecord) -> bool:  # type: ignore[override]
+            msg = record.getMessage()
+            return not any(p in msg for p in self._PHRASES)
+
+    # Apply filter to root logger and specifically to google logger
+    logging.getLogger().addFilter(_AFCNoiseFilter())
+    logging.getLogger("google").addFilter(_AFCNoiseFilter())
+    logging.getLogger("google.genai").addFilter(_AFCNoiseFilter())
+
+    # Patch sys.stdout/stderr to filter out noisy AFC print statements outside logging
+    import sys as _sys, io as _io
+
+    class _FilteredStream(_io.TextIOBase):
+        def __init__(self, original):
+            self._orig = original
+
+        def write(self, s):  # type: ignore[override]
+            # Skip lines containing AFC noise phrases
+            if any(p in s for p in _AFCNoiseFilter._PHRASES):
+                return len(s)  # Pretend we wrote it to keep caller happy
+            return self._orig.write(s)
+
+        def flush(self):  # type: ignore[override]
+            return self._orig.flush()
+
+    _sys.stdout = _FilteredStream(_sys.stdout)
+    _sys.stderr = _FilteredStream(_sys.stderr)
+
+    # Reduce noise from HTTP libraries / Google SDK unless user sets DEBUG
+    if level != "DEBUG":
+        for noisy in ("google", "httpx", "urllib3"):
+            logging.getLogger(noisy).setLevel(logging.ERROR)  # Changed to ERROR
+
+# --- Main Orchestration ---
+def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, args: argparse.Namespace, shutdown_event: threading.Event):
+    """Runs the full multi-coder analysis pipeline."""
+    start_time = datetime.now()
+    pipeline_timestamp = start_time.strftime("%Y%m%d_%H%M%S")
+    logging.info(f"Starting pipeline run ({pipeline_timestamp}) for Phase: {phase}, Coder: {coder_prefix}, Dimension: {dimension}")
+
+    # --- Path Setup & Initial Config Population ---
+    try:
+        # Create simple input/output structure for testing
+        base_output_dir = Path("multi_coder_analysis") / "output" / phase / dimension / pipeline_timestamp
+        base_output_dir.mkdir(parents=True, exist_ok=True)
+        logging.info(f"Created output directory: {base_output_dir}")
+
+        # --- Concatenate Prompts into run-specific output directory ---
+        logging.info("--- Concatenating prompt files ---")
+        prompt_concat_path = concatenate_prompts(
+            prompts_dir="multi_coder_analysis/prompts",
+            output_file=f"concatenated_prompts_{pipeline_timestamp}.txt",
+            target_dir=base_output_dir,
+        )
+        if prompt_concat_path:
+            logging.info(f"Concatenated prompts saved to: {prompt_concat_path}")
+        else:
+            logging.warning("Prompt concatenation failed, but continuing with pipeline...")
+
+        # ------------------------------------------------------------------
+        # Copy the exact regex catalogue used for this run into the output
+        # directory for audit / reproducibility.
+        # ------------------------------------------------------------------
+        patterns_src = Path("multi_coder_analysis/regex/hop_patterns.yml")
+        try:
+            shutil.copy(patterns_src, base_output_dir / "hop_patterns.yml")
+            logging.info("Copied hop_patterns.yml to output folder for auditability.")
+        except Exception as e:
+            logging.warning("Could not copy hop_patterns.yml (%s): %s", patterns_src, e)
+
+        # ------------------------------------------------------------------
+        # ALSO dump the *compiled* regex table (one line per rule) so that
+        # reviewers can see *exactly* what the engine ran, after any
+        # compile-time rewrites/downgrades.  Creates an easy-to-read TSV
+        # called "compiled_rules.txt" in the same output folder.
+        # ------------------------------------------------------------------
+        try:
+            from multi_coder_analysis import regex_rules as _rr
+
+            dump_path = base_output_dir / "compiled_rules.txt"
+            with dump_path.open("w", encoding="utf-8") as fh:
+                fh.write("Hop\tMode\tFrame\tRuleName\tRegex\n")
+
+                # Use RAW_RULES because it contains the compiled PatternInfo
+                # objects (post-processing) in the original ordering.
+                for r in _rr.RAW_RULES:
+                    pattern_str = getattr(r.yes_regex, "pattern", str(r.yes_regex))
+                    fh.write(f"{r.hop}\t{r.mode}\t{r.yes_frame or ''}\t{r.name}\t{pattern_str}\n")
+
+            logging.info("Compiled regex table dumped → %s", dump_path)
+        except Exception as e:
+            logging.warning("Could not write compiled_rules.txt: %s", e)
+
+        # Determine input file source
+        if args.input:
+            # Use user-specified input file
+            input_file = Path(args.input)
+            if not input_file.exists():
+                logging.error(f"Specified input file does not exist: {input_file}")
+                raise FileNotFoundError(f"Input file not found: {input_file}")
+            logging.info(f"Using specified input file: {input_file}")
+        else:
+            # Create a simple test input file if it doesn't exist (original behavior)
+            input_file = Path("data") / f"{phase}_for_human.csv"
+            if not input_file.exists():
+                input_file.parent.mkdir(parents=True, exist_ok=True)
+                # Create a minimal test CSV
+                import pandas as pd
+                test_data = pd.DataFrame({
+                    'StatementID': ['TEST_001', 'TEST_002'],
+                    'Statement Text': [
+                        'The flu is so deadly that entire flocks are culled.',
+                        'Health officials say the outbreak is fully under control.'
+                    ]
+                })
+                test_data.to_csv(input_file, index=False)
+                logging.info(f"Created test input file: {input_file}")
+            else:
+                logging.info(f"Using existing input file: {input_file}")
+
+        # Update config with runtime paths
+        config['runtime_input_dir'] = str(input_file.parent)
+        config['runtime_output_dir'] = str(base_output_dir)
+        config['runtime_phase'] = phase
+        config['runtime_coder_prefix'] = coder_prefix
+        config['runtime_dimension'] = dimension
+        config['runtime_provider'] = args.provider
+        config['individual_fallback'] = args.individual_fallback
+
+    except Exception as e:
+        logging.error(f"Error during path setup: {e}")
+        raise
+
+    # --- Pipeline Step 1: LLM Coding ---
+    logging.info("--- Starting Step 1: LLM Coding ---")
+    
+    if args.use_tot:
+        logging.info("Using Tree-of-Thought (ToT) method.")
+        if hasattr(args, 'gemini_only') and args.gemini_only:
+            logging.warning("--gemini-only flag is ignored when --use-tot is active.")
+        
+        try:
+            raw_votes_path, majority_labels_path = run_coding_step_tot(
+                config, 
+                input_file,
+                base_output_dir,
+                limit=args.limit,
+                start=args.start,
+                end=args.end,
+                concurrency=args.concurrency,
+                model=args.model,
+                provider=args.provider,
+                batch_size=args.batch_size,
+                regex_mode=args.regex_mode,
+                shuffle_batches=args.shuffle_batches,
+            )
+        except Exception as e:
+            logging.error(f"Tree-of-Thought pipeline failed with error: {e}", exc_info=True)
+            sys.exit(1)
+            
+    else:
+        logging.info("Standard multi-model consensus method not yet implemented in this version.")
+        logging.error("Please use --use-tot flag to run the Tree-of-Thought pipeline.")
+        sys.exit(1)
+
+    logging.info(f"LLM coding finished. Majority labels at: {majority_labels_path}")
+
+    # TODO: Add merge and stats steps when those modules are implemented
+    logging.info("Pipeline completed successfully!")
+
+def main():
+    """Main entry point for the analysis pipeline."""
+    # Setup signal handling for graceful shutdown
+    signal.signal(signal.SIGINT, handle_sigint)
+
+    # --- Argument Parsing ---
+    parser = argparse.ArgumentParser(description="Run the multi-coder analysis pipeline.")
+    parser.add_argument("--config", default="config.yaml", help="Path to configuration file")
+    parser.add_argument("--phase", default="test", help="Analysis phase (e.g., pilot, validation, test)")
+    parser.add_argument("--coder-prefix", default="model", help="Coder prefix for output files")
+    parser.add_argument("--dimension", default="framing", help="Analysis dimension")
+    parser.add_argument("--input", help="Path to input CSV file (overrides default input file generation)")
+    parser.add_argument("--limit", type=int, help="Limit number of statements to process (for testing)")
+    parser.add_argument("--start", type=int, help="Start index for processing (1-based, inclusive)")
+    parser.add_argument("--end", type=int, help="End index for processing (1-based, inclusive)")
+    parser.add_argument("--concurrency", type=int, default=1, help="Number of statements to process concurrently (default: 1)")
+    parser.add_argument("--test", action="store_true", help="Run in test mode")
+    parser.add_argument("--gemini-only", action="store_true", help="Use only Gemini models (ignored with --use-tot)")
+    parser.add_argument(
+        "--use-tot", 
+        action="store_true",
+        help="Activates the 12-hop Tree-of-Thought reasoning chain instead of the standard multi-model consensus method."
+    )
+    parser.add_argument("--model", default="models/gemini-2.5-flash-preview-04-17", help="Model to use for LLM calls (e.g., models/gemini-2.0-flash)")
+    parser.add_argument("--provider", choices=["gemini", "openrouter"], default="gemini", help="LLM provider to use")
+    parser.add_argument("--batch-size", "-b", type=int, default=1, help="Number of segments to process in a single LLM call per hop (default: 1)")
+    parser.add_argument('--individual-fallback', action='store_true', help='Re-run mismatches individually for batch-sensitivity check')
+    parser.add_argument('--regex-mode', choices=['live', 'shadow', 'off'], default='live', help='Regex layer mode: live (default), shadow (evaluate but do not short-circuit), off (disable regex)')
+    parser.add_argument('--shuffle-batches', action='store_true', help='Randomly shuffle active segments before batching at each hop')
+
+    args = parser.parse_args()
+
+    # --- Validate Arguments ---
+    if args.start is not None and args.start < 1:
+        logging.error("Start index must be >= 1")
+        sys.exit(1)
+    
+    if args.end is not None and args.end < 1:
+        logging.error("End index must be >= 1")
+        sys.exit(1)
+    
+    if args.start is not None and args.end is not None and args.start > args.end:
+        logging.error("Start index must be <= end index")
+        sys.exit(1)
+    
+    if (args.start is not None or args.end is not None) and args.limit is not None:
+        logging.error("Cannot use both --limit and --start/--end arguments together")
+        sys.exit(1)
+
+    if args.batch_size < 1:
+        logging.error("--batch-size must be >= 1")
+        sys.exit(1)
+
+    # --- Load Configuration ---
+    if not os.path.exists(args.config):
+        # Create a minimal config file if it doesn't exist
+        default_config = {
+            'logging': {'level': 'INFO'},
+            'file_paths': {
+                'file_patterns': {
+                    'model_majority_output': '{phase}_model_labels.csv'
+                }
+            }
+        }
+        with open(args.config, 'w') as f:
+            yaml.dump(default_config, f)
+        logging.info(f"Created default config file: {args.config}")
+
+    config = load_config(args.config)
+    setup_logging(config)
+
+    try:
+        run_pipeline(config, args.phase, args.coder_prefix, args.dimension, args, shutdown_event)
+    except Exception as e:
+        logging.error(f"Pipeline failed: {e}", exc_info=True)
+        sys.exit(1)
+
+if __name__ == "__main__":
+    main() 
+
+## 0008. multi_coder_analysis\prompts\GLOBAL_FOOTER.txt
+----------------------------------------------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────
+#  GLOBAL FOOTER – 6-POINT SELF-AUDIT (auto-appended to every hop)
+#  -----------------------------------------------------------
+✅ **SELF-AUDIT before you reply**
+1. If you answered **"yes"**, STOP processing further questions.
+2. Quote decisive cue(s) in the *rationale*.
+3. No Alarmist on neutrally stated **bad** facts.
+4. No Reassuring on neutrally stated **good / low-risk** facts.
+5. First "yes" only – no double hits / overrides.
+6. Output must be pure JSON and **nothing else**.
+
+🔧 **Implementation hint** – add a regression test where  
+Input: "We are confident our systems are ready." → expect Q5 = yes, Reassuring.
+
+*Re-read this list; fix any violation before sending.*
+# 7. If you reach **Q12** and still cannot assign a frame with certainty,
+#    return an **Unknown** label:
+#        { "answer":"unknown",
+#          "rationale":"Q12 reached with no decisive cues; frame unresolved" }
+#    Down-stream evaluation will skip these rows.
+# ───────────────────────────────────────────────────────────── 
+
+## 0009. multi_coder_analysis\prompts\global_header.txt
+----------------------------------------------------------------------------------------------------
+# === GLOBAL BEDROCK PRINCIPLE (DO NOT DELETE) ===
+# You are an expert claim-framing coder following a mandatory 12-step decision tree.
+# Your analysis must be grounded *only* in the provided text and rules.
+# You will be asked one question at a time.
+#
+# Bedrock Principle: CODE THE PRESENTATION, NOT THE FACTS.
+# The frame is determined by explicit linguistic choices, not the objective severity of the facts.
+# A severe fact presented factually is Neutral. A reassuring fact presented factually is Neutral.
+# ─────────────────────────────────────────────────────────────
+#  SYMMETRY RULE  (do not delete)
+#  -----------------------------------------------------------
+#  Alarmist ≠ "any negative fact"; Reassuring ≠ "any positive fact".
+#  • **Alarmist fires only when a negative / hazardous fact is explicitly
+#    amplified** (intensifier, vivid verb, scale exaggeration, loaded metaphor).
+#  • **Reassuring fires only when a positive / low-risk fact is explicitly
+#    framed for calm or safety** ("public can rest easy", "risk is *very* low",
+#    "fully under control", "only 1 out of 1 000 cases", etc.).
+#  • Positive or low-risk facts stated neutrally → **Neutral**.
+#  • Negative or high-risk facts stated neutrally → **Neutral**.
+# ─────────────────────────────────────────────────────────────
+
+## Context guard for vivid language
+> A vivid verb/adjective that colours a **background condition**  
+> (e.g. "amid **soaring** inflation", "during a **plunging** market")  
+> is **ignored** for Alarmist coding.  
+> Alarmist cues fire only when the vivid language depicts the threat's
+> **own realised impact** (cases, deaths, prices, losses, shortages, etc.).
+
+> **Context guard for psychological verbs**
+> *Spark, stoke, reignite,* or *raise fears* describe a **public reaction**, not the realised impact of the threat itself.
+> Treat them as **Neutral** unless the sentence either  
+> (a) uses a vivid intensifier (*“mass panic”*, *“public alarm”*) **or**  
+> (b) couples the verb with a concrete scale of realised harm  
+> (e.g. “sparked panic **after** 5 million birds died”).
+> Plain “reigniting fears of another outbreak” is Neutral.
+
+#
+# Precedence Ladder: If multiple cues appear, the highest-ranking rule (lowest Q number) determines the frame.
+# 1. INTENSIFIER + RISK-ADJECTIVE -> Alarmist
+# 2. VIVID-VERB -> Alarmist
+# 3. MODERATE-VERB + SCALE/METRIC -> Alarmist
+# 4. EXPLICIT CALMING -> Reassuring  
+#    (Inside Q5 the row order Confidence > Preparedness > Low-Risk > Amplification)
+#   • Direct food-safety assurances (“safe to eat/for consumption”) belong here.
+# 5. BARE NEGATION / CAPABILITY -> Neutral
+# 6. DEFAULT -> Neutral
+# **Technical‑term guard is absolute** – "highly pathogenic (avian) influenza"
+# and similar taxonomy never functions as an intensifier, even inside quotes.
+#
+# You MUST reply in JSON format ONLY. Your entire response must be a single JSON object.
+
+# ─────────────────────────────────────────────────────────────
+#  MANDATORY STEP-BY-STEP DECISION PROCESS  (applies to every hop)
+#  -----------------------------------------------------------
+#  1. Start with Q1 and evaluate strictly against its rule text.
+#  2. **If** your answer is **"yes"**:  
+#       • Emit the frame dictated by the Precedence Ladder.  
+#       • **Immediately STOP** evaluating lower-numbered hops.  
+#       • Proceed to the self-audit checks below.  
+#  3. Else → move to the next hop (Q {n + 1}) and repeat.
+#
+#  ✅ The 6-point self-audit checklist has been moved to a shared
+#  **GLOBAL_FOOTER.txt** fragment that is appended *after* the
+#  `YOUR JSON REPLY` stub inside every hop prompt so the model
+#  reads it immediately before generating its answer.
+# ───────────────────────────────────────────────────────────── 
+
+## 0010. multi_coder_analysis\prompts\hop_Q01.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The flu is so deadly that entire flocks are culled.
+## Question: Does the segment contain an intensifier directly modifying a risk-adjective?
+## JSON Output:
+{"answer":"yes","rationale":"The intensifier 'so' modifies the risk-adjective 'deadly'."}
+
+# NO example
+## Input Segment: A highly pathogenic form of bird flu was detected.
+## Question: Does the segment contain an intensifier directly modifying a risk-adjective?
+## JSON Output:
+{"answer":"no","rationale":"'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q1
+**Q1: Intensifier/Comparative + Risk-Adjective**
+Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a comparative adjective (e.g., 'more,' 'deadlier') directly modifying a risk-adjective (e.g., 'deadly,' 'dangerous,' 'severe,' 'catastrophic') as defined in the detailed rules?
+
+**🔍 Q1 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Intensifier + Risk-Adj** | "so deadly," "very dangerous," "extremely severe," "highly lethal," "frighteningly contagious" | ✓ |
+| **Comparative + Risk-Adj** | "more deadly," "deadlier," "more dangerous," "less safe," "increasingly severe" | ✓ |
+| **Fixed Lethal-from-Outset Idiom** | "deadly from the start," "deadly from the outset" | ✓ |
+| **Base Risk-Adj (alone)** | "deadly," "dangerous," "severe" (without intensifier) | → Neutral |
+
+**🔍 Detailed Rules & Examples:**
+**Outcome when Yes :** Label = Alarmist  
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+
+| If you see… | Frame | Quick test |
+|-------------|-------|------------|
+| **Intensifier/Comparative + Risk-Adjective** | Alarmist | **Any single match is sufficient (Precedence #1)** |
+| - so/very/extremely/highly/frighteningly/particularly + deadly/lethal/dangerous/brutal/severe/contagious/virulent/destructive | | |
+| - more/less/deadlier/safer/higher/lower + same risk adjectives | | |
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)
+
+**Clarification on "deadly," "fatal," "lethal":** These terms when modified by an intensifier (e.g., 'so deadly,' 'extremely fatal,' 'particularly lethal,' 'frighteningly deadly') are Alarmist. Without such direct intensification, "deadly" (etc.) describing a factual characteristic (e.g., 'Avian flu can be deadly in domestic poultry') is typically Neutral unless other alarmist cues are present.
+
+**Minimal Pair Examples:**
+* **Neutral:** "The virus is contagious."
+* **Alarmist (Author):** "The virus is frighteningly contagious, spreading like wildfire." (Cue: 'frighteningly,' 'spreading like wildfire').
+
+**Comparative Minimal Pair Example:**
+* **Alarmist:** "Scientists warn the virus is becoming deadlier each season."
+* **Neutral:** "Scientists track how the virus becomes more common each season."
+
+**⚠ TECHNICAL OR CLINICAL TERMS**  
+A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used *clinically* (e.g. "lethal dose 50").  
+**BUT** if the same term is paired with *any intensifier or emotive verb* → **Alarmist (Precedence #1)**
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – Intensifier + adjective** | "The flu is so deadly that entire flocks are culled." | **Alarmist** | "so deadly" (intensifier + risk adjective) |
+| **Alarmist – Deadly-from-outset idiom** | "H5N1 is deadly from the start, vets warn." | **Alarmist** | "deadly from the start" (fixed lethal-from-outset idiom) |
+
+**EXCLUSION — "volatile"**  
+When "volatile" modifies *prices/markets/rates* it is treated as an **economic metric** and never triggers Q1.
+
+> **Technical-term guard** – "highly pathogenic" used as part of the formal
+> disease name (HPAI) is **Neutral** unless further alarmist cues appear.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0011. multi_coder_analysis\prompts\hop_Q02.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: An outbreak ravaged farms across three states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"yes","rationale":"The high-potency verb 'ravaged' actively frames the situation alarmingly."}
+
+# NO example
+## Input Segment: The outbreak affected farms in several states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"no","rationale":"'affected' is a moderate verb without dramatic framing - lacks high potency alone."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q2
+**Q2: High-Potency Verb/Metaphor**
+Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 'skyrocketed,' 'crippling') or a potent metaphor (e.g., 'ticking time-bomb,' 'nightmare scenario') to describe the event or its impacts, where such language actively frames the situation alarmingly, as detailed in the rules?
+
+**🔍 Q2 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **High-Potency Verbs** | "ravaged," "devastated," "skyrocketed," "plummeted," "crashed," "nosedived," "tanked," "crippling," "unleashed," "slaughtered" | ✓ |
+| **Superlative + Negative Noun** | "most expensive disaster," "worst crisis," "record outbreak," "record-breaking catastrophe" | ✓ |
+| **Critical Alert Phrase**(**same sentence must name a threat: outbreak, virus, flu, risk, danger …**) | "on high alert" (threat can appear **before or after** in ≤ 40 chars) | ✓ |
+| **Potent Metaphors** | "ticking time-bomb," "nightmare scenario," "raging inferno," "powder keg," "house of cards" | ✓ |
+| **Moderate Verbs (alone)** | "hit," "swept," "surged" (without scale/impact details) | → Neutral |
+
+**Outcome:**
+**Outcome when Yes :** Label = Alarmist
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+
+**🔍 Detailed Rules & Examples:**
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+
+**Alarmist - Examples:**
+* "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+* Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+* **Example (Author-driven, vivid metaphor & intensifier):**
+  * Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+  * Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+* **Example (Vivid verb + scale from Author):** Author: "The disease ravaged poultry flocks across three states, leading to immense economic losses." (Alarmist → 'Ravaged' + 'across three states' + 'immense economic losses' create a strong alarmist frame).
+* **Example (Vivid verb + scale from Author):** Author: "Confirmed cases soared past one million, overwhelming healthcare systems." (Alarmist → 'Soared past one million' + 'overwhelming healthcare systems' creates a strong alarmist frame).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – High-potency verb** | "An outbreak ravaged farms across three states." | **Alarmist** | "ravaged" (vivid, destructive verb) |
+| **Alarmist – Superlative-negative-noun** | "The H5N1 wave is now considered the most expensive animal-health disaster in U.S. history." | **Alarmist** | "most expensive...disaster" (superlative + negative noun) |
+| **Alarmist – Critical alert phrase** | "State authorities remain on high alert for new cases." | **Alarmist** | "on high alert" (critical alert phrase) |
+
+**Boundary guard:** If the verb is "hit / hitting / swept / surged" but the segment gives no numbers, adjectives or metaphors that convey magnitude, treat it as Neutral. Alarmist fires only when a concrete scale/impact phrase is coupled.
+
+**⚠ Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0012. multi_coder_analysis\prompts\hop_Q03.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The region was severely hit by the virus, resulting in record losses.
+## Question: Does the author/source use moderate verbs paired with significant scale/impact information?
+## JSON Output:
+{"answer":"yes","rationale":"'severely hit' with 'record losses' combines moderate verb with explicit large-scale impact."}
+
+# NO example
+## Input Segment: The outbreak hit several farms in the area.
+## Question: Does the author/source use moderate verbs paired with significant scale/impact information?
+## JSON Output:
+{"answer":"no","rationale":"'hit several farms' lacks specific scale/impact details to confirm alarmist framing."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q3
+**Q3: Moderate Verbs + Scale/Impact**
+Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 'hard hit,' 'soared,' 'plummeted') AND is this verb explicitly paired with information detailing significant scale or impact (e.g., 'millions culled,' 'record losses,' 'overwhelming systems'), as detailed in the rules?
+
+**🔍 Q3 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Moderate Verb (past-tense)** **+ Scale** | "swept across + millions culled," "hard hit + record losses," "soared + overwhelming systems," | ✓ |
+| **Moderate Verb (past-tense)** **+ Quantity** | "surged + 50 % increase," "plummeted + largest decline," "hit + thousands affected" | ✓ |
+| **Moderate Verb (present/future/plan)** *(e.g. "**planning to cull**", "could hit")* | → **Neutral** |
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q4.
+
+**🔍 Detailed Rules & Examples:**
+
+**Alarmist - Examples:**
+* Author: "The region was severely hit by the virus, resulting in record losses." (Alarmist → Author's use of "severely hit" and "record losses" to describe large-scale harm, assuming no overriding framed quote.)
+* Author: 'From Wyoming to Maine, the highly contagious bird flu swept across farms and backyard flocks, prompting millions of chickens and turkeys to be culled.' (Alarmist → The author's use of 'swept across' combined with 'highly contagious' and the large-scale consequence 'millions...culled' creates an alarmist depiction of an overwhelming, uncontrolled event, assuming no overriding framed quote.)
+* **Example (Evaluative adjective + scale from Author):** Author: "The agricultural sector was hard hit by the drought, with crop yields plummeting by over 50%." (Alarmist → 'Hard hit' coupled with the specific, severe scale of 'plummeting by over 50%' framed by the author).
+* **Example (Feared + toll from Author):** Author: "Officials feared a repeat that killed 50 million birds." (Alarmist → 'Feared' (moderate verb) paired with explicit large-scale impact '50 million birds').
+
+**Boundary Requirements:**
+1. Verb **must appear in the approved list / regex**.  
+2. Must denote realised impact (not a plan or hypothetical).  
+3. Plain outcome verbs (*killed, died, affected, reported*) are excluded—Neutral unless other cues fire.
+4. Containment verbs (“were/was culled, destroyed, euthanized, depopulated”) are **Neutral even with large numbers** *unless* paired with vivid/emotive language.
+5. Sentences about **financial or trade metrics** (exports, imports, sales, production) are treated as factual price/metric reporting → Neutral, not Alarmist here.
+
+**Examples of Scale/Impact Indicators:**
+- Numerical quantities: "millions," "thousands," "50%," "record numbers"
+- Comparative terms: "largest," "highest," "most severe," "unprecedented"
+- Impact descriptors: "overwhelming," "devastating losses," "widespread damage"
+
+> **New aspect guard.** The moderate-verb must denote **realised impact** – NOT merely an intention or hypothetical.  
+
+**Clarification** — Containment actions  
+Containment verbs (“were/was culled, destroyed, euthanized, depopulated”) are **Neutral even with large numbers** *unless* the author adds additional vivid or emotive language (e.g., “brutally destroyed 3 million birds”).
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0013. multi_coder_analysis\prompts\hop_Q04.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Should consumers be worried about buying eggs?
+## Question: Does the author/source pose a loaded rhetorical question designed to imply alarm?
+## JSON Output:
+{"answer":"yes","rationale":"'Should consumers be worried' is a loaded question implying potential danger/concern."}
+
+# NO example
+## Input Segment: What are the safety protocols in place for this situation?
+## Question: Does the author/source pose a loaded rhetorical question designed to imply alarm?
+## JSON Output:
+{"answer":"no","rationale":"This is a neutral, information-seeking question without loaded emotional language."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q4
+**Q4: Loaded Rhetorical Question for Alarm**
+Does the author or a quoted source pose a loaded rhetorical question that is clearly designed to imply an Alarmist frame, instill fear/urgency, or suggest a worrisome threat (e.g., 'Should consumers worry...?', 'Are we simply going to stand by while this disaster unfolds?') AND is it distinguishable from a neutral, purely information-seeking question, as detailed in the rules?
+
+**🔍 Q4 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Loaded Questions (Worry/Fear)** | "Should consumers worry...?" "Are we facing a crisis?" "Is it safe to...?" | ✓ |
+| **Loaded Questions (Inaction)** | "Are we going to stand by while this unfolds?" "How long can we ignore this?" | ✓ |
+| **Neutral Information-Seeking** | "What are the safety protocols?" "When will results be available?" | → Neutral |
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q5.
+
+**🔍 Detailed Rules & Examples:**
+
+**Examples:**
+* **Example (Author-driven, implying worry):** Author: "With new variants emerging rapidly, should humans be worried about the next pandemic?" → Alarmist (if context suggests framing a worrisome threat).
+* **Example (Quote-driven, implying disaster):** 'The activist asked, "Are we simply going to stand by while this disaster unfolds?"' → Alarmist.
+* **Critical Distinction:** Carefully distinguish these from neutral, purely information-seeking questions (which are Neutral).
+
+**Alarmist - Inclusion Criteria:**
+* Direct questions from the author that use explicitly loaded or emotionally charged language clearly designed to imply an Alarmist frame or instill fear/urgency in the reader.
+  * **Example:** **Author:** "With the system collapsing, can anyone truly feel safe anymore?" (Alarmist. Cues: 'system collapsing,' 'truly feel safe anymore?' - rhetorical question implying no).
+  * **Non-Example (Neutral):** Author: "What are the safety protocols in place?" (Information-seeking).
+* Use of loaded rhetorical questions by the quoted source or author that are designed to evoke fear, urgency, or strong concern by implying a severe problem or a dire lack of action.
+  * Example (Author-driven): 'How many more animals have to die before we finally act decisively?' → Alarmist. (Rationale: The rhetorical question uses emotive language 'have to die' and implies criticism of inaction, framing the situation as urgent and severe.)
+  * Example (Quote-driven): 'The activist asked, "Are we simply going to stand by while this disaster unfolds?"' → Alarmist. (Rationale: The quoted rhetorical question uses 'disaster unfolds' to frame the situation alarmingly.)
+  * **Example (Rhetorical question from author implying worry):** Author: "With new variants emerging rapidly, should humans be worried about the next pandemic?" → Alarmist (if the context suggests this is not a simple information request but a way to frame emerging variants as a worrisome threat).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – Loaded Q** | "Should consumers be worried about buying eggs?" | **Alarmist** | Loaded rhetorical question implying worry |
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0014. multi_coder_analysis\prompts\hop_Q05.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Health officials say the outbreak is fully under control and poses no danger to the public.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'fully under control' and 'no danger to the public' are explicit calming cues communicating current safety."}
+
+# YES example (Direct Consumption Safety)
+## Input Segment: USDA said poultry products "remain safe to eat."
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'remain safe to eat' is a direct safety assurance for consumers."}
+
+# NO example
+## Input Segment: No human cases have been detected in the area.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"This reports a positive fact but lacks explicit calming/reassuring language from the source."}
+
+# NO example (Bare negation – food context)
+## Input Segment: Properly cooked poultry **should not pose a risk** to consumers.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"Lacks the keyword 'safe'; this is a bare negation and is handled under Q7."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5
+**Q5: Explicit Calming Cue for Reassurance**
+Does the author or a quoted source provide an explicit calming cue (e.g., 'no cause for alarm,' 'public can rest easy,' 'situation is fully contained,' 'excellent news and means citizens are very well protected') that directly communicates current safety, control, or significantly minimized present risk, as detailed in the Reassuring frame criteria?
+
+**🔍 Q5 Pattern Recognition Table (expanded):**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+| **Direct Safety Assurances** | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" | ✓ |
+| **Confidence Statements** | "we are confident," "rest assured," "situation contained," "providing relief" | ✓ |
+| **Direct Consumption Safety** | "safe to eat," "safe for (human) consumption," "remains safe to eat" | ✓ |
+| **⚠ The clause must contain the literal word "safe".** <br>Expressions that merely say something "should not pose a risk / danger" **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
+| **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
+| **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
+| **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
+| **Bare Positive Facts** | "no cases reported," "tests negative," "no problems detected" | → Neutral (unless paired with calming cue) |
+| **"Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q6.
+
+**🔍 Detailed Rules & Examples:**
+
+**Definition: Reassuring** (Key Elements)
+Statement, either through a directly quoted source or the author's own presentation, demonstrably employs explicit language, tone, or rhetorical devices specifically chosen by the author or quoted source to actively calm audience concerns, minimize perceived current risk, emphasize safety/control, or highlight positive aspects in a way designed to reduce worry regarding the subject or its impacts. The intent to reassure must be evident in the presentation, not inferred from the facts being merely positive.
+
+**Key Differentiators from Neutral:**
+* Neutral reports positive facts; Reassuring adds explicit calming / optimistic amplification **or an intensified *low-risk* judgement about *current human safety*.**
+* Neutral uses standard descriptive terms for positive outcomes; Reassuring frames them with active confidence or relief.
+* Neutral may state a low risk; **Reassuring explicitly highlights the *very/exceptionally low* risk level to calm the audience.**
+* Neutral reports solutions/capabilities; Reassuring links them **directly to present safety for the public/consumers** *or* comes from a recognised public authority.
+
+**Inclusion Criteria (Reassuring):**
+* A directly quoted source **or the author** uses explicit calming language **or** an *intensified low-risk evaluation* ("risk is **very low** for humans") that clearly signals current safety/minimised danger.
+* Statements that not only report positive facts but also explicitly frame these facts as reasons for reduced concern or increased confidence about safety or control.
+  * **Example:** "Vaccination rates have thankfully reached 80% in the target population, a wonderfully high figure that provides excellent protection and means the community is now much safer." (Reassuring. Cues: 'thankfully,' 'wonderfully high,' 'excellent protection,' 'much safer').
+* Direct assurances of safety, control, or manageability from the author or a quoted source.
+  * **Example:** "Quote: 'We have stockpiled 30 million doses of the antiviral, which is excellent news and means our citizens are very well protected against any immediate threat from this virus.'" (Reassuring. Cues: 'excellent news,' 'very well protected').
+**Preparedness cues fire only when BOTH conditions hold (strict guard):**
+1. *Speaker is a government or public‑health authority* **AND**  
+2. *Capability phrase links explicitly to present public/consumer safety* (≤ 40 chars span) ("…so the public can rest easy", "…meaning consumers are protected").  
+Superlative boasts alone ("strongest surveillance program") are Neutral.  
+Corporate self-statements lacking a safety link stay Neutral.  
+  * **Example (Neutral):** "Tyson Foods is prepared for situations like this and has robust plans in place."
+
+**Minimal Pair Examples for Reassuring vs. Neutral:**
+* **Neutral:** "The latest tests on the water supply showed no contaminants."
+  * Reasoning: "Reports absence of negative. No explicit reassuring language from the author/source about broader safety."
+* **Reassuring:** "Officials confirmed the latest tests on the water supply showed no contaminants, declaring, 'This is excellent news, and residents can be fully confident in the safety of their drinking water.'"
+  * Reasoning: "The official's quote explicitly frames the negative test as 'excellent news' and a reason for 'full confidence' and 'safety.' Decisive cues: 'excellent news,' 'fully confident in the safety'."
+
+**⚠️ Important Exclusion:**
+* **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
+  * Reasoning: "This is a bare negation statement without additional calming amplification."
+
+> **Precedence Note** – If a sentence matches more than one row  
+> in the table above, the order top→bottom decides.  
+>   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
+
+> **Guard:** score as *Reassuring* only when the speaker is an official
+>  body or the author.  Indirect hearsay → Neutral.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0015. multi_coder_analysis\prompts\hop_Q06.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Only one barn was infected out of thousands nationwide.
+## Question: Does the author/source use 'minimiser + scale contrast' for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'Only one barn...out of thousands nationwide' uses minimiser with explicit scale contrast for reassurance."}
+
+# NO example
+## Input Segment: Only three samples showed irregularity in testing.
+## Question: Does the author/source use 'minimiser + scale contrast' for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"'Only three samples' has minimiser but lacks the explicit contrasting scale context (no 'out of X')."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q6
+**Q6: 'Minimiser + Scale Contrast' for Reassurance**
+Does the author or a quoted source use a 'minimiser' (e.g., 'only,' 'just,' 'merely') in conjunction with a 'scale contrast' (e.g., 'one barn out of thousands,' 'a few cases among millions') to actively downplay an event or its significance, thereby framing it reassuringly, as detailed in the rules? (Both elements must be present and work together).
+
+**🔍 Q6 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+| **Minimiser + Scale Contrast**(**minimiser token AND explicit denominator must both be present**) | "only one barn out of thousands," "just 3 out of 5 000 samples," "merely a few among millions" | ✓ |
+| **Minimiser + Explicit Comparison** | "only affecting a single facility nationwide," "just one case among the entire population" | ✓ |
+| **Minimiser without Scale** | "only three samples showed irregularity" (no "out of X") | → Neutral (missing contrast element) |
+| **Scale without Minimiser** | "one barn among thousands" (no "only/just/merely/**a single/few**") | → Neutral (missing minimising element) |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q7.
+
+**🔍 Detailed Rules & Examples:**
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Reassuring – Minimiser + contrast** | "Only one barn was infected out of thousands nationwide." | **Reassuring** | "Only...out of thousands" (minimizer + scale contrast) |
+
+**Detailed Requirements:**
+For this rule to apply, the statement must contain both:
+1. **Minimizing word** (like 'only,' 'just,' 'merely,' 'a single,' 'few')
+2. **Explicit or clearly implied contrasting larger scale or context** that makes the minimized number seem insignificant
+
+> **Clarification** A **bare numeral (e.g., "1", "one") is *not* a minimiser**  
+> unless it is **preceded by** one of the lexical cues above.  
+> - Example (Neutral): "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+
+The combination should create an overall reassuring effect about the limited scope or impact of an issue.
+
+**Examples:**
+* **Reassuring:** "While there were concerns, only 3 out of 5,000 tested samples showed any irregularity, indicating the problem is not widespread." → Reassuring.
+* **Non-Example (Missing Contrast):** "Only 3 samples showed irregularity." → Could be Neutral if the "out of X" contrast is missing and no other reassuring cues are present.
+
+**Guard clause** – If no *minimiser token* **or** no explicit denominator is found, fall through to **Q7 bare‑negation**.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0016. multi_coder_analysis\prompts\hop_Q07.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Officials stated the new variant is not expected to be more severe.
+## Question: Does the segment contain a 'bare negation' without explicit calming cue?
+## JSON Output:
+{"answer":"yes","rationale":"'not expected to be more severe' is a bare negation without additional calming language."}
+
+# NO example
+## Input Segment: Officials stated the variant is not expected to be more severe, so there's no need for public concern.
+## Question: Does the segment contain a 'bare negation' without explicit calming cue?
+## JSON Output:
+{"answer":"no","rationale":"'so there's no need for public concern' adds explicit calming cue to the negation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q7
+**Q7: Bare Negation without Explicit Calming Cue**
+Does the segment merely state a 'bare negation' (e.g., 'not expected to cause problems,' 'unlikely to affect X,' 'no human cases detected,' 'tests were negative') WITHOUT any accompanying explicit calming cue from the author/source that actively frames this as reassuring about the broader situation, as detailed in the rules?
+
+**🔍 Q7 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Expectation Negations** | "not expected to cause problems," "unlikely to affect consumers," "not anticipated to impact" | ✓ |
+| **Evidence Negations** | "no evidence of transmission," "no human cases detected," "tests were negative" | ✓ |
+| **Risk Negations** | "doesn't pose a risk," "will not impact food supply," "not expected to enter" | ✓ |
+| **Capability Negations** | "viruses do not transmit easily," "cannot survive in," "does not spread through" | ✓ |
+| **Bare Negation + Calming Cue** | "no cases detected, so consumers can be confident," "unlikely to affect supply, keeping risk very low" | → Reassuring |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q8.
+
+**🔍 Detailed Rules & Examples:**
+
+**⚠️ Additional problematic phrasings that remain NEUTRAL:**
+- "unlikely to affect consumers"
+- "no evidence of transmission"  
+- "doesn't pose a risk to humans"
+- "not expected to cause problems"
+- "will not impact food supply"
+
+**Reassurance requires a second clause that explicitly spells out calm/safety.**
+
+**Examples:**
+* **Neutral (Bare Negation):** "Officials stated the new variant is not expected to be more severe."
+* **Reassuring (Bare Negation + Calming Cue):** "Officials stated the new variant is not expected to be more severe, meaning current health measures remain effective and there's no need for additional public concern."
+
+### Additional example
+* "The cases **do not present an immediate public-health concern**." → Neutral (bare negation).
+
+**CLARIFICATION** – "will **not** enter the food system" and similar bare-negation
+statements remain **Neutral** unless followed by an explicit calming cue
+(e.g., "…so consumers can rest easy").
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0017. multi_coder_analysis\prompts\hop_Q08.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The agency has developed a rapid deployment plan for emergencies.
+## Question: Does the segment describe capabilities/preparedness without active reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"States capability factually without explicitly linking to current calm or present safety."}
+
+# NO example
+## Input Segment: The agency's plan is a game-changer, meaning the public can rest assured help will arrive swiftly.
+## Question: Does the segment describe capabilities/preparedness without active reassurance?
+## JSON Output:
+{"answer":"no","rationale":"'game-changer' and 'public can rest assured' actively link capability to present reassurance."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q8
+**Q8: Capability/Preparedness Statement without Active Reassurance (Rule C Test)**
+Does the segment describe capabilities, preparedness measures, hopeful future possibilities, or implemented safeguards (e.g., 'officials are working to contain,' 'vaccine can be made in X weeks,' 'systems are in place') WITHOUT the author or quoted source explicitly and actively linking these to a state of *current* calm, *present* safety, or *substantially minimized present risk* for the audience, as detailed in Rule C and related guidance?
+
+**🔍 Q8 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Development Capabilities** | "vaccine can be made in X weeks," "researchers are developing treatments," "antiviral stockpiled" | ✓ |
+| **Response Measures** | "officials are working to contain," "systems are in place," "protocols are being followed" | ✓ |
+| **Preparedness Statements** | "we have the resources," "plans are ready," "surveillance is ongoing" | ✓ |
+| **Future Possibilities** | "restrictions may be short-lived," "situation could improve," "recovery expected" | ✓ |
+| **Capability + Active Reassurance** | "stockpiled 30M doses, which is excellent news and means citizens are very well protected," "systems in place, so public can rest easy" | → Reassuring |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q9.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0018. multi_coder_analysis\prompts\hop_Q09.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Market prices for wheat decreased by 2% this month.
+## Question: Is this factual reporting of prices/metrics using standard descriptive verbs?
+## JSON Output:
+{"answer":"yes","rationale":"'decreased by 2%' reports price change factually without vivid verbs or risk adjectives."}
+
+# NO example
+## Input Segment: Market prices for wheat took a devastating 2% dive this month, spelling trouble.
+## Question: Is this factual reporting of prices/metrics using standard descriptive verbs?
+## JSON Output:
+{"answer":"no","rationale":"'devastating dive' and 'spelling trouble' add alarmist framing beyond neutral reporting."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q9
+**Q9: Factual Reporting of Prices/Metrics**
+Is the segment primarily reporting prices, economic data, or other numerical metrics using standard descriptive verbs (e.g., 'rose,' 'declined,' 'increased,' 'fell') and potentially neutral adverbs (e.g., 'sharply,' 'significantly') BUT WITHOUT employing vivid/potent verbs (e.g., 'skyrocketed,' 'plummeted'), risk adjectives (e.g., 'catastrophic losses'), or other explicit alarmist/reassuring framing language from the author/source, as detailed in the rules for economic language?
+
+**🔍 Q9 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Standard Economic Verbs** | "prices rose," "costs declined," "rates increased," "values fell" | ✓ |
+| **Neutral Adverbs** | "sharply higher," "significantly declined," "notably increased" | ✓ |
+| **Factual Quantification** | "decreased by 2%," "gained 15 points," "lost $50M" | ✓ |
+| **Volatility adjective** *(mild)* | "prices could become **more volatile**" | ✓ |
+| **Vivid Economic Verbs** | "prices skyrocketed," "costs plummeted," "markets crashed" | → Alarmist |
+| **Risk Adjectives + Economics** | "catastrophic losses," "devastating decline," "crippling costs" | → Alarmist |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q10.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0019. multi_coder_analysis\prompts\hop_Q10.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Experts predict that the supply chain issues could ease in the next quarter.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"yes","rationale":"'could ease in the next quarter' speculates about future relief without explicit current safety framing."}
+
+# NO example
+## Input Segment: Because these measures are working, restrictions may be short-lived, bringing welcome relief soon.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"no","rationale":"'Because these measures are working' frames current control, shifting toward reassuring rather than neutral speculation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q10
+**Q10: Speculation about Relief without Explicit Calming**
+Does the segment speculate about potential future relief or improvement (e.g., 'restrictions may be short-lived,' 'pressure could ease soon') WITHOUT an explicit calming cue from the author/source about the *current* state of risk or safety, as detailed in the rules?
+
+**🔍 Q10 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Future Relief Speculation** | "restrictions may be short-lived," "pressure could ease soon," "situation might improve" | ✓ |
+| **Hopeful Predictions** | "experts predict recovery," "there is hope for improvement," "conditions may normalize" | ✓ |
+| **Timeline Speculation** | "issues could resolve next quarter," "problems may end soon," "recovery expected next year" | ✓ |
+| **Future Relief + Current Reassurance** | "Because measures are working, restrictions may end soon, bringing relief," "situation improving, so outlook is positive" | → Reassuring |
+
+**🔗 See also:** Q8 for capability statements; Q5 for explicit calming cues; Q12 for default neutral
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q11.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+## 0020. multi_coder_analysis\prompts\hop_Q11.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: "Meanwhile, Kirby Institute head Professor Raina MacIntyre described the bird flu news as 'extremely concerning and requires immediate action.'"
+## Question: Does a directly quoted source provide a clear, dominant Alarmist or Reassuring frame?
+## JSON Output:
+{"answer":"yes","rationale":"Quoted source uses 'extremely concerning and requires immediate action' providing dominant alarmist frame. ||FRAME=Alarmist"}
+
+# NO example
+## Input Segment: "Meanwhile, Professor MacIntyre described the news as 'concerning,' but noted that avian flu viruses do not transmit easily in humans."
+## Question: Does a directly quoted source provide a clear, dominant Alarmist or Reassuring frame?
+## JSON Output:
+{"answer":"no","rationale":"Quote has 'concerning' but is balanced by factual counter-statement without explicit reassuring language, resulting in mixed/neutral overall."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q11 (**Quote-presence hard-guard**)
+**Q11: Primacy of Framed Quotations – Dominant Quote Check**
+
+Does a directly quoted source within the segment provide a clear, dominant Alarmist or Reassuring frame (per detailed definitions in `step-0-meta-details` and specific frame definitions) that is not overridden or equally balanced by other quotes or strong authorial counter-framing, as per the "Guidance Note: Primacy of Framed Quotations"?
+
+**🔍 Q11 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **Outcome** |
+|------------------|--------------|-------------|
+| **Alarmist – Dominant Quote** | "extremely concerning and requires immediate action." | **Alarmist** | dominant alarm |
+| **Alarmist – Intensified High-Risk** | "definitely considered a period of high risk" | **Alarmist** | intensified risk assessment |
+| **Neutral – Bare risk-adj in quote** | "This virus is deadly to birds." | **Neutral** | base risk adjective without intensifier |
+| **Dominant Reassuring Quote** | "no cause for alarm," "excellent news," "very well protected" | → Reassuring |
+| **Balanced/Mixed Quotes** | "concerning, but viruses do not transmit easily" | → Neutral |
+| **Neutral Quotes Only** | "officials are monitoring," "tests are ongoing" | → Proceed to Q12 |
+
+**🔍 Detailed Rules & Examples:**
+
+**Guidance Note: Primacy of Framed Quotations (SUPERSEDES PREVIOUS QUOTE RULES)**
+**Technical-term override**  
+Before deciding that a quoted risk-adjective is Alarmist under Q11,  
+**skip** the cue if the adjective is immediately preceded (≤ 3 tokens) by the
+whitelisted biomedical collocations:  
+*"highly pathogenic"*, *"highly pathogenic avian"*, *"HPAI"*.  
+Rationale: Q1 technical-term guard has higher precedence and treats these
+as neutral taxonomy, not intensification.
+
+**Preparedness safety-link check**  
+When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but** lacks an explicit public/consumer safety link within 40 chars (e.g., "so consumers are safe"), treat it as **Neutral** rather than Reassuring.
+
+Core Principle: If a direct quotation (or a clearly attributed statement from a specific source) within the segment carries a distinct Alarmist or Reassuring frame, the segment's Dim1_Frame MUST reflect the frame of that quotation/attributed statement. This principle applies even if the author's narrative surrounding the quote is Neutral. The frame is determined by the language and tone used by the quoted source itself.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'. If yes, MUST end with ||FRAME=Alarmist or ||FRAME=Reassuring>"
+}
+```
+
+
+
+## 0021. multi_coder_analysis\prompts\hop_Q12.txt
+----------------------------------------------------------------------------------------------------
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The report documented 500,000 job losses in the last quarter.
+## Question: Are there NO remaining explicit framing cues, with facts presented purely factually?
+## JSON Output:
+{"answer":"yes","rationale":"Factual report of severe statistic without loaded language, intensifiers, or explicit framing rhetoric."}
+
+# NO example
+## Input Segment: The report detailed a catastrophic wave of 500,000 job losses.
+## Question: Are there NO remaining explicit framing cues, with facts presented purely factually?
+## JSON Output:
+{"answer":"no","rationale":"'catastrophic wave' adds explicit alarmist framing beyond factual reporting."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q12
+**Q12: Default to Neutral / Final Comprehensive Check**
+After applying all preceding checks, are there NO remaining explicit and sufficient Alarmist or Reassuring framing cues from either the author or any quoted source? Is the presentation of any severe/positive facts purely factual and descriptive, leading to a Neutral frame by default as per the "Default-to-Neutral Rule"?
+
+**🔍 Q12 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Factual Reporting** | "documented 500,000 job losses," "reported 15 cases," "detected in 3 locations" | ✓ |
+| **Technical Descriptions** | "high mortality rate," "R-value of 2.1," "lethal dose 50" | ✓ |
+| **Standard Procedures** | "officials are monitoring," "tests are ongoing," "surveillance continues" | ✓ |
+| **Neutral Metrics** | "prices rose 5%," "rates declined," "levels increased" | ✓ |
+| **Remaining Framing Cues** | Any missed intensifiers, potent verbs, explicit calming language | → Re-evaluate Q1-Q11 |
+
+**Outcome:** Yes → Label: Neutral. No → *(This path suggests a cue type potentially missed or a nuanced case. Re-evaluate based on comprehensive Alarmist/Reassuring inclusion criteria not fitting simple top-level questions.)*
+
+**🔍 Detailed Rules & Examples:**
+
+**Default-to-Neutral Rule (Strictly Presentation-Focused)**
+Heuristic: In the absence of explicit emotional language, specific framing cues (e.g., loaded adjectives, urgent tone, calming words), or a distinct rhetorical tone from EITHER the segment's author OR any directly quoted source within the segment, Neutral is the appropriate code for Dim1_Frame. 
+
+**Crucial Clarification:** This rule applies if both the author's presentation and the presentation by any quoted sources are neutral.
+
+* If a segment reports objectively severe facts, and both the author and any quoted source commenting on these facts use neutral, factual language without added alarmist rhetoric, the Dim1_Frame is Neutral.
+* Similarly, if a segment reports objectively positive facts, and both the author and any quoted source use neutral, factual language without added reassuring rhetoric, the Dim1_Frame is Neutral.
+* The focus remains on the presentation by the author and by any quoted sources.
+
+**Definition: Neutral** (Synthesized from principles, common pitfalls, and examples)
+A segment is Neutral if it presents information factually without significant, explicit linguistic or rhetorical cues from the author or quoted sources that are designed to evoke strong fear, urgency (Alarmist), or to actively calm, reassure, or minimize risk (Reassuring). Neutral framing reports events, facts, or statements, even if objectively severe or positive, in a straightforward, descriptive manner.
+
+**Examples of Neutral Framing:**
+* **Severe Fact, Neutral Presentation:**
+  * Segment: "The report documented 500,000 job losses in the last quarter."
+  * Reasoning: "Neutral. The author reports a severe statistic factually. No loaded language, intensifiers, or explicit alarmist rhetoric (e.g., 'a catastrophic wave of job losses,' 'an economic disaster unfolding') is used by the author to frame this fact."
+* **Positive Fact, Neutral Presentation:**
+  * Segment: "Vaccination rates reached 80% in the target population."
+  * Reasoning: "Neutral. The author reports a positive statistic factually. No explicit reassuring language (e.g., 'a wonderfully high rate providing excellent protection,' 'this achievement means the community is now safe') is used by the author."
+
+**Canonical NON-EXAMPLES:**
+* **NON-EXAMPLE for Reassuring (Code: Neutral):**
+  * Text: "Despite the health department conducting contact tracing, no further cases of bird flu connected to the case have been reported at the time of writing."
+  * Correct Codebook Reasoning: "Neutral. The author reports a positive fact (absence of new cases) using descriptive, neutral language. No explicit reassuring language...is used by the author to actively frame these facts reassuringly."
+* **NON-EXAMPLE for Alarmist (Code: Neutral):**
+  * Text: "These [characteristics] include a wide host range, high mutation rate, genetic reassortment, high mortality rates, and genetic reassortment."
+  * Correct Codebook Reasoning: "Neutral. The author lists factual characteristics using neutral, descriptive language. No loaded adjectives...or explicit alarmist rhetoric are used by the author to actively frame these characteristics beyond their factual statement."
+
+**Further characteristics of Neutral framing include:**
+* Factual descriptions of phenomena that inherently possess negative-sounding descriptors (e.g., 'a high fever,' 'a high mortality rate,' 'a rapidly spreading virus') if the author/source does not add further explicit alarmist framing.
+* Listing a fatality/damage rate, case/incident count, or R-value/metric without evaluative language or alarming tone from either the quoted source or the author.
+* Reporting standard descriptive terms for negative events (e.g., 'outbreak,' 'death,' 'illness,' 'culling,' 'risk,' 'concern,' 'epidemic,' 'potential for X,' 'active outbreaks') without additional explicit alarmist cues.
+* Epistemic modals (e.g., 'could,' 'might,' 'may') expressing possibility alone, unless the potential outcome is itself framed with strong alarmist intensifiers or paired with other alarmist cues.
+* Technical terms, official classifications, and procedural language reported as factual designations.
+
+**Examples from other Rules that default to Neutral:**
+* **Neutral (Capability/Preparedness - Rule C, Q8):** "The agency has developed a rapid deployment plan for emergencies."
+* **Neutral (Bare Negation - Q7):** "Not expected to lower production."
+* **Neutral (Factual Reporting of Prices/Metrics - Q9):** "Market prices for wheat decreased by 2% this month."
+* **Neutral (Speculation about Relief - Q10):** "Experts predict that the supply chain issues could ease in the next quarter."
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain|unknown",
+  "rationale": "<max 80 tokens, explaining why no explicit framing cues remain and facts are presented neutrally>"
+}
+``` 
+
+## 0022. multi_coder_analysis\regex_engine.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Light-weight conservative regex engine for the 12-hop Tree-of-Thought pipeline.
+
+Usage
+-----
+>>> from regex_engine import match
+>>> ans = match(ctx)
+>>> if ans: ...
+
+The engine stays **conservative**:
+• Only rules marked `mode="live"` can short-circuit the LLM.
+• If multiple live rules fire, or veto patterns trigger, we
+  return `None` to defer to the LLM.
+• We never attempt to prove a definite "no"; absence of a match
+  or any ambiguity ⇒ fall-through.
+"""
+
+# Prefer the "regex" engine if available (supports variable-width look-behinds).
+try:
+    import regex as re  # type: ignore
+except ImportError:  # pragma: no cover
+    import re  # type: ignore
+import logging
+from typing import Optional, TypedDict, Callable
+from collections import Counter, defaultdict
+
+# Robust import that works whether this module is executed as part of the
+# `multi_coder_analysis` package or as a loose script.
+try:
+    from .regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
+except ImportError:  # pragma: no cover
+    # Fallback when the parent package context isn't available (e.g. the
+    # file is imported directly via `python path/run_multi_coder_tot.py`).
+    try:
+        from regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
+    except ImportError:
+        # Final attempt: assume package name is available
+        from multi_coder_analysis.regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
+
+# ---------------------------------------------------------------------------
+# Public typed structure returned to the pipeline when a rule fires
+# ---------------------------------------------------------------------------
+class Answer(TypedDict):
+    answer: str
+    rationale: str
+    frame: Optional[str]
+    regex: dict  # detailed match information
+
+
+# ---------------------------------------------------------------------------
+# Engine core
+# ---------------------------------------------------------------------------
+
+# Per-rule statistics
+_RULE_STATS: dict[str, Counter] = defaultdict(Counter)  # name -> Counter(hit=, total=)
+
+# Global switch (set at runtime via pipeline args)
+_GLOBAL_ENABLE: bool = True
+_FORCE_SHADOW: bool = False
+
+# Optional hook – when set by the driver script, every successful regex
+# short-circuit is emitted as a structured dict to the callable (e.g. to
+# persist in a JSONL file).  Signature: fn(record: dict) -> None
+_HIT_LOG_FN: Optional[Callable[[dict], None]] = None
+
+def set_global_enabled(flag: bool) -> None:
+    """Enable or disable regex matching globally (used for --regex-mode off)."""
+    global _GLOBAL_ENABLE
+    _GLOBAL_ENABLE = flag
+
+def set_force_shadow(flag: bool) -> None:
+    """When True, regex runs but never short-circuits (shadow mode)."""
+    global _FORCE_SHADOW
+    _FORCE_SHADOW = flag
+
+def get_rule_stats() -> dict[str, Counter]:
+    return _RULE_STATS
+
+def _rule_fires(rule: PatternInfo, text: str) -> bool:
+    """Return True iff rule matches positively **and** is not vetoed."""
+    # yes_regex is compiled already (see regex_rules.py)
+    if not isinstance(rule.yes_regex, re.Pattern):
+        logging.error("regex_rules COMPILED_RULES must contain compiled patterns")
+        return False
+
+    positive = bool(rule.yes_regex.search(text))
+    if not positive:
+        return False
+
+    if rule.veto_regex and isinstance(rule.veto_regex, re.Pattern):
+        if rule.veto_regex.search(text):
+            return False
+    return True
+
+def set_hit_logger(fn: Callable[[dict], None]) -> None:  # noqa: ANN001
+    """Register a callback to receive detailed information every time
+    the regex engine returns a definitive answer.
+    """
+    global _HIT_LOG_FN
+    _HIT_LOG_FN = fn
+
+def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically typed)
+    """Attempt to answer the current hop deterministically.
+
+    Parameters
+    ----------
+    ctx : HopContext
+        The current hop context (expects attributes: `q_idx`, `segment_text`).
+
+    Returns
+    -------
+    Optional[Answer]
+        • Dict with keys {answer, rationale, frame} when a *single* live rule
+          fires with certainty.
+        • None when no rule (or >1 rules) fire, or hop not covered, or rule is
+          in shadow mode.
+    """
+
+    hop: int = getattr(ctx, "q_idx")
+    text: str = getattr(ctx, "segment_text")
+
+    if not _GLOBAL_ENABLE:
+        return None
+
+    # Fetch hop-specific rule list (already compiled).  Some test scenarios
+    # reload the ``multi_coder_analysis.regex_rules`` module with a temporary
+    # PROMPTS_DIR which may omit the production patterns.  When that happens
+    # the global ``COMPILED_RULES`` dict can be missing entries for common
+    # hops (1,5, …).  To keep behaviour robust we attempt a **lazy reload** of
+    # the regex_rules module once, falling back to the canonical prompt
+    # directory.  This incurs negligible overhead and guarantees deterministic
+    # behaviour across reload boundaries.
+
+    rules = COMPILED_RULES.get(hop, [])
+    if not rules:
+        try:
+            import importlib
+            from . import regex_rules as _rr  # type: ignore
+
+            # Trigger a reload which will repopulate COMPILED_RULES (see
+            # regex_rules.py where we always include the default prompt dir).
+            importlib.reload(_rr)
+            # Update our local alias after reload
+            globals()["COMPILED_RULES"] = _rr.COMPILED_RULES  # type: ignore
+            rules = _rr.COMPILED_RULES.get(hop, [])
+        except Exception:  # pragma: no cover – fallback silent
+            rules = []
+
+    if not rules:
+        return None
+
+    # ------------------------------------------------------------------
+    # Safety-net: earlier test modules may monkey-patch COMPILED_RULES and
+    # forget to restore it, leaving only synthetic test rules in place.
+    # To guarantee that production live patterns always remain available we
+    # merge any missing canonical entries from the authoritative
+    # regex_rules.COMPILED_RULES map. The merge keeps the test-injected rules
+    # at the front of the list while appending only *new* pattern objects so
+    # behaviour in those focused tests is preserved.
+    # ------------------------------------------------------------------
+    try:
+        from . import regex_rules as _rr  # package context
+    except ImportError:  # script context (if module run standalone)
+        import regex_rules as _rr  # type: ignore
+
+    _master_rules = _rr.COMPILED_RULES.get(hop, [])
+    if _master_rules:
+        existing_names = {r.name for r in rules}
+        for _r in _master_rules:
+            if _r.name not in existing_names:
+                rules.append(_r)
+
+    winning_rule: Optional[PatternInfo] = None
+
+    # Evaluate every rule to capture full coverage stats. Only allow
+    # short-circuiting when ALL of the following hold:
+    #   • the rule is in live mode
+    #   • shadow-force flag is *not* active
+    #   • exactly one live rule fires without ambiguity
+    for rule in rules:
+        fired = _rule_fires(rule, text)
+
+        # --- Always update coverage counters ---
+        _RULE_STATS[rule.name]["total"] += 1
+        if fired:
+            _RULE_STATS[rule.name]["hit"] += 1
+
+        # --- Short-circuit only when permitted ---
+        if (
+            fired
+            and not _FORCE_SHADOW  # shadow mode disables short-circuit altogether
+            and (rule.mode == "live" or rule.mode == "shadow")
+        ):
+            if winning_rule is not None:
+                # NEW: tolerate multiple hits as long as they agree on the frame
+                if rule.yes_frame == winning_rule.yes_frame:
+                    # Compatible → keep the first rule as the decisive one
+                    continue
+
+                # Conflicting frames ⇒ remain ambiguous → fall-through to LLM
+                logging.debug(
+                    "Regex engine ambiguity: >1 conflicting rule fired for hop %s (%s vs %s)",
+                    hop,
+                    winning_rule.name,
+                    rule.name,
+                )
+                return None
+            # First compatible rule becomes the candidate short-circuit
+            winning_rule = rule
+
+    if winning_rule is None:
+        # Record totals for live rules that did not fire (already counted)
+        return None
+
+    # Compute match object again to get span/captures (guaranteed match)
+    m = winning_rule.yes_regex.search(text)  # type: ignore[arg-type]
+    span = [m.start(), m.end()] if m else None
+    captures = list(m.groups()) if m else []
+
+    rationale = f"regex:{winning_rule.name} matched"
+
+    # ------------------------------------------------------------------
+    # Emit detailed hit record via optional callback for downstream audit.
+    # ------------------------------------------------------------------
+    if _HIT_LOG_FN is not None:
+        try:
+            _HIT_LOG_FN({
+                "statement_id": getattr(ctx, "statement_id", None),
+                "hop": hop,
+                "segment": text,
+                "rule": winning_rule.name,
+                "frame": winning_rule.yes_frame,
+                "mode": winning_rule.mode,
+                "span": span,
+            })
+        except Exception as e:  # pragma: no cover – never crash caller
+            logging.debug("Regex hit logger raised error: %s", e, exc_info=True)
+
+    return {
+        "answer": "yes",
+        "rationale": rationale,
+        "frame": winning_rule.yes_frame,
+        "regex": {
+            "rule": winning_rule.name,
+            "span": span,
+            "captures": captures,
+        },
+    } 
+
+## 0023. multi_coder_analysis\regex_rules.py
+----------------------------------------------------------------------------------------------------
+#  Auto-generated / hand-curated regex rules for deterministic hops.
+#  Only absolutely unambiguous YES cues should live here.
+#  If a rule matches, we answer "yes"; otherwise we defer to the LLM.
+#
+#  ✨ Mini seed-set of LIVE rules (v0.1, 2025-06-12) ✨
+#  ---------------------------------------------------------------------------
+#  Production runs load *shadow* rules from the prompt corpus, but our minimal
+#  unit-test suite only needs a razor-thin subset.  To keep the CI footprint
+#  minimal we inline **two** ultra-conservative LIVE patterns:
+#
+#    • Q01.IntensifierRiskAdj.Live – matches canonical "extremely deadly" style
+#      cues (Alarmist).
+#    • Q05.ExplicitCalming.Live   – matches the textbook reassurance cue
+#      "fully under control" (Reassuring).
+#
+#  These patterns are precise (no false positives observed) and mean the tests
+#  no longer depend on prompt extraction.
+
+#  NOTE: Multiple incremental patches merged – see CHANGELOG for details.
+
+from __future__ import annotations
+
+# Prefer the third-party "regex" engine. It is now *mandatory* because many
+# upstream patterns rely on features (e.g. variable-width look-behind) that the
+# built-in `re` module cannot provide.  Fail loudly if the dependency is
+# missing so the developer notices immediately.
+try:
+    import regex as re  # type: ignore
+except ImportError as e:  # pragma: no cover – test env expects regex to be installed
+    raise RuntimeError(
+        "✖ The regex rule extractor now requires the 'regex' package.\n"
+        "   ➜  pip install regex"
+    ) from e
+
+import logging
+import yaml
+import textwrap
+from dataclasses import dataclass, replace
+from typing import List, Dict, Pattern, Optional
+from pathlib import Path
+
+__all__ = [
+    "PatternInfo",
+    "RAW_RULES",
+    "COMPILED_RULES",
+]
+
+@dataclass(frozen=True)
+class PatternInfo:
+    """Metadata + raw patterns for a single hop-specific rule.
+
+    Attributes
+    ----------
+    hop: int
+        Hop/question index (1-12).
+    name: str
+        Descriptive identifier (CamelCase).
+    yes_frame: str | None
+        Frame name to override when rule fires (e.g. "Alarmist").
+    yes_regex: str
+        Raw regex that, when **present**, guarantees the answer is "yes".
+    veto_regex: str | None
+        Optional regex that, when present, *cancels* an otherwise positive
+        match — useful for conservative disambiguation.
+    mode: str
+        "live"  – rule is active and may short-circuit the LLM.
+        "shadow" – rule only logs and will *not* short-circuit.
+    """
+
+    hop: int
+    name: str
+    yes_frame: Optional[str]
+    yes_regex: str
+    veto_regex: Optional[str] = None
+    mode: str = "live"
+
+
+# ----------------------------------------------------------------------------
+# Compile rules per hop for fast lookup
+# ----------------------------------------------------------------------------
+COMPILED_RULES: Dict[int, List[PatternInfo]] = {}
+
+
+# ----------------------------------------------------------------------------
+# Helper: compile a rule to a runtime-ready PatternInfo with compiled regexes.
+# Includes graceful downgrade to shadow mode on variable-width look-behind
+# failures. Returns None when compilation is impossible.
+# ----------------------------------------------------------------------------
+
+def _compile_rule(rule: PatternInfo) -> Optional[PatternInfo]:
+    try:
+        compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+        compiled_veto = (
+            re.compile(rule.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+            if rule.veto_regex
+            else None
+        )
+    except re.error as e:
+        msg = str(e)
+        # Detect variable-width look-behind errors from stdlib `re` as a cue
+        # to silently force the rule into shadow mode while still retaining it
+        # for coverage metrics.
+        if "(?<" in msg:
+            logging.warning(
+                f"Variable-width look-behind in rule {rule.name}; forcing shadow mode"
+            )
+            try:
+                rule_shadow = replace(rule, mode="shadow")  # dataclasses.replace
+                compiled_yes = re.compile(rule_shadow.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+                compiled_veto = (
+                    re.compile(rule_shadow.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
+                    if rule_shadow.veto_regex
+                    else None
+                )
+                rule = rule_shadow
+            except Exception as e2:  # still fails → give up
+                logging.warning(f"Skipping rule {rule.name}: {e2}")
+                return None
+        else:
+            logging.warning(f"Skipping invalid regex in rule {rule.name}: {e}")
+            return None
+
+    return PatternInfo(
+        hop=rule.hop,
+        name=rule.name,
+        yes_frame=rule.yes_frame,
+        yes_regex=compiled_yes,  # type: ignore[arg-type]
+        veto_regex=compiled_veto,  # type: ignore[arg-type]
+        mode=rule.mode,
+    )
+
+
+# ----------------------------------------------------------------------------
+# Auto-extract additional patterns from the hop prompt files (optional).
+# This scans multi_coder_analysis/prompts/hop_Q*.txt for ```regex ... ``` blocks
+# and turns them into conservative PatternInfo objects (mode="shadow" by default)
+# so they won't short-circuit unless promoted to live.
+# ----------------------------------------------------------------------------
+
+_DEFAULT_PROMPTS_DIR = Path(__file__).parent / "prompts"
+# Allow external tests to monkeypatch `PROMPTS_DIR` to point at a temporary
+# directory.  When this happens, we *also* want to keep the original project
+# prompts available so that downstream logic (and other unit-tests) can still
+# access the full rule set.  Therefore we scan **both** directories whenever
+# they differ.
+PROMPTS_DIR = globals().get("PROMPTS_DIR", _DEFAULT_PROMPTS_DIR)
+
+_HOP_FILE_RE = re.compile(r"hop_Q(\d{2})\.txt")
+
+def _infer_frame_from_hop(hop: int) -> str | None:
+    if hop in {1, 2, 3, 4}:
+        return "Alarmist"
+    if hop in {5, 6}:
+        return "Reassuring"
+    return None  # leave to downstream logic
+
+
+def _extract_patterns_from_prompts() -> list[PatternInfo]:
+    """Extract shadow/live regex patterns from prompt files.
+
+    If a test suite temporarily overrides ``PROMPTS_DIR`` (via monkeypatch) to
+    point at an *isolated* directory, we automatically ALSO search the
+    project's canonical prompt folder so that the full rule set remains
+    available.  This dual-directory scan ensures that highly focused unit-
+    tests (e.g. verifying YAML extraction) do not inadvertently starve later
+    tests of the production patterns required for behavioural checks.
+    """
+
+    patterns: list[PatternInfo] = []
+
+    def _gather_from_dir(dir_path: Path) -> None:
+        if not dir_path.exists():
+            return
+        for path in dir_path.glob("hop_Q*.txt"):
+            m = _HOP_FILE_RE.match(path.name)
+            if not m:
+                continue
+            hop_idx = int(m.group(1))
+
+            try:
+                txt = path.read_text(encoding="utf-8")
+            except Exception:
+                continue
+
+            # ── PATCH 7: parse optional YAML front-matter (--- ... ---) ----------
+            meta_obj: dict | None = None
+            FM_RE = re.compile(r"^\s*---[^\n]*\n(.*?)\n---\s*", re.DOTALL)
+            fm_match = FM_RE.match(txt)
+            if fm_match:
+                try:
+                    meta_obj = yaml.safe_load(fm_match.group(1)) or {}
+                    hop_idx = int(meta_obj.get("hop", hop_idx))
+                except Exception:
+                    meta_obj = None
+
+            # ── PATCH 1: robust fenced-block extractor ---------------------------
+            FENCED_RE = re.compile(r"```regex\s+([\s\S]*?)```", re.IGNORECASE | re.DOTALL)
+
+            for idx, m_block in enumerate(FENCED_RE.finditer(txt)):
+                raw = (
+                    textwrap.dedent(m_block.group(1))
+                    .replace("\r\n", "\n")
+                    .strip()
+                )
+                # super-conservative: skip if pattern seems empty or has lookbehinds (?<-)
+                if not raw or "?<-" in raw:
+                    continue
+
+                # ── PATCH 2 cont. : use meta for name / mode / frame ------------
+                name = (
+                    (meta_obj and meta_obj.get("name"))
+                    or f"Q{hop_idx:02}.Prompt#{idx+1}"
+                )
+
+                mode = meta_obj.get("mode", "live") if meta_obj else "live"
+                frame = meta_obj.get("frame") if meta_obj else _infer_frame_from_hop(hop_idx)
+
+                patterns.append(
+                    PatternInfo(
+                        hop=hop_idx,
+                        name=name,
+                        yes_frame=frame,
+                        yes_regex=raw,
+                        mode=mode,
+                    )
+                )
+
+    # Scan the caller-specified prompt directory first (tests may monkeypatch).
+    _gather_from_dir(PROMPTS_DIR)
+
+    # Avoid duplicate rule objects when both paths are the *same* physical
+    # location (common in production/CI).  Re-scanning identical folders
+    # would yield two PatternInfo instances per fenced block which in turn
+    # causes regex_engine.match() to deem results ambiguous (>1 live rule
+    # fires) and return ``None``.
+    try:
+        if _DEFAULT_PROMPTS_DIR.resolve() != PROMPTS_DIR.resolve():
+            _gather_from_dir(_DEFAULT_PROMPTS_DIR)
+    except Exception:
+        # Fallback: conservative behaviour—if path resolution fails for some
+        # reason, perform the second scan (maintains previous semantics).
+        _gather_from_dir(_DEFAULT_PROMPTS_DIR)
+
+    return patterns
+
+
+# ---------------------------------------------------------------------------
+# ①  Load patterns from YAML catalogue (authoritative source)
+# ---------------------------------------------------------------------------
+
+PATTERN_FILE = Path(__file__).parent / "regex" / "hop_patterns.yml"
+
+
+def _load_patterns_from_yaml(path: Path) -> List[PatternInfo]:
+    """Parse hop_patterns.yml into PatternInfo objects."""
+    if not path.exists():
+        raise FileNotFoundError(f"✖ pattern file missing: {path}")
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    patterns: List[PatternInfo] = []
+    for hop_key, entries in raw.items():
+        hop = int(hop_key)
+        for item in entries or []:
+            patterns.append(
+                PatternInfo(
+                    hop=hop,
+                    name=item["name"],
+                    yes_frame=item.get("frame"),
+                    yes_regex=item["pattern"],
+                    veto_regex=item.get("veto_pattern"),
+                    mode=item.get("mode", "live"),
+                )
+            )
+    return patterns
+
+
+RAW_RULES: List[PatternInfo] = _load_patterns_from_yaml(PATTERN_FILE)
+
+# ---------------------------------------------------------------------------
+# Compile all rules once
+# ---------------------------------------------------------------------------
+
+for idx, r in enumerate(RAW_RULES):
+    compiled = _compile_rule(r)
+    if compiled is None:
+        continue
+
+    # Skip if an *identical* pattern for the same hop is already registered (prevents
+    # ambiguity when prompt files are scanned/reloaded multiple times)
+    if any(getattr(e.yes_regex, "pattern", None) == getattr(compiled.yes_regex, "pattern", None)
+           for e in COMPILED_RULES.get(compiled.hop, [])):
+        continue
+
+    # Persist the *compiled* version back into RAW_RULES so downstream
+    # callers (including unit-tests) can introspect attributes like
+    # ``yes_regex.pattern`` without having to replicate the compilation
+    # logic.  Keeping the list in-sync avoids a common gotcha where tests
+    # accidentally work with the uncompiled objects (plain strings) and then
+    # fail when they access `.pattern`.
+    RAW_RULES[idx] = compiled
+
+    # Build fast lookup map used at runtime by the regex engine.
+    COMPILED_RULES.setdefault(compiled.hop, []).append(compiled) 
+
+## 0024. multi_coder_analysis\run_multi_coder_tot.py
+----------------------------------------------------------------------------------------------------
+"""
+Deterministic 12-hop Tree-of-Thought (ToT) coder.
+This module is an alternative to run_multi_coder.py and is activated via --use-tot.
+It processes an input CSV of statements through a sequential, rule-based reasoning
+chain, producing a single, deterministic label for each statement.
+"""
+from __future__ import annotations
+import json
+import time
+import logging
+import os
+from pathlib import Path
+from typing import Dict, Any, List, Tuple, Optional
+from datetime import datetime
+from collections import defaultdict
+import collections
+import re
+import random  # For optional shuffling of segments before batching
+
+import pandas as pd
+from tqdm import tqdm
+from dotenv import load_dotenv
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
+import shutil
+
+# Local project imports
+from hop_context import HopContext, BatchHopContext
+from llm_providers.gemini_provider import GeminiProvider
+from llm_providers.openrouter_provider import OpenRouterProvider
+from utils.tracing import write_trace_log
+from utils.tracing import write_batch_trace
+from utils.prompt_loader import load_prompt_and_meta  # New helper
+
+# --- Hybrid Regex Engine ---
+try:
+    from . import regex_engine as _re_eng  # when imported as package
+    from . import regex_rules as _re_rules
+except ImportError:
+    # Fallback when running as script
+    import regex_engine as _re_eng  # type: ignore
+    import regex_rules as _re_rules  # type: ignore
+
+# Load environment variables from .env file
+load_dotenv(Path(__file__).parent.parent / ".env")
+
+# Constants can be moved to config.yaml if more flexibility is needed
+TEMPERATURE = 0.0
+MAX_RETRIES = 3
+BACKOFF_FACTOR = 1.5
+if "PROMPTS_DIR" not in globals():
+    PROMPTS_DIR = Path(__file__).parent / "prompts"
+
+# ---------------------------------------------------------------------------
+# Helpers to (lazily) read header / footer each time so that tests that monkey-
+# patch PROMPTS_DIR *after* import still pick up the temporary files.
+# ---------------------------------------------------------------------------
+
+
+def _load_global_header() -> str:  # noqa: D401
+    path = PROMPTS_DIR / "GLOBAL_HEADER.txt"
+    if not path.exists():
+        # Legacy support – remove once all deployments updated
+        path = PROMPTS_DIR / "global_header.txt"
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        logging.debug("Global header file not found at %s", path)
+        return ""
+
+
+def _load_global_footer() -> str:
+    path = PROMPTS_DIR / "GLOBAL_FOOTER.txt"
+    try:
+        return path.read_text(encoding="utf-8")
+    except FileNotFoundError:
+        logging.debug("Global footer file not found at %s", path)
+        return ""
+
+# Map question index to the frame assigned if the answer is "yes"
+Q_TO_FRAME = {
+    1: "Alarmist", 2: "Alarmist", 3: "Alarmist", 4: "Alarmist",
+    5: "Reassuring", 6: "Reassuring",
+    7: "Neutral", 8: "Neutral", 9: "Neutral", 10: "Neutral",
+    11: "Variable",  # Special case handled in run_tot_chain
+    12: "Neutral"
+}
+
+# --- LLM Interaction ---
+
+def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
+    """Dynamically assembles the full prompt for the LLM for a given hop."""
+    try:
+        hop_file = PROMPTS_DIR / f"hop_Q{ctx.q_idx:02}.txt"
+
+        # --- NEW: strip YAML front-matter and capture metadata ---
+        hop_body, meta = load_prompt_and_meta(hop_file)
+        ctx.prompt_meta = meta  # save for downstream consumers
+
+        # Simple template replacement
+        user_prompt = hop_body.replace(
+            "{{segment_text}}", ctx.segment_text
+        ).replace("{{statement_id}}", ctx.statement_id)
+
+        # Prefer new canonical filename; fallback to legacy if absent
+        header_path = hop_file.parent / "GLOBAL_HEADER.txt"
+        if not header_path.exists():
+            header_path = hop_file.parent / "global_header.txt"
+        try:
+            local_header = header_path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_header = _load_global_header()
+
+        local_footer = ""
+        try:
+            local_footer = (hop_file.parent / "GLOBAL_FOOTER.txt").read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_footer = _load_global_footer()
+
+        system_block = local_header + "\n\n" + hop_body
+        user_block = user_prompt + "\n\n" + local_footer
+        return system_block, user_block
+
+    except FileNotFoundError:
+        logging.error(f"Error: Prompt file not found for Q{ctx.q_idx} at {hop_file}")
+        raise
+    except Exception as e:
+        logging.error(f"Error assembling prompt for Q{ctx.q_idx}: {e}")
+        raise
+
+def _call_llm_single_hop(ctx: HopContext, provider, model: str, temperature: float = TEMPERATURE) -> Dict[str, str]:
+    """Makes a single, retrying API call to the LLM for one hop."""
+    sys_prompt, user_prompt = _assemble_prompt(ctx)
+    
+    for attempt in range(MAX_RETRIES):
+        try:
+            # Use provider abstraction
+            raw_text = provider.generate(sys_prompt, user_prompt, model, temperature)
+            
+            # Handle cases where content might be empty
+            if not raw_text.strip():
+                logging.warning(f"Q{ctx.q_idx} for {ctx.statement_id}: Response content is empty. This may indicate a token limit or safety issue.")
+                raise ValueError("Response content is empty")
+            
+            content = raw_text.strip()
+            
+            # Handle markdown-wrapped JSON responses
+            if content.startswith('```json') and content.endswith('```'):
+                # Extract JSON from markdown code block
+                json_content = content[7:-3].strip()  # Remove ```json and ```
+            elif content.startswith('```') and content.endswith('```'):
+                # Handle generic code block
+                json_content = content[3:-3].strip()  # Remove ``` and ```
+            else:
+                json_content = content
+            
+            # The model is instructed to reply with JSON only.
+            parsed_json = json.loads(json_content)
+            
+            # Basic validation of the parsed JSON structure
+            if "answer" in parsed_json and "rationale" in parsed_json:
+                result = {
+                    "answer": str(parsed_json["answer"]), 
+                    "rationale": str(parsed_json["rationale"])
+                }
+                # Note: Thoughts handling removed for simplicity in provider abstraction
+                return result
+            else:
+                logging.warning(f"Q{ctx.q_idx} for {ctx.statement_id}: LLM response missing 'answer' or 'rationale'. Content: {content}")
+                # Fall through to retry logic
+
+        except json.JSONDecodeError as e:
+            logging.warning(f"Q{ctx.q_idx} for {ctx.statement_id}: Failed to parse LLM JSON response on attempt {attempt + 1}. Error: {e}. Content: {content}")
+        except Exception as e:
+            logging.warning(f"Q{ctx.q_idx} for {ctx.statement_id}: API error on attempt {attempt + 1}: {e}. Retrying after backoff.")
+
+        time.sleep(BACKOFF_FACTOR * (2 ** attempt)) # Exponential backoff
+
+    # If all retries fail
+    logging.error(f"Q{ctx.q_idx} for {ctx.statement_id}: All {MAX_RETRIES} retries failed.")
+    return {"answer": "uncertain", "rationale": f"LLM call failed after {MAX_RETRIES} retries."}
+
+# --- Core Orchestration ---
+
+def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str, token_accumulator: dict, token_lock: threading.Lock, temperature: float = TEMPERATURE) -> HopContext:
+    """Orchestrates the 12-hop reasoning chain for a single text segment."""
+    ctx = HopContext(
+        statement_id=segment_row["StatementID"],
+        segment_text=segment_row["Statement Text"]
+    )
+    
+    uncertain_streak = 0
+
+    for q_idx in range(1, 13):
+        # Log progress for single-segment execution
+        _log_hop(q_idx, 1, token_accumulator.get('regex_yes', 0))
+        ctx.q_idx = q_idx
+        # --- metrics counter ---
+        with token_lock:
+            token_accumulator['total_hops'] += 1
+        
+        # --------------------------------------
+        # 1. Try conservative regex short-circuit
+        # --------------------------------------
+        regex_ans = None
+        try:
+            regex_ans = _re_eng.match(ctx)
+        except Exception as exc:
+            logging.warning(f"Regex engine error on {ctx.statement_id} Q{q_idx}: {exc}")
+
+        provider_called = False
+
+        if regex_ans:
+            llm_response = {
+                "answer": regex_ans["answer"],
+                "rationale": regex_ans["rationale"],
+            }
+            frame_override = regex_ans.get("frame")
+            via = "regex"
+            regex_meta = regex_ans.get("regex", {})
+            with token_lock:
+                if _re_eng._FORCE_SHADOW:
+                    token_accumulator['regex_hit_shadow'] += 1
+                else:
+                    token_accumulator['regex_yes'] += 1
+        else:
+            llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
+            frame_override = None
+            provider_called = True
+            via = "llm"
+            regex_meta = None
+            with token_lock:
+                token_accumulator['llm_calls'] += 1
+        
+        ctx.raw_llm_responses.append(llm_response)
+        
+        choice = llm_response.get("answer", "uncertain").lower().strip()
+        rationale = llm_response.get("rationale", "No rationale provided.")
+        
+        # Update logs and traces
+        trace_entry = {
+            "Q": q_idx,
+            "answer": choice,
+            "rationale": rationale,
+            "via": via,
+            "regex": regex_meta,
+        }
+        
+        # Add thinking traces if available
+        thoughts = provider.get_last_thoughts()
+        if thoughts:
+            trace_entry["thoughts"] = thoughts
+        
+        # --- Token accounting ---
+        if provider_called:
+            usage = provider.get_last_usage()
+            if usage:
+                with token_lock:
+                    token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
+                    token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
+                    token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
+                    token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
+        
+        ctx.analysis_history.append(f"Q{q_idx}: {choice}")
+        ctx.reasoning_trace.append(trace_entry)
+        write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+
+        if choice == "uncertain":
+            uncertain_streak += 1
+            if uncertain_streak >= 3:
+                ctx.final_frame = "LABEL_UNCERTAIN"
+                ctx.is_concluded = True
+                ctx.final_justification = f"ToT chain terminated at Q{q_idx} due to 3 consecutive 'uncertain' responses."
+                break
+        else:
+            uncertain_streak = 0 # Reset streak on a clear answer
+
+        if choice == "yes":
+            ctx.final_frame = frame_override or Q_TO_FRAME[q_idx]
+            ctx.is_concluded = True
+            # Frame override from regex, else Hop 11 logic
+            if frame_override:
+                ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+            else:
+                ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+            break # Exit the loop on the first 'yes'
+
+    # If loop completes without any 'yes' answers
+    if not ctx.is_concluded:
+        ctx.final_frame = "Neutral" # Default outcome
+        ctx.final_justification = "Default to Neutral: No specific framing cue triggered in Q1-Q12."
+        ctx.is_concluded = True
+
+    return ctx
+
+# --- NEW: Batch Prompt Assembly ---
+
+def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[str, str]:
+    """Assemble a prompt that contains multiple segments for the same hop."""
+    try:
+        hop_file = PROMPTS_DIR / f"hop_Q{hop_idx:02}.txt"
+        hop_content, meta = load_prompt_and_meta(hop_file)
+
+        # Attach same meta to every HopContext in this batch for consistency
+        for ctx in segments:
+            ctx.prompt_meta = meta
+
+        # Remove any single-segment placeholders
+        hop_content = hop_content.replace("{{segment_text}}", "<SEGMENT_TEXT>")
+        hop_content = hop_content.replace("{{statement_id}}", "<STATEMENT_ID>")
+
+        # Enumerate the segments
+        segment_block_lines = []
+        for idx, ctx in enumerate(segments, start=1):
+            segment_block_lines.append(f"### Segment {idx} (ID: {ctx.statement_id})")
+            segment_block_lines.append(ctx.segment_text)
+            segment_block_lines.append("")
+        segment_block = "\n".join(segment_block_lines)
+
+        instruction = (
+            f"\nYou will answer the **same question** (Q{hop_idx}) for EACH segment listed below.\n"
+            "Respond with **one JSON array**. Each element must contain: `segment_id`, `answer`, `rationale`.\n"
+            "Return NOTHING except valid JSON.\n\n"
+        )
+
+        # Prefer new canonical filename; fallback to legacy if absent
+        header_path = hop_file.parent / "GLOBAL_HEADER.txt"
+        if not header_path.exists():
+            header_path = hop_file.parent / "global_header.txt"
+        try:
+            local_header = header_path.read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_header = _load_global_header()
+
+        local_footer = ""
+        try:
+            local_footer = (hop_file.parent / "GLOBAL_FOOTER.txt").read_text(encoding="utf-8")
+        except FileNotFoundError:
+            local_footer = _load_global_footer()
+
+        system_block = local_header + "\n\n" + hop_content
+        user_block = instruction + segment_block + "\n\n" + local_footer
+        return system_block, user_block
+    except Exception as e:
+        logging.error(f"Error assembling batch prompt for Q{hop_idx}: {e}")
+        raise
+
+# --- NEW: Batch LLM Call ---
+
+def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPERATURE):
+    """Call the LLM on a batch of segments for a single hop and parse the JSON list response."""
+    sys_prompt, user_prompt = _assemble_prompt_batch(batch_ctx.segments, batch_ctx.hop_idx)
+    batch_ctx.raw_prompt = sys_prompt
+
+    for attempt in range(MAX_RETRIES):
+        try:
+            raw_text = provider.generate(sys_prompt, user_prompt, model, temperature)
+            if not raw_text.strip():
+                raise ValueError("Empty response from LLM")
+
+            content = raw_text.strip()
+            if content.startswith('```json') and content.endswith('```'):
+                content = content[7:-3].strip()
+            elif content.startswith('```') and content.endswith('```'):
+                content = content[3:-3].strip()
+
+            parsed = json.loads(content)
+            if not isinstance(parsed, list):
+                raise ValueError("Batch response is not a JSON array")
+            # basic validation: ensure each dict has required keys
+            for obj in parsed:
+                if not all(k in obj for k in ("segment_id", "answer", "rationale")):
+                    raise ValueError("Batch JSON object missing keys")
+            batch_ctx.raw_response = content
+            batch_ctx.thoughts = provider.get_last_thoughts()
+            return parsed
+        except Exception as e:
+            logging.warning(f"Batch Q{batch_ctx.hop_idx}: attempt {attempt+1} failed: {e}")
+            time.sleep(BACKOFF_FACTOR * (2 ** attempt))
+    logging.error(f"Batch Q{batch_ctx.hop_idx}: All retries failed – marking all segments uncertain")
+    # create fallback uncertain list
+    fallback = []
+    for ctx in batch_ctx.segments:
+        fallback.append({"segment_id": ctx.statement_id, "answer": "uncertain", "rationale": "LLM call failed."})
+    return fallback
+
+# --- NEW: Batch Orchestration with Concurrency ---
+
+def run_tot_chain_batch(
+    df: pd.DataFrame,
+    provider_name: str,
+    trace_dir: Path,
+    model: str,
+    batch_size: int = 10,
+    concurrency: int = 1,
+    token_accumulator: dict = None,
+    token_lock: threading.Lock = None,
+    temperature: float = TEMPERATURE,
+    shuffle_batches: bool = False,
+) -> List[HopContext]:
+    """Process dataframe through the 12-hop chain using batching with optional concurrency."""
+    # Build HopContext objects
+    contexts: List[HopContext] = [
+        HopContext(statement_id=row["StatementID"], segment_text=row["Statement Text"]) for _, row in df.iterrows()
+    ]
+
+    def _provider_factory():
+        if provider_name == "openrouter":
+            return OpenRouterProvider()
+        return GeminiProvider()
+
+    def _process_batch(batch_segments: List[HopContext], hop_idx: int):
+        token_accumulator['llm_calls'] += 1
+        
+        # Step 1: Apply regex rules to all segments in this batch
+        regex_resolved: List[HopContext] = []
+        unresolved_segments: List[HopContext] = []
+        
+        for seg_ctx in batch_segments:
+            seg_ctx.q_idx = hop_idx  # ensure hop set
+            
+            token_accumulator['total_hops'] += 1
+            
+            try:
+                r_answer = _re_eng.match(seg_ctx)
+            except Exception as exc:
+                logging.warning(
+                    f"Regex engine error in batch {hop_idx} on {seg_ctx.statement_id}: {exc}"
+                )
+                r_answer = None
+            
+            if r_answer:
+                if _re_eng._FORCE_SHADOW:
+                    token_accumulator['regex_hit_shadow'] += 1
+                else:
+                    token_accumulator['regex_yes'] += 1
+                
+                # Log the regex hit
+                trace_entry = {
+                    "Q": hop_idx,
+                    "answer": r_answer["answer"],
+                    "rationale": r_answer["rationale"],
+                    "method": "regex",
+                    "regex": r_answer.get("regex", {}),
+                }
+                write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
+                
+                seg_ctx.analysis_history.append(f"Q{hop_idx}: yes (regex)")
+                seg_ctx.reasoning_trace.append(trace_entry)
+                
+                # Set final frame if this is a frame-determining hop and answer is yes
+                if r_answer["answer"] == "yes" and hop_idx in Q_TO_FRAME:
+                    seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
+                    seg_ctx.is_concluded = True
+                
+                regex_resolved.append(seg_ctx)
+            else:
+                unresolved_segments.append(seg_ctx)
+        
+        # Step 2: If any segments remain unresolved, call LLM for the batch
+        if unresolved_segments:
+            # Create batch context
+            batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
+            batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
+            
+            # Call LLM for the batch
+            provider_inst = _provider_factory()
+            batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
+            
+            # Token accounting (prompt/response/thought)
+            usage = provider_inst.get_last_usage()
+            if usage and token_lock:
+                with token_lock:
+                    token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
+                    token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
+                    token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
+                    token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
+            
+            # Build lookup for faster association
+            sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
+
+            for resp_obj in batch_responses:
+                sid = str(resp_obj.get("segment_id", "")).strip()
+                ctx = sid_to_ctx.get(sid)
+                if ctx is None:
+                    continue  # skip unknown ids
+
+                answer = str(resp_obj.get("answer", "uncertain")).lower().strip()
+                rationale = str(resp_obj.get("rationale", "No rationale provided"))
+                
+                trace_entry = {
+                    "Q": hop_idx,
+                    "answer": answer,
+                    "rationale": rationale,
+                    "method": "llm_batch",
+                }
+                write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+                
+                ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
+                ctx.reasoning_trace.append(trace_entry)
+                
+                # Check for early termination
+                if answer == "uncertain":
+                    ctx.uncertain_count += 1
+                    if ctx.uncertain_count >= 3:
+                        logging.warning(
+                            f"ToT chain terminated at Q{hop_idx} due to 3 consecutive 'uncertain' responses."
+                        )
+                        ctx.final_frame = "LABEL_UNCERTAIN"
+                        ctx.final_justification = "Three consecutive uncertain responses"
+                        continue
+                
+                # Check for frame override (Q11 special case)
+                if hop_idx == 11 and "||FRAME=" in rationale:
+                    frame_match = re.search(r'\|\|FRAME=([^|]+)', rationale)
+                    if frame_match:
+                        ctx.final_frame = frame_match.group(1).strip()
+                        continue
+                
+                # Set final frame if this is a frame-determining hop and answer is yes
+                if answer == "yes" and hop_idx in Q_TO_FRAME:
+                    ctx.final_frame = Q_TO_FRAME[hop_idx]
+                    ctx.final_justification = (
+                        f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
+                    )
+                    ctx.is_concluded = True
+
+            # Any ctx not covered by response → mark uncertain
+            for ctx in unresolved_segments:
+                if ctx.statement_id not in sid_to_ctx or all(r.get("segment_id") != ctx.statement_id for r in batch_responses):
+                    trace_entry = {
+                        "hop_idx": hop_idx,
+                        "answer": "uncertain",
+                        "rationale": "Missing response from batch",
+                        "method": "fallback",
+                    }
+                    write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+            
+            # Write batch trace
+            batch_payload = {
+                "batch_id": batch_id,
+                "hop_idx": hop_idx,
+                "segment_count": len(unresolved_segments),
+                "responses": batch_responses,
+                "timestamp": datetime.now().isoformat(),
+            }
+            write_batch_trace(trace_dir, batch_id, hop_idx, batch_payload)
+        
+        # Return all segments (resolved + unresolved)
+        return regex_resolved + unresolved_segments
+
+    active_contexts: List[HopContext] = contexts[:]
+
+    for hop_idx in range(1, 13):
+        active_contexts = [c for c in active_contexts if not c.is_concluded]
+        if not active_contexts:
+            break
+
+        # Optional randomisation to spread heavy segments across batches
+        if shuffle_batches:
+            random.shuffle(active_contexts)
+
+        # Log hop start from main thread
+        _log_hop(hop_idx, len(active_contexts), token_accumulator.get('regex_yes', 0))
+
+        # Build batches of current active segments
+        batches: List[List[HopContext]] = [
+            active_contexts[i : i + batch_size] for i in range(0, len(active_contexts), batch_size)
+        ]
+
+        logging.info(
+            f"Hop {hop_idx}: processing {len(batches)} batches (size={batch_size}) with concurrency={concurrency}"
+        )
+
+        if concurrency == 1:
+            for batch in batches:
+                _process_batch(batch, hop_idx)
+        else:
+            # Concurrency handled within run_tot_chain_batch
+            # logging.warning("Concurrency >1 is not yet supported with batching. Defaulting concurrency to 1.")
+            with ThreadPoolExecutor(max_workers=concurrency) as pool:
+                futs = [pool.submit(_process_batch, batch, hop_idx) for batch in batches]
+                for fut in as_completed(futs):
+                    try:
+                        fut.result()
+                    except Exception as exc:
+                        logging.error(f"Batch processing error in hop {hop_idx}: {exc}")
+
+    # Final neutral assignment for any still-active contexts
+    for ctx in contexts:
+        if not ctx.is_concluded:
+            ctx.final_frame = "Neutral"
+            ctx.final_justification = "Default to Neutral: No specific framing cue triggered in Q1-Q12."
+            ctx.is_concluded = True
+
+    return contexts
+
+# --- Main Entry Point for `main.py` ---
+
+def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False) -> Tuple[None, Path]:
+    """
+    Main function to run the ToT pipeline on an input CSV and save results.
+    Matches the expected return signature for a coding step in main.py.
+    """
+    if not _load_global_header():
+        logging.critical("ToT pipeline cannot run because GLOBAL_HEADER.txt is missing or empty.")
+        raise FileNotFoundError("prompts/GLOBAL_HEADER.txt is missing.")
+
+    # --- Configure regex layer mode ---
+    if regex_mode == "off":
+        _re_eng.set_global_enabled(False)
+        logging.info("Regex layer DISABLED via --regex-mode off")
+    else:
+        _re_eng.set_global_enabled(True)
+        if regex_mode == "shadow":
+            _re_eng.set_force_shadow(True)
+            logging.info("Regex layer set to SHADOW mode: rules will not short-circuit")
+        else:
+            logging.info("Regex layer in LIVE mode (default)")
+
+    df = pd.read_csv(input_csv_path, dtype={'StatementID': str})
+    
+    # Check if this is an evaluation run (has Gold Standard column)
+    has_gold_standard = 'Gold Standard' in df.columns
+    
+    # Store original dataframe size for logging
+    original_size = len(df)
+    
+    # Apply range filtering if start/end specified
+    if start is not None or end is not None:
+        # Convert to 0-based indexing for pandas
+        start_idx = (start - 1) if start is not None else 0
+        end_idx = end if end is not None else len(df)
+        
+        # Validate range
+        if start_idx < 0:
+            logging.warning(f"Start index {start} is less than 1, using 1 instead")
+            start_idx = 0
+        if end_idx > len(df):
+            logging.warning(f"End index {end} exceeds dataset size {len(df)}, using {len(df)} instead")
+            end_idx = len(df)
+        if start_idx >= end_idx:
+            logging.error(f"Invalid range: start {start} >= end {end}")
+            raise ValueError(f"Start index must be less than end index")
+        
+        # Apply range slice
+        df = df.iloc[start_idx:end_idx].copy()
+        logging.info(f"Applied range filter: processing rows {start_idx + 1}-{end_idx} ({len(df)} statements from original {original_size})")
+        
+    # Apply limit if specified (after range filtering)
+    elif limit is not None:
+        df = df.head(limit)
+        logging.info(f"Applied limit: processing {len(df)} statements (limited from {original_size})")
+    else:
+        logging.info(f"Processing all {len(df)} statements")
+    
+    # Select and initialize provider
+    provider_name = config.get("runtime_provider", provider)  # Use runtime config if available
+    
+    if provider_name == "openrouter":
+        llm_provider = OpenRouterProvider()
+        logging.info("Initialized OpenRouter provider")
+    else:
+        llm_provider = GeminiProvider()
+        logging.info("Initialized Gemini provider")
+
+    results = []
+    # --- Token accounting ---
+    token_accumulator = {
+        'prompt_tokens': 0,
+        'response_tokens': 0,
+        'thought_tokens': 0,
+        'total_tokens': 0,
+        # Regex vs LLM utilisation counters
+        'total_hops': 0,
+        'regex_yes': 0,   # times regex produced a definitive yes
+        'regex_hit_shadow': 0,  # regex fired in shadow mode (does not short-circuit)
+        'llm_calls': 0,   # times we hit the LLM
+        'segments_regex_ids': set(),  # unique statement IDs resolved by regex at least once
+    }
+    token_lock = threading.Lock()
+
+    trace_dir = output_dir / "traces_tot"
+    trace_dir.mkdir(parents=True, exist_ok=True)
+    logging.info(f"ToT trace files will be saved in: {trace_dir}")
+
+    # Path for false-negative corpus (regex miss + LLM yes)
+    miss_path = output_dir / "regex_miss_llm_yes.jsonl"
+    global _MISS_PATH
+    _MISS_PATH = miss_path  # make accessible to inner functions
+    # ensure empty file
+    open(miss_path, 'w', encoding='utf-8').close()
+
+    # Path for regex *hits* that short-circuited the hop deterministically
+    hit_path = output_dir / "regex_hits.jsonl"
+    open(hit_path, 'w', encoding='utf-8').close()
+
+    # Register hit logger with regex_engine so every deterministic match is captured
+    try:
+        import multi_coder_analysis.regex_engine as _re  # package context
+    except ImportError:
+        import regex_engine as _re  # standalone script
+
+    def _log_regex_hit(payload: dict) -> None:  # noqa: D401
+        # payload contains statement_id, hop, segment, rule, frame, mode, span
+        try:
+            with token_lock:
+                with open(hit_path, 'a', encoding='utf-8') as _f:
+                    _f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+                # Record segment-level utilisation
+                token_accumulator['segments_regex_ids'].add(payload.get('statement_id'))
+        except Exception as _e:
+            logging.debug("Could not write regex hit log: %s", _e)
+
+    _re.set_hit_logger(_log_regex_hit)
+
+    # helper function to log miss safely
+    def _log_regex_miss(statement_id: str, hop: int, segment: str, rationale: str, token_lock: threading.Lock, miss_path: Path):
+        payload = {
+            "statement_id": statement_id,
+            "hop": hop,
+            "segment": segment,
+            "rationale": rationale,
+        }
+        with token_lock:
+            with open(miss_path, 'a', encoding='utf-8') as f:
+                f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+
+    # --- Processing Path Selection ---
+    if batch_size > 1:
+        logging.info(f"Processing with batch size = {batch_size} and concurrency={concurrency}")
+        final_contexts = run_tot_chain_batch(
+            df,
+            provider_name,
+            trace_dir,
+            model,
+            batch_size=batch_size,
+            concurrency=concurrency,
+            token_accumulator=token_accumulator,
+            token_lock=token_lock,
+            shuffle_batches=shuffle_batches,
+        )
+        for ctx in final_contexts:
+            final_json = {
+                "StatementID": ctx.statement_id,
+                "Pipeline_Result": ctx.dim1_frame,
+                "Pipeline_Justification": ctx.final_justification,
+                "Full_Reasoning_Trace": json.dumps(ctx.reasoning_trace)
+            }
+            results.append(final_json)
+    else:
+        # Existing single-segment path
+        if concurrency == 1:
+            # Disable tqdm progress bar for cleaner console output
+            for _, row in tqdm(
+                df.iterrows(),
+                total=df.shape[0],
+                desc="Processing Statements (ToT)",
+                disable=True,
+            ):
+                final_context = run_tot_chain(row, llm_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE)
+                final_json = {
+                    "StatementID": final_context.statement_id,
+                    "Pipeline_Result": final_context.dim1_frame,
+                    "Pipeline_Justification": final_context.final_justification,
+                    "Full_Reasoning_Trace": json.dumps(final_context.reasoning_trace)
+                }
+                results.append(final_json)
+        else:
+            # Concurrent processing path as previously implemented
+            logging.info(f"Using concurrent processing with {concurrency} workers")
+            def process_single_statement(row_tuple):
+                _, row = row_tuple
+                if provider_name == "openrouter":
+                    thread_provider = OpenRouterProvider()
+                else:
+                    thread_provider = GeminiProvider()
+                final_context = run_tot_chain(row, thread_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE)
+                final_json = {
+                    "StatementID": final_context.statement_id,
+                    "Pipeline_Result": final_context.dim1_frame,
+                    "Pipeline_Justification": final_context.final_justification,
+                    "Full_Reasoning_Trace": json.dumps(final_context.reasoning_trace)
+                }
+                return final_json
+            with ThreadPoolExecutor(max_workers=concurrency) as executor:
+                future_to_row = {executor.submit(process_single_statement, row_tuple): row_tuple[1]['StatementID'] for row_tuple in df.iterrows()}
+                # Disable tqdm progress bar for cleaner console output
+                for future in tqdm(
+                    as_completed(future_to_row),
+                    total=len(future_to_row),
+                    desc="Processing Statements (ToT)",
+                    disable=True,
+                ):
+                    statement_id = future_to_row[future]
+                    try:
+                        result = future.result()
+                        results.append(result)
+                    except Exception as exc:
+                        logging.error(f"Statement {statement_id} generated an exception: {exc}")
+                        results.append({
+                            "StatementID": statement_id,
+                            "Pipeline_Result": "LABEL_UNCERTAIN",
+                            "Pipeline_Justification": f"Processing failed: {exc}",
+                            "Full_Reasoning_Trace": "[]"
+                        })
+
+    # Save final labels to CSV
+    df_results = pd.DataFrame(results)
+    # This filename should match the pattern expected by the merge step
+    # Using a simple filename for now - this should be made configurable
+    majority_labels_path = output_dir / f"model_labels_tot.csv"
+    df_results.to_csv(majority_labels_path, index=False)
+    
+    # In this deterministic (VOTES=1) setup, there is no separate raw votes file.
+    # The trace files serve as the detailed record.
+    raw_votes_path = None
+
+    logging.info(f"ToT processing complete. Labels saved to: {majority_labels_path}")
+    
+    # --- Evaluation Logic (if gold standard available) ---
+    if has_gold_standard:
+        # Create comparison CSV first to ensure proper alignment
+        comparison_path = create_comparison_csv(df, results, output_dir)
+        df_comparison = pd.read_csv(comparison_path)
+        
+        # Reorganize trace files by match/mismatch status
+        reorganize_traces_by_match_status(trace_dir, df_comparison)
+        
+        # Record initial mismatch count before any fallback corrections
+        initial_mismatch_count = int(df_comparison["Mismatch"].sum())
+
+        # --- Mismatch attribution (regex vs. LLM) -----------------------
+        seg_regex_ids = token_accumulator.get('segments_regex_ids', set())
+        mismatch_ids = set(df_comparison[df_comparison["Mismatch"]].StatementID)
+        regex_mismatch_count = len(seg_regex_ids & mismatch_ids)
+        llm_mismatch_count = initial_mismatch_count - regex_mismatch_count
+
+        # --- NEW: evaluate and print metrics BEFORE individual fallback ----
+        predictions_pre = df_comparison['Pipeline_Result'].tolist()
+        actuals_pre = df_comparison['Gold_Standard'].tolist()
+        metrics_pre = calculate_metrics(predictions_pre, actuals_pre)
+
+        print("\n🧮  Evaluation BEFORE individual fallback")
+        print(f"Regex-driven mismatches : {regex_mismatch_count}")
+        print(f"LLM-driven mismatches   : {llm_mismatch_count}")
+
+        print_evaluation_report(metrics_pre, input_csv_path, output_dir, concurrency, limit, start, end)
+
+        # --- Optional: individual fallback rerun for mismatches (batch-sensitive check) ---
+        if config.get("individual_fallback", False):
+            logging.info("🔄 Running individual fallback for batched mismatches …")
+
+            # Prepare directories
+            indiv_root = trace_dir / "traces_tot_individual"
+            match_dir = indiv_root / "traces_tot_individual_match"
+            mismatch_dir = indiv_root / "traces_tot_individual_mismatch"
+            match_dir.mkdir(parents=True, exist_ok=True)
+            mismatch_dir.mkdir(parents=True, exist_ok=True)
+
+            indiv_match_entries = []
+            indiv_mismatch_entries = []
+
+            # We will update df_comparison in-place if a batch-sensitive fix occurs
+            def _run_single(row_tuple):
+                idx, row = row_tuple
+                statement_id = row['StatementID']
+                segment_text = row['Statement Text']
+                gold_label = row['Gold_Standard']
+
+                # Build minimal Series for run_tot_chain
+                single_series = pd.Series({
+                    'StatementID': statement_id,
+                    'Statement Text': segment_text,
+                })
+
+                provider_obj = OpenRouterProvider() if provider_name == "openrouter" else GeminiProvider()
+
+                single_ctx = run_tot_chain(
+                    single_series,
+                    provider_obj,
+                    indiv_root,
+                    model,
+                    token_accumulator,
+                    token_lock,
+                    TEMPERATURE,
+                )
+
+                single_label = single_ctx.dim1_frame
+
+                trace_file_path = indiv_root / f"{statement_id}.jsonl"
+                try:
+                    with open(trace_file_path, 'r', encoding='utf-8') as tf:
+                        trace_entries = [json.loads(l.strip()) for l in tf if l.strip()]
+                except FileNotFoundError:
+                    trace_entries = []
+
+                entry_payload = {
+                    "statement_id": statement_id,
+                    "expected": gold_label,
+                    "batched_result": row['Pipeline_Result'],
+                    "single_result": single_label,
+                    "statement_text": segment_text,
+                    "trace_count": len(trace_entries),
+                    "full_trace": trace_entries,
+                }
+
+                return idx, single_label, entry_payload
+
+            mismatch_rows = list(df_comparison[df_comparison['Mismatch'] == True].iterrows())
+
+            if mismatch_rows:
+                with ThreadPoolExecutor(max_workers=concurrency) as pool:
+                    futures = [pool.submit(_run_single, rt) for rt in mismatch_rows]
+                    for fut in as_completed(futures):
+                        idx, single_label, entry_payload = fut.result()
+
+                        if single_label == entry_payload['expected']:
+                            indiv_match_entries.append(entry_payload)
+                            df_comparison.at[idx, 'Pipeline_Result'] = single_label
+                            df_comparison.at[idx, 'Mismatch'] = False
+                        else:
+                            indiv_mismatch_entries.append(entry_payload)
+
+            # Write consolidated files
+            if indiv_match_entries:
+                with open(match_dir / "consolidated_individual_match_traces.jsonl", 'w', encoding='utf-8') as f:
+                    for e in indiv_match_entries:
+                        f.write(json.dumps(e, ensure_ascii=False) + "\n")
+
+            if indiv_mismatch_entries:
+                with open(mismatch_dir / "consolidated_individual_mismatch_traces.jsonl", 'w', encoding='utf-8') as f:
+                    for e in indiv_mismatch_entries:
+                        f.write(json.dumps(e, ensure_ascii=False) + "\n")
+
+            fixed_by_fallback = len(indiv_match_entries)
+            final_mismatch_count = len(indiv_mismatch_entries)
+            logging.info(f"🗂️  Individual fallback complete. Fixed: {fixed_by_fallback}, Still mismatched: {final_mismatch_count}")
+
+            # ------------------------------------------------------------------
+            # Print concise summaries for fixed and remaining mismatches
+            # ------------------------------------------------------------------
+            if indiv_match_entries:
+                print("\n✅ Fixed mismatches (batch → single):")
+                for e in indiv_match_entries:
+                    print(
+                        f"  • {e['statement_id']}: batched={e['batched_result']} » single={e['single_result']} (expected={e['expected']})"
+                    )
+
+                # Tally by hop where the corrected 'yes' fired
+                hop_tally: dict[int, int] = {}
+                for e in indiv_match_entries:
+                    for tr in e.get('full_trace', []):
+                        if tr.get('answer') == 'yes':
+                            hop = int(tr.get('Q', 0))
+                            hop_tally[hop] = hop_tally.get(hop, 0) + 1
+                            break
+                if hop_tally:
+                    print("\n🔢  Hop tally for fixed mismatches (first YES hop):")
+                    for h, cnt in sorted(hop_tally.items()):
+                        print(f"    Q{h:02}: {cnt}")
+
+            if indiv_mismatch_entries:
+                print("\n❌ Still mismatched after fallback:")
+                for e in indiv_mismatch_entries:
+                    print(
+                        f"  • {e['statement_id']}: expected={e['expected']} but got={e['single_result']}"
+                    )
+
+            # Calculate metrics AFTER fallback
+            predictions = df_comparison['Pipeline_Result'].tolist()
+            actuals = df_comparison['Gold_Standard'].tolist()
+            metrics = calculate_metrics(predictions, actuals)
+
+            print("\n🧮  Evaluation AFTER individual fallback")
+
+            # --- Post-fallback mismatch attribution ----------------------
+            mismatch_ids_post = set(df_comparison[df_comparison["Mismatch"]].StatementID)
+            regex_mismatch_post = len(seg_regex_ids & mismatch_ids_post)
+            llm_mismatch_post = len(mismatch_ids_post) - regex_mismatch_post
+
+            print(f"Regex-driven mismatches : {regex_mismatch_post}")
+            print(f"LLM-driven mismatches   : {llm_mismatch_post}")
+
+            print_evaluation_report(metrics, input_csv_path, output_dir, concurrency, limit, start, end)
+            
+            print(f"✍️  All evaluation data written to {comparison_path}")
+            
+            # Print mismatches
+            print_mismatches(df_comparison)
+            
+            print(f"\n✅ Evaluation complete. Full telemetry in {output_dir}")
+        
+        # If fallback was not run, set mismatch stats accordingly
+        if not config.get("individual_fallback", False):
+            fixed_by_fallback = 0
+            final_mismatch_count = initial_mismatch_count
+        
+        # Calculate metrics
+        metrics = calculate_metrics(predictions, actuals)
+        
+        # Print evaluation report
+        print_evaluation_report(metrics, input_csv_path, output_dir, concurrency, limit, start, end)
+        
+        print(f"✍️  All evaluation data written to {comparison_path}")
+        
+        # Print mismatches
+        print_mismatches(df_comparison)
+        
+        print(f"\n✅ Evaluation complete. Full telemetry in {output_dir}")
+    
+    # --- Token usage summary ---
+    # Downgrade duplicate token usage logs to DEBUG to avoid redundant console output
+    logging.debug("=== TOKEN USAGE SUMMARY ===")
+    logging.debug(f"Prompt tokens   : {token_accumulator['prompt_tokens']}")
+    logging.debug(f"Response tokens : {token_accumulator['response_tokens']}")
+    logging.debug(f"Thought tokens  : {token_accumulator['thought_tokens']}")
+    logging.debug(f"Total tokens    : {token_accumulator['total_tokens']}")
+    print("\n📏 Token usage:")
+    print(f"Prompt  : {token_accumulator['prompt_tokens']}")
+    print(f"Response: {token_accumulator['response_tokens']}")
+    print(f"Thought : {token_accumulator['thought_tokens']}")
+    print(f"Total   : {token_accumulator['total_tokens']}")
+
+    # --- Regex vs LLM usage summary ---
+    # Recompute shadow-hit tally based on per-rule statistics so that all shadow
+    # matches are counted even when no live rules exist (post-v2.20 change).
+    stats_snapshot = _re_eng.get_rule_stats()
+    rules_index_snapshot = {r.name: r for r in _re_eng.RAW_RULES}
+    shadow_total = sum(
+        counter.get("hit", 0)
+        for name, counter in stats_snapshot.items()
+        if rules_index_snapshot.get(name) and rules_index_snapshot[name].mode == "shadow"
+    )
+
+    # Store the aggregate for downstream logging/JSON
+    token_accumulator['regex_hit_shadow'] = shadow_total
+
+    regex_yes = token_accumulator.get('regex_yes', 0)
+    regex_hit_shadow = token_accumulator.get('regex_hit_shadow', 0)
+    llm_calls = token_accumulator.get('llm_calls', 0)
+    total_hops = token_accumulator.get('total_hops', 0)
+
+    # Downgrade duplicate regex/LLM utilisation logs to DEBUG
+    logging.debug("=== REGEX / LLM UTILISATION ===")
+    logging.debug(f"Total hops          : {total_hops}")
+    logging.debug(f"Regex definitive YES : {regex_yes}")
+    logging.debug(f"Regex hits (shadow) : {regex_hit_shadow}")
+    logging.debug(f"LLM calls made       : {llm_calls}")
+    logging.debug(f"Regex coverage       : {regex_yes / total_hops:.2%}" if total_hops else "Regex coverage: n/a")
+
+    print("\n⚡ Hybrid stats:")
+    print(f"Total hops          : {total_hops}")
+    print(f"Regex definitive YES: {regex_yes}")
+    print(f"Regex hits (shadow) : {regex_hit_shadow}")
+    print(f"LLM calls made      : {llm_calls}")
+    if total_hops:
+        print(f"Regex coverage      : {regex_yes / total_hops:.2%}")
+
+    # Segment-level utilisation
+    total_segments = len(df)
+    segments_regex = len(token_accumulator.get('segments_regex_ids', set()))
+    segments_llm = total_segments - segments_regex
+
+    print(f"Segments total      : {total_segments}")
+    print(f"Segments regex      : {segments_regex}  ({segments_regex / total_segments:.2%})")
+    print(f"Segments LLM        : {segments_llm}  ({segments_llm / total_segments:.2%})")
+
+    summary_path = output_dir / "token_usage_summary.json"
+    try:
+        # Convert non-serialisable objects (like sets) to serialisable forms
+        _safe_token_acc = {k: (list(v) if isinstance(v, set) else v) for k, v in token_accumulator.items()}
+        with open(summary_path, 'w', encoding='utf-8') as f:
+            json.dump(_safe_token_acc, f, indent=2)
+        logging.info(f"Token summary written to {summary_path}")
+    except Exception as e:
+        logging.error(f"Failed to write token summary: {e}")
+
+    # --- Regex per-rule stats CSV ---
+    import csv
+
+    stats = _re_eng.get_rule_stats()
+    rules_index = {r.name: r for r in _re_eng.RAW_RULES}
+
+    stats_path = output_dir / "regex_rule_stats.csv"
+    try:
+        with open(stats_path, 'w', newline='', encoding='utf-8') as f:
+            w = csv.writer(f)
+            w.writerow(["rule", "hop", "mode", "hit", "total", "coverage"])
+            for name, counter in sorted(stats.items()):
+                rule = rules_index.get(name)
+                hop = rule.hop if rule else "?"
+                mode = rule.mode if rule else "?"
+                hit = counter.get("hit", 0)
+                total = counter.get("total", 0)
+                cov = f"{hit/total:.2%}" if total else "0%"
+                w.writerow([name, hop, mode, hit, total, cov])
+        logging.info(f"Regex rule stats written to {stats_path}")
+    except Exception as e:
+        logging.error(f"Failed to write regex rule stats: {e}")
+
+    # --- NEW: export full regex rule definitions (useful for debugging) ---
+    import json as _json
+
+    rules_snapshot_path = output_dir / "regex_rules_snapshot.jsonl"
+
+    try:
+        with open(rules_snapshot_path, "w", encoding="utf-8") as fp:
+            for r in _re_eng.RAW_RULES:
+                # yes_regex may be a compiled pattern or raw string depending on origin
+                pattern_str = (
+                    r.yes_regex.pattern if hasattr(r.yes_regex, "pattern") else str(r.yes_regex)
+                )
+                _json.dump(
+                    {
+                        "name": r.name,
+                        "hop": r.hop,
+                        "mode": r.mode,
+                        "frame": r.yes_frame,
+                        "pattern": pattern_str,
+                    },
+                    fp,
+                    ensure_ascii=False,
+                )
+                fp.write("\n")
+        logging.info(f"Regex rules snapshot written to {rules_snapshot_path}")
+    except Exception as e:
+        logging.error(f"Failed to export regex rules snapshot: {e}")
+
+    # --- Run parameters summary ---
+    params_summary = {
+        "timestamp": datetime.now().isoformat(timespec="seconds"),
+        "input_file": str(input_csv_path),
+        "total_statements": len(df),
+        "provider": provider_name,
+        "model": model,
+        "temperature": TEMPERATURE,
+        "top_p": 0.1,
+        "top_k": 1 if provider_name != "openrouter" else None,
+        "batch_size": batch_size,
+        "concurrency": concurrency,
+        "individual_fallback_enabled": bool(config.get("individual_fallback", False)),
+        "individual_fallback_note": "--individual-fallback flag WAS used" if config.get("individual_fallback", False) else "--individual-fallback flag NOT used",
+        "token_usage": _safe_token_acc,
+        "regex_yes": regex_yes,
+        "regex_hit_shadow": regex_hit_shadow,
+        "llm_calls": llm_calls,
+        "regex_coverage": (regex_yes / total_hops) if total_hops else None,
+        "initial_mismatch_count": initial_mismatch_count,
+        "fixed_by_individual_fallback": fixed_by_fallback,
+        "final_mismatch_count": final_mismatch_count,
+        "regex_mismatch_count": regex_mismatch_count,
+        "llm_mismatch_count": llm_mismatch_count,
+    }
+    if has_gold_standard:
+        params_summary.update({
+            "accuracy": metrics.get("accuracy"),
+            "mismatch_count": int(df_comparison["Mismatch"].sum()),
+        })
+
+    params_file = output_dir / "run_parameters_summary.json"
+    try:
+        with open(params_file, "w", encoding="utf-8") as f:
+            json.dump(params_summary, f, indent=2)
+        logging.info(f"Run parameter summary written to {params_file}")
+    except Exception as e:
+        logging.error(f"Failed to write run parameters summary: {e}")
+
+    return raw_votes_path, majority_labels_path
+
+# --- Evaluation Functions ---
+
+def calculate_metrics(predictions: List[str], actuals: List[str]) -> Dict[str, Any]:
+    """Calculate precision, recall, F1 for each frame and overall accuracy."""
+    # Filter out "Unknown" predictions from evaluation (v2.16 upgrade)
+    filtered_pairs = [(p, a) for p, a in zip(predictions, actuals) if p.lower() != "unknown"]
+    
+    if not filtered_pairs:
+        # All predictions were "Unknown" - return empty metrics
+        return {
+            'accuracy': 0.0,
+            'frame_metrics': {},
+            'total_samples': len(predictions),
+            'correct_samples': 0,
+            'excluded_unknown': len(predictions)
+        }
+    
+    filtered_predictions, filtered_actuals = zip(*filtered_pairs)
+    
+    # Get unique labels (excluding Unknown)
+    all_labels = sorted(set(filtered_predictions + filtered_actuals))
+    
+    # Calculate per-frame metrics
+    frame_metrics = {}
+    for label in all_labels:
+        tp = sum(1 for p, a in zip(filtered_predictions, filtered_actuals) if p == label and a == label)
+        fp = sum(1 for p, a in zip(filtered_predictions, filtered_actuals) if p == label and a != label)
+        fn = sum(1 for p, a in zip(filtered_predictions, filtered_actuals) if p != label and a == label)
+        
+        precision = tp / (tp + fp) if (tp + fp) > 0 else 0.0
+        recall = tp / (tp + fn) if (tp + fn) > 0 else 0.0
+        f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+        
+        frame_metrics[label] = {
+            'precision': precision,
+            'recall': recall,
+            'f1': f1,
+            'tp': tp,
+            'fp': fp,
+            'fn': fn
+        }
+    
+    # Overall accuracy (excluding Unknown predictions)
+    correct = sum(1 for p, a in zip(filtered_predictions, filtered_actuals) if p == a)
+    accuracy = correct / len(filtered_predictions) if len(filtered_predictions) > 0 else 0.0
+    
+    return {
+        'accuracy': accuracy,
+        'frame_metrics': frame_metrics,
+        'total_samples': len(predictions),
+        'correct_samples': correct,
+        'excluded_unknown': len(predictions) - len(filtered_pairs)
+    }
+
+def print_evaluation_report(metrics: Dict[str, Any], input_file: Path, output_dir: Path, 
+                          concurrency: int, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None):
+    """Print formatted evaluation report to terminal."""
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    
+    print(f"\n📊 Reports → {output_dir}")
+    print(f"📂 Loading data from CSV: {input_file}")
+    
+    # Show processing range info
+    if start is not None or end is not None:
+        range_desc = f"rows {start if start else 1}-{end if end else 'end'}"
+        print(f"✅ Loaded {metrics['total_samples']} examples ({range_desc}).")
+    elif limit:
+        print(f"✅ Loaded {metrics['total_samples']} examples (segments 1-{limit}).")
+    else:
+        print(f"✅ Loaded {metrics['total_samples']} examples.")
+    
+    print(f"🔄 Running evaluation with {concurrency} concurrent threads...")
+    
+    # Show Unknown exclusion info (v2.16 upgrade)
+    excluded_count = metrics.get('excluded_unknown', 0)
+    if excluded_count > 0:
+        evaluated_count = metrics['total_samples'] - excluded_count
+        print(f"🔍 Excluded {excluded_count} 'Unknown' labels from evaluation")
+        print(f"📊 Evaluating {evaluated_count}/{metrics['total_samples']} samples")
+    
+    print(f"\n🎯 OVERALL ACCURACY: {metrics['accuracy']:.2%}")
+    print(f"\n=== Per-Frame Precision / Recall ===")
+    
+    for frame, stats in metrics['frame_metrics'].items():
+        if stats['tp'] + stats['fp'] + stats['fn'] == 0:
+            continue  # Skip frames not present in the data
+            
+        p_str = f"{stats['precision']:.2%}" if stats['precision'] > 0 else "nan%"
+        r_str = f"{stats['recall']:.2%}" if stats['recall'] > 0 else "0.00%"
+        f1_str = f"{stats['f1']:.2%}" if stats['f1'] > 0 else "nan%"
+        
+        print(f"{frame:<12} P={p_str:<8} R={r_str:<8} F1={f1_str:<8} "
+              f"(tp={stats['tp']}, fp={stats['fp']}, fn={stats['fn']})")
+
+def create_comparison_csv(df_original: pd.DataFrame, results: List[Dict], 
+                         output_dir: Path) -> Path:
+    """Create CSV comparing gold standard to pipeline results."""
+    # Convert results to DataFrame for easier merging
+    df_results = pd.DataFrame(results)
+    
+    # Merge with original data
+    df_comparison = df_original.merge(
+        df_results[['StatementID', 'Pipeline_Result']], 
+        on='StatementID', 
+        how='inner'
+    )
+    
+    # Rename columns for clarity
+    df_comparison = df_comparison.rename(columns={
+        'Gold Standard': 'Gold_Standard'
+    })
+    
+    # Add mismatch column
+    df_comparison['Mismatch'] = df_comparison['Gold_Standard'] != df_comparison['Pipeline_Result']
+    
+    # Save comparison CSV
+    comparison_path = output_dir / "comparison_with_gold_standard.csv"
+    df_comparison.to_csv(comparison_path, index=False)
+    
+    return comparison_path
+
+def print_mismatches(df_comparison: pd.DataFrame):
+    """Print detailed mismatch information."""
+    mismatches = df_comparison[df_comparison['Mismatch'] == True]
+    
+    if len(mismatches) == 0:
+        print(f"🎉 Perfect match! All {len(df_comparison)} statements consistent with gold standard.")
+        return
+    
+    print(f"\n❌ INCONSISTENT STATEMENTS ({len(mismatches)}/{len(df_comparison)}):")
+    print("=" * 80)
+    
+    for _, row in mismatches.iterrows():
+        print(f"StatementID: {row['StatementID']}")
+        print(f"Text: {row['Statement Text']}")
+        print(f"Gold Standard: {row['Gold_Standard']}")
+        print(f"Pipeline Result: {row['Pipeline_Result']}")
+        print(f"Inconsistency: Expected '{row['Gold_Standard']}' but got '{row['Pipeline_Result']}'")
+        print("-" * 80)
+
+def reorganize_traces_by_match_status(trace_dir: Path, df_comparison: pd.DataFrame):
+    """
+    Reorganize trace files into match/mismatch subdirectories based on evaluation results.
+    Also creates consolidated files for easy analysis.
+    
+    Args:
+        trace_dir: Directory containing the original trace files
+        df_comparison: DataFrame with comparison results including 'Mismatch' column
+    """
+    # Create subdirectories
+    match_dir = trace_dir / "traces_tot_match"
+    mismatch_dir = trace_dir / "traces_tot_mismatch"
+    match_dir.mkdir(exist_ok=True)
+    mismatch_dir.mkdir(exist_ok=True)
+    
+    moved_files = {"match": 0, "mismatch": 0}
+    mismatch_traces = []  # For consolidation
+    match_traces = []     # For consolidation
+    
+    for _, row in df_comparison.iterrows():
+        statement_id = row['StatementID']
+        is_mismatch = row['Mismatch']
+        
+        # Find the original trace file
+        original_file = trace_dir / f"{statement_id}.jsonl"
+        
+        if original_file.exists():
+            # Read trace entries for consolidation
+            trace_entries = []
+            try:
+                with open(original_file, 'r', encoding='utf-8') as f:
+                    for line in f:
+                        line = line.strip()
+                        if line:
+                            trace_entries.append(json.loads(line))
+            except Exception as e:
+                logging.warning(f"Error reading trace file {original_file}: {e}")
+                trace_entries = []
+            
+            if is_mismatch:
+                # Move to mismatch directory
+                dest_file = mismatch_dir / f"{statement_id}.jsonl"
+                shutil.move(str(original_file), str(dest_file))
+                moved_files["mismatch"] += 1
+                
+                # Add to mismatch consolidation
+                mismatch_traces.append({
+                    "statement_id": statement_id,
+                    "expected": row['Gold_Standard'],
+                    "predicted": row['Pipeline_Result'],
+                    "statement_text": row.get('Statement Text', ''),
+                    "trace_count": len(trace_entries),
+                    "full_trace": trace_entries
+                })
+            else:
+                # Move to match directory
+                dest_file = match_dir / f"{statement_id}.jsonl"
+                shutil.move(str(original_file), str(dest_file))
+                moved_files["match"] += 1
+                
+                # Add to match consolidation
+                match_traces.append({
+                    "statement_id": statement_id,
+                    "expected": row['Gold_Standard'],
+                    "predicted": row['Pipeline_Result'],
+                    "statement_text": row.get('Statement Text', ''),
+                    "trace_count": len(trace_entries),
+                    "full_trace": trace_entries
+                })
+    
+    # Create consolidated files
+    if mismatch_traces:
+        mismatch_consolidated_path = mismatch_dir / "consolidated_mismatch_traces.jsonl"
+        with open(mismatch_consolidated_path, 'w', encoding='utf-8') as f:
+            for entry in mismatch_traces:
+                f.write(json.dumps(entry, ensure_ascii=False) + '\n')
+        logging.info(f"📋 Created consolidated mismatch file: {mismatch_consolidated_path} ({len(mismatch_traces)} entries)")
+    
+    if match_traces:
+        match_consolidated_path = match_dir / "consolidated_match_traces.jsonl"
+        with open(match_consolidated_path, 'w', encoding='utf-8') as f:
+            for entry in match_traces:
+                f.write(json.dumps(entry, ensure_ascii=False) + '\n')
+        logging.info(f"📋 Created consolidated match file: {match_consolidated_path} ({len(match_traces)} entries)")
+    
+    logging.info(f"📁 Reorganized traces: {moved_files['match']} matches → {match_dir}")
+    logging.info(f"📁 Reorganized traces: {moved_files['mismatch']} mismatches → {mismatch_dir}")
+    
+    return moved_files
+
+START_TIME = time.perf_counter()
+
+# Helper to log hop progress
+def _log_hop(hop_idx: int, active: int, regex_yes: int):
+    elapsed = time.perf_counter() - START_TIME
+    msg = f"Hop {hop_idx:02} → active:{active:<4} regex_yes:{regex_yes:<3} ({elapsed:5.1f}s)"
+    logging.info(msg)
+    # Remove duplicate tqdm.write and print to avoid doubled output
+    # try:
+    #     from tqdm import tqdm  # local import to avoid hard dep elsewhere
+    #     tqdm.write(msg)
+    # except Exception:
+    #     print(msg) 
+
+## 0025. multi_coder_analysis\utils\prompt_loader.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Utility to load hop prompts and their YAML front-matter.
+
+A prompt file **may** begin with a YAML front-matter block delimited by
+
+---\n
+<yaml>\n
+---\n
+If present, the front-matter is parsed with `yaml.safe_load` and removed from
+what is returned to the caller.  The helper therefore guarantees that the
+string you pass to the LLM never contains header metadata while still making
+that metadata available as a Python dict for downstream logic.
+
+The helper is tolerant: if the file has no front-matter or if the YAML cannot
+be parsed, it silently falls back to an empty meta-dict and returns the whole
+file contents as the prompt body.
+
+Example
+-------
+>>> from pathlib import Path
+>>> body, meta = load_prompt_and_meta(Path("prompts/hop_Q01.txt"))
+>>> print(meta["hop"], meta["short_name"])
+1 IntensifierRiskAdj
+"""
+
+from pathlib import Path
+from typing import Tuple, Dict, Any
+import re
+
+import yaml
+
+# Regex to match leading front-matter.  We anchor at the very start of the
+# file so that only a header at the top is considered.
+_FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n?", re.DOTALL)
+
+
+def load_prompt_and_meta(path: Path) -> Tuple[str, Dict[str, Any]]:
+    """Return *(prompt_body, meta_dict)* for the file at *path*.
+
+    The function never raises on YAML errors – instead it returns an empty
+    dictionary so that the calling code can proceed unaffected.
+    """
+    text = path.read_text(encoding="utf-8")
+
+    m = _FM_RE.match(text)
+    if not m:  # No front-matter found – send the entire file to the model.
+        return text, {}
+
+    meta_yaml = m.group(1)
+    try:
+        meta: Dict[str, Any] = yaml.safe_load(meta_yaml) or {}
+    except Exception:
+        meta = {}
+
+    body = text[m.end() :]  # strip the header including closing delimiter
+    return body, meta 
+
+## 0026. multi_coder_analysis\utils\tracing.py
+----------------------------------------------------------------------------------------------------
+"""
+Lightweight helper for writing per-segment, per-hop JSON-Lines audit files.
+"""
+import json
+from pathlib import Path
+from typing import Dict, Any
+
+def write_trace_log(trace_dir: Path, statement_id: str, trace_entry: Dict[str, Any], subdirectory: str = ""):
+    """
+    Appends a single JSON line entry to the trace file for a given statement.
+
+    Args:
+        trace_dir: The base directory for all trace files (e.g., .../traces/).
+        statement_id: The ID of the statement, used for the filename.
+        trace_entry: The dictionary to be written as a JSON line.
+        subdirectory: Optional subdirectory name (e.g., "match", "mismatch").
+    """
+    try:
+        # Determine final trace directory (with optional subdirectory)
+        if subdirectory:
+            final_trace_dir = trace_dir / subdirectory
+        else:
+            final_trace_dir = trace_dir
+            
+        # Ensure the trace directory exists.
+        final_trace_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Define the full path for the statement's trace file.
+        trace_file_path = final_trace_dir / f"{statement_id}.jsonl"
+
+        # Append the JSON line to the file.
+        with open(trace_file_path, 'a', encoding='utf-8') as f:
+            f.write(json.dumps(trace_entry, ensure_ascii=False) + '\n')
+            
+    except Exception as e:
+        # Using print here as this is a non-critical utility and shouldn't crash the main pipeline.
+        # A more advanced implementation could use the main logger.
+        print(f"Warning: Could not write trace log for {statement_id}. Error: {e}") 
+
+def write_batch_trace(trace_dir: Path, batch_id: str, hop_idx: int, batch_payload: Dict[str, Any]):
+    """Write a single JSON file that captures the full prompt/response/CoT for a batch-level LLM call.
+
+    Args:
+        trace_dir: Base directory for trace output (same as for per-segment logs).
+        batch_id: Unique identifier for this batch (e.g. "batch_02_123456").
+        hop_idx: The hop/question number in the ToT chain.
+        batch_payload: Dictionary with keys like 'prompt', 'response', 'thoughts', 'segments'.
+    """
+    try:
+        # Keep batch traces separate so they do not clutter per-segment files
+        batch_dir = trace_dir / "batch_traces"
+        batch_dir.mkdir(parents=True, exist_ok=True)
+
+        file_path = batch_dir / f"{batch_id}_Q{hop_idx:02}.json"
+        with open(file_path, "w", encoding="utf-8") as f:
+            json.dump(batch_payload, f, ensure_ascii=False, indent=2)
+    except Exception as e:
+        print(f"Warning: Could not write batch trace for {batch_id}. Error: {e}") 
+
+## 0027. tests\conftest.py
+----------------------------------------------------------------------------------------------------
+"""Pytest configuration to ensure the project root is importable.
+
+Many CI runners execute tests from arbitrary working directories; make sure
+`multi_coder_analysis` can always be imported regardless of where pytest was
+invoked.
+"""
+
+import sys
+from pathlib import Path
+
+# Append the repository root (one level up from the tests directory) to
+# sys.path if it is not already there.
+_ROOT = Path(__file__).resolve().parents[1]
+if str(_ROOT) not in sys.path:
+    sys.path.insert(0, str(_ROOT))
+
+# ---------------------------------------------------------------------------
+# Compatibility for older unit tests that call `monkeypatch.setitem(..., raising=False)`
+# on pytest versions where that kwarg is not accepted. Provide a proxy method
+# that silently ignores the flag so the call succeeds.
+# ---------------------------------------------------------------------------
+
+from _pytest.monkeypatch import MonkeyPatch  # type: ignore
+
+
+def _setitem_compat(self, mapping, name, value, raising=True):  # noqa: D401
+    """Drop the *raising* kwarg for backward compatibility."""
+    mapping[name] = value
+
+# Patch only if method signature lacks *raising* (older pytest will accept ours too)
+if "_original_setitem" not in dir(MonkeyPatch):
+    MonkeyPatch._original_setitem = MonkeyPatch.setitem  # type: ignore[attr-defined]
+    MonkeyPatch.setitem = _setitem_compat  # type: ignore[assignment] 
+
+## 0028. tests\test_prompt_assembly.py
+----------------------------------------------------------------------------------------------------
+"""Tests the _assemble_prompt helper for header/footer plumbing."""
+
+import importlib
+from pathlib import Path
+import textwrap
+
+from multi_coder_analysis.hop_context import HopContext
+
+
+PROMPT_BODY = textwrap.dedent(
+    """
+    ### Segment (StatementID: {{statement_id}})
+    {{segment_text}}
+
+    Some question…
+    """
+)
+
+HEADER = "# HEADER"
+FOOTER = "# FOOTER"
+
+
+def test_prompt_assembly(monkeypatch, tmp_path: Path):
+    prompts_dir = tmp_path / "prompts"
+    prompts_dir.mkdir()
+    (prompts_dir / "GLOBAL_HEADER.txt").write_text(HEADER, encoding="utf-8")
+    (prompts_dir / "GLOBAL_FOOTER.txt").write_text(FOOTER, encoding="utf-8")
+    (prompts_dir / "hop_Q01.txt").write_text(PROMPT_BODY, encoding="utf-8")
+
+    import multi_coder_analysis.run_multi_coder_tot as tot
+    monkeypatch.setattr(tot, "PROMPTS_DIR", prompts_dir, raising=False)
+
+    # Force reload so module-level constants re-resolve paths
+    tot = importlib.reload(tot)  # noqa: F811
+
+    ctx = HopContext(statement_id="ABC123", segment_text="hello world")
+    ctx.q_idx = 1
+
+    sys_prompt, user_prompt = tot._assemble_prompt(ctx)  # pylint: disable=protected-access
+
+    assert HEADER in sys_prompt
+    assert FOOTER in user_prompt
+    assert "ABC123" in user_prompt
+    assert "hello world" in user_prompt 
+
+## 0029. tests\test_regex_engine_basic.py
+----------------------------------------------------------------------------------------------------
+"""Basic smoke test for regex_engine.match."""
+
+from multi_coder_analysis.regex_engine import (
+    match,
+    COMPILED_RULES,
+)
+from multi_coder_analysis.regex_rules import PatternInfo
+from multi_coder_analysis.hop_context import HopContext
+import regex as re
+
+
+def test_regex_engine_positive_hit(monkeypatch):
+    """Inject a synthetic live rule and assert deterministic yes."""
+    rule = PatternInfo(
+        hop=1,
+        name="UnitTestRule",
+        yes_frame="Alarmist",
+        yes_regex=re.compile(r"unit-test-cue", re.I),
+        mode="live",
+    )
+
+    # Monkey-patch compiled rule table
+    monkeypatch.setitem(COMPILED_RULES, 1, [rule])
+
+    ctx = HopContext(statement_id="UT_001", segment_text="This is a UNIT-TEST-CUE.")
+    ctx.q_idx = 1
+
+    res = match(ctx)
+    assert res is not None, "Rule should have fired"
+    assert res["answer"] == "yes"
+    assert res["frame"] == "Alarmist" 
+
+## 0030. tests\test_regex_yaml_loader.py
+----------------------------------------------------------------------------------------------------
+"""Verifies that regex rules are loaded correctly from hop_patterns.yml."""
+
+import importlib
+import textwrap
+from pathlib import Path
+
+
+yaml_stub = textwrap.dedent(
+    """
+    3:
+      - name: TestRule
+        mode: live
+        frame: Alarmist
+        pattern: |-
+          \\bjust\\s+a\\s+stub\\b
+    """
+)
+
+
+def test_yaml_loader(monkeypatch, tmp_path: Path):
+    # Create expected folder hierarchy …/regex/hop_patterns.yml
+    regex_dir = tmp_path / "regex"
+    regex_dir.mkdir()
+    pattern_file = regex_dir / "hop_patterns.yml"
+    pattern_file.write_text(yaml_stub, encoding="utf-8")
+
+    import multi_coder_analysis.regex_rules as rr
+
+    # Redirect loader to our temp YAML and reload
+    monkeypatch.setattr(rr, "PATTERN_FILE", pattern_file, raising=False)
+    rr = importlib.reload(rr)
+
+    rule = next(r for r in rr.RAW_RULES if r.name == "TestRule")
+    assert rule.hop == 3
+    assert rule.mode == "live"
+    assert rule.yes_frame == "Alarmist"
+    assert rule.yes_regex.pattern == r"\bjust\s+a\s+stub\b" 
+
+## 0031. unit_tests\test_regex_rules.py
+----------------------------------------------------------------------------------------------------
+import pytest
+
+from multi_coder_analysis.regex_engine import match
+from hop_context import HopContext
+
+
+@pytest.mark.parametrize(
+    "text,hop,expected_frame",
+    [
+        ("The flu is extremely deadly and spreading.", 1, "Alarmist"),
+        ("Officials say situation is fully under control.", 5, "Reassuring"),
+    ],
+)
+def test_positive_regex_matches(text, hop, expected_frame):
+    ctx = HopContext(statement_id="TEST", segment_text=text)
+    ctx.q_idx = hop
+    ans = match(ctx)
+    assert ans is not None, "Expected regex to match"
+    assert ans["answer"] == "yes"
+    assert ans["frame"] == expected_frame 
+
+====================================================================================================
+# End of snapshot — 31 files
