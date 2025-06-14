@@ -34,6 +34,7 @@ except ImportError as e:  # pragma: no cover – test env expects regex to be in
 
 import logging
 import yaml
+import textwrap
 from dataclasses import dataclass, replace
 from typing import List, Dict, Pattern, Optional
 from pathlib import Path
