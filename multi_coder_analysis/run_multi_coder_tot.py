@@ -383,6 +383,7 @@ def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPER
                     raise ValueError("Batch JSON object missing keys")
             batch_ctx.raw_response = content
             batch_ctx.thoughts = provider.get_last_thoughts()
+            batch_ctx.raw_http = raw_text  # type: ignore[attr-defined]
             return parsed
         except Exception as e:
             logging.warning(f"Batch Q{batch_ctx.hop_idx}: attempt {attempt+1} failed: {e}")
@@ -597,6 +598,17 @@ def run_tot_chain_batch(
                 "timestamp": datetime.now().isoformat(),
             }
             write_batch_trace(trace_dir, batch_id, hop_idx, batch_payload)
+
+            # Dump raw HTTP body if available
+            raw_http_text = getattr(batch_ctx, 'raw_http', None)
+            if raw_http_text:
+                raw_dir = trace_dir / 'batch_traces'
+                raw_dir.mkdir(parents=True, exist_ok=True)
+                raw_path = raw_dir / f"{batch_id}_Q{hop_idx:02}_raw_http.txt"
+                try:
+                    raw_path.write_text(raw_http_text, encoding='utf-8')
+                except Exception as e:
+                    logging.warning('Could not write raw HTTP trace %s: %s', raw_path, e)
         
         # Return all segments (resolved + unresolved)
         return regex_resolved + unresolved_segments
