@@ -24,7 +24,7 @@
 # ------------------------------------------------------------------
 1:
   - name: IntensifierRiskAdjV2           # unique identifier for Hop 1
-    mode: shadow                         # switch to 'live' if you want short-circuiting
+    mode: live                         # switch to 'live' if you want short-circuiting
     frame: Alarmist
     pattern: |-
       \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
