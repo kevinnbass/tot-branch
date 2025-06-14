@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('not impossible', 'pretty rare') without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verb 'get' and states 'pretty rare', which is a low-risk descriptor.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'pretty rare' is a low-risk evaluation but lacks an intensifier required for Q5 Reassuring.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'pretty rare', which is an explicit low-risk statement (Q5), not Q6.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a negation ('not impossible') but it is followed by a low-risk framing ('pretty rare'), which acts as a calming cue.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "States a low-risk fact neutrally ('pretty rare'), not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment quotes an opinion on rarity, not specific numerical metrics or prices.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('it's been pretty rare'), failing the 'WITHOUT' condition of Q10.", "method": "llm_batch"}
+{"Q": 11, "answer": "yes", "rationale": "Quote 'it's been pretty rare' uses 'pretty' to intensify 'rare', explicitly framing a low-risk fact for calm. ||FRAME=Reassuring", "method": "llm_batch"}
+{"Q": 12, "answer": "no", "rationale": "Contains low-risk descriptor 'pretty rare' from a quoted source. Q5 Reassuring.", "method": "llm_batch"}

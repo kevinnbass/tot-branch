@@ -1,0 +1,12 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 3, "answer": "no", "rationale": "Uses the psychological verb 'reigniting fears' which is neutral unless paired with vivid intensifier or concrete realised harm.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "'reigniting fears' describes a public reaction, not a calming cue from the source.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions confirmation of bird flu and reigniting fears but does not use a minimiser + scale contrast for reassurance.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation. 'reigniting fears' is a psychological verb without intensification or scale.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports confirmation of virus presence and mentions 'reigniting fears' (psychological verb, Neutral by guardrail).", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment uses 'reigniting fears' which is not standard metric reporting.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports confirmation and 'reigniting fears', not speculation about future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement ('USDA... confirmed') is factual. 'reigniting fears' is authorial framing, not part of the quote/statement, and not intensified per psychological verb rule.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "Uses 'reigniting fears' which describes a public reaction, not amplified realised harm. Neutral per context guard.", "method": "llm_batch"}

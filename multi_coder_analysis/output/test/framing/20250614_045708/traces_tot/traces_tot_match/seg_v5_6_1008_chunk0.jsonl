@@ -1,0 +1,12 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('detected the presence') without high-potency verbs or metaphors.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Uses the plain outcome verb 'detected' without specific scale/impact information ('undisclosed number').", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports detection details without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions detection in an undisclosed number of birds but does not use a minimiser + scale contrast for reassurance.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports detection of the virus, not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports detection in an undisclosed number of birds, not specific numerical metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports detection of the virus, not speculation about future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement ('The USDA said') states a fact without framing language.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of source, detection, and location without explicit framing cues.", "method": "llm_batch"}
