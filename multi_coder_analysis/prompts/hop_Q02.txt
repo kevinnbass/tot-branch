@@ -84,4 +84,9 @@ Only count it when the vivid verb modifies a **direct impact noun** of the threa
 ```
 
 ### Your JSON Reply:
-```
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
