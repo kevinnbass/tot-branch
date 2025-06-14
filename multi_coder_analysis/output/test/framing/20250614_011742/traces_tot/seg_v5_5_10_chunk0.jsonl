@@ -5,3 +5,5 @@
 {"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 7, "answer": "no", "rationale": "Segment contains no negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports a factual geographic detail, not capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics 'Another 34 farms' and distance '10-kilometer (6 mile) radius' factually.", "method": "llm_batch"}

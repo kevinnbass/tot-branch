@@ -6,3 +6,6 @@
 {"Q": 5, "answer": "no", "rationale": "The segment reports countries halting imports, which is not a calming cue.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment discusses potential burden and costs but contains no minimiser or scale contrast for reassurance.", "method": "llm_batch"}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Describes a potential negative outcome (burden on wallets), not a capability, preparedness, or safeguard.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment uses a risk adjective applied to economics (\"onerous costs\").", "method": "llm_batch"}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "regex": {"rule": "ReliefSpeculation", "span": [117, 122], "captures": ["could"]}}

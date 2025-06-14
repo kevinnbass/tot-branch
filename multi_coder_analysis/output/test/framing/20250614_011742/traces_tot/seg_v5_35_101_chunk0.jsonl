@@ -5,3 +5,5 @@
 {"Q": 5, "answer": "no", "rationale": "The segment reports a large infected flock size but contains no explicit calming cue.", "method": "llm_batch"}
 {"Q": 6, "answer": "no", "rationale": "The segment states a number of chickens but does not use a minimiser with scale contrast.", "method": "llm_batch"}
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 8, "answer": "no", "rationale": "States a negative fact (next largest infected flock), not a capability, preparedness, or safeguard.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "\"next on the list, with more than 2.7 million chickens\" reports a numerical metric with standard phrasing.", "method": "llm_batch"}
