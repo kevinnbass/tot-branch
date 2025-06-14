@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "'contracted' is plain outcome; 'cull' is containment; 'spread' not paired with scale/impact on realised threat.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "The segment reports detection and culling but contains no explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [106, 115], "captures": []}}

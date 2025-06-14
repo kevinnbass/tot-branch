@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "'quarantined', 'killed off', and 'detected' are containment/plain verbs, which are neutral.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "The segment reports actions taken and absence of human cases (bare positive fact), but no explicit calming cue.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment uses negation ('no human cases') but not a minimiser + scale contrast pattern.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "'no human cases... have been detected' is a bare negation (evidence negation).", "method": "llm_batch"}

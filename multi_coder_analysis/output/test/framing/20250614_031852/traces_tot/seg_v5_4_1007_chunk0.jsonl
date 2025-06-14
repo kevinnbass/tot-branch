@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment contains negation ('does not present', 'has yet to be detected'), not a Q3 cue.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "Contains 'does not present an immediate public health concern,' which is a bare negation excluded from Q5.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains reassuring language ('does not present an immediate public health concern', 'has yet to be detected') but not the Q6 pattern.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "regex": {"rule": "BareNegationHealthConcern", "span": [55, 106], "captures": []}}

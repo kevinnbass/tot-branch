@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment contains negation ('do not present'), not a Q3 cue.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
 {"Q": 5, "answer": "no", "rationale": "Contains 'do not present an immediate public health concern,' which is a bare negation excluded from Q5.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains reassuring language ('do not present an immediate public health concern') which is Q5, not Q6.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "'do not \"present an immediate public health concern\"' is a bare negation without additional calming language.", "method": "llm_batch"}
