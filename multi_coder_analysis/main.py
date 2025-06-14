@@ -150,6 +150,29 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
         except Exception as e:
             logging.warning("Could not copy hop_patterns.yml (%s): %s", patterns_src, e)
 
+        # ------------------------------------------------------------------
+        # ALSO dump the *compiled* regex table (one line per rule) so that
+        # reviewers can see *exactly* what the engine ran, after any
+        # compile-time rewrites/downgrades.  Creates an easy-to-read TSV
+        # called "compiled_rules.txt" in the same output folder.
+        # ------------------------------------------------------------------
+        try:
+            from multi_coder_analysis import regex_rules as _rr
+
+            dump_path = base_output_dir / "compiled_rules.txt"
+            with dump_path.open("w", encoding="utf-8") as fh:
+                fh.write("Hop\tMode\tFrame\tRuleName\tRegex\n")
+
+                # Use RAW_RULES because it contains the compiled PatternInfo
+                # objects (post-processing) in the original ordering.
+                for r in _rr.RAW_RULES:
+                    pattern_str = getattr(r.yes_regex, "pattern", str(r.yes_regex))
+                    fh.write(f"{r.hop}\t{r.mode}\t{r.yes_frame or ''}\t{r.name}\t{pattern_str}\n")
+
+            logging.info("Compiled regex table dumped → %s", dump_path)
+        except Exception as e:
+            logging.warning("Could not write compiled_rules.txt: %s", e)
+
         # Determine input file source
         if args.input:
             # Use user-specified input file
