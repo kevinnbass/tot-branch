@@ -33,6 +33,18 @@ except ImportError:
 except ImportError:
     from run_multi_coder_tot import run_coding_step_tot  # final fallback
 
+# Prompt concatenation utility
+try:
+    from multi_coder_analysis.concat_prompts import concatenate_prompts
+except ImportError:
+    from .concat_prompts import concatenate_prompts  # type: ignore
+
+# Regex rules for compiled dump
+try:
+    from multi_coder_analysis import regex_rules as _rr
+except ImportError:
+    from . import regex_rules as _rr  # type: ignore
+
 __all__ = ["run_permutation_suite"]
 
 # ---------------------------------------------------------------------------
@@ -301,4 +313,57 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
 
     df_votes.to_csv(root_out / "majority_vote_comparison.csv", index=False)
 
-    logging.info("✅ Permutation suite finished. Summary files written to %s", root_out) 
+    logging.info("✅ Permutation suite finished. Summary files written to %s", root_out)
+
+    # ------------------------------------------------------------------
+    # Copy prompt bundle + regex catalogue for auditability
+    # ------------------------------------------------------------------
+    try:
+        prompt_concat_path = concatenate_prompts(
+            prompts_dir="multi_coder_analysis/prompts",
+            output_file=f"concatenated_prompts_{timestamp}.txt",
+            target_dir=root_out,
+        )
+        logging.info("Prompts concatenated → %s", prompt_concat_path)
+    except Exception as e:
+        logging.warning("Could not concatenate prompts: %s", e)
+
+    try:
+        patterns_src = Path("multi_coder_analysis/regex/hop_patterns.yml")
+        shutil.copy(patterns_src, root_out / "hop_patterns.yml")
+        logging.info("Copied hop_patterns.yml to permutation root folder.")
+    except Exception as e:
+        logging.warning("Could not copy hop_patterns.yml: %s", e)
+
+    # Dump compiled regex rules for full transparency (same as main pipeline)
+    try:
+        dump_path = root_out / "compiled_rules.txt"
+        with dump_path.open("w", encoding="utf-8") as fh:
+            fh.write("Hop\tMode\tFrame\tRuleName\tRegex\n")
+            for r in _rr.RAW_RULES:
+                pattern_str = getattr(r.yes_regex, "pattern", str(r.yes_regex))
+                fh.write(f"{r.hop}\t{r.mode}\t{r.yes_frame or ''}\t{r.name}\t{pattern_str}\n")
+        logging.info("Compiled regex table dumped → %s", dump_path)
+    except Exception as e:
+        logging.warning("Could not write compiled_rules.txt: %s", e)
+
+    # ------------------------------------------------------------------
+    # Majority-mismatch consolidated traces (only segments where majority
+    # label differs from gold standard)
+    # ------------------------------------------------------------------
+    try:
+        maj_mismatch_ids = set(df_votes[df_votes["Mismatch"]]["StatementID"]) if "Mismatch" in df_votes.columns else set()
+        if maj_mismatch_ids and concat_path.exists():
+            import json as _json
+            dest_path = root_out / "majority_mismatch_consolidated_traces.jsonl"
+            with dest_path.open("w", encoding="utf-8") as out_fh, concat_path.open("r", encoding="utf-8") as in_fh:
+                for line in in_fh:
+                    try:
+                        obj = _json.loads(line)
+                    except Exception:
+                        continue
+                    if obj.get("statement_id") in maj_mismatch_ids:
+                        out_fh.write(line)
+            logging.info("Majority mismatch traces → %s", dest_path)
+    except Exception as e:
+        logging.warning("Could not create majority mismatch trace file: %s", e) 
