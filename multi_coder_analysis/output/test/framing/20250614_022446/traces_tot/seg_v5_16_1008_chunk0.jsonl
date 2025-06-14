@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment states products 'remain safe for consumers' and describes actions to 'prevent the spread,' neither of which constitutes a high-potency verb or metaphor framing the situation alarmingly.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment contains a Q5 cue ('remain safe') but not a Q3 moderate verb + scale/impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [32, 57], "captures": [null]}}
