@@ -88,6 +88,33 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
 
     df_in = pd.read_csv(source_csv, dtype={"StatementID": str})
 
+    # ------------------------------------------------------------------
+    # Optional subset selection for quick tests (start/end/limit behave the
+    # same way as in the main pipeline).  All filtering happens *before*
+    # we split the data into A/B halves so that both halves come from the
+    # user-requested subset only.
+    # ------------------------------------------------------------------
+    total_rows = len(df_in)
+
+    if args.start is not None or args.end is not None:
+        start_idx = (args.start - 1) if args.start is not None else 0
+        end_idx = args.end if args.end is not None else total_rows
+
+        # clamp indices to safe range
+        start_idx = max(start_idx, 0)
+        end_idx = min(end_idx, total_rows)
+
+        if start_idx >= end_idx:
+            raise ValueError(f"Invalid range: start={args.start} end={args.end} (after bounds check)")
+
+        df_in = df_in.iloc[start_idx:end_idx].copy()
+        logging.info("Subset applied via --start/--end → rows %s-%s (%s statements)",
+                     start_idx + 1, end_idx, len(df_in))
+
+    elif args.limit is not None:
+        df_in = df_in.head(args.limit)
+        logging.info("Subset applied via --limit → first %s rows", len(df_in))
+
     dfA, dfB = _split_halves(df_in)
 
     permutation_metrics = []

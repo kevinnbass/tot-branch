@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_3_15776",
+  "hop_idx": 3,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "Segment does not contain a moderate verb paired with significant scale or impact."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "Segment uses plain outcome verbs ('contracted', 'resulting') which are excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "Segment uses a plain outcome verb ('deaths') which is excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'planning to cull' denotes an intention/plan, not realised impact, and is excluded from Q3."
+    }
+  ],
+  "timestamp": "2025-06-14T11:23:49.668842"
+}

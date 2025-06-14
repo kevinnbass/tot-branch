@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_7_3816",
+  "hop_idx": 7,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "yes",
+      "rationale": "'rare' is a bare negation about the likelihood of infection."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "yes",
+      "rationale": "'no record of Americans contracting' is an evidence negation."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a negative fact but contains no negation."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action being taken but contains no negation."
+    }
+  ],
+  "timestamp": "2025-06-14T11:24:16.025818"
+}
