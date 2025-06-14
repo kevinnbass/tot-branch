@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "The segment mentions 'two farms' but does not use a minimiser ('only', 'just', etc.) in conjunction with a scale contrast.", "method": "llm_batch"}
 {"Q": 7, "answer": "no", "rationale": "The segment contains a negation ('not clear') but it does not negate a risk, impact, evidence, or capability in the sense defined by Q7.", "method": "llm_batch"}
 {"Q": 8, "answer": "no", "rationale": "The segment states facts about the virus and location but does not describe capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics of impact.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment reports on past events and current lack of clarity, not speculation about future relief or improvement.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'deadly' which is a bare risk adjective, treated as Neutral under Q11 rules, not a dominant framed quote.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "regex": {"rule": "NeutralStats", "span": [62, 136], "captures": ["confirm", "deaths"]}}
