@@ -7,3 +7,4 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 8, "answer": "no", "rationale": "Contains active reassurance ('kills bacteria and viruses'), failing the 'without active reassurance' test.", "method": "llm_batch"}
 {"Q": 9, "answer": "no", "rationale": "The segment provides safety advice, not prices or economic metrics.", "method": "llm_batch"}
+{"Q": 10, "answer": "no", "rationale": "The segment provides safety information about the current state ('kills bacteria and viruses'), which is an explicit calming cue.", "method": "llm_batch"}
