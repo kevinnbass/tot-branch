@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment reports a confirmation and uncertainty, not capability or preparedness.", "method": "llm_batch"}
 {"Q": 9, "answer": "no", "rationale": "The segment discusses the cause and location of animal deaths and geographical distances, not prices, economic data, or numerical metrics in an economic context.", "method": "llm_batch"}
 {"Q": 10, "answer": "no", "rationale": "The segment reports past events and lack of clarity, not future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Segment contains attributed speech ('chief veterinarian confirmed') but it does not include any of the specific framed language patterns required by Q11. 'deadly H5N8 virus' is a technical description, not a framing cue per Q11 regex.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "regex": {"rule": "NeutralStats", "span": [62, 136], "captures": ["confirm", "deaths"]}}

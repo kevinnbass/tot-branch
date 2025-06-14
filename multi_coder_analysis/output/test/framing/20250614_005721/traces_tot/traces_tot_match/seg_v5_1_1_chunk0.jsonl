@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment reports past deaths and attributes cause, not capability or preparedness.", "method": "llm_batch"}
 {"Q": 9, "answer": "no", "rationale": "The segment reports a count of animal deaths, not prices, economic data, or numerical metrics in an economic context.", "method": "llm_batch"}
 {"Q": 10, "answer": "no", "rationale": "The segment reports a past event (turkey deaths), not future relief.", "method": "llm_batch"}
+{"Q": 11, "answer": "no", "rationale": "Segment contains attributed speech ('Authorities say') but it does not include any of the specific framed language patterns required by Q11.", "method": "llm_batch"}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of a severe statistic (deaths) and cause without explicit alarmist framing.", "method": "llm_batch"}

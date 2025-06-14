@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_11_17764",
+  "hop_idx": 11,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "Segment does not contain a direct quote or attributed speech."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains attributed speech ('Authorities say') but it does not include any of the specific framed language patterns required by Q11."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains attributed speech ('chief veterinarian confirmed') but it does not include any of the specific framed language patterns required by Q11. 'deadly H5N8 virus' is a technical description, not a framing cue per Q11 regex."
+    }
+  ],
+  "timestamp": "2025-06-14T00:59:09.296517"
+}
