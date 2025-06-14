@@ -15,6 +15,7 @@ from datetime import datetime
 from collections import defaultdict
 import collections
 import re
+import random  # For optional shuffling of segments before batching
 
 import pandas as pd
 from tqdm import tqdm
@@ -395,6 +396,7 @@ def run_tot_chain_batch(
     token_accumulator: dict = None,
     token_lock: threading.Lock = None,
     temperature: float = TEMPERATURE,
+    shuffle_batches: bool = False,
 ) -> List[HopContext]:
     """Process dataframe through the 12-hop chain using batching with optional concurrency."""
     # Build HopContext objects
@@ -554,6 +556,10 @@ def run_tot_chain_batch(
         if not active_contexts:
             break
 
+        # Optional randomisation to spread heavy segments across batches
+        if shuffle_batches:
+            random.shuffle(active_contexts)
+
         # Log hop start from main thread
         _log_hop(hop_idx, len(active_contexts), token_accumulator.get('regex_yes', 0))
 
@@ -591,7 +597,7 @@ def run_tot_chain_batch(
 
 # --- Main Entry Point for `main.py` ---
 
-def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live") -> Tuple[None, Path]:
+def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False) -> Tuple[None, Path]:
     """
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
@@ -723,7 +729,17 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     # --- Processing Path Selection ---
     if batch_size > 1:
         logging.info(f"Processing with batch size = {batch_size} and concurrency={concurrency}")
-        final_contexts = run_tot_chain_batch(df, provider_name, trace_dir, model, batch_size=batch_size, concurrency=concurrency, token_accumulator=token_accumulator, token_lock=token_lock)
+        final_contexts = run_tot_chain_batch(
+            df,
+            provider_name,
+            trace_dir,
+            model,
+            batch_size=batch_size,
+            concurrency=concurrency,
+            token_accumulator=token_accumulator,
+            token_lock=token_lock,
+            shuffle_batches=shuffle_batches,
+        )
         for ctx in final_contexts:
             final_json = {
                 "StatementID": ctx.statement_id,

@@ -233,7 +233,8 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 model=args.model,
                 provider=args.provider,
                 batch_size=args.batch_size,
-                regex_mode=args.regex_mode
+                regex_mode=args.regex_mode,
+                shuffle_batches=args.shuffle_batches,
             )
         except Exception as e:
             logging.error(f"Tree-of-Thought pipeline failed with error: {e}", exc_info=True)
@@ -277,6 +278,7 @@ def main():
     parser.add_argument("--batch-size", "-b", type=int, default=1, help="Number of segments to process in a single LLM call per hop (default: 1)")
     parser.add_argument('--individual-fallback', action='store_true', help='Re-run mismatches individually for batch-sensitivity check')
     parser.add_argument('--regex-mode', choices=['live', 'shadow', 'off'], default='live', help='Regex layer mode: live (default), shadow (evaluate but do not short-circuit), off (disable regex)')
+    parser.add_argument('--shuffle-batches', action='store_true', help='Randomly shuffle active segments before batching at each hop')
 
     args = parser.parse_args()
 
