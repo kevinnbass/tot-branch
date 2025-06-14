@@ -40,6 +40,10 @@ def handle_sigint(sig, frame):
     print()  # Print newline after ^C
     logging.warning("SIGINT received. Attempting graceful shutdown...")
     shutdown_event.set()
+    # Force immediate termination so the user regains control promptly.
+    # Using SystemExit keeps cleanup handlers (atexit) intact but stops
+    # further execution even if worker threads are busy.
+    raise SystemExit(130)  # 130 is the conventional exit code for SIGINT
 
 # --- Configuration Loading ---
 def load_config(config_path):
