@@ -612,6 +612,87 @@ def run_tot_chain_batch(
                 except Exception as e:
                     logging.warning('Could not write raw HTTP trace %s: %s', raw_path, e)
 
+            # --------------------------------------------------------------
+            # Retry path for any segments that failed to return a response
+            # --------------------------------------------------------------
+            MAX_MISS_RETRY = 3
+            missing_ctxs = [c for c in unresolved_segments if c.statement_id not in sid_to_ctx or all(r.get("segment_id") != c.statement_id for r in batch_responses)]
+
+            for retry_idx in range(1, MAX_MISS_RETRY + 1):
+                if not missing_ctxs:
+                    break  # all accounted for
+
+                retry_batch_id = f"{batch_id}_r{retry_idx}"
+                for ctx in missing_ctxs:
+                    ctx.batch_id = retry_batch_id  # type: ignore[attr-defined]
+
+                retry_ctx = BatchHopContext(batch_id=retry_batch_id, hop_idx=hop_idx, segments=missing_ctxs)
+
+                provider_retry = _provider_factory()
+                retry_resps = _call_llm_batch(retry_ctx, provider_retry, model, temperature)
+
+                # token accounting
+                usage_r = provider_retry.get_last_usage()
+                if usage_r and token_lock:
+                    with token_lock:
+                        token_accumulator['prompt_tokens'] += usage_r.get('prompt_tokens', 0)
+                        token_accumulator['response_tokens'] += usage_r.get('response_tokens', 0)
+                        token_accumulator['thought_tokens'] += usage_r.get('thought_tokens', 0)
+                        token_accumulator['total_tokens'] += usage_r.get('total_tokens', 0)
+
+                # Map again
+                sid_to_ctx_retry = {c.statement_id: c for c in missing_ctxs}
+                new_missing = []
+
+                for r_obj in retry_resps:
+                    sid_r = str(r_obj.get("segment_id", "")).strip()
+                    ctx_r = sid_to_ctx_retry.get(sid_r)
+                    if ctx_r is None:
+                        unknown_responses.append(r_obj)
+                        continue
+                    answer_r = str(r_obj.get("answer", "uncertain")).lower().strip()
+                    rationale_r = str(r_obj.get("rationale", "No rationale provided"))
+
+                    trace_entry_r = {
+                        "Q": hop_idx,
+                        "answer": answer_r,
+                        "rationale": rationale_r,
+                        "method": "llm_batch_retry",
+                        "retry": retry_idx,
+                        "batch_id": retry_batch_id,
+                        "batch_size": ctx_r.batch_size,
+                        "batch_pos": ctx_r.batch_pos,
+                    }
+                    write_trace_log(trace_dir, ctx_r.statement_id, trace_entry_r)
+
+                    ctx_r.analysis_history.append(f"Q{hop_idx}: {answer_r} (retry{retry_idx})")
+                    ctx_r.reasoning_trace.append(trace_entry_r)
+
+                    if answer_r == "yes" and hop_idx in Q_TO_FRAME:
+                        ctx_r.final_frame = Q_TO_FRAME[hop_idx]
+                        ctx_r.is_concluded = True
+                # dump retry batch trace and raw http
+                retry_payload = {
+                    "batch_id": retry_batch_id,
+                    "hop_idx": hop_idx,
+                    "segment_count": len(missing_ctxs),
+                    "responses": retry_resps,
+                    "timestamp": datetime.now().isoformat(),
+                }
+                write_batch_trace(trace_dir, retry_batch_id, hop_idx, retry_payload)
+                raw_http_retry = getattr(retry_ctx, 'raw_http', None)
+                if raw_http_retry:
+                    raw_path_r = trace_dir / 'batch_traces' / f"{retry_batch_id}_Q{hop_idx:02}_raw_http.txt"
+                    try:
+                        raw_path_r.write_text(raw_http_retry, encoding='utf-8')
+                    except Exception as e:
+                        logging.warning('Could not write raw HTTP retry trace %s: %s', raw_path_r, e)
+
+                # determine still missing
+                missing_ctxs = [c for c in missing_ctxs if not any(resp.get('segment_id') == c.statement_id for resp in retry_resps)]
+
+            # If still missing after retries, they'll retain fallback uncertain entry set earlier
+
             # Dump residual unknown responses if any
             if unknown_responses:
                 import json as _json
