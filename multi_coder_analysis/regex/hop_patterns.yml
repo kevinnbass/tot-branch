@@ -19,45 +19,6 @@
 # • Keep ordering by hop → pattern name; the engine preserves this order.
 # ------------------------------------------------------------------
 
-1:
-  - name: IntensifierRiskAdj
-    mode: live
-    frame: Alarmist
-    pattern: |-
-      \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
-          |very|deadlier|more|extremely|severely|so|particularly|frighteningly|definitely|certainly)  
-          (?:\s+\w+){0,3}\s+
-      (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
-      \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
-      \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
-      \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
-
-2:
-  - name: HighPotencyVerb
-    mode: live
-    frame: Alarmist
-    pattern: |-
-      \b(?: ravaged|devastated|skyrocketed|plummeted|crashed|nosedived|
-            tanked|slaughtered|exploding|raging|tearing\sthrough|
-            overwhelmed|crippling|
-            soar(?:ed|ing)?(?=[^.]{0,20}\b
-                  (?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|
-                   production|output|supply|shortages?)\b)|
-            (?:most|record(?:-breaking)?|worst)\s+\w{0,12}?\s+
-                  (?:disaster|crisis|outbreak|catastrophe|calamity)|
-             (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b)|
-               (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)\b[^.]{0,40}on\s+high\s+alert|
-               ^[^.]{0,60}\bon\s+high\s+alert\b
-             )
-      ) \b|
-      \b(?:spark(?:ing)?|stoke(?:s|d|ing)?|fuel(?:s|ed|ing)?|
-          raise(?:s|d|ing)?\s+(?:public|consumer|community)\s+
-          (?:fear|fears|concern|concerns|panic))\b[^.]{0,50}\b
-          (?:outbreak|virus|flu|disease|threat|risk|danger|loss(?:es)?)\b|
-      \bworst[-\s]?ever\s+(?:outbreak|crisis|disaster|catastrophe)\b|
-      \b(?:battered|pummell?ed)\b(?=[^.]{0,25}\b(?:flock|farm|sector|supply|economy|community)\b)|
-      \bperfect\s+storm\b[^.]{0,40}\b(?:outbreak|virus|flu|disease|threat|crisis|danger)\b
-
 3:
   - name: ModerateVerbPlusScale
     mode: live
