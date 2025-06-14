@@ -72,10 +72,7 @@ def concatenate_prompts(
                         content = infile.read().strip()
                         outfile.write(content)
                         
-                        # Append footer to hop files (files starting with "hop_")
-                        if prompt_file.name.startswith("hop_") and global_footer:
-                            outfile.write("\n\n")
-                            outfile.write(global_footer)
+                        # Footer is added during live prompt construction; omit here for cleaner concatenation
                         
                         outfile.write("\n\n")
                 except Exception as e:
