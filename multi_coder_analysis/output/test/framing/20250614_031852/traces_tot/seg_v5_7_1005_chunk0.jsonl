@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The quote expresses sentiment and preparedness, not high-potency verbs or metaphors framing the event.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "Quote about feelings/hopes/preparedness; no moderate verb + scale/impact on realised threat.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [3, 16], "captures": [null]}}
