@@ -297,6 +297,10 @@ def main():
     parser.add_argument('--permutations', action='store_true',
                         help='Run the eight-order permutation sweep instead of a single straight pass')
 
+    # Parallel processes for permutation suite
+    parser.add_argument('--perm-workers', type=int, default=1,
+                        help='Number of permutations to execute in parallel (process-based). Default 1 (serial).')
+
     args = parser.parse_args()
 
     # --- Validate Arguments ---

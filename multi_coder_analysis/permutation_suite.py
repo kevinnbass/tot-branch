@@ -17,9 +17,11 @@ from __future__ import annotations
 import json
 import logging
 import shutil
+import pickle
 from datetime import datetime
 from pathlib import Path
 from typing import List, Tuple
+from concurrent.futures import ProcessPoolExecutor, as_completed
 
 import pandas as pd
 
@@ -117,51 +119,121 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
 
     dfA, dfB = _split_halves(df_in)
 
-    permutation_metrics = []
-    mismatch_union_rows = []
+    permutation_metrics: List[dict] = []
+    mismatch_union_rows: List[pd.DataFrame] = []
 
-    # ----------------------------------------------------------------------
-    # Loop through permutations
-    # ----------------------------------------------------------------------
-    for tag, df_perm in _permute(dfA, dfB):
-        logging.info("🔄 Running permutation %s (rows=%s)", tag, len(df_perm))
+    # ------------------------------------------------------------------
+    # Helper to run a single permutation – defined at top level so that it
+    # can be pickled by multiprocessing on Windows.
+    # ------------------------------------------------------------------
+
+    def _worker(tag: str, df_pickle: bytes, root_out_str: str, cfg_dict: dict, worker_args: dict):  # noqa: D401
+        """Run one permutation inside its own process.
+
+        Parameters are kept pickle-friendly (bytes / dict / str) so that the
+        default 'spawn' start method on Windows works.
+        """
+        import pandas as _pd  # local import to avoid cross-process state
+        import logging as _logging, json as _json
+        from pathlib import Path as _Path
+
+        # Minimal console logging inside worker
+        _logging.basicConfig(level=_logging.INFO, format=f"[{tag}] %(asctime)s %(levelname)s %(message)s")
+
+        df_perm = pickle.loads(df_pickle)
+        root_out = _Path(root_out_str)
         perm_out = root_out / tag
         perm_out.mkdir(exist_ok=True)
 
         tmp_csv = perm_out / f"input_{tag}.csv"
         df_perm.to_csv(tmp_csv, index=False)
 
-        # ----- Run existing ToT pipeline (single pass) ----- #
-        _, _ = run_coding_step_tot(
-            config,
+        from multi_coder_analysis.run_multi_coder_tot import run_coding_step_tot  # safe inside worker
+
+        # Unpack worker_args
+        run_coding_step_tot(
+            cfg_dict,
             tmp_csv,
             perm_out,
             limit=None,
             start=None,
             end=None,
-            concurrency=args.concurrency,
-            model=args.model,
-            provider=args.provider,
-            batch_size=args.batch_size,
-            regex_mode=args.regex_mode,
-            shuffle_batches=args.shuffle_batches,
+            concurrency=worker_args["concurrency"],
+            model=worker_args["model"],
+            provider=worker_args["provider"],
+            batch_size=worker_args["batch_size"],
+            regex_mode=worker_args["regex_mode"],
+            shuffle_batches=worker_args["shuffle_batches"],
         )
 
-        # Accuracy measurement when gold present
+        # After run, compute per-mutation accuracy if gold present
         comp_csv = perm_out / "comparison_with_gold_standard.csv"
         if comp_csv.exists():
-            df_comp = pd.read_csv(comp_csv)
+            df_comp = _pd.read_csv(comp_csv)
             acc = 1.0 - df_comp["Mismatch"].mean()
-            permutation_metrics.append({
+            summary = {
                 "tag": tag,
                 "accuracy": acc,
                 "mismatch_count": int(df_comp["Mismatch"].sum()),
-            })
+            }
+        else:
+            summary = {
+                "tag": tag,
+                "accuracy": None,
+                "mismatch_count": None,
+            }
 
-            # Collect mismatches for global aggregation
-            mismatches = df_comp[df_comp["Mismatch"]].copy()
-            mismatches["perm_tag"] = tag
-            mismatch_union_rows.append(mismatches)
+        # Return summary plus mismatches for aggregation
+        miss_rows = None
+        if comp_csv.exists():
+            miss_rows = _pd.read_csv(comp_csv)
+            miss_rows = miss_rows[miss_rows.Mismatch].copy()
+            miss_rows["perm_tag"] = tag
+
+        return summary, miss_rows
+
+    # ------------------------------------------------------------------
+    # Dispatch permutations (serial or parallel)
+    # ------------------------------------------------------------------
+
+    perm_jobs = _permute(dfA, dfB)
+
+    worker_args = {
+        "concurrency": args.concurrency,
+        "model": args.model,
+        "provider": args.provider,
+        "batch_size": args.batch_size,
+        "regex_mode": args.regex_mode,
+        "shuffle_batches": args.shuffle_batches,
+    }
+
+    if getattr(args, "perm_workers", 1) <= 1:
+        # Serial execution (original behaviour)
+        for tag, df_perm in perm_jobs:
+            logging.info("🔄 Running permutation %s (rows=%s)", tag, len(df_perm))
+            summary, miss = _worker(tag, pickle.dumps(df_perm), str(root_out), config, worker_args)
+            permutation_metrics.append(summary)
+            if miss is not None:
+                mismatch_union_rows.append(miss)
+    else:
+        max_workers = min(len(perm_jobs), args.perm_workers)
+        logging.info("Executing permutations in parallel with %s workers", max_workers)
+
+        with ProcessPoolExecutor(max_workers=max_workers) as pool:
+            futs = {
+                pool.submit(_worker, tag, pickle.dumps(df_perm), str(root_out), config, worker_args): tag
+                for tag, df_perm in perm_jobs
+            }
+
+            for fut in as_completed(futs):
+                tag = futs[fut]
+                try:
+                    summary, miss = fut.result()
+                    permutation_metrics.append(summary)
+                    if miss is not None:
+                        mismatch_union_rows.append(miss)
+                except Exception as exc:
+                    logging.error("Permutation %s failed: %s", tag, exc, exc_info=True)
 
     # ------------------------------------------------------------------
     # Summary files
