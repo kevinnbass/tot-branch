@@ -33,9 +33,7 @@ except ImportError as e:  # pragma: no cover – test env expects regex to be in
     ) from e
 
 import logging
-import json  # legacy: some prompts may still embed JSON blobs
-import textwrap
-import yaml  # YAML front-matter parser (PATCH 6)
+import yaml
 from dataclasses import dataclass, replace
 from typing import List, Dict, Pattern, Optional
 from pathlib import Path
@@ -74,17 +72,6 @@ class PatternInfo:
     yes_regex: str
     veto_regex: Optional[str] = None
     mode: str = "live"
-
-
-# ----------------------------------------------------------------------------
-# Raw rule list – intentionally left EMPTY.
-# All regex patterns now come from the auto-extracted shadow rules in the prompt files.
-# (Live rules removed per latest design decision.)
-# ----------------------------------------------------------------------------
-RAW_RULES: List[PatternInfo] = [
-    # (No standalone live rules; everything now comes from the prompt-embedded
-    #   patterns automatically extracted below.)
-]
 
 
 # ----------------------------------------------------------------------------
@@ -256,8 +243,36 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
     return patterns
 
 
-# Integrate extracted patterns (shadow / live) ------------------------------
-RAW_RULES.extend(_extract_patterns_from_prompts())
+# ---------------------------------------------------------------------------
+# ①  Load patterns from YAML catalogue (authoritative source)
+# ---------------------------------------------------------------------------
+
+PATTERN_FILE = Path(__file__).parent / "regex" / "hop_patterns.yml"
+
+
+def _load_patterns_from_yaml(path: Path) -> List[PatternInfo]:
+    """Parse hop_patterns.yml into PatternInfo objects."""
+    if not path.exists():
+        raise FileNotFoundError(f"✖ pattern file missing: {path}")
+    raw = yaml.safe_load(path.read_text(encoding="utf-8")) or {}
+    patterns: List[PatternInfo] = []
+    for hop_key, entries in raw.items():
+        hop = int(hop_key)
+        for item in entries or []:
+            patterns.append(
+                PatternInfo(
+                    hop=hop,
+                    name=item["name"],
+                    yes_frame=item.get("frame"),
+                    yes_regex=item["pattern"],
+                    veto_regex=item.get("veto_pattern"),
+                    mode=item.get("mode", "live"),
+                )
+            )
+    return patterns
+
+
+RAW_RULES: List[PatternInfo] = _load_patterns_from_yaml(PATTERN_FILE)
 
 # ---------------------------------------------------------------------------
 # Compile all rules once
