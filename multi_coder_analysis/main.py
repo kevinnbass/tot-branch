@@ -8,6 +8,7 @@ import os
 from typing import Dict, Optional
 import threading
 import signal
+import shutil
 
 # --- Import step functions from other modules --- #
 # from run_multi_coder import run_coding_step  # TODO: Create this for standard pipeline
@@ -137,6 +138,17 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
             logging.info(f"Concatenated prompts saved to: {prompt_concat_path}")
         else:
             logging.warning("Prompt concatenation failed, but continuing with pipeline...")
+
+        # ------------------------------------------------------------------
+        # Copy the exact regex catalogue used for this run into the output
+        # directory for audit / reproducibility.
+        # ------------------------------------------------------------------
+        patterns_src = Path("multi_coder_analysis/regex/hop_patterns.yml")
+        try:
+            shutil.copy(patterns_src, base_output_dir / "hop_patterns.yml")
+            logging.info("Copied hop_patterns.yml to output folder for auditability.")
+        except Exception as e:
+            logging.warning("Could not copy hop_patterns.yml (%s): %s", patterns_src, e)
 
         # Determine input file source
         if args.input:
