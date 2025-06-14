@@ -525,11 +525,13 @@ def run_tot_chain_batch(
             
             # Build lookup for faster association
             sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
+            unknown_responses = []  # responses whose segment_id not in batch
 
             for resp_obj in batch_responses:
                 sid = str(resp_obj.get("segment_id", "")).strip()
                 ctx = sid_to_ctx.get(sid)
                 if ctx is None:
+                    unknown_responses.append(resp_obj)
                     continue  # skip unknown ids
 
                 answer = str(resp_obj.get("answer", "uncertain")).lower().strip()
@@ -609,6 +611,21 @@ def run_tot_chain_batch(
                     raw_path.write_text(raw_http_text, encoding='utf-8')
                 except Exception as e:
                     logging.warning('Could not write raw HTTP trace %s: %s', raw_path, e)
+
+            # Dump residual unknown responses if any
+            if unknown_responses:
+                import json as _json
+                residual_path = trace_dir / "batch_traces" / f"{batch_id}_Q{hop_idx:02}_residual.json"
+                try:
+                    with residual_path.open("w", encoding="utf-8") as fh:
+                        _json.dump({
+                            "batch_id": batch_id,
+                            "hop_idx": hop_idx,
+                            "unknown_count": len(unknown_responses),
+                            "unknown_responses": unknown_responses,
+                        }, fh, ensure_ascii=False, indent=2)
+                except Exception as e:
+                    logging.warning("Could not write residual file %s: %s", residual_path, e)
         
         # Return all segments (resolved + unresolved)
         return regex_resolved + unresolved_segments
