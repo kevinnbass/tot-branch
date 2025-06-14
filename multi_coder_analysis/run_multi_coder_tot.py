@@ -425,6 +425,7 @@ def run_tot_chain_batch(
         # Step 1: Apply regex rules to all segments in this batch
         regex_resolved: List[HopContext] = []
         unresolved_segments: List[HopContext] = []
+        regex_matches_meta = []  # collect match details for batch-level dump
         
         # Predefine batch_id for use in all trace entries within this batch
         batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
@@ -477,10 +478,33 @@ def run_tot_chain_batch(
                     seg_ctx.is_concluded = True
                 
                 regex_resolved.append(seg_ctx)
+                regex_matches_meta.append({
+                    "statement_id": seg_ctx.statement_id,
+                    "regex": r_answer.get("regex", {}),
+                    "frame": r_answer.get("frame"),
+                    "answer": r_answer["answer"],
+                })
             else:
                 unresolved_segments.append(seg_ctx)
         
         # Step 2: If any segments remain unresolved, call LLM for the batch
+        # Before LLM call, dump regex matches for this batch (if any)
+        if regex_matches_meta:
+            import json as _json
+            batch_dir = trace_dir / "batch_traces"
+            batch_dir.mkdir(parents=True, exist_ok=True)
+            regex_path = batch_dir / f"{batch_id}_Q{hop_idx:02}_regex.json"
+            try:
+                with regex_path.open("w", encoding="utf-8") as fh:
+                    _json.dump({
+                        "batch_id": batch_id,
+                        "hop_idx": hop_idx,
+                        "segment_count": len(regex_matches_meta),
+                        "matches": regex_matches_meta,
+                    }, fh, ensure_ascii=False, indent=2)
+            except Exception as e:
+                logging.warning("Could not write regex batch trace %s: %s", regex_path, e)
+
         if unresolved_segments:
             # Create batch context
             batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=unresolved_segments)
