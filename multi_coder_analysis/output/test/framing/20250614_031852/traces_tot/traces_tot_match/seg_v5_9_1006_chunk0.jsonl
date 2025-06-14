@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('estimated the cost', 'manage the crisis'). 'Crisis' is a negative noun but not part of a superlative pattern or used as a potent metaphor.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment reports financial metrics ('cost'), which are excluded from Q3.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "The segment reports past costs but contains no explicit calming cue.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions 'a flock at one of its contract farms' but lacks a minimiser ('only one').", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment provides cost figures but does not use a minimiser or scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "The segment describes costs, not capabilities or preparedness measures.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "regex": {"rule": "NeutralPriceMetrics", "span": [19, 155], "captures": []}}

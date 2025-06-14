@@ -1,7 +1,0 @@
-{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
-{"Q": 2, "answer": "no", "rationale": "The segment is a factual note about an update and does not contain high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch"}
-{"Q": 3, "answer": "no", "rationale": "The segment uses 'infected' which is a plain outcome verb, excluded by Q3 rule 3.", "method": "llm_batch"}
-{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
-{"Q": 5, "answer": "no", "rationale": "The segment is an editorial note about an update and contains no explicit calming cue.", "method": "llm_batch"}
-{"Q": 6, "answer": "no", "rationale": "The segment mentions 'a barn...among a flock of 240,000' which is a scale contrast, but lacks a minimiser ('only a barn' or 'only one barn').", "method": "llm_batch"}
-{"Q": 7, "answer": "no", "rationale": "Segment contains no negation.", "method": "llm_batch"}
