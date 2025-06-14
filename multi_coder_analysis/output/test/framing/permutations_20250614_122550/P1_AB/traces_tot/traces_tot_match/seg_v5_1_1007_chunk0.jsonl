@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'lethal' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_size": 259, "batch_pos": 136}
+{"Q": 2, "answer": "no", "rationale": "The segment reports factual information using neutral language; 'lethal' describes potential.", "method": "llm_batch", "batch_size": 245, "batch_pos": 129}
+{"Q": 3, "answer": "no", "rationale": "The verb 'become infected' is a plain outcome verb, not a moderate verb.", "method": "llm_batch", "batch_size": 238, "batch_pos": 124}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 237, "batch_pos": 124}
+{"Q": 5, "answer": "no", "rationale": "Reports facts; lacks explicit calming language.", "method": "llm_batch", "batch_size": 236, "batch_pos": 124}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 229, "batch_pos": 120}
+{"Q": 7, "answer": "no", "rationale": "The segment reports infection, not a negation.", "method": "llm_batch", "batch_size": 229, "batch_pos": 120}
+{"Q": 8, "answer": "no", "rationale": "The segment reports detection, not capability or preparedness.", "method": "llm_batch", "batch_size": 198, "batch_pos": 105}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of birds and infection status, not economic data or prices.", "method": "llm_batch", "batch_size": 111, "batch_pos": 56}
+{"Q": 10, "answer": "no", "rationale": "The segment reports an infection, not speculation about future relief or improvement.", "method": "llm_batch", "batch_size": 92, "batch_pos": 40}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'lethal', a bare risk adjective not intensified or framed for alarm.", "method": "llm_batch", "batch_size": 87, "batch_pos": 38}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of infection; 'lethal form' describes characteristic, not explicit alarmist framing.", "method": "llm_batch", "batch_size": 86, "batch_pos": 37}

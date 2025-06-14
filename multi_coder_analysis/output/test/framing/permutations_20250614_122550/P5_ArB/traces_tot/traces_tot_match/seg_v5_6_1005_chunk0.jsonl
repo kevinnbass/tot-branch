@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "'high risk' is not modified by a Q1 intensifier/comparative. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_size": 259, "batch_pos": 41}
+{"Q": 2, "answer": "no", "rationale": "'high risk' is a factual assessment, not intensified.", "method": "llm_batch", "batch_size": 245, "batch_pos": 40}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a risk adjective ('high risk') but not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_size": 236, "batch_pos": 37}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 235, "batch_pos": 37}
+{"Q": 5, "answer": "no", "rationale": "The segment contains 'high risk', which is the opposite of a low-risk calming cue.", "method": "llm_batch", "batch_size": 234, "batch_pos": 37}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_size": 225, "batch_pos": 35}
+{"Q": 7, "answer": "no", "rationale": "The segment describes a period of high risk but contains no bare negation.", "method": "llm_batch", "batch_size": 224, "batch_pos": 35}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the current period as high risk.", "method": "llm_batch", "batch_size": 191, "batch_pos": 34}
+{"Q": 9, "answer": "no", "rationale": "The segment contains the risk adjective 'high risk'.", "method": "llm_batch", "batch_size": 117, "batch_pos": 17}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current risk, not speculation about future relief or improvement.", "method": "llm_batch", "batch_size": 63, "batch_pos": 8}
+{"Q": 11, "answer": "yes", "rationale": "regex:DominantQuoteAlarmist matched", "method": "regex", "batch_size": 62, "batch_pos": 8, "regex": {"rule": "DominantQuoteAlarmist", "span": [3, 157], "captures": []}}

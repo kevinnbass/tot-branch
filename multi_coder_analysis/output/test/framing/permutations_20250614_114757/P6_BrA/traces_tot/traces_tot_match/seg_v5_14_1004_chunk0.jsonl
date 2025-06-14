@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 140}
+{"Q": 2, "answer": "no", "rationale": "The segment reports scale and cost from a previous event factually ('killed 50 million birds', 'cost... nearly $1 billion') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 133}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain outcome verb ('killed') with a large number ('50 million birds') and discusses financial cost ('cost the federal government nearly $1 billion'), but plain outcome verbs and financial metrics are excluded from Q3 unless other cues fire.", "method": "llm_batch", "batch_size": 238, "batch_pos": 131}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 130}
+{"Q": 5, "answer": "no", "rationale": "The segment reports strain relation and past outbreak details but contains no explicit calming language.", "method": "llm_batch", "batch_size": 235, "batch_pos": 128}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 123}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 226, "batch_pos": 122}
+{"Q": 8, "answer": "no", "rationale": "The segment describes strain relation and past outbreak impact, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 189, "batch_pos": 98}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('killed 50 million birds', 'cost the federal government nearly $1 billion') using standard verbs.", "method": "llm_batch", "batch_size": 103, "batch_pos": 58}

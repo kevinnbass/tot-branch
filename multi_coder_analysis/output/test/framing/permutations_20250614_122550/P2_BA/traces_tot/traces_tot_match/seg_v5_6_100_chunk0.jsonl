@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The low-risk adjective 'safe' is present but is not a risk-adjective amplified for risk.", "method": "llm_batch", "batch_size": 259, "batch_pos": 160}
+{"Q": 2, "answer": "no", "rationale": "The language is neutral or reassuring, not alarmist.", "method": "llm_batch", "batch_size": 245, "batch_pos": 152}
+{"Q": 3, "answer": "no", "rationale": "The segment provides factual statements about human cases and food safety, not realised impact with a moderate verb and scale.", "method": "llm_batch", "batch_size": 238, "batch_pos": 150}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 149}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_size": 236, "batch_pos": 148, "regex": {"rule": "ExplicitCalming", "span": [88, 107], "captures": [null]}}

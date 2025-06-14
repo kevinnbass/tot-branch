@@ -846,6 +846,10 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         # Record initial mismatch count before any fallback corrections
         initial_mismatch_count = int(df_comparison["Mismatch"].sum())
 
+        # Base predictions/actuals — ensure they exist even when no fallback is run
+        predictions = df_comparison['Pipeline_Result'].tolist()
+        actuals = df_comparison['Gold_Standard'].tolist()
+
         # --- Mismatch attribution (regex vs. LLM) -----------------------
         seg_regex_ids = token_accumulator.get('segments_regex_ids', set())
         mismatch_ids = set(df_comparison[df_comparison["Mismatch"]].StatementID)
@@ -983,29 +987,25 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
                         f"  • {e['statement_id']}: expected={e['expected']} but got={e['single_result']}"
                     )
 
-            # Calculate metrics AFTER fallback
-            predictions = df_comparison['Pipeline_Result'].tolist()
-            actuals = df_comparison['Gold_Standard'].tolist()
-            metrics = calculate_metrics(predictions, actuals)
+            # Final metrics (after any fallback) and reporting
+            if has_gold_standard:
+                # Recompute mismatch attribution post-fallback
+                mismatch_ids_post = set(df_comparison[df_comparison["Mismatch"]].StatementID)
+                regex_mismatch_post = len(seg_regex_ids & mismatch_ids_post)
+                llm_mismatch_post = len(mismatch_ids_post) - regex_mismatch_post
 
-            print("\n🧮  Evaluation AFTER individual fallback")
+                predictions = df_comparison['Pipeline_Result'].tolist()
+                actuals = df_comparison['Gold_Standard'].tolist()
+                metrics = calculate_metrics(predictions, actuals)
 
-            # --- Post-fallback mismatch attribution ----------------------
-            mismatch_ids_post = set(df_comparison[df_comparison["Mismatch"]].StatementID)
-            regex_mismatch_post = len(seg_regex_ids & mismatch_ids_post)
-            llm_mismatch_post = len(mismatch_ids_post) - regex_mismatch_post
+                print("\n🧮  Evaluation AFTER individual fallback")
+                print(f"Regex-driven mismatches : {regex_mismatch_post}")
+                print(f"LLM-driven mismatches   : {llm_mismatch_post}")
 
-            print(f"Regex-driven mismatches : {regex_mismatch_post}")
-            print(f"LLM-driven mismatches   : {llm_mismatch_post}")
-
-            print_evaluation_report(metrics, input_csv_path, output_dir, concurrency, limit, start, end)
-            
-            print(f"✍️  All evaluation data written to {comparison_path}")
-            
-            # Print mismatches
-            print_mismatches(df_comparison)
-            
-            print(f"\n✅ Evaluation complete. Full telemetry in {output_dir}")
+                print_evaluation_report(metrics, input_csv_path, output_dir, concurrency, limit, start, end)
+                print(f"✍️  All evaluation data written to {comparison_path}")
+                print_mismatches(df_comparison)
+                print(f"\n✅ Evaluation complete. Full telemetry in {output_dir}")
         
         # If fallback was not run, set mismatch stats accordingly
         if not config.get("individual_fallback", False):

@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 78}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a reassuring phrase ('should not pose a risk to consumers') but no high-potency alarmist language.", "method": "llm_batch", "batch_size": 243, "batch_pos": 75}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 74}
+{"Q": 5, "answer": "no", "rationale": "The segment states poultry 'should not pose a risk', which is a bare negation, not a direct safety assurance using the word 'safe'.", "method": "llm_batch", "batch_size": 236, "batch_pos": 74}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_size": 228, "batch_pos": 73}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_size": 227, "batch_pos": 72, "regex": {"rule": "BareNegationHealthConcern", "span": [120, 142], "captures": []}}

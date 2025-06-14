@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'intensifies' is a verb describing the outbreak's status, not a Q1 pattern.", "method": "llm_batch", "batch_size": 259, "batch_pos": 137}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 245, "batch_pos": 130}
+{"Q": 3, "answer": "no", "rationale": "'intensifies' describes the outbreak's status, not its realised impact on birds/industry.", "method": "llm_batch", "batch_size": 237, "batch_pos": 125}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_size": 236, "batch_pos": 125}
+{"Q": 5, "answer": "no", "rationale": "The segment describes the impact of a discovery and reports actions but contains no explicit calming language.", "method": "llm_batch", "batch_size": 234, "batch_pos": 125}
+{"Q": 6, "answer": "no", "rationale": "The segment uses the vivid verb 'intensifies' (Q2) and mentions a number ('29,000') but lacks a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_size": 225, "batch_pos": 120}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 224, "batch_pos": 120}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the impact of a discovery and a past action, not capabilities or preparedness measures.", "method": "llm_batch", "batch_size": 192, "batch_pos": 104}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports the number of birds destroyed ('destruction of 29,000 turkeys') as a metric of impact using a standard verb.", "method": "llm_batch", "batch_size": 115, "batch_pos": 58}

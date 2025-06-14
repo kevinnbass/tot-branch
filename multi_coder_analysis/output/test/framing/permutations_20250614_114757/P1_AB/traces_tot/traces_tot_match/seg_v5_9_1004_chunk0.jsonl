@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 102}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 245, "batch_pos": 96}
+{"Q": 3, "answer": "no", "rationale": "The verbs ('expanded', 'detection', 'ensures', 'enhance', 'respond', 'reduce', 'spread') are plain, not moderate verbs describing impact.", "method": "llm_batch", "batch_size": 241, "batch_pos": 94}
+{"Q": 5, "answer": "no", "rationale": "Reports actions and capabilities from an official source, but the link is to reducing disease spread among birds, not public safety.", "method": "llm_batch", "batch_size": 239, "batch_pos": 94}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 230, "batch_pos": 89}
+{"Q": 7, "answer": "no", "rationale": "Contains action/capability ('reduce the risk'), not a bare negation.", "method": "llm_batch", "batch_size": 230, "batch_pos": 89}
+{"Q": 8, "answer": "yes", "rationale": "Describes expanded surveillance ('expanded its wild bird surveillance') and its purpose without active reassurance.", "method": "llm_batch", "batch_size": 196, "batch_pos": 76}

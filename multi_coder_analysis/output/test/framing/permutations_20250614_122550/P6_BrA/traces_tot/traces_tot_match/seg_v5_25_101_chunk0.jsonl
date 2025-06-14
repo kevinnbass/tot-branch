@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 42}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate language ('course through') and a negative noun ('shortages') not part of a Q2 pattern.", "method": "llm_batch", "batch_size": 243, "batch_pos": 38}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses potential future shortages ('could be some shortages') which is a hypothetical impact.", "method": "llm_batch", "batch_size": 235, "batch_pos": 38}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 37}
+{"Q": 5, "answer": "no", "rationale": "The segment reports potential shortages but lacks explicit calming language.", "method": "llm_batch", "batch_size": 231, "batch_pos": 35}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_size": 223, "batch_pos": 33}
+{"Q": 7, "answer": "no", "rationale": "The segment mentions potential shortages but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_size": 222, "batch_pos": 33}
+{"Q": 8, "answer": "no", "rationale": "The segment describes potential future shortages, not a positive future possibility or capability/preparedness.", "method": "llm_batch", "batch_size": 190, "batch_pos": 31}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential shortages, not reporting current prices or economic metrics.", "method": "llm_batch", "batch_size": 116, "batch_pos": 24}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_size": 96, "batch_pos": 22, "regex": {"rule": "ReliefSpeculation", "span": [62, 67], "captures": ["could"]}}

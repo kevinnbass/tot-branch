@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment describes culling actions and scale ('tens of thousands') but does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 2, "answer": "no", "rationale": "The verb 'cull' describes an action (control measure), not the alarming impact or spread of the threat itself. No high-potency language used.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 3, "answer": "no", "rationale": "The verb 'planning to cull' denotes an intention/plan, not realised impact, and containment verbs are neutral unless paired with vivid language.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 5, "answer": "no", "rationale": "Describes an action being taken (culling) but contains no explicit calming language about safety, control, or low risk.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions 'tens of thousands' which is a large number, not a minimised one, and lacks a minimiser token or scale contrast for reassurance.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 7, "answer": "no", "rationale": "The segment describes an action (culling) and scale, but contains no negation or explicit calming cue.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 8, "answer": "yes", "rationale": "Describes a planned response measure ('planning to cull') without linking it to current calm or safety.", "method": "llm_batch", "batch_size": 2, "batch_pos": 1}

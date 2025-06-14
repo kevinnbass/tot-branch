@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 64}
+{"Q": 2, "answer": "no", "rationale": "The segment describes action and scale factually ('ordered nearly 30,000 turkeys to be euthanized').", "method": "llm_batch", "batch_size": 245, "batch_pos": 60}
+{"Q": 3, "answer": "no", "rationale": "The verb 'euthanized' is a containment verb and is excluded for Q3 unless vivid/emotive language is added.", "method": "llm_batch", "batch_size": 238, "batch_pos": 59}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 58}
+{"Q": 5, "answer": "no", "rationale": "The segment reports outbreaks and euthanization and lacks explicit calming language.", "method": "llm_batch", "batch_size": 235, "batch_pos": 56}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_size": 226, "batch_pos": 53}
+{"Q": 7, "answer": "no", "rationale": "The segment reports outbreaks and euthanization but contains no bare negation.", "method": "llm_batch", "batch_size": 225, "batch_pos": 53}
+{"Q": 8, "answer": "no", "rationale": "The segment describes past culling as an outcome, not current control measures being implemented.", "method": "llm_batch", "batch_size": 192, "batch_pos": 44}
+{"Q": 9, "answer": "no", "rationale": "The segment reports culling numbers, not prices or economic metrics.", "method": "llm_batch", "batch_size": 120, "batch_pos": 31}
+{"Q": 10, "answer": "no", "rationale": "The segment reports recent events, not speculation about future relief or improvement.", "method": "llm_batch", "batch_size": 91, "batch_pos": 27}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_size": 90, "batch_pos": 26}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of events and numbers of birds euthanized; 'highly pathogenic' is technical.", "method": "llm_batch", "batch_size": 89, "batch_pos": 26}

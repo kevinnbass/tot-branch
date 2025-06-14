@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 17}
+{"Q": 2, "answer": "no", "rationale": "The segment states a low-risk fact factually without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 16}
+{"Q": 3, "answer": "no", "rationale": "The segment describes low risk ('very low'), not significant scale or impact.", "method": "llm_batch", "batch_size": 238, "batch_pos": 16}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 237, "batch_pos": 16}
+{"Q": 5, "answer": "yes", "rationale": "The quote 'The risk to humans is very low' is an intensified low-risk evaluation from a source.", "method": "llm_batch", "batch_size": 235, "batch_pos": 15}

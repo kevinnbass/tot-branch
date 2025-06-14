@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 70}
+{"Q": 2, "answer": "no", "rationale": "The segment states a factual low risk ('do not present an immediate health concern').", "method": "llm_batch", "batch_size": 243, "batch_pos": 65}
+{"Q": 3, "answer": "no", "rationale": "The segment states a factual assessment of risk ('do not present an immediate health concern').", "method": "llm_batch", "batch_size": 235, "batch_pos": 63}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 62}
+{"Q": 5, "answer": "no", "rationale": "The segment contains a bare negation ('do not present') and is handled under Q7.", "method": "llm_batch", "batch_size": 231, "batch_pos": 59}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_size": 223, "batch_pos": 56}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_size": 222, "batch_pos": 56, "regex": {"rule": "BareNegationHealthConcern", "span": [66, 108], "captures": []}}

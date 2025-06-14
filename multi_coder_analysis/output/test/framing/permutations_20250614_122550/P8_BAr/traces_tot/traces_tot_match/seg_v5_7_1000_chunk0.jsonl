@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'strongest' modifies 'surveillance program', not a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 71}
+{"Q": 2, "answer": "no", "rationale": "The segment contains confidence language ('strongest AI surveillance program'), not an alarmist cue for Q2.", "method": "llm_batch", "batch_size": 245, "batch_pos": 68}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact information.", "method": "llm_batch", "batch_size": 238, "batch_pos": 67}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 67}
+{"Q": 5, "answer": "no", "rationale": "Reports a bare negation/positive fact and a boast about capability ('strongest surveillance program') without an explicit public safety link.", "method": "llm_batch", "batch_size": 236, "batch_pos": 67}
+{"Q": 6, "answer": "no", "rationale": "The segment contains food safety assurance and preparedness cues but not a minimiser + scale contrast.", "method": "llm_batch", "batch_size": 228, "batch_pos": 66}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_size": 227, "batch_pos": 65, "regex": {"rule": "BareNegationHealthConcern", "span": [22, 52], "captures": []}}

@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_15416",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "'highly pathogenic' is a technical term and does not trigger Q1. No other intensifier or comparative modifies a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a negative fact (deaths) but does not use an intensifier or comparative adjective modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a negative fact (culling) but does not use an intensifier or comparative adjective modifying a risk-adjective."
+    }
+  ],
+  "timestamp": "2025-06-14T11:40:00.637494"
+}

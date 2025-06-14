@@ -1,0 +1,5 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 259, "batch_pos": 17}
+{"Q": 2, "answer": "no", "rationale": "The segment states a factual low risk ('risk to humans is very low').", "method": "llm_batch", "batch_size": 243, "batch_pos": 16}
+{"Q": 3, "answer": "no", "rationale": "The segment states a factual assessment of risk ('risk... is very low').", "method": "llm_batch", "batch_size": 235, "batch_pos": 16}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 234, "batch_pos": 16}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'risk to humans is very low' is an intensified low-risk evaluation from a source.", "method": "llm_batch", "batch_size": 231, "batch_pos": 15}

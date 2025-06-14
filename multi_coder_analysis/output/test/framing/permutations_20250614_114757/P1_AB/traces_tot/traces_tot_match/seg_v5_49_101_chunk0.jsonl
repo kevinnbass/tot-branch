@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 256}
+{"Q": 2, "answer": "no", "rationale": "The segment is a question, not a statement with framing language. 'kill millions' is factual/scale, not a vivid verb.", "method": "llm_batch", "batch_size": 245, "batch_pos": 243}
+{"Q": 3, "answer": "no", "rationale": "The verb ('kill') is a plain outcome verb, not a moderate verb describing impact, despite the mention of scale.", "method": "llm_batch", "batch_size": 241, "batch_pos": 239}
+{"Q": 5, "answer": "no", "rationale": "Is a question.", "method": "llm_batch", "batch_size": 239, "batch_pos": 237}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 230, "batch_pos": 228}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_size": 230, "batch_pos": 228}
+{"Q": 8, "answer": "no", "rationale": "The segment is a question about a response measure, not a statement of capability or preparedness.", "method": "llm_batch", "batch_size": 196, "batch_pos": 194}
+{"Q": 9, "answer": "no", "rationale": "The segment is a question about necessity, not a report of prices or economic metrics.", "method": "llm_batch", "batch_size": 111, "batch_pos": 109}
+{"Q": 10, "answer": "no", "rationale": "The segment asks a question about euthanasia necessity, not speculation about future relief or improvement.", "method": "llm_batch", "batch_size": 59, "batch_pos": 57}
+{"Q": 11, "answer": "no", "rationale": "Segment contains no direct quote or attributed statement.", "method": "llm_batch", "batch_size": 57, "batch_pos": 55}
+{"Q": 12, "answer": "yes", "rationale": "Factual question about a consequence/action without explicit framing cues.", "method": "llm_batch", "batch_size": 56, "batch_pos": 54}

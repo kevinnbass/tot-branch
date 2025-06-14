@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 136}
+{"Q": 2, "answer": "no", "rationale": "'deadly' is a negative adjective, not part of a Q2 pattern; 'responsible for the turkey deaths' is factual.", "method": "llm_batch", "batch_size": 243, "batch_pos": 129}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain outcome noun ('deaths') paired with scale ('turkey deaths'), not a moderate verb paired with scale. 'deadly' is an adjective.", "method": "llm_batch", "batch_size": 235, "batch_pos": 126}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 125}
+{"Q": 5, "answer": "no", "rationale": "The segment reports confirmation of deadly virus and location but lacks explicit calming language.", "method": "llm_batch", "batch_size": 231, "batch_pos": 122}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_size": 223, "batch_pos": 118}
+{"Q": 7, "answer": "no", "rationale": "The segment confirms the virus and states it was 'not clear' how it spread (negation about knowledge) but no bare negation about risk/impact or calming cue.", "method": "llm_batch", "batch_size": 222, "batch_pos": 117}
+{"Q": 8, "answer": "no", "rationale": "The segment confirms the virus and location, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 190, "batch_pos": 97}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of deaths, which is a numerical metric but not economic data or prices.", "method": "llm_batch", "batch_size": 116, "batch_pos": 66}
+{"Q": 10, "answer": "no", "rationale": "The segment describes the cause of death and unknown origin, not speculation about future relief.", "method": "llm_batch", "batch_size": 96, "batch_pos": 59}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement reports confirmation. 'deadly' is factual description.", "method": "llm_batch", "batch_size": 92, "batch_pos": 57}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_size": 92, "batch_pos": 57, "regex": {"rule": "NeutralStats", "span": [62, 136], "captures": ["confirm", "deaths"]}}

@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 117}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a Reassuring cue ('confident in our producers preparedness') but no Q2 Alarmist cues.", "method": "llm_batch", "batch_size": 245, "batch_pos": 110}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 236, "batch_pos": 105}
+{"Q": 5, "answer": "no", "rationale": "Confidence statement about producers' preparedness, not explicitly linked to public safety in a calming way.", "method": "llm_batch", "batch_size": 235, "batch_pos": 105}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a confidence cue, but not a minimiser + scale contrast.", "method": "llm_batch", "batch_size": 226, "batch_pos": 100}
+{"Q": 7, "answer": "no", "rationale": "The segment expresses confidence in preparedness and ability, which is a Reassuring cue, not a bare negation.", "method": "llm_batch", "batch_size": 225, "batch_pos": 100}
+{"Q": 8, "answer": "yes", "rationale": "Expresses confidence in capability/preparedness ('confident in our producers preparedness and ability to manage their flocks') without linking to current calm or safety for the audience.", "method": "llm_batch", "batch_size": 192, "batch_pos": 86}

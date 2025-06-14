@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 257}
+{"Q": 2, "answer": "no", "rationale": "The verb 'dropped' is moderate.", "method": "llm_batch", "batch_size": 245, "batch_pos": 243}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 236, "batch_pos": 234}
+{"Q": 5, "answer": "no", "rationale": "Reports negative economic impact. No explicit calming cue.", "method": "llm_batch", "batch_size": 235, "batch_pos": 233}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_size": 226, "batch_pos": 224}
+{"Q": 7, "answer": "no", "rationale": "The segment describes export drops, stating chickens 'weren't heavily infected' which is a bare negation about severity without explicit calming cue.", "method": "llm_batch", "batch_size": 225, "batch_pos": 223}
+{"Q": 8, "answer": "no", "rationale": "The segment reports historical export drop, not capability or preparedness.", "method": "llm_batch", "batch_size": 192, "batch_pos": 191}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_size": 109, "batch_pos": 108, "regex": {"rule": "NeutralPriceMetrics", "span": [50, 65], "captures": []}}

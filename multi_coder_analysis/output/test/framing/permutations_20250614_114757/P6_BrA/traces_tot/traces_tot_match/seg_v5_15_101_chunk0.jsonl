@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'extremely low' modifies 'chance', framed for reassurance, not alarm.", "method": "llm_batch", "batch_size": 259, "batch_pos": 52}
+{"Q": 2, "answer": "no", "rationale": "The segment states the chance is 'extremely low', which is calming language (Q4), but contains no Q2 cues.", "method": "llm_batch", "batch_size": 245, "batch_pos": 48}
+{"Q": 3, "answer": "no", "rationale": "The segment explicitly states the chance is 'extremely low', which is an explicit calming cue (Q5), not a moderate verb paired with scale/impact (Q3).", "method": "llm_batch", "batch_size": 238, "batch_pos": 47}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 46}
+{"Q": 5, "answer": "yes", "rationale": "The segment contains an explicit intensified low-risk evaluation from a source: 'The chance of infected poultry entering the food chain is 'extremely low'.'", "method": "llm_batch", "batch_size": 235, "batch_pos": 44}

@@ -240,6 +240,24 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
         df_all_miss.to_csv(root_out / "all_mismatch_records.csv", index=False)
 
     # ------------------------------------------------------------------
+    # Concatenate consolidated mismatch trace JSONL files from each perm.
+    # ------------------------------------------------------------------
+    concat_path = root_out / "all_mismatch_consolidated_traces.jsonl"
+    with concat_path.open("w", encoding="utf-8") as out_fh:
+        for perm_dir in root_out.iterdir():
+            if not perm_dir.is_dir():
+                continue
+            trace_file = perm_dir / "traces_tot" / "traces_tot_mismatch" / "consolidated_mismatch_traces.jsonl"
+            if trace_file.exists():
+                try:
+                    with trace_file.open("r", encoding="utf-8") as fh:
+                        for line in fh:
+                            out_fh.write(line)
+                except Exception as e:
+                    logging.warning("Could not read %s: %s", trace_file, e)
+    logging.info("Merged mismatch traces → %s", concat_path)
+
+    # ------------------------------------------------------------------
     # Majority vote across permutations
     # ------------------------------------------------------------------
     vote_frames = []
@@ -273,6 +291,13 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
     if "Gold Standard" in df_in.columns:
         df_votes = df_votes.merge(df_in[["StatementID", "Gold Standard"]], on="StatementID", how="left")
         df_votes["Mismatch"] = df_votes["Majority_Label"] != df_votes["Gold Standard"]
+
+        # --- NEW: count per-row mismatches across individual permutations ---
+        perm_cols = [tag for tag, _ in perm_jobs]
+        def _mismatch_count(row):
+            return sum(row[col] != row["Gold Standard"] for col in perm_cols)
+
+        df_votes["Permutation_Mismatch_Count"] = df_votes.apply(_mismatch_count, axis=1)
 
     df_votes.to_csv(root_out / "majority_vote_comparison.csv", index=False)
 

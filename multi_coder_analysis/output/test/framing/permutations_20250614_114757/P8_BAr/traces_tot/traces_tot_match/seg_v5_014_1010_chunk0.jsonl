@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'already-onerous' modifies 'costs' (economic impact), not the flu's inherent risk.", "method": "llm_batch", "batch_size": 259, "batch_pos": 117}
+{"Q": 2, "answer": "no", "rationale": "The phrases 'burden' and 'onerous costs' are descriptive but not high-potency verbs/metaphors or superlative+negative nouns.", "method": "llm_batch", "batch_size": 243, "batch_pos": 111}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 109}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a potential negative impact (burden on consumers' wallets).", "method": "llm_batch", "batch_size": 236, "batch_pos": 108}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_size": 228, "batch_pos": 104}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 227, "batch_pos": 103}
+{"Q": 8, "answer": "no", "rationale": "The segment describes potential future impact on consumers, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 191, "batch_pos": 82}
+{"Q": 9, "answer": "no", "rationale": "The segment uses loaded language ('burden', 'onerous costs') to describe potential economic impact.", "method": "llm_batch", "batch_size": 108, "batch_pos": 51}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_size": 68, "batch_pos": 34, "regex": {"rule": "ReliefSpeculation", "span": [117, 122], "captures": ["could"]}}

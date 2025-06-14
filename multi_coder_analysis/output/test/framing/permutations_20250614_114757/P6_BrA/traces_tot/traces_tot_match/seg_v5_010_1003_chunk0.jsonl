@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 171}
+{"Q": 2, "answer": "no", "rationale": "The segment reports status factually ('expect final test results') without using high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 161}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses expecting test results, which is a process, not realised impact using a moderate verb and scale.", "method": "llm_batch", "batch_size": 238, "batch_pos": 159}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 158}
+{"Q": 5, "answer": "no", "rationale": "The segment reports expectation of test results but contains no explicit calming language.", "method": "llm_batch", "batch_size": 235, "batch_pos": 156}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 149}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 226, "batch_pos": 148}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 189, "batch_pos": 119, "regex": {"rule": "CapabilityNoReassurance", "span": [21, 30], "captures": []}}

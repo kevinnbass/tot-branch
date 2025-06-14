@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 203}
+{"Q": 2, "answer": "no", "rationale": "The segment provides a factual report on actions without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 191}
+{"Q": 3, "answer": "no", "rationale": "This describes actions taken ('working closely'), evaluated in Q5.", "method": "llm_batch", "batch_size": 238, "batch_pos": 185}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 182}
+{"Q": 5, "answer": "no", "rationale": "The segment describes actions but contains no explicit calming language.", "method": "llm_batch", "batch_size": 232, "batch_pos": 180}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch", "batch_size": 222, "batch_pos": 171}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 221, "batch_pos": 171}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 192, "batch_pos": 145, "regex": {"rule": "CapabilityNoReassurance", "span": [66, 75], "captures": []}}

@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_6_9460",
+  "hop_idx": 6,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides numbers (864 cases, 456 deaths) and mentions 'no record of Americans contracting' but lacks a minimiser token ('only', 'just', etc.) combined with a scale contrast for reassurance."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'rare' but this is an adjective describing frequency, not a minimiser token ('only', 'just', etc.) combined with an explicit scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'tens of thousands' which is a large number, not a minimised one, and lacks a minimiser token or scale contrast for reassurance."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'at least 25,000' which is a large number, not a minimised one, and lacks a minimiser token or scale contrast for reassurance."
+    }
+  ],
+  "timestamp": "2025-06-14T11:40:34.544681"
+}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term. No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "The segment describes economic impact factually ('impose a burden', 'onerous costs') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a potential future impact ('could nonetheless impose a burden') and discusses costs (financial metric), not realised impact with a moderate verb and scale.", "method": "llm_batch", "batch_size": 238, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The segment discusses potential economic impact but contains no explicit calming language.", "method": "llm_batch", "batch_size": 235, "batch_pos": 12}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 12}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 226, "batch_pos": 12}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a potential burden on consumers, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 189, "batch_pos": 12}
+{"Q": 9, "answer": "no", "rationale": "The segment mentions costs but uses non-standard/neutral language ('burden', 'onerous costs').", "method": "llm_batch", "batch_size": 103, "batch_pos": 8}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_size": 65, "batch_pos": 8, "regex": {"rule": "ReliefSpeculation", "span": [117, 122], "captures": ["could"]}}

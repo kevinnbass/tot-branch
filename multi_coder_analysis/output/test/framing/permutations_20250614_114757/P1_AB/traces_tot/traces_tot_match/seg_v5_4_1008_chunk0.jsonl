@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 177}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information using standard verbs ('cause'). 'high mortality rates' is factual/technical.", "method": "llm_batch", "batch_size": 245, "batch_pos": 168}
+{"Q": 3, "answer": "no", "rationale": "The verb ('cause') is plain/hypothetical. 'high mortality rates' is impact, but not paired with a moderate verb + scale.", "method": "llm_batch", "batch_size": 241, "batch_pos": 165}
+{"Q": 5, "answer": "no", "rationale": "Reports facts.", "method": "llm_batch", "batch_size": 239, "batch_pos": 165}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 230, "batch_pos": 159}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_size": 230, "batch_pos": 159}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a characteristic of the disease, not capability or preparedness.", "method": "llm_batch", "batch_size": 196, "batch_pos": 137}
+{"Q": 9, "answer": "no", "rationale": "The segment reports potential impact ('high mortality rates'), not primarily prices or economic metrics.", "method": "llm_batch", "batch_size": 111, "batch_pos": 77}
+{"Q": 10, "answer": "no", "rationale": "The segment states a potential impact ('can cause high mortality rates'), not speculation about future relief.", "method": "llm_batch", "batch_size": 59, "batch_pos": 38}
+{"Q": 11, "answer": "no", "rationale": "Segment contains no direct quote or attributed statement. 'high mortality rates' is a bare risk description.", "method": "llm_batch", "batch_size": 57, "batch_pos": 37}
+{"Q": 12, "answer": "yes", "rationale": "'reigniting fears' describes public reaction, not realised impact (Neutral context guard).", "method": "llm_batch", "batch_size": 56, "batch_pos": 36}

@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'rarely transmissible' does not fit the Q1 pattern. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_size": 259, "batch_pos": 244}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_size": 245, "batch_pos": 231}
+{"Q": 3, "answer": "no", "rationale": "The segment contains reassuring language (Q5), not Q3 Alarmist cues.", "method": "llm_batch", "batch_size": 237, "batch_pos": 223}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_size": 236, "batch_pos": 222}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_size": 234, "batch_pos": 220, "regex": {"rule": "ExplicitCalming", "span": [0, 25], "captures": [null]}}

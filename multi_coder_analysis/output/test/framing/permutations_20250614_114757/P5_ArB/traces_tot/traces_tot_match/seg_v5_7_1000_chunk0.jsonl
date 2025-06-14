@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'strongest' modifies 'program', not a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 200}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_size": 245, "batch_pos": 190}
+{"Q": 3, "answer": "no", "rationale": "The segment contains food safety assurance (Q5) and preparedness/action language (Q5).", "method": "llm_batch", "batch_size": 237, "batch_pos": 184}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_size": 236, "batch_pos": 184}
+{"Q": 5, "answer": "no", "rationale": "Contains a bare negation about food safety ('Birds from the flocks will not enter the food system') and a superlative boast ('strongest AI surveillance program') not linked to public safety.", "method": "llm_batch", "batch_size": 234, "batch_pos": 184}
+{"Q": 6, "answer": "no", "rationale": "The segment states birds 'will not enter the food system' (Q5) and mentions the 'strongest AI surveillance program' (Q5) but lacks a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_size": 225, "batch_pos": 178}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_size": 224, "batch_pos": 177, "regex": {"rule": "BareNegationHealthConcern", "span": [22, 52], "captures": []}}

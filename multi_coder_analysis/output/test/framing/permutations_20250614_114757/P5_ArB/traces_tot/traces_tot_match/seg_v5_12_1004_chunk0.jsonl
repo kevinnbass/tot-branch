@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'very low' is an intensifier + low-risk adjective (Q5), not a Q1 pattern.", "method": "llm_batch", "batch_size": 259, "batch_pos": 122}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 245, "batch_pos": 115}
+{"Q": 3, "answer": "no", "rationale": "The segment contains reassuring language (Q5), not Q3 Alarmist cues.", "method": "llm_batch", "batch_size": 237, "batch_pos": 110}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_size": 236, "batch_pos": 110}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'risk of humans contracting bird flu is very low' is an intensified low-risk evaluation.", "method": "llm_batch", "batch_size": 234, "batch_pos": 110}

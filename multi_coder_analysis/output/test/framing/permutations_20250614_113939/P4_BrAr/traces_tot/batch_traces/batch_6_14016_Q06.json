@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_6_14016",
+  "hop_idx": 6,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'tens of thousands' but does not use a minimiser or provide a scale contrast for reassurance."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'at least 25,000' but does not use a minimiser or provide a scale contrast for reassurance."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment contrasts US cases ('no record') with worldwide cases (864) but does not use a minimiser token ('only', 'few', etc.) with the scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'rare' but does not combine it with a minimiser token or an explicit scale contrast."
+    }
+  ],
+  "timestamp": "2025-06-14T11:40:34.315649"
+}

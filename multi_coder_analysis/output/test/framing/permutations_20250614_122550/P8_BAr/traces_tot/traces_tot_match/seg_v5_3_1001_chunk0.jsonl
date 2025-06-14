@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'deadly' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_size": 259, "batch_pos": 190}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'can be deadly' describes potential outcome, not a vivid verb or metaphor framing realised impact.", "method": "llm_batch", "batch_size": 245, "batch_pos": 182}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 238, "batch_pos": 176}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 175}
+{"Q": 5, "answer": "no", "rationale": "Reports characteristics of the disease; lacks explicit calming language.", "method": "llm_batch", "batch_size": 236, "batch_pos": 174}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a bare negation ('does not cause any symptoms') but not a minimiser + scale contrast.", "method": "llm_batch", "batch_size": 228, "batch_pos": 169}
+{"Q": 7, "answer": "yes", "rationale": "'does not cause any symptoms' is a bare negation without additional calming language.", "method": "llm_batch", "batch_size": 227, "batch_pos": 168}

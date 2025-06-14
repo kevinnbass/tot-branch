@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 215}
+{"Q": 2, "answer": "no", "rationale": "'fear' is a psychological noun; 'driven by the discovery' is moderate.", "method": "llm_batch", "batch_size": 243, "batch_pos": 202}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain verb ('infecting') and discusses a noun ('discovery') and a psychological state ('fear').", "method": "llm_batch", "batch_size": 235, "batch_pos": 197}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 196}
+{"Q": 5, "answer": "no", "rationale": "The segment reports fear driven by discovery but lacks explicit calming language.", "method": "llm_batch", "batch_size": 231, "batch_pos": 193}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_size": 223, "batch_pos": 186}
+{"Q": 7, "answer": "no", "rationale": "The segment states fear is driven by discovery but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_size": 222, "batch_pos": 185}
+{"Q": 8, "answer": "no", "rationale": "The segment states fear is driven by discovery, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 190, "batch_pos": 154}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses the driver of 'new fear', not prices or economic metrics.", "method": "llm_batch", "batch_size": 116, "batch_pos": 98}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 96, "batch_pos": 79}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement. 'fear' is a psychological noun, not intensified.", "method": "llm_batch", "batch_size": 92, "batch_pos": 77}
+{"Q": 12, "answer": "yes", "rationale": "Psychological phrase 'fear is driven by' describes a reaction, not amplified impact, treated as Neutral.", "method": "llm_batch", "batch_size": 92, "batch_pos": 77}

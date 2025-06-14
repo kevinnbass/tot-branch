@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'potentially deadly' does not contain an intensifier from the Q1 list modifying 'deadly'.", "method": "llm_batch", "batch_size": 259, "batch_pos": 251}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a food safety assurance and a psychological verb phrase ('threatens to spark') not meeting Q2 criteria.", "method": "llm_batch", "batch_size": 245, "batch_pos": 237}
+{"Q": 3, "answer": "no", "rationale": "'threatens to spark shortages' describes potential impact, not realised impact. 'spark shortages' is a psychological verb (context guard applies). 'increase in prices' describes a financial metric (Rule 5).", "method": "llm_batch", "batch_size": 238, "batch_pos": 230}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 229}
+{"Q": 5, "answer": "no", "rationale": "'does not present a food safety risk' is a bare negation; reports potential future negative impacts.", "method": "llm_batch", "batch_size": 236, "batch_pos": 228}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a bare negation ('does not present') and vivid language ('deadly', 'threatens to spark shortages', 'soaring inflation') but not a minimiser + scale contrast.", "method": "llm_batch", "batch_size": 228, "batch_pos": 221}
+{"Q": 7, "answer": "yes", "rationale": "'does not present a food safety risk' is a bare negation without additional calming language.", "method": "llm_batch", "batch_size": 227, "batch_pos": 220}

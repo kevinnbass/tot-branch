@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term and does not trigger Q1. No other intensifier or comparative modifies a risk-adjective.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 2, "answer": "no", "rationale": "The segment presents statistics factually without using high-potency verbs or other Q2 cues.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 3, "answer": "no", "rationale": "Segment uses plain outcome verbs ('contracted', 'resulting') which are excluded from Q3.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 5, "answer": "no", "rationale": "Reports a positive fact (\"no record of Americans contracting\") but lacks explicit calming language or framing for reassurance.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 6, "answer": "no", "rationale": "The segment provides specific numbers but does not use a minimiser token ('only', 'just', etc.) combined with an explicit scale contrast ('out of X') for reassurance.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}
+{"Q": 7, "answer": "yes", "rationale": "'no record of Americans contracting' is an evidence negation.", "method": "llm_batch", "batch_size": 4, "batch_pos": 2}

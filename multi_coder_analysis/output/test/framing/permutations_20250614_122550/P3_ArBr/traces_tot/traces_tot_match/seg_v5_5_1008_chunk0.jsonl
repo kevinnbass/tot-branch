@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 211}
+{"Q": 2, "answer": "no", "rationale": "The segment provides a factual report of scale and cost without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 199}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a containment verb. '50 million birds across 15 states' is scale, but containment verbs are neutral unless vivid language is added. Financial impact is excluded from Q3.", "method": "llm_batch", "batch_size": 238, "batch_pos": 193}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 190}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical impact/cost but contains no explicit calming language.", "method": "llm_batch", "batch_size": 232, "batch_pos": 188}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions '50 million birds' which is a large scale, not a minimiser.", "method": "llm_batch", "batch_size": 222, "batch_pos": 179}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 221, "batch_pos": 179}
+{"Q": 8, "answer": "no", "rationale": "The segment states impact/cost of past outbreak, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 192, "batch_pos": 153}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('50 million birds', 'nearly $1 billion') factually.", "method": "llm_batch", "batch_size": 120, "batch_pos": 94}

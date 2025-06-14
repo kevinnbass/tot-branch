@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_5_15668",
+  "hop_idx": 5,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a negative fact (deaths) but contains no explicit calming language or intensified low-risk evaluation."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an action (culling) but contains no explicit calming language or intensified low-risk evaluation."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'rare' but lacks an intensifier ('very rare', 'extremely low risk') required for the intensified low-risk pattern."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "Reports a positive fact ('no record of Americans') but lacks explicit calming language or intensified low-risk evaluation."
+    }
+  ],
+  "timestamp": "2025-06-14T11:46:09.868974"
+}

@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 184}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'largest increase' uses a superlative but modifies a neutral noun ('increase'), not a negative one.", "method": "llm_batch", "batch_size": 245, "batch_pos": 176}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 238, "batch_pos": 170}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 169}
+{"Q": 5, "answer": "no", "rationale": "Reports economic impact; lacks explicit calming language.", "method": "llm_batch", "batch_size": 236, "batch_pos": 168}
+{"Q": 6, "answer": "no", "rationale": "The segment contains 'largest increase' and 'rising' but not a minimiser + scale contrast.", "method": "llm_batch", "batch_size": 228, "batch_pos": 163}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 227, "batch_pos": 162}
+{"Q": 8, "answer": "no", "rationale": "The segment reports a price index increase, not capability or preparedness.", "method": "llm_batch", "batch_size": 183, "batch_pos": 133}
+{"Q": 9, "answer": "yes", "rationale": "Reports price index change ('rising 12.2%') using standard verbs and numerical metrics.", "method": "llm_batch", "batch_size": 105, "batch_pos": 77}

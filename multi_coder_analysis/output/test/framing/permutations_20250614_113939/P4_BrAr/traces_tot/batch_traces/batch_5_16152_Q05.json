@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_5_16152",
+  "hop_idx": 5,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an action (culling) but contains no explicit calming language or intensified low-risk evaluation."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a negative fact (deaths) but contains no explicit calming language or intensified low-risk evaluation."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "Reports a positive fact ('no record') but lacks explicit calming language or intensified low-risk evaluation."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "States infection is 'rare' but this is not an intensified low-risk evaluation ('very low', 'extremely low') required for Q5 Reassuring."
+    }
+  ],
+  "timestamp": "2025-06-14T11:40:27.173483"
+}

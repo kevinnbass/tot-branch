@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 49}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('detected in').", "method": "llm_batch", "batch_size": 245, "batch_pos": 46}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 236, "batch_pos": 46}
+{"Q": 5, "answer": "no", "rationale": "Reports facts. No explicit calming cue.", "method": "llm_batch", "batch_size": 235, "batch_pos": 46}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 226, "batch_pos": 43}
+{"Q": 7, "answer": "no", "rationale": "The segment describes detection location, not a negation.", "method": "llm_batch", "batch_size": 225, "batch_pos": 43}
+{"Q": 8, "answer": "no", "rationale": "The segment reports detection location/date, not capability or preparedness.", "method": "llm_batch", "batch_size": 192, "batch_pos": 36}
+{"Q": 9, "answer": "no", "rationale": "The segment reports date and location of detection, not prices or metrics.", "method": "llm_batch", "batch_size": 109, "batch_pos": 24}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past detection event, not speculation about future relief.", "method": "llm_batch", "batch_size": 67, "batch_pos": 10}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_size": 62, "batch_pos": 10}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of detection location, date, and flock type. No explicit framing cues.", "method": "llm_batch", "batch_size": 61, "batch_pos": 10}

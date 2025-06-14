@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'deadly' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_size": 259, "batch_pos": 6}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language; 'deadly' describes the virus, not a vivid verb/metaphor for impact.", "method": "llm_batch", "batch_size": 245, "batch_pos": 6}
+{"Q": 3, "answer": "no", "rationale": "The phrase 'was responsible for the turkey deaths' is a plain outcome description, not a moderate verb.", "method": "llm_batch", "batch_size": 238, "batch_pos": 6}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 6}
+{"Q": 5, "answer": "no", "rationale": "Reports facts; lacks explicit calming language.", "method": "llm_batch", "batch_size": 236, "batch_pos": 6}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_size": 229, "batch_pos": 6}
+{"Q": 7, "answer": "no", "rationale": "'not clear how' is a statement about lack of knowledge, not a bare negation of risk/impact.", "method": "llm_batch", "batch_size": 229, "batch_pos": 6}
+{"Q": 8, "answer": "no", "rationale": "The segment reports facts about the outbreak, not capability or preparedness.", "method": "llm_batch", "batch_size": 198, "batch_pos": 5}
+{"Q": 9, "answer": "no", "rationale": "The segment reports location and distance, not prices or economic metrics.", "method": "llm_batch", "batch_size": 111, "batch_pos": 3}
+{"Q": 10, "answer": "no", "rationale": "The segment reports past facts, not speculation about future relief or improvement.", "method": "llm_batch", "batch_size": 92, "batch_pos": 3}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'deadly' but it's a bare risk adjective, not intensified or framed for alarm.", "method": "llm_batch", "batch_size": 87, "batch_pos": 3}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_size": 86, "batch_pos": 3, "regex": {"rule": "NeutralStats", "span": [62, 136], "captures": ["confirm", "deaths"]}}

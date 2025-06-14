@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "The segment uses reassuring language ('No human cases', 'remains safe to eat').", "method": "llm_batch", "batch_size": 245, "batch_pos": 29}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_size": 241, "batch_pos": 29}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_size": 239, "batch_pos": 29, "regex": {"rule": "ExplicitCalming", "span": [88, 107], "captures": [null]}}

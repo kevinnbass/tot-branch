@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'rare' is a low-risk adjective, not modified by a Q1 intensifier/comparative.", "method": "llm_batch", "batch_size": 259, "batch_pos": 108}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a calming cue (low-risk) but no Q2 cues.", "method": "llm_batch", "batch_size": 245, "batch_pos": 101}
+{"Q": 3, "answer": "no", "rationale": "The segment describes rarity of human infection.", "method": "llm_batch", "batch_size": 236, "batch_pos": 96}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 235, "batch_pos": 96}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a low-risk evaluation ('rare') but it is not intensified ('very low', 'extremely low').", "method": "llm_batch", "batch_size": 234, "batch_pos": 96}
+{"Q": 6, "answer": "no", "rationale": "Segment contains low-risk adjective, not minimiser + scale contrast.", "method": "llm_batch", "batch_size": 225, "batch_pos": 92}
+{"Q": 7, "answer": "no", "rationale": "The segment states human infections are 'considered rare', which is a calming cue.", "method": "llm_batch", "batch_size": 224, "batch_pos": 92}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 191, "batch_pos": 82, "regex": {"rule": "CapabilityNoReassurance", "span": [124, 133], "captures": []}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 226}
+{"Q": 2, "answer": "no", "rationale": "The segment provides a factual report on expected impact without Q2 cues.", "method": "llm_batch", "batch_size": 245, "batch_pos": 213}
+{"Q": 3, "answer": "no", "rationale": "This is a reassuring statement about impact, evaluated in Q5.", "method": "llm_batch", "batch_size": 238, "batch_pos": 207}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 203}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a positive expectation but lacks explicit calming language.", "method": "llm_batch", "batch_size": 232, "batch_pos": 201}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions 'one of its farms' but lacks a minimiser + scale contrast for downplaying; 'not expected to impact' is bare negation.", "method": "llm_batch", "batch_size": 222, "batch_pos": 192}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 221, "batch_pos": 191}
+{"Q": 8, "answer": "yes", "rationale": "States incident 'is not expected to impact production levels', describing a hopeful future possibility factually.", "method": "llm_batch", "batch_size": 192, "batch_pos": 165}

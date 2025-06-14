@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 76}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 243, "batch_pos": 71}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain verb ('detected') to describe the virus detection. 'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_size": 235, "batch_pos": 69}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 234, "batch_pos": 68}
+{"Q": 5, "answer": "no", "rationale": "The segment reports detection details but lacks explicit calming language.", "method": "llm_batch", "batch_size": 231, "batch_pos": 65}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_size": 223, "batch_pos": 62}
+{"Q": 7, "answer": "no", "rationale": "The segment reports detection of a 'highly pathogenic' form but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_size": 222, "batch_pos": 62}
+{"Q": 8, "answer": "no", "rationale": "The segment states detection of bird flu, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 190, "batch_pos": 51}
+{"Q": 9, "answer": "no", "rationale": "The segment reports location and type of infected flock, not prices or economic metrics.", "method": "llm_batch", "batch_size": 116, "batch_pos": 34}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a detection, not speculation about future relief.", "method": "llm_batch", "batch_size": 96, "batch_pos": 32}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement reports factual detection. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_size": 92, "batch_pos": 30}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of detection location and virus type; 'highly pathogenic' is technical.", "method": "llm_batch", "batch_size": 92, "batch_pos": 30}

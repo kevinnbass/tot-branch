@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'potentially deadly' is not a Q1 pattern. 'deadly' alone is neutral unless intensified or clinical.", "method": "llm_batch", "batch_size": 259, "batch_pos": 43}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_size": 245, "batch_pos": 42}
+{"Q": 3, "answer": "no", "rationale": "'urging caution' is not a moderate verb + scale/impact.", "method": "llm_batch", "batch_size": 237, "batch_pos": 39}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_size": 236, "batch_pos": 39}
+{"Q": 5, "answer": "no", "rationale": "The segment describes plans but also urges caution, lacking explicit calming language.", "method": "llm_batch", "batch_size": 234, "batch_pos": 39}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions 'plans' (Q5) but lacks a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_size": 225, "batch_pos": 37}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 224, "batch_pos": 37}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 192, "batch_pos": 36, "regex": {"rule": "CapabilityNoReassurance", "span": [36, 45], "captures": []}}

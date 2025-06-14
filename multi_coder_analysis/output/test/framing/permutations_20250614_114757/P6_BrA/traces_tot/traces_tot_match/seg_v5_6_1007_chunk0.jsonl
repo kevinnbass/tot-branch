@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 119}
+{"Q": 2, "answer": "no", "rationale": "The segment reports action factually ('actively working... to prevent the spread') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 113}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses working to prevent spread, which is an action/preparedness, not realised impact using a moderate verb and scale.", "method": "llm_batch", "batch_size": 238, "batch_pos": 111}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 110}
+{"Q": 5, "answer": "no", "rationale": "The segment quotes a company stating they are working with officials, which reports action, not explicit calming about current safety or control.", "method": "llm_batch", "batch_size": 235, "batch_pos": 108}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 104}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a statement of action ('actively working... to prevent the spread').", "method": "llm_batch", "batch_size": 226, "batch_pos": 103}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 189, "batch_pos": 85, "regex": {"rule": "CapabilityNoReassurance", "span": [93, 102], "captures": []}}

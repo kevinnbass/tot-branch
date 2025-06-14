@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 156}
+{"Q": 2, "answer": "no", "rationale": "The segment reports scale and action factually ('millions of fowl have been killed') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 149}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain outcome verb ('killed') with a large number ('millions of fowl'), but plain outcome verbs are excluded from Q3 unless other cues fire.", "method": "llm_batch", "batch_size": 238, "batch_pos": 147}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 146}
+{"Q": 5, "answer": "no", "rationale": "The segment reports the number of fowl killed but contains no explicit calming language.", "method": "llm_batch", "batch_size": 235, "batch_pos": 144}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 139}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 226, "batch_pos": 138}
+{"Q": 8, "answer": "no", "rationale": "The segment describes birds killed since outbreak began, not capabilities or preparedness.", "method": "llm_batch", "batch_size": 189, "batch_pos": 112}
+{"Q": 9, "answer": "yes", "rationale": "Reports the numerical metric of fowl killed ('millions of fowl have been killed') using a standard verb.", "method": "llm_batch", "batch_size": 103, "batch_pos": 69}

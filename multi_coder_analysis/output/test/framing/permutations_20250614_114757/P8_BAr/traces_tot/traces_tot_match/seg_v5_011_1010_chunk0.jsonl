@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "'rarely transmissible' uses 'rarely' which indicates low risk, not an intensifier + risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 115}
+{"Q": 2, "answer": "no", "rationale": "The segment contains reassuring phrases ('rarely transmissible', 'no evidence') which are Q5 cues, not Q2 Alarmist cues.", "method": "llm_batch", "batch_size": 243, "batch_pos": 109}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 107}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_size": 236, "batch_pos": 106, "regex": {"rule": "ExplicitCalming", "span": [0, 25], "captures": [null]}}

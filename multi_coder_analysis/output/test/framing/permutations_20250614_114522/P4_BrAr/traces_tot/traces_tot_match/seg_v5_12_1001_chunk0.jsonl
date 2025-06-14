@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term. The segment states factual numbers of cases and deaths, but does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('contracting', 'resulting in deaths') to report statistics, not high-potency framing language.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'contracted' and 'resulting in deaths' are plain outcome verbs, not moderate verbs from the Q3 list.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 5, "answer": "no", "rationale": "Reports a positive fact ('no record') but lacks explicit calming language or intensified low-risk evaluation.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 6, "answer": "no", "rationale": "The segment contrasts US cases ('no record') with worldwide cases (864) but does not use a minimiser token ('only', 'few', etc.) with the scale contrast.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 7, "answer": "yes", "rationale": "'There is no record of Americans contracting' is a bare negation without an explicit calming cue.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}

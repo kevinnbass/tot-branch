@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 17}
+{"Q": 2, "answer": "no", "rationale": "The verb 'hitting' is moderate and listed in the boundary guard as Neutral alone.", "method": "llm_batch", "batch_size": 245, "batch_pos": 17}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 236, "batch_pos": 17}
+{"Q": 5, "answer": "no", "rationale": "Reports negative market impact. No explicit calming cue.", "method": "llm_batch", "batch_size": 235, "batch_pos": 17}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 226, "batch_pos": 16}
+{"Q": 7, "answer": "no", "rationale": "The segment describes market conditions, not a negation.", "method": "llm_batch", "batch_size": 225, "batch_pos": 16}
+{"Q": 8, "answer": "no", "rationale": "The segment describes market impact, not capability or preparedness.", "method": "llm_batch", "batch_size": 192, "batch_pos": 13}
+{"Q": 9, "answer": "no", "rationale": "Describes market conditions ('hitting the market', 'supplies are down') but does not report specific prices or numerical metrics.", "method": "llm_batch", "batch_size": 109, "batch_pos": 9}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current market conditions, not speculation about future relief.", "method": "llm_batch", "batch_size": 67, "batch_pos": 2}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_size": 62, "batch_pos": 2}
+{"Q": 12, "answer": "yes", "rationale": "'hitting the market' is an idiom describing background condition. Factual report of market impact and causes.", "method": "llm_batch", "batch_size": 61, "batch_pos": 2}

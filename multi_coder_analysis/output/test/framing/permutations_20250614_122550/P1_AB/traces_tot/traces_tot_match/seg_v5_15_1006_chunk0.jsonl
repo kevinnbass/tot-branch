@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 108}
+{"Q": 2, "answer": "no", "rationale": "The segment reports factual procedures using neutral language.", "method": "llm_batch", "batch_size": 245, "batch_pos": 101}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'is found' and 'are quarantined' are plain/containment verbs.", "method": "llm_batch", "batch_size": 238, "batch_pos": 96}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 237, "batch_pos": 96}
+{"Q": 5, "answer": "no", "rationale": "Reports actions/facts; lacks explicit calming language.", "method": "llm_batch", "batch_size": 236, "batch_pos": 96}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 229, "batch_pos": 92}
+{"Q": 7, "answer": "no", "rationale": "The segment reports quarantine action, not a negation.", "method": "llm_batch", "batch_size": 229, "batch_pos": 92}
+{"Q": 8, "answer": "yes", "rationale": "Describes a response measure: 'are automatically quarantined'.", "method": "llm_batch", "batch_size": 198, "batch_pos": 79}

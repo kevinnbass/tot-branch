@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 240}
+{"Q": 2, "answer": "no", "rationale": "The segment reports actions factually ('initiated steps', 'eradication... by killing and removing') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_size": 245, "batch_pos": 226}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses initiating steps and eradication actions ('killing and removing'), which are containment/action and use plain verbs, not a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_size": 238, "batch_pos": 219}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 218}
+{"Q": 5, "answer": "no", "rationale": "The segment reports initiated steps like quarantine and eradication, which reports actions, not explicit calming about current safety or control.", "method": "llm_batch", "batch_size": 235, "batch_pos": 216}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 208}
+{"Q": 7, "answer": "no", "rationale": "The segment contains statements of action/preparedness ('working with the poultry industry and have initiated steps').", "method": "llm_batch", "batch_size": 226, "batch_pos": 207}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 189, "batch_pos": 170, "regex": {"rule": "CapabilityNoReassurance", "span": [18, 27], "captures": []}}

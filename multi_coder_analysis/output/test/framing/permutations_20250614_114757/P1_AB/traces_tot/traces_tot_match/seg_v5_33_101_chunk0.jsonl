@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 226}
+{"Q": 2, "answer": "no", "rationale": "The segment describes actions using standard verbs ('confirmed', 'required', 'euthanized', 'prevent'). 'euthanized' is standard terminology.", "method": "llm_batch", "batch_size": 245, "batch_pos": 216}
+{"Q": 3, "answer": "no", "rationale": "The verbs ('confirmed', 'required', 'euthanized', 'prevent', 'spread') are plain or containment verbs, not moderate verbs describing impact.", "method": "llm_batch", "batch_size": 241, "batch_pos": 212}
+{"Q": 5, "answer": "no", "rationale": "Reports facts and actions taken.", "method": "llm_batch", "batch_size": 239, "batch_pos": 212}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 230, "batch_pos": 205}
+{"Q": 7, "answer": "no", "rationale": "Contains action/capability ('prevent the spread'), not a bare negation.", "method": "llm_batch", "batch_size": 230, "batch_pos": 205}
+{"Q": 8, "answer": "no", "rationale": "The segment reports impact (number of birds), not capability or preparedness.", "method": "llm_batch", "batch_size": 196, "batch_pos": 173}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a requirement for euthanasia, not primarily prices or economic metrics.", "method": "llm_batch", "batch_size": 111, "batch_pos": 95}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past confirmation about a requirement, not speculation about future relief.", "method": "llm_batch", "batch_size": 59, "batch_pos": 48}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement contains no framing language.", "method": "llm_batch", "batch_size": 57, "batch_pos": 47}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of a requirement and reason without explicit framing cues.", "method": "llm_batch", "batch_size": 56, "batch_pos": 46}

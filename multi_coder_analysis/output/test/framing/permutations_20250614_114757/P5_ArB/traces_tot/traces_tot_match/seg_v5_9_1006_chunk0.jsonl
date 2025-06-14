@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'more than $1 billion' is a scale/metric, not modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 134}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 245, "batch_pos": 127}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses financial/cost metrics, which are excluded from Q3.", "method": "llm_batch", "batch_size": 237, "batch_pos": 122}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_size": 236, "batch_pos": 122}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical cost but contains no explicit calming language.", "method": "llm_batch", "batch_size": 234, "batch_pos": 122}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions numbers ('more than $1 billion', '$879 million', '$200 million') but lacks a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_size": 225, "batch_pos": 117}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_size": 224, "batch_pos": 117}
+{"Q": 8, "answer": "no", "rationale": "The segment states past cost, not capabilities or preparedness measures.", "method": "llm_batch", "batch_size": 192, "batch_pos": 102}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_size": 115, "batch_pos": 56, "regex": {"rule": "NeutralPriceMetrics", "span": [19, 155], "captures": []}}

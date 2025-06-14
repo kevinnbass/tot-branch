@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 148}
+{"Q": 2, "answer": "no", "rationale": "The segment describes a process using standard verbs ('occurs', 'has').", "method": "llm_batch", "batch_size": 245, "batch_pos": 140}
+{"Q": 3, "answer": "no", "rationale": "The verbs ('occurs', 'has', 'contaminated') are plain, not moderate verbs describing impact.", "method": "llm_batch", "batch_size": 241, "batch_pos": 138}
+{"Q": 5, "answer": "no", "rationale": "Reports facts about transmission.", "method": "llm_batch", "batch_size": 239, "batch_pos": 138}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_size": 230, "batch_pos": 133}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_size": 230, "batch_pos": 133}
+{"Q": 8, "answer": "no", "rationale": "The segment describes mechanism of human infection, not capability or preparedness.", "method": "llm_batch", "batch_size": 196, "batch_pos": 116}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the mode of infection, not primarily prices or economic metrics.", "method": "llm_batch", "batch_size": 111, "batch_pos": 66}
+{"Q": 10, "answer": "no", "rationale": "The segment describes how cross infection usually occurs, not speculation about future relief or improvement.", "method": "llm_batch", "batch_size": 59, "batch_pos": 29}
+{"Q": 11, "answer": "no", "rationale": "Segment contains no direct quote or attributed statement.", "method": "llm_batch", "batch_size": 57, "batch_pos": 28}
+{"Q": 12, "answer": "yes", "rationale": "Factual description of transmission mode without explicit framing cues.", "method": "llm_batch", "batch_size": 56, "batch_pos": 27}

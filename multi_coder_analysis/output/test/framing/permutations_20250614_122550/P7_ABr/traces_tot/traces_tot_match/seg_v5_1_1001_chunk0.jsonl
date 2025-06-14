@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_size": 259, "batch_pos": 68}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral/factual language ('detected in', 'euthanize', 'spread of').", "method": "llm_batch", "batch_size": 245, "batch_pos": 62}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_size": 236, "batch_pos": 61}
+{"Q": 5, "answer": "no", "rationale": "Reports facts. No explicit calming cue.", "method": "llm_batch", "batch_size": 235, "batch_pos": 61}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'just days after' which is a time reference, not a minimiser of scale.", "method": "llm_batch", "batch_size": 226, "batch_pos": 57}
+{"Q": 7, "answer": "no", "rationale": "The segment describes detection and culling, not a negation.", "method": "llm_batch", "batch_size": 225, "batch_pos": 57}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_size": 192, "batch_pos": 47, "regex": {"rule": "CapabilityNoReassurance", "span": [101, 110], "captures": []}}

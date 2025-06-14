@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'rare' which is a low-risk descriptor, not a risk-adjective modified by an intensifier or comparative.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'is' and 'can occur' are neutral and do not constitute high-potency language.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 3, "answer": "no", "rationale": "No moderate verbs or significant scale/impact information are present.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 5, "answer": "no", "rationale": "Mentions 'rare' but lacks an intensifier ('very rare', 'extremely low risk') required for the intensified low-risk cue in Q5.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'rare' but lacks a numerical minimiser token ('only', 'just', 'few') combined with a scale contrast.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 7, "answer": "no", "rationale": "The segment uses 'rare' but does not contain a bare negation as defined by the rule's examples.", "method": "llm_batch", "batch_size": 4, "batch_pos": 3}
+{"Q": 8, "answer": "no", "rationale": "Describes risk factors and likelihood, not a capability or preparedness measure.", "method": "llm_batch", "batch_size": 3, "batch_pos": 3}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses risk assessment ('rare', 'can occur') rather than reporting prices, economic data, or numerical metrics as defined by Q9.", "method": "llm_batch", "batch_size": 2, "batch_pos": 2}
+{"Q": 10, "answer": "no", "rationale": "The segment describes the current state of risk ('rare but can occur') rather than speculating about future relief or improvement.", "method": "llm_batch", "batch_size": 1, "batch_pos": 1}
+{"Q": 11, "answer": "no", "rationale": "The segment does not contain any direct quotes or attributed statements from a source.", "method": "llm_batch", "batch_size": 1, "batch_pos": 1}
+{"Q": 12, "answer": "yes", "rationale": "The segment factually states that human infection is rare and describes the condition for occurrence, without explicit alarmist or reassuring language.", "method": "llm_batch", "batch_size": 1, "batch_pos": 1}

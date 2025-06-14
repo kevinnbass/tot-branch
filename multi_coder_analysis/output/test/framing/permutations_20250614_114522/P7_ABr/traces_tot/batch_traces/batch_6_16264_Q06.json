@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_6_16264",
+  "hop_idx": 6,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'rare' but lacks a numerical minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X')."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides numbers but does not use a minimiser token ('only', 'just', etc.) in conjunction with a scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'tens of thousands' but does not use a minimiser token or a scale contrast to downplay the number."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'at least 25,000' but does not use a minimiser token or a scale contrast to downplay the number."
+    }
+  ],
+  "timestamp": "2025-06-14T11:46:20.779961"
+}

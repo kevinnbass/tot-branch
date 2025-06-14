@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective. 'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_size": 259, "batch_pos": 59}
+{"Q": 2, "answer": "no", "rationale": "The segment reports surveillance efforts and states 'do not present an immediate public health concern' (Q4), but contains no Q2 cues.", "method": "llm_batch", "batch_size": 245, "batch_pos": 55}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses surveillance programs and states detections 'do not present an immediate public health concern', which are Preparedness/Confidence/Low Risk cues (Q5), not Q3.", "method": "llm_batch", "batch_size": 238, "batch_pos": 54}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_size": 237, "batch_pos": 53}
+{"Q": 5, "answer": "no", "rationale": "The segment mentions a 'strongest surveillance program' (superlative boast, not linked to public safety) and 'do not present an immediate public health concern' (bare negation).", "method": "llm_batch", "batch_size": 235, "batch_pos": 51}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') combined with an explicit scale contrast.", "method": "llm_batch", "batch_size": 227, "batch_pos": 48}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_size": 226, "batch_pos": 48, "regex": {"rule": "BareNegationHealthConcern", "span": [369, 418], "captures": []}}
