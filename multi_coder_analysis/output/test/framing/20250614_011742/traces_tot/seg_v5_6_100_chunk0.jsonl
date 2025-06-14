@@ -1,1 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment contains low-risk facts ('No human cases') and a Q5 cue ('safe to eat'), but no Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'have been detected' is a plain outcome verb, not a moderate verb triggering Q3.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [88, 107], "captures": [null]}}
