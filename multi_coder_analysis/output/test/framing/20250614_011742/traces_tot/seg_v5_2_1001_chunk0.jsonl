@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment factually reports positive tests and locations.", "method": "llm_batch"}
 {"Q": 3, "answer": "no", "rationale": "'tested positive' is not a moderate verb from the specified list.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}

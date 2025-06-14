@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "'detected' is a neutral verb.", "method": "llm_batch"}
 {"Q": 3, "answer": "no", "rationale": "The verb 'detected' is a plain outcome verb, excluded by the rule even with scale.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports number of states with detections; lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment states a number of states but does not use a minimiser with scale contrast.", "method": "llm_batch"}

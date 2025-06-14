@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The verb 'culled' is standard terminology. 'will not enter the food system' is a Q5 cue.", "method": "llm_batch"}
 {"Q": 3, "answer": "no", "rationale": "'will be culled' is a future action/plan. Q3 requires realised impact.", "method": "llm_batch"}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Bare negation ('will not enter the food system') is excluded from Q5.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a bare negation ('will not enter') which is not a minimiser + scale contrast.", "method": "llm_batch"}
