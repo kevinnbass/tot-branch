@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "The segment lists symptoms factually, with no intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment describes symptoms using factual language, lacking Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'increase' is not a moderate verb from the list. 'sudden' modifies a background condition (symptom).", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Describes symptoms; lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast pattern found.", "method": "llm_batch"}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 8, "answer": "no", "rationale": "Describes symptoms, not a capability/preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports metrics ('increase in the mortality', 'drop in egg production', 'diminished consumption') using standard descriptive terms.", "method": "llm_batch"}

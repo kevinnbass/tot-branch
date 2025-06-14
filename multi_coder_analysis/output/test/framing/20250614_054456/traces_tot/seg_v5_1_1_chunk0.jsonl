@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "Factual statement about deaths, no intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'deaths of at least 25,000' is a factual statement of scale, not a high-potency verb or metaphor.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The phrase 'responsible for the deaths' uses a neutral verb ('deaths') despite the large number.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question found.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports negative facts (deaths); lacks explicit calming language.", "method": "llm_batch"}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "The segment reports events/impact in another country, not a domestic capability or preparedness measure.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports a numerical metric ('deaths of at least 25,000 turkeys') using a standard noun.", "method": "llm_batch"}

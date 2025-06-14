@@ -1,2 +1,8 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses humaneness; 'die' is a plain outcome verb, and no scale is mentioned.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Discusses the humaneness of culling.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment states an opinion/comparison and does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes a characteristic of a method ('arguably more humane') without linking to current calm or safety for the audience.", "method": "llm_batch"}

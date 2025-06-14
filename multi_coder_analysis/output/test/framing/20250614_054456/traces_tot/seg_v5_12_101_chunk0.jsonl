@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative adjective directly modifies a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment describes agency action factually ('had been monitoring') and does not contain high-potency verbs, metaphors, or critical alert phrases.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment describes actions ('monitoring') rather than using moderate verbs paired with significant scale/impact.", "method": "llm_batch"}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 5, "answer": "no", "rationale": "Reports an action (monitoring); lacks explicit calming language linked to current safety.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes an action taken ('had been monitoring people') but does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes an action/capability ('had been monitoring people') without linking to current calm/safety.", "method": "llm_batch"}

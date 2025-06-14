@@ -1,2 +1,7 @@
 {"Q": 1, "answer": "no", "rationale": "Factual statement about human cases/deaths; 'highly pathogenic' is a technical term.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual numbers; 'highly pathogenic' is a technical term.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'contracted' and 'resulting in deaths' are neutral outcome verbs, despite the numbers.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment is a statement of fact, not a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "This reports a positive fact but lacks explicit calming/reassuring language from the source.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment contains a bare negation ('no record') and numbers ('864', '456') but no minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "'There is no record of Americans contracting' is a bare negation without explicit calming.", "method": "llm_batch"}

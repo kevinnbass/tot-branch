@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "The segment uses 'more geographic spread', but 'geographic spread' is not a risk-adjective describing the virus's severity.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'geographic spread' is a factual description, not a high-potency verb or metaphor.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment mentions 'more geographic spread', implying scale, but uses the verb 'seeing' which is not a moderate verb from the Q3 list, and 'geographic spread' is a background condition.", "method": "llm_batch"}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 5, "answer": "no", "rationale": "Reports an observation about geographic spread, not an explicit calming cue.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast pattern found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Reports an observation about spread, not capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "The segment reports geographic spread comparison, not prices or economic metrics.", "method": "llm_batch"}

@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "The segment states negative facts (birds killed, scale) neutrally, without intensified risk adjectives.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'killed' is a factual description of action, not a high-potency verb like 'slaughtered'.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain outcome verb ('killed') which is excluded from Q3 even with scale ('More than 15 million'), unless other cues fire.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question found.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports factual data about birds culled; no explicit calming cue.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment uses 'More than' which is not a minimiser.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [118, 127], "captures": []}}

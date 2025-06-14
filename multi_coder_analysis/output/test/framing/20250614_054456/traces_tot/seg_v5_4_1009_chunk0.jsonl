@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "The segment focuses on response actions (quarantine, depopulation), with no intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The verbs used ('quarantined', 'depopulated') are factual descriptions, not high-potency framing verbs.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment describes containment actions ('quarantined', 'will be depopulated') and mentions 'the affected premises', which is not considered significant scale or impact under Q3 rules.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports actions taken (quarantine, depopulation).", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast pattern found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes actions (quarantine, depopulation), not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [7, 16], "captures": []}}

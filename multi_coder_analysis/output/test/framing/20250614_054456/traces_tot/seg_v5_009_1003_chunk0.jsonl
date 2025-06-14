@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "Explicit food safety assurance, not an intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment quotes an assurance ('safe to eat') but contains no high-potency verbs, metaphors, or critical alert phrases.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale or impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question found.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [51, 66], "captures": [null]}}

@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "The segment states a reassuring fact neutrally, not intensified risk.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment quotes a company statement using neutral language and does not contain high-potency verbs, metaphors, or critical alert phrases.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment states a lack of expected impact, not a moderate verb paired with scale/impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question found.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Mentions 'fear' but attributes it to a discovery; lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports a business impact fact; lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch"}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 8, "answer": "yes", "rationale": "Mentions a future possibility ('is not expected to impact production levels') without linking to current calm or safety for the audience.", "method": "llm_batch"}

@@ -1,2 +1,4 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
 {"Q": 2, "answer": "no", "rationale": "The segment is a question and does not contain high-potency verbs, metaphors, or critical alert phrases.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "'kill' is a containment verb, neutral even with 'millions' unless vivid language is added. No moderate verb + scale/impact pattern.", "method": "llm_batch"}
+{"Q": 4, "answer": "yes", "rationale": "The question 'Is it necessary to kill millions of chickens and turkeys?' is loaded, highlighting the scale of the problem/response.", "method": "llm_batch"}

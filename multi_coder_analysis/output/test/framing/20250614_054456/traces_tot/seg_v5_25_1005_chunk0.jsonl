@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "The segment describes a biosecurity plan, with no intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment describes a plan and process, lacking high-potency verbs, metaphors, or other Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment describes plans and audits, not the impact or scale of the virus outbreak.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Lacks explicit calming/reassuring language from the source or author.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [95, 103], "captures": []}}

@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment states a reassuring fact and discusses preventative measures, not intensified risk.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment contains factual statements about product safety and actions, lacking Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment contains reassuring language ('safe') and describes preventative action ('working... to prevent the spread').", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [32, 57], "captures": [null]}}

@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "'safe' is a positive adjective, not a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment contains factual statements and lacks high-potency verbs, metaphors, or other Q2 cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment contains explicit calming language ('No human cases', 'safe to eat'), which is not a Q3 pattern.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "regex": {"rule": "ExplicitCalming", "span": [88, 107], "captures": [null]}}

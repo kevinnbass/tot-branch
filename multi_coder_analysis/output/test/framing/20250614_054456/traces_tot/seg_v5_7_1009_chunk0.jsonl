@@ -1,2 +1,7 @@
 {"Q": 1, "answer": "no", "rationale": "Statement about lack of health concern, not an intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The segment contains reassuring language ('do not present an immediate health concern') but no Q2 alarmist cues.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment contains explicit calming language ('do not present an immediate health concern').", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment is a statement of fact, not a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Contains a bare negation ('do not present an immediate health concern') which is not an explicit calming cue per Q5 rules.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "regex": {"rule": "BareNegationHealthConcern", "span": [66, 108], "captures": []}}

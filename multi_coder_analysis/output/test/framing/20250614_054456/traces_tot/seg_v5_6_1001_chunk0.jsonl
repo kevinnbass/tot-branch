@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "Factual statement about depopulation, no intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "The verbs 'working', 'depopulate', and 'tested positive' are neutral or technical.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment uses the containment verb 'depopulate' and mentions 'a flock', which is not considered significant scale or impact under Q3 rules.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports an action (depopulation) without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast pattern found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [0, 9], "captures": []}}

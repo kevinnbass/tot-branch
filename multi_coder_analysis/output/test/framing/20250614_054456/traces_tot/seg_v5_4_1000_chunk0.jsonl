@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "The segment states negative facts neutrally and 'highly pathogenic' is a technical term.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'ordered...to be euthanized' is factual. 'highly pathogenic' is technical. Lacks high-potency framing.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment uses plain outcome ('reported', 'testing positive', 'was the first case') and containment ('euthanized') verbs, which are excluded from Q3.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports outbreaks, actions, and context without explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes events and facts, including timing, but no bare negation of a risk or outcome.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "Describes an action taken ('ordered nearly 30,000 turkeys to be euthanized') without linking to current calm or safety.", "method": "llm_batch"}

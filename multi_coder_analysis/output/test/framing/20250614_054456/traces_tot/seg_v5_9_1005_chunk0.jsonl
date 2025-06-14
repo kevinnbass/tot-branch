@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "The segment states negative facts (kill birds, scale) neutrally, without intensified risk adjectives.", "method": "llm_batch"}
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 3, "answer": "no", "rationale": "'kill' is a containment verb, neutral even with numbers unless paired with vivid language. No moderate verb + scale/impact pattern.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment is a statement of fact, not a question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports historical facts/scale; lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast pattern found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment states facts about a past event (scale of culling) but does not contain a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "The segment reports past events and impact, not a capability or preparedness measure.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('kill 33 million egg-laying hens', '9 million birds') using standard verbs.", "method": "llm_batch"}

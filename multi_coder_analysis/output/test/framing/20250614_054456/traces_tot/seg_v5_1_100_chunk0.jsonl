@@ -1,2 +1,8 @@
 {"Q": 1, "answer": "no", "rationale": "Factual statement about culling numbers and spread, no intensifier/comparative + risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'killed' is factual. 'spread to' is a moderate verb. Lacks high-potency framing.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The phrase 'will have to be killed' is a future containment action (Neutral), and 'spread' is a neutral verb describing movement.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "Reports culling numbers and spread to farms.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "Segment contains numbers but no minimiser + scale contrast.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes culling, not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "regex": {"rule": "CapabilityNoReassurance", "span": [130, 139], "captures": []}}

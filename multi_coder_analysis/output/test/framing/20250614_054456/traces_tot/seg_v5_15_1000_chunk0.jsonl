@@ -1,2 +1,9 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch"}
 {"Q": 2, "answer": "no", "rationale": "'hitting the country' is moderate. 'dropped' describes a background condition (supplies).", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment uses 'hitting', a moderate verb, but pairs it with background conditions ('supplies have dropped due to COVID-19 and labor shortages'), not direct impact scale.", "method": "llm_batch"}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback"}
+{"Q": 5, "answer": "no", "rationale": "Reports negative context/impacts; lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment describes market impact, not a bare negation.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "Describes background conditions, not capabilities or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "yes", "rationale": "Reports market supplies using a standard verb ('dropped').", "method": "llm_batch"}
