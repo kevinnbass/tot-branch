@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment describes potential negative outcomes, not a modified risk-adjective.", "method": "llm_batch"}
+{"Q": 2, "answer": "no", "rationale": "The segment describes a potential outcome ('could be some shortages') using moderate language. 'course through' is moderate. 'shortages' is a noun, not part of a Q2 verb/metaphor pattern here.", "method": "llm_batch"}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a hypothetical future impact, not realised impact.", "method": "llm_batch"}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch"}
+{"Q": 5, "answer": "no", "rationale": "The segment reports potential negative consequences and lacks explicit calming language.", "method": "llm_batch"}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch"}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation as defined by Q7.", "method": "llm_batch"}
+{"Q": 8, "answer": "no", "rationale": "The segment describes potential future impact, not capability or preparedness.", "method": "llm_batch"}
+{"Q": 9, "answer": "no", "rationale": "Mentions potential shortages but does not report specific prices/metrics with numbers or standard verbs.", "method": "llm_batch"}
+{"Q": 10, "answer": "yes", "rationale": "regex:Q10.Prompt#1 matched", "method": "regex", "regex": {"rule": "Q10.Prompt#1", "span": [62, 67], "captures": ["could"]}}
