@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11448", "batch_size": 259, "batch_pos": 171}
+{"Q": 2, "answer": "no", "rationale": "The segment uses an intensifier ('definitely') modifying an assessment ('period of high risk'), not a high-potency verb/metaphor.", "method": "llm_batch", "batch_id": "batch_2_6752", "batch_size": 245, "batch_pos": 163}
+{"Q": 3, "answer": "no", "rationale": "The segment describes risk level ('high risk'), not scale of realised impact.", "method": "llm_batch", "batch_id": "batch_3_15756", "batch_size": 238, "batch_pos": 158}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_5940", "batch_size": 237, "batch_pos": 157}
+{"Q": 5, "answer": "no", "rationale": "Uses 'period of high risk', which is negative framing, and lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_7948", "batch_size": 235, "batch_pos": 155}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16084", "batch_size": 226, "batch_pos": 150}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13524", "batch_size": 225, "batch_pos": 149}
+{"Q": 8, "answer": "no", "rationale": "Segment describes the risk level, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_10932", "batch_size": 194, "batch_pos": 129}
+{"Q": 9, "answer": "no", "rationale": "The segment quotes a source about high risk, not reporting prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_8800", "batch_size": 114, "batch_pos": 75}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current risk level, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_13616", "batch_size": 70, "batch_pos": 52}
+{"Q": 11, "answer": "yes", "rationale": "regex:DominantQuoteAlarmist matched", "method": "regex", "batch_id": "batch_11_14356", "batch_size": 67, "batch_pos": 49, "regex": {"rule": "DominantQuoteAlarmist", "span": [3, 157], "captures": []}}

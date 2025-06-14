@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'difficult to contain' is not an intensifier/comparative + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_2600", "batch_size": 259, "batch_pos": 151}
+{"Q": 2, "answer": "no", "rationale": "The segment describes transmission factually ('spreads via', 'difficult to contain').", "method": "llm_batch", "batch_id": "batch_2_15876", "batch_size": 245, "batch_pos": 143}
+{"Q": 3, "answer": "no", "rationale": "The segment reports factual mechanisms ('spreads') and difficulty ('makes it difficult to contain') without moderate verbs from the list.", "method": "llm_batch", "batch_id": "batch_3_6840", "batch_size": 236, "batch_pos": 138}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_6064", "batch_size": 236, "batch_pos": 138}
+{"Q": 5, "answer": "no", "rationale": "Reports facts and difficulty but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6372", "batch_size": 233, "batch_pos": 136}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15468", "batch_size": 224, "batch_pos": 129}
+{"Q": 7, "answer": "no", "rationale": "'difficult to contain' is about difficulty, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15748", "batch_size": 223, "batch_pos": 129}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15676", "batch_size": 193, "batch_pos": 115, "regex": {"rule": "CapabilityNoReassurance", "span": [128, 135], "captures": []}}

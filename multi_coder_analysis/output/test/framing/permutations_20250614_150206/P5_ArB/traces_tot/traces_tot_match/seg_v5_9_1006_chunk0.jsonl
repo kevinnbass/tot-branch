@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment provides cost estimates but does not use an intensifier or comparative with a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15560", "batch_size": 259, "batch_pos": 134}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual statistics; 'crisis' is a negative noun but not part of a superlative phrase.", "method": "llm_batch", "batch_id": "batch_2_10576", "batch_size": 246, "batch_pos": 127}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses financial/cost metrics, which are excluded from Q3.", "method": "llm_batch", "batch_id": "batch_3_10852", "batch_size": 237, "batch_pos": 122}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4044", "batch_size": 236, "batch_pos": 122}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical statistics (cost) but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13780", "batch_size": 234, "batch_pos": 122}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions high cost.", "method": "llm_batch", "batch_id": "batch_6_13824", "batch_size": 225, "batch_pos": 117}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15480", "batch_size": 224, "batch_pos": 117}
+{"Q": 8, "answer": "no", "rationale": "The segment reports historical cost, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13256", "batch_size": 192, "batch_pos": 102}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_id": "batch_9_10976", "batch_size": 126, "batch_pos": 62, "regex": {"rule": "NeutralPriceMetrics", "span": [19, 155], "captures": []}}

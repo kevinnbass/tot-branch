@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment states test results are expected but does not use an intensifier or comparative with a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15560", "batch_size": 259, "batch_pos": 89}
+{"Q": 2, "answer": "no", "rationale": "The segment provides a factual statement without vivid language.", "method": "llm_batch", "batch_id": "batch_2_10576", "batch_size": 246, "batch_pos": 85}
+{"Q": 3, "answer": "no", "rationale": "The segment describes awaiting results, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_10852", "batch_size": 237, "batch_pos": 80}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4044", "batch_size": 236, "batch_pos": 80}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a factual status (awaiting results) but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13780", "batch_size": 234, "batch_pos": 80}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13824", "batch_size": 225, "batch_pos": 78}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15480", "batch_size": 224, "batch_pos": 78}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_13256", "batch_size": 192, "batch_pos": 72, "regex": {"rule": "CapabilityNoReassurance", "span": [21, 30], "captures": []}}
