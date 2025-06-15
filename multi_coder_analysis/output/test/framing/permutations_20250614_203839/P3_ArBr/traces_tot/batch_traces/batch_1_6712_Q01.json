@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_6712",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains factual reporting of cases and deaths, and uses the technical term 'highly pathogenic', but no intensifier or comparative modifies a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment states infection is 'rare', which is a low-risk fact, but does not use an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes culling actions and scale ('tens of thousands') but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports deaths and scale ('at least 25,000') but does not contain an intensifier or comparative modifying a risk-adjective."
+    }
+  ],
+  "timestamp": "2025-06-14T20:39:05.745707"
+}

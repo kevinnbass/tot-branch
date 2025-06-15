@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_17396",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions (culling) and scale, but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a factual outcome (deaths) and scale, but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "'highly pathogenic' is a technical term. The segment states factual numbers of cases and deaths, but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "'rare' is a low-risk adjective. The segment does not contain an intensifier or comparative modifying a high-risk adjective."
+    }
+  ],
+  "timestamp": "2025-06-14T20:39:05.045710"
+}
