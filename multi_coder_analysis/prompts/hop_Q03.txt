@@ -11,6 +11,11 @@
 ## JSON Output:
 {"answer":"no","rationale":"'hit several farms' lacks specific scale/impact details to confirm alarmist framing."}
 
+# NO example (moderate verb + vague impact → Neutral)
+## Input Segment: The outbreak is hitting the market as poultry supplies are down.
+## JSON Output:
+{"answer":"no","rationale":"'hitting the market' + 'supplies are down' gives no number or record-type scale; stays Neutral."}
+
 === USER TASK ===
 ### Segment (StatementID: {{statement_id}})
 {{segment_text}}
@@ -38,10 +43,11 @@ Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 
 
 **Boundary Requirements:**
 1. Verb **must appear in the approved list / regex**.  
-2. Must denote realised impact (not a plan or hypothetical).  
-3. Plain outcome verbs (*killed, died, affected, reported*) are excluded—Neutral unless other cues fire.
-4. Containment verbs (“were/was culled, destroyed, euthanized, depopulated”) are **Neutral even with large numbers** *unless* paired with vivid/emotive language.
-5. Sentences about **financial or trade metrics** (exports, imports, sales, production) are treated as factual price/metric reporting → Neutral, not Alarmist here.
+2. Must include an explicit **numeric or record-type scale** ("50 % drop", "millions culled", "record losses"). Generic phrases like "supplies are down / have dropped" are **not enough**.
+3. Must denote realised impact (not a plan or hypothetical).
+4. Plain outcome verbs (*killed, died, affected, reported*) are excluded—Neutral unless other cues fire.
+5. Containment verbs (“were/was culled, destroyed, euthanized, depopulated”) are **Neutral even with large numbers** *unless* paired with vivid/emotive language.
+6. Sentences about **financial or trade metrics** (exports, imports, sales, production) are treated as factual price/metric reporting → Neutral, not Alarmist here.
 
 **Examples of Scale/Impact Indicators:**
 - Numerical quantities: "millions," "thousands," "50%," "record numbers"
