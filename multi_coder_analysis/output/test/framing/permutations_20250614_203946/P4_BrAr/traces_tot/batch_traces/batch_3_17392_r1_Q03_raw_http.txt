@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_31_101_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'had been detected' is a neutral, factual verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_6_1007_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'are actively working' and 'prevent' describe actions/plans, not realised impact, and no scale is mentioned."
+  },
+  {
+    "segment_id": "seg_v5_9_1005_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'kill' is a containment verb explicitly excluded from triggering Alarmist under Q3, even with large numbers, unless paired with vivid language, which is absent here."
+  }
+]
+```
