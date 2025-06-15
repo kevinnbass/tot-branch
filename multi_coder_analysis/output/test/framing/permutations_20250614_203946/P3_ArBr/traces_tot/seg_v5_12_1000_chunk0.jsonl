@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "This describes actions taken (banning/limiting imports).", "method": "llm_batch", "batch_id": "batch_3_6860", "batch_size": 238, "batch_pos": 78}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_3288", "batch_size": 234, "batch_pos": 78}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain any question, loaded or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_3288_r1", "batch_size": 234, "batch_pos": 78}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual events (bans/limits) but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_1176", "batch_size": 231, "batch_pos": 78}
