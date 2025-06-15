@@ -1,0 +1,86 @@
+--- a/hop_patterns.yml
++++ b/hop_patterns.yml
+@@
+ 5:
+   - name: ExplicitCalming
+     mode: live
+     frame: Reassuring
+-    pattern: |-
+-      \b(?:no\s+cause\s+for\s+alarm|
+-          public\s+can\s+rest\s+easy|
+-          fully\s+under\s+control|
+-          ...
++    pattern: |-
++      # ─────────────────────────────────────────────
++      # PATCH 1 — confidence clause made tag-tolerant
++      #           and 3rd-person friendly
++      #           • allows one bracketed/parenthetical tag
++      #             between "we" and the verb
++      #           • covers "are confident in … preparedness"
++      #             without the "we" subject
++      # ─────────────────────────────────────────────
++      \bwe\b(?:\s*\[[^\]]+\]\s*)?\s+(?:are|remain|feel)\s+confident
++          \s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
++      \bare\s+confident\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
++      (?:no\s+cause\s+for\s+alarm|
++       public\s+can\s+rest\s+easy|
++       fully\s+under\s+control|
++       ...                               # keep the rest unchanged
+       \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
+
+@@
+ 2:
+   - name: HighPotencyVerbMetaphor
+     mode: live
+     frame: Alarmist
++    # ── PATCH 2a — veto ordinary price-trend phrasing before evaluation
++    veto_pattern: |-
++      \btrending\s+sharply\s+(?:higher|lower)\b
+     pattern: |-
+       # Guard — "spark shortages" stays Neutral
+       (?!\b(?:spark|sparking)\s+shortage(?:s)?\b)
+       ...
+
+@@
+ 9:
+   - name: NeutralPriceMetrics
+     mode: live
+     frame: Neutral
+-    pattern: |-
+-      (?is)
+-      \b(?:
+-            # economic nouns
+-            (?:prices?|rates?|costs?|loss(?:es)?|profit(?:s)?|revenue|
+-               value|export(?:s)?|import(?:s)?|sale(?:s)?|output|production)
+-            \b.*?\b                     # allow anything up to the verb
+-            (?:rose|declined|increased|fell|dropped|gained|lost)\b
+-          | # "prices were up /down 2 %" form
+-            (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
+-        )
++    pattern: |-
++      (?is)
++      # ── PATCH 2b — explicitly claim "trending sharply higher/lower"
++      \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)
++        [^.]{0,50}?\btrending\s+sharply\s+(?:higher|lower)\b
++      |
++      \b(?:
++            (?:prices?|rates?|costs?|loss(?:es)?|profit(?:s)?|revenue|
++               value|export(?:s)?|import(?:s)?|sale(?:s)?|output|production)
++            \b.*?\b
++            (?:rose|declined|increased|fell|dropped|gained|lost)\b
++          |
++            (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
++        )
+
+--- a/prompts/hop_Q02.txt
++++ b/prompts/hop_Q02.txt
+@@ 🔍 Q2 Pattern Recognition Table
+ | **Pattern Type** | **Examples** | **→ Alarmist** |
+ |------------------|--------------|----------------|
+ | **High-Potency Verbs** | "ravaged," "devastated," "skyrocketed," "plummeted," "crashed," "nosedived," "tanked," "crippling," "unleashed," "slaughtered" | ✓ |
+@@ add below existing rows
+ | **Neutral Economic Trend** | "*prices are* **trending sharply higher/lower**" | → **Neutral** |
+@@ Few-Shot Exemplars
+ | **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+@@ add new exemplar
+ | Neutral – price trend | "Egg prices have been *trending sharply higher* in recent weeks." | **Neutral** | ordinary price verb | 
