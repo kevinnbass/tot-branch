@@ -4,3 +4,6 @@
 {"Q": 5, "answer": "no", "rationale": "The segment reports potential future impact, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14996", "batch_size": 236, "batch_pos": 84}
 {"Q": 6, "answer": "no", "rationale": "Contains 'some shortages' but lacks explicit scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16996", "batch_size": 226, "batch_pos": 82}
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_16112", "batch_size": 225, "batch_pos": 81}
+{"Q": 8, "answer": "no", "rationale": "The segment describes potential shortages, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13308", "batch_size": 184, "batch_pos": 58}
+{"Q": 9, "answer": "no", "rationale": "The segment describes a potential outcome ('could be some shortages') but does not report current metrics.", "method": "llm_batch", "batch_id": "batch_9_15444", "batch_size": 102, "batch_pos": 32}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_2344", "batch_size": 64, "batch_pos": 26, "regex": {"rule": "ReliefSpeculation", "span": [62, 67], "captures": ["could"]}}
