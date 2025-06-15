@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_3_1728",
+  "hop_idx": 3,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses plain language without moderate verbs or explicit scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual numbers but does not use moderate verbs from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'planning to cull' refers to a future action/plan, not realised impact, and is Neutral per Q3 rules."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'is responsible for the deaths' is a statement of cause/outcome, not a moderate verb from the list."
+    }
+  ],
+  "timestamp": "2025-06-14T20:39:22.678455"
+}
