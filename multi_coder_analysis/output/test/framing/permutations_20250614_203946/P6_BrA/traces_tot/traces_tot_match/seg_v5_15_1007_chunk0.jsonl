@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'severe' is a risk-adjective but is not modified by an intensifier or comparative here.", "method": "llm_batch", "batch_id": "batch_1_9872", "batch_size": 259, "batch_pos": 110}
+{"Q": 2, "answer": "no", "rationale": "The segment describes illness range using neutral language ('ranges from mild to severe').", "method": "llm_batch", "batch_id": "batch_2_15712", "batch_size": 245, "batch_pos": 104}
+{"Q": 3, "answer": "no", "rationale": "The segment describes the range of illness severity, not realised impact using a moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_5340", "batch_size": 238, "batch_pos": 102}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_4216", "batch_size": 237, "batch_pos": 101}
+{"Q": 5, "answer": "no", "rationale": "The segment describes potential symptoms but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_5516", "batch_size": 235, "batch_pos": 99}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12832", "batch_size": 227, "batch_pos": 95}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_10512", "batch_size": 226, "batch_pos": 94}
+{"Q": 8, "answer": "no", "rationale": "Segment describes range of human illness, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12284", "batch_size": 185, "batch_pos": 75}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_id": "batch_9_15056", "batch_size": 105, "batch_pos": 45, "regex": {"rule": "NeutralPriceMetrics", "span": [0, 0], "captures": []}}

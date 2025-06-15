@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_10412", "batch_size": 259, "batch_pos": 140}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('had chickens that tested positive').", "method": "llm_batch", "batch_id": "batch_2_5664", "batch_size": 246, "batch_pos": 132}
+{"Q": 3, "answer": "no", "rationale": "The verb 'tested positive' is neutral. '240,000' is scale, but the verb is neutral.", "method": "llm_batch", "batch_id": "batch_3_12580", "batch_size": 238, "batch_pos": 127}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_1008", "batch_size": 238, "batch_pos": 127}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a factual event (tested positive) but contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_15340", "batch_size": 237, "batch_pos": 127}
+{"Q": 6, "answer": "no", "rationale": "Bare numeral 'one barn' is not a minimiser.", "method": "llm_batch", "batch_id": "batch_6_10836", "batch_size": 229, "batch_pos": 123}
+{"Q": 7, "answer": "no", "rationale": "The segment states a fact about chickens testing positive but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_10684", "batch_size": 228, "batch_pos": 123}
+{"Q": 8, "answer": "no", "rationale": "The segment reports a past event (chickens tested positive).", "method": "llm_batch", "batch_id": "batch_8_16948", "batch_size": 196, "batch_pos": 106}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_id": "batch_9_11588", "batch_size": 127, "batch_pos": 67, "regex": {"rule": "NeutralPriceMetrics", "span": [0, 0], "captures": []}}

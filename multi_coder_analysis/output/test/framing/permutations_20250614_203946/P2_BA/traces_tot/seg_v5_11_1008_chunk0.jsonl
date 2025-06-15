@@ -5,3 +5,4 @@
 {"Q": 5, "answer": "no", "rationale": "Reports a negative event without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_1788", "batch_size": 236, "batch_pos": 26}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16608", "batch_size": 228, "batch_pos": 26}
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser token combined with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16608_r1", "batch_size": 228, "batch_pos": 26}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_16884", "batch_size": 227, "batch_pos": 26}
