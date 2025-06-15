@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The segment describes requirements using neutral language ('want to ensure eligibility', 'must have').", "method": "llm_batch", "batch_id": "batch_2_5168", "batch_size": 245, "batch_pos": 17}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2868", "batch_size": 238, "batch_pos": 17}
 {"Q": 5, "answer": "no", "rationale": "The segment reports requirements for producers but contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_14828", "batch_size": 237, "batch_pos": 17}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_4916", "batch_size": 228, "batch_pos": 16}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_11444", "batch_size": 227, "batch_pos": 16}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16344", "batch_size": 194, "batch_pos": 16, "regex": {"rule": "CapabilityNoReassurance", "span": [119, 127], "captures": []}}

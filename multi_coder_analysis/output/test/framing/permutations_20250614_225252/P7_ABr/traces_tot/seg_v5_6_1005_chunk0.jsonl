@@ -1,3 +1,6 @@
 {"Q": 1, "answer": "no", "rationale": "'high risk' is a risk phrase but not modified by an intensifier or comparative. 'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_1_16960", "batch_size": 259, "batch_pos": 89}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language. 'high risk' is an adjective + noun, not a Q2 cue type.", "method": "llm_batch", "batch_id": "batch_2_11252", "batch_size": 245, "batch_pos": 83}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1504", "batch_size": 238, "batch_pos": 81}
+{"Q": 5, "answer": "no", "rationale": "Reports a high-risk assessment; not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_7948", "batch_size": 236, "batch_pos": 81}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3504", "batch_size": 226, "batch_pos": 77}
+{"Q": 6, "answer": "no", "rationale": "The segment describes a period of 'high risk' but contains no minimiser or scale contrast for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3504_r1", "batch_size": 226, "batch_pos": 77}

@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "\"contracted\" is a moderate verb. \"forcing\" describes a consequence.", "method": "llm_batch", "batch_id": "batch_2_13568", "batch_size": 243, "batch_pos": 180}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15964", "batch_size": 237, "batch_pos": 174}
 {"Q": 5, "answer": "no", "rationale": "The segment reports a past event and action taken ('forcing officials to cull'), lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14996", "batch_size": 236, "batch_pos": 173}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16996", "batch_size": 226, "batch_pos": 167}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_16112", "batch_size": 225, "batch_pos": 166}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_13308", "batch_size": 184, "batch_pos": 138, "regex": {"rule": "CapabilityNoReassurance", "span": [106, 115], "captures": []}}
