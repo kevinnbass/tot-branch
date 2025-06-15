@@ -11,14 +11,14 @@
 -          fully\s+under\s+control|
 -          ...
 +    pattern: |-
-+      # ─────────────────────────────────────────────
++      # ─────────────────────────────────────────────────────────────
 +      # PATCH 1 — confidence clause made tag-tolerant
 +      #           and 3rd-person friendly
 +      #           • allows one bracketed/parenthetical tag
 +      #             between "we" and the verb
 +      #           • covers "are confident in … preparedness"
 +      #             without the "we" subject
-+      # ─────────────────────────────────────────────
++      # ─────────────────────────────────────────────────────────────
 +      \bwe\b(?:\s*\[[^\]]+\]\s*)?\s+(?:are|remain|feel)\s+confident
 +          \s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
 +      \bare\s+confident\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
