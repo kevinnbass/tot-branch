@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16960", "batch_size": 259, "batch_pos": 236}
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_11252", "batch_size": 245, "batch_pos": 223}
 {"Q": 2, "answer": "no", "rationale": "The segment provides advice and states a factual outcome ('to kill bacteria and viruses') without framing the threat with alarm.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_11252_r1", "batch_size": 245, "batch_pos": 223}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1504", "batch_size": 238, "batch_pos": 216}

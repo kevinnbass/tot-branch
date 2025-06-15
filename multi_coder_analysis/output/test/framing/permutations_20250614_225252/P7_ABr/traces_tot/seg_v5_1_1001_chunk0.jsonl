@@ -1,2 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16960", "batch_size": 259, "batch_pos": 68}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_11252", "batch_size": 245, "batch_pos": 62}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1504", "batch_size": 238, "batch_pos": 61}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions, rhetorical or otherwise. It is a factual report.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1504_r1", "batch_size": 238, "batch_pos": 61}

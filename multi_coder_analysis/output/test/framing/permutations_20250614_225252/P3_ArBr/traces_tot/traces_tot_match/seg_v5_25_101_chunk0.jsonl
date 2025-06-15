@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective. 'more flocks' modifies 'flocks'.", "method": "llm_batch", "batch_id": "batch_1_14556", "batch_size": 259, "batch_pos": 171}
+{"Q": 2, "answer": "no", "rationale": "'course through' is a moderate verb. 'shortages' is a potential impact, not framed vividly.", "method": "llm_batch", "batch_id": "batch_2_1836", "batch_size": 246, "batch_pos": 161}
+{"Q": 3, "answer": "no", "rationale": "Uses 'could be some shortages' which is hypothetical, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_1468", "batch_size": 238, "batch_pos": 155}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_5784", "batch_size": 237, "batch_pos": 154}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_5784_r1", "batch_size": 237, "batch_pos": 154}
+{"Q": 5, "answer": "no", "rationale": "The segment describes potential negative impacts but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7884", "batch_size": 235, "batch_pos": 152}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_14208", "batch_size": 226, "batch_pos": 145}
+{"Q": 7, "answer": "no", "rationale": "The segment states there could be some shortages if infections course through flocks but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3040", "batch_size": 225, "batch_pos": 145}
+{"Q": 8, "answer": "no", "rationale": "The segment states there could be shortages if infections course through more flocks.", "method": "llm_batch", "batch_id": "batch_8_5068", "batch_size": 191, "batch_pos": 130}
+{"Q": 9, "answer": "yes", "rationale": "'there could be some shortages of eggs' reports potential economic impact (shortages) using standard language.", "method": "llm_batch", "batch_id": "batch_9_10428", "batch_size": 115, "batch_pos": 77}

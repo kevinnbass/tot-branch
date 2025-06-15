@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term. No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_1752", "batch_size": 259, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('impose a burden', 'onerous costs') to describe economic impacts.", "method": "llm_batch", "batch_id": "batch_2_1044", "batch_size": 245, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "Describes potential future impact (\"could impose\"), not realised impact.", "method": "llm_batch", "batch_id": "batch_3_3160", "batch_size": 238, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_6800", "batch_size": 237, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The segment discusses potential economic impact but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16800", "batch_size": 235, "batch_pos": 12}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_10440", "batch_size": 226, "batch_pos": 12}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16756", "batch_size": 215, "batch_pos": 12}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a potential future negative impact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8068", "batch_size": 180, "batch_pos": 12}
+{"Q": 9, "answer": "no", "rationale": "The segment uses non-standard framing ('burden', 'onerous costs') when discussing costs.", "method": "llm_batch", "batch_id": "batch_9_15512", "batch_size": 95, "batch_pos": 8}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_3452", "batch_size": 55, "batch_pos": 8, "regex": {"rule": "ReliefSpeculation", "span": [117, 122], "captures": ["could"]}}

@@ -1,2 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "'worried' is psychological.", "method": "llm_batch", "batch_id": "batch_1_1748", "batch_size": 259, "batch_pos": 242}
 {"Q": 2, "answer": "no", "rationale": "The segment is a question, not a statement with framing language.", "method": "llm_batch", "batch_id": "batch_2_5168", "batch_size": 245, "batch_pos": 229}
+{"Q": 4, "answer": "yes", "rationale": "regex:LoadedQuestionAlarm matched", "method": "regex", "batch_id": "batch_4_2868", "batch_size": 238, "batch_pos": 222, "regex": {"rule": "LoadedQuestionAlarm", "span": [0, 24], "captures": []}}
