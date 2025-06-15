@@ -83,7 +83,7 @@
          prompted)\b
       (?=[^.]{0,120}\b(?:\d|million|millions|thousand|thousands|record|
                        largest|unprecedented|severe|significant|overwhelming|
-                       devastating|disaster|emergencies?)\b)
+                       devastating|disasters?|emergenc(?:y|ies))\b)
       (?![^.]{0,20}\bfear(?:s|ed|ing)?\b)   # guard: psychological verbs ≠ impact
 
 4:
@@ -94,6 +94,11 @@
       \b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned|afraid)\b
       (?=[^.?]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|
                        risk|infection|infected)\b)
+      |
+      # Rhetorical necessity-of-killing question (captures 'necessary to kill millions...')
+      \b(?:is|are|was|were)\s+it\s+(?:really\s+)?necessary\s+to\s+
+          (?:kill|cull|slaughter|destroy|euthan(?:ize|ise))\b
+          [^?]{0,60}?\b(?:millions?|thousands?|record|\d{1,3}(?:[, ]\d{3})+)\b
 
 5:
   - name: ExplicitCalming
