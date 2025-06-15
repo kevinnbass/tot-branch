@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'sudden increase' modifies 'increase' (a metric), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_8644", "batch_size": 259, "batch_pos": 150}
+{"Q": 2, "answer": "no", "rationale": "The segment states factual symptoms without using high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_16324", "batch_size": 245, "batch_pos": 142}
+{"Q": 3, "answer": "no", "rationale": "The segment uses factual verbs ('include', 'increase', 'drop', 'diminished') not listed as moderate verbs for Q3.", "method": "llm_batch", "batch_id": "batch_3_14048", "batch_size": 238, "batch_pos": 137}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16452", "batch_size": 231, "batch_pos": 132}
+{"Q": 5, "answer": "no", "rationale": "The segment reports symptoms but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14920", "batch_size": 229, "batch_pos": 130}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_11252", "batch_size": 221, "batch_pos": 124}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_10468", "batch_size": 220, "batch_pos": 124}
+{"Q": 8, "answer": "no", "rationale": "The segment describes symptoms, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17092", "batch_size": 184, "batch_pos": 108}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_id": "batch_9_10488", "batch_size": 98, "batch_pos": 56, "regex": {"rule": "NeutralPriceMetrics", "span": [0, 0], "captures": []}}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14068", "batch_size": 259, "batch_pos": 257}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_16636", "batch_size": 245, "batch_pos": 244}
+{"Q": 2, "answer": "no", "rationale": "The segment describes symptoms factually ('complete paralysis, swelling', 'twisting') without high-potency verbs or metaphors framing the impact alarmingly.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_16636_r1", "batch_size": 245, "batch_pos": 244}
+{"Q": 3, "answer": "no", "rationale": "The verb 'can experience' is a capability verb, not a moderate verb describing impact.", "method": "llm_batch", "batch_id": "batch_3_1752", "batch_size": 238, "batch_pos": 237}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16416", "batch_size": 237, "batch_pos": 236}
+{"Q": 5, "answer": "no", "rationale": "Reports negative facts; lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15708", "batch_size": 236, "batch_pos": 235}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_13772", "batch_size": 226, "batch_pos": 225}
+{"Q": 7, "answer": "no", "rationale": "The segment reports symptoms but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_11260", "batch_size": 225, "batch_pos": 224}
+{"Q": 8, "answer": "no", "rationale": "The segment describes facts about symptoms, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_14448", "batch_size": 193, "batch_pos": 192}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_id": "batch_9_14680", "batch_size": 114, "batch_pos": 113, "regex": {"rule": "NeutralPriceMetrics", "span": [0, 0], "captures": []}}

@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_1_8644", "batch_size": 259, "batch_pos": 205}
+{"Q": 2, "answer": "no", "rationale": "The segment states a factual detection ('highly pathogenic' is technical) without using high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_16324", "batch_size": 245, "batch_pos": 193}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a factual verb ('was detected') not listed as a moderate verb for Q3.", "method": "llm_batch", "batch_id": "batch_3_14048", "batch_size": 238, "batch_pos": 187}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16452", "batch_size": 231, "batch_pos": 181}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative fact but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14920", "batch_size": 229, "batch_pos": 179}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_11252", "batch_size": 221, "batch_pos": 172}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_10468", "batch_size": 220, "batch_pos": 172}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a fact about a case, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17092", "batch_size": 184, "batch_pos": 146}
+{"Q": 9, "answer": "yes", "rationale": "regex:NeutralPriceMetrics matched", "method": "regex", "batch_id": "batch_9_10488", "batch_size": 98, "batch_pos": 74, "regex": {"rule": "NeutralPriceMetrics", "span": [0, 0], "captures": []}}
