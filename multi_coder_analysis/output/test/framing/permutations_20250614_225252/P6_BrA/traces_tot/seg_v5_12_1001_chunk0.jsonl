@@ -4,3 +4,4 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_6800", "batch_size": 237, "batch_pos": 122}
 {"Q": 5, "answer": "no", "rationale": "Reports a bare positive fact ('no record of Americans contracting') alongside negative facts (global cases/deaths), without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16800", "batch_size": 235, "batch_pos": 120}
 {"Q": 6, "answer": "no", "rationale": "Segment contains 'no record of Americans contracting', which is a bare negation, not a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_10440", "batch_size": 226, "batch_pos": 116}
+{"Q": 7, "answer": "yes", "rationale": "'There is no record of Americans contracting highly pathogenic avian flu viruses' is a bare negation without explicit calming language.", "method": "llm_batch", "batch_id": "batch_7_16756", "batch_size": 215, "batch_pos": 109}
