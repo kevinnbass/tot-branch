@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'extremely low' is an intensifier modifying a low-risk adjective, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15644", "batch_size": 259, "batch_pos": 181}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_7688", "batch_size": 245, "batch_pos": 170}
+{"Q": 2, "answer": "no", "rationale": "The segment contains reassuring language ('extremely low') not high-potency alarmist cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_7688_r1", "batch_size": 245, "batch_pos": 170}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information.", "method": "llm_batch", "batch_id": "batch_3_17152", "batch_size": 238, "batch_pos": 164}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_8524", "batch_size": 237, "batch_pos": 163}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'chance of infected poultry entering the food chain is 'extremely low'' is an intensified low-risk evaluation, which is an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_15780", "batch_size": 235, "batch_pos": 161}

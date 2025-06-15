@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective. 'rarely' is not a listed intensifier.", "method": "llm_batch", "batch_id": "batch_1_8100", "batch_size": 259, "batch_pos": 145}
+{"Q": 2, "answer": "no", "rationale": "The segment contains low-risk cues ('rarely transmissible', 'no evidence'), which are Reassuring cues (Q5), not Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_15044", "batch_size": 245, "batch_pos": 137}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_14704", "batch_size": 238, "batch_pos": 132}
+{"Q": 3, "answer": "no", "rationale": "'transmissible' and 'spread' are not moderate verbs from the Q3 list.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_14704_r1", "batch_size": 238, "batch_pos": 132}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_9048", "batch_size": 231, "batch_pos": 131}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_5764", "batch_size": 229, "batch_pos": 130, "regex": {"rule": "ExplicitCalming", "span": [0, 25], "captures": [null]}}

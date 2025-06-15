@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16648", "batch_size": 259, "batch_pos": 27}
+{"Q": 2, "answer": "no", "rationale": "Factual statement, no vivid language.", "method": "llm_batch", "batch_id": "batch_2_12964", "batch_size": 243, "batch_pos": 26}
+{"Q": 3, "answer": "no", "rationale": "The segment uses the plain outcome verb 'confirmed'; it does not use a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15576", "batch_size": 237, "batch_pos": 26}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_3660", "batch_size": 236, "batch_pos": 26}
+{"Q": 5, "answer": "no", "rationale": "This segment reports a fact about a detection, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8444", "batch_size": 234, "batch_pos": 26}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14200", "batch_size": 225, "batch_pos": 26}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions 'a commercial turkey farm' but lacks a minimiser ('only', 'just', etc.) combined with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14200_r1", "batch_size": 225, "batch_pos": 26}
+{"Q": 7, "answer": "no", "rationale": "The segment states confirmation of flu, not a negation.", "method": "llm_batch", "batch_id": "batch_7_6964", "batch_size": 224, "batch_pos": 26}
+{"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_1936", "batch_size": 185, "batch_pos": 19}
+{"Q": 8, "answer": "no", "rationale": "Does not describe capabilities, preparedness, future possibilities, or safeguards.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_1936_r1", "batch_size": 185, "batch_pos": 19}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a confirmation, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_6008", "batch_size": 104, "batch_pos": 15}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16044", "batch_size": 68, "batch_pos": 11}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_16812", "batch_size": 66, "batch_pos": 11}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of confirmation without explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_13008", "batch_size": 66, "batch_pos": 11}

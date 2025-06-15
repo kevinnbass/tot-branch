@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7244", "batch_size": 259, "batch_pos": 199}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_4796", "batch_size": 245, "batch_pos": 186}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('tested positive') without high-potency verbs or metaphors.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_4796_r1", "batch_size": 245, "batch_pos": 186}
+{"Q": 3, "answer": "no", "rationale": "The verb 'tested positive' is not on the list of moderate verbs. 'Dozens' is a scale but not with a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_12360", "batch_size": 238, "batch_pos": 183}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17156", "batch_size": 237, "batch_pos": 182}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17156_r1", "batch_size": 237, "batch_pos": 182}
+{"Q": 5, "answer": "no", "rationale": "The segment reports wild birds testing positive but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8864", "batch_size": 235, "batch_pos": 180}
+{"Q": 6, "answer": "yes", "rationale": "'Dozens of wild birds have tested positive along the East Coast' uses a minimiser ('Dozens') with scale contrast ('along the East Coast').", "method": "llm_batch", "batch_id": "batch_6_4896", "batch_size": 226, "batch_pos": 173}

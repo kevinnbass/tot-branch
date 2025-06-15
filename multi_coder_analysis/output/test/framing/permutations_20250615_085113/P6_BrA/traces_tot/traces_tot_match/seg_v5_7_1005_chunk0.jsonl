@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7244", "batch_size": 259, "batch_pos": 220}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_4796", "batch_size": 245, "batch_pos": 207}
+{"Q": 2, "answer": "no", "rationale": "The quote expresses sentiment and preparedness, not high-potency language framing the threat's impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_4796_r1", "batch_size": 245, "batch_pos": 207}
+{"Q": 3, "answer": "no", "rationale": "The segment describes feelings and preparedness, not realised impact with a moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_12360", "batch_size": 238, "batch_pos": 203}
+{"Q": 4, "answer": "no", "rationale": "The quote contains a statement of cautious preparedness, not a loaded rhetorical question implying alarm.", "method": "llm_batch", "batch_id": "batch_4_17156", "batch_size": 237, "batch_pos": 202}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_8864", "batch_size": 235, "batch_pos": 200, "regex": {"rule": "ExplicitCalming", "span": [1, 21], "captures": [null]}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16648", "batch_size": 259, "batch_pos": 195}
+{"Q": 2, "answer": "no", "rationale": "'spreads easily' is descriptive, not high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_12964", "batch_size": 243, "batch_pos": 186}
+{"Q": 3, "answer": "no", "rationale": "The segment describes spread mechanism and actions ('spreads easily', 'carried into', 'activated'); it does not use a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15576", "batch_size": 237, "batch_pos": 180}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_3660", "batch_size": 236, "batch_pos": 179}
+{"Q": 5, "answer": "no", "rationale": "This reports facts about spread and actions taken by commercial operations, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8444", "batch_size": 234, "batch_pos": 177}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_14200", "batch_size": 225, "batch_pos": 171}
+{"Q": 7, "answer": "no", "rationale": "The segment describes spread and action taken, not a negation.", "method": "llm_batch", "batch_id": "batch_7_6964", "batch_size": 224, "batch_pos": 170}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_1936", "batch_size": 185, "batch_pos": 143, "regex": {"rule": "CapabilityNoReassurance", "span": [175, 183], "captures": []}}

@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch_9_10464",
+  "hop_idx": 9,
+  "segment_count": 2,
+  "matches": [
+    {
+      "statement_id": "seg_v5_8_1006_chunk0",
+      "regex": {
+        "rule": "NeutralPriceMetrics",
+        "span": [
+          4,
+          19
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_24_101_chunk0",
+      "regex": {
+        "rule": "NeutralPriceMetrics",
+        "span": [
+          22,
+          89
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

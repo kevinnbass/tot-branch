@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'rarely transmissible' uses 'rarely' which indicates low risk, not an intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16648", "batch_size": 259, "batch_pos": 115}
+{"Q": 2, "answer": "no", "rationale": "Statement of low risk; 'rarely transmissible' is descriptive, not high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_12964", "batch_size": 243, "batch_pos": 109}
+{"Q": 3, "answer": "no", "rationale": "The segment provides reassurance ('rarely transmissible', 'no evidence'); it does not use a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15576", "batch_size": 237, "batch_pos": 107}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_3660", "batch_size": 236, "batch_pos": 106}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_8444", "batch_size": 234, "batch_pos": 105, "regex": {"rule": "ExplicitCalming", "span": [0, 25], "captures": [null]}}
