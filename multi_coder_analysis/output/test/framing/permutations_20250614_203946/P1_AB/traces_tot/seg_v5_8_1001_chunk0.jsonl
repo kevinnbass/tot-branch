@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The verb 'culled' is a containment verb (Neutral). The segment discusses financial/trade metrics (inflation, supply chain).", "method": "llm_batch", "batch_id": "batch_3_1752", "batch_size": 238, "batch_pos": 68}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16416", "batch_size": 237, "batch_pos": 68}
 {"Q": 5, "answer": "no", "rationale": "Reports action and positive outcome (not entering food system), but not framed with explicit calming language like 'safe to eat'.", "method": "llm_batch", "batch_id": "batch_5_15708", "batch_size": 236, "batch_pos": 68}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_13772", "batch_size": 226, "batch_pos": 64}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_11260", "batch_size": 225, "batch_pos": 64, "regex": {"rule": "BareNegationHealthConcern", "span": [17, 47], "captures": []}}
