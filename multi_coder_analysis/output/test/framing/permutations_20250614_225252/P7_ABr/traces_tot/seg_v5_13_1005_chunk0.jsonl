@@ -5,3 +5,6 @@
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3504", "batch_size": 226, "batch_pos": 52}
 {"Q": 6, "answer": "no", "rationale": "The segment describes spread and timeline but lacks a minimiser + scale contrast for reassurance about impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3504_r1", "batch_size": 226, "batch_pos": 52}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1752", "batch_size": 225, "batch_pos": 52}
+{"Q": 8, "answer": "no", "rationale": "The segment describes spread/detection history, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12964", "batch_size": 192, "batch_pos": 43}
+{"Q": 9, "answer": "no", "rationale": "The segment reports locations and timeline of circulation/findings, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_10840", "batch_size": 108, "batch_pos": 29}
+{"Q": 10, "answer": "no", "rationale": "The segment describes past/current circulation and findings, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_14736", "batch_size": 81, "batch_pos": 17}

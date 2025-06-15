@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15044", "batch_size": 259, "batch_pos": 37}
+{"Q": 2, "answer": "no", "rationale": "Opinion/comparison, no high-potency language.", "method": "llm_batch", "batch_id": "batch_2_13568", "batch_size": 243, "batch_pos": 36}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15964", "batch_size": 237, "batch_pos": 35}
+{"Q": 5, "answer": "no", "rationale": "The segment reports an opinion on humaneness, lacking explicit calming language about public safety.", "method": "llm_batch", "batch_id": "batch_5_14996", "batch_size": 236, "batch_pos": 35}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16996", "batch_size": 226, "batch_pos": 34}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_16112", "batch_size": 225, "batch_pos": 34}
+{"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_13308", "batch_size": 184, "batch_pos": 23}
+{"Q": 8, "answer": "no", "rationale": "Statement is a commentary on the nature of a response measure, not a description of capability/preparedness linked to public risk.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_13308_r1", "batch_size": 184, "batch_pos": 23}
+{"Q": 9, "answer": "no", "rationale": "The segment quotes an expert on humaneness but does not report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_15444", "batch_size": 102, "batch_pos": 15}
+{"Q": 10, "answer": "no", "rationale": "The segment discusses culling, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_2344", "batch_size": 64, "batch_pos": 12}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement ('Professor Kean said') is a factual comparison, not framing the outbreak risk.", "method": "llm_batch", "batch_id": "batch_11_17380", "batch_size": 60, "batch_pos": 12}
+{"Q": 12, "answer": "yes", "rationale": "Quote presents an opinion justifying a procedure, not amplifying the threat.", "method": "llm_batch", "batch_id": "batch_12_8544", "batch_size": 60, "batch_pos": 12}

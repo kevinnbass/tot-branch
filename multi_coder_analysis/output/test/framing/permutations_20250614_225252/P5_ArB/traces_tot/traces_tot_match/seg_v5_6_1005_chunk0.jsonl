@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'high risk' is not modified by a Q1 intensifier/comparative. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_1_1748", "batch_size": 259, "batch_pos": 41}
+{"Q": 2, "answer": "no", "rationale": "'high risk' is a risk adjective but not combined with an intensifier for Q2.", "method": "llm_batch", "batch_id": "batch_2_5168", "batch_size": 245, "batch_pos": 40}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2868", "batch_size": 238, "batch_pos": 37}
+{"Q": 5, "answer": "no", "rationale": "The segment describes a period of 'high risk', which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14828", "batch_size": 237, "batch_pos": 37}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_4916", "batch_size": 228, "batch_pos": 35}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_11444", "batch_size": 227, "batch_pos": 35}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the current risk level, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16344", "batch_size": 194, "batch_pos": 34}
+{"Q": 9, "answer": "no", "rationale": "The segment reports an assessment of risk, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_13376", "batch_size": 118, "batch_pos": 16}
+{"Q": 10, "answer": "no", "rationale": "The segment states a current risk assessment, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_14208", "batch_size": 66, "batch_pos": 9}
+{"Q": 11, "answer": "yes", "rationale": "regex:DominantQuoteAlarmist matched", "method": "regex", "batch_id": "batch_11_13008", "batch_size": 64, "batch_pos": 9, "regex": {"rule": "DominantQuoteAlarmist", "span": [3, 157], "captures": []}}

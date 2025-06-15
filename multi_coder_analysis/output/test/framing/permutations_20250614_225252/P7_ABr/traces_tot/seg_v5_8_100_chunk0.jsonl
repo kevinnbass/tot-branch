@@ -5,3 +5,4 @@
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3504", "batch_size": 226, "batch_pos": 28}
 {"Q": 6, "answer": "no", "rationale": "The segment provides factual safety information (Q5 Food Safety) but lacks the Q6 minimiser + scale contrast pattern.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3504_r1", "batch_size": 226, "batch_pos": 28}
 {"Q": 7, "answer": "no", "rationale": "The segment provides a safety instruction, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1752", "batch_size": 225, "batch_pos": 28}
+{"Q": 8, "answer": "yes", "rationale": "Describes a safeguard/action ('Cooking... kills bacteria and viruses') without explicit reassurance.", "method": "llm_batch", "batch_id": "batch_8_12964", "batch_size": 192, "batch_pos": 23}
