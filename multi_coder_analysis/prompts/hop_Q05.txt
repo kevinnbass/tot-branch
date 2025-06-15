@@ -11,6 +11,12 @@
 ## JSON Output:
 {"answer":"yes","rationale":"'remain safe to eat' is a direct safety assurance for consumers."}
 
+# YES example (Confidence / optimism)
+## Input Segment: Officials said they *feel optimistic that the team can tackle the outbreak quickly*.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'feel optimistic' expresses explicit confidence in handling the situation, a calming cue."}
+
 # NO example
 ## Input Segment: No human cases have been detected in the area.
 ## Question: Does the author/source provide an explicit calming cue for reassurance?

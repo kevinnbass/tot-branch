@@ -100,9 +100,9 @@
     mode: live
     frame: Reassuring
     pattern: |-
-      \bwe\b(?:\s*\[[^\]]+\]\s*)?\s+(?:are|remain|feel)\s+confident
-          \s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
-      \bare\s+confident\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
+      \bwe\b(?:\s*\[[^\]]+\]\s*)?\s+(?:are|remain|feel)\s+
+          (?:confident|positive|optimistic|hopeful)\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
+      \b(?:are|feel)\s+(?:confident|positive|optimistic|hopeful)\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
       \b(?:no\s+cause\s+for\s+alarm|
           public\s+can\s+rest\s+easy|
           fully\s+under\s+control|
@@ -112,6 +112,11 @@
           (?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
             .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
           \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
+      | # generic optimism/confidence without "in X" clause
+      \b(?:i|we|they|officials?|authorities?)\s+
+        (?:feel|are)\s+
+        (?:positive|optimistic|hopeful)\s+
+        (?:that|about)\b
 
 6:
   - name: MinimiserScaleContrast
@@ -165,15 +170,13 @@
              # economic nouns
              (?:prices?|rates?|costs?|loss(?:es)?|profit(?:s)?|revenue|
                 value|export(?:s)?|import(?:s)?|sale(?:s)?|output|production)
-             \b.*?\b                     # allow anything up to the verb
+             \b[^.]{0,120}?                     # allow anything up to the verb (≤ one sentence)
              (?:rose|declined|increased|fell|dropped|gained|lost)\b
            | # "prices were up /down 2 %" form
              (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
-           |
-             # PATCH 2b – claim "trending sharply higher/lower" as Neutral
-               \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)
-                 [^.]{0,50}?\btrending\s+sharply\s+(?:higher|lower)\b
-           |
+           | # PATCH 2b – claim "trending sharply higher/lower" as Neutral
+             \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)
+               [^.]{0,50}?\btrending\s+sharply\s+(?:higher|lower)\b
        )
 
 10:
