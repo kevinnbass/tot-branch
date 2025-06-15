@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment describes a process using neutral language.", "method": "llm_batch", "batch_id": "batch_2_15712", "batch_size": 245, "batch_pos": 35}
 {"Q": 3, "answer": "no", "rationale": "The segment describes a process, not realised impact using a moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_5340", "batch_size": 238, "batch_pos": 35}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_4216", "batch_size": 237, "batch_pos": 34}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_5516", "batch_size": 235, "batch_pos": 32}
+{"Q": 5, "answer": "no", "rationale": "The segment describes a testing procedure factually and contains no explicit calming language or reassurance cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_5516_r1", "batch_size": 235, "batch_pos": 32}
