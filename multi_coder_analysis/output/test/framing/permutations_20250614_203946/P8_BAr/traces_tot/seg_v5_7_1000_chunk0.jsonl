@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment is a statement about food safety and surveillance.", "method": "llm_batch", "batch_id": "batch_3_10200", "batch_size": 238, "batch_pos": 67}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_8512", "batch_size": 228, "batch_pos": 65}
 {"Q": 5, "answer": "no", "rationale": "Reports a fact about disposition and a boast about surveillance not linked to public safety.", "method": "llm_batch", "batch_id": "batch_5_3204", "batch_size": 227, "batch_pos": 65}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser token combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15396", "batch_size": 219, "batch_pos": 64}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_3608", "batch_size": 218, "batch_pos": 63, "regex": {"rule": "BareNegationHealthConcern", "span": [22, 52], "captures": []}}

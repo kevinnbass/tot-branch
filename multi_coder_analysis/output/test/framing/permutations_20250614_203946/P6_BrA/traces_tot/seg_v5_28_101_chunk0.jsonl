@@ -5,3 +5,4 @@
 {"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_5516", "batch_size": 235, "batch_pos": 32}
 {"Q": 5, "answer": "no", "rationale": "The segment describes a testing procedure factually and contains no explicit calming language or reassurance cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_5516_r1", "batch_size": 235, "batch_pos": 32}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12832", "batch_size": 227, "batch_pos": 30}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_10512", "batch_size": 226, "batch_pos": 30}
