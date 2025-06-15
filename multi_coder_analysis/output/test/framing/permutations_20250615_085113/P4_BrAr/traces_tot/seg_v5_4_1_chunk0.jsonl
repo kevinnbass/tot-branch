@@ -5,3 +5,7 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15232", "batch_size": 225, "batch_pos": 220}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14704", "batch_size": 224, "batch_pos": 219}
 {"Q": 8, "answer": "no", "rationale": "The segment confirms virus responsibility and location, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8784", "batch_size": 185, "batch_pos": 182}
+{"Q": 9, "answer": "no", "rationale": "The segment includes framing language like 'deadly H5N8 virus', not factual reporting of prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_15024", "batch_size": 101, "batch_pos": 100}
+{"Q": 10, "answer": "no", "rationale": "The segment reports confirmation of cause, location, and lack of clarity but does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_10940", "batch_size": 58, "batch_pos": 58}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'deadly H5N8 virus', but 'deadly' is a bare risk adjective similar to 'deadly' which is Neutral per Q11 table.", "method": "llm_batch", "batch_id": "batch_11_16148", "batch_size": 57, "batch_pos": 57}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_13888", "batch_size": 56, "batch_pos": 56, "regex": {"rule": "NeutralStats", "span": [62, 136], "captures": ["confirm", "deaths"]}}
