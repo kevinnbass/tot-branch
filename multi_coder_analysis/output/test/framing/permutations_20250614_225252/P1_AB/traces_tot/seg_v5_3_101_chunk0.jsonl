@@ -3,3 +3,4 @@
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_16696", "batch_size": 238, "batch_pos": 217}
 {"Q": 3, "answer": "no", "rationale": "'spreads' and 'makes it difficult to contain' are not moderate verbs paired with explicit scale or impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_16696_r1", "batch_size": 238, "batch_pos": 217}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13476", "batch_size": 238, "batch_pos": 217}
+{"Q": 5, "answer": "no", "rationale": "The segment reports negative impact ('particularly hard hit', disasters, canceling exhibits) but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_15984", "batch_size": 237, "batch_pos": 217}
