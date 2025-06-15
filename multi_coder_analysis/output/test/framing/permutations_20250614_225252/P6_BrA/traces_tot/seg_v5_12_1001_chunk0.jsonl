@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment states factual scale ('864 people have contracted it', '456 deaths') using neutral verbs ('contracted', 'resulting in'); 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_2_1044", "batch_size": 245, "batch_pos": 125}
 {"Q": 3, "answer": "no", "rationale": "\"contracted\" and \"resulting\" are plain outcome verbs (Neutral per rule 4).", "method": "llm_batch", "batch_id": "batch_3_3160", "batch_size": 238, "batch_pos": 123}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_6800", "batch_size": 237, "batch_pos": 122}
+{"Q": 5, "answer": "no", "rationale": "Reports a bare positive fact ('no record of Americans contracting') alongside negative facts (global cases/deaths), without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16800", "batch_size": 235, "batch_pos": 120}
