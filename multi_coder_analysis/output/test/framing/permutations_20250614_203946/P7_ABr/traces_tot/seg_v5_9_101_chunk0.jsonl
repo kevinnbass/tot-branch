@@ -1,2 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "'worried' is a psychological reaction.", "method": "llm_batch", "batch_id": "batch_1_8644", "batch_size": 259, "batch_pos": 147}
 {"Q": 2, "answer": "no", "rationale": "The segment is a question without using high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_16324", "batch_size": 245, "batch_pos": 139}
+{"Q": 3, "answer": "no", "rationale": "The segment is a question without moderate verbs paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_14048", "batch_size": 238, "batch_pos": 134}
+{"Q": 4, "answer": "yes", "rationale": "regex:LoadedQuestionAlarm matched", "method": "regex", "batch_id": "batch_4_16452", "batch_size": 231, "batch_pos": 129, "regex": {"rule": "LoadedQuestionAlarm", "span": [0, 24], "captures": []}}

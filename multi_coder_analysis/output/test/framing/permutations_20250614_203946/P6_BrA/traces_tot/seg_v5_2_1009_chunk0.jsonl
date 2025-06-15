@@ -2,3 +2,4 @@
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_15712", "batch_size": 245, "batch_pos": 70}
 {"Q": 2, "answer": "no", "rationale": "The language used ('detected', 'small', 'non-commercial') is factual and descriptive, not high-potency or metaphorical framing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_15712_r1", "batch_size": 245, "batch_pos": 70}
 {"Q": 3, "answer": "no", "rationale": "The segment uses a plain verb ('detected'), not a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_5340", "batch_size": 238, "batch_pos": 69}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_4216", "batch_size": 237, "batch_pos": 68}

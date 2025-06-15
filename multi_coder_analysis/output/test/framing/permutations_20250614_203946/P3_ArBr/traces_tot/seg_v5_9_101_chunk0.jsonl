@@ -1,2 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective. 'worried' is a psychological reaction.", "method": "llm_batch", "batch_id": "batch_1_4916", "batch_size": 259, "batch_pos": 147}
 {"Q": 2, "answer": "no", "rationale": "The segment is a question and uses neutral language without high-potency verbs, metaphors, or other Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_10316", "batch_size": 245, "batch_pos": 139}
+{"Q": 3, "answer": "no", "rationale": "This is a question about human risk.", "method": "llm_batch", "batch_id": "batch_3_6860", "batch_size": 238, "batch_pos": 134}
+{"Q": 4, "answer": "yes", "rationale": "regex:LoadedQuestionAlarm matched", "method": "regex", "batch_id": "batch_4_3288", "batch_size": 234, "batch_pos": 132, "regex": {"rule": "LoadedQuestionAlarm", "span": [0, 24], "captures": []}}
