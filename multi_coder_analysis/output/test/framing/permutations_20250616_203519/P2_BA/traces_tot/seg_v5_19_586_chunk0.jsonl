@@ -8,3 +8,4 @@
 {"Q": 9, "answer": "no", "rationale": "Contains explicit framing: \"enormous concern\" and \"risk remained low\".", "method": "llm_batch", "batch_id": "batch_9_15740", "batch_size": 260, "batch_pos": 16}
 {"Q": 10, "answer": "no", "rationale": "The segment contains a calming cue ('risk remained low') about the current state (Q5), failing the Q10 criteria.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 210}
 {"Q": 11, "answer": "no", "rationale": "Attributed statements are equally balanced between alarmist ('enormous concern') and reassuring ('risk remained low').", "method": "llm_batch", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 193}
+{"Q": 12, "answer": "no", "rationale": "Contains both an Alarmist cue ('enormous concern') and a Reassuring cue ('risk remained low'). Alarmist outranks Reassuring.", "method": "llm_batch", "batch_id": "batch_12_18472", "batch_size": 260, "batch_pos": 192}

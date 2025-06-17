@@ -10,3 +10,4 @@
 {"Q": 10, "answer": "no", "rationale": "The segment states an idea gives researchers pause but does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 29}
 {"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 26}
 {"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_10932_r1", "batch_size": 260, "batch_pos": 26}
+{"Q": 12, "answer": "yes", "rationale": "Describes a reaction ('gives... pause') which is a psychological verb treated as Neutral per context guard.", "method": "llm_batch", "batch_id": "batch_12_18472", "batch_size": 260, "batch_pos": 25}
