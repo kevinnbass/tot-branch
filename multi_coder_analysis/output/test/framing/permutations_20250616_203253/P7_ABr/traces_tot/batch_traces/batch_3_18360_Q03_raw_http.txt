@@ -1,0 +1,49 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_1_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'infected' (moderate verb) but the scale ('5.3 million hens and 88,000 turkeys') is linked to the containment verb 'killing', which is Neutral per rules."
+  },
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'kill' with a large number ('22 million birds'), but containment verbs are Neutral even with scale unless vivid language is added."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'kill' with a large number ('13 million chickens and 305,000 turkeys'), but containment verbs are Neutral even with scale unless vivid language is added."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a factual inventory number ('46 million chickens') not linked to disease impact."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a factual annual production number ('11.7 million turkeys') not linked to disease impact."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the cause of spread but uses no moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'confirmed cases' with a scale ('23 states'), but plain outcome verbs are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'confirmed' with a scale ('35,500 birds'), but plain outcome verbs are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states where cases occurred but uses no moderate verb paired with scale/impact."
+  }
+]
+```

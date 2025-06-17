@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_3_20228",
+  "hop_idx": 3,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions locations of cases but uses no moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions a farm size but uses no moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions the number of states with cases but uses no moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the cause of spread but uses no moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "yes",
+      "rationale": "The moderate verb 'infected' is explicitly paired with the large-scale impact 'forcing the killing of 5.3 million hens and 88,000 turkeys'."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'kill' with a large number, which is Neutral unless paired with vivid language (rule 5)."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'kill' with large numbers, which is Neutral unless paired with vivid language (rule 5)."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides baseline production data, not impact described by a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides annual production data, not impact described by a moderate verb."
+    }
+  ],
+  "timestamp": "2025-06-16T20:33:27.847624"
+}
