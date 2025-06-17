@@ -309,17 +309,38 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
 
     df_votes["Majority_Label"] = df_votes.drop(columns=["StatementID"]).apply(_majority, axis=1)
 
-    # Attach gold if present
+    # ------------------------------------------------------------------
+    # If a Gold Standard column is available in the *input* dataframe we
+    # compute a boolean mismatch flag and the number of individual
+    # permutations that disagree with the gold label for each statement.
+    # ------------------------------------------------------------------
+
     if "Gold Standard" in df_in.columns:
         df_votes = df_votes.merge(df_in[["StatementID", "Gold Standard"]], on="StatementID", how="left")
         df_votes["Mismatch"] = df_votes["Majority_Label"] != df_votes["Gold Standard"]
 
-        # --- NEW: count per-row mismatches across individual permutations ---
         perm_cols = [tag for tag, _ in perm_jobs]
+
         def _mismatch_count(row):
             return sum(row[col] != row["Gold Standard"] for col in perm_cols)
 
         df_votes["Permutation_Mismatch_Count"] = df_votes.apply(_mismatch_count, axis=1)
+
+    # ------------------------------------------------------------------
+    # Majority label *strength* ratio: occurrences of Majority_Label across
+    # the permutation columns divided by occurrences of the *other* labels.
+    # Applies regardless of whether a Gold Standard column is present.
+    # ------------------------------------------------------------------
+
+    perm_cols = [tag for tag, _ in perm_jobs]
+
+    def _majority_strength(row):
+        maj_label = row["Majority_Label"]
+        maj_count = sum(row[col] == maj_label for col in perm_cols)
+        other = len(perm_cols) - maj_count
+        return maj_count / other if other else float("inf")
+
+    df_votes["Majority_Label_Ratio"] = df_votes.apply(_majority_strength, axis=1)
 
     df_votes.to_csv(root_out / "majority_vote_comparison.csv", index=False)
 
