@@ -1,7 +1,9 @@
+from __future__ import annotations
+
 import sys
 import json
 from pathlib import Path
-from typing import List, Dict, Any
+from typing import List, Dict, Any, Optional
 import pandas as pd
 
 
@@ -15,7 +17,7 @@ def load_majority_file(root_dir: Path) -> pd.DataFrame:
     return pd.read_csv(path)
 
 
-def find_trace_file(perm_dir: Path, statement_id: str) -> Path | None:
+def find_trace_file(perm_dir: Path, statement_id: str) -> Optional[Path]:
     """Return first trace file path for statement in *perm_dir* (recursive glob)."""
     trace_root = perm_dir / "traces_tot"
     if not trace_root.exists():
