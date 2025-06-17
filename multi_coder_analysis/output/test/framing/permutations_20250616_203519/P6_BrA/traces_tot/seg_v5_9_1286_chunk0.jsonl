@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'low risk' and 'reported infections'.", "method": "llm_batch", "batch_id": "batch_2_20500", "batch_size": 260, "batch_pos": 9}
 {"Q": 3, "answer": "no", "rationale": "'are considered' is a plain verb. 'low risk' is a Q5 cue, not Q3. 'have been reported' is a plain outcome verb.", "method": "llm_batch", "batch_id": "batch_3_9208", "batch_size": 260, "batch_pos": 228}
 {"Q": 4, "answer": "no", "rationale": "No question present.", "method": "llm_batch", "batch_id": "batch_4_18856", "batch_size": 260, "batch_pos": 215}
+{"Q": 5, "answer": "no", "rationale": "The segment states 'Humans are considered to be at low risk', which is a low-risk evaluation but lacks an intensifier for Q5.", "method": "llm_batch", "batch_id": "batch_5_8932", "batch_size": 260, "batch_pos": 209}
+{"Q": 6, "answer": "no", "rationale": "The segment states humans are considered at low risk, which is reassurance, but not using the 'minimiser + scale contrast' pattern.", "method": "llm_batch", "batch_id": "batch_6_20384", "batch_size": 260, "batch_pos": 183}

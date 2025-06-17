@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'appears low' and 'identified'.", "method": "llm_batch", "batch_id": "batch_2_20500", "batch_size": 260, "batch_pos": 10}
 {"Q": 3, "answer": "no", "rationale": "'appears low' is a Q5 cue, not Q3. 'was identified' and 'said' are plain verbs. 'first time' is not a scale of impact.", "method": "llm_batch", "batch_id": "batch_3_9208", "batch_size": 260, "batch_pos": 229}
 {"Q": 4, "answer": "no", "rationale": "No question present.", "method": "llm_batch", "batch_id": "batch_4_18856", "batch_size": 260, "batch_pos": 216}
+{"Q": 5, "answer": "no", "rationale": "The segment states 'The risk... appears low', which is a low-risk evaluation but lacks an intensifier for Q5.", "method": "llm_batch", "batch_id": "batch_5_8932", "batch_size": 260, "batch_pos": 210}
+{"Q": 6, "answer": "no", "rationale": "The segment states the risk of human-to-human spread appears low, which is reassurance, but not using the 'minimiser + scale contrast' pattern.", "method": "llm_batch", "batch_id": "batch_6_20384", "batch_size": 260, "batch_pos": 184}

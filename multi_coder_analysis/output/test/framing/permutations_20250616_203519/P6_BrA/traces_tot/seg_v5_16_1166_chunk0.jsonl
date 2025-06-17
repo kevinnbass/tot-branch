@@ -3,3 +3,5 @@
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 42}
 {"Q": 3, "answer": "no", "rationale": "'dying out' is a verb phrase, but not a moderate verb from the specified list/regex paired with scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 42}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 27}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative risk but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 19}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_8784", "batch_size": 260, "batch_pos": 239}

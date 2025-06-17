@@ -5,3 +5,4 @@
 {"Q": 5, "answer": "no", "rationale": "This segment reports absence of cases ('No human cases... have been detected'), a bare negation handled under Q7.", "method": "llm_batch", "batch_id": "batch_5_14676", "batch_size": 260, "batch_pos": 163}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_5140", "batch_size": 260, "batch_pos": 120}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_5140_r1", "batch_size": 260, "batch_pos": 120}
+{"Q": 7, "answer": "yes", "rationale": "'No human cases... have been detected' is a bare negation without explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_19368", "batch_size": 258, "batch_pos": 102}

@@ -3,3 +3,4 @@
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_12964", "batch_size": 260, "batch_pos": 108}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'downplayed concerns' which is about communication/reaction, not a moderate verb describing realised impact or paired with scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_12964_r1", "batch_size": 260, "batch_pos": 108}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_7684", "batch_size": 260, "batch_pos": 108}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'supermarkets downplayed any concerns' is an explicit calming cue from a source.", "method": "llm_batch", "batch_id": "batch_5_9516", "batch_size": 260, "batch_pos": 107}

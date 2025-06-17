@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 110}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 91}
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 91}
+{"Q": 5, "answer": "no", "rationale": "This segment is a question, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 86}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 45}

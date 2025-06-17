@@ -3,3 +3,5 @@
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 115}
 {"Q": 3, "answer": "no", "rationale": "'reduced' is a verb, but not paired with a specific scale/quantity/record.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 115}
 {"Q": 4, "answer": "no", "rationale": "This is a rhetorical question challenging a strategic focus, not loaded to instill fear about the disease.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 100}
+{"Q": 5, "answer": "no", "rationale": "The segment describes a plan but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 92}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3444", "batch_size": 260, "batch_pos": 52}

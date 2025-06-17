@@ -3,3 +3,5 @@
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 176}
 {"Q": 3, "answer": "no", "rationale": "'are concerning' is evaluative, and 'transmission' is a noun.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 176}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 159}
+{"Q": 5, "answer": "no", "rationale": "The segment reports concerns, which are not calming cues.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 151}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3444", "batch_size": 260, "batch_pos": 110}

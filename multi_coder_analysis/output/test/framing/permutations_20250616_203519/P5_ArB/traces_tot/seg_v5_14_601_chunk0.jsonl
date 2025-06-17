@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "Neutral language used; no moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_2068", "batch_size": 260, "batch_pos": 76}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_19108", "batch_size": 260, "batch_pos": 63}
 {"Q": 4, "answer": "no", "rationale": "The segment contains statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_19108_r1", "batch_size": 260, "batch_pos": 63}
+{"Q": 5, "answer": "no", "rationale": "This segment discusses consequences of testing positive and lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14944", "batch_size": 260, "batch_pos": 60}

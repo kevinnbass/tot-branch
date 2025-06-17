@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "The segment describes future capability ('will be able to eliminate'), not realised impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 240}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 221}
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 221}
+{"Q": 5, "answer": "yes", "rationale": "The segment contains the explicit confidence statement 'we will be able to eliminate this' from an official source (Eric Deeble, USDA).", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 216}

@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "No moderate verbs paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_10512", "batch_size": 260, "batch_pos": 44}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_19216", "batch_size": 260, "batch_pos": 33}
 {"Q": 4, "answer": "no", "rationale": "The segment is an amendment notice and contains no questions, loaded or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_19216_r1", "batch_size": 260, "batch_pos": 33}
+{"Q": 5, "answer": "no", "rationale": "The segment is meta-information about the article, not related to the threat or calming cues.", "method": "llm_batch", "batch_id": "batch_5_20828", "batch_size": 260, "batch_pos": 30}

@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "Segment describes actions to prevent infection, not realised impact with a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_7700", "batch_size": 81, "batch_pos": 20}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 259}
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 259}
+{"Q": 5, "answer": "no", "rationale": "This segment reports actions taken ('working hard,' 'taking steps') without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 254}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 209}

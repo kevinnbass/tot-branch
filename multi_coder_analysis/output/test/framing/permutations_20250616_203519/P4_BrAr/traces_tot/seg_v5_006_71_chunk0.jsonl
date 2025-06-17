@@ -5,3 +5,5 @@
 {"Q": 5, "answer": "no", "rationale": "The segment describes actions/strategy ('control area has been established to limit traffic', 'extensive testing is done to ensure no other cases') which are neutral facts about response, not explicit calming cues linked to public safety.", "method": "llm_batch", "batch_id": "batch_5_18632", "batch_size": 260, "batch_pos": 172}
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17916", "batch_size": 260, "batch_pos": 167}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the threat or risk.", "method": "llm_batch", "batch_id": "batch_7_14208", "batch_size": 260, "batch_pos": 165}
+{"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_19948", "batch_size": 260, "batch_pos": 149}
+{"Q": 8, "answer": "yes", "rationale": "Describes a response measure ('killed and disposed of') without linking it to current calm or safety.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_19948_r1", "batch_size": 260, "batch_pos": 149}

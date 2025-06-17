@@ -7,3 +7,4 @@
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 132}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser token ('only', 'just', etc.) combined with an explicit scale contrast ('out of X').", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_17300_r1", "batch_size": 260, "batch_pos": 132}
 {"Q": 7, "answer": "no", "rationale": "The segment contains a negation about personal experience ('hasn't encountered'), not a bare negation about risk or outcome.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 128}
+{"Q": 8, "answer": "yes", "rationale": "Describes a form of preparedness/vigilance: 'he's watching the news closely'.", "method": "llm_batch", "batch_id": "batch_8_724", "batch_size": 260, "batch_pos": 106}

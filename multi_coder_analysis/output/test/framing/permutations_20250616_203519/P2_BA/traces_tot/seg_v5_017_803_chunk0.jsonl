@@ -2,3 +2,4 @@
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_4188", "batch_size": 260, "batch_pos": 88}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('collected', 'ill') without high-potency verbs, metaphors, or alert phrases.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_4188_r1", "batch_size": 260, "batch_pos": 88}
 {"Q": 3, "answer": "no", "rationale": "The verb 'collected' is a plain verb, not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_8088", "batch_size": 260, "batch_pos": 43}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2916", "batch_size": 260, "batch_pos": 25}

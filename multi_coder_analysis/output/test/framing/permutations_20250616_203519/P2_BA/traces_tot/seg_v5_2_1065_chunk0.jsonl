@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6672", "batch_size": 260, "batch_pos": 255}
 {"Q": 2, "answer": "no", "rationale": "The segment discusses potential economic impact, not the threat's impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_14252", "batch_size": 260, "batch_pos": 217}
 {"Q": 3, "answer": "no", "rationale": "The segment discusses potential future price increases ('prices could get even higher').", "method": "llm_batch", "batch_id": "batch_3_6536", "batch_size": 260, "batch_pos": 179}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17548", "batch_size": 260, "batch_pos": 165}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions, rhetorical or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17548_r1", "batch_size": 260, "batch_pos": 165}
