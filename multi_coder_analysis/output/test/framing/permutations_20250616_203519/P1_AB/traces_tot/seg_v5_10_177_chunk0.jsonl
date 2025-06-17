@@ -1,1 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18768", "batch_size": 260, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "The segment uses the moderate verbs 'prompted' and 'affecting' without other vivid language.", "method": "llm_batch", "batch_id": "batch_2_16288", "batch_size": 260, "batch_pos": 259}
+{"Q": 3, "answer": "yes", "rationale": "regex:ModerateVerbPlusScale matched", "method": "regex", "batch_id": "batch_3_19564", "batch_size": 260, "batch_pos": 188, "regex": {"rule": "ModerateVerbPlusScale", "span": [19, 27], "captures": ["prompted"]}}

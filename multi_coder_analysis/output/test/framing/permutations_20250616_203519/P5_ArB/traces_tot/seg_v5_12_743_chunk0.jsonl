@@ -1,1 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "'severity' is a noun; 'as much as possible' modifies 'reduce' (verb).", "method": "llm_batch", "batch_id": "batch_1_16400", "batch_size": 217, "batch_pos": 164}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('can do to reduce the likelihood', 'emerges', 'has', 'is a risk', 'want to reduce'). 'severity' is a negative noun but not part of a Q2 pattern.", "method": "llm_batch", "batch_id": "batch_2_17752", "batch_size": 166, "batch_pos": 117}
+{"Q": 3, "answer": "no", "rationale": "Segment describes potential future risk ('likelihood that a new virus... emerges').", "method": "llm_batch", "batch_id": "batch_3_7700", "batch_size": 81, "batch_pos": 35}

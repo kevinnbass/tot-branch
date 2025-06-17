@@ -1,1 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14400", "batch_size": 260, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "The segment reports past events and impact factually ('prompted a similar ban', 'affecting nearly 4,000 youth') without high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_12800", "batch_size": 260, "batch_pos": 253}
+{"Q": 3, "answer": "yes", "rationale": "regex:ModerateVerbPlusScale matched", "method": "regex", "batch_id": "batch_3_2068", "batch_size": 260, "batch_pos": 179, "regex": {"rule": "ModerateVerbPlusScale", "span": [19, 27], "captures": ["prompted"]}}
