@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "Includes risk assessment ('low') which is a form of framing, not factual metric reporting without framing.", "method": "llm_batch", "batch_id": "batch_9_10436", "batch_size": 239, "batch_pos": 6}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk posed... as “low.”').", "method": "llm_batch", "batch_id": "batch_10_2024", "batch_size": 260, "batch_pos": 134}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement contains explicit reassuring language 'characterize the risk... as “low.”'.||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_19836", "batch_size": 250, "batch_pos": 103}
+{"Q": 12, "answer": "no", "rationale": "Contains explicit calming language 'risk... as low' (Rule 4 Reassuring).", "method": "llm_batch", "batch_id": "batch_12_10764", "batch_size": 250, "batch_pos": 103}

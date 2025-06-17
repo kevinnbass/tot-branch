@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment describes the source of infection, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17616", "batch_size": 260, "batch_pos": 109}
 {"Q": 9, "answer": "no", "rationale": "The segment reports source of cases, not reporting prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_18268", "batch_size": 260, "batch_pos": 209}
 {"Q": 10, "answer": "no", "rationale": "The segment describes the source of past cases, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_19248", "batch_size": 260, "batch_pos": 191}
+{"Q": 11, "answer": "no", "rationale": "No direct quote providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_5964", "batch_size": 260, "batch_pos": 174}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_16560", "batch_size": 260, "batch_pos": 174, "regex": {"rule": "NeutralStats", "span": [13, 28], "captures": ["confirm", "cases"]}}

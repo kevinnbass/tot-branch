@@ -10,3 +10,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment contains explicit reassurance ('threat...remains low'), failing the 'without active reassurance' condition.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 120}
 {"Q": 9, "answer": "no", "rationale": "Contains explicit calming language ('threat... remains low').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 121}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('threat... remains low'), which Q10 excludes.", "method": "llm_batch", "batch_id": "batch_10_16504", "batch_size": 72, "batch_pos": 3}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement explicitly says 'The threat... remains low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_4572", "batch_size": 260, "batch_pos": 221}
+{"Q": 12, "answer": "no", "rationale": "Explicit framing cues present, preventing default to Neutral.", "method": "llm_batch", "batch_id": "batch_12_8984", "batch_size": 260, "batch_pos": 221}

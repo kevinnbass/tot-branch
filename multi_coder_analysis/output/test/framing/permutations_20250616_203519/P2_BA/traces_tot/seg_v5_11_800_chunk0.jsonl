@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment quotes an expert expressing concern, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_21308", "batch_size": 260, "batch_pos": 185}
 {"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_20644", "batch_size": 207, "batch_pos": 57}
 {"Q": 9, "answer": "no", "rationale": "The segment is a quote expressing concern, not reporting prices or metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_20644_r1", "batch_size": 207, "batch_pos": 57}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_18656", "batch_size": 260, "batch_pos": 145}
+{"Q": 11, "answer": "yes", "rationale": "Quote explicitly states 'We should be very concerned at this point'.||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_3128", "batch_size": 224, "batch_pos": 109}

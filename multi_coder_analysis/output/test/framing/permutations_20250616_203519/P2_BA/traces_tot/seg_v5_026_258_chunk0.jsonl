@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment describes asking experts for their assessment, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20268", "batch_size": 260, "batch_pos": 30}
 {"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_21072", "batch_size": 260, "batch_pos": 23}
 {"Q": 9, "answer": "no", "rationale": "The segment discusses asking experts about their assessment and concern level, not reporting prices or numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_21072_r1", "batch_size": 260, "batch_pos": 23}
+{"Q": 10, "answer": "no", "rationale": "The segment describes experts assessing the current situation but does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 18}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or clearly attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 15}

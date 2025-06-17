@@ -6,3 +6,6 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_8540", "batch_size": 247, "batch_pos": 198}
 {"Q": 7, "answer": "no", "rationale": "'the overall public health risk is low' is an explicit calming cue, not a bare negation without calming.", "method": "llm_batch", "batch_id": "batch_7_1208", "batch_size": 222, "batch_pos": 175}
 {"Q": 8, "answer": "no", "rationale": "The segment includes explicit reassurance ('overall public health risk is low').", "method": "llm_batch", "batch_id": "batch_8_8108", "batch_size": 218, "batch_pos": 177}
+{"Q": 9, "answer": "no", "rationale": "The segment contains the framing language 'risk is low' and 'higher risk'.", "method": "llm_batch", "batch_id": "batch_9_18716", "batch_size": 203, "batch_pos": 180}
+{"Q": 10, "answer": "no", "rationale": "The segment contains explicit calming ('overall public health risk is low'), which prevents it from being Q10 speculation.", "method": "llm_batch", "batch_id": "batch_10_4052", "batch_size": 60, "batch_pos": 50}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement from CDC and WHO says 'overall public health risk is low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_18944", "batch_size": 14, "batch_pos": 4}

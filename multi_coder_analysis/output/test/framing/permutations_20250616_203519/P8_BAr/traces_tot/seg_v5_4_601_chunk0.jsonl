@@ -6,3 +6,5 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_13912", "batch_size": 260, "batch_pos": 28}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_20452", "batch_size": 260, "batch_pos": 27}
 {"Q": 8, "answer": "no", "rationale": "The segment warns of future possibilities, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_19476", "batch_size": 260, "batch_pos": 231}
+{"Q": 9, "answer": "no", "rationale": "Uses alarmist framing ('warn', 'spark a pandemic').", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 139}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 114, "regex": {"rule": "ReliefSpeculation", "span": [26, 31], "captures": ["could"]}}

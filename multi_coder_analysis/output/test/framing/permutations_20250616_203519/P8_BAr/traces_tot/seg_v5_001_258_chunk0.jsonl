@@ -5,3 +5,5 @@
 {"Q": 5, "answer": "no", "rationale": "The segment describes a past feeling of fear, not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_9516", "batch_size": 260, "batch_pos": 18}
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_18956", "batch_size": 260, "batch_pos": 18}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a past feeling, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_19476", "batch_size": 260, "batch_pos": 15}
+{"Q": 9, "answer": "no", "rationale": "Uses the risk adjective 'devastating' and describes someone becoming 'fearful'.", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 8}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 4, "regex": {"rule": "ReliefSpeculation", "span": [131, 136], "captures": ["might"]}}

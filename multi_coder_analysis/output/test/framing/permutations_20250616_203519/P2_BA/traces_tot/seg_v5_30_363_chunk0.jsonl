@@ -7,3 +7,6 @@
 {"Q": 7, "answer": "no", "rationale": "No bare negation or statement of absence/unlikelihood.", "method": "llm_batch", "batch_id": "batch_7_6604", "batch_size": 260, "batch_pos": 259}
 {"Q": 8, "answer": "no", "rationale": "Reports how information is received, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3136", "batch_size": 260, "batch_pos": 136}
 {"Q": 9, "answer": "no", "rationale": "Contains vivid language: \"mass deaths\".", "method": "llm_batch", "batch_id": "batch_9_15740", "batch_size": 260, "batch_pos": 123}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_18656", "batch_size": 260, "batch_pos": 23}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_3128", "batch_size": 224, "batch_pos": 2}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_21268", "batch_size": 223, "batch_pos": 1, "regex": {"rule": "NeutralStats", "span": [12, 34], "captures": ["report", "deaths"]}}

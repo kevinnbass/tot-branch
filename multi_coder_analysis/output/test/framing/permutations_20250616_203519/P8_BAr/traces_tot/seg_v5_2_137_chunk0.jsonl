@@ -7,3 +7,4 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 117}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_13508_r1", "batch_size": 260, "batch_pos": 117}
 {"Q": 8, "answer": "no", "rationale": "The segment describes economic impact, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20560", "batch_size": 260, "batch_pos": 1}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports customers 'are paying more' for items, a standard description of price increase.", "method": "llm_batch", "batch_id": "batch_9_20360", "batch_size": 260, "batch_pos": 30}

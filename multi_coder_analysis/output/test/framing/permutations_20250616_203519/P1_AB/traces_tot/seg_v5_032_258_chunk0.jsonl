@@ -7,3 +7,5 @@
 {"Q": 8, "answer": "no", "rationale": "Gives historical example of human cases, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 165}
 {"Q": 9, "answer": "no", "rationale": "The segment reports case/death counts but includes framing ('unsettling succession').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 141}
 {"Q": 10, "answer": "no", "rationale": "The segment describes a historical event.", "method": "llm_batch", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 22}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing framing.", "method": "llm_batch", "batch_id": "batch_11_20620", "batch_size": 260, "batch_pos": 253}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_16452", "batch_size": 260, "batch_pos": 253, "regex": {"rule": "NeutralStats", "span": [40, 74], "captures": ["record", "cases"]}}

@@ -7,3 +7,5 @@
 {"Q": 7, "answer": "no", "rationale": "The segment contains an explicit calming cue ('low').", "method": "llm_batch", "batch_id": "batch_7_19776", "batch_size": 260, "batch_pos": 153}
 {"Q": 8, "answer": "no", "rationale": "Contains an explicit low-risk statement ('The risk to most people remains low').", "method": "llm_batch", "batch_id": "batch_8_15400", "batch_size": 260, "batch_pos": 103}
 {"Q": 9, "answer": "no", "rationale": "The segment is a quote containing explicit calming language ('risk... remains low').", "method": "llm_batch", "batch_id": "batch_9_21072", "batch_size": 260, "batch_pos": 215}
+{"Q": 10, "answer": "no", "rationale": "The quote states the risk remains low, which is a calming cue about the current state (Q5), not speculation about future relief without calming.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 178}
+{"Q": 11, "answer": "yes", "rationale": "Quote 'The risk to most people remains low' provides a dominant reassuring frame. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 164}

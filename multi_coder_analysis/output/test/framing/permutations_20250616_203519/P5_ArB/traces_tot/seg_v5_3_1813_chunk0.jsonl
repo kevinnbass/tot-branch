@@ -9,3 +9,7 @@
 {"Q": 8, "answer": "no", "rationale": "The segment describes the status of a product, not capabilities or preparedness related to the threat response.", "method": "llm_batch", "batch_id": "batch_8_8572", "batch_size": 260, "batch_pos": 181}
 {"Q": 9, "answer": "no", "rationale": "The segment describes regulatory status, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_19468", "batch_size": 260, "batch_pos": 141}
 {"Q": 10, "answer": "no", "rationale": "The segment describes a current state of uncertainty ('status is unclear'), not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_19708", "batch_size": 260, "batch_pos": 79}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_4572", "batch_size": 260, "batch_pos": 45}
+{"Q": 11, "answer": "no", "rationale": "The segment does not contain any direct quotes from a source.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_4572_r1", "batch_size": 260, "batch_pos": 45}
+{"hop_idx": 12, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_12_8984", "batch_size": 260, "batch_pos": 45}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of a state of affairs ('unclear') without explicit framing cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_12_8984_r1", "batch_size": 260, "batch_pos": 45}

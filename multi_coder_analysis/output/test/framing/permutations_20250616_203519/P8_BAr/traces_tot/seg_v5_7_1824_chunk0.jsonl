@@ -5,3 +5,5 @@
 {"Q": 5, "answer": "no", "rationale": "Reports low risk without an intensifier like 'very' or 'extremely'.", "method": "llm_batch", "batch_id": "batch_5_21160", "batch_size": 260, "batch_pos": 1}
 {"Q": 7, "answer": "no", "rationale": "'risk to the general public from avian flu remains low' is an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_18956", "batch_size": 260, "batch_pos": 255}
 {"Q": 8, "answer": "no", "rationale": "The segment states a low-risk fact neutrally, not a capability or preparedness statement.", "method": "llm_batch", "batch_id": "batch_8_19476", "batch_size": 260, "batch_pos": 203}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit calming/reassuring language ('risk to the general public remains low').", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 122}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk to the general public remains low'), disqualifying it from Q10.", "method": "llm_batch", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 98}

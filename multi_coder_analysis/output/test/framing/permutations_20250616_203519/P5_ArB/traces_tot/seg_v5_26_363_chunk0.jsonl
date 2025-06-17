@@ -10,3 +10,4 @@
 {"Q": 9, "answer": "no", "rationale": "Contains explicit framing ('terrible news', 'very worried').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 216}
 {"Q": 10, "answer": "no", "rationale": "The segment reports current status and future concern, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16504", "batch_size": 72, "batch_pos": 66}
 {"Q": 11, "answer": "yes", "rationale": "Quote uses strong negative framing ('terrible news') and intensified concern ('very worried'). ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_14184", "batch_size": 26, "batch_pos": 20}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_19216", "batch_size": 26, "batch_pos": 20, "regex": {"rule": "NeutralStats", "span": [109, 122], "captures": ["record", "deaths"]}}

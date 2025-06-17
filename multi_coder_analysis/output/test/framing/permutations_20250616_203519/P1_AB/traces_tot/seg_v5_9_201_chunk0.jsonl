@@ -7,3 +7,5 @@
 {"Q": 8, "answer": "no", "rationale": "Reports a company did not respond, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 235}
 {"Q": 9, "answer": "no", "rationale": "The segment reports actions and reactions, including framing ('downplayed any concerns').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 192}
 {"Q": 10, "answer": "no", "rationale": "The segment describes lack of response and downplaying concerns.", "method": "llm_batch", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 70}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement 'UK supermarkets downplayed any concerns' is explicit reassurance/minimization. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_20876", "batch_size": 209, "batch_pos": 37}
+{"Q": 12, "answer": "no", "rationale": "Explicit reassuring cue found ('downplayed any concerns') triggering Q5.", "method": "llm_batch", "batch_id": "batch_12_18536", "batch_size": 209, "batch_pos": 37}

@@ -10,3 +10,5 @@
 {"Q": 8, "answer": "no", "rationale": "Contains active reassurance ('the risk of bird flu to people in the U.S. remains low').", "method": "llm_batch", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 183}
 {"Q": 9, "answer": "no", "rationale": "Contains explicit calming language ('risk... remains low').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 11}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue about current risk ('risk... remains low'), which prevents it from being Q10 Neutral.", "method": "llm_batch", "batch_id": "batch_10_19708", "batch_size": 260, "batch_pos": 184}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement explicitly says 'the risk of bird flu to people in the U.S. remains low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_4572", "batch_size": 260, "batch_pos": 144}
+{"Q": 12, "answer": "no", "rationale": "Explicit framing cues present, preventing default to Neutral.", "method": "llm_batch", "batch_id": "batch_12_8984", "batch_size": 260, "batch_pos": 144}

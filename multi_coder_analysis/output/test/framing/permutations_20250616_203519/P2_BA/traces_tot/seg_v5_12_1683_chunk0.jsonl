@@ -7,3 +7,5 @@
 {"Q": 7, "answer": "no", "rationale": "Contains a Q5 Reassuring cue ('risk... is considered to be low').", "method": "llm_batch", "batch_id": "batch_7_2928", "batch_size": 260, "batch_pos": 126}
 {"Q": 8, "answer": "no", "rationale": "The segment states risk is low, which is a low-risk fact potentially triggering Q5 Reassuring.", "method": "llm_batch", "batch_id": "batch_8_20268", "batch_size": 260, "batch_pos": 116}
 {"Q": 9, "answer": "no", "rationale": "The segment contains explicit calming language ('risk... is considered to be low').", "method": "llm_batch", "batch_id": "batch_9_21072", "batch_size": 260, "batch_pos": 85}
+{"Q": 10, "answer": "no", "rationale": "The segment states the risk is considered low, which is a calming cue about the current state (Q5), not speculation about future relief without calming.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 73}
+{"Q": 11, "answer": "yes", "rationale": "Quote 'risk... is considered to be low' provides a dominant reassuring frame. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 67}

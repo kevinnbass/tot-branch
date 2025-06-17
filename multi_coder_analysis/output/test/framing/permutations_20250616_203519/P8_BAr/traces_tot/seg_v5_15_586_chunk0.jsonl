@@ -7,3 +7,5 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 32}
 {"Q": 7, "answer": "no", "rationale": "The segment contains a negation ('never say') but it is not a bare negation of a negative outcome or risk as defined by Q7.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_13508_r1", "batch_size": 260, "batch_pos": 32}
 {"Q": 8, "answer": "no", "rationale": "The segment explicitly comments on reassurance level ('never say it's a relief').", "method": "llm_batch", "batch_id": "batch_8_18324", "batch_size": 260, "batch_pos": 199}
+{"Q": 9, "answer": "no", "rationale": "Quotes an opinion/framing ('never say it's a relief').", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 257}
+{"Q": 10, "answer": "no", "rationale": "The segment explicitly denies relief ('never say it's a relief'), which is the opposite of speculation about relief.", "method": "llm_batch", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 200}

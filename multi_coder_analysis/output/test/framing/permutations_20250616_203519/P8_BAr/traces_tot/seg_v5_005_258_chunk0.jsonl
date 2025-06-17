@@ -5,3 +5,5 @@
 {"Q": 5, "answer": "no", "rationale": "The segment reports the return of H5N1 and 'latest round of fears', describing public reaction, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_9516", "batch_size": 260, "batch_pos": 20}
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_18956", "batch_size": 260, "batch_pos": 20}
 {"Q": 8, "answer": "no", "rationale": "The segment reports an outbreak triggering fears, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_19476", "batch_size": 260, "batch_pos": 17}
+{"Q": 9, "answer": "no", "rationale": "Uses the psychological verb 'triggering... fears' without meeting the context guard criteria for Alarmist.", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 10}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 5, "regex": {"rule": "ReliefSpeculation", "span": [177, 182], "captures": ["might"]}}

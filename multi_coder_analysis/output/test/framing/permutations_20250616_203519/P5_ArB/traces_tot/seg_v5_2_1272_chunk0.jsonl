@@ -9,3 +9,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment reports outbreak impact, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 40}
 {"Q": 9, "answer": "no", "rationale": "Contains scale exaggeration ('record numbers').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 78}
 {"Q": 10, "answer": "no", "rationale": "The segment describes past/current impact ('has killed record numbers', 'infected mammals'), not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_19708", "batch_size": 260, "batch_pos": 229}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_4572", "batch_size": 260, "batch_pos": 187}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_8984", "batch_size": 260, "batch_pos": 187, "regex": {"rule": "NeutralStats", "span": [74, 88], "captures": ["record", "numbers"]}}

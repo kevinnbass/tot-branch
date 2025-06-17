@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment quotes a description of disease progression, not factual reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_20340", "batch_size": 260, "batch_pos": 43}
 {"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_20232", "batch_size": 260, "batch_pos": 23}
 {"Q": 10, "answer": "no", "rationale": "The segment expresses an emotional reaction to the disease's progression, not speculation about future relief.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_20232_r1", "batch_size": 260, "batch_pos": 23}
+{"Q": 11, "answer": "no", "rationale": "Quote expresses emotion about animal disease progression, not framing the human threat.", "method": "llm_batch", "batch_id": "batch_11_20620", "batch_size": 260, "batch_pos": 20}

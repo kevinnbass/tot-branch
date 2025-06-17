@@ -10,3 +10,4 @@
 {"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_2024", "batch_size": 260, "batch_pos": 100}
 {"Q": 10, "answer": "no", "rationale": "The segment describes a past outcome (survival with blindness) and does not speculate about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_2024_r1", "batch_size": 260, "batch_pos": 100}
 {"Q": 11, "answer": "no", "rationale": "No direct quote. 'went blind' is factual description of outcome.", "method": "llm_batch", "batch_id": "batch_11_19836", "batch_size": 250, "batch_pos": 72}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of outcome ('went blind'), no explicit framing.", "method": "llm_batch", "batch_id": "batch_12_10764", "batch_size": 250, "batch_pos": 72}

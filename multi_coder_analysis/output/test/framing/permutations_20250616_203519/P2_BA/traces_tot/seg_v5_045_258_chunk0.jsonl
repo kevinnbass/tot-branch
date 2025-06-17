@@ -7,3 +7,6 @@
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_2928", "batch_size": 260, "batch_pos": 50}
 {"Q": 8, "answer": "no", "rationale": "The segment reports an expert's view, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20268", "batch_size": 260, "batch_pos": 43}
 {"Q": 9, "answer": "no", "rationale": "The segment reports a professor's view, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_21072", "batch_size": 260, "batch_pos": 34}
+{"Q": 10, "answer": "no", "rationale": "The segment frames the current outbreak but does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 26}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 23}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement is a factual assessment ('does not view... as third act') without explicit reassuring language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_10932_r1", "batch_size": 260, "batch_pos": 23}

@@ -7,3 +7,5 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 122}
 {"Q": 7, "answer": "no", "rationale": "The segment states 'risk to people is low', which is a statement of a low-risk fact, not a bare negation as defined by Q7.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_13508_r1", "batch_size": 260, "batch_pos": 122}
 {"Q": 8, "answer": "no", "rationale": "The segment mentions risk level and concerns, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20560", "batch_size": 260, "batch_pos": 6}
+{"Q": 9, "answer": "no", "rationale": "The segment reports on risk level and concerns, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_20360", "batch_size": 260, "batch_pos": 35}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk to people is low'), disqualifying it from Q10.", "method": "llm_batch", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 233}

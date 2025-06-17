@@ -5,3 +5,5 @@
 {"Q": 5, "answer": "no", "rationale": "The segment reports potential shortages due to outbreaks, which is factual information without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9516", "batch_size": 260, "batch_pos": 102}
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_18956", "batch_size": 260, "batch_pos": 101}
 {"Q": 8, "answer": "no", "rationale": "The segment reports potential shortages, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_19476", "batch_size": 260, "batch_pos": 76}
+{"Q": 9, "answer": "no", "rationale": "Uses the vivid verb 'hit by' to describe the impact of outbreaks.", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 56}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 48, "regex": {"rule": "ReliefSpeculation", "span": [9, 14], "captures": ["could"]}}

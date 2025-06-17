@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "Factual report of cases.", "method": "llm_batch", "batch_id": "batch_8_15400", "batch_size": 260, "batch_pos": 100}
 {"Q": 8, "answer": "no", "rationale": "Contains an explicit low-risk statement ('risk to the general public... remains low').", "method": "llm_batch", "batch_id": "batch_8_15400", "batch_size": 260, "batch_pos": 100}
 {"Q": 9, "answer": "no", "rationale": "The segment contains explicit calming language ('risk... remains low').", "method": "llm_batch", "batch_id": "batch_9_21072", "batch_size": 260, "batch_pos": 212}
+{"Q": 10, "answer": "no", "rationale": "The segment states the risk remains low, which is a calming cue about the current state (Q5), not speculation about future relief without calming.", "method": "llm_batch", "batch_id": "batch_10_5572", "batch_size": 260, "batch_pos": 175}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement 'the risk to the general public... remains low' provides a dominant reassuring frame. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_10932", "batch_size": 260, "batch_pos": 161}

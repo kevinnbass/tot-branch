@@ -5,3 +5,5 @@
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_19324", "batch_size": 260, "batch_pos": 23}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16568", "batch_size": 260, "batch_pos": 5}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a potential future regulatory change, not capabilities or preparedness against the virus.", "method": "llm_batch", "batch_id": "batch_8_11324", "batch_size": 260, "batch_pos": 93}
+{"Q": 9, "answer": "no", "rationale": "The segment states 'Fears of a turkey shortage', which is explicit framing.", "method": "llm_batch", "batch_id": "batch_9_20360", "batch_size": 260, "batch_pos": 258}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_20616", "batch_size": 260, "batch_pos": 185, "regex": {"rule": "ReliefSpeculation", "span": [42, 47], "captures": ["could"]}}

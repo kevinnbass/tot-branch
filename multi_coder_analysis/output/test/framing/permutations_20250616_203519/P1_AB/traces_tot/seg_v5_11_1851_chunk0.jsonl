@@ -8,3 +8,6 @@
 {"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 253}
 {"Q": 9, "answer": "no", "rationale": "The segment reports a health event (cows testing positive) not prices, economic data, or numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_20148_r1", "batch_size": 260, "batch_pos": 253}
 {"Q": 10, "answer": "no", "rationale": "The segment describes when cows started testing positive.", "method": "llm_batch", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 114}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_20876", "batch_size": 209, "batch_pos": 80}
+{"Q": 11, "answer": "no", "rationale": "The segment states a fact about cows testing positive but contains no direct quotes from a source providing a dominant frame.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_20876_r1", "batch_size": 209, "batch_pos": 80}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues found; facts presented factually.", "method": "llm_batch", "batch_id": "batch_12_18536", "batch_size": 209, "batch_pos": 80}

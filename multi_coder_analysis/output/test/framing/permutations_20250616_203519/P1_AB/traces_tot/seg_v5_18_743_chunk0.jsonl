@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment states symptoms are mild and prevalence is low, which is about current state/impact, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16736", "batch_size": 78, "batch_pos": 41}
 {"Q": 9, "answer": "no", "rationale": "Reports prevalence using an intensifier ('extremely low').", "method": "llm_batch", "batch_id": "batch_9_7796", "batch_size": 260, "batch_pos": 259}
 {"Q": 10, "answer": "no", "rationale": "The segment contains explicit calming cues about the current state ('mild', 'extremely low').", "method": "llm_batch", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 225}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement 'prevalence is still \"extremely low\"' is an intensified low-risk statement. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_20876", "batch_size": 209, "batch_pos": 184}
+{"Q": 12, "answer": "no", "rationale": "Explicit reassuring cue found ('symptoms have been mild and the prevalence is still 'extremely low'') triggering Q5.", "method": "llm_batch", "batch_id": "batch_12_18536", "batch_size": 209, "batch_pos": 184}
