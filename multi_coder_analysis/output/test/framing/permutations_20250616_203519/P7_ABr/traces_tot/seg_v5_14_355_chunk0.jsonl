@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective. 'isn't a threat to food safety' and 'will kill any viruses' are reassuring cues.", "method": "llm_batch", "batch_id": "batch_1_13380", "batch_size": 260, "batch_pos": 257}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_19672", "batch_size": 260, "batch_pos": 201, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [124, 135], "captures": []}}
