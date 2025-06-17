@@ -115,6 +115,7 @@ def _worker(tag: str, df_pickle: bytes, root_out_str: str, cfg_dict: dict, worke
         batch_size=worker_args["batch_size"],
         regex_mode=worker_args["regex_mode"],
         shuffle_batches=worker_args["shuffle_batches"],
+        skip_eval=worker_args.get("skip_eval", False),
     )
 
     # Compute summary & mismatches
@@ -191,6 +192,14 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
         df_in = df_in.head(args.limit)
         logging.info("Subset applied via --limit → first %s rows", len(df_in))
 
+    # ------------------------------------------------------------------
+    # Optional: drop Gold Standard column entirely if --no-eval flag was
+    # provided so that downstream components behave as a non-evaluation
+    # run (identical to data without gold labels).
+    # ------------------------------------------------------------------
+    if getattr(args, "no_eval", False) and "Gold Standard" in df_in.columns:
+        df_in = df_in.drop(columns=["Gold Standard"])
+
     dfA, dfB = _split_halves(df_in)
 
     permutation_metrics: List[dict] = []
@@ -209,6 +218,7 @@ def run_permutation_suite(config, args, shutdown_event):  # noqa: D401
         "batch_size": args.batch_size,
         "regex_mode": args.regex_mode,
         "shuffle_batches": args.shuffle_batches,
+        "skip_eval": getattr(args, "no_eval", False),
     }
 
     if getattr(args, "perm_workers", 1) <= 1:

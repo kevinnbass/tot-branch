@@ -759,7 +759,7 @@ def run_tot_chain_batch(
 
 # --- Main Entry Point for `main.py` ---
 
-def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False) -> Tuple[None, Path]:
+def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False, skip_eval: bool = False) -> Tuple[None, Path]:
     """
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
@@ -782,8 +782,16 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
 
     df = pd.read_csv(input_csv_path, dtype={'StatementID': str})
     
-    # Check if this is an evaluation run (has Gold Standard column)
-    has_gold_standard = 'Gold Standard' in df.columns
+    # ------------------------------------------------------------------
+    # Evaluation control: if the caller explicitly requests evaluation to
+    # be skipped, we *pretend* the gold column is not present to ensure
+    # all downstream evaluation logic is bypassed cleanly.
+    # ------------------------------------------------------------------
+    if skip_eval and 'Gold Standard' in df.columns:
+        df = df.drop(columns=['Gold Standard'])
+
+    # Evaluation is enabled only when the column exists *and* skip_eval is False
+    has_gold_standard = (not skip_eval) and ('Gold Standard' in df.columns)
     
     # Store original dataframe size for logging
     original_size = len(df)

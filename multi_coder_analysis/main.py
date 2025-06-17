@@ -248,6 +248,7 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 batch_size=args.batch_size,
                 regex_mode=args.regex_mode,
                 shuffle_batches=args.shuffle_batches,
+                skip_eval=args.no_eval,
             )
         except Exception as e:
             logging.error(f"Tree-of-Thought pipeline failed with error: {e}", exc_info=True)
@@ -300,6 +301,10 @@ def main():
     # Parallel processes for permutation suite
     parser.add_argument('--perm-workers', type=int, default=1,
                         help='Number of permutations to execute in parallel (process-based). Default 1 (serial).')
+
+    # Skip evaluation even if Gold Standard column is present
+    parser.add_argument('--no-eval', action='store_true',
+                        help='Disable any comparison against the Gold Standard column. The pipeline will still run and output majority labels, but no accuracy metrics or mismatch files are created.')
 
     args = parser.parse_args()
 
