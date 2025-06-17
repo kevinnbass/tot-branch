@@ -6,3 +6,6 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12624", "batch_size": 216, "batch_pos": 183}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14220", "batch_size": 215, "batch_pos": 182}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a current risk assessment, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16328", "batch_size": 166, "batch_pos": 137}
+{"Q": 9, "answer": "no", "rationale": "The segment uses a qualitative assessment 'high risk,' not reporting prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_5316", "batch_size": 92, "batch_pos": 79}
+{"Q": 10, "answer": "no", "rationale": "The segment states a current period of high risk, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_13808", "batch_size": 44, "batch_pos": 39}
+{"Q": 11, "answer": "yes", "rationale": "regex:DominantQuoteAlarmist matched", "method": "regex", "batch_id": "batch_11_14308", "batch_size": 42, "batch_pos": 37, "regex": {"rule": "DominantQuoteAlarmist", "span": [3, 157], "captures": []}}
