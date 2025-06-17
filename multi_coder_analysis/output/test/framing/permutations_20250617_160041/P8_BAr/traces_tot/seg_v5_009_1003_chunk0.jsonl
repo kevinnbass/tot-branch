@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'safe to eat' uses 'safe' as a positive adjective, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16124", "batch_size": 259, "batch_pos": 220}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs like 'added' and lacks high-potency language. 'safe to eat' is a reassuring cue.", "method": "llm_batch", "batch_id": "batch_2_15892", "batch_size": 244, "batch_pos": 208}
+{"Q": 3, "answer": "no", "rationale": "The segment states products are 'safe to eat,' which is not a moderate verb paired with significant impact.", "method": "llm_batch", "batch_id": "batch_3_6440", "batch_size": 232, "batch_pos": 197}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2112", "batch_size": 228, "batch_pos": 194}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_6972", "batch_size": 225, "batch_pos": 191, "regex": {"rule": "ExplicitCalming", "span": [51, 66], "captures": [null]}}

@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment is a question and does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11940", "batch_size": 259, "batch_pos": 4}
+{"Q": 2, "answer": "no", "rationale": "The segment poses a question about a negative action but does not use high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_15584", "batch_size": 244, "batch_pos": 3}
+{"Q": 3, "answer": "no", "rationale": "The verb 'kill' is a plain outcome verb, which is excluded from firing Q3 even when paired with a large number like 'millions'.", "method": "llm_batch", "batch_id": "batch_3_8288", "batch_size": 235, "batch_pos": 3}
+{"Q": 4, "answer": "yes", "rationale": "regex:LoadedQuestionAlarm matched", "method": "regex", "batch_id": "batch_4_12596", "batch_size": 235, "batch_pos": 3, "regex": {"rule": "LoadedQuestionAlarm", "span": [0, 32], "captures": []}}

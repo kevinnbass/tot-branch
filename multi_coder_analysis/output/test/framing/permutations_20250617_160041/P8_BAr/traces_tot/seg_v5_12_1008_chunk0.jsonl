@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "'HIGH ALERT' uses 'high' as an intensifier, but 'alert' is not a risk-adjective as defined for Q1.", "method": "llm_batch", "batch_id": "batch_1_16124", "batch_size": 259, "batch_pos": 28}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_15892", "batch_size": 244, "batch_pos": 27, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [0, 53], "captures": []}}

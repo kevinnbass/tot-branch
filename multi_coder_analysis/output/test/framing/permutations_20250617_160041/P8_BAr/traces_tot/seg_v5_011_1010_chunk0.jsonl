@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'rarely transmissible' uses 'rarely' as an intensifier, but 'transmissible' is not a risk-adjective as defined for Q1.", "method": "llm_batch", "batch_id": "batch_1_16124", "batch_size": 259, "batch_pos": 115}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs and 'rarely transmissible' is a reassuring cue, not an alarmist one.", "method": "llm_batch", "batch_id": "batch_2_15892", "batch_size": 244, "batch_pos": 109}
+{"Q": 3, "answer": "no", "rationale": "'rarely transmissible' and 'can spread' refer to potential or general conditions, not a realized impact with significant scale.", "method": "llm_batch", "batch_id": "batch_3_6440", "batch_size": 232, "batch_pos": 104}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2112", "batch_size": 228, "batch_pos": 101}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_6972", "batch_size": 225, "batch_pos": 99, "regex": {"rule": "ExplicitCalming", "span": [0, 25], "captures": [null]}}

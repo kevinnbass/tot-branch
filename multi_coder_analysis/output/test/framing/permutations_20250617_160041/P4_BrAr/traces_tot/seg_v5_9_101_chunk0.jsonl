@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment is a question and does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11940", "batch_size": 259, "batch_pos": 18}
+{"Q": 2, "answer": "no", "rationale": "The segment poses a neutral question without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_15584", "batch_size": 244, "batch_pos": 17}
+{"Q": 3, "answer": "no", "rationale": "The segment poses a question and does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_8288", "batch_size": 235, "batch_pos": 17}
+{"Q": 4, "answer": "yes", "rationale": "regex:LoadedQuestionAlarm matched", "method": "regex", "batch_id": "batch_4_12596", "batch_size": 235, "batch_pos": 17, "regex": {"rule": "LoadedQuestionAlarm", "span": [0, 24], "captures": []}}

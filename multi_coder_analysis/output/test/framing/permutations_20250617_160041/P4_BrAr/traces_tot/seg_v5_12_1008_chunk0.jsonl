@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective. 'High' modifies 'alert', which is a state of readiness, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11940", "batch_size": 259, "batch_pos": 103}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_15584", "batch_size": 244, "batch_pos": 96, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [0, 53], "captures": []}}

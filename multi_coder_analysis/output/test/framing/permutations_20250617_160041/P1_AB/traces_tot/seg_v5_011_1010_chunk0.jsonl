@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'rarely transmissible' modifies a low-risk adjective, not a risk-adjective as defined for Q1.", "method": "llm_batch", "batch_id": "batch_1_5284", "batch_size": 259, "batch_pos": 244}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_16264", "batch_size": 244, "batch_pos": 230}
+{"Q": 3, "answer": "no", "rationale": "The phrase 'rarely transmissible' is a calming assurance, not a moderate verb with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_13920", "batch_size": 234, "batch_pos": 220}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_11636", "batch_size": 216, "batch_pos": 202}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_11108", "batch_size": 213, "batch_pos": 200, "regex": {"rule": "ExplicitCalming", "span": [0, 25], "captures": [null]}}
