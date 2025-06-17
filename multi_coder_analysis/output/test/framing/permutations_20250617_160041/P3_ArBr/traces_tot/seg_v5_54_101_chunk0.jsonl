@@ -7,3 +7,6 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_11304", "batch_size": 223, "batch_pos": 191}
 {"Q": 8, "answer": "no", "rationale": "This segment describes a justification for a past action, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_15664", "batch_size": 191, "batch_pos": 167}
 {"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_3052", "batch_size": 121, "batch_pos": 102}
+{"Q": 9, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_3052_r1", "batch_size": 121, "batch_pos": 102}
+{"Q": 10, "answer": "no", "rationale": "The segment discusses the humane aspect of culling, not speculating about future relief or improvement from the outbreak.", "method": "llm_batch", "batch_id": "batch_10_14988", "batch_size": 65, "batch_pos": 52}
+{"Q": 11, "answer": "no", "rationale": "A direct quote is present, but it discusses the humane aspect of culling, not the risk or safety of the virus itself. ||FRAME=Neutral", "method": "llm_batch", "batch_id": "batch_11_12896", "batch_size": 64, "batch_pos": 51}
