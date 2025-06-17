@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6508", "batch_size": 260, "batch_pos": 164}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1124", "batch_size": 260, "batch_pos": 153}
 {"Q": 8, "answer": "no", "rationale": "Describes source of infection, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3084", "batch_size": 260, "batch_pos": 32}
+{"Q": 9, "answer": "no", "rationale": "The segment describes the source of cases, not reporting prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_18212", "batch_size": 227, "batch_pos": 36}
+{"Q": 10, "answer": "no", "rationale": "The segment states source of past cases, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_2924", "batch_size": 200, "batch_pos": 103}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_14872", "batch_size": 163, "batch_pos": 80}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_20732", "batch_size": 163, "batch_pos": 80, "regex": {"rule": "NeutralStats", "span": [13, 28], "captures": ["confirm", "cases"]}}

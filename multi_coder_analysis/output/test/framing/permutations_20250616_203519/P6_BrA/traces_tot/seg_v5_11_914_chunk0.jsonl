@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "No question present.", "method": "llm_batch", "batch_id": "batch_4_18856", "batch_size": 260, "batch_pos": 224}
 {"Q": 5, "answer": "no", "rationale": "The segment reports preparedness action, but is not explicitly framed as calming or linked to public safety.", "method": "llm_batch", "batch_id": "batch_5_8932", "batch_size": 260, "batch_pos": 218}
 {"Q": 6, "answer": "no", "rationale": "The segment discusses vaccine preparedness, which is preparedness, but not using the 'minimiser + scale contrast' pattern.", "method": "llm_batch", "batch_id": "batch_6_20384", "batch_size": 260, "batch_pos": 192}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14820", "batch_size": 260, "batch_pos": 182}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18248", "batch_size": 260, "batch_pos": 56, "regex": {"rule": "CapabilityNoReassurance", "span": [68, 75], "captures": []}}

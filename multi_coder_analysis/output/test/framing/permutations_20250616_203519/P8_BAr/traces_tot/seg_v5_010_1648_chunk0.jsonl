@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "'come as' is not a moderate verb, and 'were reported' is an outcome verb.", "method": "llm_batch", "batch_id": "batch_3_19032", "batch_size": 260, "batch_pos": 133}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13612", "batch_size": 260, "batch_pos": 130}
 {"Q": 5, "answer": "no", "rationale": "Reports context for efforts; factual reporting.", "method": "llm_batch", "batch_id": "batch_5_21160", "batch_size": 260, "batch_pos": 129}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_13912", "batch_size": 260, "batch_pos": 115}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_20452", "batch_size": 260, "batch_pos": 113}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18324", "batch_size": 260, "batch_pos": 50, "regex": {"rule": "CapabilityNoReassurance", "span": [23, 30], "captures": []}}

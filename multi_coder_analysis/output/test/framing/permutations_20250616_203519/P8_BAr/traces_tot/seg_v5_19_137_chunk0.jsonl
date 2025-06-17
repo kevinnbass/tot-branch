@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment reports on actions taken by flock owners.", "method": "llm_batch", "batch_id": "batch_3_20284", "batch_size": 260, "batch_pos": 171}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14788", "batch_size": 260, "batch_pos": 163}
 {"Q": 5, "answer": "no", "rationale": "This segment reports factual actions/impacts (backyard owners keeping chickens in).", "method": "llm_batch", "batch_id": "batch_5_9224", "batch_size": 260, "batch_pos": 160}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17996", "batch_size": 260, "batch_pos": 139}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 130}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_13508_r1", "batch_size": 260, "batch_pos": 130}

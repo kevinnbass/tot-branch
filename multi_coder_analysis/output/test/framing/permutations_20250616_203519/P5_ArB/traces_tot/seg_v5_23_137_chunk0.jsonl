@@ -5,3 +5,7 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 191}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a negative fact (infected species) without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 186}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 143}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_17436", "batch_size": 241, "batch_pos": 119}
+{"Q": 7, "answer": "no", "rationale": "The segment shows species infected, but contains no negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 119}
+{"Q": 8, "answer": "no", "rationale": "The segment reports wild bird species infected, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 168}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('at least 32 species') using standard verbs ('have been infected').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 151}

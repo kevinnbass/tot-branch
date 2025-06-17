@@ -2,3 +2,7 @@
 {"Q": 2, "answer": "no", "rationale": "'highly pathogenic' is a technical term (guard rule). 'confirmed case' is factual.", "method": "llm_batch", "batch_id": "batch_2_14252", "batch_size": 260, "batch_pos": 253}
 {"Q": 3, "answer": "no", "rationale": "The segment describes an announcement and confirmation ('announced', 'confirmed') not impact via a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_6536", "batch_size": 260, "batch_pos": 212}
 {"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17548", "batch_size": 260, "batch_pos": 196}
+{"Q": 5, "answer": "no", "rationale": "Factual report of event.", "method": "llm_batch", "batch_id": "batch_5_15284", "batch_size": 260, "batch_pos": 192}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_5812", "batch_size": 260, "batch_pos": 169}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_13620", "batch_size": 260, "batch_pos": 160}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_21308", "batch_size": 260, "batch_pos": 11, "regex": {"rule": "CapabilityNoReassurance", "span": [21, 30], "captures": []}}

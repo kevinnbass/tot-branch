@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment mentions 'killed around 300 people'. 'Killed' is an outcome verb, excluded by Q3 unless other cues fire.", "method": "llm_batch", "batch_id": "batch_3_20284", "batch_size": 260, "batch_pos": 95}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14788", "batch_size": 260, "batch_pos": 88}
 {"Q": 5, "answer": "no", "rationale": "This segment reports factual historical information about human infections.", "method": "llm_batch", "batch_id": "batch_5_9224", "batch_size": 260, "batch_pos": 85}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17996", "batch_size": 260, "batch_pos": 65}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'no significant numbers of human infections' without an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 59}

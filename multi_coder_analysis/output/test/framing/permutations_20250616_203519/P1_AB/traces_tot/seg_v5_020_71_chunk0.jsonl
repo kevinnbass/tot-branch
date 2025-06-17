@@ -6,3 +6,4 @@
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_5140", "batch_size": 260, "batch_pos": 121}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_5140_r1", "batch_size": 260, "batch_pos": 121}
 {"Q": 7, "answer": "no", "rationale": "The phrase 'it is unusual' is not a bare negation of threat/risk/case.", "method": "llm_batch", "batch_id": "batch_7_19368", "batch_size": 258, "batch_pos": 103}
+{"Q": 8, "answer": "no", "rationale": "The segment describes transmission to humans and its rarity, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11948", "batch_size": 260, "batch_pos": 198}

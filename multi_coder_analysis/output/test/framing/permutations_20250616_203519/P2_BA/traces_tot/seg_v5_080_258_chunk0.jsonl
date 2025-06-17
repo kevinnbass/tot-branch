@@ -3,3 +3,7 @@
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'were caused by' and 'had', which are not moderate verbs for Q3.", "method": "llm_batch", "batch_id": "batch_3_19648", "batch_size": 260, "batch_pos": 75}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1376", "batch_size": 260, "batch_pos": 75}
 {"Q": 4, "answer": "no", "rationale": "The segment contains no rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1376_r1", "batch_size": 260, "batch_pos": 75}
+{"Q": 5, "answer": "no", "rationale": "The segment provides technical information, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_7424", "batch_size": 260, "batch_pos": 74}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast. 'one single type' lacks a scale contrast that minimises the threat.", "method": "llm_batch", "batch_id": "batch_6_16356", "batch_size": 260, "batch_pos": 74}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_2928", "batch_size": 260, "batch_pos": 74}
+{"Q": 8, "answer": "no", "rationale": "The segment describes past human infections linked to genetics, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20268", "batch_size": 260, "batch_pos": 67}

@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "The segment contains a reassuring cue ('low') but not the specific minimiser + scale contrast pattern.", "method": "llm_batch", "batch_id": "batch_6_4304", "batch_size": 260, "batch_pos": 27}
 {"Q": 7, "answer": "no", "rationale": "The segment states risk is 'low', which is a low-risk fact, not a bare negation without calming.", "method": "llm_batch", "batch_id": "batch_7_18500", "batch_size": 246, "batch_pos": 16}
 {"Q": 8, "answer": "no", "rationale": "Includes explicit reassurance ('risk... as “low”').", "method": "llm_batch", "batch_id": "batch_8_3084", "batch_size": 260, "batch_pos": 136}
+{"Q": 9, "answer": "no", "rationale": "The segment states 'risk... as “low”', which is explicit reassuring language.", "method": "llm_batch", "batch_id": "batch_9_18212", "batch_size": 227, "batch_pos": 106}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue about the current state ('risk... as “low”').", "method": "llm_batch", "batch_id": "batch_10_2924", "batch_size": 200, "batch_pos": 139}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement explicitly states risk is 'low'.||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_14872", "batch_size": 163, "batch_pos": 113}
+{"Q": 12, "answer": "no", "rationale": "Explicitly states 'risk posed to the general public... as “low.”', which is a Reassuring cue.", "method": "llm_batch", "batch_id": "batch_12_20732", "batch_size": 163, "batch_pos": 113}

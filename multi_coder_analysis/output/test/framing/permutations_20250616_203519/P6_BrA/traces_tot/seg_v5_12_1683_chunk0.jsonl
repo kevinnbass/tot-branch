@@ -4,3 +4,6 @@
 {"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_19552", "batch_size": 260, "batch_pos": 167}
 {"Q": 5, "answer": "no", "rationale": "The segment states risk is 'low' (bare low risk) but does not use an intensifier or explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14036", "batch_size": 260, "batch_pos": 165}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13336", "batch_size": 260, "batch_pos": 144}
+{"Q": 7, "answer": "no", "rationale": "The segment states 'risk... is considered to be low' which implies low risk, but is not a bare negation pattern listed in Q7, and lacks an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_11464", "batch_size": 260, "batch_pos": 139}
+{"Q": 8, "answer": "no", "rationale": "The segment states a risk assessment and does not describe capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_21156", "batch_size": 260, "batch_pos": 55}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses risk level, not prices, economic data, or numerical metrics in the defined scope.", "method": "llm_batch", "batch_id": "batch_9_14076", "batch_size": 260, "batch_pos": 65}

@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6508", "batch_size": 260, "batch_pos": 78}
 {"Q": 7, "answer": "no", "rationale": "The segment is a question, not a statement of negation.", "method": "llm_batch", "batch_id": "batch_7_1124", "batch_size": 260, "batch_pos": 67}
 {"Q": 8, "answer": "no", "rationale": "The segment reports a historical fact and asks a question about risk, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_14640", "batch_size": 260, "batch_pos": 227}
+{"Q": 9, "answer": "no", "rationale": "The segment reports 'fatal cases' and asks about 'risk', not primarily reporting prices or metrics in the Q9 sense.", "method": "llm_batch", "batch_id": "batch_9_18212", "batch_size": 227, "batch_pos": 7}
+{"Q": 10, "answer": "no", "rationale": "The segment states a historical fact and asks a question about risk, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_2924", "batch_size": 200, "batch_pos": 82}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement is a question about risk, not a framed statement of risk.", "method": "llm_batch", "batch_id": "batch_11_14872", "batch_size": 163, "batch_pos": 61}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues; facts presented neutrally. 'fatal cases' is factual description.", "method": "llm_batch", "batch_id": "batch_12_20732", "batch_size": 163, "batch_pos": 61}

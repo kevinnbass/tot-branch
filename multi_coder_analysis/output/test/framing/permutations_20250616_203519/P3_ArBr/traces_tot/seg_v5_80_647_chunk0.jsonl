@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_4788", "batch_size": 260, "batch_pos": 143}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_9768", "batch_size": 260, "batch_pos": 137}
 {"Q": 8, "answer": "no", "rationale": "Describes the nature of the virus and a quote about its severity, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_19824", "batch_size": 260, "batch_pos": 39}
+{"Q": 9, "answer": "no", "rationale": "Uses loaded metaphor 'bad guy viruses'.", "method": "llm_batch", "batch_id": "batch_9_8692", "batch_size": 260, "batch_pos": 72}
+{"Q": 10, "answer": "no", "rationale": "The segment expresses a current opinion/characterization, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_21320", "batch_size": 260, "batch_pos": 243}
+{"Q": 11, "answer": "yes", "rationale": "Attributed quote explicitly frames the virus as 'at the top of the list in terms of bad guy viruses'. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_13304", "batch_size": 260, "batch_pos": 224}
+{"Q": 12, "answer": "no", "rationale": "'top of the list in terms of bad guy viruses' is explicit framing using strong negative language/metaphor, triggering Q1.", "method": "llm_batch", "batch_id": "batch_12_17872", "batch_size": 260, "batch_pos": 224}

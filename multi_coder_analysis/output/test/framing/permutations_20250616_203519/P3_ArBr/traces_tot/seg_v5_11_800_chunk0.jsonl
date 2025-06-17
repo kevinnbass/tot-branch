@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16476", "batch_size": 260, "batch_pos": 169}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16628", "batch_size": 260, "batch_pos": 164}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a recommendation for a state of mind, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13992", "batch_size": 260, "batch_pos": 108}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote using explicit framing ('very concerned').", "method": "llm_batch", "batch_id": "batch_9_11924", "batch_size": 260, "batch_pos": 213}
+{"Q": 10, "answer": "no", "rationale": "The segment expresses a current feeling, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_21320", "batch_size": 260, "batch_pos": 170}
+{"Q": 11, "answer": "yes", "rationale": "Attributed quote explicitly states 'We should be very concerned'. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_13304", "batch_size": 260, "batch_pos": 158}
+{"Q": 12, "answer": "no", "rationale": "'very concerned' is an intensifier + negative concept, triggering Q1.", "method": "llm_batch", "batch_id": "batch_12_17872", "batch_size": 260, "batch_pos": 158}

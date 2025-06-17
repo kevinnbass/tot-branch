@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The verb 'spread' is not considered high-potency by the Q2 rules.", "method": "llm_batch", "batch_id": "batch_2_4188", "batch_size": 260, "batch_pos": 112}
 {"Q": 3, "answer": "no", "rationale": "The verb 'spread' is a moderate verb, but 'rapidly' is an intensifier, not a scale/impact metric. 'killing' is a plain outcome verb (Rule 4).", "method": "llm_batch", "batch_id": "batch_3_8088", "batch_size": 260, "batch_pos": 67}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2916", "batch_size": 260, "batch_pos": 49}
+{"Q": 5, "answer": "no", "rationale": "This reports rapid spread and deaths, which is not calming language.", "method": "llm_batch", "batch_id": "batch_5_18736", "batch_size": 260, "batch_pos": 45}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'little chance' but it modifies likelihood of exposure, not the scale of infection.", "method": "llm_batch", "batch_id": "batch_6_12580", "batch_size": 260, "batch_pos": 19}
+{"Q": 7, "answer": "yes", "rationale": "'where few birds were affected' is a bare negation indicating a low number affected without explicit calming.", "method": "llm_batch", "batch_id": "batch_7_12840", "batch_size": 260, "batch_pos": 10}

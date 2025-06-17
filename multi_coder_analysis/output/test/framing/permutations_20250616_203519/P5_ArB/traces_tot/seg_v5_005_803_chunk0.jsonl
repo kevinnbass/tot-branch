@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "Contains a Reassuring cue ('no sign of unusual influenza activity') which takes precedence over Q3.", "method": "llm_batch", "batch_id": "batch_3_19976", "batch_size": 260, "batch_pos": 47}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_20784", "batch_size": 260, "batch_pos": 39}
 {"Q": 5, "answer": "no", "rationale": "The segment reports monitoring and lack of unusual activity, which are positive facts/actions but lack explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6072", "batch_size": 260, "batch_pos": 38}
+{"Q": 6, "answer": "no", "rationale": "Segment contains 'no sign of unusual influenza activity' which is Q5 Explicit Calming, not Q6.", "method": "llm_batch", "batch_id": "batch_6_20948", "batch_size": 260, "batch_pos": 22}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_20704", "batch_size": 260, "batch_pos": 9}
+{"Q": 7, "answer": "yes", "rationale": "The segment states \"no sign of unusual influenza activity in people\", which is a bare negation without an explicit calming cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_20704_r1", "batch_size": 260, "batch_pos": 9}

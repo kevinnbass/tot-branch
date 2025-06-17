@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'infected' (plain outcome) and 'killing' (containment verb), not a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_9452", "batch_size": 62, "batch_pos": 62}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19788", "batch_size": 44, "batch_pos": 44}
 {"Q": 5, "answer": "no", "rationale": "Reports new cases and birds killed in Iowa; does not contain explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17588", "batch_size": 40, "batch_pos": 40}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_8540", "batch_size": 247, "batch_pos": 247}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_1208", "batch_size": 222, "batch_pos": 222}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_8108", "batch_size": 218, "batch_pos": 218, "regex": {"rule": "CapabilityNoReassurance", "span": [106, 115], "captures": []}}

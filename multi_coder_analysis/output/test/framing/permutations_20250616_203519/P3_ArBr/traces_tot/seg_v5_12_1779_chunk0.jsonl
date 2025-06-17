@@ -6,3 +6,5 @@
 {"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_14848", "batch_size": 260, "batch_pos": 125}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation without an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_10820", "batch_size": 255, "batch_pos": 108}
 {"Q": 8, "answer": "no", "rationale": "States virus 'could evolve... which could trigger a pandemic', describing a potential future threat, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_19712", "batch_size": 260, "batch_pos": 152}
+{"Q": 9, "answer": "no", "rationale": "Reports potential future evolution and impact, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_14080", "batch_size": 260, "batch_pos": 172}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_15092", "batch_size": 260, "batch_pos": 218, "regex": {"rule": "ReliefSpeculation", "span": [10, 15], "captures": ["could"]}}

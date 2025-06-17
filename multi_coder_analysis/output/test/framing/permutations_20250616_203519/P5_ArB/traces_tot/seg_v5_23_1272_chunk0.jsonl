@@ -5,3 +5,5 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 51}
 {"Q": 5, "answer": "no", "rationale": "This segment reports expert opinion/advocacy without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 46}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 6}
+{"Q": 7, "answer": "no", "rationale": "The segment states experts have advocated for new approaches but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 245}
+{"Q": 8, "answer": "yes", "rationale": "Describes experts advocating for new approaches ('Experts have long advocated for new approaches') as a future possibility/development capability without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 59}

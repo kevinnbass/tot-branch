@@ -2,3 +2,7 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual information about actions without using Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_18792", "batch_size": 260, "batch_pos": 60}
 {"Q": 3, "answer": "no", "rationale": "'had been tested' is not a moderate verb. '40 people' is scale but lacks a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_20652", "batch_size": 260, "batch_pos": 40}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14596", "batch_size": 260, "batch_pos": 39}
+{"Q": 5, "answer": "no", "rationale": "The segment reports facts about testing and monitoring but does not explicitly frame them for calming.", "method": "llm_batch", "batch_id": "batch_5_17740", "batch_size": 260, "batch_pos": 38}
+{"Q": 6, "answer": "no", "rationale": "The segment contains 'just 40 people' but lacks an explicit contrasting scale context (no 'out of X').", "method": "llm_batch", "batch_id": "batch_6_14084", "batch_size": 260, "batch_pos": 35}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_19776", "batch_size": 260, "batch_pos": 35}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15400", "batch_size": 260, "batch_pos": 2, "regex": {"rule": "CapabilityNoReassurance", "span": [8, 17], "captures": []}}

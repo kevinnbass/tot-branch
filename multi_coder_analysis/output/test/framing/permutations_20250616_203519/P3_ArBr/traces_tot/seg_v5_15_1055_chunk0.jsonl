@@ -7,3 +7,4 @@
 {"Q": 7, "answer": "no", "rationale": "The segment contains a calming cue ('risk... remains low'), so the negation is not bare without calming.", "method": "llm_batch", "batch_id": "batch_7_10820", "batch_size": 255, "batch_pos": 239}
 {"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_3564", "batch_size": 27, "batch_pos": 12}
 {"Q": 8, "answer": "no", "rationale": "The segment describes the current risk level ('risk... still remains low') and case count ('no cases... detected'), not capabilities or preparedness measures.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_3564_r1", "batch_size": 27, "batch_pos": 12}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical data ('high deaths', 'no cases') using standard verbs ('has resulted in', 'have been detected').", "method": "llm_batch", "batch_id": "batch_9_14080", "batch_size": 260, "batch_pos": 257}

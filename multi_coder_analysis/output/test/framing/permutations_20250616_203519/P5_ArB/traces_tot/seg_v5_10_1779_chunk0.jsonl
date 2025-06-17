@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb explicitly paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_17188", "batch_size": 260, "batch_pos": 186}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_2616", "batch_size": 260, "batch_pos": 174}
 {"Q": 5, "answer": "no", "rationale": "This reports a bare negation ('still does not pose a significant risk'), falling under Q7.", "method": "llm_batch", "batch_id": "batch_5_15164", "batch_size": 260, "batch_pos": 171}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'not pose a significant risk' but not in the required minimiser + scale contrast format.", "method": "llm_batch", "batch_id": "batch_6_11036", "batch_size": 260, "batch_pos": 147}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 129}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains a bare negation 'still does not pose a significant risk' without an explicit calming cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 129}

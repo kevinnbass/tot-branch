@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment reports prices were 'raised' (financial metric, Neutral).", "method": "llm_batch", "batch_id": "batch_3_20284", "batch_size": 260, "batch_pos": 156}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14788", "batch_size": 260, "batch_pos": 149}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a factual negative impact (raising prices).", "method": "llm_batch", "batch_id": "batch_5_9224", "batch_size": 260, "batch_pos": 146}
+{"Q": 6, "answer": "no", "rationale": "Minimiser 'just' refers to recency, not scale.", "method": "llm_batch", "batch_id": "batch_6_17996", "batch_size": 260, "batch_pos": 126}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 118}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_13508_r1", "batch_size": 260, "batch_pos": 118}

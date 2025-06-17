@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_4788", "batch_size": 260, "batch_pos": 4}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16628", "batch_size": 260, "batch_pos": 259}
 {"Q": 8, "answer": "no", "rationale": "The segment describes spread/status, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13992", "batch_size": 260, "batch_pos": 193}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_8692", "batch_size": 260, "batch_pos": 7}
+{"Q": 10, "answer": "no", "rationale": "The segment describes past/current spread rate, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_21320", "batch_size": 260, "batch_pos": 207}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a frame. 'spread more quickly' describes background condition.", "method": "llm_batch", "batch_id": "batch_11_13304", "batch_size": 260, "batch_pos": 192}
+{"Q": 12, "answer": "yes", "rationale": "'spread more quickly' is moderate verb + metric/scale, triggering Q3.", "method": "llm_batch", "batch_id": "batch_12_17872", "batch_size": 260, "batch_pos": 192}

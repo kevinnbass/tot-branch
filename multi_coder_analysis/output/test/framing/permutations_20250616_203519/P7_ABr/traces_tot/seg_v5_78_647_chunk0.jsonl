@@ -7,3 +7,8 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 119}
 {"Q": 7, "answer": "no", "rationale": "The segment describes virus infecting internal organs, but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 115}
 {"Q": 8, "answer": "no", "rationale": "The segment quotes someone about virus infecting internal organs and locations, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_724", "batch_size": 260, "batch_pos": 96}
+{"Q": 9, "answer": "no", "rationale": "The segment describes virus capability and location, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14600", "batch_size": 260, "batch_pos": 67}
+{"Q": 10, "answer": "no", "rationale": "The segment describes virus capability and location, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_20628", "batch_size": 260, "batch_pos": 45}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_2076", "batch_size": 260, "batch_pos": 36}
+{"Q": 11, "answer": "no", "rationale": "Quote provides neutral, factual statements about viral capability and location.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_2076_r1", "batch_size": 260, "batch_pos": 36}
+{"Q": 12, "answer": "yes", "rationale": "Quote describing factual impact/location of the virus in organs.", "method": "llm_batch", "batch_id": "batch_12_19532", "batch_size": 260, "batch_pos": 34}

@@ -6,3 +6,5 @@
 {"Q": 6, "answer": "no", "rationale": "The segment asks if infection is possible by drinking milk without using a minimiser or scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16520", "batch_size": 260, "batch_pos": 222}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_4696", "batch_size": 260, "batch_pos": 216}
 {"Q": 8, "answer": "no", "rationale": "A question about transmission route/risk.", "method": "llm_batch", "batch_id": "batch_8_9948", "batch_size": 260, "batch_pos": 140}
+{"Q": 9, "answer": "no", "rationale": "The segment asks a question about infection via drinking milk, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14600", "batch_size": 260, "batch_pos": 241}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_20628", "batch_size": 260, "batch_pos": 179, "regex": {"rule": "ReliefSpeculation", "span": [4, 9], "captures": ["could"]}}

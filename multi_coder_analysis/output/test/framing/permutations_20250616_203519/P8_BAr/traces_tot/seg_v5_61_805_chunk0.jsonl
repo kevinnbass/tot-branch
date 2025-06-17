@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The segment neutrally reports a number.", "method": "llm_batch", "batch_id": "batch_2_14408", "batch_size": 260, "batch_pos": 81}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_18376", "batch_size": 260, "batch_pos": 11}
 {"Q": 5, "answer": "no", "rationale": "Reports a positive fact ('delivered... vaccine doses') and calls it 'really important' but doesn't explicitly frame it for reassurance about current safety.", "method": "llm_batch", "batch_id": "batch_5_2640", "batch_size": 260, "batch_pos": 8}
+{"Q": 6, "answer": "no", "rationale": "Segment contains a large scale ('over half a million') and positive framing ('really important') but not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_2912", "batch_size": 260, "batch_pos": 237}
+{"Q": 7, "answer": "no", "rationale": "The segment states a fact/opinion, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_9988", "batch_size": 260, "batch_pos": 220}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11324", "batch_size": 260, "batch_pos": 53, "regex": {"rule": "CapabilityNoReassurance", "span": [64, 71], "captures": []}}

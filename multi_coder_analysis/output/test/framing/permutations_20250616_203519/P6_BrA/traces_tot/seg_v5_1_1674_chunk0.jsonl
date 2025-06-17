@@ -4,3 +4,6 @@
 {"Q": 4, "answer": "no", "rationale": "No question present.", "method": "llm_batch", "batch_id": "batch_4_18856", "batch_size": 260, "batch_pos": 46}
 {"Q": 5, "answer": "no", "rationale": "The segment reports negative facts about human and herd cases, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8932", "batch_size": 260, "batch_pos": 42}
 {"Q": 6, "answer": "no", "rationale": "The segment mentions 'at least one person' and '36 dairy herds' but does not use a minimiser with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20384", "batch_size": 260, "batch_pos": 19}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14820", "batch_size": 260, "batch_pos": 14}
+{"Q": 8, "answer": "no", "rationale": "The segment reports spread to a person and herds, noting likely undercount, and does not describe capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_21156", "batch_size": 260, "batch_pos": 177}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports the number of human cases and affected herds ('at least one person', '36 dairy herds have been confirmed').", "method": "llm_batch", "batch_id": "batch_9_14076", "batch_size": 260, "batch_pos": 156}

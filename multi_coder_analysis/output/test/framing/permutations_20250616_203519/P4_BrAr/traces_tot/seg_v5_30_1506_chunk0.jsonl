@@ -6,3 +6,5 @@
 {"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_19752", "batch_size": 260, "batch_pos": 158}
 {"Q": 7, "answer": "no", "rationale": "The segment quotes 'There is a concern', which is not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16644", "batch_size": 260, "batch_pos": 149}
 {"Q": 8, "answer": "no", "rationale": "The segment expresses concern, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_14640", "batch_size": 260, "batch_pos": 66}
+{"Q": 9, "answer": "no", "rationale": "The segment reports concern ('There is a concern') but does not report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_10200", "batch_size": 260, "batch_pos": 186}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_2924", "batch_size": 200, "batch_pos": 9, "regex": {"rule": "ReliefSpeculation", "span": [53, 58], "captures": ["might"]}}

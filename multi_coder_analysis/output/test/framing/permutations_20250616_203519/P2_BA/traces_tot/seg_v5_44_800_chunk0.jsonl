@@ -2,3 +2,7 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs, metaphors, superlatives, or alert phrases.", "method": "llm_batch", "batch_id": "batch_2_4188", "batch_size": 260, "batch_pos": 243}
 {"Q": 3, "answer": "no", "rationale": "The verb 'sequence' is a plain verb, not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_8088", "batch_size": 260, "batch_pos": 192}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_2916", "batch_size": 260, "batch_pos": 173}
+{"Q": 5, "answer": "no", "rationale": "This reports a limitation, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_18736", "batch_size": 260, "batch_pos": 169}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'only' but it modifies the amount sequenced, not the scale of cases.", "method": "llm_batch", "batch_id": "batch_6_12580", "batch_size": 260, "batch_pos": 139}
+{"Q": 7, "answer": "no", "rationale": "The segment describes sequencing only a portion of the virus. 'only a portion' is a limitation, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_12840", "batch_size": 260, "batch_pos": 129}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_21308", "batch_size": 260, "batch_pos": 207, "regex": {"rule": "CapabilityNoReassurance", "span": [7, 16], "captures": []}}

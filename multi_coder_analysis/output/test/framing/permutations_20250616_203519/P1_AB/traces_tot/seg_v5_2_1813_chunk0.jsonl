@@ -4,3 +4,4 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_21140", "batch_size": 260, "batch_pos": 122}
 {"Q": 5, "answer": "no", "rationale": "The segment reports an official statement that the 'risk to the general public remains low', but this low-risk evaluation lacks the required intensifier for Q5.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 120}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 94}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 218, "regex": {"rule": "CapabilityNoReassurance", "span": [0, 9], "captures": []}}

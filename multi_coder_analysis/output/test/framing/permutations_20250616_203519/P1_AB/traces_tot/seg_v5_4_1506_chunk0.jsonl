@@ -5,3 +5,4 @@
 {"Q": 5, "answer": "no", "rationale": "The segment states 'risk to the public remains low' but this is not intensified. It also notes 'rising concern,' which is not calming.", "method": "llm_batch", "batch_id": "batch_5_7524", "batch_size": 260, "batch_pos": 106}
 {"Q": 6, "answer": "no", "rationale": "'risk to the public remains low' is a Q5 cue, not Q6. No minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_3164", "batch_size": 260, "batch_pos": 83}
 {"Q": 7, "answer": "no", "rationale": "The segment contains a low-risk fact and a statement about concern, not a bare negation without calming.", "method": "llm_batch", "batch_id": "batch_7_15648", "batch_size": 260, "batch_pos": 72}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11120", "batch_size": 260, "batch_pos": 221, "regex": {"rule": "CapabilityNoReassurance", "span": [16, 25], "captures": []}}

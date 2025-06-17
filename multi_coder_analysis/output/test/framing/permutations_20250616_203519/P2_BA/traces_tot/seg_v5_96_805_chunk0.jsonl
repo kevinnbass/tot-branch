@@ -2,3 +2,7 @@
 {"Q": 2, "answer": "no", "rationale": "No high-potency verb, metaphor, superlative, or critical alert phrase.", "method": "llm_batch", "batch_id": "batch_2_19712", "batch_size": 260, "batch_pos": 192}
 {"Q": 3, "answer": "no", "rationale": "The segment expresses a psychological state ('I’m encouraged') which is Neutral.", "method": "llm_batch", "batch_id": "batch_3_13648", "batch_size": 260, "batch_pos": 134}
 {"Q": 4, "answer": "no", "rationale": "The question is a rhetorical challenge about strategic focus, not loaded to imply alarm about the disease.", "method": "llm_batch", "batch_id": "batch_4_21296", "batch_size": 260, "batch_pos": 115}
+{"Q": 5, "answer": "no", "rationale": "The segment states being 'encouraged', but lacks explicit calming language about safety or control.", "method": "llm_batch", "batch_id": "batch_5_19744", "batch_size": 260, "batch_pos": 110}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_6716", "batch_size": 260, "batch_pos": 77}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_6716_r1", "batch_size": 260, "batch_pos": 77}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_21256", "batch_size": 260, "batch_pos": 67}

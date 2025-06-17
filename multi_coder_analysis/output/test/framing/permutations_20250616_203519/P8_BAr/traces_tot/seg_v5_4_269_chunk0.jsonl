@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "Plain verbs 'working', 'detect', 'analyse', 'reveal'.", "method": "llm_batch", "batch_id": "batch_3_10512", "batch_size": 260, "batch_pos": 167}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19216", "batch_size": 260, "batch_pos": 152}
 {"Q": 5, "answer": "no", "rationale": "The segment reports actions taken, which are preparedness, not explicit calming about public safety.", "method": "llm_batch", "batch_id": "batch_5_20828", "batch_size": 260, "batch_pos": 149}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_2912", "batch_size": 260, "batch_pos": 120}
+{"Q": 7, "answer": "no", "rationale": "The segment states facts about actions and risk, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_9988", "batch_size": 260, "batch_pos": 106}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_20560", "batch_size": 260, "batch_pos": 212, "regex": {"rule": "CapabilityNoReassurance", "span": [112, 121], "captures": []}}

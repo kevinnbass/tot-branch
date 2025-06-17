@@ -7,3 +7,7 @@
 {"Q": 6, "answer": "no", "rationale": "The segment contains vivid language ('really on the line'), which is not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 249}
 {"Q": 7, "answer": "no", "rationale": "The segment contains a quote about public health credibility, but no bare negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 244}
 {"Q": 8, "answer": "no", "rationale": "The segment quotes someone using critical language, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_724", "batch_size": 260, "batch_pos": 210}
+{"Q": 9, "answer": "no", "rationale": "Uses framing language ('Public health credibility is really on the line here').", "method": "llm_batch", "batch_id": "batch_9_14600", "batch_size": 260, "batch_pos": 134}
+{"Q": 10, "answer": "no", "rationale": "The segment expresses concern, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_20628", "batch_size": 260, "batch_pos": 91}
+{"Q": 11, "answer": "yes", "rationale": "Quote uses intensified negative consequence: 'Public health credibility is really on the line here'. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_2076", "batch_size": 260, "batch_pos": 78}
+{"Q": 12, "answer": "yes", "rationale": "Quote about 'public health credibility', not framing the threat itself.", "method": "llm_batch", "batch_id": "batch_12_19532", "batch_size": 260, "batch_pos": 73}

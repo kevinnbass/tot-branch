@@ -2,3 +2,9 @@
 {"Q": 1, "answer": "no", "rationale": "The segment describes the identification of bird flu and its location/scale but does not use intensifiers or comparatives with risk-adjectives.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_15968_r1", "batch_size": 260, "batch_pos": 171}
 {"Q": 2, "answer": "no", "rationale": "The segment reports identification and scale factually without using high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_16980", "batch_size": 260, "batch_pos": 153}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_6872", "batch_size": 260, "batch_pos": 116}
+{"Q": 5, "answer": "no", "rationale": "The segment reports identification and scale but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12816", "batch_size": 260, "batch_pos": 114}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_824", "batch_size": 260, "batch_pos": 98}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_824_r1", "batch_size": 260, "batch_pos": 98}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_6604", "batch_size": 260, "batch_pos": 95}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_6604_r1", "batch_size": 260, "batch_pos": 95}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15400", "batch_size": 260, "batch_pos": 256, "regex": {"rule": "CapabilityNoReassurance", "span": [0, 9], "captures": []}}

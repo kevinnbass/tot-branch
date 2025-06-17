@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "no", "rationale": "This is a statement introducing a topic, not a question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 90}
 {"Q": 5, "answer": "no", "rationale": "The segment expresses a strong belief about a future solution, not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 82}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3444", "batch_size": 260, "batch_pos": 42}
+{"Q": 6, "answer": "no", "rationale": "'only get from a vaccine' uses 'only' but lacks a numerical scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3444_r1", "batch_size": 260, "batch_pos": 42}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation as defined by Q7.", "method": "llm_batch", "batch_id": "batch_7_13828", "batch_size": 248, "batch_pos": 31}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_10544", "batch_size": 260, "batch_pos": 86, "regex": {"rule": "CapabilityNoReassurance", "span": [99, 106], "captures": []}}

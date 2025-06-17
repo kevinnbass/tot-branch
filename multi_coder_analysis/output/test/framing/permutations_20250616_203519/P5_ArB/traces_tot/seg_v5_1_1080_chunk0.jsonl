@@ -4,3 +4,7 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 12}
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 12}
 {"Q": 5, "answer": "no", "rationale": "This segment reports factual information about new cases and spread without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 7}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 228}
+{"Q": 7, "answer": "no", "rationale": "The segment states new cases were detected but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 207}
+{"Q": 8, "answer": "no", "rationale": "The segment reports new cases and spread, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 24}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('more than 30 states') using standard verbs ('having spread').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 72}

@@ -5,3 +5,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment contains statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_21140_r1", "batch_size": 260, "batch_pos": 45}
 {"Q": 5, "answer": "no", "rationale": "The segment reports positive facts (risk remains low, no human cases in US) but the low-risk evaluation lacks the required intensifier for Q5.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 44}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 18}
+{"Q": 8, "answer": "no", "rationale": "Contains explicit reassurance: 'the risk of humans contracting the virus still remains low'.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 142}
+{"Q": 9, "answer": "no", "rationale": "The segment contains explicit low-risk/reassuring statements ('risk... still remains low', 'no cases... detected').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 119}

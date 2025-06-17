@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13804", "batch_size": 260, "batch_pos": 31}
 {"Q": 7, "answer": "no", "rationale": "The segment states a low-risk fact ('remains low') which functions as an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_17832", "batch_size": 260, "batch_pos": 22}
 {"Q": 8, "answer": "no", "rationale": "States risk is low ('risk... still remains low'), which is active reassurance.", "method": "llm_batch", "batch_id": "batch_8_19824", "batch_size": 260, "batch_pos": 153}
+{"Q": 9, "answer": "no", "rationale": "Uses Reassuring framing ('risk... still remains low').", "method": "llm_batch", "batch_id": "batch_9_8692", "batch_size": 260, "batch_pos": 150}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk of getting sick with bird flu still remains low').", "method": "llm_batch", "batch_id": "batch_10_15092", "batch_size": 260, "batch_pos": 34}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement uses 'risk of getting sick with bird flu still remains low', which is explicit calming language. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_13060", "batch_size": 244, "batch_pos": 6}
+{"Q": 12, "answer": "no", "rationale": "'risk... remains low' is explicit reassuring language failing Q12.", "method": "llm_batch", "batch_id": "batch_12_20256", "batch_size": 244, "batch_pos": 6}

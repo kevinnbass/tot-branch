@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 120}
 {"Q": 5, "answer": "no", "rationale": "The segment reports action (culling) but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 112}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3444", "batch_size": 260, "batch_pos": 72}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3444_r1", "batch_size": 260, "batch_pos": 72}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_13828", "batch_size": 248, "batch_pos": 61}
+{"Q": 8, "answer": "yes", "rationale": "Reports authorities will cull birds ('Czech authorities will cull nearly 140,000 turkey and chickens'), a response measure without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_10544", "batch_size": 260, "batch_pos": 115}

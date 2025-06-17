@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "Describes frequency.", "method": "llm_batch", "batch_id": "batch_3_19976", "batch_size": 260, "batch_pos": 219}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_20784", "batch_size": 260, "batch_pos": 209}
 {"Q": 5, "answer": "no", "rationale": "The segment states it 'rarely gets passed', which is a low-risk statement but not intensified as required for Q5.", "method": "llm_batch", "batch_id": "batch_5_6072", "batch_size": 260, "batch_pos": 207}
+{"Q": 6, "answer": "no", "rationale": "Segment contains 'rarely' (minimiser) but lacks an explicit scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20948", "batch_size": 260, "batch_pos": 188}
+{"Q": 7, "answer": "yes", "rationale": "'rarely gets passed' functions as a bare negation of high frequency without further calming.", "method": "llm_batch", "batch_id": "batch_7_20704", "batch_size": 260, "batch_pos": 172}

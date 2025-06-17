@@ -3,3 +3,7 @@
 {"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb explicitly paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_17188", "batch_size": 260, "batch_pos": 225}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_2616", "batch_size": 260, "batch_pos": 213}
 {"Q": 5, "answer": "no", "rationale": "This reports actions taken without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15164", "batch_size": 260, "batch_pos": 210}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_11036", "batch_size": 260, "batch_pos": 185}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 167}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 167}
+{"Q": 8, "answer": "yes", "rationale": "Describes restrictions applied by an agency ('applied the restriction to commercial birds...').", "method": "llm_batch", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 11}

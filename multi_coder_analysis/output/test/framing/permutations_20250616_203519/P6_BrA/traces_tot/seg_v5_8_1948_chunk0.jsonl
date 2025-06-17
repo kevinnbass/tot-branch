@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_19552", "batch_size": 260, "batch_pos": 21}
 {"Q": 5, "answer": "no", "rationale": "The segment reports the status of approval but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14036", "batch_size": 260, "batch_pos": 19}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13336", "batch_size": 260, "batch_pos": 2}
+{"Q": 7, "answer": "no", "rationale": "The negation 'has yet to receive' is about status/action, not the threat itself.", "method": "llm_batch", "batch_id": "batch_7_4608", "batch_size": 260, "batch_pos": 257}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17852", "batch_size": 260, "batch_pos": 187, "regex": {"rule": "CapabilityNoReassurance", "span": [4, 11], "captures": []}}

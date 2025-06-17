@@ -5,3 +5,7 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 175}
 {"Q": 5, "answer": "no", "rationale": "The segment expresses opinion/concern about restrictions' basis and impact, not a public calming cue.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 167}
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3444", "batch_size": 260, "batch_pos": 126}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3444_r1", "batch_size": 260, "batch_pos": 126}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation as defined by Q7.", "method": "llm_batch", "batch_id": "batch_7_13828", "batch_size": 248, "batch_pos": 112}
+{"Q": 8, "answer": "no", "rationale": "The segment quotes a spokesman discussing the restrictions, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_10544", "batch_size": 260, "batch_pos": 163}
+{"Q": 9, "answer": "no", "rationale": "Uses framing language ('big deal').", "method": "llm_batch", "batch_id": "batch_9_10436", "batch_size": 239, "batch_pos": 185}

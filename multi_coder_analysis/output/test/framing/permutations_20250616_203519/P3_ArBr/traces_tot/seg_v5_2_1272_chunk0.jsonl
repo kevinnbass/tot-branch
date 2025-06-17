@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_21356", "batch_size": 260, "batch_pos": 18}
 {"Q": 7, "answer": "no", "rationale": "The segment reports an outbreak and deaths, containing no bare negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_7072", "batch_size": 260, "batch_pos": 2}
 {"Q": 8, "answer": "no", "rationale": "The segment describes impact rather than capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3288", "batch_size": 260, "batch_pos": 97}
+{"Q": 9, "answer": "no", "rationale": "Uses intensifier ('record numbers').", "method": "llm_batch", "batch_id": "batch_9_8692", "batch_size": 260, "batch_pos": 260}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current impact, not future relief.", "method": "llm_batch", "batch_id": "batch_10_15092", "batch_size": 260, "batch_pos": 92}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_13060", "batch_size": 244, "batch_pos": 61}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_20256", "batch_size": 244, "batch_pos": 61, "regex": {"rule": "NeutralStats", "span": [74, 88], "captures": ["record", "numbers"]}}

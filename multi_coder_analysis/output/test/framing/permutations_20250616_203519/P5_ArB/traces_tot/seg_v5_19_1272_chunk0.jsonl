@@ -5,3 +5,5 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 47}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a positive fact (licensed vaccines exist) but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 42}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 2}
+{"Q": 7, "answer": "no", "rationale": "The segment states there are licensed vaccines but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 241}
+{"Q": 8, "answer": "yes", "rationale": "Reports number of licensed vaccines ('close to 20 licensed vaccines') as a development capability without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 55}

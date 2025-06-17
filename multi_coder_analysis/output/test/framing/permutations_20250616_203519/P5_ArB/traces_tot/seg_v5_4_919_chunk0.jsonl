@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'culling', which is a containment action excluded by rule 5.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 17}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19108", "batch_size": 260, "batch_pos": 258}
 {"Q": 5, "answer": "no", "rationale": "This segment reports historical facts (outbreak, culling, bans) and lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14944", "batch_size": 260, "batch_pos": 253}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 214}
+{"Q": 7, "answer": "no", "rationale": "The segment states countries banned imports after an outbreak but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 193}
+{"Q": 8, "answer": "yes", "rationale": "Describes past bans ('neighbouring countries...banned poultry imports') as response measures without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 12}

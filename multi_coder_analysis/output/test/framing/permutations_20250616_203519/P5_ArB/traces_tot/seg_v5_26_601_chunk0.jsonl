@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "Neutral language used; no moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_2068", "batch_size": 260, "batch_pos": 87}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19108", "batch_size": 260, "batch_pos": 74}
 {"Q": 5, "answer": "no", "rationale": "This segment suggests what officials must make clear and lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14944", "batch_size": 260, "batch_pos": 70}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 43}
+{"Q": 7, "answer": "no", "rationale": "The negation 'will not be reported' is about immigration status reporting, not the virus or its impact.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 23}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 114, "regex": {"rule": "CapabilityNoReassurance", "span": [99, 108], "captures": []}}

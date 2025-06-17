@@ -3,3 +3,8 @@
 {"Q": 3, "answer": "no", "rationale": "Neutral language used; no moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_2068", "batch_size": 260, "batch_pos": 47}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19108", "batch_size": 260, "batch_pos": 34}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a fact (vaccine helping birds) but lacks explicit calming language about human safety.", "method": "llm_batch", "batch_id": "batch_5_14944", "batch_size": 260, "batch_pos": 31}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 4}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser token combined with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_20128_r1", "batch_size": 260, "batch_pos": 4}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 246}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a statement ('has helped protect') implying effectiveness/preparedness, not a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 246}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 78, "regex": {"rule": "CapabilityNoReassurance", "span": [105, 112], "captures": []}}

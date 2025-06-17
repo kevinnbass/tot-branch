@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17916", "batch_size": 260, "batch_pos": 187}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the threat or risk.", "method": "llm_batch", "batch_id": "batch_7_14208", "batch_size": 260, "batch_pos": 185}
 {"Q": 8, "answer": "no", "rationale": "The segment describes the situation as 'worrying', not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_19948", "batch_size": 260, "batch_pos": 167}
+{"Q": 9, "answer": "no", "rationale": "The segment describes the situation as 'worrying', which is explicit framing.", "method": "llm_batch", "batch_id": "batch_9_5572", "batch_size": 260, "batch_pos": 105}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_12772", "batch_size": 260, "batch_pos": 63}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'worrying', which is a bare risk adjective and does not trigger Q11 framing.", "method": "llm_batch", "batch_id": "batch_11_15000", "batch_size": 260, "batch_pos": 60}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_17368", "batch_size": 260, "batch_pos": 60, "regex": {"rule": "NeutralStats", "span": [78, 99], "captures": ["confirm", "cases"]}}

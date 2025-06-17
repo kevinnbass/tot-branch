@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The segment contains reassuring information but no Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_16980", "batch_size": 260, "batch_pos": 37}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_6872", "batch_size": 260, "batch_pos": 5}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_6872_r1", "batch_size": 260, "batch_pos": 5}
+{"Q": 5, "answer": "no", "rationale": "The segment states the virus is 'not considered a food safety threat' and birds 'do not enter the food supply', which are bare negations handled under Q7, not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_12816", "batch_size": 260, "batch_pos": 3}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14084", "batch_size": 260, "batch_pos": 249}
+{"Q": 7, "answer": "yes", "rationale": "'not considered' and 'do not enter' are bare negations without additional calming language.", "method": "llm_batch", "batch_id": "batch_7_19776", "batch_size": 260, "batch_pos": 248}

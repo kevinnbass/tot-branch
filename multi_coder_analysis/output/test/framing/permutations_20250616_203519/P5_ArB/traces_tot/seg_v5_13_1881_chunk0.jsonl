@@ -5,3 +5,7 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 218}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a factual number of cases without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 213}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 170}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_17436", "batch_size": 241, "batch_pos": 145}
+{"Q": 7, "answer": "no", "rationale": "The segment reports the number of human cases, but contains no negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 145}
+{"Q": 8, "answer": "no", "rationale": "The segment reports human cases number, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 192}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('27 human cases') using standard verbs ('have been reported').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 167}

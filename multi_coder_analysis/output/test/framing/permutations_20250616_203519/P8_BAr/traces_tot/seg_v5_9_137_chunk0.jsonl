@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment contains reassuring language about risk and uses 'rising concerns' (psychological, Neutral).", "method": "llm_batch", "batch_id": "batch_3_20284", "batch_size": 260, "batch_pos": 161}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14788", "batch_size": 260, "batch_pos": 153}
 {"Q": 5, "answer": "no", "rationale": "This segment contains an Alarmist cue ('rising concerns') which takes precedence over the factual low-risk statement ('risk to people is low').", "method": "llm_batch", "batch_id": "batch_5_9224", "batch_size": 260, "batch_pos": 150}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17996", "batch_size": 260, "batch_pos": 130}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_13508", "batch_size": 260, "batch_pos": 122}
+{"Q": 7, "answer": "no", "rationale": "The segment states 'risk to people is low', which is a statement of a low-risk fact, not a bare negation as defined by Q7.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_13508_r1", "batch_size": 260, "batch_pos": 122}

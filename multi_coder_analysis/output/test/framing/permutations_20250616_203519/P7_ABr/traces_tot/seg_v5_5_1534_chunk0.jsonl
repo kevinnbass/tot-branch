@@ -7,3 +7,8 @@
 {"Q": 6, "answer": "no", "rationale": "The segment contains an explicit calming statement ('overall public health risk is low'), which is not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 52}
 {"Q": 7, "answer": "no", "rationale": "The segment states 'the overall public health risk is low', which is an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 49}
 {"Q": 8, "answer": "no", "rationale": "The segment includes explicit calming ('overall public health risk is low'), caught by Q5.", "method": "llm_batch", "batch_id": "batch_8_724", "batch_size": 260, "batch_pos": 43}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit reassuring language ('overall public health risk is low').", "method": "llm_batch", "batch_id": "batch_9_14600", "batch_size": 260, "batch_pos": 27}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('overall public health risk is low').", "method": "llm_batch", "batch_id": "batch_10_20628", "batch_size": 260, "batch_pos": 11}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_2076", "batch_size": 260, "batch_pos": 11}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement reports factual risk assessment ('risk is low') without explicit reassuring framing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_2076_r1", "batch_size": 260, "batch_pos": 11}
+{"Q": 12, "answer": "no", "rationale": "Contains the explicit reassuring cue 'overall public health risk is low'.", "method": "llm_batch", "batch_id": "batch_12_19532", "batch_size": 260, "batch_pos": 11}

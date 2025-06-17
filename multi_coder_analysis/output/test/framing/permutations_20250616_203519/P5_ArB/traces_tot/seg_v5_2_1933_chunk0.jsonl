@@ -5,3 +5,5 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 59}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a positive fact (improvement) but also concern ('worried'), lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 54}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 14}
+{"Q": 7, "answer": "no", "rationale": "The segment states condors are receiving care and have shown improvement but officials are worried about spread. No bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 253}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 67, "regex": {"rule": "CapabilityNoReassurance", "span": [90, 99], "captures": []}}

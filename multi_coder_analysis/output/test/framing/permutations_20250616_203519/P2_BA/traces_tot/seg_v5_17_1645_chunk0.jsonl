@@ -1,3 +1,7 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains advice/preparedness, not an intensifier/comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18860", "batch_size": 217, "batch_pos": 136}
 {"Q": 2, "answer": "no", "rationale": "The segment provides advice ('Never be caught without'). 'critical drugs' describes the drugs, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_16160", "batch_size": 165, "batch_pos": 85}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_21296", "batch_size": 260, "batch_pos": 260}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_19744", "batch_size": 260, "batch_pos": 255}
+{"Q": 5, "answer": "no", "rationale": "This is a recommendation/directive, not an explicit calming cue about safety or control.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_19744_r1", "batch_size": 260, "batch_pos": 255}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_6716", "batch_size": 260, "batch_pos": 218}
+{"Q": 7, "answer": "yes", "rationale": "'Never be caught without' is a bare negation about a state/condition without explicit calming.", "method": "llm_batch", "batch_id": "batch_7_21256", "batch_size": 260, "batch_pos": 206}

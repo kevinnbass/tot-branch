@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13804", "batch_size": 260, "batch_pos": 7}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_9768", "batch_size": 260, "batch_pos": 258}
 {"Q": 8, "answer": "no", "rationale": "Reports a factual statement about how information is received, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_19824", "batch_size": 260, "batch_pos": 131}
+{"Q": 9, "answer": "no", "rationale": "Uses intensifier 'mass'.", "method": "llm_batch", "batch_id": "batch_9_8692", "batch_size": 260, "batch_pos": 132}
+{"Q": 10, "answer": "no", "rationale": "The segment describes reports of deaths, not future relief.", "method": "llm_batch", "batch_id": "batch_10_15092", "batch_size": 260, "batch_pos": 22}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a frame. 'mass deaths' is not from a source providing the frame.", "method": "llm_batch", "batch_id": "batch_11_13304", "batch_size": 260, "batch_pos": 256}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_17872", "batch_size": 260, "batch_pos": 256, "regex": {"rule": "NeutralStats", "span": [12, 34], "captures": ["report", "deaths"]}}

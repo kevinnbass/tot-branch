@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_14848", "batch_size": 260, "batch_pos": 171}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation without an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_10820", "batch_size": 255, "batch_pos": 154}
 {"Q": 8, "answer": "no", "rationale": "States supermarkets 'downplayed any concerns', which is an explicit reassurance cue (Rule C).", "method": "llm_batch", "batch_id": "batch_8_19712", "batch_size": 260, "batch_pos": 192}
+{"Q": 9, "answer": "no", "rationale": "Reports lack of response and action taken, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_14080", "batch_size": 260, "batch_pos": 195}
+{"Q": 10, "answer": "no", "rationale": "The segment reports lack of response and downplaying concerns about availability, not disease relief.", "method": "llm_batch", "batch_id": "batch_10_15092", "batch_size": 260, "batch_pos": 234}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement uses 'downplayed any concerns', which is explicit calming language. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_13060", "batch_size": 244, "batch_pos": 196}
+{"Q": 12, "answer": "no", "rationale": "'downplayed any concerns' is explicit reassuring language failing Q12.", "method": "llm_batch", "batch_id": "batch_12_20256", "batch_size": 244, "batch_pos": 196}

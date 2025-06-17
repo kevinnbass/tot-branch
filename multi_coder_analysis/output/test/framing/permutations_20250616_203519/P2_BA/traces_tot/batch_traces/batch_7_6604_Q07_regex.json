@@ -1,0 +1,46 @@
+{
+  "batch_id": "batch_7_6604",
+  "hop_idx": 7,
+  "segment_count": 3,
+  "matches": [
+    {
+      "statement_id": "seg_v5_003_63_chunk0",
+      "regex": {
+        "rule": "BareNegationHealthConcern",
+        "span": [
+          196,
+          226
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_009_63_chunk0",
+      "regex": {
+        "rule": "BareNegationHealthConcern",
+        "span": [
+          83,
+          132
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_018_71_chunk0",
+      "regex": {
+        "rule": "BareNegationHealthConcern",
+        "span": [
+          88,
+          137
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

@@ -6,3 +6,7 @@
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16476", "batch_size": 260, "batch_pos": 160}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16628", "batch_size": 260, "batch_pos": 156}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a potential future impact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13992", "batch_size": 260, "batch_pos": 103}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote about numbers overwhelming, not factual metric reporting.", "method": "llm_batch", "batch_id": "batch_9_11924", "batch_size": 260, "batch_pos": 209}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a hypothetical future scenario/impact, not speculation about relief.", "method": "llm_batch", "batch_id": "batch_10_21320", "batch_size": 260, "batch_pos": 167}
+{"Q": 11, "answer": "yes", "rationale": "Direct quote describes a severe scale of impact ('numbers that overwhelm'). ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_13304", "batch_size": 260, "batch_pos": 155}
+{"Q": 12, "answer": "no", "rationale": "'numbers that overwhelm' is explicit framing of negative scale/impact, triggering Q1.", "method": "llm_batch", "batch_id": "batch_12_17872", "batch_size": 260, "batch_pos": 155}

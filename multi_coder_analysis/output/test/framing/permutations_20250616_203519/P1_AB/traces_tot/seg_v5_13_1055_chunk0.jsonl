@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "no", "rationale": "The segment contains statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_21140_r1", "batch_size": 260, "batch_pos": 43}
 {"Q": 5, "answer": "no", "rationale": "The segment reports expected price increases but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 42}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 16}
+{"Q": 7, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch", "batch_id": "batch_7_15744", "batch_size": 260, "batch_pos": 1}
+{"Q": 8, "answer": "no", "rationale": "Reports USDA expectation of food price surge, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 140}
+{"Q": 9, "answer": "no", "rationale": "The segment reports an expected price change using a vivid verb ('surge 5 percent').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 117}

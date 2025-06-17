@@ -7,3 +7,4 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_5140_r1", "batch_size": 260, "batch_pos": 105}
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_19368", "batch_size": 258, "batch_pos": 87}
 {"Q": 7, "answer": "no", "rationale": "The segment describes an action taken (disaster proclamation) but contains no bare negation or explicit calming cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_19368_r1", "batch_size": 258, "batch_pos": 87}
+{"Q": 8, "answer": "yes", "rationale": "Describes actions taken ('signed a disaster proclamation', 'allow state resources to help') as safeguards without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_11948", "batch_size": 260, "batch_pos": 185}

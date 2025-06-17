@@ -3,3 +3,7 @@
 {"Q": 3, "answer": "no", "rationale": "'dead' is a plain outcome verb, which is Neutral even with numbers unless vivid language is added.", "method": "llm_batch", "batch_id": "batch_3_2068", "batch_size": 260, "batch_pos": 53}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19108", "batch_size": 260, "batch_pos": 40}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a fact (deaths) and lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14944", "batch_size": 260, "batch_pos": 37}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 10}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 252}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 252}
+{"Q": 8, "answer": "no", "rationale": "States a fact about dead seal pups and transmission.", "method": "llm_batch", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 84}

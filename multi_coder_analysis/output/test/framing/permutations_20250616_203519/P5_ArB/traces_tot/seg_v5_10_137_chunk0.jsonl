@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 179}
 {"Q": 5, "answer": "no", "rationale": "This segment provides advice/recommendation without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 174}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 132}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_17436", "batch_size": 241, "batch_pos": 109}
+{"Q": 7, "answer": "no", "rationale": "The segment recommends steps to protect, implying preparedness (Q5).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 109}
+{"Q": 8, "answer": "yes", "rationale": "Describes CDC recommends steps to protect themselves ('recommends farmers...take steps to protect themselves') as response/safeguard measures without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 158}

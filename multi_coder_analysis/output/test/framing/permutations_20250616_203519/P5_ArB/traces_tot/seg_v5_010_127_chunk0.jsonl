@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 136}
 {"Q": 5, "answer": "no", "rationale": "This segment reports anticipation of future detections without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 131}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 90}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_17436", "batch_size": 241, "batch_pos": 67}
+{"Q": 7, "answer": "no", "rationale": "The segment anticipates detections, but contains no negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 67}
+{"Q": 8, "answer": "yes", "rationale": "Describes anticipation of detections as surveillance continues ('anticipate new additional avian influenza detections will occur...as wild bird surveillance continues') as preparedness/future possibility without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 119}

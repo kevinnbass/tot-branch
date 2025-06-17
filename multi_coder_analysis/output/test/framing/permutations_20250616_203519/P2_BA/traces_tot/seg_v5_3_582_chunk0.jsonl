@@ -2,3 +2,7 @@
 {"Q": 2, "answer": "no", "rationale": "The segment describes future action ('will begin sharing') using neutral language.", "method": "llm_batch", "batch_id": "batch_2_19924", "batch_size": 260, "batch_pos": 238}
 {"Q": 3, "answer": "no", "rationale": "The segment discusses future actions ('will begin sharing data'), not realised impact with a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_19648", "batch_size": 260, "batch_pos": 223}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_1376", "batch_size": 260, "batch_pos": 222}
+{"Q": 5, "answer": "no", "rationale": "The segment reports an effort will begin sharing data, which is a future action, not explicit calming.", "method": "llm_batch", "batch_id": "batch_5_7424", "batch_size": 260, "batch_pos": 221}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast. 'one of its leaders' is not a minimiser + scale contrast about the threat.", "method": "llm_batch", "batch_id": "batch_6_16356", "batch_size": 260, "batch_pos": 218}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_2928", "batch_size": 260, "batch_pos": 218}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_20268", "batch_size": 260, "batch_pos": 197, "regex": {"rule": "CapabilityNoReassurance", "span": [85, 94], "captures": []}}

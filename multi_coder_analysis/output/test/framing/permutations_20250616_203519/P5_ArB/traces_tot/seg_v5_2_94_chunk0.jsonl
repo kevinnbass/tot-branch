@@ -4,3 +4,6 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 25}
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 25}
 {"Q": 5, "answer": "no", "rationale": "This segment reports actions taken (killed, composted) without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 20}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 241}
+{"Q": 7, "answer": "no", "rationale": "The segment states a flock was killed and composted but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 220}
+{"Q": 8, "answer": "yes", "rationale": "Describes birds being killed and composted ('was killed and was being composted to guard against spread') as response/safeguard measures without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 36}

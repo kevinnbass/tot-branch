@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "Neutral language used; no moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_2068", "batch_size": 260, "batch_pos": 199}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19108", "batch_size": 260, "batch_pos": 181}
 {"Q": 5, "answer": "no", "rationale": "This segment reports actions being taken and lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14944", "batch_size": 260, "batch_pos": 177}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_20128", "batch_size": 260, "batch_pos": 141}
+{"Q": 7, "answer": "no", "rationale": "The segment states officials are taking samples but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_3456", "batch_size": 260, "batch_pos": 120}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 203, "regex": {"rule": "CapabilityNoReassurance", "span": [6, 15], "captures": []}}

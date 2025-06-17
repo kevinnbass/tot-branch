@@ -3,3 +3,6 @@
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'maintains' and 'is low' (Q5 cue) but no moderate verbs paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_5436", "batch_size": 260, "batch_pos": 213}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16700", "batch_size": 260, "batch_pos": 197}
 {"Q": 5, "answer": "no", "rationale": "The source maintains risk is 'low,' which is a low-risk evaluation but is not intensified, and advises precautions for higher-risk groups.", "method": "llm_batch", "batch_id": "batch_5_2868", "batch_size": 260, "batch_pos": 193}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_8540", "batch_size": 247, "batch_pos": 144}
+{"Q": 7, "answer": "no", "rationale": "'risk to the general public from H5N1 is low' is an explicit calming cue, not a bare negation without calming.", "method": "llm_batch", "batch_id": "batch_7_1208", "batch_size": 222, "batch_pos": 122}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_8108", "batch_size": 218, "batch_pos": 139, "regex": {"rule": "CapabilityNoReassurance", "span": [114, 118], "captures": []}}

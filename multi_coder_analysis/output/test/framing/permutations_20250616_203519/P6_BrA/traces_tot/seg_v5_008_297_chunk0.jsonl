@@ -6,3 +6,6 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17612_r1", "batch_size": 260, "batch_pos": 186}
 {"Q": 5, "answer": "no", "rationale": "The segment reports a limitation but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4152", "batch_size": 260, "batch_pos": 178}
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_3444", "batch_size": 260, "batch_pos": 137}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation as defined by Q7.", "method": "llm_batch", "batch_id": "batch_7_13828", "batch_size": 248, "batch_pos": 123}
+{"Q": 8, "answer": "no", "rationale": "The segment states countries have limited conservation funds, not a capability or preparedness measure itself.", "method": "llm_batch", "batch_id": "batch_8_10544", "batch_size": 260, "batch_pos": 174}
+{"Q": 9, "answer": "yes", "rationale": "Reports countries have limited conservation funds factually.", "method": "llm_batch", "batch_id": "batch_9_10436", "batch_size": 239, "batch_pos": 187}

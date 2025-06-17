@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 227}
 {"Q": 5, "answer": "no", "rationale": "This segment reports problems and lack of change without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 222}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 177}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_17436", "batch_size": 241, "batch_pos": 152}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'isn’t keeping up' and 'haven’t changed', which are negations about system performance, not the threat.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 152}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 199, "regex": {"rule": "CapabilityNoReassurance", "span": [130, 136], "captures": []}}

@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_21140", "batch_size": 260, "batch_pos": 131}
 {"Q": 5, "answer": "no", "rationale": "The segment reports lobbying priorities but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 129}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 103}
+{"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 227}
+{"Q": 8, "answer": "yes", "rationale": "Describes 'general efforts to prevent diseases' and 'legislation that would provide additional resources for monitoring' without linking to current calm/safety.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_13528_r1", "batch_size": 260, "batch_pos": 227}

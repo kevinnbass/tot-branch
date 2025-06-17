@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "The segment neutrally reports testing timeline.", "method": "llm_batch", "batch_id": "batch_2_14408", "batch_size": 260, "batch_pos": 239}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_18376", "batch_size": 260, "batch_pos": 158}
 {"Q": 5, "answer": "no", "rationale": "Reports expected timeline, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_2640", "batch_size": 260, "batch_pos": 154}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_19324", "batch_size": 260, "batch_pos": 120}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16568", "batch_size": 260, "batch_pos": 101}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11324", "batch_size": 260, "batch_pos": 166, "regex": {"rule": "CapabilityNoReassurance", "span": [5, 14], "captures": []}}

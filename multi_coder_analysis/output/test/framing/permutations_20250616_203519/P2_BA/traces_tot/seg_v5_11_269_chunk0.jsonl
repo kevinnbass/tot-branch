@@ -2,3 +2,6 @@
 {"Q": 2, "answer": "no", "rationale": "'vigilance is required' is a preparedness phrase, not a critical alert phrase.", "method": "llm_batch", "batch_id": "batch_2_16160", "batch_size": 165, "batch_pos": 39}
 {"Q": 3, "answer": "no", "rationale": "The segment uses a plain verb ('have not resulted') and mentions preparedness ('vigilance is required', Q5).", "method": "llm_batch", "batch_id": "batch_3_13648", "batch_size": 260, "batch_pos": 233}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_21296", "batch_size": 260, "batch_pos": 214}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a bare negation ('have not resulted') and calls for vigilance, neither are Q5 cues.", "method": "llm_batch", "batch_id": "batch_5_19744", "batch_size": 260, "batch_pos": 209}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'Almost all cases' but lacks an explicit scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_6716", "batch_size": 260, "batch_pos": 175}
+{"Q": 7, "answer": "yes", "rationale": "'have not resulted' is a bare negation about an outcome/evidence without explicit calming.", "method": "llm_batch", "batch_id": "batch_7_21256", "batch_size": 260, "batch_pos": 163}

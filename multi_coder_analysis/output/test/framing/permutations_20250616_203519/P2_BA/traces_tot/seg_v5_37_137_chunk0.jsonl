@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports a case factually without using high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_16980", "batch_size": 260, "batch_pos": 219}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_6872", "batch_size": 260, "batch_pos": 180}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_6872_r1", "batch_size": 260, "batch_pos": 180}
+{"Q": 5, "answer": "no", "rationale": "The segment reports details of a case but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12816", "batch_size": 260, "batch_pos": 178}
+{"Q": 6, "answer": "yes", "rationale": "'The single European case' uses minimiser 'single' with explicit comparison 'European case'.", "method": "llm_batch", "batch_id": "batch_6_824", "batch_size": 260, "batch_pos": 160}

@@ -3,3 +3,9 @@
 {"Q": 3, "answer": "no", "rationale": "The segment states the origin 'was' another virus, which is not a moderate verb for Q3.", "method": "llm_batch", "batch_id": "batch_3_19648", "batch_size": 260, "batch_pos": 74}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1376", "batch_size": 260, "batch_pos": 74}
 {"Q": 4, "answer": "no", "rationale": "The segment contains no rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1376_r1", "batch_size": 260, "batch_pos": 74}
+{"Q": 5, "answer": "no", "rationale": "The segment provides technical information, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_7424", "batch_size": 260, "batch_pos": 73}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16356", "batch_size": 260, "batch_pos": 73}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser or scale contrast for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16356_r1", "batch_size": 260, "batch_pos": 73}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_2928", "batch_size": 260, "batch_pos": 73}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_2928_r1", "batch_size": 260, "batch_pos": 73}
+{"Q": 8, "answer": "no", "rationale": "The segment describes genetic origin, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20268", "batch_size": 260, "batch_pos": 66}

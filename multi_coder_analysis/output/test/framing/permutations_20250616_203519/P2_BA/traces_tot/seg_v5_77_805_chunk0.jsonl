@@ -2,3 +2,7 @@
 {"Q": 2, "answer": "no", "rationale": "No high-potency verb, metaphor, superlative, or critical alert phrase.", "method": "llm_batch", "batch_id": "batch_2_19712", "batch_size": 260, "batch_pos": 178}
 {"Q": 3, "answer": "no", "rationale": "The segment uses plain verbs ('think', 'could get', 'showing', 'could use', 'do', 'think', 'would work') not a moderate verb from the Q3 list.", "method": "llm_batch", "batch_id": "batch_3_13648", "batch_size": 260, "batch_pos": 120}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_21296", "batch_size": 260, "batch_pos": 101}
+{"Q": 5, "answer": "no", "rationale": "The segment states an opinion about potential use, but provides no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_19744", "batch_size": 260, "batch_pos": 96}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_6716", "batch_size": 260, "batch_pos": 64}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_21256", "batch_size": 260, "batch_pos": 54}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_13160", "batch_size": 253, "batch_pos": 73, "regex": {"rule": "CapabilityNoReassurance", "span": [152, 156], "captures": []}}

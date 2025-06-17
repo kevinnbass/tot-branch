@@ -5,3 +5,6 @@
 {"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 183}
 {"Q": 5, "answer": "no", "rationale": "This segment reports action taken (killed) and reason without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_20888", "batch_size": 260, "batch_pos": 178}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5356", "batch_size": 260, "batch_pos": 135}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_17436", "batch_size": 241, "batch_pos": 111}
+{"Q": 7, "answer": "no", "rationale": "The segment describes rules requiring birds to be killed to 'stamp out' the virus, implying preparedness (Q5).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 111}
+{"Q": 8, "answer": "yes", "rationale": "Describes federal rules require birds to be killed to 'stamp out' virus ('federal rules require the birds to be killed to try to \"stamp out\" the virus') as a response measure without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 160}
