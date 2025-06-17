@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "'worries' is a psychological verb.", "method": "llm_batch", "batch_id": "batch_1_17468", "batch_size": 260, "batch_pos": 93}
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_19924", "batch_size": 260, "batch_pos": 92}
 {"Q": 2, "answer": "no", "rationale": "The segment describes a worry about public support using neutral language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_19924_r1", "batch_size": 260, "batch_pos": 92}
+{"Q": 3, "answer": "no", "rationale": "The segment uses the psychological verb 'worries', which does not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_19648", "batch_size": 260, "batch_pos": 88}

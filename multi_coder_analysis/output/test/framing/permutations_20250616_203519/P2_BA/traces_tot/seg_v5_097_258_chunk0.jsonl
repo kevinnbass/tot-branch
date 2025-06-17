@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "'short-sighted' modifies a perspective. 'more' modifies 'invest'.", "method": "llm_batch", "batch_id": "batch_1_17468", "batch_size": 260, "batch_pos": 91}
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_19924", "batch_size": 260, "batch_pos": 90}
 {"Q": 2, "answer": "no", "rationale": "The segment discusses potential risks and the need for preparedness using neutral language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_19924_r1", "batch_size": 260, "batch_pos": 90}
+{"Q": 3, "answer": "no", "rationale": "The segment expresses an opinion ('said it would be short-sighted', 'suggesting...needs to invest') and discusses potential ('could jump', 'start transmitting'), not a Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_19648", "batch_size": 260, "batch_pos": 86}

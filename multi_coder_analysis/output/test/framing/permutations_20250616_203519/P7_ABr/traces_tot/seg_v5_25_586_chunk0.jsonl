@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains a technical term ('low pathogenic'), not an intensifier or comparative on a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_2760", "batch_size": 260, "batch_pos": 104}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs like \"was also detected\" and lacks high-potency language.", "method": "llm_batch", "batch_id": "batch_2_20436", "batch_size": 260, "batch_pos": 57}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_5996", "batch_size": 260, "batch_pos": 8}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 247}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 247}

@@ -1,3 +1,4 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_12480", "batch_size": 260, "batch_pos": 70}
 {"Q": 1, "answer": "no", "rationale": "The segment uses 'relatively mild symptoms', which is not an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_12480_r1", "batch_size": 260, "batch_pos": 70}
 {"Q": 2, "answer": "no", "rationale": "The segment provides factual data on cases and symptoms ('relatively mild symptoms').", "method": "llm_batch", "batch_id": "batch_2_15944", "batch_size": 260, "batch_pos": 68}
+{"Q": 3, "answer": "no", "rationale": "'infected' is a plain outcome verb excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_15516", "batch_size": 260, "batch_pos": 58}

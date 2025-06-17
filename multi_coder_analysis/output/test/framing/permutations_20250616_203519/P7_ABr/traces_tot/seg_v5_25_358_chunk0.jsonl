@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17256", "batch_size": 260, "batch_pos": 108}
 {"Q": 2, "answer": "no", "rationale": "The segment factually reports on vaccines without high-potency language.", "method": "llm_batch", "batch_id": "batch_2_17952", "batch_size": 260, "batch_pos": 74}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses vaccines ('being developed', 'remain impractical') without a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_1940", "batch_size": 260, "batch_pos": 35}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 24}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 24}

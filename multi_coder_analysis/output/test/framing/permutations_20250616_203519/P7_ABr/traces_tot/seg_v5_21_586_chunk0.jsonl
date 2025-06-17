@@ -1,2 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains a low-risk framing ('risk to the public remained low') and a safety assurance ('safe to consume'), not a risk-adjective modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_2760", "batch_size": 260, "batch_pos": 108}
 {"Q": 2, "answer": "no", "rationale": "\"remained low\" and \"are safe to consume\" are low-risk/safety facts stated neutrally.", "method": "llm_batch", "batch_id": "batch_2_20436", "batch_size": 260, "batch_pos": 61}
+{"Q": 3, "answer": "no", "rationale": "The segment contains Reassuring cues, not Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_5996", "batch_size": 260, "batch_pos": 12}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 251}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 251}

@@ -1,2 +1,3 @@
 {"Q": 1, "answer": "no", "rationale": "Factual statement.", "method": "llm_batch", "batch_id": "batch_1_19472", "batch_size": 260, "batch_pos": 155}
 {"Q": 2, "answer": "no", "rationale": "The segment reports status ('multi-state outbreak' - scale) and cases using neutral verbs ('emerged', 'confirmed').", "method": "llm_batch", "batch_id": "batch_2_19216", "batch_size": 260, "batch_pos": 152}
+{"Q": 3, "answer": "no", "rationale": "The segment uses 'has emerged' and 'have been confirmed', which are not moderate verbs for Q3, despite mentioning scale ('multi-state outbreak', 'four human cases').", "method": "llm_batch", "batch_id": "batch_3_12964", "batch_size": 260, "batch_pos": 147}

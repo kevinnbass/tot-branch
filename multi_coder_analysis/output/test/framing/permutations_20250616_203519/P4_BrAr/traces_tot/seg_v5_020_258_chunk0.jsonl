@@ -1,3 +1,5 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_18524", "batch_size": 260, "batch_pos": 79}
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_18524_r1", "batch_size": 260, "batch_pos": 79}
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual information without high-potency language.", "method": "llm_batch", "batch_id": "batch_2_3924", "batch_size": 260, "batch_pos": 52}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb explicitly paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_13796", "batch_size": 260, "batch_pos": 17}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_2196", "batch_size": 260, "batch_pos": 2}
