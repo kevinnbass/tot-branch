@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment states a link between properties and poultry deaths, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18324", "batch_size": 260, "batch_pos": 111}
 {"Q": 9, "answer": "no", "rationale": "Uses amplification ('numerous poultry deaths').", "method": "llm_batch", "batch_id": "batch_9_16700", "batch_size": 260, "batch_pos": 219}
 {"Q": 10, "answer": "no", "rationale": "The segment links strains and reports deaths but does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_13168", "batch_size": 260, "batch_pos": 176}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement mentions 'numerous poultry deaths', describing a significant negative impact. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_15560", "batch_size": 260, "batch_pos": 164}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_8700", "batch_size": 260, "batch_pos": 164, "regex": {"rule": "NeutralStats", "span": [27, 286], "captures": ["state", "deaths"]}}

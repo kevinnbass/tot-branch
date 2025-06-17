@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment reports a risk assessment ('risk to the public remains low'), which is not the type of numerical metric covered by Q9.", "method": "llm_batch", "batch_id": "batch_9_20340", "batch_size": 260, "batch_pos": 194}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue about current risk ('risk to the public remains low').", "method": "llm_batch", "batch_id": "batch_10_20232", "batch_size": 260, "batch_pos": 119}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement explicitly says \"the risk to the public remains low\". ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_20620", "batch_size": 260, "batch_pos": 105}
+{"Q": 12, "answer": "no", "rationale": "Explicitly states risk 'remains low', triggering Reassuring frame (Q5).", "method": "llm_batch", "batch_id": "batch_12_16452", "batch_size": 260, "batch_pos": 105}

@@ -9,3 +9,5 @@
 {"Q": 9, "answer": "no", "rationale": "The segment quotes a description ('dead-end infections'), which is not factual reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_20340", "batch_size": 260, "batch_pos": 45}
 {"Q": 10, "answer": "no", "rationale": "The segment provides a classification, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_20232", "batch_size": 260, "batch_pos": 24}
 {"Q": 11, "answer": "no", "rationale": "Quote uses a technical term ('dead-end infections'), not explicit reassuring language.", "method": "llm_batch", "batch_id": "batch_11_20620", "batch_size": 260, "batch_pos": 21}
+{"hop_idx": 12, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_12_16452", "batch_size": 260, "batch_pos": 21}
+{"Q": 12, "answer": "yes", "rationale": "Presentation is purely factual and descriptive, using a technical term (\"dead-end infections\") without additional framing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_12_16452_r1", "batch_size": 260, "batch_pos": 21}

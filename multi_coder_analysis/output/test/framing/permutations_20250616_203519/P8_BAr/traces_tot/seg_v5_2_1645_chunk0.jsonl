@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment describes virus characteristic (mutating), not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20560", "batch_size": 260, "batch_pos": 180}
 {"Q": 9, "answer": "no", "rationale": "The segment contains a quote about the virus mutating, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_20360", "batch_size": 260, "batch_pos": 145}
 {"Q": 10, "answer": "no", "rationale": "The segment quotes about the virus mutating, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_20616", "batch_size": 260, "batch_pos": 76}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_6920", "batch_size": 260, "batch_pos": 54}
+{"Q": 11, "answer": "no", "rationale": "The quote \"This virus, like all viruses, is mutating\" is a neutral statement of a biological fact and does not provide a clear dominant alarmist or reassuring frame.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_6920_r1", "batch_size": 260, "batch_pos": 54}

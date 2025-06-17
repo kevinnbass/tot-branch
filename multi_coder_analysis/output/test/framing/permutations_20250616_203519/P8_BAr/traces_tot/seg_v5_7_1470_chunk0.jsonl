@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment contains the framing language 'risks... remain low'.", "method": "llm_batch", "batch_id": "batch_9_18716", "batch_size": 203, "batch_pos": 187}
 {"Q": 10, "answer": "no", "rationale": "The segment contains explicit calming ('risks to the general public remain low'), which prevents it from being Q10 speculation.", "method": "llm_batch", "batch_id": "batch_10_4052", "batch_size": 60, "batch_pos": 54}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement from CDC spokesperson says 'risks to the general public remain low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_18944", "batch_size": 14, "batch_pos": 8}
+{"Q": 12, "answer": "no", "rationale": "Explicit reassuring language ('risks... remain low') present, not Neutral by default.", "method": "llm_batch", "batch_id": "batch_12_10836", "batch_size": 14, "batch_pos": 8}

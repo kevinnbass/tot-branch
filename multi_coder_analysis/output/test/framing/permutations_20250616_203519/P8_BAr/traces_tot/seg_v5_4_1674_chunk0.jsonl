@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment contains the risk adjective 'fatal'.", "method": "llm_batch", "batch_id": "batch_9_18716", "batch_size": 203, "batch_pos": 192}
 {"Q": 10, "answer": "no", "rationale": "The segment reports historical fatality rate, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_4052", "batch_size": 60, "batch_pos": 57}
 {"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_18944", "batch_size": 14, "batch_pos": 11}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_10836", "batch_size": 14, "batch_pos": 11, "regex": {"rule": "NeutralStats", "span": [30, 109], "captures": ["report", "cases"]}}

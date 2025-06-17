@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment contains the framing language 'risk is low' and 'higher risk'.", "method": "llm_batch", "batch_id": "batch_9_18716", "batch_size": 203, "batch_pos": 180}
 {"Q": 10, "answer": "no", "rationale": "The segment contains explicit calming ('overall public health risk is low'), which prevents it from being Q10 speculation.", "method": "llm_batch", "batch_id": "batch_10_4052", "batch_size": 60, "batch_pos": 50}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement from CDC and WHO says 'overall public health risk is low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_18944", "batch_size": 14, "batch_pos": 4}
+{"Q": 12, "answer": "no", "rationale": "Explicit reassuring language ('risk is low') present, not Neutral by default.", "method": "llm_batch", "batch_id": "batch_12_10836", "batch_size": 14, "batch_pos": 4}

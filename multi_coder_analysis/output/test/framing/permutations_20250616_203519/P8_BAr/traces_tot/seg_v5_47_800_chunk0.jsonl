@@ -7,3 +7,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment describes factors making identification difficult, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11324", "batch_size": 260, "batch_pos": 182}
 {"Q": 9, "answer": "no", "rationale": "The segment contains the framing language 'muddy the picture' and 'difficult to identify'.", "method": "llm_batch", "batch_id": "batch_9_18716", "batch_size": 203, "batch_pos": 51}
 {"Q": 10, "answer": "no", "rationale": "The segment states respiratory season may make identification difficult, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_20616", "batch_size": 260, "batch_pos": 230}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_6920", "batch_size": 260, "batch_pos": 195}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_10620", "batch_size": 260, "batch_pos": 195, "regex": {"rule": "NeutralStats", "span": [154, 173], "captures": ["identify", "cases"]}}

@@ -8,3 +8,5 @@
 {"Q": 8, "answer": "no", "rationale": "The segment describes where bird flu was reported and capacity, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_8108", "batch_size": 218, "batch_pos": 104}
 {"Q": 9, "answer": "no", "rationale": "The segment contains the framing language 'increase of deaths'.", "method": "llm_batch", "batch_id": "batch_9_18716", "batch_size": 203, "batch_pos": 139}
 {"Q": 10, "answer": "no", "rationale": "The segment describes a past event and current situation, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_4052", "batch_size": 60, "batch_pos": 20}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_6920", "batch_size": 260, "batch_pos": 239}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_10620", "batch_size": 260, "batch_pos": 239, "regex": {"rule": "NeutralStats", "span": [13, 157], "captures": ["report", "deaths"]}}

@@ -10,3 +10,4 @@
 {"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_18656", "batch_size": 260, "batch_pos": 62}
 {"Q": 10, "answer": "no", "rationale": "The segment states a limitation of the research, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_18656_r1", "batch_size": 260, "batch_pos": 62}
 {"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_3128", "batch_size": 224, "batch_pos": 35}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of what hasn't been tested. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_21268", "batch_size": 223, "batch_pos": 34}
