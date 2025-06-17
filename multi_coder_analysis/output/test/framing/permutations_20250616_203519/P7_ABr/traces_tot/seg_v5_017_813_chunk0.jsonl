@@ -4,3 +4,4 @@
 {"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_21044", "batch_size": 260, "batch_pos": 21}
 {"Q": 5, "answer": "no", "rationale": "The segment reports a low probability fact, but not an explicit calming cue like 'very low risk'.", "method": "llm_batch", "batch_id": "batch_5_19960", "batch_size": 260, "batch_pos": 19}
 {"Q": 6, "answer": "no", "rationale": "The segment uses 'little chance' but this describes probability, not the scale of the problem being downplayed reassuringly. It lacks scale contrast for reassurance about impact.", "method": "llm_batch", "batch_id": "batch_6_16520", "batch_size": 260, "batch_pos": 14}
+{"Q": 7, "answer": "yes", "rationale": "'little chance of eating infected birds' is a bare negation of likelihood without additional calming language.", "method": "llm_batch", "batch_id": "batch_7_4696", "batch_size": 260, "batch_pos": 9}

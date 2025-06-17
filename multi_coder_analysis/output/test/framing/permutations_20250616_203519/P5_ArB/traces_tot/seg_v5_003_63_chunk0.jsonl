@@ -3,3 +3,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual actions and mitigation ('have quarantined', 'will be depopulated', 'prevent the spread', 'will not enter the food system'). 'Depopulated' is technical.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 210}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'will be depopulated', which is a future containment action excluded by rule 5 and the realised impact guard.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 133}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 114}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 114}

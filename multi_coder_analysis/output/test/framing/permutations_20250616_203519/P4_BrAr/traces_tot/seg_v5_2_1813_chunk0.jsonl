@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "No question present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17516", "batch_size": 260, "batch_pos": 201}
 {"Q": 5, "answer": "no", "rationale": "The segment reports a low-risk assessment ('remains low') but it is not intensified as required for Q5, and it reports preparedness.", "method": "llm_batch", "batch_id": "batch_5_10600", "batch_size": 260, "batch_pos": 200}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser ('only', 'just', 'merely', etc.) combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_17528", "batch_size": 260, "batch_pos": 180}
+{"Q": 7, "answer": "no", "rationale": "The segment states the risk 'remains low', which is a statement of low risk, not a bare negation of a negative outcome.", "method": "llm_batch", "batch_id": "batch_7_19612", "batch_size": 260, "batch_pos": 173}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16012", "batch_size": 260, "batch_pos": 98, "regex": {"rule": "CapabilityNoReassurance", "span": [0, 9], "captures": []}}

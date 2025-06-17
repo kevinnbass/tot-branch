@@ -4,3 +4,4 @@
 {"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_21044", "batch_size": 260, "batch_pos": 122}
 {"Q": 5, "answer": "no", "rationale": "The segment reports positive facts (no deaths, mild cases) neutrally, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19960", "batch_size": 260, "batch_pos": 120}
 {"Q": 6, "answer": "no", "rationale": "The segment states no deaths have been reported and most cases have been relatively mild, which are Q5 cues, not Q6 minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16520", "batch_size": 260, "batch_pos": 108}
+{"Q": 7, "answer": "yes", "rationale": "'no H5N1-related deaths reported so far' and 'virus does not have the high mortality rate' are bare negations without additional calming language.", "method": "llm_batch", "batch_id": "batch_7_4696", "batch_size": 260, "batch_pos": 103}

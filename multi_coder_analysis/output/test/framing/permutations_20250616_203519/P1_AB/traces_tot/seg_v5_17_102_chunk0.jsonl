@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "'killed' is a containment verb. Containment verbs with numbers are Neutral unless vivid language is added.", "method": "llm_batch", "batch_id": "batch_3_17640", "batch_size": 260, "batch_pos": 15}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question found in the segment.", "method": "llm_batch", "batch_id": "batch_4_7820", "batch_size": 260, "batch_pos": 15}
 {"Q": 5, "answer": "no", "rationale": "The segment is a correction notice and contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15864", "batch_size": 260, "batch_pos": 15}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_21204", "batch_size": 260, "batch_pos": 14}
+{"Q": 6, "answer": "no", "rationale": "The segment corrects numbers but does not use a minimiser or scale contrast for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_21204_r1", "batch_size": 260, "batch_pos": 14}

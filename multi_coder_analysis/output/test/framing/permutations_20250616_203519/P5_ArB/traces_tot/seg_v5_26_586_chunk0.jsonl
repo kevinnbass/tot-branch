@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual actions and scale ('to control', 'would be a 'depopulation'', 'reported to be hundreds of thousands'). 'Depopulation' is technical.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 185}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'depopulation', which is a containment action excluded by rule 5.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 108}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 89}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 89}

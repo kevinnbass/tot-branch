@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('does raise the possibility', 'was transmitted', 'told'). 'raise the possibility' is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_17752", "batch_size": 166, "batch_pos": 77}
 {"Q": 3, "answer": "no", "rationale": "The segment describes potential ('does raise the possibility', 'was transmitted'), not realised impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 257}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 238}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 238}

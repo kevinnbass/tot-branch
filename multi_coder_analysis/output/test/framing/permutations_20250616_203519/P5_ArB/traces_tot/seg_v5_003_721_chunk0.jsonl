@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('said', 'have shown', 'is spreading'), lacking high-potency language or metaphor.", "method": "llm_batch", "batch_id": "batch_2_17752", "batch_size": 166, "batch_pos": 61}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'is spreading', but describes the mechanism of spread, not the impact scale.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 241}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 222}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 222}

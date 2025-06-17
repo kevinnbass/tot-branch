@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_19672", "batch_size": 260, "batch_pos": 6}
 {"Q": 5, "answer": "no", "rationale": "The segment reports vaccine preparation and undecided policy, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16052", "batch_size": 260, "batch_pos": 4}
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_21356", "batch_size": 260, "batch_pos": 224}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'have not decided', which is a bare negation of deciding, not risk.", "method": "llm_batch", "batch_id": "batch_7_7072", "batch_size": 260, "batch_pos": 207}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_19712", "batch_size": 260, "batch_pos": 14, "regex": {"rule": "CapabilityNoReassurance", "span": [148, 155], "captures": []}}

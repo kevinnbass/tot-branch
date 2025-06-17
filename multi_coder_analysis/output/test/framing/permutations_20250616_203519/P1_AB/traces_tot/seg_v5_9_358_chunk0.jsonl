@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_21140", "batch_size": 260, "batch_pos": 14}
 {"Q": 4, "answer": "no", "rationale": "The segment contains statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_21140_r1", "batch_size": 260, "batch_pos": 14}
 {"Q": 5, "answer": "no", "rationale": "The segment reports positive facts (small portion affected, prices falling) but lacks explicit calming language from the source.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "yes", "rationale": "'only a small portion of the total flock nationwide' uses a minimiser with explicit scale contrast.", "method": "llm_batch", "batch_id": "batch_6_3164", "batch_size": 260, "batch_pos": 247}

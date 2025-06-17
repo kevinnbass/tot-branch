@@ -5,3 +5,4 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 207}
 {"Q": 5, "answer": "no", "rationale": "The segment reports agency identified illness and prevented animal from entering food supply, which is a control measure, not an explicit calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_19324", "batch_size": 260, "batch_pos": 205}
 {"Q": 6, "answer": "no", "rationale": "The segment contains a safety statement, which is not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 202}
+{"Q": 7, "answer": "no", "rationale": "The segment describes preventing animal from entering food supply, but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 197}

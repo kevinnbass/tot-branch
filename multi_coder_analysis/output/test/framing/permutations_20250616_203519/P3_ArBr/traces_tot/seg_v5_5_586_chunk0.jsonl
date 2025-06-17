@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_15832", "batch_size": 260, "batch_pos": 11}
 {"Q": 5, "answer": "no", "rationale": "Reports a process (surveillance) without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_5400", "batch_size": 260, "batch_pos": 9}
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13804", "batch_size": 260, "batch_pos": 239}
+{"Q": 7, "answer": "no", "rationale": "The segment states facts about detection and system but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17832", "batch_size": 260, "batch_pos": 223}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_3288", "batch_size": 260, "batch_pos": 64, "regex": {"rule": "CapabilityNoReassurance", "span": [64, 70], "captures": []}}

@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual detection and scale of action ('virus also was detected', 'resulting in the destruction and disposal of more than 284,000 birds'). 'Destruction and disposal' is factual here.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 260}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'was detected', not a moderate verb from the list, and 'resulting in the destruction and disposal', a containment action.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 182}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 163}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 163}

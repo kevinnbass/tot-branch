@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "Question is neutral and information-seeking ('How likely is it...').", "method": "llm_batch", "batch_id": "batch_4_13952", "batch_size": 260, "batch_pos": 4}
 {"Q": 5, "answer": "no", "rationale": "The segment asks a question about likelihood, which is not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_11776", "batch_size": 260, "batch_pos": 1}
 {"Q": 6, "answer": "no", "rationale": "'one' is a bare numeral.", "method": "llm_batch", "batch_id": "batch_6_19752", "batch_size": 260, "batch_pos": 233}
+{"Q": 7, "answer": "no", "rationale": "The segment asks 'How likely is it that an HIV vaccine will get over the finish line', which is not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16644", "batch_size": 260, "batch_pos": 222}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14640", "batch_size": 260, "batch_pos": 138, "regex": {"rule": "CapabilityNoReassurance", "span": [29, 36], "captures": []}}

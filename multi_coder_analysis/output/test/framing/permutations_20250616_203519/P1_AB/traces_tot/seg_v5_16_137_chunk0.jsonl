@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "'ignited protests' is a psychological verb.", "method": "llm_batch", "batch_id": "batch_3_20372", "batch_size": 260, "batch_pos": 208}
 {"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_18040", "batch_size": 260, "batch_pos": 192}
 {"Q": 5, "answer": "no", "rationale": "This segment reports a reaction ('ignited protests') which is not calming.", "method": "llm_batch", "batch_id": "batch_5_14676", "batch_size": 260, "batch_pos": 188}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_5140", "batch_size": 260, "batch_pos": 144}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_5140_r1", "batch_size": 260, "batch_pos": 144}

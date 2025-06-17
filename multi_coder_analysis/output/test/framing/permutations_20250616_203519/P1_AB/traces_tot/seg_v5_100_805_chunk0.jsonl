@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 79}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1120_r1", "batch_size": 260, "batch_pos": 79}
 {"Q": 5, "answer": "no", "rationale": "The speaker states a negative expectation ('don’t think we’re going to end it') which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_7524", "batch_size": 260, "batch_pos": 78}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_3164", "batch_size": 260, "batch_pos": 56}

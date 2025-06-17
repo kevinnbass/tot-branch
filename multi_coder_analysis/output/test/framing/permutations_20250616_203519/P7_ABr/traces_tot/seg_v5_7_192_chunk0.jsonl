@@ -5,3 +5,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 172}
 {"Q": 5, "answer": "no", "rationale": "The segment reports another fair opted against poultry but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19324", "batch_size": 260, "batch_pos": 170}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 167}
+{"Q": 7, "answer": "no", "rationale": "The segment describes opting against poultry, but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 162}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_724", "batch_size": 260, "batch_pos": 139, "regex": {"rule": "CapabilityNoReassurance", "span": [0, 9], "captures": []}}

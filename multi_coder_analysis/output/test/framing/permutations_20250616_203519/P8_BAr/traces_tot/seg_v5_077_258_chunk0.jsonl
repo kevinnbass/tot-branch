@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative adjective directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_19472", "batch_size": 260, "batch_pos": 75}
 {"Q": 2, "answer": "no", "rationale": "The segment reports a hypothesis using neutral language.", "method": "llm_batch", "batch_id": "batch_2_19216", "batch_size": 260, "batch_pos": 74}
 {"Q": 3, "answer": "no", "rationale": "The segment discusses reasons for decline ('is due to genetic changes that took place'), not a Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_12964", "batch_size": 260, "batch_pos": 72}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7684", "batch_size": 260, "batch_pos": 72}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7684_r1", "batch_size": 260, "batch_pos": 72}

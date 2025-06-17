@@ -2,3 +2,5 @@
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_20080", "batch_size": 260, "batch_pos": 26}
 {"Q": 2, "answer": "no", "rationale": "The term 'concerning' is a moderate descriptor, not a high-potency verb or potent metaphor as defined by Q2 rules.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_20080_r1", "batch_size": 260, "batch_pos": 26}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'concerning' not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_4920", "batch_size": 260, "batch_pos": 24}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_7812", "batch_size": 260, "batch_pos": 24}
+{"Q": 5, "answer": "no", "rationale": "The segment describes the situation as 'concerning', which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17320", "batch_size": 260, "batch_pos": 24}

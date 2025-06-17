@@ -2,3 +2,4 @@
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_19216", "batch_size": 260, "batch_pos": 92}
 {"Q": 2, "answer": "no", "rationale": "The segment describes a worry about public support using neutral language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_19216_r1", "batch_size": 260, "batch_pos": 92}
 {"Q": 3, "answer": "no", "rationale": "The segment uses the psychological verb 'worries', which does not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_12964", "batch_size": 260, "batch_pos": 88}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_7684", "batch_size": 260, "batch_pos": 88}

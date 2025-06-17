@@ -4,3 +4,4 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_10764", "batch_size": 260, "batch_pos": 189}
 {"Q": 5, "answer": "no", "rationale": "The segment reports risk is 'low' but lacks the required intensifier ('very', 'extremely') for Q5.", "method": "llm_batch", "batch_id": "batch_5_20052", "batch_size": 260, "batch_pos": 185}
 {"Q": 6, "answer": "no", "rationale": "'risk... is low' is a Q5 cue, not Q6.", "method": "llm_batch", "batch_id": "batch_6_9724", "batch_size": 260, "batch_pos": 164}
+{"Q": 7, "answer": "yes", "rationale": "'risk to the public... is low' is a bare negation without additional calming language.", "method": "llm_batch", "batch_id": "batch_7_18120", "batch_size": 260, "batch_pos": 155}

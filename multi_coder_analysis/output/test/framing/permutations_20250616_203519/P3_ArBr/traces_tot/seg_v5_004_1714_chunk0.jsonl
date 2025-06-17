@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_15832", "batch_size": 260, "batch_pos": 216}
 {"Q": 5, "answer": "no", "rationale": "Reports a challenge and potential negative outcome, which is not calming.", "method": "llm_batch", "batch_id": "batch_5_5400", "batch_size": 260, "batch_pos": 214}
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_21356", "batch_size": 260, "batch_pos": 180}
+{"Q": 7, "answer": "no", "rationale": "The segment reports a challenge and opportunity for mutation/jump, containing no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7072", "batch_size": 260, "batch_pos": 163}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_3288", "batch_size": 260, "batch_pos": 234, "regex": {"rule": "CapabilityNoReassurance", "span": [78, 87], "captures": []}}

@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual capability and possibility ('could make', 'jumps across the species divide'). 'Jumps across the species divide' is technical.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 124}
 {"Q": 3, "answer": "no", "rationale": "The segment describes capability ('could make'), not realised impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 48}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 29}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 29}

@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports a quote describing the situation as 'worrying' (psychological) and factual cases ('two confirmed human cases... were found').", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 222}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'worrying', a psychological adjective treated as Neutral.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 144}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 125}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 125}

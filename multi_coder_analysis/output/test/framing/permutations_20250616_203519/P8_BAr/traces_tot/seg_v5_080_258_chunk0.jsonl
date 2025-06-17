@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "'Many, even most' modifies quantity.", "method": "llm_batch", "batch_id": "batch_1_19472", "batch_size": 260, "batch_pos": 78}
 {"Q": 2, "answer": "no", "rationale": "The segment reports a finding using neutral language.", "method": "llm_batch", "batch_id": "batch_2_19216", "batch_size": 260, "batch_pos": 77}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'were caused by' and 'had', which are not moderate verbs for Q3.", "method": "llm_batch", "batch_id": "batch_3_12964", "batch_size": 260, "batch_pos": 75}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7684", "batch_size": 260, "batch_pos": 75}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7684_r1", "batch_size": 260, "batch_pos": 75}

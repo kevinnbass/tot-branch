@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_2196", "batch_size": 260, "batch_pos": 222}
 {"Q": 5, "answer": "no", "rationale": "The segment reports officials kept an order in place due to outbreaks, which is a factual report, not explicit calming.", "method": "llm_batch", "batch_id": "batch_5_3916", "batch_size": 260, "batch_pos": 219}
 {"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_19752", "batch_size": 260, "batch_pos": 191}
+{"Q": 7, "answer": "no", "rationale": "The segment states farmers 'hoped the Government would lift the indoor housing order... but officials decided to keep it in place', which are not bare negations.", "method": "llm_batch", "batch_id": "batch_7_16644", "batch_size": 260, "batch_pos": 180}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14640", "batch_size": 260, "batch_pos": 97, "regex": {"rule": "CapabilityNoReassurance", "span": [80, 89], "captures": []}}

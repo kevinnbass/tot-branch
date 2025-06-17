@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual history and current status ('historically dies out', 'has been spreading', 'has affected'). 'Spreading' and 'affected' are moderate.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 160}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'dies out' and 'has been spreading', not moderate verbs from the list describing impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 84}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 65}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 65}

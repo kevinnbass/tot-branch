@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual case reporting ('Cases have been reported').", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 251}
 {"Q": 3, "answer": "no", "rationale": "The segment contains a quote about scale ('massive outbreak') but not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 173}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 154}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 154}

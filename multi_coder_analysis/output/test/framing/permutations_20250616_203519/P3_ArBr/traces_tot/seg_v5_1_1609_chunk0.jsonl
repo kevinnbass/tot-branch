@@ -4,3 +4,5 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_15832", "batch_size": 260, "batch_pos": 109}
 {"Q": 5, "answer": "no", "rationale": "Reports detections without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_5400", "batch_size": 260, "batch_pos": 107}
 {"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_21356", "batch_size": 260, "batch_pos": 74}
+{"Q": 7, "answer": "no", "rationale": "The segment reports a new case, human case, and strain detection, containing no bare negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_7072", "batch_size": 260, "batch_pos": 58}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_3288", "batch_size": 260, "batch_pos": 147, "regex": {"rule": "CapabilityNoReassurance", "span": [128, 137], "captures": []}}

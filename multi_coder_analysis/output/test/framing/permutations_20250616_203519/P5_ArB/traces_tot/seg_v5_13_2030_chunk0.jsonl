@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('working hard', 'keep from infecting', 'taking steps', 'requiring', 'showering', 'changing', 'entering', 'sanitizing', 'investing'), lacking high-potency language or metaphor.", "method": "llm_batch", "batch_id": "batch_2_17752", "batch_size": 166, "batch_pos": 102}
 {"Q": 3, "answer": "no", "rationale": "Segment describes actions to prevent infection, not realised impact with a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_7700", "batch_size": 81, "batch_pos": 20}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 259}
+{"Q": 4, "answer": "uncertain", "rationale": "LLM call failed.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14600_r1", "batch_size": 260, "batch_pos": 259}
