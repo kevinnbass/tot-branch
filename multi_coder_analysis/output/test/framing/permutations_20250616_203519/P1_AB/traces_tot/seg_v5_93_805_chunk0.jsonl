@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "Does not contain a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_20916", "batch_size": 260, "batch_pos": 77}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 73}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1120_r1", "batch_size": 260, "batch_pos": 73}
+{"Q": 5, "answer": "no", "rationale": "The speaker calls an achievement 'such a signal achievement' which is positive evaluation of research, not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_7524", "batch_size": 260, "batch_pos": 72}

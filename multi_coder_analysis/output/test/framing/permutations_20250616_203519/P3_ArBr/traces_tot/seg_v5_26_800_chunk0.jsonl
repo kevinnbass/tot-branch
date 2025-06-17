@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment uses plain verbs and discusses past statements, not stating realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_19612", "batch_size": 260, "batch_pos": 174}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_21128", "batch_size": 260, "batch_pos": 167}
 {"Q": 5, "answer": "no", "rationale": "The segment reports officials' statements ('one-off', 'no close contacts had become sick') which are positive facts but lack explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14656", "batch_size": 260, "batch_pos": 166}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16476", "batch_size": 260, "batch_pos": 157}
+{"Q": 6, "answer": "yes", "rationale": "Officials referred to the patient as a \"'one-off'\" and stated \"no close contacts had become sick,\" using minimisation and implied scale contrast for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16476_r1", "batch_size": 260, "batch_pos": 157}

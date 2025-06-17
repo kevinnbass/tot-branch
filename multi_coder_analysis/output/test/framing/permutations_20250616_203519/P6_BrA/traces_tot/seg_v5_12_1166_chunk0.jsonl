@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "'accelerates' is a verb, not an intensifier/comparative + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_20760", "batch_size": 260, "batch_pos": 154}
 {"Q": 2, "answer": "no", "rationale": "Neutral, factual statement about a factor influencing spread.", "method": "llm_batch", "batch_id": "batch_2_19800", "batch_size": 260, "batch_pos": 109}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 39}
+{"Q": 3, "answer": "no", "rationale": "'accelerates' is not a moderate verb from the specified list/regex paired with scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 39}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 24}

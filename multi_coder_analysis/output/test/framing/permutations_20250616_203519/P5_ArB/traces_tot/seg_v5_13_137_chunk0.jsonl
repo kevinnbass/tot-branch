@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "'deadly' is a risk adjective but is not modified; 'spread rapidly' describes transmission.", "method": "llm_batch", "batch_id": "batch_1_16400", "batch_size": 217, "batch_pos": 62}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('deadly', 'spread rapidly'). 'deadly' is a negative adjective, not a Q2 cue. 'spread rapidly' uses an adverb, not a high-potency verb.", "method": "llm_batch", "batch_id": "batch_2_17752", "batch_size": 166, "batch_pos": 20}
 {"Q": 3, "answer": "no", "rationale": "The segment describes capability ('can be deadly', 'spread rapidly'), not realised impact.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 201}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 182}

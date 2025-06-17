@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains a psychological noun phrase ('real worry') and a statistic ('mortality rate has been 25 percent'), neither of which are Q1 cues.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 125}
 {"Q": 2, "answer": "no", "rationale": "'real worry' is a psychological state. 'mortality rate has been 25 percent' is a factual statement of severity/scale.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 74}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 257}
+{"Q": 3, "answer": "no", "rationale": "'worry' is psychological, 'will jump' is hypothetical/future, and 'has happened' is a plain outcome verb (Rule 4).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 257}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 240}

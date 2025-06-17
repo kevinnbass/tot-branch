@@ -1,3 +1,6 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains an intensifier ('so') modifying an emotional adjective ('sad'), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 79}
 {"Q": 2, "answer": "no", "rationale": "'so sad' is an emotional reaction. 'dying in such large numbers' is a factual scale, not coupled with a high-potency verb.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 28}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 212}
+{"Q": 3, "answer": "no", "rationale": "'dying' is a plain outcome verb (Rule 4).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 212}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 195}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17612_r1", "batch_size": 260, "batch_pos": 195}

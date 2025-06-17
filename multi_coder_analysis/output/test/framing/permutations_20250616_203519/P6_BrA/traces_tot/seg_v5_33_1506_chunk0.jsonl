@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers and economic metrics, not an intensifier/comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 47}
 {"Q": 2, "answer": "no", "rationale": "Factual statement contrasting local impact with national scale and price decrease; positive/reassuring fact stated neutrally.", "method": "llm_batch", "batch_id": "batch_2_19800", "batch_size": 260, "batch_pos": 256}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 181}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a containment verb (Rule 5), and 'are down' discusses financial/trade metrics (Rule 6).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 181}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 164}

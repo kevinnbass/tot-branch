@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment contains a quote asking a question without using high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_16288", "batch_size": 260, "batch_pos": 94}
 {"Q": 3, "answer": "no", "rationale": "The verb 'confirmed' is not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_19564", "batch_size": 260, "batch_pos": 26}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17320", "batch_size": 260, "batch_pos": 19}
+{"Q": 4, "answer": "no", "rationale": "The question is neutral and information-seeking, asking about data attribution, not implying alarm.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17320_r1", "batch_size": 260, "batch_pos": 19}
+{"Q": 5, "answer": "no", "rationale": "The quote asks a question about data interpretation and is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_21432", "batch_size": 260, "batch_pos": 17}

@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "'really want' modifies 'want', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_20760", "batch_size": 260, "batch_pos": 235}
 {"Q": 2, "answer": "no", "rationale": "Neutral statement about planning.", "method": "llm_batch", "batch_id": "batch_2_19800", "batch_size": 260, "batch_pos": 187}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 115}
+{"Q": 3, "answer": "no", "rationale": "'reduced' is a verb, but not paired with a specific scale/quantity/record.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 115}
+{"Q": 4, "answer": "no", "rationale": "This is a rhetorical question challenging a strategic focus, not loaded to instill fear about the disease.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 100}

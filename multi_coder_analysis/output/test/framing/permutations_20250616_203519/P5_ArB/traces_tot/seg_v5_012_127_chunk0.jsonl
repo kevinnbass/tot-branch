@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "'sweeping' modifies 'bird flu' (noun); 'taking a toll' is a verb phrase.", "method": "llm_batch", "batch_id": "batch_1_16400", "batch_size": 217, "batch_pos": 15}
 {"Q": 2, "answer": "no", "rationale": "The segment uses a descriptive adjective ('sweeping') and a moderate idiom ('taking a toll'), not Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 235}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'sweeping' as a background adjective and 'has been taking a toll', not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 157}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 138}

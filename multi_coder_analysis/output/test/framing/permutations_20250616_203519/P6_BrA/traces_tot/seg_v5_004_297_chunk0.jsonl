@@ -1,3 +1,6 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains a technical term ('H5N1 outbreak') which is not a Q1 cue.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 67}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'confirmed the H5N1 outbreak' without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 16}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 200}
+{"Q": 3, "answer": "no", "rationale": "'confirmed' is reporting.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 200}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17612_r1", "batch_size": 260, "batch_pos": 183}

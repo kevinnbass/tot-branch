@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains 'unusual' designation, but 'unusual' is not a risk-adjective like deadly/severe.", "method": "llm_batch", "batch_id": "batch_1_12480", "batch_size": 260, "batch_pos": 114}
 {"Q": 2, "answer": "no", "rationale": "The segment uses 'affected' (moderate verb) and 'unusual designation' (technical classification), not Q2 framing of the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_15944", "batch_size": 260, "batch_pos": 112}
 {"Q": 3, "answer": "no", "rationale": "'affected' is excluded by rule 4; 'unusual designation' is not a Q3 metric.", "method": "llm_batch", "batch_id": "batch_3_15516", "batch_size": 260, "batch_pos": 102}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_21412", "batch_size": 260, "batch_pos": 101}

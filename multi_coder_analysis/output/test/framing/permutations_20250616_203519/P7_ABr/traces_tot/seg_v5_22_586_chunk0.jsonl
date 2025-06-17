@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 250}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 250}
 {"Q": 5, "answer": "no", "rationale": "The segment reports urging action and symptoms but does not explicitly link them to current public safety with calming language.", "method": "llm_batch", "batch_id": "batch_5_19036", "batch_size": 260, "batch_pos": 245}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast to downplay an event.", "method": "llm_batch", "batch_id": "batch_6_13644", "batch_size": 260, "batch_pos": 219}

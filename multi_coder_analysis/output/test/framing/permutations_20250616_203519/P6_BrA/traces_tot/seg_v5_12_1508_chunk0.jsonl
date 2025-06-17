@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains an intensifier ('certainly') modifying a general term ('big deal'), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 59}
 {"Q": 2, "answer": "no", "rationale": "The phrase 'a big deal' is informal and not a potent metaphor or high-potency verb.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 8}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 192}
+{"Q": 3, "answer": "no", "rationale": "'feel' and 'is a big deal' are evaluative.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 192}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 175}

@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "Factual statement about development, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_11128", "batch_size": 260, "batch_pos": 34}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_21140", "batch_size": 260, "batch_pos": 28}
 {"Q": 4, "answer": "no", "rationale": "The segment contains statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_21140_r1", "batch_size": 260, "batch_pos": 28}
+{"Q": 5, "answer": "no", "rationale": "The segment reports on vaccine development and status but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 27}

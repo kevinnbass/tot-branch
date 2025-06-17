@@ -1,3 +1,6 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains scale ('vast numbers') but not an intensifier/comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 65}
 {"Q": 2, "answer": "no", "rationale": "The verb 'affect' is not high-potency. 'vast numbers' is a scale but not coupled with a high-potency verb. 'warn' is a psychological verb without intensifier or scale of harm from the warning.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 14}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 198}
+{"Q": 3, "answer": "no", "rationale": "'could affect' is hypothetical, not realised impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 198}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 181}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17612_r1", "batch_size": 260, "batch_pos": 181}

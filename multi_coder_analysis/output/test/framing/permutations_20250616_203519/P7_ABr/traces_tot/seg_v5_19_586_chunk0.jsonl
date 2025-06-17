@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 253}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 253}
 {"Q": 5, "answer": "no", "rationale": "The segment contains both negative ('enormous concern') and positive ('risk remained low') elements, preventing a clear Q5 Reassuring frame.", "method": "llm_batch", "batch_id": "batch_5_19036", "batch_size": 260, "batch_pos": 248}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'no signs of adapting' and 'risk remained low' which are Q5 cues, not Q6.", "method": "llm_batch", "batch_id": "batch_6_13644", "batch_size": 260, "batch_pos": 221}

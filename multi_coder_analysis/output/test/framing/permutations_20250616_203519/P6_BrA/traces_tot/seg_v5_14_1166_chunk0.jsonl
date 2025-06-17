@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "'worry' is a psychological verb, context guard applies.", "method": "llm_batch", "batch_id": "batch_1_20760", "batch_size": 260, "batch_pos": 156}
 {"Q": 2, "answer": "no", "rationale": "'Scientists worry' is a psychological verb, neutral by context guard.", "method": "llm_batch", "batch_id": "batch_2_19800", "batch_size": 260, "batch_pos": 111}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 41}
+{"Q": 3, "answer": "no", "rationale": "'worry about' is a psychological verb, not paired with concrete scale of realised harm.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 41}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 26}

@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "'resulted in high deaths' uses a plain outcome verb ('resulted'), excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_11128", "batch_size": 260, "batch_pos": 51}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_21140", "batch_size": 260, "batch_pos": 45}
 {"Q": 4, "answer": "no", "rationale": "The segment contains statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_21140_r1", "batch_size": 260, "batch_pos": 45}
+{"Q": 5, "answer": "no", "rationale": "The segment reports positive facts (risk remains low, no human cases in US) but the low-risk evaluation lacks the required intensifier for Q5.", "method": "llm_batch", "batch_id": "batch_5_21276", "batch_size": 260, "batch_pos": 44}

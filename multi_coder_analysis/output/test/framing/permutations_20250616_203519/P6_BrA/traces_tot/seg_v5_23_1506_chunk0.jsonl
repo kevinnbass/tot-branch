@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains risk-adjectives ('severe', 'life-threatening') but they modify 'pneumonia' and are not modified by intensifiers/comparatives.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 37}
 {"Q": 2, "answer": "no", "rationale": "Factual statement about range of outcomes; 'severe, life-threatening pneumonia' is descriptive, not framed with Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_19800", "batch_size": 260, "batch_pos": 246}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 171}
+{"Q": 3, "answer": "no", "rationale": "'develop' is a verb, but 'severe, life-threatening' describes the type of pneumonia, not the scale of people affected.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 171}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 154}

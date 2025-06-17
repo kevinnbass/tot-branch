@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains a psychological noun phrase ('stark warning') which is not a Q1 cue.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 122}
 {"Q": 2, "answer": "no", "rationale": "'stark warning' describes the warning itself, not the threat's impact, per context guard for psychological verbs/phrases.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 71}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 254}
+{"Q": 3, "answer": "no", "rationale": "'issued a stark warning' is evaluative/reporting, not a moderate verb paired with scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 254}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 237}

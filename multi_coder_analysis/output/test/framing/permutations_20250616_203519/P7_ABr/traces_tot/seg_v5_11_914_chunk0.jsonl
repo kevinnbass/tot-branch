@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_9344", "batch_size": 260, "batch_pos": 189}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 189}
 {"Q": 5, "answer": "no", "rationale": "The segment reports WHO strategy for pandemic preparedness, which is a preparedness statement but not explicitly linked to current public safety or framed as calming.", "method": "llm_batch", "batch_id": "batch_5_19324", "batch_size": 260, "batch_pos": 187}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a preparedness statement, which is not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 184}

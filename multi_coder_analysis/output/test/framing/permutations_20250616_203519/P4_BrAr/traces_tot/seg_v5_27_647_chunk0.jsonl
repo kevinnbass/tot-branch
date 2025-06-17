@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17716", "batch_size": 260, "batch_pos": 237}
 {"Q": 4, "answer": "no", "rationale": "The segment contains no question, rhetorical or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17716_r1", "batch_size": 260, "batch_pos": 237}
 {"Q": 5, "answer": "no", "rationale": "This reports facts, including positive ones ('sporadic,' 'self-limiting'), but is not framed with explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8796", "batch_size": 260, "batch_pos": 232}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_4304", "batch_size": 260, "batch_pos": 191}

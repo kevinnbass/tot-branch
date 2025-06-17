@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "No intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16400", "batch_size": 217, "batch_pos": 7}
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual impact and status ('affecting wild birds', 'have died', 'are suspected of falling sick'). 'Affecting' and 'falling sick' are moderate.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 227}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'affecting', not a moderate verb from the list, and 'have died', an outcome verb excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 149}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 130}

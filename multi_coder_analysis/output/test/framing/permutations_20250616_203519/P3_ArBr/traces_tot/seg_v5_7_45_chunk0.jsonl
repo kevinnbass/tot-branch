@@ -3,3 +3,5 @@
 {"Q": 3, "answer": "no", "rationale": "The segment discusses public health concern and detection, not stating realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_19612", "batch_size": 260, "batch_pos": 199}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_21128", "batch_size": 260, "batch_pos": 190}
 {"Q": 5, "answer": "no", "rationale": "The segment states 'does not present an immediate public health concern' and reports absence of human cases, which are bare negations/low risk statements.", "method": "llm_batch", "batch_id": "batch_5_14656", "batch_size": 260, "batch_pos": 189}
+{"Q": 6, "answer": "no", "rationale": "Segment contains 'no human cases' which is a positive fact but lacks the specific Q6 structure.", "method": "llm_batch", "batch_id": "batch_6_16476", "batch_size": 260, "batch_pos": 178}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_16628", "batch_size": 260, "batch_pos": 173, "regex": {"rule": "BareNegationHealthConcern", "span": [32, 83], "captures": []}}

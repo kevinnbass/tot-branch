@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment contains a low-risk statement ('risk... is low') and advice, neither of which are Q1 cues.", "method": "llm_batch", "batch_id": "batch_1_18452", "batch_size": 217, "batch_pos": 106}
 {"Q": 2, "answer": "no", "rationale": "The phrase 'risk to the public... is low' is a Reassuring cue (Q5), not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_21064", "batch_size": 165, "batch_pos": 55}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_18652", "batch_size": 260, "batch_pos": 238}
+{"Q": 3, "answer": "no", "rationale": "'is low' is Reassuring language (Q5), not Q3.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_18652_r1", "batch_size": 260, "batch_pos": 238}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17612", "batch_size": 260, "batch_pos": 221}

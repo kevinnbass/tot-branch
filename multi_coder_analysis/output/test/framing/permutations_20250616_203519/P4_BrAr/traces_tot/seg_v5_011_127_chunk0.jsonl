@@ -4,3 +4,4 @@
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16660", "batch_size": 260, "batch_pos": 182}
 {"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_18632", "batch_size": 260, "batch_pos": 182}
 {"Q": 5, "answer": "no", "rationale": "States the threat 'remains low' but lacks explicit calming language or intensified low-risk framing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_18632_r1", "batch_size": 260, "batch_pos": 182}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17916", "batch_size": 260, "batch_pos": 177}

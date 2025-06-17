@@ -3,3 +3,4 @@
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_20916", "batch_size": 260, "batch_pos": 58}
 {"Q": 3, "answer": "no", "rationale": "The segment discusses papers being published, which does not involve a moderate verb paired with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_20916_r1", "batch_size": 260, "batch_pos": 58}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 54}
+{"Q": 5, "answer": "no", "rationale": "The segment discusses research papers but contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_7524", "batch_size": 260, "batch_pos": 53}

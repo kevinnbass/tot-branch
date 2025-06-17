@@ -4,3 +4,4 @@
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 247}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 247}
 {"Q": 5, "answer": "no", "rationale": "The segment reports detections but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19036", "batch_size": 260, "batch_pos": 242}
+{"Q": 6, "answer": "no", "rationale": "The segment uses 'low pathogenic' which is a reassuring cue (Q5), not Q6. It uses numbers ('two', 'one') but not minimisers.", "method": "llm_batch", "batch_id": "batch_6_13644", "batch_size": 260, "batch_pos": 216}

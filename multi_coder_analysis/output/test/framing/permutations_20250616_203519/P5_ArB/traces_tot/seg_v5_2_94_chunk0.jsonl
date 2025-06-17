@@ -1,3 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14400", "batch_size": 260, "batch_pos": 157}
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual actions and mitigation ('was killed', 'being composted to guard against spread'). 'Killed' is factual here.", "method": "llm_batch", "batch_id": "batch_2_5816", "batch_size": 260, "batch_pos": 120}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'was killed', which is a containment action excluded by rule 5.", "method": "llm_batch", "batch_id": "batch_3_18744", "batch_size": 260, "batch_pos": 44}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14600", "batch_size": 260, "batch_pos": 25}
