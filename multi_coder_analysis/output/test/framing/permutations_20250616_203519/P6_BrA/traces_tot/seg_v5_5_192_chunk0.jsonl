@@ -7,3 +7,6 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14820", "batch_size": 260, "batch_pos": 163}
 {"Q": 8, "answer": "no", "rationale": "The segment reports spread.", "method": "llm_batch", "batch_id": "batch_8_18248", "batch_size": 260, "batch_pos": 38}
 {"Q": 9, "answer": "no", "rationale": "The segment reports a proportion of states, not a specific numerical metric in the defined scope.", "method": "llm_batch", "batch_id": "batch_9_14076", "batch_size": 260, "batch_pos": 231}
+{"Q": 10, "answer": "no", "rationale": "The segment reports current status, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_2024", "batch_size": 260, "batch_pos": 109}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_19836", "batch_size": 250, "batch_pos": 80}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_10764", "batch_size": 250, "batch_pos": 80, "regex": {"rule": "NeutralStats", "span": [5, 31], "captures": ["state", "cases"]}}

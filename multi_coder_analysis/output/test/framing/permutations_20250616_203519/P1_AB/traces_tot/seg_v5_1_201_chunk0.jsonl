@@ -7,3 +7,4 @@
 {"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 228}
 {"Q": 8, "answer": "no", "rationale": "Describes a past negative event ('suffered multiple outbreaks'), not capabilities or preparedness.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_13528_r1", "batch_size": 260, "batch_pos": 228}
 {"Q": 9, "answer": "no", "rationale": "The segment reports an event ('suffered multiple outbreaks') using general quantification ('multiple').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 186}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a past/current event ('suffered multiple outbreaks').", "method": "llm_batch", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 64}

@@ -8,3 +8,5 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 250}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 250}
 {"Q": 8, "answer": "no", "rationale": "States a fact about the virus crossing a frontier.", "method": "llm_batch", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 82}
+{"Q": 9, "answer": "no", "rationale": "The segment describes a development, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_19468", "batch_size": 260, "batch_pos": 225}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a past/current event ('has just crossed a new frontier'), not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_19708", "batch_size": 260, "batch_pos": 146}

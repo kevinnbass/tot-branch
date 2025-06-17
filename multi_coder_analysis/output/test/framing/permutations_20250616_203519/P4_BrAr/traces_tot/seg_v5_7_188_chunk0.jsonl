@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment reports a risk level ('risk... is low') which is explicit calming language, not neutral reporting.", "method": "llm_batch", "batch_id": "batch_9_10200", "batch_size": 260, "batch_pos": 162}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk... is low') which would be handled by Q5.", "method": "llm_batch", "batch_id": "batch_10_12772", "batch_size": 260, "batch_pos": 252}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement from NOAA representatives uses explicit reassuring language: 'risk to the public... is low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_15000", "batch_size": 260, "batch_pos": 241}
+{"Q": 12, "answer": "no", "rationale": "States 'risk to the public... is low', triggering Reassuring framing (Q5).", "method": "llm_batch", "batch_id": "batch_12_17368", "batch_size": 260, "batch_pos": 241}

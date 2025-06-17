@@ -7,3 +7,5 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 122}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 122}
 {"Q": 8, "answer": "no", "rationale": "The segment describes virus characteristic/transmission, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8572", "batch_size": 260, "batch_pos": 228}
+{"Q": 9, "answer": "no", "rationale": "The segment provides a definition/description of the virus, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_19468", "batch_size": 260, "batch_pos": 164}
+{"Q": 10, "answer": "no", "rationale": "The segment describes the illness, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_19708", "batch_size": 260, "batch_pos": 97}

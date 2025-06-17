@@ -7,3 +7,5 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 184}
 {"Q": 7, "answer": "no", "rationale": "The segment contains a statement ('experienced mild symptoms') about mild symptoms, not a bare negation or explicit calming cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 184}
 {"Q": 8, "answer": "no", "rationale": "States facts about another person's location and symptoms.", "method": "llm_batch", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 27}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a case and symptoms, not primarily reporting a metric.", "method": "llm_batch", "batch_id": "batch_9_19468", "batch_size": 260, "batch_pos": 200}
+{"Q": 10, "answer": "no", "rationale": "The segment describes past symptom severity ('experienced mild symptoms'), not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_19708", "batch_size": 260, "batch_pos": 124}

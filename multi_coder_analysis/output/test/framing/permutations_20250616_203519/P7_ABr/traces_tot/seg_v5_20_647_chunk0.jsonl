@@ -11,3 +11,4 @@
 {"Q": 10, "answer": "no", "rationale": "The segment describes symptoms in animals, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_20628", "batch_size": 260, "batch_pos": 20}
 {"Q": 11, "answer": "no", "rationale": "Quote expresses emotional reaction ('very sad'), not framing language about the threat.", "method": "llm_batch", "batch_id": "batch_11_2076", "batch_size": 260, "batch_pos": 18}
 {"hop_idx": 12, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_12_19532", "batch_size": 260, "batch_pos": 18}
+{"Q": 12, "answer": "no", "rationale": "Segment contains vivid descriptions of symptoms ('Screaming very loud', 'whole-body tremors') which are explicit framing cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_12_19532_r1", "batch_size": 260, "batch_pos": 18}

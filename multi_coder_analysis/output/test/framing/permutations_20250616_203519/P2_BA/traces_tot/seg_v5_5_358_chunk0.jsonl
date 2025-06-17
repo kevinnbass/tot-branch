@@ -5,3 +5,4 @@
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_20368", "batch_size": 24, "batch_pos": 8}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_20368_r1", "batch_size": 24, "batch_pos": 8}
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_21256", "batch_size": 260, "batch_pos": 256}
+{"Q": 8, "answer": "yes", "rationale": "Describes a limitation on capability/safeguard effectiveness ('it is hard to keep the virus out').", "method": "llm_batch", "batch_id": "batch_8_13160", "batch_size": 253, "batch_pos": 242}

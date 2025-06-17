@@ -7,3 +7,4 @@
 {"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_14024", "batch_size": 260, "batch_pos": 207}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_14024_r1", "batch_size": 260, "batch_pos": 207}
 {"Q": 8, "answer": "no", "rationale": "Describes a past finding/activity.", "method": "llm_batch", "batch_id": "batch_8_21104", "batch_size": 260, "batch_pos": 46}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports research findings and numerical metrics (number of plants, cities) using a standard verb: 'began finding H5N1 sequences in wastewater treated at 19 plants across nine Texas cities'.", "method": "llm_batch", "batch_id": "batch_9_19468", "batch_size": 260, "batch_pos": 210}

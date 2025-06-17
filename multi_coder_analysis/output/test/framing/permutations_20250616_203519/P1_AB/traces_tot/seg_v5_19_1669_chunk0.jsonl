@@ -6,3 +6,5 @@
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_18556", "batch_size": 260, "batch_pos": 33}
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the virus or threat.", "method": "llm_batch", "batch_id": "batch_7_20848", "batch_size": 260, "batch_pos": 18}
 {"Q": 8, "answer": "no", "rationale": "The segment quotes about risk increasing, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_2788", "batch_size": 260, "batch_pos": 157}
+{"Q": 9, "answer": "no", "rationale": "Discusses risk based on spread, not factual reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_7796", "batch_size": 260, "batch_pos": 40}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 143, "regex": {"rule": "ReliefSpeculation", "span": [132, 137], "captures": ["could"]}}

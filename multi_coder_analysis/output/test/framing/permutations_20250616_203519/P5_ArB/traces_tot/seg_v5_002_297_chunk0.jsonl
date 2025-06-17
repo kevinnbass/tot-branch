@@ -7,3 +7,4 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation cue.", "method": "llm_batch", "batch_id": "batch_7_15068", "batch_size": 260, "batch_pos": 134}
 {"Q": 8, "answer": "no", "rationale": "Describes a potential negative outcome and a condition for preventing it.", "method": "llm_batch", "batch_id": "batch_8_13236", "batch_size": 260, "batch_pos": 125}
 {"Q": 9, "answer": "no", "rationale": "The segment discusses potential impact and funding needs, not reporting prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_18268", "batch_size": 260, "batch_pos": 75}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_19248", "batch_size": 260, "batch_pos": 66, "regex": {"rule": "ReliefSpeculation", "span": [57, 62], "captures": ["could"]}}

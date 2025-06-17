@@ -7,3 +7,4 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation cue.", "method": "llm_batch", "batch_id": "batch_7_15068", "batch_size": 260, "batch_pos": 215}
 {"Q": 8, "answer": "no", "rationale": "Discusses the design and use case of PrEP, not a statement of current safety for the audience.", "method": "llm_batch", "batch_id": "batch_8_13236", "batch_size": 260, "batch_pos": 202}
 {"Q": 9, "answer": "no", "rationale": "The segment is commentary/comparison, not reporting prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_18268", "batch_size": 260, "batch_pos": 113}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_19248", "batch_size": 260, "batch_pos": 100, "regex": {"rule": "ReliefSpeculation", "span": [81, 86], "captures": ["could"]}}

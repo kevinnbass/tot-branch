@@ -6,3 +6,4 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 157}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a potential future risk ('could trigger a pandemic'), not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_2788", "batch_size": 260, "batch_pos": 21}
 {"Q": 9, "answer": "no", "rationale": "The segment discusses a potential future event ('could trigger a pandemic').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 218}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 89, "regex": {"rule": "ReliefSpeculation", "span": [10, 15], "captures": ["could"]}}

@@ -7,3 +7,4 @@
 {"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 229}
 {"Q": 8, "answer": "no", "rationale": "Describes a potential negative impact ('shortages') and a past negative event ('hit by multiple outbreaks'), not capabilities or preparedness.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_13528_r1", "batch_size": 260, "batch_pos": 229}
 {"Q": 9, "answer": "no", "rationale": "The segment reports potential impact ('face shortages') and uses general quantification ('multiple').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 187}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 65, "regex": {"rule": "ReliefSpeculation", "span": [9, 14], "captures": ["could"]}}

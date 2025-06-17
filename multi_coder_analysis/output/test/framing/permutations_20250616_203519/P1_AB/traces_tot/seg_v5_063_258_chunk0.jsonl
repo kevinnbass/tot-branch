@@ -6,3 +6,4 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 63}
 {"Q": 8, "answer": "no", "rationale": "Discusses uncertainty about transmission vs common exposure, a scientific discussion.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 187}
 {"Q": 9, "answer": "no", "rationale": "The segment discusses uncertainty and possibilities, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 159}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 37, "regex": {"rule": "ReliefSpeculation", "span": [239, 244], "captures": ["could"]}}

@@ -8,3 +8,5 @@
 {"Q": 7, "answer": "no", "rationale": "The segment states something has occurred and is a concern, but contains no negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 197}
 {"Q": 8, "answer": "no", "rationale": "The segment states reassortment has occurred and is a concern, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 242}
 {"Q": 9, "answer": "no", "rationale": "Contains explicit framing ('it's a concern').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 193}
+{"Q": 10, "answer": "no", "rationale": "The segment states a past event and current concern, not speculating about future relief.", "method": "llm_batch", "batch_id": "batch_10_16504", "batch_size": 72, "batch_pos": 49}
+{"Q": 11, "answer": "no", "rationale": "Quote uses 'it's a concern', which is a bare risk adjective treated as Neutral per Q11 table.", "method": "llm_batch", "batch_id": "batch_11_14184", "batch_size": 26, "batch_pos": 5}

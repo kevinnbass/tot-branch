@@ -7,3 +7,6 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or low-risk statement.", "method": "llm_batch", "batch_id": "batch_7_4608", "batch_size": 260, "batch_pos": 14}
 {"Q": 8, "answer": "no", "rationale": "The segment describes a current outbreak and its impact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15132", "batch_size": 260, "batch_pos": 232}
 {"Q": 9, "answer": "no", "rationale": "The segment contains scale exaggeration ('killed record numbers').", "method": "llm_batch", "batch_id": "batch_9_13548", "batch_size": 260, "batch_pos": 133}
+{"Q": 10, "answer": "no", "rationale": "The segment states current impact, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_21016", "batch_size": 260, "batch_pos": 96}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_13412", "batch_size": 260, "batch_pos": 91}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_19936", "batch_size": 260, "batch_pos": 91, "regex": {"rule": "NeutralStats", "span": [74, 88], "captures": ["record", "numbers"]}}

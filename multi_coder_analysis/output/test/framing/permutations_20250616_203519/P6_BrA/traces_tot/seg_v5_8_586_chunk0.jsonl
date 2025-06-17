@@ -7,3 +7,6 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17236", "batch_size": 260, "batch_pos": 233}
 {"Q": 8, "answer": "no", "rationale": "The segment reports detection after deaths, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15132", "batch_size": 260, "batch_pos": 198}
 {"Q": 9, "answer": "no", "rationale": "The segment reports detection after deaths, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_13548", "batch_size": 260, "batch_pos": 121}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_21016", "batch_size": 260, "batch_pos": 86}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_13412", "batch_size": 260, "batch_pos": 81}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_19936", "batch_size": 260, "batch_pos": 81, "regex": {"rule": "NeutralStats", "span": [30, 164], "captures": ["report", "deaths"]}}

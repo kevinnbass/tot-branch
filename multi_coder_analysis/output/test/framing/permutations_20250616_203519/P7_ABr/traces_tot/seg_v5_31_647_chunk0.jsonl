@@ -12,3 +12,4 @@
 {"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_2076", "batch_size": 260, "batch_pos": 21}
 {"Q": 11, "answer": "no", "rationale": "Quote uses a neutral technical term ('dead-end infections') without explicit reassuring language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_2076_r1", "batch_size": 260, "batch_pos": 21}
 {"hop_idx": 12, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_12_19532", "batch_size": 260, "batch_pos": 20}
+{"Q": 12, "answer": "yes", "rationale": "'dead-end infections' is presented as a technical or descriptive term used by an expert, not explicit framing rhetoric.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_12_19532_r1", "batch_size": 260, "batch_pos": 20}

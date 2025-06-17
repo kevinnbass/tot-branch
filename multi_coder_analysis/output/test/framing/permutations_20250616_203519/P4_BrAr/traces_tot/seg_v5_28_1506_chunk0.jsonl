@@ -10,3 +10,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment reports potential impact and concern ('concerning') but not neutral metrics.", "method": "llm_batch", "batch_id": "batch_9_10200", "batch_size": 260, "batch_pos": 187}
 {"Q": 10, "answer": "no", "rationale": "The segment discusses potential future negative impact, not relief.", "method": "llm_batch", "batch_id": "batch_10_2924", "batch_size": 200, "batch_pos": 10}
 {"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'concerning', which is a bare risk adjective and does not trigger Q11 framing.", "method": "llm_batch", "batch_id": "batch_11_15000", "batch_size": 260, "batch_pos": 256}
+{"Q": 12, "answer": "yes", "rationale": "States developments are 'concerning'; per context guard, this is Neutral.", "method": "llm_batch", "batch_id": "batch_12_17368", "batch_size": 260, "batch_pos": 256}

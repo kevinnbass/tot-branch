@@ -10,3 +10,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment states risk 'remains low', which is explicit reassuring language.", "method": "llm_batch", "batch_id": "batch_9_5572", "batch_size": 260, "batch_pos": 98}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('threat... remains low') which would be handled by Q5.", "method": "llm_batch", "batch_id": "batch_10_12772", "batch_size": 260, "batch_pos": 60}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement from CDC uses explicit reassuring language: 'threat... remains low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_15000", "batch_size": 260, "batch_pos": 57}
+{"Q": 12, "answer": "no", "rationale": "States 'threat... remains low', triggering Reassuring framing (Q5).", "method": "llm_batch", "batch_id": "batch_12_17368", "batch_size": 260, "batch_pos": 57}

@@ -8,3 +8,5 @@
 {"Q": 7, "answer": "no", "rationale": "The segment contains 'still remains low', which is an explicit calming cue (Q5).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 214}
 {"Q": 8, "answer": "no", "rationale": "The segment contains explicit reassurance ('risk...still remains low'), failing the 'without active reassurance' condition.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 256}
 {"Q": 9, "answer": "no", "rationale": "Contains explicit calming language ('risk... still remains low').", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 200}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk... still remains low'), which Q10 excludes.", "method": "llm_batch", "batch_id": "batch_10_16504", "batch_size": 72, "batch_pos": 52}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement from CDC uses explicit low-risk framing: 'risk still remains low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_14184", "batch_size": 26, "batch_pos": 8}

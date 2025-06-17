@@ -7,3 +7,5 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14820", "batch_size": 260, "batch_pos": 235}
 {"Q": 8, "answer": "no", "rationale": "The segment states a risk level and reports findings, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18248", "batch_size": 260, "batch_pos": 100}
 {"Q": 9, "answer": "no", "rationale": "Includes risk assessment ('low') which is a form of framing, not factual metric reporting without framing.", "method": "llm_batch", "batch_id": "batch_9_10436", "batch_size": 239, "batch_pos": 6}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk posed... as “low.”').", "method": "llm_batch", "batch_id": "batch_10_2024", "batch_size": 260, "batch_pos": 134}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement contains explicit reassuring language 'characterize the risk... as “low.”'.||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_19836", "batch_size": 250, "batch_pos": 103}

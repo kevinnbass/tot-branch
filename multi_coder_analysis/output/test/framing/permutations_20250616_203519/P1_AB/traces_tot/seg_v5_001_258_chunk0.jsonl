@@ -6,3 +6,4 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 19}
 {"Q": 8, "answer": "no", "rationale": "Describes remembering fear, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 143}
 {"Q": 9, "answer": "no", "rationale": "The segment uses vivid language ('vividly', 'fearful', 'virulent', 'devastating pandemic').", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 120}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 2, "regex": {"rule": "ReliefSpeculation", "span": [131, 136], "captures": ["might"]}}

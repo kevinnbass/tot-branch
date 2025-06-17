@@ -7,3 +7,4 @@
 {"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_4056", "batch_size": 260, "batch_pos": 75}
 {"Q": 8, "answer": "no", "rationale": "The segment reports a possible cluster and potential transmission, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11120", "batch_size": 260, "batch_pos": 17}
 {"Q": 9, "answer": "no", "rationale": "The segment reports the number of people and potential transmission type, not primarily prices, economic data, or numerical metrics in the Q9 sense.", "method": "llm_batch", "batch_id": "batch_9_20340", "batch_size": 260, "batch_pos": 168}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_20232", "batch_size": 260, "batch_pos": 97, "regex": {"rule": "ReliefSpeculation", "span": [97, 103], "captures": ["may be"]}}

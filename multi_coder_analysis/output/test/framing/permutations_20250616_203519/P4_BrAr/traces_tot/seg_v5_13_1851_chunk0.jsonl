@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment states the risk 'remains low', which is explicit reassuring language.", "method": "llm_batch", "batch_id": "batch_9_5572", "batch_size": 260, "batch_pos": 260}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk to the general public remains low') which would be handled by Q5.", "method": "llm_batch", "batch_id": "batch_10_12772", "batch_size": 260, "batch_pos": 123}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement from California Department of Public Health uses explicit reassuring language: 'risk to the general public remains low'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_15000", "batch_size": 260, "batch_pos": 118}
+{"Q": 12, "answer": "no", "rationale": "States 'risk to the general public remains low', triggering Reassuring framing (Q5).", "method": "llm_batch", "batch_id": "batch_12_17368", "batch_size": 260, "batch_pos": 118}

@@ -6,3 +6,4 @@
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_21496", "batch_size": 260, "batch_pos": 27}
 {"Q": 8, "answer": "no", "rationale": "Continues describing past activity and scientists hedging bets, not current capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13528", "batch_size": 260, "batch_pos": 151}
 {"Q": 9, "answer": "no", "rationale": "The segment discusses virus behavior and scientists' views, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_20148", "batch_size": 260, "batch_pos": 128}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_14516", "batch_size": 252, "batch_pos": 9, "regex": {"rule": "ReliefSpeculation", "span": [253, 259], "captures": ["may be"]}}

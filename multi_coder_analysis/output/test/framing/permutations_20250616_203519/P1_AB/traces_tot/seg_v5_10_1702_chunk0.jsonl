@@ -7,3 +7,4 @@
 {"Q": 7, "answer": "no", "rationale": "The segment describes limitations, but contains no bare negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_17292", "batch_size": 260, "batch_pos": 182}
 {"Q": 8, "answer": "no", "rationale": "The segment reports study limitations, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_15884", "batch_size": 260, "batch_pos": 154}
 {"Q": 9, "answer": "no", "rationale": "The segment describes limitations of a study, not primarily prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_20340", "batch_size": 260, "batch_pos": 97}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_20232", "batch_size": 260, "batch_pos": 56, "regex": {"rule": "ReliefSpeculation", "span": [111, 116], "captures": ["could"]}}

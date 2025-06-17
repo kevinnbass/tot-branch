@@ -6,3 +6,6 @@
 {"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_6716", "batch_size": 260, "batch_pos": 81}
 {"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_6716_r1", "batch_size": 260, "batch_pos": 81}
 {"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_21256", "batch_size": 260, "batch_pos": 71}
+{"Q": 8, "answer": "no", "rationale": "Expresses a wish about an idea, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_13160", "batch_size": 253, "batch_pos": 86}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a feeling/opinion, not numerical metrics or prices.", "method": "llm_batch", "batch_id": "batch_9_20644", "batch_size": 207, "batch_pos": 145}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_18656", "batch_size": 260, "batch_pos": 223, "regex": {"rule": "ReliefSpeculation", "span": [9, 14], "captures": ["could"]}}

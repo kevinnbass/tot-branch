@@ -9,3 +9,4 @@
 {"Q": 9, "answer": "no", "rationale": "The segment states the CDC believes the risk 'currently poses a low risk', which is explicit reassuring language.", "method": "llm_batch", "batch_id": "batch_9_5572", "batch_size": 260, "batch_pos": 236}
 {"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('poses a low risk') which would be handled by Q5.", "method": "llm_batch", "batch_id": "batch_10_12772", "batch_size": 260, "batch_pos": 111}
 {"Q": 11, "answer": "yes", "rationale": "Attributed statement referencing CDC uses explicit reassuring language: 'poses a low risk'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_15000", "batch_size": 260, "batch_pos": 107}
+{"Q": 12, "answer": "no", "rationale": "States CDC believes virus poses a 'low risk', triggering Reassuring framing (Q5).", "method": "llm_batch", "batch_id": "batch_12_17368", "batch_size": 260, "batch_pos": 107}

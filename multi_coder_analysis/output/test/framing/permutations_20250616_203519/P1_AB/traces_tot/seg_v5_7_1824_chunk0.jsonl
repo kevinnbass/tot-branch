@@ -5,3 +5,4 @@
 {"Q": 5, "answer": "no", "rationale": "The phrase 'risk... remains low' is a bare low-risk statement, not intensified or framed as an explicit calming cue under Q5.", "method": "llm_batch", "batch_id": "batch_5_21432", "batch_size": 260, "batch_pos": 31}
 {"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_18556", "batch_size": 260, "batch_pos": 2}
 {"Q": 8, "answer": "no", "rationale": "The segment contains active reassurance ('risk to the general public from avian flu remains low'), failing the 'without active reassurance' condition.", "method": "llm_batch", "batch_id": "batch_8_2788", "batch_size": 260, "batch_pos": 126}
+{"Q": 9, "answer": "yes", "rationale": "Reports a risk level ('risk... remains low') which is a metric, using standard language.", "method": "llm_batch", "batch_id": "batch_9_7796", "batch_size": 260, "batch_pos": 20}

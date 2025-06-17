@@ -9,3 +9,4 @@
 {"Q": 7, "answer": "no", "rationale": "The segment contains 'is unusual', which is an explicit calming cue (Q5).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_17436_r1", "batch_size": 241, "batch_pos": 90}
 {"Q": 8, "answer": "no", "rationale": "The segment reports transmission is unusual (a factual state), not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_20556", "batch_size": 260, "batch_pos": 139}
 {"Q": 9, "answer": "no", "rationale": "Does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_3116", "batch_size": 222, "batch_pos": 133}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('transmission... is unusual'), which Q10 excludes.", "method": "llm_batch", "batch_id": "batch_10_16504", "batch_size": 72, "batch_pos": 9}
