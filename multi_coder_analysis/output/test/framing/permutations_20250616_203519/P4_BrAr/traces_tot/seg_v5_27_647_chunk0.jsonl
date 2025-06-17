@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "'infected' is a plain outcome verb, not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_14912", "batch_size": 73, "batch_pos": 1}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17716", "batch_size": 260, "batch_pos": 237}
 {"Q": 4, "answer": "no", "rationale": "The segment contains no question, rhetorical or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17716_r1", "batch_size": 260, "batch_pos": 237}
+{"Q": 5, "answer": "no", "rationale": "This reports facts, including positive ones ('sporadic,' 'self-limiting'), but is not framed with explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8796", "batch_size": 260, "batch_pos": 232}

@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The verb 'hits' is moderate and not coupled with sufficient scale/impact details for Q2.", "method": "llm_batch", "batch_id": "batch_2_15832", "batch_size": 260, "batch_pos": 150}
 {"Q": 3, "answer": "no", "rationale": "'rise' is about price (Neutral); 'hits' is not paired with specific scale/impact.", "method": "llm_batch", "batch_id": "batch_3_18488", "batch_size": 260, "batch_pos": 147}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_9344", "batch_size": 260, "batch_pos": 147}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 147}
+{"Q": 5, "answer": "no", "rationale": "The segment reports chicken prices rise but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19324", "batch_size": 260, "batch_pos": 147}

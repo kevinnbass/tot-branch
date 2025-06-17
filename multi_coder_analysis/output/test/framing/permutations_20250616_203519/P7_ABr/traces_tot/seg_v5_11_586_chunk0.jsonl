@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "'causing great concern' is about perception; 'has infected' is a plain outcome verb.", "method": "llm_batch", "batch_id": "batch_3_5996", "batch_size": 260, "batch_pos": 19}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 258}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 258}
+{"Q": 5, "answer": "no", "rationale": "The segment reports 'great concern' and unusual behaviour, which is not calming.", "method": "llm_batch", "batch_id": "batch_5_19036", "batch_size": 260, "batch_pos": 253}

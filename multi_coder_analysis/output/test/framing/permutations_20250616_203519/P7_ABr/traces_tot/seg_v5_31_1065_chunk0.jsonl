@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "'Scary thing' describes a reaction/concern, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_15832", "batch_size": 260, "batch_pos": 162}
 {"Q": 3, "answer": "no", "rationale": "No moderate verb describing impact is present.", "method": "llm_batch", "batch_id": "batch_3_18488", "batch_size": 260, "batch_pos": 157}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_9344", "batch_size": 260, "batch_pos": 157}
+{"Q": 4, "answer": "yes", "rationale": "The segment contains the loaded rhetorical question 'will that safety net be there all the time?' framed by 'Scary thing is'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 157}

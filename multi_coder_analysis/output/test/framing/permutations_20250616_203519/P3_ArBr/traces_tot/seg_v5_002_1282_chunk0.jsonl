@@ -2,3 +2,5 @@
 {"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_11648", "batch_size": 260, "batch_pos": 49}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('having problems finding') and lacks high-potency verbs, metaphors, or other alarmist cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_11648_r1", "batch_size": 260, "batch_pos": 49}
 {"Q": 3, "answer": "no", "rationale": "'having problems finding' is not a moderate verb from the list or similar.", "method": "llm_batch", "batch_id": "batch_3_17412", "batch_size": 260, "batch_pos": 41}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_216", "batch_size": 260, "batch_pos": 40}
+{"Q": 5, "answer": "no", "rationale": "Reports that governments and farmers are 'having problems' finding land.", "method": "llm_batch", "batch_id": "batch_5_19700", "batch_size": 260, "batch_pos": 40}

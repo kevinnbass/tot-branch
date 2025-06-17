@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12616", "batch_size": 260, "batch_pos": 133}
 {"Q": 2, "answer": "no", "rationale": "The phrase 'I’m encouraged about' describes a psychological state, not the threat's impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 117}
 {"Q": 3, "answer": "no", "rationale": "'discovered' is a plain outcome verb (Boundary Requirement 4).", "method": "llm_batch", "batch_id": "batch_3_20916", "batch_size": 260, "batch_pos": 80}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 76}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1120_r1", "batch_size": 260, "batch_pos": 76}

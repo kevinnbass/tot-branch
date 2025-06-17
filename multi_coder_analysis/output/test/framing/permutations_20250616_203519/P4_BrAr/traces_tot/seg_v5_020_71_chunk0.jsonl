@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment describes transmission potential using neutral language.", "method": "llm_batch", "batch_id": "batch_2_13324", "batch_size": 260, "batch_pos": 169}
 {"Q": 3, "answer": "no", "rationale": "The segment uses 'can be transmitted' (potential) and 'is unusual' not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_18004", "batch_size": 260, "batch_pos": 163}
 {"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16660", "batch_size": 260, "batch_pos": 158}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_18632", "batch_size": 260, "batch_pos": 158}
+{"Q": 5, "answer": "no", "rationale": "States transmission is 'unusual' but lacks explicit calming language or intensified low-risk framing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_18632_r1", "batch_size": 260, "batch_pos": 158}

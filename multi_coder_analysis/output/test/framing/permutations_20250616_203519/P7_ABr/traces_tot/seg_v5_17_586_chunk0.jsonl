@@ -3,3 +3,4 @@
 {"Q": 3, "answer": "no", "rationale": "'has spread' is a moderate verb, but 'to more than 40 species' is not a numerical or record-type scale of impact.", "method": "llm_batch", "batch_id": "batch_3_5996", "batch_size": 260, "batch_pos": 16}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_10160", "batch_size": 260, "batch_pos": 255}
 {"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_10160_r1", "batch_size": 260, "batch_pos": 255}
+{"Q": 5, "answer": "no", "rationale": "The segment reports spread to mammals and widespread presence but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19036", "batch_size": 260, "batch_pos": 250}

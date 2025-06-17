@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The phrase 'What worries me is' describes a psychological state, not the threat's impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 99}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_20916", "batch_size": 260, "batch_pos": 62}
 {"Q": 3, "answer": "no", "rationale": "'worries me' is a psychological verb/state, not a moderate verb describing realised impact with scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_20916_r1", "batch_size": 260, "batch_pos": 62}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 58}

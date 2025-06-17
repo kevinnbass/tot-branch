@@ -1,3 +1,5 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12616", "batch_size": 260, "batch_pos": 130}
 {"Q": 2, "answer": "no", "rationale": "The phrase 'signal achievement' is positive framing, not high-potency language about a threat's impact.", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 114}
 {"Q": 3, "answer": "no", "rationale": "Does not contain a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_20916", "batch_size": 260, "batch_pos": 77}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 73}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_1120_r1", "batch_size": 260, "batch_pos": 73}

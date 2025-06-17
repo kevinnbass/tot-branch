@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, or superlative negative nouns.", "method": "llm_batch", "batch_id": "batch_2_10408", "batch_size": 260, "batch_pos": 84}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_9652", "batch_size": 260, "batch_pos": 62}
 {"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact information.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_9652_r1", "batch_size": 260, "batch_pos": 62}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_10764", "batch_size": 260, "batch_pos": 60}
+{"Q": 5, "answer": "no", "rationale": "The segment raises a question and describes a treatment positively, but not as a calming cue about the threat.", "method": "llm_batch", "batch_id": "batch_5_20052", "batch_size": 260, "batch_pos": 56}

@@ -1,3 +1,5 @@
 {"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_776", "batch_size": 260, "batch_pos": 58}
 {"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term and does not trigger Q1. No other intensifier or comparative modifying a risk-adjective is present.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_776_r1", "batch_size": 260, "batch_pos": 58}
 {"Q": 2, "answer": "no", "rationale": "The segment describes a procedure factually. 'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_2_16288", "batch_size": 260, "batch_pos": 34}
+{"Q": 3, "answer": "no", "rationale": "'detected' is not a moderate verb from the list. 'is killed' is plain outcome.", "method": "llm_batch", "batch_id": "batch_3_11128", "batch_size": 260, "batch_pos": 232}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_21140", "batch_size": 260, "batch_pos": 225}

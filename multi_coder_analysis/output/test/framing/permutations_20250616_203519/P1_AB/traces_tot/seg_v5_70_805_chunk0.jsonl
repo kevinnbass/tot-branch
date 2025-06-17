@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment is a question about focus, not a description of impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 98}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_20916", "batch_size": 260, "batch_pos": 61}
 {"Q": 3, "answer": "no", "rationale": "The segment discusses focusing on/investing in vaccines, which is not a moderate verb paired with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_20916_r1", "batch_size": 260, "batch_pos": 61}
+{"Q": 4, "answer": "no", "rationale": "The segment contains a question ('What are the metrics for H5N1...') but it is information-seeking, not loaded for alarm.", "method": "llm_batch", "batch_id": "batch_4_1120", "batch_size": 260, "batch_pos": 57}

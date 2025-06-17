@@ -2,3 +2,4 @@
 {"Q": 2, "answer": "no", "rationale": "The segment describes an edit to the article neutrally.", "method": "llm_batch", "batch_id": "batch_2_2916", "batch_size": 172, "batch_pos": 172}
 {"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_6352", "batch_size": 83, "batch_pos": 83}
 {"Q": 3, "answer": "no", "rationale": "The segment discusses an article amendment and does not contain moderate verbs paired with scale or impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_6352_r1", "batch_size": 83, "batch_pos": 83}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_20836", "batch_size": 66, "batch_pos": 66}

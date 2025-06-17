@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment reports factual information about affected species and location.", "method": "llm_batch", "batch_id": "batch_2_15832", "batch_size": 260, "batch_pos": 186}
 {"Q": 3, "answer": "no", "rationale": "'occurs' and 'has been found' are not moderate verbs describing impact.", "method": "llm_batch", "batch_id": "batch_3_18488", "batch_size": 260, "batch_pos": 180}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_9344", "batch_size": 260, "batch_pos": 180}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 180}
+{"Q": 5, "answer": "no", "rationale": "The segment describes where avian flu occurs and where it's been found but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19324", "batch_size": 260, "batch_pos": 178}

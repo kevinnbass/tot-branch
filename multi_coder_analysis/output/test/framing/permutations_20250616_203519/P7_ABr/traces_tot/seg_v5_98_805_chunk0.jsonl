@@ -1,3 +1,6 @@
 {"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17208", "batch_size": 260, "batch_pos": 135}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, or superlative negative nouns.", "method": "llm_batch", "batch_id": "batch_2_10408", "batch_size": 260, "batch_pos": 105}
 {"Q": 3, "answer": "no", "rationale": "Segment does not contain information about bird flu impact.", "method": "llm_batch", "batch_id": "batch_3_9652", "batch_size": 260, "batch_pos": 82}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_10764", "batch_size": 260, "batch_pos": 80}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_20052", "batch_size": 260, "batch_pos": 76}
+{"Q": 5, "answer": "no", "rationale": "Expresses hope for future progress ('Hopefully we’ll make some inroads') but not a calming cue about current safety/control.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_20052_r1", "batch_size": 260, "batch_pos": 76}

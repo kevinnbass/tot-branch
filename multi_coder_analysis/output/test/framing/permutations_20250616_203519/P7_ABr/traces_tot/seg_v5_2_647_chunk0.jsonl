@@ -2,3 +2,5 @@
 {"Q": 2, "answer": "no", "rationale": "The segment is a factual statement.", "method": "llm_batch", "batch_id": "batch_2_15832", "batch_size": 260, "batch_pos": 58}
 {"Q": 3, "answer": "no", "rationale": "No moderate verb describing impact is present.", "method": "llm_batch", "batch_id": "batch_3_18488", "batch_size": 260, "batch_pos": 56}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_9344", "batch_size": 260, "batch_pos": 56}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9344_r1", "batch_size": 260, "batch_pos": 56}
+{"Q": 5, "answer": "no", "rationale": "The segment mentions bird flu to contend with but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_19324", "batch_size": 260, "batch_pos": 56}
