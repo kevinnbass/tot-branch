@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'low' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_16200", "batch_size": 260, "batch_pos": 242}
+{"Q": 2, "answer": "no", "rationale": "'cases remain rare' and 'risk to humans is low' are Q5 Reassuring cues, not Q2 Alarmist.", "method": "llm_batch", "batch_id": "batch_2_7056", "batch_size": 260, "batch_pos": 198}
+{"Q": 3, "answer": "no", "rationale": "The segment states risk is low, not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_16972", "batch_size": 260, "batch_pos": 120}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17248", "batch_size": 260, "batch_pos": 92}
+{"Q": 5, "answer": "no", "rationale": "The statement that risk is 'low' is a bare low-risk assessment, not intensified.", "method": "llm_batch", "batch_id": "batch_5_4072", "batch_size": 260, "batch_pos": 88}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found. 'rare' and 'low risk' are calming cues, not minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_2272", "batch_size": 248, "batch_pos": 42}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_11840", "batch_size": 231, "batch_pos": 30}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_5844", "batch_size": 260, "batch_pos": 114, "regex": {"rule": "CapabilityNoReassurance", "span": [69, 78], "captures": []}}

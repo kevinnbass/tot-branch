@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_1636", "batch_size": 260, "batch_pos": 46}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally reports the finding of presumptive positive cases in workers.", "method": "llm_batch", "batch_id": "batch_2_7272", "batch_size": 260, "batch_pos": 8}
+{"Q": 3, "answer": "no", "rationale": "Reports a small number of cases, not large scale impact with a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_17104", "batch_size": 260, "batch_pos": 198}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_12832", "batch_size": 260, "batch_pos": 174}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a fact about cases, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_7692", "batch_size": 260, "batch_pos": 172}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15480", "batch_size": 260, "batch_pos": 137}
+{"Q": 7, "answer": "no", "rationale": "The segment states a fact about cases but contains no negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_12000", "batch_size": 260, "batch_pos": 117}
+{"Q": 8, "answer": "no", "rationale": "Reports a finding/event.", "method": "llm_batch", "batch_id": "batch_8_5032", "batch_size": 260, "batch_pos": 258}
+{"Q": 9, "answer": "no", "rationale": "The segment reports counts and findings, not prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_11120", "batch_size": 260, "batch_pos": 90}
+{"Q": 10, "answer": "no", "rationale": "The segment reports past cases, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_13432", "batch_size": 195, "batch_pos": 61}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17008", "batch_size": 141, "batch_pos": 14}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_17724", "batch_size": 141, "batch_pos": 14, "regex": {"rule": "NeutralStats", "span": [57, 111], "captures": ["announce", "cases"]}}

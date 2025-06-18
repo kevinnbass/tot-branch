@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_1660", "batch_size": 260, "batch_pos": 82}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or alert phrases.", "method": "llm_batch", "batch_id": "batch_2_15876", "batch_size": 260, "batch_pos": 44}
+{"Q": 3, "answer": "no", "rationale": "Verbs do not describe threat impact + scale.", "method": "llm_batch", "batch_id": "batch_3_16632", "batch_size": 260, "batch_pos": 233}
+{"Q": 4, "answer": "no", "rationale": "The segment states no immediate public health concern and no human cases but no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17072", "batch_size": 260, "batch_pos": 208}
+{"Q": 5, "answer": "no", "rationale": "The segment reports absence of concern and human cases but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14808", "batch_size": 260, "batch_pos": 204}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16908", "batch_size": 260, "batch_pos": 165}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_9260", "batch_size": 260, "batch_pos": 160, "regex": {"rule": "BareNegationHealthConcern", "span": [32, 83], "captures": []}}

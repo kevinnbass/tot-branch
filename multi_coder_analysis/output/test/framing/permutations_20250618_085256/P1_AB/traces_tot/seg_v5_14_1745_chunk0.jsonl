@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment states a neutral fact about timing, not an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15444", "batch_size": 260, "batch_pos": 215}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'offers advantages', 'speed', 'scalability', 'reliability', and 'addressing'.", "method": "llm_batch", "batch_id": "batch_2_4360", "batch_size": 260, "batch_pos": 195}
+{"Q": 3, "answer": "no", "rationale": "No moderate verbs paired with significant scale/impact. Describes advantages.", "method": "llm_batch", "batch_id": "batch_3_16416", "batch_size": 260, "batch_pos": 172}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16672", "batch_size": 260, "batch_pos": 168}
+{"Q": 5, "answer": "no", "rationale": "The segment reports advantages of technology but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16680", "batch_size": 260, "batch_pos": 167}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_3116", "batch_size": 260, "batch_pos": 151}
+{"Q": 7, "answer": "no", "rationale": "The segment states mRNA technology offers advantages, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_5508", "batch_size": 260, "batch_pos": 146}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15228", "batch_size": 260, "batch_pos": 75, "regex": {"rule": "CapabilityNoReassurance", "span": [5, 12], "captures": []}}

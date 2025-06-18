@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'frankly' and 'very different', neither of which are intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11876", "batch_size": 260, "batch_pos": 249}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_6224", "batch_size": 260, "batch_pos": 244}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_17004", "batch_size": 260, "batch_pos": 228}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16420", "batch_size": 260, "batch_pos": 220}
+{"Q": 5, "answer": "no", "rationale": "Discusses PrEP and 'safe sex' in the context of sexual health, not bird flu safety.", "method": "llm_batch", "batch_id": "batch_5_15072", "batch_size": 260, "batch_pos": 220}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16412", "batch_size": 260, "batch_pos": 215}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation of the specified types.", "method": "llm_batch", "batch_id": "batch_7_3060", "batch_size": 260, "batch_pos": 211}
+{"Q": 8, "answer": "no", "rationale": "Explicitly links intervention to 'safe sex', which is active reassurance.", "method": "llm_batch", "batch_id": "batch_8_11792", "batch_size": 260, "batch_pos": 200}
+{"Q": 9, "answer": "no", "rationale": "The segment is a discussion of PrEP use, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_16864", "batch_size": 260, "batch_pos": 93}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16828", "batch_size": 260, "batch_pos": 85, "regex": {"rule": "ReliefSpeculation", "span": [81, 86], "captures": ["could"]}}

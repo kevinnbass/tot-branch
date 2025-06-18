@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4088", "batch_size": 260, "batch_pos": 70}
+{"Q": 2, "answer": "no", "rationale": "The verb 'impacts' is not a high-potency verb.", "method": "llm_batch", "batch_id": "batch_2_15012", "batch_size": 260, "batch_pos": 42}
+{"Q": 3, "answer": "no", "rationale": "The verb 'impacts' describes an economic outcome, which is excluded by the rules. 'culled' is containment.", "method": "llm_batch", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 255}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 250}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_13976_r1", "batch_size": 260, "batch_pos": 250}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative impact, not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 248}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6240", "batch_size": 260, "batch_pos": 224}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1320", "batch_size": 260, "batch_pos": 215}
+{"Q": 8, "answer": "no", "rationale": "The segment describes an impact and provides supporting data.", "method": "llm_batch", "batch_id": "batch_8_16848", "batch_size": 260, "batch_pos": 102}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports a percentage culled ('9% of laying hens... have been culled') using a standard verb ('have been culled').", "method": "llm_batch", "batch_id": "batch_9_16608", "batch_size": 260, "batch_pos": 74}

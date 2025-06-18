@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 23}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'revealed' and 'became ill'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "'became ill' is condition.", "method": "llm_batch", "batch_id": "batch_3_5568", "batch_size": 260, "batch_pos": 254}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 251}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information about a household contact becoming ill but not being tested without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13740", "batch_size": 260, "batch_pos": 250}
+{"Q": 6, "answer": "no", "rationale": "'a household contact' uses 'a' which is not a Q6 minimiser.", "method": "llm_batch", "batch_id": "batch_6_17380", "batch_size": 260, "batch_pos": 242}
+{"Q": 7, "answer": "no", "rationale": "The segment states a household contact became ill and was not tested, but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_14200", "batch_size": 260, "batch_pos": 236}
+{"Q": 8, "answer": "no", "rationale": "The segment reports factual outcome/lack of testing, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 200}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 123}
+{"Q": 9, "answer": "no", "rationale": "Reports events/status, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 123}

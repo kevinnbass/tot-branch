@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment states neutral facts, not an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 141}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'possible cluster', 'infections', 'has grown to include', 'first examples', 'transmission', and 'reported'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 124}
+{"Q": 3, "answer": "no", "rationale": "The verb 'has grown' is paired with a small number ('eight people'), not significant scale.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 103}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 99}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information and a possibility but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 98}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 87}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 81}
+{"Q": 8, "answer": "no", "rationale": "Reports a finding/fact and its potential significance, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 36}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 182}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metric ('eight people') using standard verbs.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 182}

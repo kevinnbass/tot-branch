@@ -1,0 +1,11 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_15888", "batch_size": 217, "batch_pos": 187}
+{"Q": 1, "answer": "no", "rationale": "The segment contains no intensifier or comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_15888_r1", "batch_size": 217, "batch_pos": 187}
+{"Q": 2, "answer": "no", "rationale": "The segment states a fact about retirement, with no high-potency verbs, metaphors, or other Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_15996", "batch_size": 163, "batch_pos": 133}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_17348", "batch_size": 75, "batch_pos": 47}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_5360", "batch_size": 50, "batch_pos": 22}
+{"Q": 5, "answer": "no", "rationale": "Biographical detail, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16768", "batch_size": 43, "batch_pos": 15}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16516", "batch_size": 260, "batch_pos": 238}
+{"Q": 7, "answer": "no", "rationale": "Segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_12572", "batch_size": 253, "batch_pos": 225}
+{"Q": 8, "answer": "no", "rationale": "The segment is a biographical fact, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16480", "batch_size": 40, "batch_pos": 18}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a biographical fact, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16852", "batch_size": 25, "batch_pos": 16}
+{"Q": 10, "answer": "no", "rationale": "The segment states a retirement date, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_17328", "batch_size": 66, "batch_pos": 60}

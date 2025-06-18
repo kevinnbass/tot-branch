@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'clearly' modifies 'animal exposure', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 8}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'question', 'contact', and 'animal exposure'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 244}
+{"Q": 3, "answer": "no", "rationale": "Discussion about source of infection, no moderate verbs or scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 220}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 216}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information and a conclusion but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 214}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 200}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 193}
+{"Q": 8, "answer": "no", "rationale": "Discusses potential transmission routes and confirms animal exposure, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 126}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 234}
+{"Q": 9, "answer": "no", "rationale": "Discusses uncertainty and conclusion, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 234}

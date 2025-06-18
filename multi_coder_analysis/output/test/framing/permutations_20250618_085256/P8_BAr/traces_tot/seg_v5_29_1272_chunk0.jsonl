@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_10004", "batch_size": 260, "batch_pos": 82}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('premature', 'sign', 'commit', 'deliver').", "method": "llm_batch", "batch_id": "batch_2_5364", "batch_size": 260, "batch_pos": 59}
+{"Q": 3, "answer": "no", "rationale": "Factual reporting of opinion/status, not Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_16876", "batch_size": 260, "batch_pos": 32}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14348", "batch_size": 260, "batch_pos": 23}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14348_r1", "batch_size": 260, "batch_pos": 23}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14272", "batch_size": 260, "batch_pos": 21}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a statement about not committing prematurely, not an explicit calming cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14272_r1", "batch_size": 260, "batch_pos": 21}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_2084", "batch_size": 260, "batch_pos": 3}
+{"Q": 7, "answer": "no", "rationale": "The negation 'can't actually deliver' is about capability, but not the virus's risk/spread/impact.", "method": "llm_batch", "batch_id": "batch_7_15588", "batch_size": 260, "batch_pos": 259}
+{"Q": 8, "answer": "yes", "rationale": "States a reason related to capability/delivery ('premature to sign anything or commit to anything that we can't actually deliver on') without linking to current calm/safety.", "method": "llm_batch", "batch_id": "batch_8_4572", "batch_size": 260, "batch_pos": 226}

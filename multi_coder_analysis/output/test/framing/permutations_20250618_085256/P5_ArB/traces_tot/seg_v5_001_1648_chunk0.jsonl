@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_1636", "batch_size": 260, "batch_pos": 7}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral financial language ('climbed') to describe stock movement.", "method": "llm_batch", "batch_id": "batch_2_12284", "batch_size": 260, "batch_pos": 229}
+{"Q": 3, "answer": "no", "rationale": "Financial metric ('climbed 2.4%'), which is Neutral.", "method": "llm_batch", "batch_id": "batch_3_17104", "batch_size": 260, "batch_pos": 159}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_12832", "batch_size": 260, "batch_pos": 137}
+{"Q": 4, "answer": "no", "rationale": "The segment contains a statement, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_12832_r1", "batch_size": 260, "batch_pos": 137}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a financial/business fact, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_7692", "batch_size": 260, "batch_pos": 135}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15480", "batch_size": 260, "batch_pos": 101}
+{"Q": 7, "answer": "no", "rationale": "The segment states a market reaction and potential deal but contains no negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_12000", "batch_size": 260, "batch_pos": 81}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_5032", "batch_size": 260, "batch_pos": 230, "regex": {"rule": "CapabilityNoReassurance", "span": [178, 185], "captures": []}}

@@ -1,0 +1,12 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_11876", "batch_size": 260, "batch_pos": 70}
+{"Q": 1, "answer": "no", "rationale": "The segment mentions 'mild symptoms' modified by 'relatively', but this is not an intensifier/comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_11876_r1", "batch_size": 260, "batch_pos": 70}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_6224", "batch_size": 260, "batch_pos": 69}
+{"Q": 3, "answer": "no", "rationale": "'infected' is a plain outcome verb.", "method": "llm_batch", "batch_id": "batch_3_17004", "batch_size": 260, "batch_pos": 60}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16420", "batch_size": 260, "batch_pos": 55}
+{"Q": 5, "answer": "no", "rationale": "Reports human cases and symptom severity, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15072", "batch_size": 260, "batch_pos": 55}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16412", "batch_size": 260, "batch_pos": 53}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation of the specified types.", "method": "llm_batch", "batch_id": "batch_7_3060", "batch_size": 260, "batch_pos": 52}
+{"Q": 8, "answer": "no", "rationale": "Reports factual outcome (mild symptoms), not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11792", "batch_size": 260, "batch_pos": 47}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of infected individuals and symptoms, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_16864", "batch_size": 260, "batch_pos": 25}
+{"Q": 10, "answer": "no", "rationale": "The segment reports past/current cases and severity, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16828", "batch_size": 260, "batch_pos": 20}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15740", "batch_size": 260, "batch_pos": 20}

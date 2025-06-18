@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16200", "batch_size": 260, "batch_pos": 34}
+{"Q": 2, "answer": "no", "rationale": "Metaphor ('muddy the picture') describes making something unclear, not threat impact.", "method": "llm_batch", "batch_id": "batch_2_14272", "batch_size": 260, "batch_pos": 253}
+{"Q": 3, "answer": "no", "rationale": "Metaphorical language, not moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_16868", "batch_size": 260, "batch_pos": 185}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14112", "batch_size": 260, "batch_pos": 163}
+{"Q": 5, "answer": "no", "rationale": "The segment mentions difficulty and contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_4004", "batch_size": 260, "batch_pos": 159}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16500", "batch_size": 260, "batch_pos": 122}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_8480", "batch_size": 260, "batch_pos": 112}
+{"Q": 8, "answer": "no", "rationale": "The segment describes challenges to detection, but not capabilities, preparedness, or safeguards.", "method": "llm_batch", "batch_id": "batch_8_16872", "batch_size": 260, "batch_pos": 235}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential difficulty in identification, not reporting metrics.", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 44}
+{"Q": 10, "answer": "no", "rationale": "The segment predicts future difficulty, not speculation about relief.", "method": "llm_batch", "batch_id": "batch_10_17344", "batch_size": 260, "batch_pos": 239}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a clear frame.", "method": "llm_batch", "batch_id": "batch_11_9280", "batch_size": 260, "batch_pos": 204}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_18340", "batch_size": 260, "batch_pos": 204, "regex": {"rule": "NeutralStats", "span": [154, 173], "captures": ["identify", "cases"]}}

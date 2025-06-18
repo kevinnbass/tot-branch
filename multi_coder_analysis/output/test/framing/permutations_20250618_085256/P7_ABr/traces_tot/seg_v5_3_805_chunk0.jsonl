@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'outbreak' is a noun, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 59}
+{"Q": 2, "answer": "no", "rationale": "The noun 'outbreak' is neutral.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 35}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 6}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 2}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information about an interview but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 260}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 246}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 239}
+{"Q": 8, "answer": "no", "rationale": "Describes an interview topic and general hopes, not specific capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 167}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 258}
+{"Q": 9, "answer": "no", "rationale": "Describes an interview topic, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 258}

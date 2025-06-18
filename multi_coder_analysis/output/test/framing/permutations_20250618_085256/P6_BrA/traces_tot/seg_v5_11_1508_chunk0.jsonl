@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13020", "batch_size": 217, "batch_pos": 58}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'imposed restrictions' without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_13604", "batch_size": 166, "batch_pos": 8}
+{"Q": 3, "answer": "no", "rationale": "The segment reports on financial/trade restrictions, which are Neutral for this rule.", "method": "llm_batch", "batch_id": "batch_3_14640", "batch_size": 260, "batch_pos": 196}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16976", "batch_size": 260, "batch_pos": 181}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16976_r1", "batch_size": 260, "batch_pos": 181}
+{"Q": 5, "answer": "no", "rationale": "The segment reports Colombia is the only country with restrictions, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15896", "batch_size": 260, "batch_pos": 169}
+{"Q": 6, "answer": "yes", "rationale": "'only country that has officially imposed restrictions' uses 'only' with a scale contrast (implies other countries have not).", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 125}

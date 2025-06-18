@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'low risk', which is a calming phrase, not a Q1 cue.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 129}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'avoid unprotected contact', 'look sick', 'have died', and 'poses a low risk' (Q5 cue).", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 112}
+{"Q": 3, "answer": "no", "rationale": "Advice and risk assessment, no moderate verbs or scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 91}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 87}
+{"Q": 5, "answer": "no", "rationale": "The segment reports advice and a bare low-risk statement ('poses a low risk') which does not meet the intensified low-risk criteria for Q5.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 86}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 75}
+{"Q": 7, "answer": "no", "rationale": "'low risk' is an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 69}
+{"Q": 8, "answer": "no", "rationale": "Contains explicit reassurance ('poses a low risk'), failing the 'without active reassurance' criteria.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 27}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 178}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit calming language: 'poses a low risk'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 178}

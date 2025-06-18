@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 56}
+{"Q": 2, "answer": "no", "rationale": "'suffered' is a negative verb but not considered high-potency in the context of Q2 examples.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 4}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 185}
+{"Q": 3, "answer": "no", "rationale": "'tested positive' and 'suffered' are plain verbs, not moderate verbs paired with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 185}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 171}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14848_r1", "batch_size": 260, "batch_pos": 171}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a human case and symptom, which is not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 167}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 126}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 126}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 113}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a human case and symptom, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 170}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a positive test and symptom, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12716", "batch_size": 239, "batch_pos": 175}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a case and symptom, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_4360", "batch_size": 260, "batch_pos": 258}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17824", "batch_size": 260, "batch_pos": 215}

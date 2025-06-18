@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'urgency' and 'emergency' are nouns, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 69}
+{"Q": 2, "answer": "no", "rationale": "The nouns 'urgency' and 'emergency' describe a political/budget situation, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 44}
+{"Q": 3, "answer": "no", "rationale": "Describes impact of budget cut, not threat; 'urgency' is subjective.", "method": "llm_batch", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 15}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 11}
+{"Q": 4, "answer": "no", "rationale": "The segment describes a situation and the speaker's feeling ('urgency, if not an emergency') but does not pose a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16624_r1", "batch_size": 260, "batch_pos": 11}
+{"Q": 5, "answer": "no", "rationale": "The segment does not contain explicit calming language or cues.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 9}
+{"Q": 6, "answer": "no", "rationale": "Minimiser 'only' modifies 'NIH institute', not the scale of the event.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 255}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 248}
+{"Q": 8, "answer": "no", "rationale": "Reports historical context/challenge, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 176}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_15244", "batch_size": 260, "batch_pos": 6}

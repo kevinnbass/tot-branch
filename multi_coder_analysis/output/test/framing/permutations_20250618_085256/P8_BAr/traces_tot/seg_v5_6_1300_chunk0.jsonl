@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16200", "batch_size": 260, "batch_pos": 240}
+{"Q": 2, "answer": "no", "rationale": "'highly pathogenic' is technical. 'risk' is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_7056", "batch_size": 260, "batch_pos": 196}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses potential future risk and financial metrics, which are Neutral.", "method": "llm_batch", "batch_id": "batch_3_16972", "batch_size": 260, "batch_pos": 118}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17248", "batch_size": 260, "batch_pos": 90}
+{"Q": 5, "answer": "no", "rationale": "This segment discusses risk to exports, which is not calming language.", "method": "llm_batch", "batch_id": "batch_5_4072", "batch_size": 260, "batch_pos": 86}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2272", "batch_size": 248, "batch_pos": 40}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_11840", "batch_size": 231, "batch_pos": 28}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a risk/potential negative consequence, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_5844", "batch_size": 260, "batch_pos": 112}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a potential future economic impact, not current metrics.", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 127}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_17288", "batch_size": 82, "batch_pos": 25, "regex": {"rule": "ReliefSpeculation", "span": [149, 155], "captures": ["may be"]}}

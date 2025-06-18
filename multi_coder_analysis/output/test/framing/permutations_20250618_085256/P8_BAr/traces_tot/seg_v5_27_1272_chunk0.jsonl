@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_10004", "batch_size": 260, "batch_pos": 80}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('watched', 'was mixed').", "method": "llm_batch", "batch_id": "batch_2_5364", "batch_size": 260, "batch_pos": 57}
+{"Q": 3, "answer": "no", "rationale": "Factual reporting/future action, not moderate verb + scale impact.", "method": "llm_batch", "batch_id": "batch_3_16876", "batch_size": 260, "batch_pos": 30}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14348", "batch_size": 260, "batch_pos": 21}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14348_r1", "batch_size": 260, "batch_pos": 21}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14272", "batch_size": 260, "batch_pos": 19}
+{"Q": 5, "answer": "no", "rationale": "The segment reports that trial results will be watched and previous data was mixed, lacking explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14272_r1", "batch_size": 260, "batch_pos": 19}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_2084", "batch_size": 260, "batch_pos": 1}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, spread, impact, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_15588", "batch_size": 260, "batch_pos": 257}
+{"Q": 8, "answer": "yes", "rationale": "Describes attention on evaluating a capability ('results will be closely watched') without linking to current calm/safety.", "method": "llm_batch", "batch_id": "batch_8_4572", "batch_size": 260, "batch_pos": 224}

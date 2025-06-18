@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment states neutral facts and metrics, not an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 138}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'affected' and 'resulting in the loss'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 121}
+{"Q": 3, "answer": "no", "rationale": "The verb 'affected' is a plain outcome verb excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 100}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 96}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical facts but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 95}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 84}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 78}
+{"Q": 8, "answer": "no", "rationale": "Reports historical data/impact, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 33}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 180}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('January 2016', '11 poultry farms', 'loss of more than 400,000 birds') using standard verbs.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 180}

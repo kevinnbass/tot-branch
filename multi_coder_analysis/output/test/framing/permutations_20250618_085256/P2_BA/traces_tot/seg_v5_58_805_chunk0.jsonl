@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a metaphor, and 'worst affected' which modifies a noun.", "method": "llm_batch", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 212}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 162}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 90}
+{"Q": 3, "answer": "no", "rationale": "Metaphorical language ('genie’s out of the bottle'); 'see cases' is factual, not moderate verb + scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 90}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 76}
+{"Q": 5, "answer": "no", "rationale": "The segment uses a metaphor and expresses hope for getting a handle on the situation, which is not an explicit calming cue about current safety/control.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 72}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 32}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 20}
+{"Q": 8, "answer": "no", "rationale": "The segment uses a metaphor and expresses hope for future control, not describing current capability or safeguard.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 85}
+{"Q": 9, "answer": "no", "rationale": "The segment states about it being a matter of time before seeing cases, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12716", "batch_size": 239, "batch_pos": 140}
+{"Q": 10, "answer": "yes", "rationale": "'the hope is that we can at least get a handle on what’s going on' speculates about potential future improvement/control.", "method": "llm_batch", "batch_id": "batch_10_4360", "batch_size": 260, "batch_pos": 229}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14328", "batch_size": 260, "batch_pos": 27}
+{"Q": 2, "answer": "no", "rationale": "The segment states a likelihood ('likely chance') which is not a high-potency verb or metaphor.", "method": "llm_batch", "batch_id": "batch_2_1176", "batch_size": 260, "batch_pos": 24}
+{"Q": 3, "answer": "no", "rationale": "The statement is about likelihood, not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_16584", "batch_size": 260, "batch_pos": 22}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14728", "batch_size": 260, "batch_pos": 22}
+{"Q": 5, "answer": "no", "rationale": "The segment states a 'likely chance', which is a factual probability statement, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17044", "batch_size": 260, "batch_pos": 22}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17100", "batch_size": 260, "batch_pos": 22}
+{"Q": 7, "answer": "no", "rationale": "The segment states a likely chance, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_7520", "batch_size": 260, "batch_pos": 22}
+{"Q": 8, "answer": "no", "rationale": "The segment states a likelihood, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16084", "batch_size": 260, "batch_pos": 20}
+{"Q": 9, "answer": "no", "rationale": "The segment is a statement about a likely chance, not reporting prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_17280", "batch_size": 260, "batch_pos": 15}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_11716", "batch_size": 260, "batch_pos": 13, "regex": {"rule": "ReliefSpeculation", "span": [29, 34], "captures": ["could"]}}

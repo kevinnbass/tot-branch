@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_1660", "batch_size": 260, "batch_pos": 259}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or alert phrases.", "method": "llm_batch", "batch_id": "batch_2_15876", "batch_size": 260, "batch_pos": 218}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with a significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_16628", "batch_size": 260, "batch_pos": 137}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_15380", "batch_size": 260, "batch_pos": 112}
+{"Q": 5, "answer": "no", "rationale": "Reports limitations of the study, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15720", "batch_size": 260, "batch_pos": 108}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_7536", "batch_size": 254, "batch_pos": 62}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17216", "batch_size": 245, "batch_pos": 57}
+{"Q": 8, "answer": "no", "rationale": "The segment describes limitations of a study, not capabilities or preparedness itself.", "method": "llm_batch", "batch_id": "batch_8_2336", "batch_size": 260, "batch_pos": 140}
+{"Q": 9, "answer": "no", "rationale": "The segment does not report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_4844", "batch_size": 245, "batch_pos": 161}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16328", "batch_size": 75, "batch_pos": 30, "regex": {"rule": "ReliefSpeculation", "span": [111, 116], "captures": ["could"]}}

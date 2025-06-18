@@ -1,0 +1,8 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_15936", "batch_size": 260, "batch_pos": 34}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_15936_r1", "batch_size": 260, "batch_pos": 34}
+{"Q": 2, "answer": "no", "rationale": "The metaphor describes difficulty in finding cases, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_16268", "batch_size": 260, "batch_pos": 249}
+{"Q": 3, "answer": "no", "rationale": "The segment uses 'is', 'said' but lacks a moderate verb from the list paired with explicit scale/impact. It uses a metaphor.", "method": "llm_batch", "batch_id": "batch_3_16252", "batch_size": 260, "batch_pos": 193}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_17380", "batch_size": 260, "batch_pos": 178}
+{"Q": 5, "answer": "no", "rationale": "Quotes expert using a metaphor about difficulty finding cases, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16556", "batch_size": 260, "batch_pos": 167}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_6456", "batch_size": 260, "batch_pos": 127}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a metaphor, not a bare negation as defined by Q7.", "method": "llm_batch", "batch_id": "batch_7_14560", "batch_size": 260, "batch_pos": 111}

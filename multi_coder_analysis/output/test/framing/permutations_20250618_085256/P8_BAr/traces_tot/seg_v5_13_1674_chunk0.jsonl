@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14768", "batch_size": 217, "batch_pos": 191}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_11028", "batch_size": 164, "batch_pos": 139}
+{"Q": 3, "answer": "no", "rationale": "Describes regulation, not moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_3500", "batch_size": 73, "batch_pos": 48}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_15688", "batch_size": 42, "batch_pos": 17}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions, rhetorical or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_15688_r1", "batch_size": 42, "batch_pos": 17}
+{"Q": 5, "answer": "no", "rationale": "This segment reports facts about regulations and purchasing without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12572", "batch_size": 38, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2272", "batch_size": 248, "batch_pos": 224}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_11840", "batch_size": 231, "batch_pos": 207}
+{"Q": 8, "answer": "no", "rationale": "Describes existing regulations and market conditions, not capabilities or preparedness related to the threat response.", "method": "llm_batch", "batch_id": "batch_8_16464", "batch_size": 29, "batch_pos": 7}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses regulations and purchasing difficulty, not reporting metrics.", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 219}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_17288", "batch_size": 82, "batch_pos": 77}
+{"Q": 11, "answer": "no", "rationale": "Factual statement, not a direct quote.", "method": "llm_batch", "batch_id": "batch_11_3380", "batch_size": 29, "batch_pos": 24}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; factual report about regulations and hurdles is neutral.", "method": "llm_batch", "batch_id": "batch_12_18344", "batch_size": 29, "batch_pos": 24}

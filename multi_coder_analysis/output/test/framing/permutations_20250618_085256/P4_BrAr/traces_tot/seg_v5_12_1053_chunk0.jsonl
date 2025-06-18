@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13528", "batch_size": 260, "batch_pos": 76}
+{"Q": 2, "answer": "no", "rationale": "The segment provides food safety advice using neutral language.", "method": "llm_batch", "batch_id": "batch_2_13612", "batch_size": 260, "batch_pos": 60}
+{"Q": 3, "answer": "no", "rationale": "The segment contains a safety cue ('cook them... as a general food safety precaution'), which is not a Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_12408", "batch_size": 260, "batch_pos": 45}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16472", "batch_size": 260, "batch_pos": 40}
+{"Q": 5, "answer": "no", "rationale": "The segment provides advice/precaution but lacks explicit calming language about the current situation.", "method": "llm_batch", "batch_id": "batch_5_12132", "batch_size": 260, "batch_pos": 39}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_8244", "batch_size": 260, "batch_pos": 24}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_4328", "batch_size": 260, "batch_pos": 23}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16084", "batch_size": 260, "batch_pos": 234, "regex": {"rule": "CapabilityNoReassurance", "span": [149, 158], "captures": []}}

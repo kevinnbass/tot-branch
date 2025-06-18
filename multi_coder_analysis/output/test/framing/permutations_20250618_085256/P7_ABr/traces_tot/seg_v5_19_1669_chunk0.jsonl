@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective. 'greater the risk' modifies a noun.", "method": "llm_batch", "batch_id": "batch_1_12060", "batch_size": 260, "batch_pos": 159}
+{"Q": 2, "answer": "no", "rationale": "'spreads' is neutral. 'greater the risk' is not high-potency. 'could enable' is potential.", "method": "llm_batch", "batch_id": "batch_2_15588", "batch_size": 260, "batch_pos": 113}
+{"Q": 3, "answer": "no", "rationale": "The segment describes potential future risk ('greater the risk'), not realised impact with a moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_14044", "batch_size": 260, "batch_pos": 45}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16788", "batch_size": 260, "batch_pos": 24}
+{"Q": 5, "answer": "no", "rationale": "The segment reports an increasing risk, not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_13276", "batch_size": 260, "batch_pos": 19}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15256", "batch_size": 260, "batch_pos": 246}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_14848", "batch_size": 260, "batch_pos": 233}
+{"Q": 8, "answer": "no", "rationale": "Segment describes a potential future negative possibility/risk, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17332", "batch_size": 260, "batch_pos": 66}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses risk and potential future events, not current numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_17144", "batch_size": 260, "batch_pos": 127}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_17560", "batch_size": 260, "batch_pos": 197, "regex": {"rule": "ReliefSpeculation", "span": [132, 137], "captures": ["could"]}}

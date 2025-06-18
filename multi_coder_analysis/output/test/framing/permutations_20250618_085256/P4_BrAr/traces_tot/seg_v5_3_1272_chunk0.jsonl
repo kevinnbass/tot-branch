@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13528", "batch_size": 260, "batch_pos": 54}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'very rare' and 'still low' which are Reassuring cues (Q5).", "method": "llm_batch", "batch_id": "batch_2_13612", "batch_size": 260, "batch_pos": 39}
+{"Q": 3, "answer": "no", "rationale": "The segment contains low-risk cues ('very rare', 'still low'), which are not Q3 patterns.", "method": "llm_batch", "batch_id": "batch_3_12408", "batch_size": 260, "batch_pos": 27}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16472", "batch_size": 260, "batch_pos": 23}
+{"Q": 5, "answer": "no", "rationale": "The segment reports facts (rare cases, low risk) but the low risk is not intensified.", "method": "llm_batch", "batch_id": "batch_5_12132", "batch_size": 260, "batch_pos": 22}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_8244", "batch_size": 260, "batch_pos": 7}
+{"Q": 7, "answer": "no", "rationale": "The segment contains low-risk statements ('very rare', 'still low') but not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_4328", "batch_size": 260, "batch_pos": 6}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16084", "batch_size": 260, "batch_pos": 219, "regex": {"rule": "CapabilityNoReassurance", "span": [58, 67], "captures": []}}

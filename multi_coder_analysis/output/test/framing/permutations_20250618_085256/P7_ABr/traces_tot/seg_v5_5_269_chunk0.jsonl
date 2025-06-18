@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'increased' modifies 'risk' (noun), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 235}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'increased risk' is not a Q2 cue. 'died', 'spread', and 'infecting' are neutral or moderate verbs.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 209}
+{"Q": 3, "answer": "no", "rationale": "'died' is plain outcome; 'being spread', 'infecting' are moderate but scale is general.", "method": "llm_batch", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 169}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 163}
+{"Q": 5, "answer": "no", "rationale": "The segment reports preparedness action and a negative fact, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 160}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_16048", "batch_size": 260, "batch_pos": 143}
+{"Q": 7, "answer": "no", "rationale": "No negation found.", "method": "llm_batch", "batch_id": "batch_7_15140", "batch_size": 260, "batch_pos": 133}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16976", "batch_size": 260, "batch_pos": 57, "regex": {"rule": "CapabilityNoReassurance", "span": [112, 121], "captures": []}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4640", "batch_size": 217, "batch_pos": 129}
+{"Q": 2, "answer": "no", "rationale": "Factual description of PPE requirements for culling. No high-potency language.", "method": "llm_batch", "batch_id": "batch_2_14348", "batch_size": 158, "batch_pos": 79}
+{"Q": 3, "answer": "no", "rationale": "'culling' and 'depopulation' are containment actions.", "method": "llm_batch", "batch_id": "batch_3_948", "batch_size": 260, "batch_pos": 253}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17320", "batch_size": 260, "batch_pos": 240}
+{"Q": 5, "answer": "no", "rationale": "The segment reports workers are meant to wear full PPE, which is preparedness/protocol, but not explicitly linked to current safety in a calming way.", "method": "llm_batch", "batch_id": "batch_5_15416", "batch_size": 260, "batch_pos": 237}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_3220", "batch_size": 249, "batch_pos": 179}
+{"Q": 7, "answer": "no", "rationale": "The segment states workers are meant to wear full PPE, not a negation.", "method": "llm_batch", "batch_id": "batch_7_3232", "batch_size": 236, "batch_pos": 166}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17100", "batch_size": 260, "batch_pos": 222, "regex": {"rule": "CapabilityNoReassurance", "span": [103, 112], "captures": []}}

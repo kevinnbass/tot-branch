@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6120", "batch_size": 260, "batch_pos": 168}
+{"Q": 2, "answer": "no", "rationale": "'risk' is a noun. 'theoretical' is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 136}
+{"Q": 3, "answer": "no", "rationale": "Describes risk/potential ('risk... is theoretical', 'could happen') and action ('take steps now').", "method": "llm_batch", "batch_id": "batch_3_15456", "batch_size": 260, "batch_pos": 81}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16388", "batch_size": 260, "batch_pos": 68}
+{"Q": 5, "answer": "no", "rationale": "The segment states the risk is 'theoretical' but this is not an intensified low-risk evaluation as required by Q5.", "method": "llm_batch", "batch_id": "batch_5_10724", "batch_size": 260, "batch_pos": 65}
+{"Q": 6, "answer": "no", "rationale": "The segment states the risk is 'theoretical' and discusses taking steps, which is Q5 Explicit Calming, not Q6.", "method": "llm_batch", "batch_id": "batch_6_16524", "batch_size": 260, "batch_pos": 41}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'risk... is \"theoretical\"' which is a low-risk statement, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_9280", "batch_size": 260, "batch_pos": 30}
+{"Q": 8, "answer": "yes", "rationale": "States 'we want to take steps now to reduce that effect', describing a preparedness/prevention action without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_16976", "batch_size": 260, "batch_pos": 197}

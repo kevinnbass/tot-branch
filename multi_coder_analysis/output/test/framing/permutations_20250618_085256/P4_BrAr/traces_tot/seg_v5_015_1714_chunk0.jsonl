@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13528", "batch_size": 260, "batch_pos": 219}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'good partners' which is a positive framing (Q5).", "method": "llm_batch", "batch_id": "batch_2_13612", "batch_size": 260, "batch_pos": 198}
+{"Q": 3, "answer": "no", "rationale": "The segment contains an opinion/assessment ('have been “good partners”'), which is not a Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_12408", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16472", "batch_size": 260, "batch_pos": 172}
+{"Q": 5, "answer": "no", "rationale": "The segment reports positive feedback on partnership but lacks explicit calming language about public safety.", "method": "llm_batch", "batch_id": "batch_5_12132", "batch_size": 260, "batch_pos": 170}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_8244", "batch_size": 260, "batch_pos": 153}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_4328", "batch_size": 260, "batch_pos": 152}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_7056", "batch_size": 260, "batch_pos": 91, "regex": {"rule": "CapabilityNoReassurance", "span": [65, 74], "captures": []}}

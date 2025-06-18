@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11240", "batch_size": 260, "batch_pos": 145}
+{"Q": 2, "answer": "no", "rationale": "'on edge' describes the farmers' state, not the virus's impact.", "method": "llm_batch", "batch_id": "batch_2_16304", "batch_size": 260, "batch_pos": 140}
+{"Q": 3, "answer": "no", "rationale": "'on edge' is psychological; 'on the rise' is background; 'impacted' is plain.", "method": "llm_batch", "batch_id": "batch_3_16424", "batch_size": 260, "batch_pos": 132}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 131}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative state ('on edge') and negative facts without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16900", "batch_size": 260, "batch_pos": 131}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16676", "batch_size": 260, "batch_pos": 127}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16676_r1", "batch_size": 260, "batch_pos": 127}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15204", "batch_size": 260, "batch_pos": 124}
+{"Q": 8, "answer": "no", "rationale": "The segment describes farmers being on edge and states impacted, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_4328", "batch_size": 260, "batch_pos": 94}
+{"Q": 9, "answer": "yes", "rationale": "Reports a numerical metric ('more than 24 states') using a standard verb ('impacted').", "method": "llm_batch", "batch_id": "batch_9_11804", "batch_size": 260, "batch_pos": 66}

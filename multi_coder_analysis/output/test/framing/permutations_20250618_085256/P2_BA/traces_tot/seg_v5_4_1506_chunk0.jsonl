@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'rising concern', which is a psychological state, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 18}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 226}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 149}
+{"Q": 3, "answer": "no", "rationale": "'rising concern' is psychological; 'reported an outbreak' is factual reporting, not moderate verb + scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 149}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 135}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14848_r1", "batch_size": 260, "batch_pos": 135}
+{"Q": 5, "answer": "no", "rationale": "The segment states 'risk to the public remains low' (lacking intensifier for Q5) and notes 'rising concern'.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 131}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 91}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 91}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'the risk to the public remains low'.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 79}

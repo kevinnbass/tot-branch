@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'fatal', but it is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_10004", "batch_size": 260, "batch_pos": 236}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('caused... infections', 'fatal').", "method": "llm_batch", "batch_id": "batch_2_5364", "batch_size": 260, "batch_pos": 210}
+{"Q": 3, "answer": "no", "rationale": "Factual reporting of outcome/scale; 'were fatal' is similar to plain outcome verb.", "method": "llm_batch", "batch_id": "batch_3_16876", "batch_size": 260, "batch_pos": 177}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_14348", "batch_size": 260, "batch_pos": 164}
+{"Q": 5, "answer": "no", "rationale": "This segment reports historical human infections and fatalities, which is not calming.", "method": "llm_batch", "batch_id": "batch_5_14272", "batch_size": 260, "batch_pos": 161}
+{"Q": 6, "answer": "no", "rationale": "The segment uses bare numerals ('863', '18', '455') not minimiser tokens.", "method": "llm_batch", "batch_id": "batch_6_2084", "batch_size": 260, "batch_pos": 137}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 133}
+{"Q": 8, "answer": "no", "rationale": "The segment reports human infections/fatalities data, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_5448", "batch_size": 260, "batch_pos": 76}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical data ('caused 863 human infections', '455 were fatal') using standard verbs.", "method": "llm_batch", "batch_id": "batch_9_17308", "batch_size": 260, "batch_pos": 48}

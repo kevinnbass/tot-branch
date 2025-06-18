@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 81}
+{"Q": 2, "answer": "no", "rationale": "The segment contains no high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 68}
+{"Q": 3, "answer": "no", "rationale": "Factual description, no moderate verbs or scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 48}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 44}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 43}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 34}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 28}
+{"Q": 8, "answer": "no", "rationale": "The segment provides factual context, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 247}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 156}
+{"Q": 9, "answer": "no", "rationale": "Describes a business type, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 156}

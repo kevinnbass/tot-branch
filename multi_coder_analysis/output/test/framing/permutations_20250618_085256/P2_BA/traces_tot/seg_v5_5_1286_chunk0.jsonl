@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16012", "batch_size": 260, "batch_pos": 41}
+{"Q": 2, "answer": "no", "rationale": "The language states outcomes and actions factually.", "method": "llm_batch", "batch_id": "batch_2_16084", "batch_size": 260, "batch_pos": 258}
+{"Q": 3, "answer": "no", "rationale": "The segment reports one bird 'died' (plain outcome verb) and others 'have been quarantined' (containment verb), which do not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_17192", "batch_size": 260, "batch_pos": 211}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_12000", "batch_size": 260, "batch_pos": 199}
+{"Q": 5, "answer": "no", "rationale": "The segment reports outcome (death, quarantine) without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16720", "batch_size": 260, "batch_pos": 197}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_10384", "batch_size": 260, "batch_pos": 171}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16388", "batch_size": 260, "batch_pos": 163}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14680", "batch_size": 260, "batch_pos": 28, "regex": {"rule": "CapabilityNoReassurance", "span": [56, 65], "captures": []}}

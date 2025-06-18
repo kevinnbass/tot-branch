@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 43}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'found dead' and 'infected'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 31}
+{"Q": 3, "answer": "no", "rationale": "The verb 'found dead' is a plain outcome verb excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 11}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 8}
+{"Q": 5, "answer": "no", "rationale": "The segment reports findings about animal interaction but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 7}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_17380", "batch_size": 260, "batch_pos": 259}
+{"Q": 7, "answer": "no", "rationale": "The segment states 'they had little to no interaction', which is a negation about the level of interaction, not a bare negation about risk or impact.", "method": "llm_batch", "batch_id": "batch_7_14200", "batch_size": 260, "batch_pos": 253}
+{"Q": 8, "answer": "no", "rationale": "The segment provides a factual observation/finding, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 216}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 138}
+{"Q": 9, "answer": "no", "rationale": "Reports observation/finding, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 138}

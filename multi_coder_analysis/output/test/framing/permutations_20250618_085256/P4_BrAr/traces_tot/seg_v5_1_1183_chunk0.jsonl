@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11352", "batch_size": 260, "batch_pos": 210}
+{"Q": 2, "answer": "no", "rationale": "The segment reports numbers ordered killed factually, without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_14420", "batch_size": 260, "batch_pos": 174}
+{"Q": 3, "answer": "no", "rationale": "'ordered the deaths' is a containment action, Neutral.", "method": "llm_batch", "batch_id": "batch_3_16636", "batch_size": 260, "batch_pos": 124}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17068", "batch_size": 260, "batch_pos": 103}
+{"Q": 5, "answer": "no", "rationale": "The segment reports ordered deaths without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13904", "batch_size": 260, "batch_pos": 100}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_9656", "batch_size": 260, "batch_pos": 65}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, impact, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_12120", "batch_size": 260, "batch_pos": 62}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16452", "batch_size": 260, "batch_pos": 218, "regex": {"rule": "CapabilityNoReassurance", "span": [111, 120], "captures": []}}

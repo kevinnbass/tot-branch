@@ -1,0 +1,11 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_15708", "batch_size": 260, "batch_pos": 183}
+{"Q": 1, "answer": "no", "rationale": "'significantly' modifies a verb ('spreads'), not a risk adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_15708_r1", "batch_size": 260, "batch_pos": 183}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate verbs and describes potential outcomes, lacking high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_13104", "batch_size": 260, "batch_pos": 159}
+{"Q": 3, "answer": "no", "rationale": "Contains moderate verb ('spreads') and potential negative impact, but is hypothetical ('if... then... could become').", "method": "llm_batch", "batch_id": "batch_3_17196", "batch_size": 260, "batch_pos": 130}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4428", "batch_size": 260, "batch_pos": 121}
+{"Q": 5, "answer": "no", "rationale": "Reports potential negative outcome (prices, availability) but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_17200", "batch_size": 260, "batch_pos": 120}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_8312", "batch_size": 260, "batch_pos": 100}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16624", "batch_size": 260, "batch_pos": 96}
+{"Q": 8, "answer": "no", "rationale": "Describes a potential future negative consequence, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_1180", "batch_size": 260, "batch_pos": 6}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential future impact on 'consumer prices and product availability', not reporting current metrics.", "method": "llm_batch", "batch_id": "batch_9_3168", "batch_size": 260, "batch_pos": 33}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_15952", "batch_size": 260, "batch_pos": 203, "regex": {"rule": "ReliefSpeculation", "span": [158, 163], "captures": ["could"]}}

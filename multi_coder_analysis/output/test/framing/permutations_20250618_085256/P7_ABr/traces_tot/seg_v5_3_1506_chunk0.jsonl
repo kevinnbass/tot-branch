@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'infected' describes a state, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 168}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'infected' and 'catching' are neutral.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 142}
+{"Q": 3, "answer": "no", "rationale": "'infected', 'catching' are neutral; no scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 105}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 100}
+{"Q": 5, "answer": "no", "rationale": "The segment reports facts but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 97}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_16048", "batch_size": 260, "batch_pos": 81}
+{"Q": 7, "answer": "no", "rationale": "No negation found.", "method": "llm_batch", "batch_id": "batch_7_15140", "batch_size": 260, "batch_pos": 74}
+{"Q": 8, "answer": "no", "rationale": "The segment describes developments and instances of infection, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_16976", "batch_size": 260, "batch_pos": 1}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_15244", "batch_size": 260, "batch_pos": 43}
+{"Q": 9, "answer": "no", "rationale": "The segment reports types of animals and instances, not prices or economic metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_15244_r1", "batch_size": 260, "batch_pos": 43}

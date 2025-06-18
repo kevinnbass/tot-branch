@@ -1,0 +1,3 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains scale metrics ('millions', 'nearly 200', '13 states'), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_13020", "batch_size": 217, "batch_pos": 147}
+{"Q": 2, "answer": "no", "rationale": "The verb 'spread' is moderate, and the scale ('millions') does not trigger Q2 without a vivid verb.", "method": "llm_batch", "batch_id": "batch_2_13604", "batch_size": 166, "batch_pos": 97}
+{"Q": 3, "answer": "yes", "rationale": "'spread to' paired with 'millions of poultry flocks' and 'nearly 200 dairy herds' indicates moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_15088", "batch_size": 82, "batch_pos": 24}

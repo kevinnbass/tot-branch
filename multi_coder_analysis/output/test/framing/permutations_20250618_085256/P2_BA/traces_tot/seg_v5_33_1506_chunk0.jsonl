@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers/metrics, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 47}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 255}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 177}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a containment verb, neutral with scale; 'prices are down' is a financial metric.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 177}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 163}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14848_r1", "batch_size": 260, "batch_pos": 163}
+{"Q": 5, "answer": "no", "rationale": "The segment reports positive facts (large hen population, lower prices) but neutrally, not with explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 159}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 118}
+{"Q": 6, "answer": "no", "rationale": "The segment provides scale contrast ('nearly 2 million' vs '310 million') but lacks a minimiser token applied to the smaller number.", "method": "llm_batch_retry", "retry": 2, "batch_id": "batch_6_1504_r2", "batch_size": 260, "batch_pos": 118}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 105}
+{"Q": 8, "answer": "yes", "rationale": "Describes a resource/capability ('estimated 310 million egg-laying hens') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 162}

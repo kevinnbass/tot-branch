@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'amazing' is not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 111}
+{"Q": 2, "answer": "no", "rationale": "The segment contains no language related to Q2 criteria.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 86}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 54}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 50}
+{"Q": 5, "answer": "no", "rationale": "The segment describes a positive aspect but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 47}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16048", "batch_size": 260, "batch_pos": 33}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16048_r1", "batch_size": 260, "batch_pos": 33}
+{"Q": 7, "answer": "no", "rationale": "No negation found.", "method": "llm_batch", "batch_id": "batch_7_15140", "batch_size": 260, "batch_pos": 26}
+{"Q": 8, "answer": "yes", "rationale": "Describes progress in research/understanding ('amazing papers out').", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 214}

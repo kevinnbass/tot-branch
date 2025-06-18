@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4324", "batch_size": 260, "batch_pos": 167}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information about affected birds and states.", "method": "llm_batch", "batch_id": "batch_2_11120", "batch_size": 260, "batch_pos": 161}
+{"Q": 3, "answer": "no", "rationale": "'affected' is an outcome verb (Rule 4).", "method": "llm_batch", "batch_id": "batch_3_5568", "batch_size": 260, "batch_pos": 151}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 149}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information about affected bird numbers and locations without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13740", "batch_size": 260, "batch_pos": 149}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_17380", "batch_size": 260, "batch_pos": 145}
+{"Q": 7, "answer": "no", "rationale": "The segment states the number of birds affected and states, but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_14200", "batch_size": 260, "batch_pos": 140}
+{"Q": 8, "answer": "no", "rationale": "The segment reports factual impact/spread, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 118}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 80}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('nearly 23 million birds', '24 states', '90 commercial', '38 backyard flocks') using standard verbs.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 80}

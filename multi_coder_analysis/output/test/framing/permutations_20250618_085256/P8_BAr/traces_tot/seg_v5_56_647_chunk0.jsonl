@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14768", "batch_size": 217, "batch_pos": 112}
+{"Q": 2, "answer": "no", "rationale": "Describes the nature of findings (\"sobering\") not the threat's impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_11028", "batch_size": 164, "batch_pos": 62}
+{"Q": 3, "answer": "no", "rationale": "The segment describes findings as sobering, not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_16972", "batch_size": 260, "batch_pos": 235}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17248", "batch_size": 260, "batch_pos": 204}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_4072", "batch_size": 260, "batch_pos": 200}
+{"Q": 5, "answer": "no", "rationale": "The segment uses the word 'sobering', which indicates serious or negative findings, not calming or reassuring ones.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_4072_r1", "batch_size": 260, "batch_pos": 200}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2272", "batch_size": 248, "batch_pos": 154}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_11840", "batch_size": 231, "batch_pos": 141}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a characterization of study findings, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_5844", "batch_size": 260, "batch_pos": 211}
+{"Q": 9, "answer": "no", "rationale": "The segment uses evaluative language ('sobering findings').", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 183}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_17288", "batch_size": 82, "batch_pos": 53}
+{"Q": 11, "answer": "no", "rationale": "Authorial language 'sobering findings', not a direct quote providing dominant frame.", "method": "llm_batch", "batch_id": "batch_11_3380", "batch_size": 29, "batch_pos": 5}
+{"Q": 12, "answer": "yes", "rationale": "'sobering findings' describes the nature of results, not amplified threat impact; facts presented neutrally.", "method": "llm_batch", "batch_id": "batch_12_18344", "batch_size": 29, "batch_pos": 5}

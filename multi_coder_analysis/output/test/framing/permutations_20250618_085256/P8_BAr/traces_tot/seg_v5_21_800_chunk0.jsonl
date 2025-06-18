@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16200", "batch_size": 260, "batch_pos": 60}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'worried experts' describes a psychological reaction, not the threat's impact, and is not intensified or linked to scale.", "method": "llm_batch", "batch_id": "batch_2_7056", "batch_size": 260, "batch_pos": 19}
+{"Q": 3, "answer": "no", "rationale": "Refers to low scale, not high scale.", "method": "llm_batch", "batch_id": "batch_3_16868", "batch_size": 260, "batch_pos": 209}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14112", "batch_size": 260, "batch_pos": 186}
+{"Q": 5, "answer": "no", "rationale": "The segment reports difficulty and contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_4004", "batch_size": 260, "batch_pos": 182}
+{"Q": 6, "answer": "no", "rationale": "'small number' uses 'small' which is not a listed minimiser token.", "method": "llm_batch", "batch_id": "batch_6_16500", "batch_size": 260, "batch_pos": 145}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_8480", "batch_size": 260, "batch_pos": 134}
+{"Q": 8, "answer": "no", "rationale": "The segment describes limitations in estimating virulence, but not capabilities, preparedness, or safeguards.", "method": "llm_batch", "batch_id": "batch_8_16872", "batch_size": 260, "batch_pos": 250}
+{"Q": 9, "answer": "no", "rationale": "The segment mentions cases to explain difficulty in estimation, not primarily reporting the number.", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 52}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current difficulty, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_17344", "batch_size": 260, "batch_pos": 247}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement is factual description of difficulty, not explicit framing.", "method": "llm_batch", "batch_id": "batch_11_9280", "batch_size": 260, "batch_pos": 210}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_18340", "batch_size": 260, "batch_pos": 210, "regex": {"rule": "NeutralStats", "span": [24, 39], "captures": ["confirm", "cases"]}}

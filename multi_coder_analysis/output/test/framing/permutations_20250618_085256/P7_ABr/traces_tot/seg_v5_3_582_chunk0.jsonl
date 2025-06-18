@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12060", "batch_size": 260, "batch_pos": 234}
+{"Q": 2, "answer": "no", "rationale": "The segment is a neutral statement about data sharing.", "method": "llm_batch", "batch_id": "batch_2_15588", "batch_size": 260, "batch_pos": 185}
+{"Q": 3, "answer": "no", "rationale": "The segment reports planned action ('will begin sharing data'), not realised impact with a moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_14044", "batch_size": 260, "batch_pos": 113}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16788", "batch_size": 260, "batch_pos": 92}
+{"Q": 5, "answer": "no", "rationale": "The segment reports future action, not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_13276", "batch_size": 260, "batch_pos": 87}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16516", "batch_size": 260, "batch_pos": 53}
+{"Q": 7, "answer": "no", "rationale": "Segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_12572", "batch_size": 253, "batch_pos": 40}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17332", "batch_size": 260, "batch_pos": 122, "regex": {"rule": "CapabilityNoReassurance", "span": [85, 94], "captures": []}}

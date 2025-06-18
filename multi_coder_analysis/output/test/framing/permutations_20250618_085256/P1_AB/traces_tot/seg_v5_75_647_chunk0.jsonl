@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'large amounts' and 'severe disease', not Q1 risk-adjectives modified by intensifiers/comparatives.", "method": "llm_batch", "batch_id": "batch_1_11240", "batch_size": 260, "batch_pos": 125}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information about exposure dose and disease severity.", "method": "llm_batch", "batch_id": "batch_2_16304", "batch_size": 260, "batch_pos": 123}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a hypothetical outcome, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_16424", "batch_size": 260, "batch_pos": 117}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 116}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 116}
+{"Q": 5, "answer": "no", "rationale": "The segment provides a scientific explanation without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16900", "batch_size": 260, "batch_pos": 116}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16676", "batch_size": 260, "batch_pos": 113}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16676", "batch_size": 260, "batch_pos": 113}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15204", "batch_size": 260, "batch_pos": 110}
+{"Q": 8, "answer": "no", "rationale": "The segment describes potential exposure scenarios and outcomes, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_4328", "batch_size": 260, "batch_pos": 87}
+{"Q": 9, "answer": "no", "rationale": "Discusses potential outcome based on exposure, not primarily numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_11804", "batch_size": 260, "batch_pos": 60}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16640", "batch_size": 260, "batch_pos": 38, "regex": {"rule": "ReliefSpeculation", "span": [169, 174], "captures": ["could"]}}

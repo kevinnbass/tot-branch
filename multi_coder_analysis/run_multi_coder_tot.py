@@ -896,6 +896,18 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
             with open(miss_path, 'a', encoding='utf-8') as f:
                 f.write(json.dumps(payload, ensure_ascii=False) + "\n")
 
+    # ------------------------------------------------------------------
+    # Default counters – these will be overwritten when a gold standard
+    # file is available. Initialising them prevents UnboundLocalError when
+    # the evaluation branch is skipped (e.g., production runs without gold
+    # labels). 2025-06-18.
+    # ------------------------------------------------------------------
+    initial_mismatch_count: int = 0
+    fixed_by_fallback: int = 0
+    final_mismatch_count: int = 0
+    regex_mismatch_count: int = 0
+    llm_mismatch_count: int = 0
+
     # --- Processing Path Selection ---
     if batch_size > 1:
         logging.info(f"Processing with batch size = {batch_size} and concurrency={concurrency}")

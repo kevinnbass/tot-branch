@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'possibility', which is about potential, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_13020", "batch_size": 217, "batch_pos": 124}
+{"Q": 2, "answer": "no", "rationale": "The segment discusses preparation for a possibility without using high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_13604", "batch_size": 166, "batch_pos": 74}
+{"Q": 3, "answer": "no", "rationale": "Segment discusses possibility/future hypothetical, not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_15088", "batch_size": 82, "batch_pos": 1}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16976", "batch_size": 260, "batch_pos": 246}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16976_r1", "batch_size": 260, "batch_pos": 246}
+{"Q": 5, "answer": "no", "rationale": "The segment calls for preparedness for a possibility, which is not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_15896", "batch_size": 260, "batch_pos": 234}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 189}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15912", "batch_size": 236, "batch_pos": 166}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17536", "batch_size": 260, "batch_pos": 230, "regex": {"rule": "CapabilityNoReassurance", "span": [24, 31], "captures": []}}

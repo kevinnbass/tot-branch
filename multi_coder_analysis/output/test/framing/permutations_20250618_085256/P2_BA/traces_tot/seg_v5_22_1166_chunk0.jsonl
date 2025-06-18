@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'Fears' which is a psychological state, and 'shortage' which is a noun.", "method": "llm_batch", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 163}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 116}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 45}
+{"Q": 3, "answer": "no", "rationale": "'Fears' is a psychological noun; 'shortage' is impact but not quantified with scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 45}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 31}
+{"Q": 5, "answer": "no", "rationale": "The segment reports fears and potential rule changes, which are not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 27}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14236", "batch_size": 260, "batch_pos": 247}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16180", "batch_size": 260, "batch_pos": 235}
+{"Q": 8, "answer": "yes", "rationale": "Describes a potential future regulatory change ('authorities will relax marketing rules') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 41}

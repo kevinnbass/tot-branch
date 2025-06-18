@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a scale metric ('tens of million') and 'rarely affects humans' (low-risk descriptor), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 109}
+{"Q": 2, "answer": "no", "rationale": "'killed' is a negative verb but not high-potency. The scale is significant but doesn't trigger Q2.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 57}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a plain outcome verb. 'affects' is a plain outcome verb. Neither triggers Q3.", "method": "llm_batch", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 237}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 223}
+{"Q": 5, "answer": "no", "rationale": "The segment reports culling numbers, virus jumping to mammals, and states it 'rarely affects humans' (lacking intensifier for Q5).", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 219}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 177}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 177}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'It [the virus] rarely affects humans'.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 164}

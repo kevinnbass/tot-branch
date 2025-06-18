@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'risk... remains low' (factual statement), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 149}
+{"Q": 2, "answer": "no", "rationale": "This segment contains Reassuring language ('risk... remains low'), not Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 97}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with explicit scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17184", "batch_size": 68, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 258}
+{"Q": 5, "answer": "no", "rationale": "The segment states 'The risk to humans... remains low' (lacking intensifier for Q5).", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 254}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 211}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 211}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'The risk to humans from the bird flu virus remains low'.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 198}

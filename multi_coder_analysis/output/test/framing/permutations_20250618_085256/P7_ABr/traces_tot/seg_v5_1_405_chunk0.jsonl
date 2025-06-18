@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment states neutral facts about a positive test and a known instance, not an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 93}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'tested positive', 'exposure', 'presumed to be infected', and 'second known instance'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 80}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'tested positive' and 'infected' are plain outcome verbs excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 59}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 55}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information about a human case but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 54}
+{"Q": 6, "answer": "no", "rationale": "'second known instance' is not framed with minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 44}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 38}
+{"Q": 8, "answer": "no", "rationale": "The segment reports factual impact/finding, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 257}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 160}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metric ('second known instance') using standard verbs.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 160}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'identified as having been ill'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 5}
+{"Q": 3, "answer": "no", "rationale": "'identified' is plain; 'having been ill' is condition.", "method": "llm_batch", "batch_id": "batch_3_5568", "batch_size": 260, "batch_pos": 246}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 243}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual information about the total number of ill contacts without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13740", "batch_size": 260, "batch_pos": 242}
+{"Q": 6, "answer": "no", "rationale": "Segment uses bare numerals, not a Q6 minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_17380", "batch_size": 260, "batch_pos": 234}
+{"Q": 7, "answer": "no", "rationale": "The segment states total people identified as ill, but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_14200", "batch_size": 260, "batch_pos": 228}
+{"Q": 8, "answer": "no", "rationale": "The segment reports factual impact/spread, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 194}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 119}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('total of seven people', 'six health care workers') using standard verbs.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 119}

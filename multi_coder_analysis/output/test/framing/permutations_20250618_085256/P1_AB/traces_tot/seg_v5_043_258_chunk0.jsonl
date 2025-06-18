@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'dangerous' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_4088", "batch_size": 260, "batch_pos": 158}
+{"Q": 2, "answer": "no", "rationale": "'fight' describes human action. 'dangerous' is an adjective, not part of Q1.", "method": "llm_batch", "batch_id": "batch_2_15012", "batch_size": 260, "batch_pos": 129}
+{"Q": 3, "answer": "no", "rationale": "Describes actions taken and concerns. No moderate verb + scale pattern.", "method": "llm_batch", "batch_id": "batch_3_14976", "batch_size": 260, "batch_pos": 74}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_13720", "batch_size": 260, "batch_pos": 68}
+{"Q": 5, "answer": "no", "rationale": "The segment reports challenges and concerns about research, which are not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_17080", "batch_size": 260, "batch_pos": 66}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_11528", "batch_size": 260, "batch_pos": 41}
+{"Q": 7, "answer": "no", "rationale": "The segment states a past experience, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14504", "batch_size": 260, "batch_pos": 31}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16848", "batch_size": 260, "batch_pos": 169, "regex": {"rule": "CapabilityNoReassurance", "span": [106, 110], "captures": []}}

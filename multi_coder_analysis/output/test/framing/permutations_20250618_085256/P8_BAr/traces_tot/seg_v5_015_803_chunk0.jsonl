@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16200", "batch_size": 260, "batch_pos": 198}
+{"Q": 2, "answer": "no", "rationale": "'troubled' describes a psychological state, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_7056", "batch_size": 260, "batch_pos": 155}
+{"Q": 3, "answer": "no", "rationale": "The segment is a quote about figuring out infection/spread, lacking a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_16972", "batch_size": 260, "batch_pos": 79}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17248", "batch_size": 260, "batch_pos": 51}
+{"Q": 5, "answer": "no", "rationale": "This segment expresses concern about the investigation speed, which is not calming language.", "method": "llm_batch", "batch_id": "batch_5_4072", "batch_size": 260, "batch_pos": 47}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2272", "batch_size": 248, "batch_pos": 3}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_8480", "batch_size": 260, "batch_pos": 251}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a person's reaction/concern, not capability or preparedness itself.", "method": "llm_batch", "batch_id": "batch_8_5844", "batch_size": 260, "batch_pos": 88}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a duration (biographical) and concern, not outbreak metrics.", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 111}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_17288", "batch_size": 82, "batch_pos": 18, "regex": {"rule": "ReliefSpeculation", "span": [140, 145], "captures": ["might"]}}

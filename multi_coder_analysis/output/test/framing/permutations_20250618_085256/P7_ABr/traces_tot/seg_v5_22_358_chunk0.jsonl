@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6120", "batch_size": 260, "batch_pos": 105}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verb, potent metaphor, superlative+negative noun, or critical alert phrase found.", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 78}
+{"Q": 3, "answer": "no", "rationale": "Describes risk level ('doesn't represent a significant health threat').", "method": "llm_batch", "batch_id": "batch_3_15456", "batch_size": 260, "batch_pos": 28}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16388", "batch_size": 260, "batch_pos": 16}
+{"Q": 5, "answer": "no", "rationale": "The segment contains a bare negation ('doesn’t represent a significant health threat') which is excluded by Q5 and handled under Q7.", "method": "llm_batch", "batch_id": "batch_5_10724", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_16048", "batch_size": 260, "batch_pos": 250}
+{"Q": 7, "answer": "yes", "rationale": "'doesn't represent a significant health threat' is a bare negation/low-risk statement.", "method": "llm_batch", "batch_id": "batch_7_15140", "batch_size": 260, "batch_pos": 239}

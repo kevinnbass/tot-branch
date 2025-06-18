@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'risk... remains low', which is a calming phrase, not a Q1 cue.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 210}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'risk...remains low' (Q5 cue) and 'not currently recommended'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 190}
+{"Q": 3, "answer": "no", "rationale": "Risk assessment and recommendation, no moderate verbs or scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 167}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 163}
+{"Q": 5, "answer": "no", "rationale": "The segment contains a bare low-risk statement ('risk to the general public from bird flu remains low') which does not meet the intensified low-risk criteria for Q5.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 162}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 149}
+{"Q": 7, "answer": "no", "rationale": "'remains low' is an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 142}
+{"Q": 8, "answer": "no", "rationale": "Contains explicit reassurance ('risk... remains low'), failing the 'without active reassurance' criteria.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 84}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 205}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit calming language: 'risk to the general public from bird flu remains low'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 205}

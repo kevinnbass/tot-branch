@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 52}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 260}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 181}
+{"Q": 3, "answer": "no", "rationale": "The segment provides factual information about restrictions.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 181}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 167}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14848_r1", "batch_size": 260, "batch_pos": 167}
+{"Q": 5, "answer": "no", "rationale": "The segment reports temporary restrictions, which is not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 163}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 122}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 122}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 109}
+{"Q": 8, "answer": "yes", "rationale": "Describes an implemented safeguard ('Colombia imposed temporary restrictions') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 166}

@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15984", "batch_size": 217, "batch_pos": 183}
+{"Q": 2, "answer": "no", "rationale": "'impacted' is a neutral verb. The segment states factual outcomes ('impacted millions of animals', 'outbreaks in commercial poultry').", "method": "llm_batch", "batch_id": "batch_2_12604", "batch_size": 163, "batch_pos": 134}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17108", "batch_size": 71, "batch_pos": 50}
+{"Q": 3, "answer": "yes", "rationale": "The moderate verb 'impacted' is paired with the large-scale quantity 'millions of animals'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17108_r1", "batch_size": 71, "batch_pos": 50}

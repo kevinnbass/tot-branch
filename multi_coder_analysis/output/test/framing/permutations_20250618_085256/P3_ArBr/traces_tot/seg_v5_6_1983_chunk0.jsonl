@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_8712", "batch_size": 260, "batch_pos": 115}
+{"Q": 2, "answer": "no", "rationale": "'increase in outbreaks' describes a metric, not the virus's impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_9164", "batch_size": 260, "batch_pos": 72}
+{"Q": 3, "answer": "no", "rationale": "WHO and CDC 'have said that there has been an increase' (plain verb + descriptive) but lacks a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_16892", "batch_size": 260, "batch_pos": 260}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_9108", "batch_size": 260, "batch_pos": 244}
+{"Q": 5, "answer": "no", "rationale": "Reports increase in outbreaks factually; lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16968", "batch_size": 260, "batch_pos": 243}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11984", "batch_size": 260, "batch_pos": 193}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_15244", "batch_size": 260, "batch_pos": 175}
+{"Q": 7, "answer": "no", "rationale": "The segment states a fact about an increase in outbreaks; it does not contain a negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_15244_r1", "batch_size": 260, "batch_pos": 175}
+{"Q": 8, "answer": "no", "rationale": "The segment states WHO/CDC said there has been an increase in outbreaks, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15160", "batch_size": 260, "batch_pos": 217}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports a numerical metric ('increase in outbreaks') using a standard verb.", "method": "llm_batch", "batch_id": "batch_9_11244", "batch_size": 225, "batch_pos": 46}

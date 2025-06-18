@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains advice/action and 'crisis' (noun), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_13020", "batch_size": 217, "batch_pos": 132}
+{"Q": 2, "answer": "no", "rationale": "The segment focuses on preparedness ('prepare for the next crisis') without using high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_13604", "batch_size": 166, "batch_pos": 82}
+{"Q": 3, "answer": "no", "rationale": "Segment is a call to preparedness, not virus impact with scale.", "method": "llm_batch", "batch_id": "batch_3_15088", "batch_size": 82, "batch_pos": 9}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16976", "batch_size": 260, "batch_pos": 254}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16976_r1", "batch_size": 260, "batch_pos": 254}
+{"Q": 5, "answer": "no", "rationale": "The segment is a call to action to prepare, which is not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_15896", "batch_size": 260, "batch_pos": 242}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17300", "batch_size": 260, "batch_pos": 197}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15912", "batch_size": 236, "batch_pos": 174}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17536", "batch_size": 260, "batch_pos": 238, "regex": {"rule": "CapabilityNoReassurance", "span": [20, 27], "captures": []}}

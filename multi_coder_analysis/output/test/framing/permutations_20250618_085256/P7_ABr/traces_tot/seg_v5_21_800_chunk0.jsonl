@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'small number' (metric) and 'difficult to estimate', not an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 158}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'small number', 'confirmed cases', 'difficult to estimate', and 'virulence'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 141}
+{"Q": 3, "answer": "no", "rationale": "Impact is vague ('small number') and not paired with a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 119}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 115}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a factual statement and an assessment of difficulty but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 114}
+{"Q": 6, "answer": "no", "rationale": "Minimiser 'small number' lacks explicit scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 101}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 95}
+{"Q": 8, "answer": "no", "rationale": "Describes a limitation in assessment, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 46}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 188}
+{"Q": 9, "answer": "no", "rationale": "Contains evaluative/qualifying language: 'small number', 'difficult to estimate'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 188}

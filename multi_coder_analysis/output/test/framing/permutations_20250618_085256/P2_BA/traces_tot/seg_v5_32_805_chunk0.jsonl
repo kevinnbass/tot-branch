@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'fairly constant' which modifies an adjective not classified as a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 190}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 141}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 69}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 69}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 55}
+{"Q": 5, "answer": "no", "rationale": "The segment reports consistency in assessment, not the content of the assessment itself as a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 51}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 11}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16180", "batch_size": 260, "batch_pos": 259}
+{"Q": 8, "answer": "yes", "rationale": "Describes a response measure ('CDC’s kept their assessment... fairly constant') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 65}

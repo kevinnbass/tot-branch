@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7900", "batch_size": 260, "batch_pos": 122}
+{"Q": 2, "answer": "no", "rationale": "The metaphors describe the effectiveness of a solution, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_15688", "batch_size": 260, "batch_pos": 95}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 63}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with explicit scale or impact information.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_5272_r1", "batch_size": 260, "batch_pos": 63}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 59}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 57}
+{"Q": 5, "answer": "no", "rationale": "States effectiveness but immediately follows with negative framing; no explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_15792_r1", "batch_size": 260, "batch_pos": 57}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6240", "batch_size": 260, "batch_pos": 40}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_1320", "batch_size": 260, "batch_pos": 32}
+{"Q": 7, "answer": "yes", "rationale": "'don’t have efficacious PrEP', 'is not hitting', 'not even getting' are bare negations.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_1320_r1", "batch_size": 260, "batch_pos": 32}

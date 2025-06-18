@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'low' modifying 'risk', which is not a Q1 risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4324", "batch_size": 260, "batch_pos": 197}
+{"Q": 2, "answer": "no", "rationale": "The segment provides a factual risk assessment.", "method": "llm_batch", "batch_id": "batch_2_11120", "batch_size": 260, "batch_pos": 190}
+{"Q": 3, "answer": "no", "rationale": "The segment states risk appears low, which is Q5 territory.", "method": "llm_batch", "batch_id": "batch_3_5568", "batch_size": 260, "batch_pos": 177}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 175}
+{"Q": 5, "answer": "no", "rationale": "The phrase 'risk... appears low' is a low-risk evaluation but lacks the intensifier required for Q5.", "method": "llm_batch", "batch_id": "batch_5_13740", "batch_size": 260, "batch_pos": 174}
+{"Q": 6, "answer": "no", "rationale": "Segment contains a low-risk statement ('risk... appears low') but not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_17380", "batch_size": 260, "batch_pos": 170}
+{"Q": 7, "answer": "no", "rationale": "'The risk... appears low' is an explicit calming cue (Q5), not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14200", "batch_size": 260, "batch_pos": 164}
+{"Q": 8, "answer": "no", "rationale": "The segment explicitly states the risk is low ('risk of human-to-human spread... appears low').", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 139}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 90}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit calming language: 'appears low'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 90}

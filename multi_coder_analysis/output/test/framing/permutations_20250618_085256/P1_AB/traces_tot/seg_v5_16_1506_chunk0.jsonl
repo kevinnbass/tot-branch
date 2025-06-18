@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7900", "batch_size": 260, "batch_pos": 181}
+{"Q": 2, "answer": "no", "rationale": "The segment states a fact neutrally without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_15688", "batch_size": 260, "batch_pos": 153}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 116}
+{"Q": 3, "answer": "no", "rationale": "'diagnosed' and 'died' are plain outcome verbs, excluded by Q3 rule 4.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_5272_r1", "batch_size": 260, "batch_pos": 116}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 112}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_13976_r1", "batch_size": 260, "batch_pos": 112}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical facts, not explicit calming cues about the current situation.", "method": "llm_batch", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 110}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6240", "batch_size": 260, "batch_pos": 91}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1320", "batch_size": 260, "batch_pos": 83}
+{"Q": 8, "answer": "no", "rationale": "Describes historical impact/statistics ('nearly 900 people have been diagnosed... and more than 460 people have died').", "method": "llm_batch", "batch_id": "batch_8_15228", "batch_size": 260, "batch_pos": 241}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports case and death numbers ('nearly 900 people have been diagnosed', 'more than 460 people have died') using standard verbs.", "method": "llm_batch", "batch_id": "batch_9_16608", "batch_size": 260, "batch_pos": 10}

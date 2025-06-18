@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4088", "batch_size": 260, "batch_pos": 51}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, potent metaphors, or superlative negative nouns.", "method": "llm_batch", "batch_id": "batch_2_15012", "batch_size": 260, "batch_pos": 23}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 239}
+{"Q": 3, "answer": "no", "rationale": "'allowed' is not a Q3 verb + scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_5272_r1", "batch_size": 260, "batch_pos": 239}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 234}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_13976_r1", "batch_size": 260, "batch_pos": 234}
+{"Q": 5, "answer": "no", "rationale": "The segment reports requirements, not explicit calming cues about current safety/control.", "method": "llm_batch", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 232}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6240", "batch_size": 260, "batch_pos": 208}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'proof of negative flu tests' without an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_1320", "batch_size": 260, "batch_pos": 199}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'definitely raises our concern level', but 'concern' is a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11876", "batch_size": 260, "batch_pos": 198}
+{"Q": 2, "answer": "no", "rationale": "'raises our concern level' is a psychological verb phrase, not high-potency framing of the threat's action.", "method": "llm_batch", "batch_id": "batch_2_6224", "batch_size": 260, "batch_pos": 194}
+{"Q": 3, "answer": "no", "rationale": "'raises our concern level' is a psychological verb, treated as Neutral.", "method": "llm_batch", "batch_id": "batch_3_17004", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16420", "batch_size": 260, "batch_pos": 176}
+{"Q": 5, "answer": "no", "rationale": "Reports increased concern level, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15072", "batch_size": 260, "batch_pos": 176}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16412", "batch_size": 260, "batch_pos": 171}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation of the specified types.", "method": "llm_batch", "batch_id": "batch_7_3060", "batch_size": 260, "batch_pos": 167}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11792", "batch_size": 260, "batch_pos": 157, "regex": {"rule": "CapabilityNoReassurance", "span": [159, 163], "captures": []}}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'increase the possibility', not an intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11876", "batch_size": 260, "batch_pos": 123}
+{"Q": 2, "answer": "no", "rationale": "'cropping up' is not a high-potency verb.", "method": "llm_batch", "batch_id": "batch_2_6224", "batch_size": 260, "batch_pos": 122}
+{"Q": 3, "answer": "no", "rationale": "'cropping up' is not a moderate verb from the list. 'could increase' is hypothetical.", "method": "llm_batch", "batch_id": "batch_3_17004", "batch_size": 260, "batch_pos": 113}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16420", "batch_size": 260, "batch_pos": 107}
+{"Q": 5, "answer": "no", "rationale": "Reports virus cropping up and potential increase in infections, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15072", "batch_size": 260, "batch_pos": 107}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16412", "batch_size": 260, "batch_pos": 103}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation of the specified types.", "method": "llm_batch", "batch_id": "batch_7_3060", "batch_size": 260, "batch_pos": 102}
+{"Q": 8, "answer": "no", "rationale": "Expresses concern about potential future spread, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11792", "batch_size": 260, "batch_pos": 96}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote about the possibility of infections, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_16864", "batch_size": 260, "batch_pos": 54}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16828", "batch_size": 260, "batch_pos": 49, "regex": {"rule": "ReliefSpeculation", "span": [58, 63], "captures": ["could"]}}

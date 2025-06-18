@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "'HPAI' is technical. 'killed millions' and 'devastated' are vivid verbs/impact descriptions, not intensified risk-adjectives.", "method": "llm_batch", "batch_id": "batch_1_10004", "batch_size": 260, "batch_pos": 105}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_5364", "batch_size": 260, "batch_pos": 82, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [128, 138], "captures": []}}

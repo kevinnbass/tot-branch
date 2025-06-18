@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15512", "batch_size": 260, "batch_pos": 58}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_15612", "batch_size": 260, "batch_pos": 53, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [189, 200], "captures": []}}

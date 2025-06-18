@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11240", "batch_size": 260, "batch_pos": 185}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information about states affected.", "method": "llm_batch", "batch_id": "batch_2_16304", "batch_size": 260, "batch_pos": 179}
+{"Q": 3, "answer": "no", "rationale": "'reported' is a plain verb, not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_16424", "batch_size": 260, "batch_pos": 166}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 164}
+{"Q": 5, "answer": "no", "rationale": "The segment reports the scope of cases without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16900", "batch_size": 260, "batch_pos": 163}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16676", "batch_size": 260, "batch_pos": 159}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16676_r1", "batch_size": 260, "batch_pos": 159}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15204", "batch_size": 260, "batch_pos": 155}
+{"Q": 8, "answer": "no", "rationale": "The segment describes that most states have reported cases, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_4328", "batch_size": 260, "batch_pos": 123}
+{"Q": 9, "answer": "yes", "rationale": "Reports a numerical metric ('Most states') using a standard verb ('reported').", "method": "llm_batch", "batch_id": "batch_9_11804", "batch_size": 260, "batch_pos": 82}

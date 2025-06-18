@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 250}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 199}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 126}
+{"Q": 3, "answer": "no", "rationale": "The segment provides a factual statement about transmission risk.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 126}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 112}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14848_r1", "batch_size": 260, "batch_pos": 112}
+{"Q": 5, "answer": "no", "rationale": "The segment states humans 'cannot contract' bird flu from eating poultry/eggs. This is a bare negation and lacks the keyword 'safe' required for Q5 consumption safety.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 108}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 68}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 68}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 56}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'cannot contract bird flu' without an explicit calming cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_16788_r1", "batch_size": 249, "batch_pos": 56}

@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11420", "batch_size": 260, "batch_pos": 86}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_13276", "batch_size": 260, "batch_pos": 63}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses sales figures, which are financial metrics treated as Neutral.", "method": "llm_batch", "batch_id": "batch_3_16716", "batch_size": 260, "batch_pos": 6}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15704", "batch_size": 260, "batch_pos": 256}
+{"Q": 5, "answer": "no", "rationale": "Reports increasing sales, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16400", "batch_size": 260, "batch_pos": 255}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_15680", "batch_size": 260, "batch_pos": 220}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16772", "batch_size": 260, "batch_pos": 212}
+{"Q": 8, "answer": "no", "rationale": "Describes a trend, not capability/preparedness/safeguard/future possibility.", "method": "llm_batch", "batch_id": "batch_8_4040", "batch_size": 260, "batch_pos": 61}
+{"Q": 9, "answer": "no", "rationale": "Uses a vivid verb ('jumped') to describe sales change.", "method": "llm_batch", "batch_id": "batch_9_16772", "batch_size": 260, "batch_pos": 64}
+{"Q": 10, "answer": "no", "rationale": "The segment reports on a sales trend, not speculating about future relief.", "method": "llm_batch", "batch_id": "batch_10_16444", "batch_size": 260, "batch_pos": 221}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a frame. Embedded quote is about sales figures.", "method": "llm_batch", "batch_id": "batch_11_4464", "batch_size": 260, "batch_pos": 197}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_18372", "batch_size": 260, "batch_pos": 197, "regex": {"rule": "NeutralStats", "span": [72, 109], "captures": ["report", "percent"]}}

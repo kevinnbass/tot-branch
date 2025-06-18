@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a scale metric ('vast numbers'), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 65}
+{"Q": 2, "answer": "no", "rationale": "'affect' is a neutral verb. 'vast numbers' describes scale but is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "'could affect vast numbers' is hypothetical and uses a general term, not specific scale.", "method": "llm_batch", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 194}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 180}
+{"Q": 5, "answer": "no", "rationale": "The segment reports an outbreak threatening birds/poultry, which is not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 176}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 135}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 135}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 122}
+{"Q": 8, "answer": "yes", "rationale": "Describes a condition for stopping spread ('unless international funding is secured') related to future capability/response without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 177}

@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14764", "batch_size": 260, "batch_pos": 15}
+{"Q": 2, "answer": "no", "rationale": "The segment reports factual price data using neutral language.", "method": "llm_batch", "batch_id": "batch_2_7520", "batch_size": 260, "batch_pos": 15}
+{"Q": 3, "answer": "no", "rationale": "The segment reports factual price data, which is excluded from Q3.", "method": "llm_batch", "batch_id": "batch_3_16732", "batch_size": 260, "batch_pos": 14}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16524", "batch_size": 260, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "The segment states a fact about egg prices and does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16524_r1", "batch_size": 260, "batch_pos": 13}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_16952", "batch_size": 260, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a factual price point without any explicit calming language or framing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_16952_r1", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14436", "batch_size": 260, "batch_pos": 13}
+{"Q": 7, "answer": "no", "rationale": "The segment states price data, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_6516", "batch_size": 260, "batch_pos": 12}
+{"Q": 8, "answer": "no", "rationale": "Reports price data, not capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_17224", "batch_size": 260, "batch_pos": 10}
+{"Q": 9, "answer": "yes", "rationale": "Reports price using a standard verb: 'remained at $2.07'.", "method": "llm_batch", "batch_id": "batch_9_16428", "batch_size": 260, "batch_pos": 3}

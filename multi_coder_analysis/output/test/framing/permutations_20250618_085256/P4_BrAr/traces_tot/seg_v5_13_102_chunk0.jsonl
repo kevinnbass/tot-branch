@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13192", "batch_size": 217, "batch_pos": 205}
+{"Q": 2, "answer": "no", "rationale": "This segment contains a safety assurance (Q5), not Q2 language.", "method": "llm_batch", "batch_id": "batch_2_11356", "batch_size": 167, "batch_pos": 156}
+{"Q": 3, "answer": "no", "rationale": "'have been detected' is a plain outcome verb. Safety statement relates to Q5.", "method": "llm_batch", "batch_id": "batch_3_16604", "batch_size": 74, "batch_pos": 63}
+{"Q": 4, "answer": "no", "rationale": "The segment reports on the lack of human cases and safety of products but does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_12008", "batch_size": 48, "batch_pos": 37}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_9996", "batch_size": 43, "batch_pos": 32, "regex": {"rule": "ExplicitCalming", "span": [88, 107], "captures": [null]}}

@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 238}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 161}
+{"Q": 3, "answer": "no", "rationale": "'diagnosed' and 'died' are plain outcome verbs, neutral with scale unless vivid language is added.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 161}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 147}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14848_r1", "batch_size": 260, "batch_pos": 147}
+{"Q": 5, "answer": "no", "rationale": "The segment reports global cases and deaths, which are not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 143}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 102}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 102}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 90}
+{"Q": 8, "answer": "no", "rationale": "The segment provides historical data, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 150}
+{"Q": 9, "answer": "no", "rationale": "The segment reports health metrics (cases, deaths), which are numerical metrics but not economic/price data as defined by Q9 examples.", "method": "llm_batch", "batch_id": "batch_9_12716", "batch_size": 239, "batch_pos": 163}
+{"Q": 10, "answer": "no", "rationale": "The segment reports historical data, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_4360", "batch_size": 260, "batch_pos": 249}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17824", "batch_size": 260, "batch_pos": 207}

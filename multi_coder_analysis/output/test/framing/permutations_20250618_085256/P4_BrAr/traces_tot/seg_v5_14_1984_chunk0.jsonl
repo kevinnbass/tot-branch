@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13528", "batch_size": 260, "batch_pos": 95}
+{"Q": 2, "answer": "no", "rationale": "The segment provides health recommendations using neutral language.", "method": "llm_batch", "batch_id": "batch_2_13612", "batch_size": 260, "batch_pos": 79}
+{"Q": 3, "answer": "no", "rationale": "The segment contains advice/recommendation ('recommended that... to wear'), which is not a Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_12408", "batch_size": 260, "batch_pos": 64}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16472", "batch_size": 260, "batch_pos": 59}
+{"Q": 5, "answer": "no", "rationale": "The segment provides recommendations but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12132", "batch_size": 260, "batch_pos": 58}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_8244", "batch_size": 260, "batch_pos": 43}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_4328", "batch_size": 260, "batch_pos": 42}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16084", "batch_size": 260, "batch_pos": 251, "regex": {"rule": "CapabilityNoReassurance", "span": [37, 41], "captures": []}}

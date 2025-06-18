@@ -1,0 +1,3 @@
+{"Q": 1, "answer": "no", "rationale": "'devastating' and 'catastrophic' are not modified by an intensifier or comparative in this segment.", "method": "llm_batch", "batch_id": "batch_1_15984", "batch_size": 217, "batch_pos": 202}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_12604", "batch_size": 163, "batch_pos": 150}
+{"Q": 2, "answer": "yes", "rationale": "The quoted source uses high-potency adjectives 'devastating' and 'catastrophic' to describe expected impacts.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_12604_r1", "batch_size": 163, "batch_pos": 150}

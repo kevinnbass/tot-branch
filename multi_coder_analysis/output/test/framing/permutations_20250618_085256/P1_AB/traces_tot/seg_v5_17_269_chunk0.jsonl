@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'very low', which is an intensifier modifying a low-risk adjective, triggering Q5 (Reassuring), not Q1 (Alarmist).", "method": "llm_batch", "batch_id": "batch_1_7900", "batch_size": 260, "batch_pos": 247}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_15688", "batch_size": 260, "batch_pos": 219}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 178}
+{"Q": 3, "answer": "no", "rationale": "'monitor' is not a Q3 verb + scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_5272_r1", "batch_size": 260, "batch_pos": 178}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 174}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_13976_r1", "batch_size": 260, "batch_pos": 174}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'The risk to humans is still very low' is an intensified low-risk evaluation cue.", "method": "llm_batch", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 172}

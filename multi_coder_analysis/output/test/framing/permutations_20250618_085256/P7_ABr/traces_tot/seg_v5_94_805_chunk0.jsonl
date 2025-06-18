@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'huge dent' is a metaphor, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 131}
+{"Q": 2, "answer": "no", "rationale": "The segment contains no language related to Q2 criteria.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 106}
+{"Q": 2, "answer": "no", "rationale": "The segment contains no language related to Q2 criteria.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 106}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 74}
+{"Q": 3, "answer": "no", "rationale": "'make a huge dent' is a metaphorical phrase, not a moderate verb + scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_15768_r1", "batch_size": 260, "batch_pos": 74}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 70}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 67}
+{"Q": 5, "answer": "no", "rationale": "Expresses an opinion about potential future impact, not current safety or control.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_6644_r1", "batch_size": 260, "batch_pos": 67}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16048", "batch_size": 260, "batch_pos": 52}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16048_r1", "batch_size": 260, "batch_pos": 52}
+{"Q": 7, "answer": "no", "rationale": "No negation found.", "method": "llm_batch", "batch_id": "batch_7_15140", "batch_size": 260, "batch_pos": 45}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 233, "regex": {"rule": "CapabilityNoReassurance", "span": [91, 98], "captures": []}}

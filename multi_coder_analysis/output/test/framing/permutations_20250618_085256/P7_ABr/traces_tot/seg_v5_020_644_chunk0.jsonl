@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'short-term blip that will resolve itself very quickly', which is a calming phrase, not a Q1 cue.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 77}
+{"Q": 2, "answer": "no", "rationale": "The segment uses the downplaying metaphor 'short-term blip', which is not alarming framing.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 64}
+{"Q": 3, "answer": "no", "rationale": "Impact is vague and downplayed ('short-term blip').", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 44}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 40}
+{"Q": 5, "answer": "no", "rationale": "The segment reports supply issues are a 'short-term blip' but lacks explicit calming language about safety or risk.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 39}
+{"Q": 6, "answer": "no", "rationale": "Minimiser 'short-term blip' lacks explicit scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 30}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 24}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a hopeful future possibility framed reassuringly ('short-term blip that will resolve itself very quickly').", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 244}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 153}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit calming language: 'short-term blip that will resolve itself very quickly'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 153}

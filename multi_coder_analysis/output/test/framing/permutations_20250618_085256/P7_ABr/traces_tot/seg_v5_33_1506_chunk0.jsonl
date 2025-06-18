@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment describes price decrease, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 198}
+{"Q": 2, "answer": "no", "rationale": "The verb 'killed' is neutral, and the numbers are scale.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 172}
+{"Q": 3, "answer": "no", "rationale": "'killed' is containment, neutralising scale; 'prices are down' is financial.", "method": "llm_batch", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 134}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 128}
+{"Q": 5, "answer": "no", "rationale": "The segment reports facts but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 125}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_16048", "batch_size": 260, "batch_pos": 108}
+{"Q": 7, "answer": "no", "rationale": "No negation found.", "method": "llm_batch", "batch_id": "batch_7_15140", "batch_size": 260, "batch_pos": 99}
+{"Q": 8, "answer": "no", "rationale": "The segment reports market data (number of hens, price), not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_16976", "batch_size": 260, "batch_pos": 24}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_15244", "batch_size": 260, "batch_pos": 59}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports numerical metrics and price changes ('nearly 2 million birds that were killed', 'estimated 310 million egg-laying hens', 'wholesale egg prices are down about 25%') using standard descriptive language without vivid verbs or risk adjectives.", "method": "llm_batch_retry", "retry": 2, "batch_id": "batch_9_15244_r2", "batch_size": 260, "batch_pos": 59}

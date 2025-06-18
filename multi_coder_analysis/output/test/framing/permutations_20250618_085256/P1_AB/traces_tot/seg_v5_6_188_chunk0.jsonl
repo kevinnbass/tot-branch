@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7900", "batch_size": 260, "batch_pos": 256}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_15688", "batch_size": 260, "batch_pos": 228}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'confirmed', 'tested positive', 'found', and 'detected' are neutral and describe presence, not impact scale.", "method": "llm_batch", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 187}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_13976_r1", "batch_size": 260, "batch_pos": 183}
+{"Q": 5, "answer": "no", "rationale": "The segment does not contain explicit calming language or cues about safety, control, or minimized risk.", "method": "llm_batch", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 181}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6240", "batch_size": 260, "batch_pos": 161}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1320", "batch_size": 260, "batch_pos": 152}
+{"Q": 8, "answer": "no", "rationale": "The segment reports findings/facts (samples tested positive).", "method": "llm_batch", "batch_id": "batch_8_16848", "batch_size": 260, "batch_pos": 45}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports the number of positive samples ('samples from four stranded seals tested positive') and states affected ('found in more than 40 states') using standard verbs.", "method": "llm_batch", "batch_id": "batch_9_16608", "batch_size": 260, "batch_pos": 44}

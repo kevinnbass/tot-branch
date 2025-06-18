@@ -1,0 +1,3 @@
+{"Q": 1, "answer": "no", "rationale": "The phrase 'genie’s out of the bottle' is a metaphor. 'worst affected areas' describes location/scope.", "method": "llm_batch", "batch_id": "batch_1_15280", "batch_size": 260, "batch_pos": 115}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_13948", "batch_size": 260, "batch_pos": 78}
+{"Q": 2, "answer": "yes", "rationale": "The phrase 'the genie’s out of the bottle' is a potent metaphor framing the situation as uncontrollable.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_13948_r1", "batch_size": 260, "batch_pos": 78}

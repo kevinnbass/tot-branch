@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers/location, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 120}
+{"Q": 2, "answer": "no", "rationale": "'killed' is a negative verb but not high-potency. The scale is significant but doesn't trigger Q2.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 68}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a containment verb, which is neutral even with large numbers.", "method": "llm_batch", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 247}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 233}
+{"Q": 5, "answer": "no", "rationale": "The segment reports national culling numbers and persistence, which are not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 229}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 187}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 187}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 174}
+{"Q": 8, "answer": "yes", "rationale": "Describes a safeguard ('52.5 million birds have been killed') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 224}

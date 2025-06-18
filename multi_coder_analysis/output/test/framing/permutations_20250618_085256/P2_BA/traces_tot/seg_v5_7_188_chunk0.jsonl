@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'risk... is low' (factual statement), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 106}
+{"Q": 2, "answer": "no", "rationale": "This segment contains Reassuring language ('risk... is low'), not Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 54}
+{"Q": 3, "answer": "no", "rationale": "'risk to the public... is low' is a risk assessment, not moderate verb + realised impact.", "method": "llm_batch", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 234}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 220}
+{"Q": 5, "answer": "no", "rationale": "The segment states 'risk to the public... is low' (lacking intensifier for Q5) and advises precautions.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 216}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 174}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 174}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'The risk to the public... is low'.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 161}

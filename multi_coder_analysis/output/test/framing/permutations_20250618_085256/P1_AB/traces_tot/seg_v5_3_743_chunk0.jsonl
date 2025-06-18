@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'risk' is a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4640", "batch_size": 217, "batch_pos": 155}
+{"Q": 2, "answer": "no", "rationale": "Quote about risk reduction. 'reduce the risk' is not Q2. 'emerging' is not high-potency.", "method": "llm_batch", "batch_id": "batch_2_14348", "batch_size": 158, "batch_pos": 102}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_11712", "batch_size": 67, "batch_pos": 14}
+{"Q": 3, "answer": "no", "rationale": "No moderate verbs paired with scale/impact information are present.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_11712_r1", "batch_size": 67, "batch_pos": 14}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_id": "batch_4_16996", "batch_size": 53, "batch_pos": 1}
+{"Q": 5, "answer": "no", "rationale": "The segment states preventing seasonal flu in workers 'may also reduce the risk of new versions... emerging', which is about reducing the risk of future emergence, not current safety.", "method": "llm_batch", "batch_id": "batch_5_15416", "batch_size": 260, "batch_pos": 258}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_3220", "batch_size": 249, "batch_pos": 198}
+{"Q": 7, "answer": "no", "rationale": "The segment states preventing flu may reduce risk, not a negation.", "method": "llm_batch", "batch_id": "batch_7_3232", "batch_size": 236, "batch_pos": 185}
+{"Q": 8, "answer": "yes", "rationale": "Describes a safeguard/action ('Preventing seasonal influenza') and a hopeful future possibility ('may also reduce the risk').", "method": "llm_batch", "batch_id": "batch_8_17100", "batch_size": 260, "batch_pos": 237}

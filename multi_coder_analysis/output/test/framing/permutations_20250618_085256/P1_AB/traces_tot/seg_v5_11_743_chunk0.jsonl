@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'concern' is a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4640", "batch_size": 217, "batch_pos": 163}
+{"Q": 2, "answer": "no", "rationale": "Quote stating something is a 'concern'. Describes a psychological state, not high-potency language about impact.", "method": "llm_batch", "batch_id": "batch_2_14348", "batch_size": 158, "batch_pos": 109}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_11712", "batch_size": 67, "batch_pos": 21}
+{"Q": 3, "answer": "no", "rationale": "'devastating' describes a feeling; 'recording' is not a moderate verb denoting impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_11712_r1", "batch_size": 67, "batch_pos": 21}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_id": "batch_4_16996", "batch_size": 53, "batch_pos": 8}
+{"Q": 5, "answer": "no", "rationale": "Explicitly states 'it's a concern', which is the opposite of a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17168", "batch_size": 50, "batch_pos": 5}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_3220", "batch_size": 249, "batch_pos": 205}
+{"Q": 7, "answer": "no", "rationale": "The segment states something has occurred and is a concern, not a negation.", "method": "llm_batch", "batch_id": "batch_7_3232", "batch_size": 236, "batch_pos": 192}
+{"Q": 8, "answer": "no", "rationale": "Factual description of historical event and associated concern, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17100", "batch_size": 260, "batch_pos": 243}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote expressing concern, not numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_15784", "batch_size": 225, "batch_pos": 200}
+{"Q": 10, "answer": "no", "rationale": "The segment states a past event and current concern, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16048", "batch_size": 28, "batch_pos": 7}
+{"Q": 11, "answer": "no", "rationale": "Direct quote uses psychological verb 'concern' which is not intensified or linked to concrete harm.", "method": "llm_batch", "batch_id": "batch_11_14256", "batch_size": 240, "batch_pos": 221}

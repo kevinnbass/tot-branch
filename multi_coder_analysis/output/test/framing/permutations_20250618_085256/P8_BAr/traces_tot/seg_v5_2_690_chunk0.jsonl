@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'growing' modifies 'outbreak', which is a factual event/scale.", "method": "llm_batch", "batch_id": "batch_1_5184", "batch_size": 260, "batch_pos": 138}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases. 'growing outbreak' is not high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_8824", "batch_size": 260, "batch_pos": 132}
+{"Q": 3, "answer": "no", "rationale": "'infected' is a plain outcome verb. 'growing outbreak' is background condition.", "method": "llm_batch", "batch_id": "batch_3_16580", "batch_size": 260, "batch_pos": 125}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_7504", "batch_size": 260, "batch_pos": 124}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a worker infected and contact with cows, not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_16284", "batch_size": 260, "batch_pos": 123}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_9508", "batch_size": 260, "batch_pos": 121}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_16616", "batch_size": 260, "batch_pos": 121}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_7380", "batch_size": 260, "batch_pos": 116, "regex": {"rule": "CapabilityNoReassurance", "span": [106, 115], "captures": []}}

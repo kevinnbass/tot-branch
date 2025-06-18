@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_3332", "batch_size": 260, "batch_pos": 85}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlative negative nouns, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_3060", "batch_size": 260, "batch_pos": 68}
+{"Q": 3, "answer": "no", "rationale": "Quote about policy/assurance, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_16592", "batch_size": 260, "batch_pos": 46}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_id": "batch_4_12948", "batch_size": 260, "batch_pos": 43}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a recommendation/statement of policy, not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_13468", "batch_size": 260, "batch_pos": 42}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16700", "batch_size": 260, "batch_pos": 37}
+{"Q": 7, "answer": "no", "rationale": "The negation 'have not decided' is about a decision, not the virus's risk/spread/impact.", "method": "llm_batch", "batch_id": "batch_7_15588", "batch_size": 260, "batch_pos": 35}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_4572", "batch_size": 260, "batch_pos": 21, "regex": {"rule": "CapabilityNoReassurance", "span": [99, 108], "captures": []}}

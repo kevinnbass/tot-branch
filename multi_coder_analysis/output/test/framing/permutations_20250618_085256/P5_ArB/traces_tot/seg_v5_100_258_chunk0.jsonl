@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The intensifier 'big' modifies the noun 'challenge', not a risk adjective.", "method": "llm_batch", "batch_id": "batch_1_10616", "batch_size": 260, "batch_pos": 202}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs, metaphors, superlatives, or alert phrases.", "method": "llm_batch", "batch_id": "batch_2_13728", "batch_size": 260, "batch_pos": 176}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with explicit scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17124", "batch_size": 260, "batch_pos": 122}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_12760", "batch_size": 260, "batch_pos": 105}
+{"Q": 5, "answer": "no", "rationale": "The segment quotes a statement about difficulty getting public action, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_8020", "batch_size": 260, "batch_pos": 103}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_14388", "batch_size": 260, "batch_pos": 79}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_12536", "batch_size": 260, "batch_pos": 60}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_12536_r1", "batch_size": 260, "batch_pos": 60}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a potential future challenge related to public response/control measures, not the measures themselves.", "method": "llm_batch", "batch_id": "batch_8_6540", "batch_size": 260, "batch_pos": 241}
+{"Q": 9, "answer": "no", "rationale": "The segment reports an opinion about public behavior, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_15876", "batch_size": 260, "batch_pos": 198}
+{"Q": 10, "answer": "no", "rationale": "The segment speculates about a hypothetical future negative scenario, not speculation about relief.", "method": "llm_batch", "batch_id": "batch_10_17152", "batch_size": 260, "batch_pos": 180}
+{"Q": 11, "answer": "no", "rationale": "Quote discusses public behavior/response, not framing the threat itself.", "method": "llm_batch", "batch_id": "batch_11_11744", "batch_size": 260, "batch_pos": 144}

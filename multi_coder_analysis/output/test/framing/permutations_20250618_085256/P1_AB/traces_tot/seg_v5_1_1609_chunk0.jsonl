@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13892", "batch_size": 260, "batch_pos": 101}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('detected', 'said', 'reported') and technical terms without high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_6644", "batch_size": 260, "batch_pos": 58}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb from the specified list paired with explicit scale or impact information.", "method": "llm_batch", "batch_id": "batch_3_6500", "batch_size": 260, "batch_pos": 244}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_6708", "batch_size": 260, "batch_pos": 234}
+{"Q": 5, "answer": "no", "rationale": "The segment reports detection of cases and strains, which are factual reports, not calming cues.", "method": "llm_batch", "batch_id": "batch_5_16504", "batch_size": 260, "batch_pos": 231}
+{"Q": 6, "answer": "no", "rationale": "'A new case', 'first human case' are not minimisers.", "method": "llm_batch", "batch_id": "batch_6_16596", "batch_size": 260, "batch_pos": 183}
+{"Q": 7, "answer": "no", "rationale": "The segment states a 'new case... has been detected' but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_15656", "batch_size": 260, "batch_pos": 171}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17100", "batch_size": 260, "batch_pos": 8, "regex": {"rule": "CapabilityNoReassurance", "span": [128, 137], "captures": []}}

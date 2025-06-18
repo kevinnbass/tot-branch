@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12056", "batch_size": 260, "batch_pos": 246}
+{"Q": 2, "answer": "no", "rationale": "The segment describes actions and advice factually without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_304", "batch_size": 260, "batch_pos": 206}
+{"Q": 3, "answer": "no", "rationale": "Officials 'have been' to the village, 'deploy' spray, and 'advised' villagers (plain verbs) but lacks a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_16892", "batch_size": 260, "batch_pos": 135}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_9108", "batch_size": 260, "batch_pos": 121}
+{"Q": 5, "answer": "no", "rationale": "Reports actions taken and advice given factually; lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16968", "batch_size": 260, "batch_pos": 120}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11984", "batch_size": 260, "batch_pos": 75}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15244", "batch_size": 260, "batch_pos": 58}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15160", "batch_size": 260, "batch_pos": 113, "regex": {"rule": "CapabilityNoReassurance", "span": [7, 16], "captures": []}}

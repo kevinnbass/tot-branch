@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'worry' which is a psychological verb.", "method": "llm_batch", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 205}
+{"Q": 2, "answer": "no", "rationale": "No high-potency language found.", "method": "llm_batch", "batch_id": "batch_2_6552", "batch_size": 260, "batch_pos": 155}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 83}
+{"Q": 3, "answer": "no", "rationale": "'worry' is psychological; 'going to be delayed' is hypothetical/future.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17220_r1", "batch_size": 260, "batch_pos": 83}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 69}
+{"Q": 5, "answer": "no", "rationale": "The segment expresses worry ('I worry there’s going to be delayed diagnosis'), which is not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 65}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 25}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 13}
+{"Q": 8, "answer": "no", "rationale": "The segment is a statement of worry about potential future outcomes, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7384", "batch_size": 260, "batch_pos": 79}
+{"Q": 9, "answer": "no", "rationale": "The segment states about worrying about delayed diagnosis/detection, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12716", "batch_size": 239, "batch_pos": 134}
+{"Q": 10, "answer": "no", "rationale": "The segment speculates about potential future negative outcomes, not relief.", "method": "llm_batch", "batch_id": "batch_10_4360", "batch_size": 260, "batch_pos": 223}
+{"Q": 11, "answer": "no", "rationale": "Quote describes an emotional state ('worry') not framed with explicit alarmist language about the threat's impact.", "method": "llm_batch", "batch_id": "batch_11_17824", "batch_size": 260, "batch_pos": 184}

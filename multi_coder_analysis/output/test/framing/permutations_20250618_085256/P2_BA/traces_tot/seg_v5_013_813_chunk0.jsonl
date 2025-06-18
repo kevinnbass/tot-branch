@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16012", "batch_size": 260, "batch_pos": 151}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'circulating' which is a moderate verb.", "method": "llm_batch", "batch_id": "batch_2_4844", "batch_size": 260, "batch_pos": 105}
+{"Q": 3, "answer": "no", "rationale": "'circulating' is a moderate verb, but lacks a specific scale/impact metric.", "method": "llm_batch", "batch_id": "batch_3_17252", "batch_size": 260, "batch_pos": 50}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16432", "batch_size": 260, "batch_pos": 38}
+{"Q": 5, "answer": "no", "rationale": "The segment reports studies suggesting mammal-to-mammal spread, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10840", "batch_size": 260, "batch_pos": 36}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14236", "batch_size": 260, "batch_pos": 7}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16388", "batch_size": 260, "batch_pos": 258}
+{"Q": 8, "answer": "no", "rationale": "States findings from past studies, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_14680", "batch_size": 260, "batch_pos": 110}
+{"Q": 9, "answer": "no", "rationale": "The segment states studies 'suggested' mammal-to-mammal spread, which is not factual reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_3168", "batch_size": 260, "batch_pos": 254}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_4360", "batch_size": 260, "batch_pos": 90, "regex": {"rule": "ReliefSpeculation", "span": [43, 49], "captures": ["may be"]}}

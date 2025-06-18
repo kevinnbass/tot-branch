@@ -1,0 +1,3 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers/comparison, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_13020", "batch_size": 217, "batch_pos": 202}
+{"Q": 2, "answer": "no", "rationale": "The verb 'peaked' describes a factual price trend, and 'more than double' is factual scale.", "method": "llm_batch", "batch_id": "batch_2_13604", "batch_size": 166, "batch_pos": 151}
+{"Q": 3, "answer": "yes", "rationale": "regex:ScaleMultiplier matched", "method": "regex", "batch_id": "batch_3_15088", "batch_size": 82, "batch_pos": 68, "regex": {"rule": "ScaleMultiplier", "span": [84, 90], "captures": []}}

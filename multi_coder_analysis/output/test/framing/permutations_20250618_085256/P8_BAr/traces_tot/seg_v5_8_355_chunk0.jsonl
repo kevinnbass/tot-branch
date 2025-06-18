@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "'much lower' modifies 'toll', not a risk-adjective. 'plummeted' is a vivid verb but describes a decrease.", "method": "llm_batch", "batch_id": "batch_1_5184", "batch_size": 260, "batch_pos": 215}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_8824", "batch_size": 260, "batch_pos": 203, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [101, 110], "captures": []}}

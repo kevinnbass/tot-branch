@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15604", "batch_size": 260, "batch_pos": 58}
+{"Q": 2, "answer": "no", "rationale": "'particularly concerning' is an adjective modifying a fact, not high-potency framing of impact.", "method": "llm_batch", "batch_id": "batch_2_15308", "batch_size": 260, "batch_pos": 43}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information.", "method": "llm_batch", "batch_id": "batch_3_17160", "batch_size": 260, "batch_pos": 22}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17208", "batch_size": 260, "batch_pos": 21}
+{"Q": 5, "answer": "no", "rationale": "The segment describes a fact as 'particularly concerning,' which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15188", "batch_size": 260, "batch_pos": 20}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16868", "batch_size": 260, "batch_pos": 15}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser word combined with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16868_r1", "batch_size": 260, "batch_pos": 15}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_16704", "batch_size": 260, "batch_pos": 15}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_16704_r1", "batch_size": 260, "batch_pos": 15}
+{"Q": 8, "answer": "no", "rationale": "Describes virus characteristics and their implication, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_3644", "batch_size": 260, "batch_pos": 252}
+{"Q": 9, "answer": "no", "rationale": "The segment includes the framing language 'particularly concerning'.", "method": "llm_batch", "batch_id": "batch_9_14536", "batch_size": 260, "batch_pos": 154}
+{"Q": 10, "answer": "no", "rationale": "The segment states adaptation is particularly concerning but does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15952", "batch_size": 260, "batch_pos": 123}

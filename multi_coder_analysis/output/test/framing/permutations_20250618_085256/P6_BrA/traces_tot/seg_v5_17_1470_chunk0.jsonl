@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment mentions officials 'expressed concerns' (psychological state) but no intensifier/comparative + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13084", "batch_size": 260, "batch_pos": 152}
+{"Q": 2, "answer": "no", "rationale": "'Expressed concerns' describes a reaction; 'jumped' is a moderate verb.", "method": "llm_batch", "batch_id": "batch_2_15456", "batch_size": 260, "batch_pos": 117}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a psychological verb ('expressed concerns') and a moderate verb ('jumped') not paired with impact scale.", "method": "llm_batch", "batch_id": "batch_3_14228", "batch_size": 260, "batch_pos": 77}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15820", "batch_size": 260, "batch_pos": 63}
+{"Q": 5, "answer": "no", "rationale": "The segment reports concerns and the virus jump but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_1544", "batch_size": 260, "batch_pos": 54}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast used for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11880", "batch_size": 260, "batch_pos": 27}
+{"Q": 7, "answer": "no", "rationale": "The segment reports officials expressing concerns, which is not a negation.", "method": "llm_batch", "batch_id": "batch_7_11440", "batch_size": 260, "batch_pos": 17}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17812", "batch_size": 260, "batch_pos": 171, "regex": {"rule": "CapabilityNoReassurance", "span": [23, 32], "captures": []}}

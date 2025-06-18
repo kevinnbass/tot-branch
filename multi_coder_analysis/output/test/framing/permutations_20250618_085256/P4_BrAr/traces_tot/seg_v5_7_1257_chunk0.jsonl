@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14328", "batch_size": 260, "batch_pos": 217}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'worrying' which is not a high-potency verb or metaphor.", "method": "llm_batch", "batch_id": "batch_2_1176", "batch_size": 260, "batch_pos": 205}
+{"Q": 3, "answer": "no", "rationale": "'worrying' is an adjective. 'were found' is not a moderate verb describing impact.", "method": "llm_batch", "batch_id": "batch_3_16584", "batch_size": 260, "batch_pos": 195}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14728", "batch_size": 260, "batch_pos": 192}
+{"Q": 5, "answer": "no", "rationale": "The segment states the situation was described as 'worrying', which is negative framing, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17044", "batch_size": 260, "batch_pos": 192}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17100", "batch_size": 260, "batch_pos": 182}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'worrying', not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_7520", "batch_size": 260, "batch_pos": 181}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the situation as worrying, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16084", "batch_size": 260, "batch_pos": 160}
+{"Q": 9, "answer": "no", "rationale": "The segment describes the situation as 'worrying', which is explicit framing, not factual reporting without framing.", "method": "llm_batch", "batch_id": "batch_9_17280", "batch_size": 260, "batch_pos": 103}
+{"Q": 10, "answer": "no", "rationale": "The segment expresses current worry, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_11716", "batch_size": 260, "batch_pos": 70}
+{"Q": 11, "answer": "no", "rationale": "Quote uses 'worrying', which is a bare risk adjective in a quote, treated as neutral per Q11 table.", "method": "llm_batch", "batch_id": "batch_11_14592", "batch_size": 260, "batch_pos": 66}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_16784", "batch_size": 260, "batch_pos": 66, "regex": {"rule": "NeutralStats", "span": [78, 99], "captures": ["confirm", "cases"]}}

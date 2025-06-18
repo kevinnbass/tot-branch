@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16200", "batch_size": 260, "batch_pos": 40}
+{"Q": 2, "answer": "no", "rationale": "Statement about investigation.", "method": "llm_batch", "batch_id": "batch_2_14272", "batch_size": 260, "batch_pos": 259}
+{"Q": 3, "answer": "no", "rationale": "Hypothetical past possibility, not realised impact + scale.", "method": "llm_batch", "batch_id": "batch_3_16868", "batch_size": 260, "batch_pos": 191}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14112", "batch_size": 260, "batch_pos": 168}
+{"Q": 5, "answer": "no", "rationale": "The segment suggests action for clarity and contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_4004", "batch_size": 260, "batch_pos": 164}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16500", "batch_size": 260, "batch_pos": 127}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_8480", "batch_size": 260, "batch_pos": 117}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the benefit of recounting information, but not disease control capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_16872", "batch_size": 260, "batch_pos": 238}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses an investigation, not reporting metrics.", "method": "llm_batch", "batch_id": "batch_9_1736", "batch_size": 235, "batch_pos": 46}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_17344", "batch_size": 260, "batch_pos": 241, "regex": {"rule": "ReliefSpeculation", "span": [113, 118], "captures": ["might"]}}

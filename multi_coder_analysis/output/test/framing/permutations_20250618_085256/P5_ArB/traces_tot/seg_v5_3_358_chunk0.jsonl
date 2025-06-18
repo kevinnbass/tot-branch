@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'worrisome indication', but 'worrisome' is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_11876", "batch_size": 260, "batch_pos": 23}
+{"Q": 2, "answer": "no", "rationale": "'worrisome indication' describes a feeling, not high-potency framing of the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_6224", "batch_size": 260, "batch_pos": 22}
+{"Q": 3, "answer": "no", "rationale": "'worrisome indication' is evaluative, not a moderate verb + scale pattern.", "method": "llm_batch", "batch_id": "batch_3_17004", "batch_size": 260, "batch_pos": 19}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16420", "batch_size": 260, "batch_pos": 17}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_15072", "batch_size": 260, "batch_pos": 17, "regex": {"rule": "ExplicitCalming", "span": [22, 34], "captures": [null]}}

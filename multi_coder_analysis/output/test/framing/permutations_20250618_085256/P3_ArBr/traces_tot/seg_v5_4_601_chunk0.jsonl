@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_8712", "batch_size": 260, "batch_pos": 153}
+{"Q": 2, "answer": "no", "rationale": "'could spark a pandemic' describes a potential future event, not the current virus's realised impact.", "method": "llm_batch", "batch_id": "batch_2_9164", "batch_size": 260, "batch_pos": 108}
+{"Q": 3, "answer": "no", "rationale": "'could mutate', 'could spark' are hypothetical/future, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_16888", "batch_size": 260, "batch_pos": 36}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4468", "batch_size": 260, "batch_pos": 20}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a warning about future risk, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16756", "batch_size": 260, "batch_pos": 19}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11984", "batch_size": 260, "batch_pos": 229}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15244", "batch_size": 260, "batch_pos": 211}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a potential future threat, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15160", "batch_size": 260, "batch_pos": 251}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a warning about potential mutation and pandemic, not factual reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_11244", "batch_size": 225, "batch_pos": 64}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_15428", "batch_size": 247, "batch_pos": 124, "regex": {"rule": "ReliefSpeculation", "span": [26, 31], "captures": ["could"]}}

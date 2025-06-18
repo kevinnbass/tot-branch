@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7900", "batch_size": 260, "batch_pos": 227}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'global pandemic' is a classification, not a vivid description or metaphor.", "method": "llm_batch", "batch_id": "batch_2_15688", "batch_size": 260, "batch_pos": 199}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_5272", "batch_size": 260, "batch_pos": 159}
+{"Q": 3, "answer": "no", "rationale": "'management' is a noun. 'global pandemic' is a background condition.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_5272_r1", "batch_size": 260, "batch_pos": 159}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_13976", "batch_size": 260, "batch_pos": 155}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_13976_r1", "batch_size": 260, "batch_pos": 155}
+{"Q": 5, "answer": "no", "rationale": "The segment characterizes the situation and calls for assistance, not explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_15792", "batch_size": 260, "batch_pos": 153}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_6240", "batch_size": 260, "batch_pos": 134}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_1320", "batch_size": 260, "batch_pos": 125}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the nature of the situation and recommends future action, not existing capability.", "method": "llm_batch", "batch_id": "batch_8_16848", "batch_size": 260, "batch_pos": 21}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses the nature of the situation and need for assistance, not prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_16608", "batch_size": 260, "batch_pos": 33}
+{"Q": 10, "answer": "no", "rationale": "The segment characterizes the situation and suggests action, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16640", "batch_size": 260, "batch_pos": 222}
+{"Q": 11, "answer": "no", "rationale": "Quote discusses the scope of the management challenge, not framing language about risk.", "method": "llm_batch", "batch_id": "batch_11_15784", "batch_size": 260, "batch_pos": 197}

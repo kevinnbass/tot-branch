@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The risk adjective 'fatal' is present but not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_10616", "batch_size": 260, "batch_pos": 89}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs, metaphors, superlatives, or alert phrases. 'fatal' is factual outcome.", "method": "llm_batch", "batch_id": "batch_2_13728", "batch_size": 260, "batch_pos": 65}
+{"Q": 3, "answer": "no", "rationale": "'fatal' is an outcome adjective, not a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_17124", "batch_size": 260, "batch_pos": 16}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16448", "batch_size": 260, "batch_pos": 259}
+{"Q": 5, "answer": "no", "rationale": "The segment reports fatality rate but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_11032", "batch_size": 260, "batch_pos": 258}
+{"Q": 6, "answer": "no", "rationale": "The segment uses a percentage ('56 percent'), not a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_16744", "batch_size": 260, "batch_pos": 236}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_8820", "batch_size": 260, "batch_pos": 217}
+{"Q": 8, "answer": "no", "rationale": "The segment describes historical case fatality rate, not a capability, preparedness, safeguard, or hopeful possibility.", "method": "llm_batch", "batch_id": "batch_8_6540", "batch_size": 260, "batch_pos": 147}
+{"Q": 9, "answer": "no", "rationale": "The segment reports fatality rate, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_15876", "batch_size": 260, "batch_pos": 132}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a statistic on past cases, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_17152", "batch_size": 260, "batch_pos": 115}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement reports factual fatality rate, not framed for alarm.", "method": "llm_batch", "batch_id": "batch_11_11744", "batch_size": 260, "batch_pos": 85}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 85, "regex": {"rule": "NeutralStats", "span": [30, 109], "captures": ["report", "cases"]}}

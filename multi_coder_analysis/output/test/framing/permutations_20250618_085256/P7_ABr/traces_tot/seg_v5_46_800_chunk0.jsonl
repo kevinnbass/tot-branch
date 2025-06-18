@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment describes potential future events, not an intensified risk-adjective describing the current threat.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 183}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'infection gives opportunities', 'acquire mutations', 'evolve', and 'set off'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 166}
+{"Q": 3, "answer": "no", "rationale": "Discusses potential future, no moderate verbs or scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 143}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 139}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a potential risk but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 138}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 125}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 118}
+{"Q": 8, "answer": "no", "rationale": "Describes a risk/possibility, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 61}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 196}
+{"Q": 9, "answer": "no", "rationale": "Discusses potential future risk, not factual reporting of current metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 196}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_9656", "batch_size": 260, "batch_pos": 121, "regex": {"rule": "ReliefSpeculation", "span": [109, 114], "captures": ["could"]}}

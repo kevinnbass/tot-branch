@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative modifies a risk adjective.", "method": "llm_batch", "batch_id": "batch_1_10616", "batch_size": 260, "batch_pos": 260}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs, metaphors, superlatives, or alert phrases.", "method": "llm_batch", "batch_id": "batch_2_13728", "batch_size": 260, "batch_pos": 233}
+{"Q": 3, "answer": "no", "rationale": "'confirmed' is not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_17124", "batch_size": 260, "batch_pos": 176}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_12760", "batch_size": 260, "batch_pos": 158}
+{"Q": 5, "answer": "no", "rationale": "The segment reports confirmed and suspected human cases, but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_8020", "batch_size": 260, "batch_pos": 156}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' pattern found.", "method": "llm_batch", "batch_id": "batch_6_14388", "batch_size": 260, "batch_pos": 131}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, or capability.", "method": "llm_batch", "batch_id": "batch_7_12536", "batch_size": 260, "batch_pos": 112}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_5032", "batch_size": 260, "batch_pos": 30, "regex": {"rule": "CapabilityNoReassurance", "span": [16, 25], "captures": []}}

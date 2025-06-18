@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'likely' is not a risk-adjective like deadly/dangerous.", "method": "llm_batch", "batch_id": "batch_1_14764", "batch_size": 260, "batch_pos": 259}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a question using an idiom ('get over the finish line') which is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_7520", "batch_size": 260, "batch_pos": 257}
+{"Q": 3, "answer": "no", "rationale": "'get over the finish line' is a metaphor.", "method": "llm_batch", "batch_id": "batch_3_16732", "batch_size": 260, "batch_pos": 239}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16524", "batch_size": 260, "batch_pos": 234}
+{"Q": 5, "answer": "no", "rationale": "Asks a question about a different disease; lacks explicit calming language about bird flu.", "method": "llm_batch", "batch_id": "batch_5_16952", "batch_size": 260, "batch_pos": 234}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14436", "batch_size": 260, "batch_pos": 226}
+{"Q": 7, "answer": "no", "rationale": "The segment asks a question, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_6516", "batch_size": 260, "batch_pos": 223}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17224", "batch_size": 260, "batch_pos": 195, "regex": {"rule": "CapabilityNoReassurance", "span": [29, 36], "captures": []}}

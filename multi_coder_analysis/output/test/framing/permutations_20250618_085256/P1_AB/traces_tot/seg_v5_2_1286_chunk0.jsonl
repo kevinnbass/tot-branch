@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'Highly Pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11240", "batch_size": 260, "batch_pos": 189}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information; 'Highly Pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_2_16304", "batch_size": 260, "batch_pos": 182}
+{"Q": 3, "answer": "no", "rationale": "'found dead' is an outcome (Rule 4).", "method": "llm_batch", "batch_id": "batch_3_16424", "batch_size": 260, "batch_pos": 169}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 167}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative outcome (animal death) and finding without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16900", "batch_size": 260, "batch_pos": 166}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16676", "batch_size": 260, "batch_pos": 162}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16676_r1", "batch_size": 260, "batch_pos": 162}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15204", "batch_size": 260, "batch_pos": 158}
+{"Q": 8, "answer": "yes", "rationale": "The segment describes a surveillance/response measure: 'testing showed it had Highly Pathogenic Avian Influenza'.", "method": "llm_batch", "batch_id": "batch_8_4328", "batch_size": 260, "batch_pos": 126}

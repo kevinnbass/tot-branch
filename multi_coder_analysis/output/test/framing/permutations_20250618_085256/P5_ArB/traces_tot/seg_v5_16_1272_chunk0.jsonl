@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_1636", "batch_size": 260, "batch_pos": 177}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes potential actions and capacity in a pandemic scenario.", "method": "llm_batch", "batch_id": "batch_2_7272", "batch_size": 260, "batch_pos": 138}
+{"Q": 3, "answer": "no", "rationale": "The segment uses 'would shift production' and 'make shots' (plan/capability), and 'have the capacity' (capability).", "method": "llm_batch", "batch_id": "batch_3_17136", "batch_size": 260, "batch_pos": 65}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16656", "batch_size": 260, "batch_pos": 39}
+{"Q": 5, "answer": "no", "rationale": "Reports production capacity and shift plans, which is not an explicit calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_15256", "batch_size": 260, "batch_pos": 36}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15480", "batch_size": 260, "batch_pos": 257}
+{"Q": 7, "answer": "no", "rationale": "The segment states a capability but contains no negation or explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_12000", "batch_size": 260, "batch_pos": 237}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_6776", "batch_size": 260, "batch_pos": 97, "regex": {"rule": "CapabilityNoReassurance", "span": [15, 22], "captures": []}}

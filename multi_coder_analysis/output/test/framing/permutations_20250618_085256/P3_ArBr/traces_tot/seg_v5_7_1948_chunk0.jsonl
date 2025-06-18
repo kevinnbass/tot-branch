@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_8712", "batch_size": 260, "batch_pos": 181}
+{"Q": 2, "answer": "no", "rationale": "The segment includes a Q5 cue ('has helped protect'), not Q2 Alarmist cues.", "method": "llm_batch", "batch_id": "batch_2_9164", "batch_size": 260, "batch_pos": 134}
+{"Q": 3, "answer": "no", "rationale": "'has helped protect' is a positive outcome, not a moderate verb describing negative impact.", "method": "llm_batch", "batch_id": "batch_3_16888", "batch_size": 260, "batch_pos": 62}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4468", "batch_size": 260, "batch_pos": 46}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a positive development (vaccine helping birds) but lacks explicit calming language for humans.", "method": "llm_batch", "batch_id": "batch_5_16756", "batch_size": 260, "batch_pos": 45}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11984", "batch_size": 260, "batch_pos": 255}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15244", "batch_size": 260, "batch_pos": 237}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_7592", "batch_size": 250, "batch_pos": 17, "regex": {"rule": "CapabilityNoReassurance", "span": [105, 112], "captures": []}}

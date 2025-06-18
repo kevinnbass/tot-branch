@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12060", "batch_size": 260, "batch_pos": 132}
+{"Q": 2, "answer": "no", "rationale": "'being prepared' is preparedness/neutral language.", "method": "llm_batch", "batch_id": "batch_2_15588", "batch_size": 260, "batch_pos": 87}
+{"Q": 3, "answer": "no", "rationale": "The segment reports vaccine preparation and decision status, not impact with a moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_14044", "batch_size": 260, "batch_pos": 20}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16180", "batch_size": 260, "batch_pos": 259}
+{"Q": 5, "answer": "no", "rationale": "Reports vaccine doses being prepared but decision not made (action/preparedness with uncertainty), not calming.", "method": "llm_batch", "batch_id": "batch_5_5784", "batch_size": 260, "batch_pos": 254}
+{"Q": 6, "answer": "no", "rationale": "The segment contains numbers but no minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15256", "batch_size": 260, "batch_pos": 221}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a negation about an action ('have not decided'), not the virus or risk.", "method": "llm_batch", "batch_id": "batch_7_14848", "batch_size": 260, "batch_pos": 208}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17332", "batch_size": 260, "batch_pos": 41, "regex": {"rule": "CapabilityNoReassurance", "span": [148, 155], "captures": []}}

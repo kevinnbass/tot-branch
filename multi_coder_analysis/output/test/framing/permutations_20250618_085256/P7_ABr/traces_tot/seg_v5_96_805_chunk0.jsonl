@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'encouraged' is a psychological state.", "method": "llm_batch", "batch_id": "batch_1_15620", "batch_size": 260, "batch_pos": 133}
+{"Q": 2, "answer": "no", "rationale": "The metaphors 'not hitting it out of the park' and 'not even getting a single' describe effectiveness of PrEP, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 108}
+{"Q": 2, "answer": "no", "rationale": "The metaphors 'not hitting it out of the park' and 'not even getting a single' describe effectiveness of PrEP, not the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_8484", "batch_size": 260, "batch_pos": 108}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_15768", "batch_size": 260, "batch_pos": 76}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_15768_r1", "batch_size": 260, "batch_pos": 76}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present.", "method": "llm_batch", "batch_id": "batch_4_16624", "batch_size": 260, "batch_pos": 72}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 69}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'I’m encouraged' is a confidence statement from the speaker about the situation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_6644_r1", "batch_size": 260, "batch_pos": 69}

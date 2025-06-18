@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains advice/attitude, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_13020", "batch_size": 217, "batch_pos": 133}
+{"Q": 2, "answer": "no", "rationale": "The segment explicitly advises against panic and focuses on preparedness, containing reassuring language.", "method": "llm_batch", "batch_id": "batch_2_13604", "batch_size": 166, "batch_pos": 83}
+{"Q": 3, "answer": "no", "rationale": "'hits' is future/hypothetical, not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_15088", "batch_size": 82, "batch_pos": 10}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16976", "batch_size": 260, "batch_pos": 255}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16976_r1", "batch_size": 260, "batch_pos": 255}
+{"Q": 5, "answer": "yes", "rationale": "The segment contains the explicit calming cue 'Now is not the time to panic'.", "method": "llm_batch", "batch_id": "batch_5_15896", "batch_size": 260, "batch_pos": 243}

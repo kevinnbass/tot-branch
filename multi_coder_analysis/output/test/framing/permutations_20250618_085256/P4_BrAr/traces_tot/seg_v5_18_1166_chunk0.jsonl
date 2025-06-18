@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "The segment reports factual numbers ('estimated 5.5mn', '20mn') and outcomes ('destroyed', 'slaughtered') without using intensifiers or comparative adjectives modifying risk-adjectives.", "method": "llm_batch", "batch_id": "batch_1_15280", "batch_size": 260, "batch_pos": 167}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_13948", "batch_size": 260, "batch_pos": 129, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [189, 200], "captures": []}}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 46}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'suckle', 'feed', and 'eating infected'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 34}
+{"Q": 3, "answer": "no", "rationale": "No moderate verbs paired with explicit scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 14}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 11}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a fact and a low chance but lacks explicit calming language or intensified low-risk framing.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 10}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 2}
+{"Q": 7, "answer": "no", "rationale": "The segment states feeding method, but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_14200", "batch_size": 260, "batch_pos": 256}
+{"Q": 8, "answer": "no", "rationale": "The segment provides a factual observation/finding, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_8652", "batch_size": 260, "batch_pos": 218}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 140}
+{"Q": 9, "answer": "no", "rationale": "Describes animal behavior and potential transmission route, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 140}

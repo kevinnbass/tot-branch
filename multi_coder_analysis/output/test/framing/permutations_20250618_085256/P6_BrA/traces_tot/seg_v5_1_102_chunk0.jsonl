@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment reports infected farms and birds killed but contains no intensifier/comparative + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13084", "batch_size": 260, "batch_pos": 110}
+{"Q": 2, "answer": "no", "rationale": "'Forcing the killing' describes a consequence, not the virus's action with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_15456", "batch_size": 260, "batch_pos": 76}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a plain outcome verb ('infected') and a containment verb ('killing') which is Neutral (rule 5).", "method": "llm_batch", "batch_id": "batch_3_14228", "batch_size": 260, "batch_pos": 36}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15820", "batch_size": 260, "batch_pos": 22}
+{"Q": 5, "answer": "no", "rationale": "The segment reports cases and culling numbers but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_1544", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_15096", "batch_size": 260, "batch_pos": 247}
+{"Q": 7, "answer": "no", "rationale": "The segment reports farms infected and birds killed, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_8588", "batch_size": 260, "batch_pos": 240}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17812", "batch_size": 260, "batch_pos": 137, "regex": {"rule": "CapabilityNoReassurance", "span": [106, 115], "captures": []}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15488", "batch_size": 260, "batch_pos": 10}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('noted', 'said', 'indicated', 'spreading').", "method": "llm_batch", "batch_id": "batch_2_5364", "batch_size": 260, "batch_pos": 243}
+{"Q": 3, "answer": "no", "rationale": "Factual reporting of findings, not moderate verb + scale impact.", "method": "llm_batch", "batch_id": "batch_3_16876", "batch_size": 260, "batch_pos": 210}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_14348", "batch_size": 260, "batch_pos": 197}
+{"Q": 5, "answer": "no", "rationale": "This segment reports infected dairy herds and genetic sequence related to the version spreading among cows, bare facts.", "method": "llm_batch", "batch_id": "batch_5_14272", "batch_size": 260, "batch_pos": 194}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_2084", "batch_size": 260, "batch_pos": 167}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 163}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_5448", "batch_size": 260, "batch_pos": 104, "regex": {"rule": "CapabilityNoReassurance", "span": [19, 28], "captures": []}}

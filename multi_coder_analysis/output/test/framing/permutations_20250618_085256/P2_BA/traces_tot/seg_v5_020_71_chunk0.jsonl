@@ -1,0 +1,11 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_15708", "batch_size": 260, "batch_pos": 190}
+{"Q": 1, "answer": "no", "rationale": "'unusual' is not a risk-adjective as defined.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_15708_r1", "batch_size": 260, "batch_pos": 190}
+{"Q": 2, "answer": "no", "rationale": "The segment uses capability language ('can be transmitted') and a low-risk cue ('is unusual'), lacking high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_13104", "batch_size": 260, "batch_pos": 166}
+{"Q": 3, "answer": "no", "rationale": "Contains plain verb ('transmitted') but is about potential ('can be transmitted').", "method": "llm_batch", "batch_id": "batch_3_17196", "batch_size": 260, "batch_pos": 137}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4428", "batch_size": 260, "batch_pos": 128}
+{"Q": 5, "answer": "no", "rationale": "Reports characteristics (unusual transmission) but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17200", "batch_size": 260, "batch_pos": 127}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_8312", "batch_size": 260, "batch_pos": 107}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16624", "batch_size": 260, "batch_pos": 103}
+{"Q": 8, "answer": "no", "rationale": "Describes the risk level of human transmission, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_1180", "batch_size": 260, "batch_pos": 11}
+{"Q": 9, "answer": "no", "rationale": "The segment includes framing language stating transmission is 'unusual'.", "method": "llm_batch", "batch_id": "batch_9_3168", "batch_size": 260, "batch_pos": 38}
+{"Q": 10, "answer": "no", "rationale": "The segment states transmission to humans is unusual but does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15952", "batch_size": 260, "batch_pos": 207}

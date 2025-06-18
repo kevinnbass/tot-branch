@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'low risk' and 'I support that', which are calming phrases, not Q1 cues.", "method": "llm_batch", "batch_id": "batch_1_4312", "batch_size": 260, "batch_pos": 241}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'risk assessment', 'low risk' (Q5 cue), and 'support'.", "method": "llm_batch", "batch_id": "batch_2_11716", "batch_size": 260, "batch_pos": 221}
+{"Q": 3, "answer": "no", "rationale": "Risk assessment, no moderate verbs or scale/impact.", "method": "llm_batch", "batch_id": "batch_3_6580", "batch_size": 260, "batch_pos": 197}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question present.", "method": "llm_batch", "batch_id": "batch_4_16704", "batch_size": 260, "batch_pos": 193}
+{"Q": 5, "answer": "no", "rationale": "The segment contains a bare low-risk statement ('low risk for humans') which falls under Q7, not Q5.", "method": "llm_batch", "batch_id": "batch_5_9812", "batch_size": 260, "batch_pos": 191}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_15744", "batch_size": 260, "batch_pos": 177}
+{"Q": 7, "answer": "no", "rationale": "Segment contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_1980", "batch_size": 260, "batch_pos": 170}
+{"Q": 8, "answer": "no", "rationale": "Contains explicit reassurance ('low risk for humans'), failing the 'without active reassurance' criteria.", "method": "llm_batch", "batch_id": "batch_8_13128", "batch_size": 260, "batch_pos": 110}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_7520", "batch_size": 260, "batch_pos": 219}
+{"Q": 9, "answer": "no", "rationale": "Contains explicit calming language: 'low risk'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_7520_r1", "batch_size": 260, "batch_pos": 219}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'sheer' modifies 'geographic spread', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15892", "batch_size": 260, "batch_pos": 66}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_11880", "batch_size": 260, "batch_pos": 63}
+{"Q": 3, "answer": "no", "rationale": "'doesn't like' is about feelings. 'spread' is a plain outcome noun. 'increasing reports' is not a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_17156", "batch_size": 260, "batch_pos": 59}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17392", "batch_size": 260, "batch_pos": 59}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a scientist's negative sentiment ('doesn't like'), which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16336", "batch_size": 260, "batch_pos": 58}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_3044", "batch_size": 260, "batch_pos": 58}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser token combined with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_3044_r1", "batch_size": 260, "batch_pos": 58}
+{"Q": 7, "answer": "yes", "rationale": "'viruses don't appear to have changed in significant ways' is a bare negation about viral characteristics without explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_16612", "batch_size": 260, "batch_pos": 58}

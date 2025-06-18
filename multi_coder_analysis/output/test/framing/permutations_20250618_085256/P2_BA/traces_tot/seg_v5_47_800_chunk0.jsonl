@@ -1,0 +1,12 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 33}
+{"Q": 1, "answer": "no", "rationale": "The segment uses a metaphor, but does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_5192_r1", "batch_size": 260, "batch_pos": 33}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'muddy the picture' which is a metaphor describing confusion, not the threat.", "method": "llm_batch", "batch_id": "batch_2_4844", "batch_size": 260, "batch_pos": 246}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses potential difficulty, not impact using a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_17252", "batch_size": 260, "batch_pos": 186}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16432", "batch_size": 260, "batch_pos": 172}
+{"Q": 5, "answer": "no", "rationale": "The segment reports potential difficulty in identification, which is a negative implication, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10840", "batch_size": 260, "batch_pos": 170}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14236", "batch_size": 260, "batch_pos": 134}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16180", "batch_size": 260, "batch_pos": 124}
+{"Q": 8, "answer": "no", "rationale": "States a potential future difficulty, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_14680", "batch_size": 260, "batch_pos": 212}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses respiratory season muddying the picture, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12716", "batch_size": 239, "batch_pos": 46}
+{"Q": 10, "answer": "no", "rationale": "The segment describes potential future negative outcomes, not relief.", "method": "llm_batch", "batch_id": "batch_10_4360", "batch_size": 260, "batch_pos": 138}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17824", "batch_size": 260, "batch_pos": 103}

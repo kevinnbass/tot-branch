@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'speeding up or slowing down' modifies 'spread', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15892", "batch_size": 260, "batch_pos": 245}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases. 'largely in the dark' is an idiom.", "method": "llm_batch", "batch_id": "batch_2_11880", "batch_size": 260, "batch_pos": 232}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a status ('largely in the dark'), not using moderate verbs paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17156", "batch_size": 260, "batch_pos": 215}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17392", "batch_size": 260, "batch_pos": 214}
+{"Q": 5, "answer": "no", "rationale": "The segment reports reluctance to test and officials being 'in the dark', which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16336", "batch_size": 260, "batch_pos": 213}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_3044", "batch_size": 260, "batch_pos": 208}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_16612", "batch_size": 260, "batch_pos": 208}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_3644", "batch_size": 260, "batch_pos": 189, "regex": {"rule": "CapabilityNoReassurance", "span": [133, 142], "captures": []}}

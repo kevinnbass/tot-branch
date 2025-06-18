@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11240", "batch_size": 260, "batch_pos": 16}
+{"Q": 2, "answer": "no", "rationale": "The segment is a factual update note.", "method": "llm_batch", "batch_id": "batch_2_16304", "batch_size": 260, "batch_pos": 15}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a containment verb, which neutralizes the pattern according to Rule 7.", "method": "llm_batch", "batch_id": "batch_3_16424", "batch_size": 260, "batch_pos": 15}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 15}
+{"Q": 5, "answer": "no", "rationale": "The segment is an editorial note about corrections, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16900", "batch_size": 260, "batch_pos": 15}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16676", "batch_size": 260, "batch_pos": 14}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16676_r1", "batch_size": 260, "batch_pos": 14}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15204", "batch_size": 260, "batch_pos": 14}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a story update/correction, not capabilities or preparedness measures.", "method": "llm_batch", "batch_id": "batch_8_4328", "batch_size": 260, "batch_pos": 13}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('22 million', '13 million', '18 million') using standard verbs ('updated', 'correct', 'killed').", "method": "llm_batch", "batch_id": "batch_9_11804", "batch_size": 260, "batch_pos": 10}

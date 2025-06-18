@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'risks... were low' (factual statement), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 91}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 39}
+{"Q": 3, "answer": "no", "rationale": "'warned' is about communication. 'risks were low' is risk assessment.", "method": "llm_batch", "batch_id": "batch_3_17220", "batch_size": 260, "batch_pos": 219}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14848", "batch_size": 260, "batch_pos": 205}
+{"Q": 5, "answer": "no", "rationale": "The segment reports scientists warned about 'low direct risks' (lacking intensifier for Q5) and urged precautions.", "method": "llm_batch", "batch_id": "batch_5_16660", "batch_size": 260, "batch_pos": 201}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 160}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 160}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'direct risks of infection were low'.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 147}

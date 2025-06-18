@@ -1,0 +1,9 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_5192", "batch_size": 260, "batch_pos": 30}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_5192_r1", "batch_size": 260, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlatives + negative nouns, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_4844", "batch_size": 260, "batch_pos": 243}
+{"Q": 3, "answer": "no", "rationale": "The segment describes analysis, not impact using a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_17252", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16432", "batch_size": 260, "batch_pos": 169}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a limitation in sequencing, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10840", "batch_size": 260, "batch_pos": 167}
+{"Q": 6, "answer": "no", "rationale": "Contains 'only a portion' which modifies the analysis, not downplaying event scale/significance for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14236", "batch_size": 260, "batch_pos": 131}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16180", "batch_size": 260, "batch_pos": 121}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14680", "batch_size": 260, "batch_pos": 210, "regex": {"rule": "CapabilityNoReassurance", "span": [7, 16], "captures": []}}

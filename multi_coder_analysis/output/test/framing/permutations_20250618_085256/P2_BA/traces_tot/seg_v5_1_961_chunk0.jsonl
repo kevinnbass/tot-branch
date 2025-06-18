@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'highly pathogenic', which is a technical term, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_15148", "batch_size": 217, "batch_pos": 185}
+{"Q": 2, "answer": "no", "rationale": "'highly pathogenic' is a technical term. 'detected' is neutral.", "method": "llm_batch", "batch_id": "batch_2_9280", "batch_size": 164, "batch_pos": 133}
+{"Q": 3, "answer": "no", "rationale": "'detected' is a plain outcome verb, excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_17184", "batch_size": 68, "batch_pos": 44}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16668", "batch_size": 51, "batch_pos": 28}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a detection; 'highly pathogenic' is a technical term. No explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_14916", "batch_size": 47, "batch_pos": 24}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_1504", "batch_size": 260, "batch_pos": 241}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', 'merely', 'a single', 'few') found in the segment.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_1504_r1", "batch_size": 260, "batch_pos": 241}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_16788", "batch_size": 249, "batch_pos": 228}
+{"Q": 8, "answer": "no", "rationale": "Describes detection of virus, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13548", "batch_size": 30, "batch_pos": 13}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a detection location, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12716", "batch_size": 239, "batch_pos": 227}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a detection, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_14856", "batch_size": 51, "batch_pos": 45}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17824", "batch_size": 260, "batch_pos": 260}

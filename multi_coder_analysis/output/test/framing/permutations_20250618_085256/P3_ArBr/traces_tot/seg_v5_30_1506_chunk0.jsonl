@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'concern' is a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14764", "batch_size": 260, "batch_pos": 174}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a quote expressing 'concern', which is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_7520", "batch_size": 260, "batch_pos": 173}
+{"Q": 3, "answer": "no", "rationale": "'concern' is a psychological noun. 'might impact' is hypothetical.", "method": "llm_batch", "batch_id": "batch_3_16732", "batch_size": 260, "batch_pos": 161}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16524", "batch_size": 260, "batch_pos": 157}
+{"Q": 5, "answer": "no", "rationale": "Reports concern; lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16952", "batch_size": 260, "batch_pos": 157}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14436", "batch_size": 260, "batch_pos": 150}
+{"Q": 7, "answer": "no", "rationale": "The segment states a concern, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_6516", "batch_size": 260, "batch_pos": 149}
+{"Q": 8, "answer": "no", "rationale": "Expresses concern about potential impact, not capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_17224", "batch_size": 260, "batch_pos": 133}
+{"Q": 9, "answer": "no", "rationale": "The segment expresses concern about potential impact, not reporting prices or numerical metrics factually.", "method": "llm_batch", "batch_id": "batch_9_16428", "batch_size": 260, "batch_pos": 63}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16444", "batch_size": 260, "batch_pos": 36, "regex": {"rule": "ReliefSpeculation", "span": [53, 58], "captures": ["might"]}}

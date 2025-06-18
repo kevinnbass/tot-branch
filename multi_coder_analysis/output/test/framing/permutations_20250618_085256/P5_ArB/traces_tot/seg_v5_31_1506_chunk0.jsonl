@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'higher prices', which modifies prices, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11876", "batch_size": 260, "batch_pos": 173}
+{"Q": 2, "answer": "no", "rationale": "'continues to spread' is descriptive. 'reputational strain' is a moderate description of a consequence.", "method": "llm_batch", "batch_id": "batch_2_6224", "batch_size": 260, "batch_pos": 169}
+{"Q": 3, "answer": "no", "rationale": "'could ultimately see' and 'could experience' are hypothetical.", "method": "llm_batch", "batch_id": "batch_3_17004", "batch_size": 260, "batch_pos": 158}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16420", "batch_size": 260, "batch_pos": 152}
+{"Q": 5, "answer": "no", "rationale": "Discusses potential negative impacts (higher prices, reputational strain), lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15072", "batch_size": 260, "batch_pos": 152}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16412", "batch_size": 260, "batch_pos": 148}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation of the specified types.", "method": "llm_batch", "batch_id": "batch_7_3060", "batch_size": 260, "batch_pos": 146}
+{"Q": 8, "answer": "no", "rationale": "Describes potential future impacts/consequences, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11792", "batch_size": 260, "batch_pos": 137}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential future impacts, not current prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_16864", "batch_size": 260, "batch_pos": 69}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16828", "batch_size": 260, "batch_pos": 61, "regex": {"rule": "ReliefSpeculation", "span": [52, 57], "captures": ["could"]}}
