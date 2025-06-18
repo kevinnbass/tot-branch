@@ -15,9 +15,9 @@ from typing import Iterable
 __all__ = ["normalise_unicode", "NORMALISE_TRANS_TABLE"]
 
 NORMALISE_TRANS_TABLE = str.maketrans({
-    "": '"', "": '"', "": '"',
-    "'": "'", "'": "'",
-    "-": "-", "-": "-", "-": "-",
+    "“": '"', "”": '"',
+    "‘": "'", "’": "'",
+    "—": "-", "–": "-", "―": "-",
 })
 
 
