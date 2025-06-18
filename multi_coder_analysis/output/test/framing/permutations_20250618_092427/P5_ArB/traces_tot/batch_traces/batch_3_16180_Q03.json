@@ -1,0 +1,98 @@
+{
+  "batch_id": "batch_3_16180",
+  "hop_idx": 3,
+  "segment_count": 19,
+  "responses": [
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'blamed on' is moderate, but it is not paired with explicit information detailing significant scale or impact."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'confirmed' is a plain outcome verb. '23 states' is a count of locations, not a significant impact metric as required by Q3."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'confirmed' is a plain outcome verb, which is excluded from triggering Q3 unless other cues fire."
+    },
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with significant scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb from the approved list. 'raises' is not a moderate verb for Q3."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb from the approved list. 'had' is not a moderate verb for Q3."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'kill' is a containment verb. According to the rules, containment verbs neutralize the Q3 pattern even with large numbers, unless additional vivid/emotive language is present."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'kill' is a containment verb. According to the rules, containment verbs neutralize the Q3 pattern even with large numbers, unless additional vivid/emotive language is present."
+    },
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "While 'infected' is a moderate verb and '5.3 million hens' is a large scale, the impact is described using the containment verb 'killing', which neutralizes the Q3 pattern as per the rules."
+    },
+    {
+      "segment_id": "seg_v5_11_102_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'infected' and 'circulating' are moderate, but '26 states' and 'Europe and Asia' are geographic counts/locations, not significant impact metrics as required by Q3."
+    },
+    {
+      "segment_id": "seg_v5_12_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is a plain outcome verb. 'No human cases' indicates a lack of impact, not a significant scale of harm."
+    },
+    {
+      "segment_id": "seg_v5_13_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'kills' is a plain outcome verb and is not paired with significant scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_16_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'killed' is a containment verb. According to the rules, containment verbs neutralize the Q3 pattern even with large numbers, unless additional vivid/emotive language is present."
+    },
+    {
+      "segment_id": "seg_v5_17_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'killed' is a containment verb. According to the rules, containment verbs neutralize the Q3 pattern even with large numbers, unless additional vivid/emotive language is present."
+    },
+    {
+      "segment_id": "seg_v5_1_1674_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'confirmed' and 'spread' are moderate, but 'at least one person' and '36 dairy herds' are not considered significant scale/impact for Q3."
+    },
+    {
+      "segment_id": "seg_v5_2_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb from the approved list. 'announced' and 'had' are not moderate verbs for Q3."
+    },
+    {
+      "segment_id": "seg_v5_3_1674_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'restricted' and 'detected' are moderate, but the context describes policy actions or factual findings, not significant scale/impact of the virus itself."
+    },
+    {
+      "segment_id": "seg_v5_4_1674_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'reported' is a plain outcome verb, which is excluded from triggering Q3 unless other cues fire. 'fatal' is an adjective, not a verb."
+    }
+  ],
+  "timestamp": "2025-06-18T09:25:59.013122"
+}

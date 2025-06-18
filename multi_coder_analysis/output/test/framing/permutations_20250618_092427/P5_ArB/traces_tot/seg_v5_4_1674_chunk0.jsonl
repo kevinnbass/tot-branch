@@ -1,2 +1,4 @@
 {"Q": 1, "answer": "no", "rationale": "The term 'fatal' is present but is not modified by an intensifier or comparative adjective; it's a factual statement of percentage.", "method": "llm_batch", "batch_id": "batch_1_14608", "batch_size": 20, "batch_pos": 20}
 {"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs like 'reported' and 'detected' and lacks any high-potency framing; 'fatal' is a factual outcome.", "method": "llm_batch", "batch_id": "batch_2_14044", "batch_size": 19, "batch_pos": 19}
+{"Q": 3, "answer": "no", "rationale": "The verb 'reported' is a plain outcome verb, which is excluded from triggering Q3 unless other cues fire. 'fatal' is an adjective, not a verb.", "method": "llm_batch", "batch_id": "batch_3_16180", "batch_size": 19, "batch_pos": 19}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain any loaded rhetorical questions.", "method": "llm_batch", "batch_id": "batch_4_17556", "batch_size": 19, "batch_pos": 19}
