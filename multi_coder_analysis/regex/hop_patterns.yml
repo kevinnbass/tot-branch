@@ -23,9 +23,8 @@
   - name: IntensifierRiskAdjV2
     mode: live
     frame: Alarmist
-    veto_pattern:
-      - (?i)\bhighly\s+pathogenic\s+avian\b
-      - (?i)\blow\s+pathogenic\s+avian\b
+    veto_pattern: |-
+      (?i)\b(?:highly|low)\s+pathogenic\s+avian\b
     pattern: |-
       \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
           |very|deadlier|more|extremely|severely|so|particularly|frighteningly|definitely|certainly|ever[-\s]*more|progressively)  
