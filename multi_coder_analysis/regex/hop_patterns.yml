@@ -86,6 +86,10 @@
                        devastating|disasters?|emergenc(?:y|ies))\b)
       (?![^.]{0,20}\bfear(?:s|ed|ing)?\b)   # guard: psychological verbs ≠ impact
 
+    # 2025-06-18 containment-verb veto – keeps large-scale culling Neutral
+    veto_pattern: |-
+      (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated)\b
+
 4:
   - name: LoadedQuestionAlarm
     mode: live
@@ -99,6 +103,14 @@
       \b(?:is|are|was|were)\s+it\s+(?:really\s+)?necessary\s+to\s+
           (?:kill|cull|slaughter|destroy|euthan(?:ize|ise))\b
           [^?]{0,60}?\b(?:millions?|thousands?|record|\d{1,3}(?:[, ]\d{3})+)\b
+
+  # --- 2025-06-18 addition: Challenge-question over inaction ---
+
+  - name: IgnoreDisasterQ
+    mode: live
+    frame: Alarmist
+    pattern: |-
+      (?i)\bhow\s+long\s+can\s+we\s+(?:afford\s+to\s+)?(?:ignore|stand\s+by)\b
 
 5:
   - name: ExplicitCalming
@@ -203,6 +215,8 @@
   - name: DominantQuoteAlarmist
     mode: live
     frame: Alarmist
+    veto_pattern: |-
+      (?i)\bhighly\s+pathogenic\s+(?:avian\s+flu|influenza|avian)\b
     pattern: |-
       (?is)                                    # i=ignore case, s=dot=nl
       ["'\u2018\u2019\u201C\u201D]             # opening quote (straight or curly)
