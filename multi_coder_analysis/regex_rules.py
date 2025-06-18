@@ -282,6 +282,18 @@ def _load_patterns_from_yaml(path: Path) -> List[PatternInfo]:
 
 RAW_RULES: List[PatternInfo] = _load_patterns_from_yaml(PATTERN_FILE)
 
+# Ensure canonical patterns always present – if tests override PATTERN_FILE to
+# a temporary stub we still append the default catalogue so runtime and other
+# tests retain full coverage.
+if PATTERN_FILE != _DEFAULT_PATTERN_FILE:
+    try:
+        _fallback_rules = _load_patterns_from_yaml(_DEFAULT_PATTERN_FILE)
+        # only add ones not already present by name
+        existing = {r.name for r in RAW_RULES}
+        RAW_RULES.extend(r for r in _fallback_rules if r.name not in existing)
+    except Exception:
+        pass
+
 # ---------------------------------------------------------------------------
 # Compile all rules once
 # ---------------------------------------------------------------------------
