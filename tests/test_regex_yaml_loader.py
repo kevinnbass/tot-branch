@@ -34,4 +34,8 @@ def test_yaml_loader(monkeypatch, tmp_path: Path):
     assert rule.hop == 3
     assert rule.mode == "live"
     assert rule.yes_frame == "Alarmist"
-    assert rule.yes_regex.pattern == r"\bjust\s+a\s+stub\b" 
+    assert rule.yes_regex.pattern == r"\bjust\s+a\s+stub\b"
+
+    # Ensure subsequent tests use the canonical rule catalogue again
+    monkeypatch.setattr(rr, "PATTERN_FILE", rr._DEFAULT_PATTERN_FILE, raising=False)
+    importlib.reload(rr) 
