@@ -23,9 +23,12 @@
   - name: IntensifierRiskAdjV2
     mode: live
     frame: Alarmist
+    veto_pattern:
+      - (?i)\bhighly\s+pathogenic\s+avian\b
+      - (?i)\blow\s+pathogenic\s+avian\b
     pattern: |-
       \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
-          |very|deadlier|more|extremely|severely|so|particularly|frighteningly|definitely|certainly)  
+          |very|deadlier|more|extremely|severely|so|particularly|frighteningly|definitely|certainly|ever[-\s]*more|progressively)  
           (?:\s+\w+){0,3}\s+
       (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
       \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
@@ -88,7 +91,7 @@
 
     # 2025-06-18 containment-verb veto – keeps large-scale culling Neutral
     veto_pattern: |-
-      (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated)\b
+      (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered)\b
 
 4:
   - name: LoadedQuestionAlarm
@@ -105,6 +108,12 @@
           [^?]{0,60}?\b(?:millions?|thousands?|record|\d{1,3}(?:[, ]\d{3})+)\b
 
   # --- 2025-06-18 addition: Challenge-question over inaction ---
+
+  - name: WhatIfQuestion
+    mode: live
+    frame: Alarmist
+    pattern: |-
+      (?i)\bwhat\s+if\s+(?:we|this|the\s+\w+)\b
 
   - name: IgnoreDisasterQ
     mode: live
@@ -126,6 +135,7 @@
           completely\s+safe|
           (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
           (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
+          \b(?:encouraging|welcome|heartening)\s+news\b|
           (?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
             .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
           \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
@@ -141,7 +151,7 @@
     frame: Reassuring
     pattern: |-
       \b(?:only|just|merely|a\s+single|few)\b
-           [^.]{0,120}
+           [^\.;\n]{0,120}
            \b(?:out\s+of|one\s+of|among)\b
            [^.]*\b(?:hundred|thousand|million|billion|
                    \d{1,3}(?:[, ]\d{3})*|\d+)\b
@@ -259,3 +269,9 @@
     frame: Neutral
     pattern: |-
       \b(report|document|state|announce|confirm|detect|identify|record)\w*\b.*\b(cases|deaths|losses|rates|numbers|percent)\b
+
+  - name: ScaleMultiplier
+    mode: live
+    frame: Alarmist
+    pattern: |-
+      (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
