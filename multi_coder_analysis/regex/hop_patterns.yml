@@ -93,6 +93,12 @@
     veto_pattern: |-
       (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered)\b
 
+  - name: ScaleMultiplier
+    mode: live
+    frame: Alarmist
+    pattern: |-
+      (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+
 4:
   - name: LoadedQuestionAlarm
     mode: live
@@ -269,9 +275,3 @@
     frame: Neutral
     pattern: |-
       \b(report|document|state|announce|confirm|detect|identify|record)\w*\b.*\b(cases|deaths|losses|rates|numbers|percent)\b
-
-  - name: ScaleMultiplier
-    mode: live
-    frame: Alarmist
-    pattern: |-
-      (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
