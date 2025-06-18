@@ -89,6 +89,11 @@ COMPILED_RULES: Dict[int, List[PatternInfo]] = {}
 
 def _compile_rule(rule: PatternInfo) -> Optional[PatternInfo]:
     try:
+        # Coerce *list* veto patterns (YAML sequences) into one alternation
+        if isinstance(rule.veto_regex, list):
+            joined = "|".join(rule.veto_regex)
+            rule = replace(rule, veto_regex=f"(?:{joined})")
+
         compiled_yes = re.compile(rule.yes_regex, flags=re.I | re.UNICODE | re.VERBOSE)
         compiled_veto = (
             re.compile(rule.veto_regex, flags=re.I | re.UNICODE | re.VERBOSE)
