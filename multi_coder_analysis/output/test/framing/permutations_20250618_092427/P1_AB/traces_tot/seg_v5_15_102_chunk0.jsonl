@@ -4,3 +4,6 @@
 {"Q": 3, "answer": "no", "rationale": "This segment provides factual information about cooking temperatures, without using any moderate verbs paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_17868", "batch_size": 19, "batch_pos": 13}
 {"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_9508", "batch_size": 19, "batch_pos": 13}
 {"Q": 4, "answer": "no", "rationale": "The segment is a declarative statement providing factual information, not a question, rhetorical or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_9508_r1", "batch_size": 19, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The segment provides a factual instruction about cooking, but it does not use explicit calming language like 'safe to eat' or similar direct safety assurances.", "method": "llm_batch", "batch_id": "batch_5_17016", "batch_size": 19, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser (e.g., 'only', 'just') combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_11904", "batch_size": 18, "batch_pos": 12}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_2336", "batch_size": 18, "batch_pos": 12}
