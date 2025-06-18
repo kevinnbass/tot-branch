@@ -253,7 +253,9 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
 # ①  Load patterns from YAML catalogue (authoritative source)
 # ---------------------------------------------------------------------------
 
-PATTERN_FILE = Path(__file__).parent / "regex" / "hop_patterns.yml"
+_DEFAULT_PATTERN_FILE = Path(__file__).parent / "regex" / "hop_patterns.yml"
+# Allow test-suites to override via monkeypatch before reloading the module
+PATTERN_FILE = globals().get("PATTERN_FILE", _DEFAULT_PATTERN_FILE)
 
 
 def _load_patterns_from_yaml(path: Path) -> List[PatternInfo]:
