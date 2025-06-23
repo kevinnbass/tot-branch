@@ -3,3 +3,9 @@
 2025-06-23 13:19:32,374 - INFO - Hop 01 → start:259 regex:0  llm:0  remain:259 (  4.4s)
 2025-06-23 13:19:32,374 - INFO - Hop 1: processing 1 batches (size=259) with concurrency=1
 2025-06-23 13:19:32,885 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-23 13:21:22,888 - INFO - AFC remote call 1 is done.
+2025-06-23 13:21:22,892 - INFO - Batch batch_1_6324 Q01: attempt 1 succeeded for 248/248 objects; still missing 0
+2025-06-23 13:21:23,554 - INFO - Hop 02 → start:243 regex:11 llm:0  remain:232 (115.6s)
+2025-06-23 13:21:23,596 - INFO - Hop 2: processing 1 batches (size=259) with concurrency=1
+2025-06-23 13:21:25,419 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-23 13:23:15,927 - ERROR - ⌧  Ctrl-C received – aborting run immediately …
