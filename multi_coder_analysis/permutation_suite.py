@@ -317,35 +317,6 @@ def run_permutation_suite(
     root_out.mkdir(parents=True, exist_ok=True)
     logging.info("⚙️  Permutation suite output → %s", root_out)
 
-    # ------------------------------------------------------------------
-    # 📂  Copy prompt folder + regex catalogue ONCE at the beginning of the
-    #      permutation suite.  This replaces the previous logic that ran at
-    #      the end and caused a redundant second concatenation.
-    # ------------------------------------------------------------------
-    try:
-        src_prompt_dir = Path("multi_coder_analysis/prompts")
-        dst_prompt_dir = root_out / "prompts"
-        shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
-        logging.info("Copied prompt folder → %s", dst_prompt_dir)
-
-        # Also dump a single concatenated prompts catalogue at root level
-        _prompts_txt = concatenate_prompts(
-            prompts_dir=src_prompt_dir,
-            output_file="concatenated_prompts.txt",
-            target_dir=root_out,
-        )
-        logging.info("Concatenated prompts written to %s", _prompts_txt)
-    except Exception as e:
-        logging.warning("Could not copy/concatenate prompts: %s", e)
-
-    # Copy regex catalogue for auditability
-    try:
-        patterns_src = Path("multi_coder_analysis/regex/hop_patterns.yml")
-        shutil.copy(patterns_src, root_out / "hop_patterns.yml")
-        logging.info("Copied hop_patterns.yml to permutation root folder.")
-    except Exception as e:
-        logging.warning("Could not copy hop_patterns.yml: %s", e)
-
     # ----------------------------------------------------------------------
     # Load dataframe
     # ----------------------------------------------------------------------
@@ -503,6 +474,32 @@ def run_permutation_suite(
     logging.info("Merged mismatch traces → %s", concat_path)
 
     # ------------------------------------------------------------------
+    # Copy prompt folder + regex catalogue for auditability
+    # ------------------------------------------------------------------
+    try:
+        src_prompt_dir = Path("multi_coder_analysis/prompts")
+        dst_prompt_dir = root_out / "prompts"
+        shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
+        logging.info("Copied prompt folder → %s", dst_prompt_dir)
+
+        # Also dump a single concatenated prompts catalogue at root level
+        _prompts_txt = concatenate_prompts(
+            prompts_dir=src_prompt_dir,
+            output_file="concatenated_prompts.txt",
+            target_dir=root_out,
+        )
+        logging.info("Concatenated prompts written to %s", _prompts_txt)
+    except Exception as e:
+        logging.warning("Could not copy/concatenate prompts: %s", e)
+
+    try:
+        patterns_src = Path("multi_coder_analysis/regex/hop_patterns.yml")
+        shutil.copy(patterns_src, root_out / "hop_patterns.yml")
+        logging.info("Copied hop_patterns.yml to permutation root folder.")
+    except Exception as e:
+        logging.warning("Could not copy hop_patterns.yml: %s", e)
+
+    # ------------------------------------------------------------------
     # Majority vote across permutations
     # ------------------------------------------------------------------
     vote_frames = []
@@ -613,41 +610,6 @@ def run_permutation_suite(
     df_votes.to_csv(root_out / "majority_vote_comparison.csv", index=False)
 
     logging.info("✅ Permutation suite finished. Summary files written to %s", root_out)
-
-    # ------------------------------------------------------------------
-    # 📰  High-level utilisation summary (aggregated across permutations)
-    # ------------------------------------------------------------------
-    try:
-        regex_hits_total = 0
-        llm_calls_total = 0
-        tie_total = 0
-
-        for perm_dir in root_out.iterdir():
-            if not perm_dir.is_dir():
-                continue
-
-            # ---- read run summary counters (if present) ----
-            for run_sum in (perm_dir / "traces").glob("run_summary_*.ndjson"):
-                try:
-                    import json as _json
-                    data = _json.loads(run_sum.read_text(encoding="utf-8"))
-                    summ = data.get("summary_data", {})
-                    regex_hits_total += int(summ.get("regex_yes", 0))
-                    llm_calls_total += int(summ.get("llm_calls", 0))
-                except Exception:
-                    continue
-
-            # ---- count tie traces ----
-            tie_files = list((perm_dir / "traces").glob("tie_traces_*.jsonl"))
-            for tfile in tie_files:
-                try:
-                    tie_total += sum(1 for _ in tfile.open("r", encoding="utf-8"))
-                except Exception:
-                    continue
-
-        logging.info("Run-level summary → LLM calls: %s | Regex hits: %s | Ties: %s", llm_calls_total, regex_hits_total, tie_total)
-    except Exception as _e:
-        logging.debug("Could not compute utilisation summary: %s", _e)
 
     # ------------------------------------------------------------------
     # Low ratio traces (automatic export)

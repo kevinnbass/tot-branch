@@ -134,15 +134,6 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
         llm_yes_ids: set[str] = set()
         banner_printed = False
 
-        # ------------------------------------------------------------------
-        # Collect *all* batch tasks across every permutation first so that we
-        # can execute them in one thread pool later.  Previously the list was
-        # re-initialised inside the outer loop which meant only the *last*
-        # permutation's batches were ever sent to the LLM, resulting in a
-        # single API call instead of one per permutation.
-        # ------------------------------------------------------------------
-        tasks: list[tuple[BatchHopContext, dict[str, HopContext]]] = []
-
         for perm_id, segs in groups.items():
             num_batches = ceil(len(segs) / self._batch_size)
             for b_idx in range(num_batches):
@@ -193,11 +184,15 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
                 batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=self.hop_idx, segments=unresolved)
 
                 sid_to_ctx = {c.statement_id: c for c in unresolved}
+                tasks: list[tuple[BatchHopContext, dict[str, HopContext]]] = []
                 tasks.append((batch_ctx, sid_to_ctx))
 
         # Re-attach results in original ordering
         sid_to_processed = {c.statement_id: c for c in results}
         ordered: List[HopContext] = [sid_to_processed[c.statement_id] if c.statement_id in sid_to_processed else c for c in ctxs]
+
+        # ----------- Final progress log update ----------------
+        end_active = _active - len(regex_yes_ids) - len(llm_yes_ids)
 
         # If no batches needed an LLM call the banner might still be missing
         if _primary and not banner_printed:
@@ -212,14 +207,13 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
                     flush=True,
                 )
 
-        # ---------------- FINISH banner (moved here) --------------------
+        # ---------------- FINISH banner -------------------
         if _primary:
             try:
-                final_remaining = len([c for c in ordered if not c.is_concluded])
                 print(
                     f"*** FINISH Hop {self.hop_idx:02} → start:{_active} "
                     f"regex:{len(regex_yes_ids)} llm:{len(llm_yes_ids)} "
-                    f"remain:{final_remaining} ***",
+                    f"remain:{end_active} ***",
                     flush=True,
                 )
             except Exception:
