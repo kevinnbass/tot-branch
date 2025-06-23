@@ -318,6 +318,26 @@ def run_permutation_suite(
     root_out.mkdir(parents=True, exist_ok=True)
     logging.info("⚙️  Permutation suite output → %s", root_out)
 
+    # ------------------------------------------------------------------
+    # Copy prompt folder ONCE & write concatenated catalogue at start
+    # ------------------------------------------------------------------
+    try:
+        src_prompt_dir = Path("multi_coder_analysis/prompts")
+        dst_prompt_dir = root_out / "prompts"
+        import shutil
+        shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
+
+        from multi_coder_analysis.concat_prompts import concatenate_prompts
+
+        _prompts_txt = concatenate_prompts(
+            prompts_dir=src_prompt_dir,
+            output_file="concatenated_prompts.txt",
+            target_dir=root_out,
+        )
+        logging.info("Copied prompt folder & concatenated ➜ %s", _prompts_txt)
+    except Exception as e:
+        logging.warning("Could not copy/concatenate prompts: %s", e)
+
     # ----------------------------------------------------------------------
     # Load dataframe
     # ----------------------------------------------------------------------
@@ -475,27 +495,11 @@ def run_permutation_suite(
     logging.info("Merged mismatch traces → %s", concat_path)
 
     # ------------------------------------------------------------------
-    # Copy prompt folder + regex catalogue for auditability
+    # Copy regex catalogue for auditability (prompt folder already copied)
     # ------------------------------------------------------------------
     try:
-        src_prompt_dir = Path("multi_coder_analysis/prompts")
-        dst_prompt_dir = root_out / "prompts"
-        shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
-        logging.info("Copied prompt folder → %s", dst_prompt_dir)
-
-        # Concatenate prompts **once** at permutation root for auditability
-        from multi_coder_analysis.concat_prompts import concatenate_prompts
-        _prompts_txt = concatenate_prompts(
-            prompts_dir=src_prompt_dir,
-            output_file="concatenated_prompts.txt",
-            target_dir=root_out,
-        )
-        logging.info("Concatenated prompts written to %s", _prompts_txt)
-    except Exception as e:
-        logging.warning("Could not copy/concatenate prompts: %s", e)
-
-    try:
         patterns_src = Path("multi_coder_analysis/regex/hop_patterns.yml")
+        import shutil
         shutil.copy(patterns_src, root_out / "hop_patterns.yml")
         logging.info("Copied hop_patterns.yml to permutation root folder.")
     except Exception as e:
