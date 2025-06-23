@@ -482,13 +482,10 @@ def run_permutation_suite(
         shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
         logging.info("Copied prompt folder → %s", dst_prompt_dir)
 
-        # Also dump a single concatenated prompts catalogue at root level
-        _prompts_txt = concatenate_prompts(
-            prompts_dir=src_prompt_dir,
-            output_file="concatenated_prompts.txt",
-            target_dir=root_out,
-        )
-        logging.info("Concatenated prompts written to %s", _prompts_txt)
+        # Root-level concatenation removed – prompts were already concatenated
+        # inside each permutation run.  Avoid duplicate work & log spam.
+        # If needed for auditability, reuse the copy inside the first permutation
+        # folder (usually <root_out>/main/concatenated_prompts.txt).
     except Exception as e:
         logging.warning("Could not copy/concatenate prompts: %s", e)
 
