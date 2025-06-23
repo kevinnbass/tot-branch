@@ -69,9 +69,7 @@ Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 
 | **Alarmist – Critical alert phrase** | "State authorities remain on high alert for new cases." | **Alarmist** | "on high alert" (critical alert phrase) |
 | **Neutral – price trend** | "Egg prices have been *trending sharply higher* in recent weeks." | **Neutral** | ordinary price verb |
 
-Intensifier + Harm Noun fires **only** when the noun denotes realised
-damage (mortality, losses, shortage, toll, disaster, crisis).  
-Intensifier + neutral noun ("massive study", "huge survey") is Neutral.
+*Intensifier + Harm Noun* (handled by regex ≥ 2025-06-23) | — | — |
 
 **Boundary guard:** If the verb is "hit / hitting / swept / surged" but the segment gives no numbers, adjectives or metaphors that convey magnitude, treat it as Neutral. Alarmist fires only when a concrete scale/impact phrase is coupled.
 

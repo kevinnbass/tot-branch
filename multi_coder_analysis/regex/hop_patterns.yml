@@ -42,6 +42,7 @@
         |particularly|frighteningly|definitely|certainly|ever[-\s]*more|progressively)  
         (?:\s+\w+){0,3}\s+
     (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
+    \bless\s+safe\b|                                       # (2025-06-23) comparative risk form
     \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
     \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
     \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
@@ -114,6 +115,12 @@
       \b(?:spark|stoke|fuel|reignit(?:e|ing|ed|es))\s+
          (?:mass(?:ive)?\s+|widespread\s+|public\s+|nationwide\s+|
             global\s+)?(?:panic|alarm|outrage|anxiety)\b
+      |
+      # intensifier + harm noun  (2025-06-23)
+      \b(?:massive|huge|enormous|immense|unprecedented|major|
+         severe|significant|record(?:-breaking)?|vast|gigantic)\s+
+         (?:mortality|loss(?:es)?|outbreaks?|deaths?|fatalities|
+         damage|disaster|crisis|shortages?|toll)\b
     )
 
 # 2025-06-20 • Zero-FP rule promoted to live
@@ -158,6 +165,12 @@
     \b(?:is|are|was|were)\s+it\s+(?:really\s+)?necessary\s+to\s+
         (?:kill|cull|slaughter|destroy|euthan(?:ize|ise))\b
         [^?]{0,60}?\b(?:millions?|thousands?|record|\d{1,3}(?:[, ]\d{3})+)\b
+    |
+    # safety-question pattern (2025-06-23)
+    \b(?:is|are|was|were)\s+it\s+(?:really\s+)?safe\s+to\b
+    |
+    # "How many more … have to die?” rhetorical question
+    \bhow\s+many\s+more\s+\w+\s+have\s+to\s+(?:die|be\s+killed|be\s+culled|perish)\b
 
   # --- 2025-06-18 addition: Challenge-question over inaction ---
 
@@ -188,8 +201,15 @@
         completely\s+safe|
         (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
         (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
-        \b(?:encouraging|welcome|heartening)\s+news\b|
-        (?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
+        \b(?:encouraging|welcome|heartening|excellent)\s+news\b|
+        \bvery\s+well\s+protected\b|
+        \bwonderfully\s+high\b|
+        \bproviding\s+relief\b|
+        \bshort[-\s]?term\s+blip\b|
+        \btemporary\s+setback\b|
+        (?:expected|likely|set)\s+to\s+resolve\s+quickly\b|
+        \bthankfully\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b|
+        \b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
           .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
         \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
     | # generic optimism/confidence without "in X" clause
@@ -226,7 +246,7 @@
   frame: Reassuring
   pattern: |-
     # minimiser MUST be paired with an explicit denominator token
-    \b(?:only|just|merely|a\s+single|very\s+few|relatively\s+few)\b
+    \b(?:only|just|merely|a\s+single|very\s+few|relatively\s+few|no\s+more\s+than)\b
          [^.;\n]{0,30}
          \b(?:out\s+of|one\s+of|one\s+in|among|nationwide|statewide|across|worldwide|globally)\b
          [^.;\n]{0,30}\b(?:hundred|thousand|million|billion|
@@ -264,7 +284,10 @@
     |
     \b(?:pose|present|constitute)\s+no\s+(?:public\s+)?health\s+(?:threat|risk)\b
     |
-    \bno\s+(?:sign|indication|evidence)\s+of\s+spread\b
+    \bno\s+(?:sign|indication|evidence)\s+of\s+(?:spread|transmission)\b
+    |
+    \b(?:is|are|was|were|will|would|should|could|may|might)\s+unlikely\s+to\s+
+       (?:affect|impact|cause|pose|present|enter|spread|infect)\b
     |
     \b(?:has|have|had|did)\s+(?:not|n't)\s+
         detect(?:ed)?\s+(?:any\s+)?(?:further|additional|new)\s+
@@ -318,7 +341,7 @@
   mode: live
   frame: Neutral
   pattern: |-
-    \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)|(?:officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain)\b)\b
+    \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)|(?:officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain|resource(?:s)?|stockpile(?:d|s|ing)?|surveillance|monitor(?:ing)?)\b)\b
 
 9:
 - name: NeutralPriceMetrics
@@ -335,8 +358,11 @@
         | # "prices were up /down 2 %" form
           (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
         | # PATCH 2b – claim "trending sharply higher/lower" as Neutral
-          \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)
+          \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)\b
             [^.]{0,50}?\btrending\s+sharply\s+(?:higher|lower)\b
+        | # volatility (neutral)
+          \b(?:prices?|rates?|costs?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)\b
+            [^.]{0,80}?\b(?:be(?:come|came|coming)|are|were)\s+(?:more\s+)?volatile\b
     )
 
 10:
