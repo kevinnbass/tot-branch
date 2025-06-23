@@ -56,6 +56,9 @@ class RunConfig(BaseModel):
     sc_top_p: float = Field(0.95, ge=0.0, le=1.0, description="nucleus sampling p-value")
     sc_temperature: float = Field(0.7, ge=0.0, description="Sampling temperature for self-consistency")
 
+    # housekeeping – whether tot_runner should copy & concatenate the prompts
+    copy_prompts: bool = Field(True, description="Copy prompt folder into output_dir and concatenate prompts.txt")
+
     @validator("output_dir", pre=True)
     def _expand_output_dir(cls, v):  # noqa: D401
         return Path(v).expanduser().absolute()

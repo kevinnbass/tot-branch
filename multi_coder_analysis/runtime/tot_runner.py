@@ -55,9 +55,9 @@ def execute(cfg: RunConfig) -> Path:
     cfg.output_dir.mkdir(parents=True, exist_ok=True)
 
     # --------------------------------------------------
-    # 📂  Copy prompt folder and dump concatenated prompts (only once)
+    # 📂  Copy prompt folder and dump concatenated prompts (guarded by copy_prompts)
     # --------------------------------------------------
-    if cfg.archive_tag in (None, "main"):
+    if cfg.copy_prompts and cfg.archive_tag in (None, "main"):
         try:
             from multi_coder_analysis.concat_prompts import concatenate_prompts
             import shutil as _shutil

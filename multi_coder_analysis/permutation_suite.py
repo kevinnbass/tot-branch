@@ -208,6 +208,7 @@ def _worker(tag: str, df_pickle: bytes, root_out_str: str, cfg_dict: dict, worke
 
             # -------------- Archive tagging --------------
             archive_tag=tag,           # ensures per-worker archive file
+            copy_prompts=False,
         )
 
         _result_path = _exec(_cfg)
