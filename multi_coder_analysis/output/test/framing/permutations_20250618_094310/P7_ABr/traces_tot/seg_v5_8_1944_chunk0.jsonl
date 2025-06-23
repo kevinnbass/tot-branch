@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13748", "batch_size": 260, "batch_pos": 1}
+{"Q": 2, "answer": "no", "rationale": "The segment reports on past cases using neutral language ('recorded').", "method": "llm_batch", "batch_id": "batch_2_17256", "batch_size": 260, "batch_pos": 230}
+{"Q": 3, "answer": "no", "rationale": "The segment contains quantity '58 cases' but not paired with a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_17940", "batch_size": 260, "batch_pos": 167}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14516", "batch_size": 260, "batch_pos": 151}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a number/fact but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6448", "batch_size": 260, "batch_pos": 147}
+{"Q": 6, "answer": "no", "rationale": "Contains a number ('58') but not a minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17780", "batch_size": 260, "batch_pos": 113}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, or impact.", "method": "llm_batch", "batch_id": "batch_7_9160", "batch_size": 260, "batch_pos": 92}
+{"Q": 8, "answer": "no", "rationale": "The segment reports a historical fact (cases recorded) but does not describe capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_11716", "batch_size": 260, "batch_pos": 193}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of cases and date range, not prices or economic metrics.", "method": "llm_batch", "batch_id": "batch_9_15448", "batch_size": 260, "batch_pos": 87}
+{"Q": 10, "answer": "no", "rationale": "The segment reports historical data, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_3516", "batch_size": 260, "batch_pos": 200}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_4276", "batch_size": 260, "batch_pos": 157}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_16688", "batch_size": 260, "batch_pos": 154, "regex": {"rule": "NeutralStats", "span": [13, 30], "captures": ["record", "cases"]}}

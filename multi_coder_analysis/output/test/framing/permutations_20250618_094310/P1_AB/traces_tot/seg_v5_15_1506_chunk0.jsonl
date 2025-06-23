@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'threat' and 'outbreak' are nouns.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 180}
+{"Q": 2, "answer": "no", "rationale": "'threat' is a negative noun but not part of a Q2 pattern here.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 166}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 132}
+{"Q": 3, "answer": "no", "rationale": "'identified' is not a moderate verb on the Q3 list.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 132}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 126}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a historical fact without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 124}
+{"Q": 6, "answer": "no", "rationale": "'first identified' is not a minimiser of quantity with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 87}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 81}
+{"Q": 8, "answer": "no", "rationale": "Segment describes historical context, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 237}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a historical event, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2216", "batch_size": 260, "batch_pos": 39}
+{"Q": 10, "answer": "no", "rationale": "The segment reports historical event, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 199}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 179}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; reports historical identification as 'threat' (neutral term).", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 178}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14164", "batch_size": 260, "batch_pos": 137}
+{"Q": 2, "answer": "no", "rationale": "The segment describes plans using factual language.", "method": "llm_batch", "batch_id": "batch_2_17076", "batch_size": 260, "batch_pos": 136}
+{"Q": 3, "answer": "no", "rationale": "Describes plans, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_17808", "batch_size": 260, "batch_pos": 126}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_3592", "batch_size": 260, "batch_pos": 121}
+{"Q": 5, "answer": "no", "rationale": "Reports preparedness plans. Not explicitly calming about current safety.", "method": "llm_batch", "batch_id": "batch_5_18076", "batch_size": 260, "batch_pos": 121}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12128", "batch_size": 260, "batch_pos": 118}
+{"Q": 7, "answer": "no", "rationale": "The segment describes preparing plans, not a bare negation of risk, impact, or cases.", "method": "llm_batch", "batch_id": "batch_7_7488", "batch_size": 260, "batch_pos": 117}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_3500", "batch_size": 260, "batch_pos": 108, "regex": {"rule": "CapabilityNoReassurance", "span": [15, 24], "captures": []}}

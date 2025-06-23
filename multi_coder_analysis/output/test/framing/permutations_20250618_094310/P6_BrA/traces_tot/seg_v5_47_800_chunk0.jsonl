@@ -1,0 +1,13 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 33}
+{"Q": 1, "answer": "no", "rationale": "The segment uses a metaphor, but does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_16760_r1", "batch_size": 260, "batch_pos": 33}
+{"Q": 2, "answer": "no", "rationale": "'muddy the picture', 'difficult to identify' are neutral.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 244}
+{"Q": 3, "answer": "no", "rationale": "Segment reports potential difficulty in identification, not impact.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 186}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 178}
+{"Q": 5, "answer": "no", "rationale": "This segment highlights difficulty in identifying cases, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 171}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 137}
+{"Q": 7, "answer": "no", "rationale": "The segment describes factors that may muddy the picture but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 130}
+{"Q": 8, "answer": "no", "rationale": "States a challenge/limitation, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 209}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a potential complication, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 62}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 125}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 90}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 89, "regex": {"rule": "NeutralStats", "span": [154, 173], "captures": ["identify", "cases"]}}

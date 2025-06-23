@@ -1,0 +1,9 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 30}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_16760_r1", "batch_size": 260, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes analysis.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 241}
+{"Q": 3, "answer": "no", "rationale": "Segment reports a technical detail, not impact.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 175}
+{"Q": 5, "answer": "no", "rationale": "This segment reports a bare fact about sequencing, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 168}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 134}
+{"Q": 7, "answer": "no", "rationale": "The segment describes sequencing a portion of the virus but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 127}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 207, "regex": {"rule": "CapabilityNoReassurance", "span": [7, 16], "captures": []}}

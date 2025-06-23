@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch_7_17868",
+  "hop_idx": 7,
+  "segment_count": 2,
+  "matches": [
+    {
+      "statement_id": "seg_v5_2_45_chunk0",
+      "regex": {
+        "rule": "BareNegationHealthConcern",
+        "span": [
+          208,
+          227
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_7_45_chunk0",
+      "regex": {
+        "rule": "BareNegationHealthConcern",
+        "span": [
+          32,
+          83
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 2}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('handled', 'cooked', 'are safe to eat', 'said') without high-potency verbs or metaphors. 'safe to eat' is a Q5 cue.", "method": "llm_batch", "batch_id": "batch_2_16972", "batch_size": 260, "batch_pos": 253}
+{"Q": 3, "answer": "no", "rationale": "Statement about eggs being safe to eat, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_11860", "batch_size": 260, "batch_pos": 245}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_16028", "batch_size": 260, "batch_pos": 242}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_10380", "batch_size": 260, "batch_pos": 241, "regex": {"rule": "ExplicitCalming", "span": [53, 68], "captures": [null]}}

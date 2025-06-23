@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "'developed symptoms' is neutral.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 225}
+{"Q": 3, "answer": "no", "rationale": "Segment reports a number of people developed symptoms (plain verb).", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 168}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 160}
+{"Q": 5, "answer": "no", "rationale": "This segment reports workers developed symptoms, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 153}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 119}
+{"Q": 7, "answer": "no", "rationale": "The segment describes workers developing symptoms but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 112}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 199, "regex": {"rule": "CapabilityNoReassurance", "span": [89, 98], "captures": []}}

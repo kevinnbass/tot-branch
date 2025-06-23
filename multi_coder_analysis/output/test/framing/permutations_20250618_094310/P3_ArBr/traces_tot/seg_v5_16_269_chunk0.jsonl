@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14164", "batch_size": 260, "batch_pos": 123}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate language ('keeps cropping up') without high potency.", "method": "llm_batch", "batch_id": "batch_2_17076", "batch_size": 260, "batch_pos": 122}
+{"Q": 3, "answer": "no", "rationale": "'cropping up' is not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_17808", "batch_size": 260, "batch_pos": 112}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_3592", "batch_size": 260, "batch_pos": 108}
+{"Q": 5, "answer": "no", "rationale": "Reports virus cropping up and increased possibility of infection. Not calming.", "method": "llm_batch", "batch_id": "batch_5_18076", "batch_size": 260, "batch_pos": 108}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12128", "batch_size": 260, "batch_pos": 105}
+{"Q": 7, "answer": "no", "rationale": "The segment discusses increased possibility of infections, not a bare negation of risk, impact, or cases.", "method": "llm_batch", "batch_id": "batch_7_7488", "batch_size": 260, "batch_pos": 104}
+{"Q": 8, "answer": "no", "rationale": "Describes spread and potential future risk, not capability/preparedness/safeguard/future possibility.", "method": "llm_batch", "batch_id": "batch_8_3500", "batch_size": 260, "batch_pos": 97}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote about virus cropping up and increasing possibility, not economic/price reporting.", "method": "llm_batch", "batch_id": "batch_9_16720", "batch_size": 260, "batch_pos": 66}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 49, "regex": {"rule": "ReliefSpeculation", "span": [58, 63], "captures": ["could"]}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'unusual' modifies 'activity'.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 144}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 141}
+{"Q": 3, "answer": "no", "rationale": "Uses 'have shown' (plain verb) with no scale mentioned.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 132}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 131}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 131}
+{"Q": 5, "answer": "no", "rationale": "The segment reports surveillance shows 'no unusual activity,' which is a bare positive fact/negation, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 128}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 122}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'have shown no unusual activity'.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 122}

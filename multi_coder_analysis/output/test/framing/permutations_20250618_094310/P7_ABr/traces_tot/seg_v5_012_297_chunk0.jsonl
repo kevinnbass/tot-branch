@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16540", "batch_size": 260, "batch_pos": 225}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language.", "method": "llm_batch", "batch_id": "batch_2_6580", "batch_size": 260, "batch_pos": 209}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_12716", "batch_size": 260, "batch_pos": 174}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 169}
+{"Q": 5, "answer": "no", "rationale": "The segment states an opinion about resources being essential but is not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_17836", "batch_size": 260, "batch_pos": 167}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_18368", "batch_size": 260, "batch_pos": 147}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3220", "batch_size": 260, "batch_pos": 133}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses need for staff/resources and securing funds but no specific amounts or metrics.", "method": "llm_batch", "batch_id": "batch_9_15788", "batch_size": 260, "batch_pos": 47}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 213}
+{"Q": 10, "answer": "no", "rationale": "The segment describes importance and action taken, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 213}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement says having staff with resources is essential, which is about preparedness, but lacks explicit safety link. ||FRAME=Neutral", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 190}
+{"Q": 12, "answer": "yes", "rationale": "Reports quote stating something is 'essential'; describes importance (background).", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 187}

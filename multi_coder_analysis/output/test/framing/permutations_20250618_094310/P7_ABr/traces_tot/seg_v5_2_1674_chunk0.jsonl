@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15452", "batch_size": 260, "batch_pos": 18}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information ('announced', 'finding') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_16972", "batch_size": 260, "batch_pos": 17}
+{"Q": 3, "answer": "no", "rationale": "'had' is a plain verb, not a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_11860", "batch_size": 260, "batch_pos": 17}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_16028", "batch_size": 260, "batch_pos": 17}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a finding in milk without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10380", "batch_size": 260, "batch_pos": 17}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14764", "batch_size": 260, "batch_pos": 16}
+{"Q": 6, "answer": "no", "rationale": "The segment states 'one in five' which is a proportion, but it does not use a minimiser word ('only', 'just', etc.) before 'one' as required by the rule for 'Minimiser + Scale Contrast'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14764_r1", "batch_size": 260, "batch_pos": 16}
+{"Q": 7, "answer": "no", "rationale": "The segment describes test findings but contains no negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_10756", "batch_size": 260, "batch_pos": 16}
+{"Q": 8, "answer": "no", "rationale": "The segment reports an FDA finding, which is factual information, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 15}
+{"Q": 9, "answer": "yes", "rationale": "Reports finding ('one in five milk samples') using the standard verb 'announced'.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 12}

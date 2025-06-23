@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16524", "batch_size": 260, "batch_pos": 122}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlative negative nouns, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_10428", "batch_size": 260, "batch_pos": 97}
+{"Q": 3, "answer": "no", "rationale": "Hypothetical impact ('could have very big impacts') is not realised impact.", "method": "llm_batch", "batch_id": "batch_3_1432", "batch_size": 260, "batch_pos": 54}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14432", "batch_size": 260, "batch_pos": 40}
+{"Q": 5, "answer": "no", "rationale": "The segment quotes a source discussing potential 'very big impacts', which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_18008", "batch_size": 260, "batch_pos": 38}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_11528", "batch_size": 260, "batch_pos": 16}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17060", "batch_size": 260, "batch_pos": 6}
+{"Q": 8, "answer": "no", "rationale": "The segment discusses potential future impacts, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15012", "batch_size": 260, "batch_pos": 138}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a qualitative assessment ('very big impacts') rather than numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14520", "batch_size": 260, "batch_pos": 111}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 248, "regex": {"rule": "ReliefSpeculation", "span": [91, 96], "captures": ["could"]}}

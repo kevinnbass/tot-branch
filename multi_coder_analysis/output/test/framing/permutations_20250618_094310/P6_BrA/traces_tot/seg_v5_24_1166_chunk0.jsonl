@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'beleaguered' which modifies a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 165}
+{"Q": 2, "answer": "no", "rationale": "'beleaguered' describes the state of populations, not the virus's impact using high-potency language.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 116}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 51}
+{"Q": 3, "answer": "no", "rationale": "'beleaguered' is an adjective, not a moderate verb paired with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17212_r1", "batch_size": 260, "batch_pos": 51}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 40}
+{"Q": 5, "answer": "no", "rationale": "Suggests finding funds for recovery, not a calming cue about the present situation.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 32}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 247}
+{"Q": 7, "answer": "no", "rationale": "The segment describes finding funds to help populations recover but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 240}
+{"Q": 8, "answer": "yes", "rationale": "Describes a recommended future action/possibility ('UK should also find funds to help beleaguered wild bird populations recover').", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 41}

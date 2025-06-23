@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16416", "batch_size": 260, "batch_pos": 41}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes a budget cut with a specific number ('cutting the NIAID budget by 23.9%').", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 38}
+{"Q": 3, "answer": "no", "rationale": "The verb 'cutting' is paired with scale '23.9%', but this refers to a financial/budget metric, which is excluded.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 18}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 12}
+{"Q": 5, "answer": "no", "rationale": "The segment reports budget cuts and does not contain an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 12}
+{"Q": 6, "answer": "no", "rationale": "Uses 'only' but not for reassurance about a threat's scope; it describes a negative situation (being cut).", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 7}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or statement of uncertainty/low risk.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 3}
+{"Q": 8, "answer": "no", "rationale": "Describes past situation/context (budget cut), not capability/preparedness/safeguard/future possibility.", "method": "llm_batch", "batch_id": "batch_8_3500", "batch_size": 260, "batch_pos": 251}
+{"Q": 9, "answer": "yes", "rationale": "'cutting the NIAID budget by 23.9%' reports a budget metric factually.", "method": "llm_batch", "batch_id": "batch_9_16720", "batch_size": 260, "batch_pos": 150}

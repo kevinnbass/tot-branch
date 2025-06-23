@@ -1,0 +1,154 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_016_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'About 20% of 100 listed companies' which includes a scale ('of 100 listed companies') but lacks a minimiser token like 'only' or 'just'."
+  },
+  {
+    "segment_id": "seg_v5_017_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'not just Japan' which is a comparison/negation, not a minimiser + scale contrast as defined for Q6."
+  },
+  {
+    "segment_id": "seg_v5_1_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions detection 'on a poultry farm' but lacks both a minimiser and a scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_2_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_3_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'several outbreaks' and locations ('Europe and Asia') but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_4_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'Several cases' and locations ('France', 'backyard poultry', 'wild bird') but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_6_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'importing countries, notably in Asia' but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_7_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'among epidemiologists' but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_8_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how bird flu spreads but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_1_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'Nearly 5 million' and 'far less than the number of birds killed last year'. While a comparison exists, it lacks a Q6 minimiser token like 'only' or 'just' combined with a scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_2_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a comparison between two large numbers ('4.6 million' vs 'nearly 58 million') but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_4_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how the virus spreads but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_5_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states it is 'hard to keep the virus out' but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_7_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions cases 'primarily at farms in Minnesota, Iowa and South Dakota' but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_8_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'only tens of thousands' which has a minimiser ('only') but the scale ('tens of thousands') is a quantity, not a denominator contrast like 'out of X' or 'nationwide' as required by Q6."
+  },
+  {
+    "segment_id": "seg_v5_9_358_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'only a small portion of the total flock nationwide' uses a minimiser ('only', 'a small portion') with an explicit scale contrast ('of the total flock nationwide')."
+  },
+  {
+    "segment_id": "seg_v5_10_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions a 'nationwide average' and compares prices over time but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_11_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a price but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_13_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a price increase but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_14_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions locations ('southeast') and comparisons ('haven't been hit as hard', 'not as many cases') but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_15_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment compares prices over time but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_16_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken by farmers but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_17_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken by farms but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_18_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment quotes a source stressing biosecurity but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_19_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a cost figure but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_20_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a cost figure but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_21_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment makes comparisons ('more widespread than', 'less costly') but lacks a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_22_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states bird flu 'doesn't represent a significant health threat' which is a negation/assurance, but not a minimiser + scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_24_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides cooking advice but contains no minimiser or scale contrast."
+  },
+  {
+    "segment_id": "seg_v5_25_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses vaccines but contains no minimiser or scale contrast."
+  }
+]
+```

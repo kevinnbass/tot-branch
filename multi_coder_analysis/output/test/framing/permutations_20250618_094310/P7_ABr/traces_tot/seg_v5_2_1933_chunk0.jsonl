@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12396", "batch_size": 260, "batch_pos": 134}
+{"Q": 2, "answer": "no", "rationale": "The segment reports on status and potential spread using neutral/moderate language ('receiving supportive care', 'shown improvement', 'worried', 'potentially spread').", "method": "llm_batch", "batch_id": "batch_2_17256", "batch_size": 260, "batch_pos": 104}
+{"Q": 3, "answer": "no", "rationale": "The segment contains a psychological verb 'worried' and a hypothetical 'could potentially spread'.", "method": "llm_batch", "batch_id": "batch_3_17940", "batch_size": 260, "batch_pos": 43}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14516", "batch_size": 260, "batch_pos": 30}
+{"Q": 5, "answer": "no", "rationale": "The segment reports improvement (positive fact) but also worry, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6448", "batch_size": 260, "batch_pos": 27}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_12868", "batch_size": 260, "batch_pos": 257}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a statement about worry, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15724", "batch_size": 260, "batch_pos": 236}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11716", "batch_size": 260, "batch_pos": 84, "regex": {"rule": "CapabilityNoReassurance", "span": [90, 99], "captures": []}}

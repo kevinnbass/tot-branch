@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 46}
+{"Q": 2, "answer": "no", "rationale": "The segment describes supply chain impact using factual language; 'tightening of supply' is not high-potency.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 252}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a moderate verb ('is experiencing') paired with a financial/trade metric ('tightening of supply'), which is Neutral for Q3.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 182}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 171}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17952_r1", "batch_size": 260, "batch_pos": 171}
+{"Q": 5, "answer": "no", "rationale": "Describes current supply tightening and reasons, neutral facts.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 163}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 116}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 116}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 107}
+{"Q": 8, "answer": "no", "rationale": "The segment describes current industry situation (supply tightening), not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 168}
+{"Q": 9, "answer": "yes", "rationale": "'Americans typically consume an average of 3 billion eggs' reports a numerical metric using a standard verb.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 207}

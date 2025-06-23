@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "'concern' is a noun, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 195}
+{"Q": 2, "answer": "no", "rationale": "'concern' is a psychological noun, not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 181}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 146}
+{"Q": 3, "answer": "no", "rationale": "'concern' is a psychological noun; 'might impact' is hypothetical.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 146}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 140}
+{"Q": 5, "answer": "no", "rationale": "The speaker expresses concern ('There is a concern'), which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 138}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 101}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 93}
+{"Q": 8, "answer": "no", "rationale": "Segment expresses concern about potential economic impact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 248}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential impact on markets but does not report specific metrics.", "method": "llm_batch", "batch_id": "batch_9_2216", "batch_size": 260, "batch_pos": 47}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 206, "regex": {"rule": "ReliefSpeculation", "span": [53, 58], "captures": ["might"]}}

@@ -1,0 +1,879 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_4_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission methods but does not use a moderate verb paired with significant scale or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses increased risk but does not use a moderate verb paired with significant scale or impact describing realised harm."
+  },
+  {
+    "segment_id": "seg_v5_6_1138_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the moderate verb 'affected' paired with the scale '37 European countries' and 'largest geographical reach on record'."
+  },
+  {
+    "segment_id": "seg_v5_8_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detections and events using plain verbs ('notified', 'recorded') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_9_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation and does not describe impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions funding and rising concerns, but lacks a moderate verb paired with significant scale/impact of the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_2_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes funding use for vaccine development, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_3_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses testing timelines, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_4_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the focus of a trial, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_5_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes contract options based on potential future events, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_6_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses manufacturing capacity uncertainty, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_7_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an outbreak and infection numbers using plain verbs ('reported', 'infected') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_8_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes concerns about potential future events, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_9_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the risk is low, which would trigger Q5, but does not contain Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_10_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes discussions, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_11_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses future announcements, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_12_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes negotiations, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_13_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes technology used in vaccines, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_14_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes advantages of technology, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_15_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes manufacturing time, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_16_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes vaccine preparation and potential quantity ('could provide'), which is hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_17_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential availability, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_18_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential use, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_19_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes lab findings, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_20_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes FDA actions and caution, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_001_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a positive test using plain verbs ('tested positive', 'confirmed') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_002_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and exposure using a plain verb ('reported') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_003_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes patient status, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'has also infected mammalian species' but 'infected' is a plain verb and the scale is a range, not a specific quantity."
+  },
+  {
+    "segment_id": "seg_v5_006_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports infections found in states using plain verbs ('have been found') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_007_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the risk is low, which would trigger Q5, but does not contain Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_008_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a case count using a plain verb ('is') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case details using plain verbs ('is', 'was', 'tested positive') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_010_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case details using plain verbs ('was', 'tested positive', 'reported', 'recovered') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_011_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes previous cases using a plain verb ('were') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_012_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an interview topic, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_013_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_014_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the nature of the cases using plain verbs ('has been') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_015_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the nature of the cases using plain verbs ('has been', 'have been', 'is', 'was') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_018_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes case details using plain verbs ('was', 'were working', 'were dying', 'had', 'got tested') not moderate verbs from the list. 'depopulating' is a containment verb."
+  },
+  {
+    "segment_id": "seg_v5_019_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses uncertainty and describes the second case using plain verbs ('don’t know', 'could have been', 'was picked up', 'is') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_021_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the second case and receptor sites, including a reassuring comment, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_023_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_024_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the risk is low, which would trigger Q5, but does not contain Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_029_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses concern about pigs as sentinels, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_030_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_031_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the virus's current behaviour using a plain verb ('is not infecting') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_032_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the virus's current behaviour and potential future change using plain verbs ('is not infecting', 'can change', 'is not') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_034_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports past events using a plain verb ('have been') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_035_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports past events and asks a question, but does not contain Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_036_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a general statement, not a description of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_037_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past events using plain verbs ('saw', 'was') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_039_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a past prediction using plain verbs ('was', 'had', 'said', 'didn’t happen') not moderate verbs from the list, and the impact is hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_041_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past events using a plain verb ('saw') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_042_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past events using plain verbs ('saw', 'was', 'were') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_043_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past events and a past prediction, but lacks Q3 cues describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_044_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a lack of event using a plain verb ('happened') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_045_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a lack of event and draws a conclusion, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_046_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation, not a description of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_047_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphorical expression, not a moderate verb paired with significant scale or impact."
+  },
+  {
+    "segment_id": "seg_v5_048_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the virus's action and the issue's severity using plain verbs ('was able to reach', 'cause', 'was') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_050_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the virus's action, severity, and lack of evidence using plain verbs ('was able to reach', 'cause', 'was', 'had') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_051_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the source of exposure using a plain verb ('were') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_052_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a lack of evidence using a plain verb ('haven’t seen') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_053_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_054_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and response about a potential source, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_055_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential sources using plain verbs ('was', 'is') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_057_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_058_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes criteria for knowing about spread using plain verbs ('have to have', 'resulted in', 'start picking up') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_059_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_060_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes tracking using a plain verb ('going to be tracking') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_061_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports lack of observed changes and future monitoring using plain verbs ('have not seen', 'would support', 'is going to be looking for') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_063_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes monitoring using a plain verb ('looking') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_064_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes monitoring and lack of cases using plain verbs ('say', 'have not had', 'looking', 'will be') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_066_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses a hypothetical future event using plain verbs ('say', 'have not had', 'see', 'will we see') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_067_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_068_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation using a plain verb ('would avoid') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_069_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation and context using plain verbs ('would avoid', 'have been saying') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_070_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation and context using plain verbs ('would avoid', 'have been saying', 'is') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_071_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports data supporting effectiveness using plain verbs ('is', 'have', 'supports', 'will kill') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_072_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_073_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states uncertainty using a plain verb ('don’t know') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_074_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question about a potential mechanism using a plain verb ('cause') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_075_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and statement of possibility/uncertainty using plain verbs ('cause', 'don’t know', 'is') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_077_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_078_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states uncertainty using a plain verb ('don’t know') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_079_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states future knowledge using a plain verb ('will know') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_080_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an expected event using plain verbs ('is', 'expect to see', 'bringing', 'have not seen') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_081_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an expected event and uses a metaphor ('throw at the genetic roulette table') which describes a process, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_082_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states uncertainty using a plain verb ('don't know') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_083_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states uncertainty and need for preparedness, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_084_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a belief about risk using a plain verb ('poses') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_085_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a belief about risk and potential future change using plain verbs ('is', 'poses', 'could change', 'were') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_1_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation, not a description of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_2_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the status of Covid using a plain verb ('has receded') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes action taken using plain verbs ('took action', 'ordering') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_5_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'culled' with a large number, which is Neutral according to the rules."
+  },
+  {
+    "segment_id": "seg_v5_8_1166_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the moderate verb 'spread' paired with the geographical scale 'around the world'."
+  },
+  {
+    "segment_id": "seg_v5_9_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the outbreak's appearance and persistence using plain verbs ('appeared', 'persisted') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_10_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses loss estimates using plain verbs ('is', 'range') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a condition that accelerates contagion using a plain verb ('accelerates') not a moderate verb from the list describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports dead birds using a plain verb ('record') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_14_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes scientists' worry using a psychological verb ('worry') not a moderate verb from the list describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes risk status ('at real risk') not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_17_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a future hypothetical impact ('will also be hit') not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_18_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'destroyed' with a large number, which is Neutral according to the rules. 'supplies drop' and 'prices are rising' describe background conditions."
+  },
+  {
+    "segment_id": "seg_v5_20_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes economic action using a plain verb ('passing on') not a moderate verb from the list describing threat impact."
+  },
+  {
+    "segment_id": "seg_v5_21_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes financial metrics ('rose at 21 per cent'), which are treated as factual reporting and are Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_22_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions fears and potential future action, but lacks Q3 cues describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_23_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes compensation, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_1_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides biographical/contextual information, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_2_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_3_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes interview topics, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_5_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's willingness to talk, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_6_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's opinion, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_7_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's personal reflection, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_8_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports what the speaker was told, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_9_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the institute and previous director, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_10_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's opinion on a job aspect, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_11_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's feeling and action. 'ruptured' is vivid but describes relationships, not threat impact."
+  },
+  {
+    "segment_id": "seg_v5_12_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a budget cut, which is not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_15_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a situation and feeling, but lacks a moderate verb paired with significant scale/impact of the threat."
+  },
+  {
+    "segment_id": "seg_v5_17_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports quoted speech ('really bad') which is not the author's framing."
+  },
+  {
+    "segment_id": "seg_v5_19_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_20_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a budget proposal, which is not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_21_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides personal context, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_22_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's opinion, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_23_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's opinion/reflection, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_24_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past practice, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_25_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes current practice, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_29_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_30_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('concerned') not a moderate verb paired with significant scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_31_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an effort, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_32_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes CDC action, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_33_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphorical description, not a moderate verb paired with significant scale or impact."
+  },
+  {
+    "segment_id": "seg_v5_34_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a current state and unwillingness, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_37_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes events and reactions, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_38_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the speaker's thought, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_41_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('traumatized') not a moderate verb paired with significant scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_42_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling and call for honesty, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_43_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_44_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a lack of appetite for alarm and explicitly avoids alarmist language."
+  },
+  {
+    "segment_id": "seg_v5_45_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worry') and scientific observation, but lacks Q3 cues describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_46_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worry', 'concerned') and prediction, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_47_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worry', 'concerned') and describes a vulnerable group, but lacks Q3 cues describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_48_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worry') and prediction, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_49_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worry') and prediction, and provides a recommendation, but lacks Q3 cues describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_53_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment introduces a topic, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_54_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_55_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphorical description, not a moderate verb paired with significant scale or impact."
+  },
+  {
+    "segment_id": "seg_v5_56_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphorical description, not a moderate verb paired with significant scale or impact."
+  },
+  {
+    "segment_id": "seg_v5_59_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's opinion/concern, but lacks Q3 cues describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_61_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a quantity delivered using a plain verb ('delivered') not a moderate verb from the list describing threat impact."
+  },
+  {
+    "segment_id": "seg_v5_62_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential action and future planning, not realised impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_63_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_64_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes challenges, not the impact of the virus using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_65_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_66_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a number of papers using a plain verb ('have been') not a moderate verb from the list describing threat impact."
+  },
+  {
+    "segment_id": "seg_v5_67_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's opinion ('really exciting') not a moderate verb paired with significant scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_68_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling and opinion, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_70_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and opinion, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_71_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worries me') not a moderate verb paired with significant scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_72_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's feeling ('worries me') and opinion/metaphor, but lacks Q3 cues."
+  },
+  {
+    "segment_id": "seg_v5_74_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an observation using a plain verb ('don’t take') not a moderate verb from the list describing threat impact."
+  },
+  {
+    "segment_id": "seg_v5_75_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about PrEP effectiveness using plain verbs ('works', 'don’t take', 'don’t work') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_77_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's opinion/speculation using plain verbs ('think', 'could use', 'would work') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_78_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes design and difference using plain verbs ('was designed', 'could have', 'is') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_82_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's opinion/analysis using plain verbs ('think', 'can say', 'have', 'don’t have') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_83_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's opinion/analysis using plain verbs ('think', 'can say', 'have', 'don’t have', 'is', 'hitting', 'getting') not moderate verbs from the list. Metaphors describe effectiveness, not threat impact."
+  },
+  {
+    "segment_id": "seg_v5_85_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an observation using a plain verb ('saw') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_86_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes action using a plain verb ('working') not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_87_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes action and reason using plain verbs ('working', 'haven’t had', 'got derailed') not moderate verbs from the list. 'got derailed' describes the plan, not threat impact."
+  },
+  {
+    "segment_id": "seg_v5_88_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a plan using plain verbs ('want', 'going to be refreshed', 'will have', 'will talk', 'are') not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_90_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement of impact using a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_91_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the speaker's hope using plain verbs ('hope', 'would love to see', 'realized') not moderate verbs from the list."
+  }
+]
+```

@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a risk-adjective ('concerning') but it is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_16792", "batch_size": 260, "batch_pos": 89}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_11752", "batch_size": 260, "batch_pos": 57}
+{"Q": 2, "answer": "no", "rationale": "The segment uses the adjective 'concerning' but lacks a high-potency verb, potent metaphor, superlative-negative noun, or critical alert phrase.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_11752_r1", "batch_size": 260, "batch_pos": 57}
+{"Q": 3, "answer": "no", "rationale": "Evaluative adjective 'concerning', not moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_14832", "batch_size": 260, "batch_pos": 17}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_1636", "batch_size": 260, "batch_pos": 2}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a reaction/concern but does not contain explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12552", "batch_size": 260, "batch_pos": 260}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7144", "batch_size": 260, "batch_pos": 241}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a negation about certainty ('no doubt'), not a bare negation about the virus.", "method": "llm_batch", "batch_id": "batch_7_16528", "batch_size": 260, "batch_pos": 234}
+{"Q": 8, "answer": "no", "rationale": "Expresses concern.", "method": "llm_batch", "batch_id": "batch_8_13672", "batch_size": 260, "batch_pos": 136}
+{"Q": 9, "answer": "no", "rationale": "The segment states the mink outbreak is concerning, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_4924", "batch_size": 260, "batch_pos": 120}
+{"Q": 10, "answer": "no", "rationale": "The segment states a current assessment ('The mink outbreak is concerning') rather than speculating about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 33}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a frame.", "method": "llm_batch", "batch_id": "batch_11_10328", "batch_size": 244, "batch_pos": 18}
+{"Q": 12, "answer": "no", "rationale": "Explicitly states the outbreak is 'concerning'. Explicit framing cue.", "method": "llm_batch", "batch_id": "batch_12_4324", "batch_size": 244, "batch_pos": 18}

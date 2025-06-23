@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 155}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 149}
+{"Q": 3, "answer": "no", "rationale": "Statement about veterinarian role, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 147}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 146}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 146}
+{"Q": 5, "answer": "no", "rationale": "This segment provides context about the speaker without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 146}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 141}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 141}
+{"Q": 7, "answer": "no", "rationale": "The segment provides identification but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 137}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a person's title, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 109}
+{"Q": 9, "answer": "no", "rationale": "The segment states a person's profession, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 75}
+{"Q": 10, "answer": "no", "rationale": "The segment is attribution, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 44}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 36}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; factual statement about a person's role.", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 35}

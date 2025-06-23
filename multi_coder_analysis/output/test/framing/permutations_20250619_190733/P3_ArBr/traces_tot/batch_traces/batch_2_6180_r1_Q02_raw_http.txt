@@ -1,0 +1,34 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_6_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'worst avian-flu crises' uses a superlative ('worst') with a negative noun ('crises'), matching a Q2 pattern."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'record highs' for prices and 'worsening economic pain', but lacks a high-potency verb, potent metaphor, or superlative/intensifier with a harm noun as defined for Q2."
+  },
+  {
+    "segment_id": "seg_v5_4_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culled', triggering the containment override rule for Q2."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'die' is neutral and does not meet the criteria for a high-potency verb or other Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_2_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'worst U.S. animal-health disaster' uses a superlative ('worst') with a negative noun ('disaster'), matching a Q2 pattern."
+  },
+  {
+    "segment_id": "seg_v5_1_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The verb 'wiped out' is a high-potency verb, and 'deadliest outbreak' uses a superlative ('deadliest') with a negative noun ('outbreak'), matching Q2 patterns."
+  }
+]
+```

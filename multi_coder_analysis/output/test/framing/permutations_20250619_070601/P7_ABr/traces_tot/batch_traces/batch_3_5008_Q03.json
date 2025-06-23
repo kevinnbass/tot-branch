@@ -1,0 +1,928 @@
+{
+  "batch_id": "batch_3_5008",
+  "hop_idx": 3,
+  "segment_count": 184,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'killing' and plain outcome verb 'infected', which do not trigger Q3."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'kill', which neutralizes Q3 even with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'kill', which neutralizes Q3 even with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about numbers of chickens on farms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about annual production numbers, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about case locations, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a confirmed case and farm size, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about number of states with cases, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about disease transmission source, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_11_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about locations and duration, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_12_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('do not present an immediate public health concern'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_13_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains reassuring cues ('No human cases', 'remains safe'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_15_102_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about cooking, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_16_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'killed', which neutralizes Q3 even with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_17_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'killed', which neutralizes Q3 even with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_1_1674_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'spread' but the scale ('one person', '36 dairy herds') is not framed as significant impact."
+    },
+    {
+      "segment_id": "seg_v5_2_1674_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about testing results, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_3_1674_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about actions taken, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_4_1674_chunk0",
+      "answer": "no",
+      "rationale": "Reports a statistic ('56 percent...fatal') factually, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_5_1674_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'died', which does not trigger Q3."
+    },
+    {
+      "segment_id": "seg_v5_8_1674_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about detection status, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_9_1674_chunk0",
+      "answer": "no",
+      "rationale": "Describes impact on financial metrics ('sales jumped'), which is excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_10_1674_chunk0",
+      "answer": "no",
+      "rationale": "Factual statistic about consumption, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_11_1674_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about links to other diseases, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_12_1674_chunk0",
+      "answer": "no",
+      "rationale": "Quote about social media algorithms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_13_1674_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about regulations, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_1_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about issuing an alert and a confirmed case, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a diagnosis and case count, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_3_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a past case, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_4_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about alert purpose, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_5_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual recommendation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_6_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual recommendation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_7_1470_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('risks...remain low'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_8_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual recommendations, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_9_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a symptom, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_10_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about potential symptoms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_11_1470_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'reported' and describes outcome 'resulted in death' factually."
+    },
+    {
+      "segment_id": "seg_v5_12_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about CDC stressing importance, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_13_1470_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('risks currently being low'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_14_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual recommendation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_16_1470_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'sparking' about concerns, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_17_1470_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'expressed concerns', not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_18_1470_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'spread' but the scale ('at least six different states') is not framed as significant impact."
+    },
+    {
+      "segment_id": "seg_v5_19_1470_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about testing results, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_1_948_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about detection and location, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_948_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'exterminated', which neutralizes Q3 even with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_3_948_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('do not believe that there is any possibility'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_4_948_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'source of concern', not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_5_948_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'reported' and describes outcomes factually."
+    },
+    {
+      "segment_id": "seg_v5_6_948_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'reported' and states numbers factually."
+    },
+    {
+      "segment_id": "seg_v5_1_1534_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about testing results, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_1534_chunk0",
+      "answer": "no",
+      "rationale": "Contains reassuring cues ('tested negative', 'meat supply is safe'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_3_1534_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about actions taken and detection numbers, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_4_1534_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a case number, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_5_1534_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('overall public health risk is low'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_1_647_chunk0",
+      "answer": "no",
+      "rationale": "Background description of work conditions, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about presence of bird flu, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_4_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verbs 'infected' and 'killed' and states numbers factually."
+    },
+    {
+      "segment_id": "seg_v5_6_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about species affected, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_7_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses vivid adjective 'voraciousness' about the virus's nature, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_8_647_chunk0",
+      "answer": "no",
+      "rationale": "Contains a loaded metaphor ('collateral damage'), which would trigger Q2."
+    },
+    {
+      "segment_id": "seg_v5_9_647_chunk0",
+      "answer": "no",
+      "rationale": "Hypothetical statement about future possibility, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_11_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about viral mutation rates, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_13_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about viral mutation rates and fitness, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_14_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about viral mutation and spread, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_15_647_chunk0",
+      "answer": "no",
+      "rationale": "Hypothetical statement about future possibility, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_16_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about seeing infected birds, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_17_647_chunk0",
+      "answer": "no",
+      "rationale": "Descriptive language about animal symptoms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_20_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing animal symptoms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_22_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing animal symptoms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_23_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about prior knowledge, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_24_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'succumb' but scale ('growing list of species') is not specific numeric/record type."
+    },
+    {
+      "segment_id": "seg_v5_25_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing severity, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_26_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote expressing emotion, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_27_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'infected' and states numbers factually."
+    },
+    {
+      "segment_id": "seg_v5_28_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'died' and states percentage factually."
+    },
+    {
+      "segment_id": "seg_v5_30_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about transmission likelihood, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_31_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote defining a term, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_32_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual explanation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_33_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual explanation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_34_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about case numbers, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_35_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about symptoms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_36_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about exposure, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_37_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about symptoms, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_38_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about treatment outcome, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_39_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about outcomes, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_40_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about research findings, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_41_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about research methods and results, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_42_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about research methods, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_43_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses factual outcome 'became ill', not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_44_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about research methods, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_45_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses factual outcome 'became ill', not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_47_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about numbers of herds/states and human infections, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_48_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses factual outcome 'became ill' and contains a reassuring cue ('good news'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_49_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about future plans, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_50_647_chunk0",
+      "answer": "no",
+      "rationale": "Hypothetical statement about future possibility, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_4_914_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a registered case and reporting, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_3_914_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a past outbreak's severity, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_914_chunk0",
+      "answer": "yes",
+      "rationale": "Uses the moderate verb 'spread' intensified by 'rapidly' and paired with scale 'worldwide'."
+    },
+    {
+      "segment_id": "seg_v5_1_914_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('risk...appears low'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_9_1286_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('at low risk'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_8_1286_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about occurrence and location, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_7_1286_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about detection, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_6_1286_chunk0",
+      "answer": "no",
+      "rationale": "Statement about expected future exposure, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_5_1286_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'died' and small number, not significant scale."
+    },
+    {
+      "segment_id": "seg_v5_4_1286_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about actions taken, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_3_1286_chunk0",
+      "answer": "no",
+      "rationale": "Uses outcome 'found dead' and small number, not significant scale."
+    },
+    {
+      "segment_id": "seg_v5_2_1286_chunk0",
+      "answer": "no",
+      "rationale": "Uses outcome 'found dead' and single case, not significant scale."
+    },
+    {
+      "segment_id": "seg_v5_1_1286_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verbs 'died' and 'killed' and small numbers, not significant scale."
+    },
+    {
+      "segment_id": "seg_v5_7_192_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about an action taken, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_5_192_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'reported' and non-specific scale 'Most states'."
+    },
+    {
+      "segment_id": "seg_v5_4_192_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about case numbers, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_3_192_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a first case, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_192_chunk0",
+      "answer": "no",
+      "rationale": "Quote about caution, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_1_192_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about an action taken, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_4_1198_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'culled' and describes a future plan, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_3_1198_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about findings and outcome, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_1198_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'reported' and describes outcome 'increase of deaths' factually."
+    },
+    {
+      "segment_id": "seg_v5_37_1065_chunk0",
+      "answer": "no",
+      "rationale": "Hypothetical statement about future possibility, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_36_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about transmission source, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_35_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual recommendation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_34_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about actions taken, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_30_1065_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'killed' and describes a hypothetical future."
+    },
+    {
+      "segment_id": "seg_v5_29_1065_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'hardest hit' but scale ('states') is not specific numeric/record type."
+    },
+    {
+      "segment_id": "seg_v5_28_1065_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'affected' and states numbers factually."
+    },
+    {
+      "segment_id": "seg_v5_27_1065_chunk0",
+      "answer": "no",
+      "rationale": "Statement about necessary conditions and potential future problems, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_26_1065_chunk0",
+      "answer": "no",
+      "rationale": "Quote about equipment cleaning, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_24_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a company, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_23_1065_chunk0",
+      "answer": "no",
+      "rationale": "Quote about future possibility and uncertainty, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_22_1065_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'anxiously watching' and factual statement about seeing infections."
+    },
+    {
+      "segment_id": "seg_v5_20_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a company and production volume, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_19_1065_chunk0",
+      "answer": "no",
+      "rationale": "Describes impact on financial metrics ('cost...has doubled'), which is excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_18_1065_chunk0",
+      "answer": "no",
+      "rationale": "Describes impact on financial metrics ('Chicken prices rise') and uses 'hits' without specific scale."
+    },
+    {
+      "segment_id": "seg_v5_17_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about ranking, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_15_1065_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'affected' and states numbers factually."
+    },
+    {
+      "segment_id": "seg_v5_14_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about a person's role, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_13_1065_chunk0",
+      "answer": "no",
+      "rationale": "Quote about preventing spread, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_12_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about an action's effect, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_11_1065_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'de-populated' and describes a necessity, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_9_1065_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'watching closely' and factual statement about a first case."
+    },
+    {
+      "segment_id": "seg_v5_8_1065_chunk0",
+      "answer": "no",
+      "rationale": "Quote about policy/necessity, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_6_1065_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about an action taken, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_2_1065_chunk0",
+      "answer": "no",
+      "rationale": "Statement about prices and potential future increase, not realised impact in Q3 sense."
+    },
+    {
+      "segment_id": "seg_v5_1_1065_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'on edge' and plain outcome verb 'impacted'."
+    },
+    {
+      "segment_id": "seg_v5_95_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'watching closely' and describes future possibility, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_94_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about lack of spread and quote drawing a comparison."
+    },
+    {
+      "segment_id": "seg_v5_93_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about lack of spread, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_92_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about precautions and effectiveness, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_91_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about outcomes, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_90_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verb 'died' and small number, not significant scale."
+    },
+    {
+      "segment_id": "seg_v5_88_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote about studying the virus and looking for evidence, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_87_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about viral changes and future uncertainty, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_85_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about viral changes and future uncertainty, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_84_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing severity, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_82_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about animal behaviour, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_81_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing severity, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_80_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote using descriptive language, not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_79_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about agreement, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_78_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing where the virus is found, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_77_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing where the virus is found, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_76_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote describing where the virus is found, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_75_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about potential outcome, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_74_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about potential outcome, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_73_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about potential factors affecting severity, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_72_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about government action, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_71_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses psychological verb 'concerns' and factual statement about equipment."
+    },
+    {
+      "segment_id": "seg_v5_70_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about government actions, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_69_647_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('risk...is low'), Q3 is not met."
+    },
+    {
+      "segment_id": "seg_v5_68_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about ordering vaccines, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_67_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about vaccine stockpile and preparation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_66_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about prediction difficulty and importance of vaccination, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_65_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about immune response, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_64_647_chunk0",
+      "answer": "no",
+      "rationale": "Factual statement about testing status, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_63_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses factual outcome 'didn't get as sick', not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_62_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about research implications, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_61_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about a potential explanation, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_59_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses noun form of plain outcome verb 'infections' and descriptive scale 'wide spectrum'."
+    },
+    {
+      "segment_id": "seg_v5_58_647_chunk0",
+      "answer": "no",
+      "rationale": "Describes current cases as 'mild' and future possibility ('will be serious illnesses'), not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_57_647_chunk0",
+      "answer": "no",
+      "rationale": "Uses plain outcome verbs 'killed' and 'infected', which do not trigger Q3."
+    },
+    {
+      "segment_id": "seg_v5_55_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote about immunity, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_54_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about immunity, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_53_647_chunk0",
+      "answer": "yes",
+      "rationale": "The quote uses the moderate verb 'spread' intensified by 'very easily'."
+    },
+    {
+      "segment_id": "seg_v5_52_647_chunk0",
+      "answer": "no",
+      "rationale": "Quote about viruses changing, lacks moderate verb + scale/impact framing."
+    },
+    {
+      "segment_id": "seg_v5_51_647_chunk0",
+      "answer": "no",
+      "rationale": "Statement about potential for spread and change, not realised impact."
+    }
+  ],
+  "timestamp": "2025-06-19T07:12:36.529380"
+}

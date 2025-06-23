@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a low-risk assessment ('risk to humans is low'), which is not a Q1 cue.", "method": "llm_batch", "batch_id": "batch_1_17404", "batch_size": 260, "batch_pos": 133}
+{"Q": 2, "answer": "no", "rationale": "The segment contains reassuring statements ('cases remain rare', 'risk to humans is low') but no Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_15516", "batch_size": 260, "batch_pos": 121}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_5284", "batch_size": 260, "batch_pos": 86}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_17836", "batch_size": 260, "batch_pos": 79}
+{"Q": 5, "answer": "no", "rationale": "The segment reports risk is 'low', which is a bare low-risk statement, not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 76}
+{"Q": 6, "answer": "no", "rationale": "Contains 'rare' and 'low risk' but not in a minimiser + scale contrast structure.", "method": "llm_batch", "batch_id": "batch_6_6448", "batch_size": 260, "batch_pos": 54}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17148", "batch_size": 260, "batch_pos": 50}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14728", "batch_size": 260, "batch_pos": 244, "regex": {"rule": "CapabilityNoReassurance", "span": [69, 78], "captures": []}}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 237}
+{"Q": 2, "answer": "no", "rationale": "The segment expresses hope regarding malaria interventions.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 184}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 119}
+{"Q": 3, "answer": "no", "rationale": "Segment discusses future goals, not a moderate verb paired with scale/impact of a threat.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17212_r1", "batch_size": 260, "batch_pos": 119}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 108}
+{"Q": 5, "answer": "no", "rationale": "Expresses hope for future realization of interventions, not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 100}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 55}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 55}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 48}
+{"Q": 8, "answer": "yes", "rationale": "Describes a hopeful future possibility ('would love to see the promise of the malaria interventions realized').", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 109}

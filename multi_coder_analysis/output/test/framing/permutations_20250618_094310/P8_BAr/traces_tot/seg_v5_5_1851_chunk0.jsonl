@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'known' modifies 'link or contact'. 'only' modifies 'animal-to-human spread'.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 227}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 222}
+{"Q": 3, "answer": "no", "rationale": "Plain statements about links and spread, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 202}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 201}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 201}
+{"Q": 5, "answer": "no", "rationale": "The segment reports no known link between cases, which is factual information.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 198}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast to downplay an event.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 190}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'There is no known link or contact'.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 190}

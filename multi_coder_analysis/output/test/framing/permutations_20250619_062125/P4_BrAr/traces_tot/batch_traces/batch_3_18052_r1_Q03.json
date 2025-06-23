@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_3_18052_r1",
+  "hop_idx": 3,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_5_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral reporting verbs ('confirmed') and provides location/distance, not scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_4_363_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'reported' (neutral verb) and 'mass deaths'/'increased deaths' (scale), but 'reported' is not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_6_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses theoretical risk and potential future actions, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_001_721_chunk0",
+      "answer": "no",
+      "rationale": "Uses 'spread' but the scale 'to new herds' is not an explicit numeric or record-type scale required by the rule."
+    }
+  ],
+  "timestamp": "2025-06-19T06:28:40.135742"
+}

@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'outbreaks' is a noun, not intensifier + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 167}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 153}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 119}
+{"Q": 3, "answer": "no", "rationale": "'reported' is a plain outcome verb, excluded from Q3 unless other cues fire.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 119}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 114}
+{"Q": 5, "answer": "no", "rationale": "The segment reports outbreaks without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 112}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 76}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 70}
+{"Q": 8, "answer": "no", "rationale": "Segment describes findings/events, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 227}
+{"Q": 9, "answer": "no", "rationale": "The segment reports outbreaks, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2216", "batch_size": 260, "batch_pos": 34}
+{"Q": 10, "answer": "no", "rationale": "The segment reports recent events, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 194}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 174}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; reports outbreaks factually.", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 173}

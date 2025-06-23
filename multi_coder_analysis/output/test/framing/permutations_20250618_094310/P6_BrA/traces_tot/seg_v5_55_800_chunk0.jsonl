@@ -1,0 +1,13 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 41}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 2, "batch_id": "batch_1_16760_r2", "batch_size": 260, "batch_pos": 41}
+{"Q": 2, "answer": "no", "rationale": "The quote is a neutral statement about needed action.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 252}
+{"Q": 3, "answer": "no", "rationale": "Segment contains a quote expressing opinion about need for action, not Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 194}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 186}
+{"Q": 5, "answer": "no", "rationale": "This segment calls for decisive action based on evidence, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 179}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 145}
+{"Q": 7, "answer": "no", "rationale": "The segment describes having enough evidence but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 138}
+{"Q": 8, "answer": "no", "rationale": "States a conclusion about the need for action, not existing/implemented capability.", "method": "llm_batch", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 216}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a judgment and call to action, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 65}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 128}
+{"Q": 11, "answer": "no", "rationale": "Quote is a statement about the need for action, not framed language about the threat.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 93}
+{"Q": 12, "answer": "no", "rationale": "Segment contains language implying urgency and serious consequences ('really need to take decisive action'), triggering Q1.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 92}

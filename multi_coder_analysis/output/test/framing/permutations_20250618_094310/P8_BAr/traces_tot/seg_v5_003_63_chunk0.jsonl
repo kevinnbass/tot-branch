@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 140}
+{"Q": 2, "answer": "no", "rationale": "The segment reports quarantine and depopulation ('depopulated' is neutral) without using Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 125}
+{"Q": 3, "answer": "no", "rationale": "'depopulated' is a containment verb, which neutralizes Q3 even with scale.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 95}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 91}
+{"Q": 5, "answer": "no", "rationale": "The segment reports control measures and a bare negation about food entry ('will not enter'), not an explicit calming cue required for Q5.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 87}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 62}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 58, "regex": {"rule": "BareNegationHealthConcern", "span": [196, 226], "captures": []}}

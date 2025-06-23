@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains the risk-adjective 'fatal', but it is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 251}
+{"Q": 2, "answer": "no", "rationale": "The segment is a question, not a statement framing the situation.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 239}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs and description of outcome.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 217}
+{"Q": 4, "answer": "no", "rationale": "This is a neutral, information-seeking question about the implications of past data.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 212}
+{"Q": 5, "answer": "no", "rationale": "The segment poses a question but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 210}
+{"Q": 6, "answer": "no", "rationale": "The segment is a question, not a statement of reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 191}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 180}
+{"Q": 8, "answer": "no", "rationale": "The segment reports historical data and asks a question about risk, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 104}
+{"Q": 9, "answer": "no", "rationale": "The segment uses a risk adjective ('fatal cases') describing the impact.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 201}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 119}
+{"Q": 10, "answer": "no", "rationale": "The segment describes past events and poses a question about risk, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 119}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 104}
+{"Q": 12, "answer": "yes", "rationale": "Reports historical 'fatal cases' and poses neutral question about risk. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 101}

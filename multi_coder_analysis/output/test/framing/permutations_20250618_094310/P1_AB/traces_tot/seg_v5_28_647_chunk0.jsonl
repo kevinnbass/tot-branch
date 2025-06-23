@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'deadly' but it is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 80}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual statistics and information ('deadly', 'died', 'isn't particularly good at infecting') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 78}
+{"Q": 3, "answer": "no", "rationale": "'be deadly' is a risk adjective; 'died' is a plain outcome verb (Neutral per rule 4).", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 77}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 76}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 76}
+{"Q": 5, "answer": "no", "rationale": "This segment reports a high fatality rate (negative fact) and a positive fact, but lacks explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 76}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 73}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'isn't particularly good at infecting humans'.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 70}

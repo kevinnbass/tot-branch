@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'sparked' is a psychological verb (context guard applies).", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 51}
+{"Q": 2, "answer": "no", "rationale": "'sparked' is a psychological verb ('sparked debate'), treated as neutral per rules.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 51}
+{"Q": 3, "answer": "no", "rationale": "Uses 'sparked' (public reaction) and 'constrains' (not moderate verb + scale).", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 47}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 47}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 47}
+{"Q": 5, "answer": "no", "rationale": "The segment describes a debate and its constraints, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 46}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 43}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16024_r1", "batch_size": 260, "batch_pos": 43}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 43}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 42, "regex": {"rule": "CapabilityNoReassurance", "span": [17, 21], "captures": []}}

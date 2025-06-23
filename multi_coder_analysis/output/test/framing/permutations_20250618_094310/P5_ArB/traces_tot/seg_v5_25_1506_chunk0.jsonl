@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6120", "batch_size": 260, "batch_pos": 179}
+{"Q": 2, "answer": "no", "rationale": "The segment describes past events using factual language.", "method": "llm_batch", "batch_id": "batch_2_16740", "batch_size": 260, "batch_pos": 178}
+{"Q": 3, "answer": "no", "rationale": "'happened' is a plain outcome verb, excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_16548", "batch_size": 260, "batch_pos": 165}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 161}
+{"Q": 5, "answer": "no", "rationale": "Reports historical instances, which is a factual statement.", "method": "llm_batch", "batch_id": "batch_5_2772", "batch_size": 260, "batch_pos": 161}
+{"Q": 6, "answer": "yes", "rationale": "regex:MinimiserScaleContrast matched", "method": "regex", "batch_id": "batch_6_7008", "batch_size": 260, "batch_pos": 157, "regex": {"rule": "MinimiserScaleContrast", "span": [18, 105], "captures": []}}

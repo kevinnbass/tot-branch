@@ -1,0 +1,994 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('low risk') but no high-potency verbs, potent metaphors, critical alerts, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information about the percentage of infected farms without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_12_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes government actions factually without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment presents a factual comparison of case origins without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_10_1181_chunk0",
+    "answer": "no",
+    "rationale": "'struggled' is not considered a high-potency verb in this context, and no other Q2 cues are present."
+  },
+  {
+    "segment_id": "seg_v5_9_1181_chunk0",
+    "answer": "no",
+    "rationale": "'spread' is a moderate verb, and 'critical' modifies the action needed, not the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "'transmit' is a neutral verb, and 'highly pathogenic' is protected by the TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "no",
+    "rationale": "'infected' is a neutral verb, and the mention of '46 states' provides scale but requires a Q3 verb."
+  },
+  {
+    "segment_id": "seg_v5_6_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'worst avian-flu crises' uses a superlative ('worst') combined with a harm noun ('crises')."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'worsening economic pain' uses an intensifier ('worsening') combined with a harm noun ('pain')."
+  },
+  {
+    "segment_id": "seg_v5_4_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "'die' is a neutral verb describing an outcome, not a high-potency verb framing the event alarmingly."
+  },
+  {
+    "segment_id": "seg_v5_2_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'worst U.S. animal-health disaster' uses a superlative ('worst') combined with a harm noun ('disaster')."
+  },
+  {
+    "segment_id": "seg_v5_1_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The verb 'wiped out' is a high-potency verb, and 'deadliest outbreak' is a superlative + harm noun."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_4_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions factually without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_3_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes regulations factually without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_2_899_chunk0",
+    "answer": "no",
+    "rationale": "'affects' is a neutral verb, and no other Q2 cues are present."
+  },
+  {
+    "segment_id": "seg_v5_1_899_chunk0",
+    "answer": "no",
+    "rationale": "'halted' is a neutral verb describing an action, not framing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_21_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring cues ('no concerns', 'safe') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "no",
+    "rationale": "'led to the death' describes an outcome factually; it is not a high-potency verb like 'ravaged' or 'wiped out'."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "'problem' is a negative noun but is not combined with a superlative or intensifier here."
+  },
+  {
+    "segment_id": "seg_v5_18_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('little or no mortality') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a factual detection and notes it is the 'first time', which is factual, not framing."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a factual finding without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports factual test results. 'widespread' modifies the virus among birds, not its impact on cattle/humans."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical statistics factually without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a factual description of symptoms. 'severe pneumonia' is a medical term, not framing language."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports infections in various animals factually."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission factually without using high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment states how human illnesses typically occur factually."
+  },
+  {
+    "segment_id": "seg_v5_8_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes agency monitoring efforts factually."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a previous human case factually."
+  },
+  {
+    "segment_id": "seg_v5_6_405_chunk0",
+    "answer": "no",
+    "rationale": "The quote expresses a desire for understanding, not framing the threat's impact with high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('risk... remains low') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_3_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and treatment factually."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a human case factually. 'second known instance' is factual, not framing."
+  },
+  {
+    "segment_id": "seg_v5_035_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring cues ('assured consumers that... are safe') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_033_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains positive framing ('really fantastic') which is a Reassuring cue, but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_032_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes advice given factually."
+  },
+  {
+    "segment_id": "seg_v5_031_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes advice given factually."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential consequences factually."
+  },
+  {
+    "segment_id": "seg_v5_029_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes regulations and geography factually."
+  },
+  {
+    "segment_id": "seg_v5_028_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes regulations factually."
+  },
+  {
+    "segment_id": "seg_v5_027_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a factual statement about farming practice."
+  },
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information about the location of infections."
+  },
+  {
+    "segment_id": "seg_v5_025_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission and risk factually. 'more at risk' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information about a property."
+  },
+  {
+    "segment_id": "seg_v5_023_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information about detection status."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "The quote describes motivation, not framing the threat with high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_021_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring framing ('short-term blip that will resolve itself very quickly') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_020_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring framing ('short-term blip that will resolve itself very quickly') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides advice, not framing the threat with high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_018_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes anticipated impact and actions factually."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a warning factually."
+  },
+  {
+    "segment_id": "seg_v5_016_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'euthanised', triggering the containment override for Q2. 'high pathogenicity' is TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports factual information about locations and identification."
+  },
+  {
+    "segment_id": "seg_v5_014_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports actions taken factually."
+  },
+  {
+    "segment_id": "seg_v5_013_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring framing ('working well to date') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection events factually."
+  },
+  {
+    "segment_id": "seg_v5_010_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring framing ('do not indicate a nationwide shortage') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_009_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring framing ('not at risk') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_008_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports store policy factually."
+  },
+  {
+    "segment_id": "seg_v5_007_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports actions taken factually."
+  },
+  {
+    "segment_id": "seg_v5_006_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports store policy factually."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports store policy factually."
+  },
+  {
+    "segment_id": "seg_v5_004_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'euthanised', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic' is protected by the TECH_TERM_GUARD, and 'detected' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_002_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring framing ('reassure consumers that there is no shortage') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'euthanised', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_8_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports export projections factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1397_chunk0",
+    "answer": "no",
+    "rationale": "'record' modifies exports (an economic metric), not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_6_1397_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is a neutral verb. The quote discusses living with the disease, not framing its impact alarmingly."
+  },
+  {
+    "segment_id": "seg_v5_5_1397_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports market share factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports production projections factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports production projections factually."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a factual statistic. 'died' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_021_813_chunk0",
+    "answer": "no",
+    "rationale": "'increases the risk' and 'possible risk' are not Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "no",
+    "rationale": "'increases the risk' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_018_813_chunk0",
+    "answer": "no",
+    "rationale": "'spread rapidly' is a moderate verb + intensifier, but 'spread' alone is moderate. 'killing thousands' describes scale but needs a Q3 verb."
+  },
+  {
+    "segment_id": "seg_v5_017_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('little chance') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a conclusion factually."
+  },
+  {
+    "segment_id": "seg_v5_015_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('highly unlikely') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_014_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports factual information about interaction."
+  },
+  {
+    "segment_id": "seg_v5_013_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports study findings factually."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "'spreading' is a moderate verb. 'growing evidence' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports previous understanding factually."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a neutral verb. 'most affected region' is factual description. 'growing number' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of species infected factually. 'infected' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "no",
+    "rationale": "'spread more quickly' is a moderate verb + intensifier, but 'spread' alone is moderate."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical information factually."
+  },
+  {
+    "segment_id": "seg_v5_003_813_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is a neutral verb. 'highest figure' modifies a number, not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of affected farms factually. 'affected' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of infected herds factually. 'infected' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_025_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes testing practices factually."
+  },
+  {
+    "segment_id": "seg_v5_024_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken by farmers and states factually."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of positive herds factually. 'underestimate of the true scope' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_022_803_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'in the grips of' is a potent metaphor framing the outbreak alarmingly."
+  },
+  {
+    "segment_id": "seg_v5_020_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes testing and studying factually."
+  },
+  {
+    "segment_id": "seg_v5_018_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a household contact becoming ill factually."
+  },
+  {
+    "segment_id": "seg_v5_017_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports sample collection factually."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes exposure and risk level factually. 'higher risk' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "'troubled' describes a person's feeling, not the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_014_803_chunk0",
+    "answer": "no",
+    "rationale": "'getting a grip on' is an idiom for control, not a potent metaphor for the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "The quote discusses public health credibility, not framing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_012_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a procedural fact."
+  },
+  {
+    "segment_id": "seg_v5_011_803_chunk0",
+    "answer": "no",
+    "rationale": "'raising concerns' is a psychological verb phrase without a vivid intensifier or concrete scale of harm."
+  },
+  {
+    "segment_id": "seg_v5_010_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a test result factually."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of people identified as ill factually."
+  },
+  {
+    "segment_id": "seg_v5_008_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a lack of details factually."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('risk posed... as “low”') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('risk posed... as “low”') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_005_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('no sign of unusual influenza activity') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_004_803_chunk0",
+    "answer": "no",
+    "rationale": "'raises the specter of' is a metaphor, but not one listed as potent, and it suggests a possibility, not a realised impact."
+  },
+  {
+    "segment_id": "seg_v5_003_803_chunk0",
+    "answer": "no",
+    "rationale": "'raises the specter of' is a metaphor, but not one listed as potent, and it suggests a possibility, not a realised impact."
+  },
+  {
+    "segment_id": "seg_v5_002_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports investigation findings factually. 'unexplained' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_001_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports investigation findings factually. 'unexplained' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_17_1485_chunk0",
+    "answer": "no",
+    "rationale": "The quote expresses effort, not framing the threat with high-potency language."
+  },
+  {
+    "segment_id": "seg_v5_16_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the nature of the issue factually. 'emerging issue', 'evolving', 'a lot that we don’t know' are not Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "'cautioned' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_13_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('safe to eat') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_12_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('no risk') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_11_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_10_1485_chunk0",
+    "answer": "no",
+    "rationale": "'halted operations' is a factual consequence, not a Q2 verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports factual information about detection status and recommendations."
+  },
+  {
+    "segment_id": "seg_v5_8_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes regulations and processes factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes regulations factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('not a food safety concern') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a factual statement about recovery (Reassuring Q5) but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_4_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions and symptoms factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring cues ('no concern', 'affects the safety' negated) but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_1_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring cues ('risk to the public is low', 'food supply remains safe and stable') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_7_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a percentage factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1186_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a neutral verb. 'culled' is a containment verb, triggering the override."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports production numbers factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "no",
+    "rationale": "'affected' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports production numbers factually."
+  },
+  {
+    "segment_id": "seg_v5_1_1186_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'largest-ever outbreak' uses a superlative ('largest-ever') combined with a negative noun ('outbreak')."
+  },
+  {
+    "segment_id": "seg_v5_5_1917_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'slaughtered', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_4_1917_chunk0",
+    "answer": "no",
+    "rationale": "'rapid spread' is a moderate verb + intensifier, but 'spread' alone is moderate. 'massive culls' is intensifier + containment noun, triggering the override."
+  },
+  {
+    "segment_id": "seg_v5_3_1917_chunk0",
+    "answer": "no",
+    "rationale": "'experts are concerned' is a psychological verb phrase without a vivid intensifier or concrete scale of harm."
+  },
+  {
+    "segment_id": "seg_v5_6_1300_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic' is protected by the TECH_TERM_GUARD. 'risk nearly $10 billion' describes potential economic impact, but 'risk' is not a Q2 verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a stance factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains Reassuring cues ('cases remain rare', 'risk to humans is low') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_3_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('no confirmed cases... have ever been reported') but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_2_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a case factually. 'mild flu symptoms' is factual description. 'Highly Pathogenic' is TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_1_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an investigation and detection factually."
+  },
+  {
+    "segment_id": "seg_v5_23_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports cases and advice factually."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports cases factually."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of positive herds factually."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "no",
+    "rationale": "'jumped to' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_19_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports test results factually."
+  },
+  {
+    "segment_id": "seg_v5_18_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a study factually."
+  },
+  {
+    "segment_id": "seg_v5_17_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process factually."
+  },
+  {
+    "segment_id": "seg_v5_16_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports test results factually. 'no samples... tested positive' is factual reporting of absence. 'slaughtered' is containment, triggering override."
+  },
+  {
+    "segment_id": "seg_v5_15_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes ongoing studies factually."
+  },
+  {
+    "segment_id": "seg_v5_14_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports test results factually. 'none yielded live virus' is a Reassuring cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_13_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a statement about study conditions and safety conclusions factually."
+  },
+  {
+    "segment_id": "seg_v5_12_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes needed research factually."
+  },
+  {
+    "segment_id": "seg_v5_11_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes study limitations factually."
+  },
+  {
+    "segment_id": "seg_v5_10_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes study limitations factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports disclosure information factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports publication information factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports study findings factually. 'potential for... to remain infectious' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_6_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports test findings factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1702_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic' is protected by the TECH_TERM_GUARD. 'detectable amounts... remained' is a factual finding, not Q2 framing."
+  },
+  {
+    "segment_id": "seg_v5_1_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports study findings factually. 'killed' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission factually."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports location and number factually."
+  },
+  {
+    "segment_id": "seg_v5_11_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes strategy factually."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outbreak locations factually."
+  },
+  {
+    "segment_id": "seg_v5_9_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports advice factually."
+  },
+  {
+    "segment_id": "seg_v5_6_914_chunk0",
+    "answer": "no",
+    "rationale": "'sparked the investigation' is a psychological verb phrase without a vivid intensifier or concrete scale of harm."
+  },
+  {
+    "segment_id": "seg_v5_5_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports cases and symptoms factually. 'asymptomatic' is a Reassuring cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_4_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports registration and reporting factually."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('turned out to be mild') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "no",
+    "rationale": "'spread rapidly' is a moderate verb + intensifier, but 'spread' alone is moderate."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('risk... appears low') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a Reassuring cue ('low risk') but no high-potency verbs, metaphors, or superlative/intensifier + harm nouns."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes occurrence and location factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection status factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "no",
+    "rationale": "'expected to rise' is not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_5_1286_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1286_chunk0",
+    "answer": "no",
+    "rationale": "'dead' is a neutral term."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "no",
+    "rationale": "'dead' is a neutral term. 'Highly Pathogenic' is protected by the TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_1_1286_chunk0",
+    "answer": "no",
+    "rationale": "'died' and 'killed' are neutral verbs."
+  },
+  {
+    "segment_id": "seg_v5_7_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken factually."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports cases factually."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the number of cases factually."
+  },
+  {
+    "segment_id": "seg_v5_3_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a first case factually. 'highly pathogenic' is protected by the TECH_TERM_GUARD."
+  }
+]
+```

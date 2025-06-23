@@ -1,0 +1,994 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_10_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_11_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_12_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_13_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_14_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('one in five') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_15_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_16_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('one of 109') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_17_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_18_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_19_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "no",
+    "rationale": "'jumped' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('96 herds across 12 states') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('Three farm workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_23_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('Three farm workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_1_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_2_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('three wild birds') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_3_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('32 other people') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_4_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_5_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_6_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('$10 billion') but relates to financial/trade metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1917_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_2_1917_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_3_1917_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_4_1917_chunk0",
+    "answer": "no",
+    "rationale": "'prompted' is a moderate verb and 'massive culls' indicates scale, but the sentence contains the containment verb 'culls', triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_5_1917_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('52 million birds', '50.2 million') but the verb 'slaughtered' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_1_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('half', 'largest-ever outbreak') but the verbs ('died', 'culled') are plain outcome or containment verbs, not moderate verbs from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('1.2 to 1.3 million') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('600,000') but the verb 'affected' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('8.5 to 9 million') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_5_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('one million') but the verbs ('died', 'culled') are plain outcome or containment verbs, not moderate verbs from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_7_1186_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('36%') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_1_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_2_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_4_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_6_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_7_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a containment verb ('destroy') but no scale is provided."
+  },
+  {
+    "segment_id": "seg_v5_8_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_9_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_10_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_11_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('1.6 million', '337,000') but the verb 'culled' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_12_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_13_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_16_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_17_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_001_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('four additional health care workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_002_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('four additional health care workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_003_803_chunk0",
+    "answer": "no",
+    "rationale": "'raises the specter' is a psychological verb phrase, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_004_803_chunk0",
+    "answer": "no",
+    "rationale": "'raises the specter' is a psychological verb phrase, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_005_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('third time', 'health workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_008_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('seven people', 'six health care workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_010_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_011_803_chunk0",
+    "answer": "no",
+    "rationale": "'raising concerns' is a psychological verb phrase, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_012_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_014_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('one', 'other health care workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_017_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('health workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_018_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('household contact', 'second person') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_020_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('second person', 'second individual', 'confirmed case') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('239 herds in 14 states') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_024_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_025_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('64 infected herds') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('41 affected farms') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('96 per cent', 'three breeding sites') but the verb 'died' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "no",
+    "rationale": "'spread' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('320 bird and 25 mammal species') but the verb 'infected' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('More than 500,000 birds', 'growing number') but the verbs ('died', 'affected') are plain outcome verbs, not moderate verbs from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'killed' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_013_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('large number of mammals') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_014_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_015_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_021_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('96%') but the verb 'died' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_1_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment relates to financial/trade metrics and does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_2_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('14.9 million tons', '15.35 million tons') but relates to financial/trade metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('14.9 million tons', '15.35 million tons', '2.6%', '3.7%') but relates to financial/trade metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('38%', '36%') but relates to financial/trade metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_6_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_7_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('record', '5.15 million tons', '$9.5 billion', '$10 billion') but relates to financial/trade metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_1397_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('5.3 million tons') but relates to financial/trade metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('500,000 chickens') but the verb 'euthanised' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_002_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('two-carton limit') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('four farms', 'fifth farm') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_004_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('half a million chickens') but the verb 'euthanised' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('24-egg limit') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_006_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('24-egg limit') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_007_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_008_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_009_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_010_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains impact descriptions ('some disruption', 'patchy supermarket shelves', 'nationwide shortage') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('large egg farm', 'another egg farm', '130km') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_013_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_014_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('three other properties', '5km restricted zone', '15km control area') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_016_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('all birds at all affected properties') but the verb 'euthanised' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_018_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an impact description ('flow-on impact') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_020_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an impact description ('short-term blip') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_021_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an impact description ('short-term blip') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_023_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_025_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_027_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_028_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('all birds', 'all poultry farmers', etc.) but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_029_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('all birds', 'all poultry farmers', etc.) but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_031_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_032_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_033_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a containment verb ('destroying') but no scale is provided."
+  },
+  {
+    "segment_id": "seg_v5_035_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('second known instance') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_3_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_6_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('previous human case') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_8_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('animals including foxes, bears, seals, minks, cats and dogs') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('890 human cases', '50%') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('two dairy farms', 'one in Texas', 'a cow') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('a Michigan dairy herd') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('first time') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_18_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an impact description ('little or no mortality') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('tens of millions') but the verb 'has led to the death' is not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_21_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_1_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('10 countries') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_2_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_3_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_4_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('Thousands') but the verb 'culled' is a containment verb, triggering the containment override. 'has spread' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'die' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_4_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('a million birds') but the verb 'culled' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('record highs') but relates to financial/trade metrics, which are excluded from Q3. 'sent' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('across 46 states') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_9_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_10_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('30 percent', '85 percent') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_12_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('more than 70 percent') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_1_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_2_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('10-kilometer (6.2-miles) control area') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_3_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_4_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('18 commercial poultry flocks') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_5_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_6_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('29,000 turkeys') but the verb 'euthanized' is a containment verb, triggering the containment override."
+  },
+  {
+    "segment_id": "seg_v5_7_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('first confirmation') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('11 poultry farms', 'more than 400,000 birds') but the verb 'affected' is a plain outcome verb, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('Seven people') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_2_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_3_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('eight people', 'first examples') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_4_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_5_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_6_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_7_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_8_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('one household member and six health care workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_9_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('seven individuals') but no moderate verb from the approved list. 'alarmed experts' is a psychological verb phrase."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_12_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_13_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_15_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('13 other confirmed cases') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_16_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_17_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_18_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_19_800_chunk0",
+    "answer": "no",
+    "rationale": "'worried experts' is a psychological verb phrase, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_20_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('no deaths', 'most cases', 'up to 50 percent') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_21_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('small number of confirmed cases') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_22_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('tiny fraction') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_23_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an impact description ('numbers that overwhelm') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "'increase my level of alarm' is a psychological verb phrase, not a moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_26_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_28_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('Two health care workers') but no moderate verb from the approved list."
+  },
+  {
+    "segment_id": "seg_v5_29_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a moderate verb paired with a scale or impact indicator."
+  },
+  {
+    "segment_id": "seg_v5_30_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains scale ('four more health care workers') but no moderate verb from the approved list."
+  }
+]
+```

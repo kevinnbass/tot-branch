@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'fatality rate' but no intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5064", "batch_size": 260, "batch_pos": 6}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes numbers and a rate ('890 human cases have been reported', 'fatality rate of roughly 50%').", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 257}
+{"Q": 3, "answer": "no", "rationale": "'reported' is a plain outcome verb, excluded by rule 4.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 226}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 219}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical cases and fatality rate and does not contain an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 218}
+{"Q": 6, "answer": "no", "rationale": "'some 890' is not a strong minimiser + scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 209}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or statement of uncertainty/low risk.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 204}
+{"Q": 8, "answer": "no", "rationale": "The segment reports human cases and fatality rate, not a capability, preparedness measure, or safeguard.", "method": "llm_batch", "batch_id": "batch_8_6120", "batch_size": 260, "batch_pos": 146}
+{"Q": 9, "answer": "yes", "rationale": "'some 890 human cases have been reported... with a fatality rate of roughly 50%' reports metrics factually.", "method": "llm_batch", "batch_id": "batch_9_16720", "batch_size": 260, "batch_pos": 226}

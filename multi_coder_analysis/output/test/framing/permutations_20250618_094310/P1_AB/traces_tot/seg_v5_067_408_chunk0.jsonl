@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 17}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 5}
+{"Q": 3, "answer": "no", "rationale": "The segment is a hypothetical question, not a statement using a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_10612", "batch_size": 260, "batch_pos": 243}
+{"Q": 4, "answer": "no", "rationale": "The question 'Could people become infected...?' is information-seeking, not loaded.", "method": "llm_batch", "batch_id": "batch_4_9500", "batch_size": 260, "batch_pos": 238}
+{"Q": 5, "answer": "no", "rationale": "The segment asks a question but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_7316", "batch_size": 260, "batch_pos": 236}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_12944", "batch_size": 260, "batch_pos": 204}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_12088", "batch_size": 260, "batch_pos": 198}
+{"Q": 8, "answer": "no", "rationale": "Segment is a question about transmission risk, not a statement of capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 113}
+{"Q": 9, "answer": "no", "rationale": "The segment asks a question about infection from consumption, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 230}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 137, "regex": {"rule": "ReliefSpeculation", "span": [0, 5], "captures": ["Could"]}}

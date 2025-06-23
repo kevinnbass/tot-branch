@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12396", "batch_size": 260, "batch_pos": 21}
+{"Q": 2, "answer": "no", "rationale": "The segment contains no high-potency verbs, potent metaphors, superlative negative nouns, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_16924", "batch_size": 260, "batch_pos": 254}
+{"Q": 3, "answer": "no", "rationale": "Segment discusses plans, prevention, and potential.", "method": "llm_batch", "batch_id": "batch_3_15120", "batch_size": 260, "batch_pos": 197}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4752", "batch_size": 260, "batch_pos": 185}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a plan goal related to trade, not explicitly public/consumer safety.", "method": "llm_batch", "batch_id": "batch_5_7008", "batch_size": 260, "batch_pos": 183}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_12868", "batch_size": 260, "batch_pos": 155}
+{"Q": 7, "answer": "no", "rationale": "The segment is about keeping trade flowing, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_15724", "batch_size": 260, "batch_pos": 138}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11716", "batch_size": 260, "batch_pos": 9, "regex": {"rule": "CapabilityNoReassurance", "span": [42, 49], "captures": []}}

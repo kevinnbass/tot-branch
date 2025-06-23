@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 83}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 71}
+{"Q": 3, "answer": "no", "rationale": "Neutral verb 'have been' and no significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 60}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 56}
+{"Q": 5, "answer": "no", "rationale": "The segment reports where infections occurred but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 55}
+{"Q": 6, "answer": "no", "rationale": "'Most of the infections' is not a minimiser.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 44}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 36}
+{"Q": 8, "answer": "no", "rationale": "The segment reports where most infections occurred, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 244}
+{"Q": 9, "answer": "no", "rationale": "The segment states most infections have been at free-range producers, which is not specific numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 138}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 78}
+{"Q": 10, "answer": "no", "rationale": "The segment describes where infections have occurred, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 78}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 67}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of location of infections. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 64}

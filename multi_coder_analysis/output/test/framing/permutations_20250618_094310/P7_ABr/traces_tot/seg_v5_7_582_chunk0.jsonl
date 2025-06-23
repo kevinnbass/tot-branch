@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13748", "batch_size": 260, "batch_pos": 231}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'more information would be useful' and 'help officials understand'.", "method": "llm_batch", "batch_id": "batch_2_4108", "batch_size": 260, "batch_pos": 192}
+{"Q": 3, "answer": "no", "rationale": "'heard', 'would be', 'is', 'can help', 'understand', 'may be happening' are not moderate verbs.", "method": "llm_batch", "batch_id": "batch_3_14292", "batch_size": 260, "batch_pos": 127}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_18000", "batch_size": 260, "batch_pos": 106}
+{"Q": 5, "answer": "no", "rationale": "The segment reports feedback and potential usefulness but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14812", "batch_size": 260, "batch_pos": 102}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_18416", "batch_size": 260, "batch_pos": 63}
+{"Q": 7, "answer": "no", "rationale": "The segment is a statement about usefulness, with no negation.", "method": "llm_batch", "batch_id": "batch_7_15196", "batch_size": 259, "batch_pos": 39}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_3592", "batch_size": 260, "batch_pos": 124, "regex": {"rule": "CapabilityNoReassurance", "span": [114, 123], "captures": []}}

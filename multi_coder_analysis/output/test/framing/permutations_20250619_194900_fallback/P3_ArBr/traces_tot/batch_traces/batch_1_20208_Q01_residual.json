@@ -1,0 +1,27 @@
+{
+  "batch_id": "batch_1_20208",
+  "hop_idx": 1,
+  "unknown_count": 4,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_19_1645_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_21_1552_chunk0",
+      "answer": "yes",
+      "rationale": "The intensifier 'highly' modifies the risk-adjective 'susceptible'."
+    },
+    {
+      "segment_id": "seg_v5_27_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_29_1645_chunk0",
+      "answer": "no",
+      "rationale": "'gold standard' is a positive metaphor, not an intensifier + risk-adjective."
+    }
+  ]
+}

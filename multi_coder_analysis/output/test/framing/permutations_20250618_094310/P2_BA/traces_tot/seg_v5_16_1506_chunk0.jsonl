@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17488", "batch_size": 217, "batch_pos": 30}
+{"Q": 2, "answer": "no", "rationale": "'died' is a neutral verb; scale alone is not a Q2 trigger.", "method": "llm_batch", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 237}
+{"Q": 3, "answer": "no", "rationale": "The segment uses the plain outcome verbs 'diagnosed' and 'died' with numbers, which are Neutral per rule 4.", "method": "llm_batch", "batch_id": "batch_3_3036", "batch_size": 260, "batch_pos": 159}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_13904", "batch_size": 260, "batch_pos": 148}
+{"Q": 5, "answer": "no", "rationale": "Reports historical statistics (cases, deaths) without calming language.", "method": "llm_batch", "batch_id": "batch_5_16884", "batch_size": 260, "batch_pos": 138}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14144", "batch_size": 240, "batch_pos": 76}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17272", "batch_size": 230, "batch_pos": 70}
+{"Q": 8, "answer": "no", "rationale": "Reports historical statistics, not a capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_17188", "batch_size": 260, "batch_pos": 160}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical metrics ('nearly 900 people have been diagnosed', 'more than 460 people have died') using standard verbs ('have been diagnosed', 'have died').", "method": "llm_batch", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 178}

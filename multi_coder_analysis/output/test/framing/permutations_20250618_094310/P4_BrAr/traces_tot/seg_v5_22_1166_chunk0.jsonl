@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The word 'Fears' describes a psychological state, not an intensified risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17900", "batch_size": 260, "batch_pos": 164}
+{"Q": 2, "answer": "no", "rationale": "The noun 'Fears' is psychological and does not meet the criteria for triggering Alarmist.", "method": "llm_batch", "batch_id": "batch_2_17580", "batch_size": 260, "batch_pos": 129}
+{"Q": 3, "answer": "no", "rationale": "'Fears' is a noun; 'shortage' is impact but no moderate verb.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 68}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 49}
+{"Q": 5, "answer": "no", "rationale": "The segment discusses fears and potential rule changes, which are not calming cues.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 47}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_4064", "batch_size": 260, "batch_pos": 260}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17040", "batch_size": 260, "batch_pos": 248}
+{"Q": 8, "answer": "no", "rationale": "The segment discusses potential future consequences and a regulatory action, not disease control capabilities or safeguards.", "method": "llm_batch", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 107}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses fears of shortage and relaxing rules, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_4924", "batch_size": 260, "batch_pos": 249}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 130, "regex": {"rule": "ReliefSpeculation", "span": [42, 47], "captures": ["could"]}}

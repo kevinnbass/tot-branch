@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a comparative ('more widely') modifying an adverb ('widely'), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 240}
+{"Q": 2, "answer": "no", "rationale": "The segment is a question, not a statement framing the situation.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 228}
+{"Q": 3, "answer": "no", "rationale": "Question with hypothetical verb 'spread'.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 207}
+{"Q": 4, "answer": "no", "rationale": "This is a neutral, information-seeking question about likelihood.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 202}
+{"Q": 5, "answer": "no", "rationale": "The segment poses a question but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 200}
+{"Q": 6, "answer": "no", "rationale": "The segment is a question, not a statement of reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 181}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 173}
+{"Q": 8, "answer": "no", "rationale": "The segment asks a question about future possibility/risk, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 99}
+{"Q": 9, "answer": "no", "rationale": "The segment is a question about likelihood of wider spread, not primarily reporting prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 196}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 114}
+{"Q": 10, "answer": "no", "rationale": "The segment poses a question about future spread (negative), not relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 114}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 99}
+{"Q": 12, "answer": "yes", "rationale": "A question posed by the author/interviewer. Not a statement of fact or framing.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 96}

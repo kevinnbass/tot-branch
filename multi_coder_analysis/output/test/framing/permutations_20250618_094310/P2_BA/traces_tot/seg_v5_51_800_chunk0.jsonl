@@ -1,0 +1,4 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 37}
+{"Q": 1, "answer": "no", "rationale": "'really consistent' modifies 'consistent', not a risk-adjective. No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_17944_r1", "batch_size": 260, "batch_pos": 37}
+{"Q": 2, "answer": "no", "rationale": "'spikes' describes a temporary increase in detection, not vivid impact.", "method": "llm_batch", "batch_id": "batch_2_17012", "batch_size": 260, "batch_pos": 249}
+{"Q": 3, "answer": "yes", "rationale": "'shown spikes' is a moderate verb phrase paired with the scale 'in several states'.", "method": "llm_batch", "batch_id": "batch_3_15000", "batch_size": 260, "batch_pos": 187}

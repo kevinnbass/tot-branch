@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'surge' which modifies 'prices' (a metric), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14828", "batch_size": 260, "batch_pos": 95}
+{"Q": 2, "answer": "no", "rationale": "'surge 5 percent' is a factual description of a price increase, not high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_4512", "batch_size": 260, "batch_pos": 64}
+{"Q": 3, "answer": "no", "rationale": "'surge 5 percent' relates to financial/trade metrics (prices), which are Neutral for Q3.", "method": "llm_batch", "batch_id": "batch_3_16988", "batch_size": 260, "batch_pos": 23}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17640", "batch_size": 260, "batch_pos": 16}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain any questions, loaded or otherwise.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17640_r1", "batch_size": 260, "batch_pos": 16}
+{"Q": 5, "answer": "no", "rationale": "The segment reports potential economic impact without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10144", "batch_size": 260, "batch_pos": 11}
+{"Q": 6, "answer": "no", "rationale": "The segment contains Alarmist language ('surge 5 percent') and mentions 'historically low levels' but not minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_17448", "batch_size": 260, "batch_pos": 253}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_13600", "batch_size": 260, "batch_pos": 250}
+{"Q": 8, "answer": "no", "rationale": "The segment discusses expected price surge, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7588", "batch_size": 260, "batch_pos": 144}
+{"Q": 9, "answer": "no", "rationale": "Uses the vivid verb 'surge' to describe price changes.", "method": "llm_batch", "batch_id": "batch_9_8464", "batch_size": 260, "batch_pos": 126}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 21}
+{"Q": 10, "answer": "no", "rationale": "The segment discusses expected price increases and past/current conditions, not potential future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_4092_r1", "batch_size": 260, "batch_pos": 21}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 1}
+{"Q": 12, "answer": "no", "rationale": "Segment contains the vivid verb 'surge' describing the impact on prices, triggering Q2.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 1}

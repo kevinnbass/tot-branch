@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_6_177_chunk0",
+    "answer": "no",
+    "rationale": "This reports a fact and notes it is 'not unexpected', which is not an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_7_177_chunk0",
+    "answer": "no",
+    "rationale": "This reports negative facts about spread and culling."
+  },
+  {
+    "segment_id": "seg_v5_8_177_chunk0",
+    "answer": "no",
+    "rationale": "This describes how the virus spreads."
+  },
+  {
+    "segment_id": "seg_v5_9_177_chunk0",
+    "answer": "no",
+    "rationale": "This reports a risk assessment made by the state."
+  },
+  {
+    "segment_id": "seg_v5_10_177_chunk0",
+    "answer": "no",
+    "rationale": "This reports a historical event and its impact."
+  },
+  {
+    "segment_id": "seg_v5_11_177_chunk0",
+    "answer": "no",
+    "rationale": "This reports the scale of culling."
+  },
+  {
+    "segment_id": "seg_v5_12_177_chunk0",
+    "answer": "no",
+    "rationale": "This reports the number of infected flocks and birds."
+  },
+  {
+    "segment_id": "seg_v5_13_177_chunk0",
+    "answer": "no",
+    "rationale": "This provides a link for more information."
+  },
+  {
+    "segment_id": "seg_v5_1_86_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (restrictions lifted) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_86_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (not detected) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_86_chunk0",
+    "answer": "no",
+    "rationale": "This reports an outbreak event."
+  },
+  {
+    "segment_id": "seg_v5_4_86_chunk0",
+    "answer": "no",
+    "rationale": "This reports actions taken (quarantine, surveillance zone)."
+  },
+  {
+    "segment_id": "seg_v5_5_86_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('not known to be a human health risk or a food safety concern') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_1_927_chunk0",
+    "answer": "no",
+    "rationale": "This reports a human case."
+  },
+  {
+    "segment_id": "seg_v5_2_927_chunk0",
+    "answer": "no",
+    "rationale": "This reports confirmation and timeline of a case."
+  },
+  {
+    "segment_id": "seg_v5_3_927_chunk0",
+    "answer": "yes",
+    "rationale": "The source (NHC) explicitly states it 'was not concerned' about a larger outbreak."
+  },
+  {
+    "segment_id": "seg_v5_4_927_chunk0",
+    "answer": "no",
+    "rationale": "This describes the type of transmission."
+  },
+  {
+    "segment_id": "seg_v5_5_927_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('risk of large-scale transmission is low') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_6_927_chunk0",
+    "answer": "no",
+    "rationale": "This reports positive facts about the patient's condition but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_927_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (no further cases) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection of cases."
+  },
+  {
+    "segment_id": "seg_v5_2_1828_chunk0",
+    "answer": "no",
+    "rationale": "This describes symptoms and exposure."
+  },
+  {
+    "segment_id": "seg_v5_3_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (not hospitalized) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection and scale."
+  },
+  {
+    "segment_id": "seg_v5_5_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports actions taken (taking samples)."
+  },
+  {
+    "segment_id": "seg_v5_6_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports support for an investigation."
+  },
+  {
+    "segment_id": "seg_v5_7_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('risk... remains low') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_8_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports a confirmed case."
+  },
+  {
+    "segment_id": "seg_v5_9_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports a historical detection."
+  },
+  {
+    "segment_id": "seg_v5_10_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('risk... remains low') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_11_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports facts about spread patterns but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1828_chunk0",
+    "answer": "no",
+    "rationale": "This reports increased risk for a specific group and advises precautions."
+  },
+  {
+    "segment_id": "seg_v5_1_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports deaths."
+  },
+  {
+    "segment_id": "seg_v5_2_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports confirmation of death cause."
+  },
+  {
+    "segment_id": "seg_v5_3_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports a death."
+  },
+  {
+    "segment_id": "seg_v5_4_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports a historical fatality."
+  },
+  {
+    "segment_id": "seg_v5_5_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports infection and survival (positive fact) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_1944_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline reporting a death."
+  },
+  {
+    "segment_id": "seg_v5_8_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical case count."
+  },
+  {
+    "segment_id": "seg_v5_9_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical spread and endemic status."
+  },
+  {
+    "segment_id": "seg_v5_10_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports the scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports geographical distribution of cases."
+  },
+  {
+    "segment_id": "seg_v5_12_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports rising outbreaks and scale."
+  },
+  {
+    "segment_id": "seg_v5_13_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (rarely infects humans) but lacks explicit calming language or intensification."
+  },
+  {
+    "segment_id": "seg_v5_14_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports worry and potential future risk."
+  },
+  {
+    "segment_id": "seg_v5_16_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports symptoms."
+  },
+  {
+    "segment_id": "seg_v5_17_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports treatment and death."
+  },
+  {
+    "segment_id": "seg_v5_19_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports animal deaths."
+  },
+  {
+    "segment_id": "seg_v5_20_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken."
+  },
+  {
+    "segment_id": "seg_v5_21_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports speculation on transmission."
+  },
+  {
+    "segment_id": "seg_v5_22_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (family in good health) but also worry, lacking explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_24_1944_chunk0",
+    "answer": "no",
+    "rationale": "This reports actions taken and advice given."
+  },
+  {
+    "segment_id": "seg_v5_1_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports advice given."
+  },
+  {
+    "segment_id": "seg_v5_2_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports advice given on preventive measures."
+  },
+  {
+    "segment_id": "seg_v5_4_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports animal deaths."
+  },
+  {
+    "segment_id": "seg_v5_6_1552_chunk0",
+    "answer": "no",
+    "rationale": "This describes the virus and transmission."
+  },
+  {
+    "segment_id": "seg_v5_7_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports an outbreak and human cases."
+  },
+  {
+    "segment_id": "seg_v5_8_1552_chunk0",
+    "answer": "no",
+    "rationale": "This provides context about dogs."
+  },
+  {
+    "segment_id": "seg_v5_9_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (no documented deaths) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports advice/warning."
+  },
+  {
+    "segment_id": "seg_v5_11_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports advice/warning."
+  },
+  {
+    "segment_id": "seg_v5_12_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports a recommendation/warning."
+  },
+  {
+    "segment_id": "seg_v5_13_1552_chunk0",
+    "answer": "yes",
+    "rationale": "The source (FDA) explicitly states it 'isn't concerned' about pasteurized products."
+  },
+  {
+    "segment_id": "seg_v5_14_1552_chunk0",
+    "answer": "no",
+    "rationale": "This explains a finding (positive fact) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (additional testing)."
+  },
+  {
+    "segment_id": "seg_v5_16_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (did not detect live virus) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_17_1552_chunk0",
+    "answer": "yes",
+    "rationale": "The source (FDA) provides a direct safety assurance: 'commercial milk supply is safe'."
+  },
+  {
+    "segment_id": "seg_v5_18_1552_chunk0",
+    "answer": "no",
+    "rationale": "This reports exposure risk and warning."
+  },
+  {
+    "segment_id": "seg_v5_19_1552_chunk0",
+    "answer": "no",
+    "rationale": "This advises caution and mentions keeping pets 'safe' but is advice, not a direct assurance of current safety."
+  },
+  {
+    "segment_id": "seg_v5_1_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports detections."
+  },
+  {
+    "segment_id": "seg_v5_2_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports strain types."
+  },
+  {
+    "segment_id": "seg_v5_3_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports linkage and animal deaths."
+  },
+  {
+    "segment_id": "seg_v5_4_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports connection between properties."
+  },
+  {
+    "segment_id": "seg_v5_5_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports actions taken (contain and eradicate) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_6_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical outbreaks."
+  },
+  {
+    "segment_id": "seg_v5_7_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports successful control ('quickly reined in and stamped out') but lacks explicit calming keywords required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_8_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports a human case."
+  },
+  {
+    "segment_id": "seg_v5_9_1609_chunk0",
+    "answer": "no",
+    "rationale": "This reports an outbreak and questions raised."
+  },
+  {
+    "segment_id": "seg_v5_1_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports cases."
+  },
+  {
+    "segment_id": "seg_v5_2_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports cases are unrelated."
+  },
+  {
+    "segment_id": "seg_v5_3_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports collaboration and efforts to control spread but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_4_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (mild symptoms) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports positive facts (no respiratory symptoms, no hospitalization) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_1984_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline reporting animal deaths."
+  },
+  {
+    "segment_id": "seg_v5_7_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('risks remain low') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_8_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports spread and ongoing outbreaks."
+  },
+  {
+    "segment_id": "seg_v5_9_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports case count."
+  },
+  {
+    "segment_id": "seg_v5_10_1984_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline reporting a case type."
+  },
+  {
+    "segment_id": "seg_v5_11_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports case linkage."
+  },
+  {
+    "segment_id": "seg_v5_12_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports case linkage."
+  },
+  {
+    "segment_id": "seg_v5_13_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports recommendations."
+  },
+  {
+    "segment_id": "seg_v5_14_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports recommendations."
+  },
+  {
+    "segment_id": "seg_v5_15_1984_chunk0",
+    "answer": "no",
+    "rationale": "This reports recommendations."
+  },
+  {
+    "segment_id": "seg_v5_16_1984_chunk0",
+    "answer": "no",
+    "rationale": "This lists symptoms."
+  },
+  {
+    "segment_id": "seg_v5_1_919_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (ban) due to outbreak."
+  },
+  {
+    "segment_id": "seg_v5_2_919_chunk0",
+    "answer": "no",
+    "rationale": "This reports animal deaths and detection."
+  },
+  {
+    "segment_id": "seg_v5_3_919_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (ban)."
+  },
+  {
+    "segment_id": "seg_v5_4_919_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical outbreak and actions."
+  },
+  {
+    "segment_id": "seg_v5_5_919_chunk0",
+    "answer": "no",
+    "rationale": "This reports a warning and advice."
+  },
+  {
+    "segment_id": "seg_v5_1_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports detections."
+  },
+  {
+    "segment_id": "seg_v5_2_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports confirmation of cases."
+  },
+  {
+    "segment_id": "seg_v5_3_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (culling) and reason."
+  },
+  {
+    "segment_id": "seg_v5_4_1053_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline reporting detection."
+  },
+  {
+    "segment_id": "seg_v5_5_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports the number of states with outbreaks."
+  },
+  {
+    "segment_id": "seg_v5_6_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports the scale of culling."
+  },
+  {
+    "segment_id": "seg_v5_7_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports the number of outbreaks/flocks."
+  },
+  {
+    "segment_id": "seg_v5_8_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports outbreaks and a warning about potential worsening."
+  },
+  {
+    "segment_id": "seg_v5_9_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports factors influencing the situation."
+  },
+  {
+    "segment_id": "seg_v5_10_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports absence of human cases and states 'doesn’t present an immediate public health concern' but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_11_1053_chunk0",
+    "answer": "no",
+    "rationale": "This reports positive facts (rarity, no sustained outbreaks) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1053_chunk0",
+    "answer": "no",
+    "rationale": "This provides food safety advice, not a direct assurance of current safety."
+  },
+  {
+    "segment_id": "seg_v5_4_1080_chunk0",
+    "answer": "no",
+    "rationale": "This reports testing locations."
+  },
+  {
+    "segment_id": "seg_v5_5_1080_chunk0",
+    "answer": "no",
+    "rationale": "This reports actions taken (surveillance and testing)."
+  },
+  {
+    "segment_id": "seg_v5_6_1080_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('do not present an immediate public health concern') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_7_1080_chunk0",
+    "answer": "no",
+    "rationale": "This reports past policy and reason."
+  },
+  {
+    "segment_id": "seg_v5_8_1080_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (working on options)."
+  },
+  {
+    "segment_id": "seg_v5_9_1080_chunk0",
+    "answer": "no",
+    "rationale": "This reports negative impact (suffered)."
+  },
+  {
+    "segment_id": "seg_v5_1_920_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (culling) due to outbreak."
+  },
+  {
+    "segment_id": "seg_v5_2_920_chunk0",
+    "answer": "no",
+    "rationale": "This reports the type of virus."
+  },
+  {
+    "segment_id": "seg_v5_3_920_chunk0",
+    "answer": "no",
+    "rationale": "This reports the predominant strain."
+  },
+  {
+    "segment_id": "seg_v5_4_920_chunk0",
+    "answer": "no",
+    "rationale": "This reports the scale of culling and reason (try to contain) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_1_94_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection."
+  },
+  {
+    "segment_id": "seg_v5_2_94_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (culling) and reason."
+  },
+  {
+    "segment_id": "seg_v5_3_94_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (testing)."
+  },
+  {
+    "segment_id": "seg_v5_4_94_chunk0",
+    "answer": "no",
+    "rationale": "This reports the scale of spread."
+  },
+  {
+    "segment_id": "seg_v5_6_94_chunk0",
+    "answer": "no",
+    "rationale": "This reports low risk ('not considered a food safety threat') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_1_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports potential vaccine production capacity (preparedness) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_3_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports rarity of cases and low risk ('risk... is still low') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_4_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports vaccine development (preparedness) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_5_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports preparedness ('stand ready') but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_6_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports vaccine development for poultry, not human safety."
+  },
+  {
+    "segment_id": "seg_v5_7_1272_chunk0",
+    "answer": "no",
+    "rationale": "This explicitly states 'Less reassuring'."
+  },
+  {
+    "segment_id": "seg_v5_8_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports pandemic plans."
+  },
+  {
+    "segment_id": "seg_v5_9_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports a potential problem (hoarding/nationalism)."
+  },
+  {
+    "segment_id": "seg_v5_10_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports framework details."
+  },
+  {
+    "segment_id": "seg_v5_11_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports a WHO goal."
+  },
+  {
+    "segment_id": "seg_v5_12_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports agreements signed."
+  },
+  {
+    "segment_id": "seg_v5_13_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports agreement details."
+  },
+  {
+    "segment_id": "seg_v5_14_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports mechanisms being developed (preparedness/response) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_15_1272_chunk0",
+    "answer": "yes",
+    "rationale": "The source (WHO) states it was 'fully confident' manufacturers and member states would meet obligations."
+  },
+  {
+    "segment_id": "seg_v5_16_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports capacity and process (preparedness) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_17_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports pre-approval and safety data for potential future vaccines, not current public safety."
+  },
+  {
+    "segment_id": "seg_v5_18_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports data gathering process."
+  },
+  {
+    "segment_id": "seg_v5_19_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports the number of licensed vaccines (preparedness) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_20_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports existence of treatments (preparedness/response) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_21_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports timeline for production."
+  },
+  {
+    "segment_id": "seg_v5_22_1272_chunk0",
+    "answer": "no",
+    "rationale": "This describes a production method."
+  },
+  {
+    "segment_id": "seg_v5_23_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports advocacy."
+  },
+  {
+    "segment_id": "seg_v5_24_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports potential of technology."
+  },
+  {
+    "segment_id": "seg_v5_25_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical research."
+  },
+  {
+    "segment_id": "seg_v5_26_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports plans and potential response speed (preparedness) but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_27_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports anticipation and mixed data."
+  },
+  {
+    "segment_id": "seg_v5_28_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports awareness of issue."
+  },
+  {
+    "segment_id": "seg_v5_29_1272_chunk0",
+    "answer": "no",
+    "rationale": "This reports a stance on commitments."
+  },
+  {
+    "segment_id": "seg_v5_1_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports animal deaths."
+  },
+  {
+    "segment_id": "seg_v5_2_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive outcome (improvement) but also worry and potential spread."
+  },
+  {
+    "segment_id": "seg_v5_3_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (hasn't been detected) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports biological facts and impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports a population number."
+  },
+  {
+    "segment_id": "seg_v5_7_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports a likely cause of spread."
+  },
+  {
+    "segment_id": "seg_v5_8_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical pattern and current deviation."
+  },
+  {
+    "segment_id": "seg_v5_9_1933_chunk0",
+    "answer": "no",
+    "rationale": "This reports uncertainty and ongoing studies."
+  },
+  {
+    "segment_id": "seg_v5_1_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection."
+  },
+  {
+    "segment_id": "seg_v5_2_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports confirmation and distinction between strains, mentioning 'global concern' but not as a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_3_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports a case."
+  },
+  {
+    "segment_id": "seg_v5_4_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports severity, recovery, and absence of further cases (positive facts) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection method."
+  },
+  {
+    "segment_id": "seg_v5_6_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports a change in status."
+  },
+  {
+    "segment_id": "seg_v5_7_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (has yet to be detected) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection and animal deaths."
+  },
+  {
+    "segment_id": "seg_v5_9_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports strain type and history."
+  },
+  {
+    "segment_id": "seg_v5_10_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports frequency."
+  },
+  {
+    "segment_id": "seg_v5_11_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports concern elsewhere, not a local calming cue."
+  },
+  {
+    "segment_id": "seg_v5_12_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports history and likelihood (positive facts) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_586_chunk0",
+    "answer": "no",
+    "rationale": "This explicitly states it's 'never... a relief'."
+  },
+  {
+    "segment_id": "seg_v5_18_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports case count."
+  },
+  {
+    "segment_id": "seg_v5_19_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports concern (opposite of calming) and low risk ('risk remained low') but lacks explicit calming keywords or intensification required for Q5."
+  },
+  {
+    "segment_id": "seg_v5_20_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports advice."
+  },
+  {
+    "segment_id": "seg_v5_21_586_chunk0",
+    "answer": "yes",
+    "rationale": "The source states egg and poultry products 'are safe to consume', a direct consumption safety assurance."
+  },
+  {
+    "segment_id": "seg_v5_22_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports advice and symptoms."
+  },
+  {
+    "segment_id": "seg_v5_23_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical outbreaks and successful eradication (positive fact) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_24_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports historical outbreak details."
+  },
+  {
+    "segment_id": "seg_v5_25_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports detection of low pathogenic strains."
+  },
+  {
+    "segment_id": "seg_v5_26_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports action taken (depopulation) and scale."
+  },
+  {
+    "segment_id": "seg_v5_27_586_chunk0",
+    "answer": "no",
+    "rationale": "This reports actions taken (quarantine, zones) to stop spread but lacks explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_797_chunk0",
+    "answer": "no",
+    "rationale": "This reports a case."
+  },
+  {
+    "segment_id": "seg_v5_3_797_chunk0",
+    "answer": "no",
+    "rationale": "This reports lack of testing due to delay."
+  },
+  {
+    "segment_id": "seg_v5_4_797_chunk0",
+    "answer": "no",
+    "rationale": "This reports delay and highlights it."
+  },
+  {
+    "segment_id": "seg_v5_5_797_chunk0",
+    "answer": "no",
+    "rationale": "This reports illness in contacts and a negative test (positive fact) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports a human case."
+  },
+  {
+    "segment_id": "seg_v5_2_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports presence of strains and sporadic infection."
+  },
+  {
+    "segment_id": "seg_v5_3_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (no indication of easy spread) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports timeline."
+  },
+  {
+    "segment_id": "seg_v5_5_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports timeline and lack of detail."
+  },
+  {
+    "segment_id": "seg_v5_6_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports positive facts about the patient's condition but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (no other cases) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports a positive fact (no other cases globally) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports positive facts (low pathogenic, unlikely to cause large outbreak) but lacks explicit calming language or intensification."
+  },
+  {
+    "segment_id": "seg_v5_10_922_chunk0",
+    "answer": "no",
+    "rationale": "This reports unknown source and absence of other cases (positive facts) but lacks explicit calming language."
+  }
+]
+```

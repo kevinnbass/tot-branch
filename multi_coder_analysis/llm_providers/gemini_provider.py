@@ -66,13 +66,17 @@ class GeminiProvider(LLMProvider):
         # Capture usage metadata if available
         usage_meta = getattr(resp, 'usage_metadata', None)
         if usage_meta:
-            prompt_toks = int(getattr(usage_meta, 'prompt_token_count', 0))
+            def _safe_int(val):
+                try:
+                    return int(val or 0)
+                except Exception:
+                    return 0
+
+            prompt_toks = _safe_int(getattr(usage_meta, 'prompt_token_count', 0))
             # SDK renamed field from response_token_count → candidates_token_count
-            resp_toks = int(
-                getattr(usage_meta, 'response_token_count', getattr(usage_meta, 'candidates_token_count', 0))
-            )
-            thought_toks = int(getattr(usage_meta, 'thoughts_token_count', 0))
-            total_toks = int(getattr(usage_meta, 'total_token_count', 0))
+            resp_toks = _safe_int(getattr(usage_meta, 'response_token_count', getattr(usage_meta, 'candidates_token_count', 0)))
+            thought_toks = _safe_int(getattr(usage_meta, 'thoughts_token_count', 0))
+            total_toks = _safe_int(getattr(usage_meta, 'total_token_count', 0))
             self._last_usage = {
                 'prompt_tokens': prompt_toks,
                 'response_tokens': resp_toks,

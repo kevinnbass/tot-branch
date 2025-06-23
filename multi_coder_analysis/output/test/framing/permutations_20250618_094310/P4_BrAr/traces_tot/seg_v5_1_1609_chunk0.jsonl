@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5880", "batch_size": 260, "batch_pos": 117}
+{"Q": 2, "answer": "no", "rationale": "The segment factually reports detection of cases and uses a technical term ('highly pathogenic avian influenza').", "method": "llm_batch", "batch_id": "batch_2_14696", "batch_size": 260, "batch_pos": 101}
+{"Q": 3, "answer": "no", "rationale": "'detected' and 'reported' are plain outcome verbs (Rule 4) and scale is not significant.", "method": "llm_batch", "batch_id": "batch_3_17360", "batch_size": 260, "batch_pos": 85}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4428", "batch_size": 260, "batch_pos": 80}
+{"Q": 5, "answer": "no", "rationale": "The segment reports on a new case detection, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16904", "batch_size": 260, "batch_pos": 80}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13084", "batch_size": 260, "batch_pos": 73}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the threat.", "method": "llm_batch", "batch_id": "batch_7_16696", "batch_size": 260, "batch_pos": 69}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_952", "batch_size": 260, "batch_pos": 20, "regex": {"rule": "CapabilityNoReassurance", "span": [128, 137], "captures": []}}

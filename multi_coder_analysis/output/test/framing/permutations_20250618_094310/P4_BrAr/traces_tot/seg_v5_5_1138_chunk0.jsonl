@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'higher' modifies 'risk' (noun), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 21}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'begins' and 'increases' are neutral. Technical term 'HPAI' is ignored.", "method": "llm_batch", "batch_id": "batch_2_17580", "batch_size": 260, "batch_pos": 246}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs used; 'higher risk' is about potential.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 174}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 155}
+{"Q": 5, "answer": "no", "rationale": "The segment reports increased risk for birds, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 152}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions higher risk due to persistence but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 103}
+{"Q": 7, "answer": "no", "rationale": "The segment states a risk, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 91}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a current/future condition and assesses risk, not capabilities, preparedness, possibilities, or safeguards.", "method": "llm_batch", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 186}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_16860", "batch_size": 239, "batch_pos": 36}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses risk level and persistence, not numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_16860_r1", "batch_size": 239, "batch_pos": 36}
+{"Q": 10, "answer": "no", "rationale": "The segment states an expected increase in risk ('likely at higher risk') rather than speculating about relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 169}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses bare risk adjective 'higher risk'. 'HPAI' is technical term.", "method": "llm_batch", "batch_id": "batch_11_10328", "batch_size": 244, "batch_pos": 138}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of context and assessment ('likely at higher risk'). 'higher risk' is factual assessment.", "method": "llm_batch", "batch_id": "batch_12_4324", "batch_size": 244, "batch_pos": 138}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14552", "batch_size": 260, "batch_pos": 66}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_17272", "batch_size": 260, "batch_pos": 25}
+{"Q": 3, "answer": "no", "rationale": "The segment describes status/opinion ('have been occasions', 'could be improved'), not scale/impact with a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_12272", "batch_size": 260, "batch_pos": 229}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17556", "batch_size": 260, "batch_pos": 205}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a potential area for improvement without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_5528", "batch_size": 260, "batch_pos": 201}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7280", "batch_size": 260, "batch_pos": 173}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_9680", "batch_size": 260, "batch_pos": 160}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a past issue/area for improvement.", "method": "llm_batch", "batch_id": "batch_8_16880", "batch_size": 260, "batch_pos": 238}
+{"Q": 9, "answer": "no", "rationale": "The segment is a statement about process/communication, not prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_3452", "batch_size": 233, "batch_pos": 58}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_6352", "batch_size": 200, "batch_pos": 97, "regex": {"rule": "ReliefSpeculation", "span": [99, 104], "captures": ["could"]}}

@@ -1,0 +1,998 @@
+{
+  "batch_id": "batch_1_17680",
+  "hop_idx": 1,
+  "segment_count": 200,
+  "responses": [
+    {
+      "segment_id": "seg_v5_9_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment asks a question about worry, but does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_10_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'very low risk', which is a Reassuring cue (Q5), not an Alarmist cue for Q1."
+    },
+    {
+      "segment_id": "seg_v5_011_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'rarely transmissible', but 'transmissible' is not a risk-adjective like deadly or dangerous, and 'rarely' is not an intensifier in the Q1 sense."
+    },
+    {
+      "segment_id": "seg_v5_013_1010_chunk0",
+      "answer": "no",
+      "rationale": "'highly pathogenic' is a technical term and does not trigger Q1."
+    },
+    {
+      "segment_id": "seg_v5_014_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'onerous costs', but 'onerous' modifies 'costs', not a risk-adjective about the virus itself."
+    },
+    {
+      "segment_id": "seg_v5_015_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken in response to the outbreak, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_016_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions a 'supply chain crunch' and 'sporadically emerged', but these do not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_41_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a comparative ('more geographic spread'), but 'geographic spread' is not a risk-adjective like deadly or dangerous."
+    },
+    {
+      "segment_id": "seg_v5_42_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment asks a question about stopping spread, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_43_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'hardening of biosecurity measures', but this does not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_44_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'strict hygiene measures', but 'strict' modifies 'hygiene measures', not a risk-adjective about the virus."
+    },
+    {
+      "segment_id": "seg_v5_45_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a way the virus can spread, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_46_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a way the virus can spread, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_48_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment advises improving biosecurity, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_49_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment asks a question about culling, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_50_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms in birds, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_51_101_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the intensifier 'so' modifying the risk-adjective 'contagious'."
+    },
+    {
+      "segment_id": "seg_v5_001_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'likely threat', but this does not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the scale of culling, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the scale of culling, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the scale of culling, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual data on chicken population."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual data on turkey production."
+    },
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the location of cases."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the location and scale of a case."
+    },
+    {
+      "segment_id": "seg_v5_8_102_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the intensifier 'so' modifying the risk-adjective 'infectious'."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of states with cases."
+    },
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the mode of transmission."
+    },
+    {
+      "segment_id": "seg_v5_11_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of states with infected wild birds and the virus circulation history."
+    },
+    {
+      "segment_id": "seg_v5_12_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a Reassuring cue ('do not present an immediate public health concern'), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_13_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains Reassuring cues ('No human cases', 'remains safe to eat'), not Q1 cues."
+    },
+    {
+      "segment_id": "seg_v5_15_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information about cooking temperatures."
+    },
+    {
+      "segment_id": "seg_v5_16_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment is an editorial note about updates."
+    },
+    {
+      "segment_id": "seg_v5_17_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment is an editorial note about updates."
+    },
+    {
+      "segment_id": "seg_v5_1_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmed cases and testing status, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual finding."
+    },
+    {
+      "segment_id": "seg_v5_3_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken by countries and agencies."
+    },
+    {
+      "segment_id": "seg_v5_4_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic ('fatal'), but it is not modified by an intensifier or comparative."
+    },
+    {
+      "segment_id": "seg_v5_5_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports deaths in animals, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_8_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the status of human-to-human transmission detection."
+    },
+    {
+      "segment_id": "seg_v5_9_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an increase in sales ('jumped'), which is an economic metric, not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_10_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic."
+    },
+    {
+      "segment_id": "seg_v5_11_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment links raw milk consumption to other diseases, but contains no intensifier or comparative modifying a risk-adjective about bird flu."
+    },
+    {
+      "segment_id": "seg_v5_12_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses content algorithms and mentions people being 'harmed', but this does not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_13_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses regulations and hurdles, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_1_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a health alert and confirmed infection, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a confirmed diagnosis and case number."
+    },
+    {
+      "segment_id": "seg_v5_3_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a previous case."
+    },
+    {
+      "segment_id": "seg_v5_4_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a health alert and mentions 'highly pathogenic', which is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_5_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment recommends PPE to lower risk, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_6_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment recommends PPE, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_7_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a Reassuring cue ('risks to the general public remain low'), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_8_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment urges monitoring for symptoms and suggests isolation, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_9_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a specific symptom."
+    },
+    {
+      "segment_id": "seg_v5_10_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment lists symptoms, including 'serious symptoms', but 'serious' modifies 'symptoms', not a risk-adjective like deadly or dangerous."
+    },
+    {
+      "segment_id": "seg_v5_11_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic on deaths, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_12_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment stresses following recommendations to reduce outbreak chances, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_13_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment urges common-sense measures despite risks being low, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_14_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment advises avoiding sick/dead animals and contaminated surfaces, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_16_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions concerns about sparking an epidemic/pandemic (psychological verb not intensified) and reports no known human-to-human transmission."
+    },
+    {
+      "segment_id": "seg_v5_17_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports public health officials expressing concerns (psychological verb not intensified) and the discovery of cases in cattle."
+    },
+    {
+      "segment_id": "seg_v5_18_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the outbreak spread ('quickly spread'), but this does not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_19_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports scientific findings about genetic changes."
+    },
+    {
+      "segment_id": "seg_v5_1_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outbreak and mentions 'highly pathogenic', which is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_2_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the scale of extermination and restricted zones."
+    },
+    {
+      "segment_id": "seg_v5_3_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a Reassuring cue ('do not believe that there is any possibility... being transmitted'), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_4_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions an increase in infections being a 'source of concern' (psychological state), but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_5_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual statistics on cases, deaths, and illness severity ('critically ill'), but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_6_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outbreaks and the number of affected poultry."
+    },
+    {
+      "segment_id": "seg_v5_7_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions the 'worst season' (comparative modifying 'season') and the scale of culling, but this does not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_1_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports negative test results."
+    },
+    {
+      "segment_id": "seg_v5_2_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports negative test results and contains a Reassuring cue ('reaffirm that the meat supply is safe'), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_3_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken to confirm safety and the detection of the virus."
+    },
+    {
+      "segment_id": "seg_v5_4_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a confirmed case."
+    },
+    {
+      "segment_id": "seg_v5_5_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains Reassuring cues ('overall public health risk is low'), not Q1 cues."
+    },
+    {
+      "segment_id": "seg_v5_1_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken and personal experience, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the presence of bird flu."
+    },
+    {
+      "segment_id": "seg_v5_3_647_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the intensifier 'highly, highly' modifying the risk-adjective 'transmissible'."
+    },
+    {
+      "segment_id": "seg_v5_4_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a metaphor ('Swiss Army Knife') and reports the scale of impact (killed millions), but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_6_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the species infected."
+    },
+    {
+      "segment_id": "seg_v5_7_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a vivid noun ('voraciousness') and reports a description ('global zoonotic animal pandemic'), but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_8_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a metaphor ('collateral damage')."
+    },
+    {
+      "segment_id": "seg_v5_9_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states humans can be infected and speculates about future change."
+    },
+    {
+      "segment_id": "seg_v5_11_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a comparative ('higher rate') modifying 'rate', not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_13_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation."
+    },
+    {
+      "segment_id": "seg_v5_14_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation."
+    },
+    {
+      "segment_id": "seg_v5_15_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment speculates about a future problem ('major problem'), but 'major' modifies 'problem', not a risk-adjective like deadly or dangerous."
+    },
+    {
+      "segment_id": "seg_v5_16_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes personal experience."
+    },
+    {
+      "segment_id": "seg_v5_17_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms."
+    },
+    {
+      "segment_id": "seg_v5_19_647_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the repeated risk-adjective 'severe, severe', functioning as an intensifier."
+    },
+    {
+      "segment_id": "seg_v5_20_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms ('very loud'), but 'very loud' modifies 'screaming', not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_22_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a comparative ('longer') modifying duration, not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_23_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes personal knowledge."
+    },
+    {
+      "segment_id": "seg_v5_24_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports species infected and transmission route."
+    },
+    {
+      "segment_id": "seg_v5_25_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'severity' (noun form) and 'really hadn't seen', which do not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_26_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an emotional reaction ('very sad') and the progression of disease, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_27_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes past infections as 'sporadic and usually self-limiting'."
+    },
+    {
+      "segment_id": "seg_v5_28_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the virus can be 'deadly' (risk-adjective not intensified) and reports a factual statistic on deaths. It also states the virus 'isn't particularly good at infecting humans' (mitigating)."
+    },
+    {
+      "segment_id": "seg_v5_30_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a technical term ('dead-end infections')."
+    },
+    {
+      "segment_id": "seg_v5_31_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment explains how dead-end infections happen, mentioning 'large amount' and 'too weak', but these do not fit the Q1 pattern."
+    },
+    {
+      "segment_id": "seg_v5_32_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a virus characteristic ('not well-adapted to humans')."
+    },
+    {
+      "segment_id": "seg_v5_34_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmed cases."
+    },
+    {
+      "segment_id": "seg_v5_35_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports symptoms."
+    },
+    {
+      "segment_id": "seg_v5_36_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an event."
+    },
+    {
+      "segment_id": "seg_v5_37_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports symptoms."
+    },
+    {
+      "segment_id": "seg_v5_38_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a positive outcome (successfully treated)."
+    },
+    {
+      "segment_id": "seg_v5_39_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports positive outcomes (None developed severe symptoms or infected others)."
+    },
+    {
+      "segment_id": "seg_v5_40_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a scientific finding ('unlikely to transmit through the air')."
+    },
+    {
+      "segment_id": "seg_v5_41_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment."
+    },
+    {
+      "segment_id": "seg_v5_42_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment."
+    },
+    {
+      "segment_id": "seg_v5_43_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an experimental outcome ('all of them became ill')."
+    },
+    {
+      "segment_id": "seg_v5_44_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment."
+    },
+    {
+      "segment_id": "seg_v5_45_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an experimental outcome and interpretation ('not well adapted to respiratory spread')."
+    },
+    {
+      "segment_id": "seg_v5_47_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of herds tested positive and the number of human infections ('low')."
+    },
+    {
+      "segment_id": "seg_v5_48_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a Reassuring cue ('good news') and reports a scientific finding ('not well adapted to respiratory spread'), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_49_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports agency plans."
+    },
+    {
+      "segment_id": "seg_v5_50_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a comparison to Covid and speculates about future change."
+    },
+    {
+      "segment_id": "seg_v5_51_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment speculates about future change."
+    },
+    {
+      "segment_id": "seg_v5_52_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states viruses can change 'very quickly', but this modifies 'change', not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_53_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states viruses can spread 'very easily', but this modifies 'spread', not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_54_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes how H5N1 would look different to our bodies."
+    },
+    {
+      "segment_id": "seg_v5_55_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation about immunity."
+    },
+    {
+      "segment_id": "seg_v5_56_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes findings as 'sobering', but this describes the nature of the findings, not the virus characteristic with a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_57_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an experimental outcome (killed all the ferrets)."
+    },
+    {
+      "segment_id": "seg_v5_58_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states cases have been 'mild' (mitigating) and that 'serious illnesses' are possible, but 'serious' modifies 'illnesses', not a risk-adjective like deadly or dangerous."
+    },
+    {
+      "segment_id": "seg_v5_59_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a 'wide spectrum of severity'."
+    },
+    {
+      "segment_id": "seg_v5_60_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual statistics on illness outcomes ('severe or critical', 'fatal', 'mild', 'no symptoms'). 'severe' and 'critical' modify 'illnesses', not a risk-adjective like deadly or dangerous. 'fatal' is a risk-adjective but not intensified."
+    },
+    {
+      "segment_id": "seg_v5_61_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation."
+    },
+    {
+      "segment_id": "seg_v5_62_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a Reassuring cue ('wouldn't necessarily be totally defenseless'), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_63_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports experimental outcomes ('didn't get as sick'), but this is a comparative modifying 'sick' in an experimental context, not an intensifier/comparative modifying a risk-adjective about the virus itself."
+    },
+    {
+      "segment_id": "seg_v5_64_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a limitation of the study."
+    },
+    {
+      "segment_id": "seg_v5_65_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation."
+    },
+    {
+      "segment_id": "seg_v5_66_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses predictability and the importance of vaccination."
+    },
+    {
+      "segment_id": "seg_v5_67_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports on preparedness (vaccines available), which is a Reassuring cue (Q5), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_68_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports on preparedness (vaccines ordered), which is a Reassuring cue (Q5), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_69_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a Reassuring cue ('risk... is low') and mentions 'higher risk' (comparative comparing groups), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_70_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports on preparedness (equipment and funding available), which is a Reassuring cue (Q5), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_71_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses concerns about wearing protective equipment, but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_72_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports on the development of a rapid test."
+    },
+    {
+      "segment_id": "seg_v5_73_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation."
+    },
+    {
+      "segment_id": "seg_v5_74_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation, mentioning 'smaller dose' and 'milder symptoms', but 'milder' modifies 'symptoms', not a risk-adjective like deadly or dangerous."
+    },
+    {
+      "segment_id": "seg_v5_75_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a scientific explanation, mentioning 'large amounts' and 'severe disease', but 'severe' modifies 'disease', not a risk-adjective like deadly or dangerous."
+    },
+    {
+      "segment_id": "seg_v5_76_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a factual scientific statement."
+    },
+    {
+      "segment_id": "seg_v5_77_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a factual scientific statement."
+    },
+    {
+      "segment_id": "seg_v5_78_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a factual scientific finding."
+    },
+    {
+      "segment_id": "seg_v5_79_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses informal language ('bad guy viruses') and technical terms ('nerve-loving, neurotropic'), but contains no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_81_647_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the intensifier 'very, very' modifying the risk-adjective 'severe'."
+    },
+    {
+      "segment_id": "seg_v5_82_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes animal behavior."
+    },
+    {
+      "segment_id": "seg_v5_83_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes animal behavior."
+    },
+    {
+      "segment_id": "seg_v5_84_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses a personal sentiment ('hate to see it')."
+    },
+    {
+      "segment_id": "seg_v5_85_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the virus hasn't made changes to become a human pathogen and expresses uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_87_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the virus hasn't made changes and expresses uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_88_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes personal observation and reports the status of human-to-human transmission."
+    },
+    {
+      "segment_id": "seg_v5_90_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome (all of them died)."
+    },
+    {
+      "segment_id": "seg_v5_91_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outcomes (survived but went blind)."
+    },
+    {
+      "segment_id": "seg_v5_92_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes precautions as 'arduous' and expresses gratitude for effectiveness."
+    },
+    {
+      "segment_id": "seg_v5_93_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a positive outcome (never spread the virus)."
+    },
+    {
+      "segment_id": "seg_v5_94_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a comparison to Covid."
+    },
+    {
+      "segment_id": "seg_v5_95_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes personal experience and expectation."
+    },
+    {
+      "segment_id": "seg_v5_96_647_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the intensifier 'highly, highly' modifying the risk-adjective 'contagious'."
+    },
+    {
+      "segment_id": "seg_v5_1_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'highly pathogenic' (technical term) and 'on the rise' (trend), but no intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_2_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses economic impact (prices rising), not a Q1 cue."
+    },
+    {
+      "segment_id": "seg_v5_4_1065_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the intensifier 'highly' modifying the risk-adjective 'contagious'."
+    },
+    {
+      "segment_id": "seg_v5_6_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a consequence of disease precautions."
+    },
+    {
+      "segment_id": "seg_v5_7_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states it's 'rare' for people to get infected (mitigating) and uses a metaphor ('death sentence') for birds."
+    },
+    {
+      "segment_id": "seg_v5_8_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a consequence of infection (whole flock has to go)."
+    },
+    {
+      "segment_id": "seg_v5_9_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an association watching the outbreak and the date of the first case."
+    },
+    {
+      "segment_id": "seg_v5_11_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states poultry need to be de-populated."
+    },
+    {
+      "segment_id": "seg_v5_12_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states depopulation stops the virus."
+    },
+    {
+      "segment_id": "seg_v5_13_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a goal (don't want the farm spreading the virus)."
+    },
+    {
+      "segment_id": "seg_v5_14_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides identification."
+    },
+    {
+      "segment_id": "seg_v5_15_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of affected birds and describes the industry as 'extremely large', but this modifies 'industry', not a risk-adjective about the virus."
+    },
+    {
+      "segment_id": "seg_v5_17_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a factual statistic."
+    },
+    {
+      "segment_id": "seg_v5_18_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses economic impact (prices rise)."
+    },
+    {
+      "segment_id": "seg_v5_19_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses economic impact (cost has doubled)."
+    },
+    {
+      "segment_id": "seg_v5_20_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides identification and factual data."
+    },
+    {
+      "segment_id": "seg_v5_22_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a psychological state ('anxiously watching')."
+    },
+    {
+      "segment_id": "seg_v5_23_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'very easily', but this modifies 'be the next one', not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_24_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides identification."
+    },
+    {
+      "segment_id": "seg_v5_25_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a vivid verb ('tears through'), but this describes the impact on farms, not the virus characteristic with a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_26_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a comparative ('as clean as'), not an intensifier + risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_27_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains an intensifier ('absolutely') modifying 'sterile', but 'sterile' is not a risk-adjective about the virus."
+    },
+    {
+      "segment_id": "seg_v5_28_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of affected birds and locations."
+    },
+    {
+      "segment_id": "seg_v5_29_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the hardest hit states."
+    },
+    {
+      "segment_id": "seg_v5_30_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports on payment for culled birds and remaining uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_31_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'Scary thing', which describes a subjective feeling, not an intensifier + risk-adjective about the virus."
+    },
+    {
+      "segment_id": "seg_v5_32_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'devastating', which describes the consequence of no safety net, not the virus itself with an intensifier."
+    },
+    {
+      "segment_id": "seg_v5_33_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an economic consequence ('put a company... out of business')."
+    },
+    {
+      "segment_id": "seg_v5_34_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken by states."
+    },
+    {
+      "segment_id": "seg_v5_35_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment advises watching for signs and calling a vet."
+    },
+    {
+      "segment_id": "seg_v5_36_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states how the virus is carried."
+    },
+    {
+      "segment_id": "seg_v5_37_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment states when new cases are expected to stop."
+    },
+    {
+      "segment_id": "seg_v5_1_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the scale of destruction and describes the outbreak as the 'biggest outbreak' (comparative modifying 'outbreak'), not a risk-adjective about the virus."
+    },
+    {
+      "segment_id": "seg_v5_2_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the location and timing of the report and an increase in deaths."
+    },
+    {
+      "segment_id": "seg_v5_3_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports that the majority of the flock could be spared (positive outcome)."
+    },
+    {
+      "segment_id": "seg_v5_4_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment states that the population will have to be culled."
+    },
+    {
+      "segment_id": "seg_v5_1_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a decision made amid 'avian flu concerns', but 'concerns' is a psychological state."
+    },
+    {
+      "segment_id": "seg_v5_2_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a rationale ('to err on the side of caution')."
+    }
+  ],
+  "timestamp": "2025-06-19T12:33:58.718387"
+}

@@ -1,0 +1,71 @@
+{
+  "batch_id": "batch_12_4800",
+  "hop_idx": 12,
+  "segment_count": 4,
+  "matches": [
+    {
+      "statement_id": "seg_v5_4_1779_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          9,
+          128
+        ],
+        "captures": [
+          "state",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_1_1851_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          44,
+          88
+        ],
+        "captures": [
+          "state",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_1_1828_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          57,
+          111
+        ],
+        "captures": [
+          "announce",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_8_1944_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          13,
+          30
+        ],
+        "captures": [
+          "record",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

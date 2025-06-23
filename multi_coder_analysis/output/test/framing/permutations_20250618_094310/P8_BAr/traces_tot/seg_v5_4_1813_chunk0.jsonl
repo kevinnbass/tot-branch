@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'multi-state' modifies 'outbreak'. 'financial' modifies 'toll'.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 100}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 99}
+{"Q": 3, "answer": "no", "rationale": "Uses 'included' (not moderate verb + scale) and 'financial toll' (vague impact).", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 91}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 91}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 91}
+{"Q": 5, "answer": "no", "rationale": "The segment reports lobbying and assistance efforts, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 89}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 84}
+{"Q": 7, "answer": "no", "rationale": "The negation 'isn't the only company' is about uniqueness, not risk or safety.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 84}
+{"Q": 8, "answer": "yes", "rationale": "Describes past/ongoing response measures: 'emergency assistance', 'efforts to incentivize safety precautions and testing'.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 82}

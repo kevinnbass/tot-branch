@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'worried' is a psychological state.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 192}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 188}
+{"Q": 3, "answer": "no", "rationale": "Contains a Reassuring cue, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 175}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 174}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 174}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'consumers do not need to be worried' is an explicit calming cue from an official source.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 171}

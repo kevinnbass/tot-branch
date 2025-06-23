@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'hardest hit' modifying impact, not a risk-adjective describing the virus.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 168}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('are') without high-potency verbs or metaphors. 'hardest hit' is descriptive, not high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 162}
+{"Q": 3, "answer": "no", "rationale": "'hardest hit' is an adjective describing condition, not a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 159}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 157}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 157}
+{"Q": 5, "answer": "no", "rationale": "This segment reports affected locations (negative fact) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 157}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 152}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 152}
+{"Q": 7, "answer": "no", "rationale": "The segment lists states but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 148}
+{"Q": 8, "answer": "no", "rationale": "The segment describes hardest hit states, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 119}
+{"Q": 9, "answer": "no", "rationale": "The segment lists states, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 83}
+{"Q": 10, "answer": "no", "rationale": "The segment reports current/past impact, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 47}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 38}
+{"Q": 12, "answer": "no", "rationale": "Uses the loaded phrase 'hardest hit' to describe states, triggering Q1 (Intensifier + Risk-Adjective).", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 37}

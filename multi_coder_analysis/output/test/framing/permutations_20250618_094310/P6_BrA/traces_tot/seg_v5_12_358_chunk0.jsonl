@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains vivid verbs ('spiked', 'soared') describing economic metrics and 'widespread' (modifies economic condition), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 204}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 149, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [123, 140], "captures": []}}

@@ -1,0 +1,55 @@
+{
+  "batch_id": "batch_12_15532",
+  "hop_idx": 12,
+  "segment_count": 3,
+  "matches": [
+    {
+      "statement_id": "seg_v5_4_1674_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          30,
+          109
+        ],
+        "captures": [
+          "report",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_1_1674_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          19,
+          164
+        ],
+        "captures": [
+          "confirm",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_9_102_chunk0",
+      "regex": {
+        "rule": "NeutralStats",
+        "span": [
+          19,
+          46
+        ],
+        "captures": [
+          "state",
+          "cases"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

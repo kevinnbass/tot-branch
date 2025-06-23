@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'incredible' modifies 'game-changing interventions', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 138}
+{"Q": 2, "answer": "no", "rationale": "'worries me' is a psychological verb. 'Holy Grail' is a metaphor for a goal, not a threat's impact.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 125}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 96}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses future aims and lacks a moderate verb paired with significant scale or impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 96}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 91}
+{"Q": 5, "answer": "yes", "rationale": "'incredible game-changing interventions' is an explicit calming cue expressing optimism about future possibilities.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 89}

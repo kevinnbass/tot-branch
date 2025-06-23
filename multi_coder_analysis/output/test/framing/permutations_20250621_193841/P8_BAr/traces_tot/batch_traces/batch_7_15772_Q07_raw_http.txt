@@ -1,0 +1,959 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_20_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_11_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1008_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'do not \"present an immediate public health concern\"' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_15_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a food safety assurance, which is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_17_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_18_1008_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'is not expected to impact' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_52_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes culling methods and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_53_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes culling methods and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_54_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment compares culling methods and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_55_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an event and consequence, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_11_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an infection and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a confirmation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'considered rare', which functions as a low-risk/calming cue, so it is not a bare negation without calming."
+  },
+  {
+    "segment_id": "seg_v5_15_1009_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'No Americans are recorded to have contracted' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_16_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides historical context and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('reigniting fears') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_4_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about the virus's impact on birds, but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_5_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides historical facts and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_6_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a negation about disclosure, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_9_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a pending result and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection and does not contain a bare negation. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_2_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a negation about the use of the flock, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_3_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_6_1009_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'No human cases... have been detected' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_8_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a food safety assurance, which is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_9_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a sequence of events and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection and impact ('furthering a threat'), but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an event and does not contain a bare negation. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_4_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an event and context, but not a bare negation. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_5_1000_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'no human cases... have been detected' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_9_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a belief about spread and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_11_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'pretty rare', which functions as a low-risk/calming cue, so it is not a bare negation without calming."
+  },
+  {
+    "segment_id": "seg_v5_12_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_101_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'no cases of H5N1 infection have been found' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_16_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes responsibility and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_17_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_18_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_19_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_20_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus is 'primarily an animal health issue', which implies low human risk but is not a canonical bare negation phrase."
+  },
+  {
+    "segment_id": "seg_v5_21_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a food safety recommendation, which functions as an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_22_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_24_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a price trend and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_25_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_26_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a price trend and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_27_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_28_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_29_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_30_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the extent of outbreaks and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_31_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the extent of detection and does not contain a bare negation. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_32_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of infected flocks and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_33_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an action required and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_34_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of an infected flock and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_35_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of an infected flock and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_36_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of an infected flock and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_37_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_39_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of impact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_40_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('raised concerns') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_1_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of impact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_2_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the extent and consequence of an outbreak, but not a bare negation. 'highly contagious' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_5_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes spread and difficulty, but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_6_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_7_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes relation and history, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_101_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'is not unexpected' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_013_1010_chunk0",
+    "answer": "yes",
+    "rationale": "The segment contains the bare negation 'No human infections... have been detected' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_014_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_015_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_41_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment compares geographic spread and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_42_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_43_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a warning and recommendation, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_44_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes measures and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_45_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a factor in spread and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_46_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a factor in spread and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_48_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_50_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_001_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection and potential impact ('posing a likely threat'), but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes purpose and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_19_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes status and uncertainty, but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_18_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a recommendation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_17_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a trend and risk, but not a bare negation. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_16_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential worsening and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_15_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a historical event and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_14_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of impact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_12_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes spread and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_11_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes spread and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a market situation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_7_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('fears') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_6_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes severity/focus and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_2_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_1_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes impact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_11_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes lobbying activity and does not contain a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_10_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes lobbying priorities and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists groups and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes lobbying activity and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_6_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes lobbying activity and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes company activity and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a negation about the company's status, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_3_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes status and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'risk to the general public remains low', which is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_1_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes company activity and outbreak history/scale, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_104_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a negation about the speaker's feeling/observation, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_102_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a negation about the nature of the challenge, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_100_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential difficulty and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_099_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('worries') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_098_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('worries') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_097_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a recommendation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_096_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_095_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes other viruses and their impact, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_093_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides biographical/historical context and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_091_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion about a problem for industry, but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_090_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides an opinion/recommendation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_089_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about agreement and does not contain a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_087_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a statement of uncertainty ('I don't know'), not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_086_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a prediction and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_083_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('worries') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_081_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a scientific description and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_080_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a scientific description/history and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_079_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a scientific description and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_078_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a historical fact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_077_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a theory and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_076_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a specific case and contains 'rare', which is a low-risk/calming cue."
+  },
+  {
+    "segment_id": "seg_v5_075_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a specific case and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_074_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes specific cases and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_073_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a specific case and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_072_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'rare' and 'not clear', but also 'rare these days' which is a calming cue, and 'not clear' is about certainty, not the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_068_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment compares scale and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_065_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'doesn't like' (negation about preference) and 'don't appear to have changed' (negation about change, not current risk)."
+  },
+  {
+    "segment_id": "seg_v5_064_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an observation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_063_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'cannot say with certainty', which is a negation about certainty, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_060_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states experience and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_059_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes detection in animals and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_058_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a historical event and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_057_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capacity and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_056_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes difficulty and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_055_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes scale/extent of infections in animals and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_053_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a reaction and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_050_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'It is not clear', which is a negation about certainty, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_048_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'It is not clear', which is a negation about certainty, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_047_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an event and impact, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_045_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'does not view', which is a negation about opinion/interpretation, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_044_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a debate/research and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_043_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an event and concerns, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_042_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes research and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_040_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a historical fact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_039_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'hasn't changed', which is a negation about change, not current risk/impact according to canonical examples."
+  },
+  {
+    "segment_id": "seg_v5_038_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('worries me') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_037_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'I don't think... is necessarily any more worrying', which is a negation about relative worry level, not a canonical bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_036_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'I don't think... is necessarily any more worrying', which is a negation about relative worry level, not a canonical bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_034_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an outcome and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_033_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of historical cases and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_032_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a historical event and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_031_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a historical event and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_030_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a historical event and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_029_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'None of them like' (negation about preference) and 'struggled to answer' (difficulty), not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_028_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'None of them like', which is a negation about preference, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_027_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'None of them ever stopped worrying', which is a negation about a past state of mind, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_026_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an action taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_025_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_022_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains questions and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_021_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a question and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_018_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides biographical context and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_017_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides biographical/historical context and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_014_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'don't know', which is a statement of uncertainty, not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_012_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past behaviour and uncertainty, but not a bare negation about the current threat."
+  },
+  {
+    "segment_id": "seg_v5_009_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'Not precisely this spot', which is a negation about location, not about the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_008_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes relation and historical context, but not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_007_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes relation and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_006_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'is concerning' and 'no doubt', not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_005_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a psychological verb ('triggering the latest round of fears') but not a bare negation about the threat."
+  },
+  {
+    "segment_id": "seg_v5_002_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a historical fact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential consequence and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an expectation of price increase and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_12_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains 'strongest AI surveillance program', which is an explicit calming cue (Confidence)."
+  },
+  {
+    "segment_id": "seg_v5_11_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the scale of impact and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes events and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken and does not contain a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes events and does not contain a bare negation."
+  }
+]
+```

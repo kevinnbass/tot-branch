@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 87}
+{"Q": 2, "answer": "no", "rationale": "'Highly pathogenic' is a technical term. The segment uses neutral language.", "method": "llm_batch", "batch_id": "batch_2_10144", "batch_size": 260, "batch_pos": 52}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs used; geographic scale; technical term guard.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 236}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 215}
+{"Q": 5, "answer": "no", "rationale": "The segment reports positive facts (negative tests), which are not Q5 calming cues.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 212}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions testing completed and results negative but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 161}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 148, "regex": {"rule": "BareNegationHealthConcern", "span": [208, 227], "captures": []}}

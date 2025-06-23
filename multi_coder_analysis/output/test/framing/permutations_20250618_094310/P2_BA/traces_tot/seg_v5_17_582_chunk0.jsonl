@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'huge' modifies 'boost'. 'effective' modifies 'tool'.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 257}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 252}
+{"Q": 3, "answer": "no", "rationale": "Uses 'got a huge boost' (plain verb + descriptive), not a moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 232}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 231}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 231}
+{"Q": 5, "answer": "no", "rationale": "The segment reports monitoring capacity got a boost and gained credibility, which is a positive evaluation of a tool, not a calming cue about the threat.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 228}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 218}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 218}
+{"Q": 8, "answer": "yes", "rationale": "Describes improvement in capacity and its assessment (effective pandemic management tool - preparedness/capability).", "method": "llm_batch", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 207}

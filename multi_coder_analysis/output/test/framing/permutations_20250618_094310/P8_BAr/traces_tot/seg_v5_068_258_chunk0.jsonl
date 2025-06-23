@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'whole lot more' modifies quantity.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 68}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 67}
+{"Q": 3, "answer": "no", "rationale": "Lists cases, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 63}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 63}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 63}
+{"Q": 5, "answer": "no", "rationale": "The quote states there is 'a whole lot more of it out there,' which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 61}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 57}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_7692_r1", "batch_size": 260, "batch_pos": 57}
+{"Q": 7, "answer": "no", "rationale": "The negation 'None of the scientists quoted here would disagree' is about agreement, not risk/safety.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 57}
+{"Q": 8, "answer": "no", "rationale": "Reports expert's view/assessment of prevalence, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 55}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote about virus prevalence, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 45}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 44, "regex": {"rule": "ReliefSpeculation", "span": [11, 17], "captures": ["may be"]}}

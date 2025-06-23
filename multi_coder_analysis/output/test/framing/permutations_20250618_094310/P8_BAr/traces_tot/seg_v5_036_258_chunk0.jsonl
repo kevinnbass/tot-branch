@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'more worrying' modifies a psychological state, not a risk-adjective describing the threat.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 44}
+{"Q": 2, "answer": "no", "rationale": "'worrying' describes a psychological state, not the threat's impact using vivid language.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 44}
+{"Q": 3, "answer": "no", "rationale": "Quote discussing worry (feeling), not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 40}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 40}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 40}
+{"Q": 5, "answer": "yes", "rationale": "The quote 'I don't think the virus itself is necessarily any more worrying than what we've been seeing for the past 20-plus years' downplays the current worry level.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 40}

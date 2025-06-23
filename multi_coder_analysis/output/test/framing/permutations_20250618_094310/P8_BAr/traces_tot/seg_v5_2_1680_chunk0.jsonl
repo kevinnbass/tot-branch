@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 188}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 184}
+{"Q": 3, "answer": "no", "rationale": "Uses 'has been detected' (plain outcome verb phrase) with number, but not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 171}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 170}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 170}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a fourth case and quarantine, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 167}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 160}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 160}
+{"Q": 8, "answer": "no", "rationale": "Reports a case and immediate consequence (quarantine), focusing on the event.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 153}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of cases and action taken, not prices, economic data, or numerical metrics in the defined sense.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 120}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a fourth case and quarantine, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 117}
+{"Q": 11, "answer": "no", "rationale": "Authorial statement provides factual reporting of a case and action; 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 109}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of case count, location, and consequence; 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 109}

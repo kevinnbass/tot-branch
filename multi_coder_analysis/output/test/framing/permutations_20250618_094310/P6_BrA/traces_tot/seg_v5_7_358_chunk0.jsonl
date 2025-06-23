@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'popping up' (vivid verb describing background condition), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 199}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'popping up' is informal, not high-potency.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 144}
+{"Q": 3, "answer": "no", "rationale": "'popping up' is a moderate verb, but location is not explicit scale/impact.", "method": "llm_batch", "batch_id": "batch_3_18132", "batch_size": 81, "batch_pos": 65}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16304", "batch_size": 64, "batch_pos": 50}
+{"Q": 5, "answer": "no", "rationale": "Reports facts ('cases... have predictably begun popping up') but contains no explicit calming cues.", "method": "llm_batch", "batch_id": "batch_5_16440", "batch_size": 56, "batch_pos": 42}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 249}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 249}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 240}
+{"Q": 8, "answer": "no", "rationale": "Describes the spread/occurrence of cases, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16644", "batch_size": 49, "batch_pos": 38}
+{"Q": 9, "answer": "no", "rationale": "The segment does not report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14604", "batch_size": 25, "batch_pos": 19}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current/recent increase in cases, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_4860", "batch_size": 33, "batch_pos": 31}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 246}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of cases appearing; 'popping up' is descriptive.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 245}

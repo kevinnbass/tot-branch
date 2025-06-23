@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'mild' modifies symptoms, indicating low severity, not an intensified risk.", "method": "llm_batch", "batch_id": "batch_1_5880", "batch_size": 260, "batch_pos": 105}
+{"Q": 2, "answer": "no", "rationale": "The segment factually reports mild symptoms.", "method": "llm_batch", "batch_id": "batch_2_14696", "batch_size": 260, "batch_pos": 89}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb describing threat impact is present.", "method": "llm_batch", "batch_id": "batch_3_17360", "batch_size": 260, "batch_pos": 74}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4428", "batch_size": 260, "batch_pos": 70}
+{"Q": 5, "answer": "no", "rationale": "The segment reports on mild symptoms experienced by individuals, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16904", "batch_size": 260, "batch_pos": 70}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13084", "batch_size": 260, "batch_pos": 64}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the threat.", "method": "llm_batch", "batch_id": "batch_7_16696", "batch_size": 260, "batch_pos": 60}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_952", "batch_size": 260, "batch_pos": 11, "regex": {"rule": "CapabilityNoReassurance", "span": [68, 77], "captures": []}}

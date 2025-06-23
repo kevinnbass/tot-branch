@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_1_14672",
+  "hop_idx": 1,
+  "unknown_count": 3,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_15_1138_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'massive mortality', but 'massive' modifies a noun ('mortality'), not a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_20_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'real risk', but 'risk' is a noun, not an adjective."
+    },
+    {
+      "segment_id": "seg_v5_22_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective."
+    }
+  ]
+}

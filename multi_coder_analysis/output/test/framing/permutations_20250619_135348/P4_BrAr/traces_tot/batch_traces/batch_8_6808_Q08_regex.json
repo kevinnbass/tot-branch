@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch_8_6808",
+  "hop_idx": 8,
+  "segment_count": 2,
+  "matches": [
+    {
+      "statement_id": "seg_v5_4_269_chunk0",
+      "regex": {
+        "rule": "CapabilityNoReassurance",
+        "span": [
+          112,
+          121
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_028_721_chunk0",
+      "regex": {
+        "rule": "CapabilityNoReassurance",
+        "span": [
+          7,
+          16
+        ],
+        "captures": []
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

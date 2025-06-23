@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17592", "batch_size": 217, "batch_pos": 108}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('problems that have impeded', 'isn’t keeping up', 'lack of cooperation').", "method": "llm_batch", "batch_id": "batch_2_15628", "batch_size": 163, "batch_pos": 64}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses problems and lack of change, not a Q3 pattern.", "method": "llm_batch", "batch_id": "batch_3_4424", "batch_size": 260, "batch_pos": 255}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17252", "batch_size": 260, "batch_pos": 238}
+{"Q": 5, "answer": "no", "rationale": "The segment reports negative assessments from experts but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_2816", "batch_size": 260, "batch_pos": 231}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16772", "batch_size": 260, "batch_pos": 184}
+{"Q": 7, "answer": "no", "rationale": "'isn't keeping up' and 'haven't changed' are not specified bare negation types.", "method": "llm_batch", "batch_id": "batch_7_16660", "batch_size": 252, "batch_pos": 169}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 228, "regex": {"rule": "CapabilityNoReassurance", "span": [130, 136], "captures": []}}

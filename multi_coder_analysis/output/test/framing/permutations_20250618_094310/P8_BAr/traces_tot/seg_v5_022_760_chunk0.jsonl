@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18168", "batch_size": 260, "batch_pos": 161}
+{"Q": 2, "answer": "no", "rationale": "The quote expresses uncertainty about the future using neutral language.", "method": "llm_batch", "batch_id": "batch_2_2264", "batch_size": 260, "batch_pos": 128}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17916", "batch_size": 260, "batch_pos": 73}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13840", "batch_size": 260, "batch_pos": 60}
+{"Q": 5, "answer": "no", "rationale": "The quoted source expresses uncertainty, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16708", "batch_size": 260, "batch_pos": 56}
+{"Q": 6, "answer": "no", "rationale": "'just like COVID' is a comparison, not a minimiser + scale contrast of the event.", "method": "llm_batch", "batch_id": "batch_6_13548", "batch_size": 260, "batch_pos": 24}
+{"Q": 7, "answer": "no", "rationale": "'don't know' is not a bare negation about risk, impact, cases, or capability.", "method": "llm_batch", "batch_id": "batch_7_16620", "batch_size": 260, "batch_pos": 18}
+{"Q": 8, "answer": "no", "rationale": "Segment describes uncertainty about the future, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17936", "batch_size": 260, "batch_pos": 168}
+{"Q": 9, "answer": "no", "rationale": "The segment is speculation, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 174}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 75}
+{"Q": 10, "answer": "no", "rationale": "The segment speculates about future uncertainty ('don't know what next year's going to hold'), not specifically relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_7984_r1", "batch_size": 260, "batch_pos": 75}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement is speculative, not framing risk or safety.", "method": "llm_batch", "batch_id": "batch_11_17244", "batch_size": 224, "batch_pos": 57}
+{"Q": 12, "answer": "yes", "rationale": "Statement of uncertainty and comparison to COVID, not explicit framing of the threat.", "method": "llm_batch", "batch_id": "batch_12_14348", "batch_size": 224, "batch_pos": 57}

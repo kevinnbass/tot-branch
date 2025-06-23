@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 183}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('announced', 'confirmed case') without high-potency verbs or metaphors. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 177}
+{"Q": 3, "answer": "no", "rationale": "'announced' and 'confirmed' are plain verbs.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 172}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 170}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 169}
+{"Q": 5, "answer": "no", "rationale": "This segment reports a first case without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 169}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 164}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 164}
+{"Q": 7, "answer": "no", "rationale": "The segment describes a confirmed case but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 159}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 130, "regex": {"rule": "CapabilityNoReassurance", "span": [21, 30], "captures": []}}

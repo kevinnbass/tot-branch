@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11792", "batch_size": 260, "batch_pos": 4}
+{"Q": 2, "answer": "no", "rationale": "'increase' is a neutral verb; 'really busy' describes workload, not threat impact.", "method": "llm_batch", "batch_id": "batch_2_6580", "batch_size": 260, "batch_pos": 248}
+{"Q": 3, "answer": "no", "rationale": "'increase' is a trend verb; 'busy season' is subjective.", "method": "llm_batch", "batch_id": "batch_3_12716", "batch_size": 260, "batch_pos": 211}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 206}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative trend and calls it busy, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17836", "batch_size": 260, "batch_pos": 204}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_18368", "batch_size": 260, "batch_pos": 183}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3220", "batch_size": 260, "batch_pos": 169}
+{"Q": 9, "answer": "no", "rationale": "The segment repeats a quote and adds a comment about the season, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_15788", "batch_size": 260, "batch_pos": 73}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 232}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a current negative trend/situation, not relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 232}
+{"Q": 11, "answer": "yes", "rationale": "Quote uses intensified language 'really busy season of strandings'. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 207}
+{"Q": 12, "answer": "yes", "rationale": "Reports quotes stating increase (background) and 'really busy season' (workload - background).", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 204}

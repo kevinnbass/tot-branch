@@ -1,0 +1,1008 @@
+{
+  "batch_id": "batch_3_16964",
+  "hop_idx": 3,
+  "segment_count": 200,
+  "responses": [
+    {
+      "segment_id": "seg_v5_5_961_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('cull'), which overrides Q3 even with scale information."
+    },
+    {
+      "segment_id": "seg_v5_6_961_chunk0",
+      "answer": "no",
+      "rationale": "'prompt' is a moderate verb, but it's paired with a potential outcome ('can prompt... to impose') and relates to trade metrics."
+    },
+    {
+      "segment_id": "seg_v5_7_961_chunk0",
+      "answer": "no",
+      "rationale": "'raising concern' is a psychological verb not paired with vivid intensifiers or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_8_961_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes how the virus spreads but uses no moderate verb paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_1_358_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('slaughtered') and explicitly downplays the impact ('far less', 'aren't seeing as much impact')."
+    },
+    {
+      "segment_id": "seg_v5_2_358_chunk0",
+      "answer": "no",
+      "rationale": "The sentence uses containment verbs ('killed', 'slaughtered') which override Q3."
+    },
+    {
+      "segment_id": "seg_v5_3_358_chunk0",
+      "answer": "no",
+      "rationale": "'worrisome indication' is evaluative, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_4_358_chunk0",
+      "answer": "no",
+      "rationale": "'spread easily' is descriptive, not a moderate verb paired with scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_5_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains no moderate verb paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_7_358_chunk0",
+      "answer": "no",
+      "rationale": "'popping up' is not a moderate verb from the approved list."
+    },
+    {
+      "segment_id": "seg_v5_8_358_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('slaughtered') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_9_358_chunk0",
+      "answer": "no",
+      "rationale": "'affected' is an outcome verb, not a moderate verb. The segment also contains reassuring language."
+    },
+    {
+      "segment_id": "seg_v5_10_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses financial metrics (prices), which are treated as Neutral here."
+    },
+    {
+      "segment_id": "seg_v5_11_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses financial metrics (prices), which are treated as Neutral here."
+    },
+    {
+      "segment_id": "seg_v5_12_358_chunk0",
+      "answer": "no",
+      "rationale": "'spiked' and 'soared' are moderate verbs but applied to financial metrics (prices/costs), which are Neutral here."
+    },
+    {
+      "segment_id": "seg_v5_13_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses financial metrics (prices), which are treated as Neutral here."
+    },
+    {
+      "segment_id": "seg_v5_14_358_chunk0",
+      "answer": "no",
+      "rationale": "'hit as hard' uses 'hit' but is negated and followed by clauses explaining reduced impact."
+    },
+    {
+      "segment_id": "seg_v5_15_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses financial metrics (prices), which are treated as Neutral here."
+    },
+    {
+      "segment_id": "seg_v5_16_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_17_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_18_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote about biosecurity, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_19_358_chunk0",
+      "answer": "no",
+      "rationale": "'cost' is an outcome verb, not a moderate verb, and relates to financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_20_358_chunk0",
+      "answer": "no",
+      "rationale": "'suffered' is an outcome verb, not a moderate verb, and relates to financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_21_358_chunk0",
+      "answer": "no",
+      "rationale": "'killed' is an outcome verb, not a moderate verb. The segment also contains reassuring language ('remains less costly')."
+    },
+    {
+      "segment_id": "seg_v5_22_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains explicit reassuring language ('doesn't represent a significant health threat')."
+    },
+    {
+      "segment_id": "seg_v5_23_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains explicit reassuring language ('extremely rare', 'none... allowed into the food supply')."
+    },
+    {
+      "segment_id": "seg_v5_24_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides reassuring information about food safety."
+    },
+    {
+      "segment_id": "seg_v5_25_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses vaccines but uses no moderate verb paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_26_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses vaccine challenges but uses no moderate verb paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_27_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote about vaccine feasibility, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_1_1055_chunk0",
+      "answer": "no",
+      "rationale": "'could see' is hypothetical/potential, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_2_1055_chunk0",
+      "answer": "no",
+      "rationale": "'confirmed' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_3_1055_chunk0",
+      "answer": "no",
+      "rationale": "'spreads easily' is descriptive, not a moderate verb + scale of realised impact. 'can prove deadly' is potential."
+    },
+    {
+      "segment_id": "seg_v5_4_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_5_1055_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('depopulated') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_6_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring information about food safety."
+    },
+    {
+      "segment_id": "seg_v5_7_1055_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('euthanized') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_8_1055_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('depopulated') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_9_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_10_1055_chunk0",
+      "answer": "no",
+      "rationale": "'occurred' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_11_1055_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('kill') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_12_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote about preparedness, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_14_1055_chunk0",
+      "answer": "no",
+      "rationale": "'could contribute' is hypothetical/potential and relates to financial metrics (prices)."
+    },
+    {
+      "segment_id": "seg_v5_002_258_chunk0",
+      "answer": "no",
+      "rationale": "'infected' and 'killing' are outcome verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_005_258_chunk0",
+      "answer": "no",
+      "rationale": "'triggering fears' is a psychological verb not paired with vivid intensifiers or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_006_258_chunk0",
+      "answer": "no",
+      "rationale": "'concerning' is evaluative, not a moderate verb paired with scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_007_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual description."
+    },
+    {
+      "segment_id": "seg_v5_008_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual description and historical context."
+    },
+    {
+      "segment_id": "seg_v5_009_258_chunk0",
+      "answer": "no",
+      "rationale": "'infect' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_012_258_chunk0",
+      "answer": "no",
+      "rationale": "'quieted down' is not a moderate verb. 'hedging their bets' is about uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_014_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_017_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_018_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action."
+    },
+    {
+      "segment_id": "seg_v5_020_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a biographical detail."
+    },
+    {
+      "segment_id": "seg_v5_021_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question about feelings/assessment. 'spread' and 'infected' are outcome verbs."
+    },
+    {
+      "segment_id": "seg_v5_022_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question about feelings/assessment and future potential."
+    },
+    {
+      "segment_id": "seg_v5_025_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion."
+    },
+    {
+      "segment_id": "seg_v5_026_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action (asking experts)."
+    },
+    {
+      "segment_id": "seg_v5_027_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of mind."
+    },
+    {
+      "segment_id": "seg_v5_028_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of mind."
+    },
+    {
+      "segment_id": "seg_v5_029_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes states of mind and difficulty answering."
+    },
+    {
+      "segment_id": "seg_v5_030_258_chunk0",
+      "answer": "no",
+      "rationale": "'raised the specter' is a psychological verb not paired with vivid intensifiers or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_031_258_chunk0",
+      "answer": "no",
+      "rationale": "'moved' and 'spread' are outcome verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_032_258_chunk0",
+      "answer": "no",
+      "rationale": "'recorded' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_033_258_chunk0",
+      "answer": "no",
+      "rationale": "'detected' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_034_258_chunk0",
+      "answer": "no",
+      "rationale": "'died' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_036_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion."
+    },
+    {
+      "segment_id": "seg_v5_037_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing worry about a change in conditions, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_038_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing worry and increased chance of contact, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_039_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion about risk."
+    },
+    {
+      "segment_id": "seg_v5_040_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a statement about a past threat."
+    },
+    {
+      "segment_id": "seg_v5_042_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes action/result."
+    },
+    {
+      "segment_id": "seg_v5_043_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes action/concerns."
+    },
+    {
+      "segment_id": "seg_v5_044_258_chunk0",
+      "answer": "no",
+      "rationale": "'sparked' is a psychological verb applied to a debate, not paired with vivid intensifiers or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_045_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion."
+    },
+    {
+      "segment_id": "seg_v5_047_258_chunk0",
+      "answer": "no",
+      "rationale": "'saw', 'move about', 'sickening', 'killing' are not moderate verbs. 'a number' is vague scale."
+    },
+    {
+      "segment_id": "seg_v5_048_258_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('euthanized') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_050_258_chunk0",
+      "answer": "no",
+      "rationale": "'spread' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_053_258_chunk0",
+      "answer": "no",
+      "rationale": "'gives... pause' is a psychological effect not paired with vivid intensifiers or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_054_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a hypothetical question."
+    },
+    {
+      "segment_id": "seg_v5_055_258_chunk0",
+      "answer": "no",
+      "rationale": "'reports' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_056_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is an evaluative statement."
+    },
+    {
+      "segment_id": "seg_v5_057_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a statement about capacity."
+    },
+    {
+      "segment_id": "seg_v5_058_258_chunk0",
+      "answer": "no",
+      "rationale": "'died' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_059_258_chunk0",
+      "answer": "no",
+      "rationale": "'detected' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_060_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote."
+    },
+    {
+      "segment_id": "seg_v5_063_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a statement about uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_064_258_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_065_258_chunk0",
+      "answer": "no",
+      "rationale": "'doesn't like' is an opinion. 'spread' is an outcome verb. Scale is present but not paired with a moderate verb. The second clause downplays significance."
+    },
+    {
+      "segment_id": "seg_v5_068_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion/observation. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_071_258_chunk0",
+      "answer": "no",
+      "rationale": "Scale ('few') is present but not paired with a moderate verb. The segment also contains reassuring language."
+    },
+    {
+      "segment_id": "seg_v5_072_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('rare', 'mild disease'). 'reports' is an outcome verb."
+    },
+    {
+      "segment_id": "seg_v5_073_258_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('culling') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_074_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_075_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_076_258_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb. 'rare severe case' is evaluative, not paired with a moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_077_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses a theory. 'decline' is an outcome, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_078_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_079_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_080_258_chunk0",
+      "answer": "no",
+      "rationale": "'caused' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_081_258_chunk0",
+      "answer": "no",
+      "rationale": "'acquired' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_083_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of mind ('worries')."
+    },
+    {
+      "segment_id": "seg_v5_086_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote predicting a future event."
+    },
+    {
+      "segment_id": "seg_v5_087_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote predicting a future event and expressing uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_089_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a statement about agreement."
+    },
+    {
+      "segment_id": "seg_v5_090_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion/recommendation."
+    },
+    {
+      "segment_id": "seg_v5_091_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion. 'major problem' is evaluative, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_093_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes involvement in investigations."
+    },
+    {
+      "segment_id": "seg_v5_095_258_chunk0",
+      "answer": "no",
+      "rationale": "'circulating', 'transmitted', 'caused' are outcome verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_096_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote stating a fact/observation."
+    },
+    {
+      "segment_id": "seg_v5_097_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote suggesting action and describing potential events."
+    },
+    {
+      "segment_id": "seg_v5_098_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of mind ('worries') and an outcome ('eroded'), not a moderate verb + scale of realised impact of the threat."
+    },
+    {
+      "segment_id": "seg_v5_099_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of mind ('worries')."
+    },
+    {
+      "segment_id": "seg_v5_100_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote discussing a hypothetical future difficulty."
+    },
+    {
+      "segment_id": "seg_v5_102_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion."
+    },
+    {
+      "segment_id": "seg_v5_104_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote expressing opinion and physical reaction, not a moderate verb + scale of realised impact of the threat."
+    },
+    {
+      "segment_id": "seg_v5_3_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_5_1813_chunk0",
+      "answer": "no",
+      "rationale": "'engaged' is not a moderate verb from the approved list."
+    },
+    {
+      "segment_id": "seg_v5_6_1813_chunk0",
+      "answer": "no",
+      "rationale": "'reported lobbying' is not a moderate verb from the approved list."
+    },
+    {
+      "segment_id": "seg_v5_8_1813_chunk0",
+      "answer": "no",
+      "rationale": "'bristled' and 'lobbying' are not moderate verbs from the approved list."
+    },
+    {
+      "segment_id": "seg_v5_9_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment lists groups, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_10_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes lobbying priorities, not a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_11_1813_chunk0",
+      "answer": "no",
+      "rationale": "'reported lobbying' is not a moderate verb from the approved list."
+    },
+    {
+      "segment_id": "seg_v5_1_201_chunk0",
+      "answer": "no",
+      "rationale": "'suffered' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_2_201_chunk0",
+      "answer": "yes",
+      "rationale": "Uses moderate verb 'hit' paired with scale 'multiple bird flu outbreaks'."
+    },
+    {
+      "segment_id": "seg_v5_4_201_chunk0",
+      "answer": "no",
+      "rationale": "'acute' is evaluative. Scale ('14 outbreaks') is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_5_201_chunk0",
+      "answer": "yes",
+      "rationale": "Uses moderate verb 'hit' with intensifier 'particularly hard' paired with scale 'five outbreaks'."
+    },
+    {
+      "segment_id": "seg_v5_6_201_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('culled') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_7_201_chunk0",
+      "answer": "no",
+      "rationale": "'fears' is a psychological noun. 'affected' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_8_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a likely action."
+    },
+    {
+      "segment_id": "seg_v5_9_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken and contains reassuring language ('downplayed any concerns')."
+    },
+    {
+      "segment_id": "seg_v5_11_201_chunk0",
+      "answer": "no",
+      "rationale": "'spreading' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_12_201_chunk0",
+      "answer": "no",
+      "rationale": "'spreading' and 'spread' are outcome verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_13_201_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('culled') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_14_201_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains containment/outcome verbs ('culled', 'died') which override Q3 for 'culled'."
+    },
+    {
+      "segment_id": "seg_v5_15_201_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('culled') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_16_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses future potential ('likely to worsen', 'increases the risk')."
+    },
+    {
+      "segment_id": "seg_v5_17_201_chunk0",
+      "answer": "no",
+      "rationale": "'continued' is an outcome verb. 'creating a risk' is about potential."
+    },
+    {
+      "segment_id": "seg_v5_18_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action ('called for')."
+    },
+    {
+      "segment_id": "seg_v5_19_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses trials and questions/uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_1_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a future action ('will sign')."
+    },
+    {
+      "segment_id": "seg_v5_2_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a deal/contract."
+    },
+    {
+      "segment_id": "seg_v5_3_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a future action ('will be jointly procured')."
+    },
+    {
+      "segment_id": "seg_v5_4_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes intention/purpose."
+    },
+    {
+      "segment_id": "seg_v5_5_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an ongoing process."
+    },
+    {
+      "segment_id": "seg_v5_6_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a quote describing ongoing/future actions."
+    },
+    {
+      "segment_id": "seg_v5_8_1683_chunk0",
+      "answer": "no",
+      "rationale": "'spread' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_9_1683_chunk0",
+      "answer": "no",
+      "rationale": "'infected' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_10_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about lack of cases (reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_12_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains explicit reassuring language ('risk... is considered to be low')."
+    },
+    {
+      "segment_id": "seg_v5_13_1683_chunk0",
+      "answer": "no",
+      "rationale": "'secured' is an action verb, not a moderate verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_1_690_chunk0",
+      "answer": "no",
+      "rationale": "'infected' and 'reported' are outcome verbs. 'growing outbreak' is evaluative."
+    },
+    {
+      "segment_id": "seg_v5_2_690_chunk0",
+      "answer": "no",
+      "rationale": "'infected', 'reported', 'had contact', 'said' are outcome verbs. 'growing outbreak' is evaluative."
+    },
+    {
+      "segment_id": "seg_v5_3_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms, treatment, and recovery."
+    },
+    {
+      "segment_id": "seg_v5_4_690_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_5_690_chunk0",
+      "answer": "no",
+      "rationale": "'reported' and 'developed' are outcome verbs. Scale is present but not paired with a moderate verb. Contains reassuring language ('mild respiratory symptoms')."
+    },
+    {
+      "segment_id": "seg_v5_6_690_chunk0",
+      "answer": "no",
+      "rationale": "'detected' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_7_690_chunk0",
+      "answer": "no",
+      "rationale": "'infected', 'reported', 'said' are outcome verbs. 'growing outbreak' is evaluative. Contains explicit reassuring language ('risk... remains low')."
+    },
+    {
+      "segment_id": "seg_v5_8_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes surveillance results (reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_9_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a higher risk group, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_10_690_chunk0",
+      "answer": "no",
+      "rationale": "'infected', 'reported', 'developed', 'according to' are outcome verbs. 'growing outbreak' is evaluative."
+    },
+    {
+      "segment_id": "seg_v5_11_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes test results."
+    },
+    {
+      "segment_id": "seg_v5_12_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes status."
+    },
+    {
+      "segment_id": "seg_v5_13_690_chunk0",
+      "answer": "no",
+      "rationale": "'reported' and 'originated' are outcome verbs. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_1_1041_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_2_1041_chunk0",
+      "answer": "no",
+      "rationale": "'killed' is an outcome verb, not a moderate verb. 'slaughter' is a containment verb which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_1_1779_chunk0",
+      "answer": "no",
+      "rationale": "'confirmed' and 'suspected' are outcome verbs. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_2_1779_chunk0",
+      "answer": "no",
+      "rationale": "'spreads' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_3_1779_chunk0",
+      "answer": "no",
+      "rationale": "'can jump' is potential."
+    },
+    {
+      "segment_id": "seg_v5_4_1779_chunk0",
+      "answer": "no",
+      "rationale": "'emerged' and 'confirmed' are outcome verbs. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_5_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_6_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains explicit reassuring language ('rare')."
+    },
+    {
+      "segment_id": "seg_v5_7_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains explicit reassuring language ('risk... is still negligible')."
+    },
+    {
+      "segment_id": "seg_v5_8_1779_chunk0",
+      "answer": "no",
+      "rationale": "'infected', 'working', 'had contact' are outcome verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_9_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('mild'). Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_10_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains explicit reassuring language ('still does not pose a significant risk')."
+    },
+    {
+      "segment_id": "seg_v5_11_1779_chunk0",
+      "answer": "no",
+      "rationale": "The first clause is reassuring. The second discusses potential ('potential to cause severe disease')."
+    },
+    {
+      "segment_id": "seg_v5_12_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future events ('could evolve', 'could trigger')."
+    },
+    {
+      "segment_id": "seg_v5_13_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes investigation and potential changes."
+    },
+    {
+      "segment_id": "seg_v5_14_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes recommendations."
+    },
+    {
+      "segment_id": "seg_v5_15_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question."
+    },
+    {
+      "segment_id": "seg_v5_1_1174_chunk0",
+      "answer": "no",
+      "rationale": "'swept through' is a moderate verb, but 'some wild pelicans' is not significant scale."
+    },
+    {
+      "segment_id": "seg_v5_2_1174_chunk0",
+      "answer": "no",
+      "rationale": "'killed' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_3_1174_chunk0",
+      "answer": "no",
+      "rationale": "'carried' and 'transmit' are outcome verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_4_1174_chunk0",
+      "answer": "no",
+      "rationale": "'led to' is not a moderate verb. 'slaughtered' is a containment verb which overrides Q3. 'concerned' is psychological."
+    },
+    {
+      "segment_id": "seg_v5_5_1174_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken ('said', 'start vaccinating', 'detected')."
+    },
+    {
+      "segment_id": "seg_v5_1_30_chunk0",
+      "answer": "no",
+      "rationale": "'slaughtered' is a containment verb which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_2_30_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb. 'spreading quickly' uses an intensifier with an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_4_30_chunk0",
+      "answer": "no",
+      "rationale": "'attracting attention' is a psychological effect not paired with vivid intensifiers or concrete scale of realised harm. 'can be transmitted' is potential."
+    },
+    {
+      "segment_id": "seg_v5_5_30_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_6_30_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_7_30_chunk0",
+      "answer": "no",
+      "rationale": "The sentence contains a containment verb ('slaughtered') which overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_8_30_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_9_30_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_10_30_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is an outcome verb. Scale is present but not paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_11_30_chunk0",
+      "answer": "no",
+      "rationale": "'circulates' and 'can be spread' are outcome/potential verbs, not moderate verbs."
+    },
+    {
+      "segment_id": "seg_v5_12_30_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes actions taken. 'increased risk' is evaluative, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_13_30_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action ('followed')."
+    },
+    {
+      "segment_id": "seg_v5_14_30_chunk0",
+      "answer": "no",
+      "rationale": "'declared', 'requiring', 'culled' are outcome/containment verbs. 'culled' overrides Q3."
+    },
+    {
+      "segment_id": "seg_v5_15_30_chunk0",
+      "answer": "no",
+      "rationale": "'can affect' is potential. 'rare cases' is reassuring."
+    }
+  ],
+  "timestamp": "2025-06-21T12:09:52.374568"
+}

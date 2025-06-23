@@ -1,0 +1,832 @@
+{
+  "batch_id": "batch_9_15552",
+  "hop_idx": 9,
+  "unknown_count": 165,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_8_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of states with confirmed cases ('23 states') factually using standard language ('have confirmed cases')."
+    },
+    {
+      "segment_id": "seg_v5_11_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of birds killed ('22 million', '13 million') and corrections factually using standard language ('total number', 'number killed', 'correct')."
+    },
+    {
+      "segment_id": "seg_v5_13_1674_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of people and herds with cases ('at least one person', '36 dairy herds') factually using standard language ('confirmed', 'have been confirmed')."
+    },
+    {
+      "segment_id": "seg_v5_14_1674_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a proportion/metric ('one in five milk samples') factually using standard language ('had trace amounts')."
+    },
+    {
+      "segment_id": "seg_v5_15_1674_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a percentage/metric ('56 percent') factually using standard language ('were fatal')."
+    },
+    {
+      "segment_id": "seg_v5_16_1674_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a proportion ('Half the domestic cats') and outcome ('died') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_17_1674_chunk0",
+      "answer": "no",
+      "rationale": "Uses a vivid verb ('jumped') to describe the change in sales, which is not standard descriptive verb reporting."
+    },
+    {
+      "segment_id": "seg_v5_18_1674_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a percentage/metric ('four and a half percent') factually using standard language ('are consuming')."
+    },
+    {
+      "segment_id": "seg_v5_19_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a link to diseases, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_20_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('risks to the general public remain low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_21_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a symptom, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_22_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes potential symptoms, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_23_1470_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers and proportion ('Over half', 'over 900 human H5N1 cases') factually using standard language ('have resulted in death')."
+    },
+    {
+      "segment_id": "seg_v5_24_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('risks currently being low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_25_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a reaction ('expressed concerns'), not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_26_1470_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of states with cases ('at least six different states') factually using standard language ('spread to include cases')."
+    },
+    {
+      "segment_id": "seg_v5_27_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection and confirmation of a case/outbreak, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_28_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an increase and a reaction ('source of concern'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_29_948_chunk0",
+      "answer": "yes",
+      "rationale": "Reports outbreaks and a total number of poultry affected ('totalling 650,000 poultry') factually using a standard verb ('totalling')."
+    },
+    {
+      "segment_id": "seg_v5_30_1534_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of herds and states ('34 dairy cattle herds across nine states') factually using standard language ('detection', 'across')."
+    },
+    {
+      "segment_id": "seg_v5_31_1534_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of cases ('one case') factually using standard language ('has been confirmed')."
+    },
+    {
+      "segment_id": "seg_v5_32_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('the overall public health risk is low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_33_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment introduces the topic, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_38_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses risk adjectives ('major problem'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_39_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an observation, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_40_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms/observations, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_41_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses intensifiers ('severe, severe') to describe symptoms."
+    },
+    {
+      "segment_id": "seg_v5_42_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms using vivid language ('Screaming very loud', 'whole-body tremors')."
+    },
+    {
+      "segment_id": "seg_v5_43_647_chunk0",
+      "answer": "yes",
+      "rationale": "Reports duration ('20 to 30 seconds') and change in duration ('get longer and longer and longer') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_44_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of knowledge, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_45_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes joining a list of species, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_46_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes severity and personal experience, not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_48_647_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of people infected ('nearly 900 people') factually using standard language ('infected', 'have been sporadic', 'usually self-limiting')."
+    },
+    {
+      "segment_id": "seg_v5_49_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment defines a term, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_55_647_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of herds and states ('more than 80 dairy herds', 'at least 12 states') and a qualitative assessment ('number... has apparently been low') factually."
+    },
+    {
+      "segment_id": "seg_v5_62_647_chunk0",
+      "answer": "yes",
+      "rationale": "Reports an outcome/metric ('killed all the ferrets') factually using a standard verb ('killed')."
+    },
+    {
+      "segment_id": "seg_v5_63_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a metric ('three cases') and describes severity ('mild'), but also speculates on potential future severity ('serious illnesses') using a risk adjective."
+    },
+    {
+      "segment_id": "seg_v5_65_647_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers and describes severity/outcome ('Fourteen illnesses were severe or critical', 'seven were fatal', 'six were mild', 'eight didn't have any symptoms') factually."
+    },
+    {
+      "segment_id": "seg_v5_66_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a hypothesis, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_67_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a lack of testing, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_68_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('risk... is low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_70_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a hypothesis, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_72_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a potential outcome using a risk adjective ('severe disease')."
+    },
+    {
+      "segment_id": "seg_v5_77_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes behaviour using vivid verbs ('waddle', 'twisting', 'writhing')."
+    },
+    {
+      "segment_id": "seg_v5_80_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes personal experience and action, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_81_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a state of mind ('on edge') and a trend ('on the rise'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_82_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes current cost and potential future cost ('could get even higher'), which is speculative."
+    },
+    {
+      "segment_id": "seg_v5_83_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses a desire/goal, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_84_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides identification, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_85_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number affected ('more than 600,000') factually using standard language ('have been affected'). Context guard applies to 'extremely large industry'."
+    },
+    {
+      "segment_id": "seg_v5_86_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a ranking/metric ('No. 1 turkey producing state') factually."
+    },
+    {
+      "segment_id": "seg_v5_87_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a price change ('prices rise') factually using a standard verb ('rise')."
+    },
+    {
+      "segment_id": "seg_v5_88_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a price change ('cost of eggs has doubled') factually using a standard verb ('has doubled')."
+    },
+    {
+      "segment_id": "seg_v5_89_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a quantity/metric ('around 30 million pounds') factually using a standard verb ('raises')."
+    },
+    {
+      "segment_id": "seg_v5_90_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses uncertainty/concern, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_91_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides identification/description, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_92_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a decision and reason, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_93_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses necessity and potential negative consequences ('cause problems')."
+    },
+    {
+      "segment_id": "seg_v5_94_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers affected ('nearly 23 million birds', '24 states', '90 commercial', '38 backyard flocks') factually using a standard verb ('has affected')."
+    },
+    {
+      "segment_id": "seg_v5_95_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the transmission method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_96_1198_chunk0",
+      "answer": "yes",
+      "rationale": "Reports distance (metric) ('150 km (90 miles)') and a metric change ('increase of deaths') factually."
+    },
+    {
+      "segment_id": "seg_v5_97_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a decision/reason ('to err on the side of caution'), not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_98_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation of a case, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_99_192_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of cases ('More than 100 cases') factually using standard language ('have been confirmed')."
+    },
+    {
+      "segment_id": "seg_v5_100_192_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a proportion ('Most states') factually using standard language ('have reported cases')."
+    },
+    {
+      "segment_id": "seg_v5_101_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a trend/expectation ('expected to rise'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_102_1286_chunk0",
+      "answer": "yes",
+      "rationale": "Reports locations ('in all U.S. states except Hawaii') factually using standard language ('has been found')."
+    },
+    {
+      "segment_id": "seg_v5_103_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('considered to be at low risk'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_104_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('appears low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_105_914_chunk0",
+      "answer": "yes",
+      "rationale": "Describes spread ('spread rapidly') using a neutral adverb ('rapidly') and standard verb ('spread')."
+    },
+    {
+      "segment_id": "seg_v5_106_914_chunk0",
+      "answer": "yes",
+      "rationale": "Describes severity ('mild') factually using standard language ('turned out to be mild')."
+    },
+    {
+      "segment_id": "seg_v5_107_914_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers ('Seven people', 'all') and outcome ('were found to be infected', 'were asymptomatic') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_108_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports advice/recommendation, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_109_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports locations of outbreaks, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_110_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports reporting of an outbreak, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_111_1352_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of birds ('80 domestic birds') factually using standard language ('with')."
+    },
+    {
+      "segment_id": "seg_v5_112_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the transmission method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_113_1702_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a proportion/outcome ('Most, but not all') factually using a standard verb ('was killed')."
+    },
+    {
+      "segment_id": "seg_v5_114_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a potential outcome and conditions using qualitative descriptors, not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_115_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports publication, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_116_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a finding, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_117_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a limitation, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_118_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides advice/caution, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_119_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a vivid verb ('jumped') to describe the virus's movement."
+    },
+    {
+      "segment_id": "seg_v5_120_1702_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of herds and states ('96 herds across 12 states') factually using standard language ('have been tested positive', 'across')."
+    },
+    {
+      "segment_id": "seg_v5_121_1702_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of farm workers ('Three farm workers') factually using standard language ('have tested positive')."
+    },
+    {
+      "segment_id": "seg_v5_122_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('risk to humans is low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_123_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a potential economic risk ('risk nearly $10 billion'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_124_1186_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a quantity/metric ('1.2 to 1.3 million free range birds') factually using a standard verb ('produce')."
+    },
+    {
+      "segment_id": "seg_v5_125_1186_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number affected ('around 600,000') factually using standard language ('being directly affected')."
+    },
+    {
+      "segment_id": "seg_v5_126_1186_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a quantity/metric ('about 8.5 to 9 million birds') factually using standard language ('was')."
+    },
+    {
+      "segment_id": "seg_v5_127_1485_chunk0",
+      "answer": "yes",
+      "rationale": "Reports an outcome/duration ('recover within two weeks') factually using standard language ('appear to recover')."
+    },
+    {
+      "segment_id": "seg_v5_128_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses caution/potential change, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_129_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action/effort, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_130_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('characterize the risk... as “low.”'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_131_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('characterize the risk... as “low.”'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_132_803_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers ('total of seven people', 'six health care workers') factually using standard language ('have been identified as having been ill')."
+    },
+    {
+      "segment_id": "seg_v5_133_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses emphatic language ('really on the line'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_134_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses concern ('troubled'), not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_135_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a risk level ('higher risk'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_136_803_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of herds and states ('239 herds in 14 states') factually using standard language ('have tested positive')."
+    },
+    {
+      "segment_id": "seg_v5_137_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an action/refusal, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_138_803_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of herds ('64 infected herds') factually using a standard verb ('has found')."
+    },
+    {
+      "segment_id": "seg_v5_139_803_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of farms ('41 affected farms') factually using a standard verb ('has to date confirmed')."
+    },
+    {
+      "segment_id": "seg_v5_140_813_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a percentage ('96 per cent') and outcome ('died') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_141_813_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a number killed ('17,400') and compares it to historical data ('highest figure') factually."
+    },
+    {
+      "segment_id": "seg_v5_142_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection date/location, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_143_813_chunk0",
+      "answer": "yes",
+      "rationale": "Describes spread ('has spread more quickly') using a neutral adverb ('more quickly') and standard verb ('spread')."
+    },
+    {
+      "segment_id": "seg_v5_144_813_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of species infected ('at least 320 bird and 25 mammal species') factually using a standard verb ('has infected')."
+    },
+    {
+      "segment_id": "seg_v5_145_813_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a number died ('More than 500,000') and describes a trend ('growing number') factually."
+    },
+    {
+      "segment_id": "seg_v5_146_813_chunk0",
+      "answer": "yes",
+      "rationale": "Reports an outcome ('was killed') factually using a standard verb ('was killed')."
+    },
+    {
+      "segment_id": "seg_v5_147_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a previous understanding, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_148_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes evidence and potential spread, not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_149_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a conclusion, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_150_813_chunk0",
+      "answer": "yes",
+      "rationale": "Describes spread ('spread rapidly') using a neutral adverb ('rapidly') and reports a number killed ('killing thousands') factually."
+    },
+    {
+      "segment_id": "seg_v5_151_813_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a percentage/metric ('96% Proportion') factually."
+    },
+    {
+      "segment_id": "seg_v5_152_644_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of farms ('four farms', 'fifth farm') factually using standard language ('has been detected')."
+    },
+    {
+      "segment_id": "seg_v5_153_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection location/date, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_154_644_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of properties ('three other properties') factually using standard language ('were identified')."
+    },
+    {
+      "segment_id": "seg_v5_155_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides advice, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_156_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses an opinion/reason, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_157_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a business type, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_158_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the transmission method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_159_644_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a proportion ('Most') factually using standard language ('have been')."
+    },
+    {
+      "segment_id": "seg_v5_160_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes consequences, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_161_405_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of cases ('A person', 'second known instance') factually using standard language ('tested positive', 'is')."
+    },
+    {
+      "segment_id": "seg_v5_162_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('human health risk... remains low'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_163_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses a question/goal, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_164_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a previous case location/date, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_165_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes typical transmission method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_166_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the transmission mechanism, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_167_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports types of animals infected, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_168_405_chunk0",
+      "answer": "yes",
+      "rationale": "Describes range of severity ('mild infections', 'severe pneumonia') factually using standard descriptors."
+    },
+    {
+      "segment_id": "seg_v5_169_405_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers and percentage ('some 890 human cases', 'fatality rate of roughly 50%') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_170_405_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of farms ('two dairy farms', 'one in Texas') factually using standard language ('tested positive')."
+    },
+    {
+      "segment_id": "seg_v5_171_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports location found, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_172_405_chunk0",
+      "answer": "yes",
+      "rationale": "Reports location found and states it's the first time ('first time') factually."
+    },
+    {
+      "segment_id": "seg_v5_173_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes historical impact, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_174_405_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of birds affected ('tens of millions') factually using standard language ('has led to the death of')."
+    },
+    {
+      "segment_id": "seg_v5_175_899_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of birds ('Thousands') factually using a standard verb ('have been culled')."
+    },
+    {
+      "segment_id": "seg_v5_176_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a common outcome, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_177_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment mixes factual metric reporting ('record highs') with descriptive/impact language ('worsening economic pain', 'red-hot inflation', 'more expensive')."
+    },
+    {
+      "segment_id": "seg_v5_178_1181_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of states ('46 states') factually using standard language ('across')."
+    },
+    {
+      "segment_id": "seg_v5_179_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the transmission method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_180_1181_chunk0",
+      "answer": "yes",
+      "rationale": "Reports percentages/metrics ('about 30 percent', '85 percent') and makes a comparison factually."
+    },
+    {
+      "segment_id": "seg_v5_181_1181_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a percentage/metric ('more than 70 percent') factually using standard language ('account for')."
+    },
+    {
+      "segment_id": "seg_v5_182_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment explicitly states low risk ('poses a low risk'), which is Reassuring language (Q5)."
+    },
+    {
+      "segment_id": "seg_v5_183_8_45_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a factual occurrence ('first confirmation') and date factually."
+    },
+    {
+      "segment_id": "seg_v5_184_9_45_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers of farms and birds lost ('11 poultry farms', 'more than 400,000 birds') factually using standard language ('affected', 'resulting in the loss of')."
+    },
+    {
+      "segment_id": "seg_v5_185_1_800_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of people ('Seven people') and outcome ('developed symptoms') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_186_3_800_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a number ('eight people') and describes a change ('has grown to include') factually."
+    },
+    {
+      "segment_id": "seg_v5_187_4_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses speculative language ('could indicate', 'may have acquired'), not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_188_6_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes typical transmission method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_189_7_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports identification of a patient, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_190_8_800_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numbers ('one household member', 'six health care workers', 'all') and outcome ('developed symptoms') factually using standard language."
+    },
+    {
+      "segment_id": "seg_v5_191_11_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses concern ('very concerned'), not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_192_13_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a metaphor ('inching closer and closer') and speculative/risk language ('real pandemic virus')."
+    },
+    {
+      "segment_id": "seg_v5_193_15_800_chunk0",
+      "answer": "yes",
+      "rationale": "Reports the number of cases ('13 other confirmed cases') factually using standard language ('have been')."
+    },
+    {
+      "segment_id": "seg_v5_194_16_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes acquisition method, not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_195_19_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a reaction ('worried experts'), not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_196_21_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number ('small number') but focuses on difficulty in estimation, not primarily factual metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_197_24_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a pattern/role ('sentinel cases', 'early sign'), not primarily prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_198_25_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses potential increase in alarm ('definitely increase my level of alarm')."
+    },
+    {
+      "segment_id": "seg_v5_199_26_800_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a description ('one-off') and an outcome ('no close contacts had become sick') factually."
+    },
+    {
+      "segment_id": "seg_v5_200_27_800_chunk0",
+      "answer": "yes",
+      "rationale": "Reports an outcome ('had developed gastrointestinal symptoms') factually using standard language."
+    }
+  ]
+}

@@ -63,8 +63,21 @@ def collect_traces(root_dir: Path, threshold: float = THRESHOLD) -> List[Dict[st
             if trace_file is None:
                 continue
             entries = read_trace_entries(trace_file)
+
+            # Extract statement text and article ID from first trace entry (if available)
+            stmt_text = ""
+            article_id = ""
+            for ent in entries:
+                if isinstance(ent, dict):
+                    stmt_text = ent.get("statement_text", stmt_text)
+                    article_id = ent.get("article_id", article_id)
+                    if stmt_text and article_id:
+                        break
+
             collected.append({
                 "statement_id": sid,
+                "article_id": article_id,
+                "statement_text": stmt_text,
                 "permutation": perm_tag,
                 "trace_path": str(trace_file.relative_to(root_dir)),
                 "trace_entries": entries,
@@ -73,11 +86,38 @@ def collect_traces(root_dir: Path, threshold: float = THRESHOLD) -> List[Dict[st
 
 
 def write_output(root_dir: Path, data: List[Dict[str, Any]]):
-    out_path = root_dir / "low_ratio_traces.jsonl"
-    with out_path.open("w", encoding="utf-8") as fh:
+    """Write two standalone CSV files:
+
+    1. low_ratio_traces_standalone.csv   – one row per <statement, permutation> pair with
+       a JSON-encoded string of the full trace entries.
+    2. low_ratio_segments_standalone.csv – de-duplicated list of StatementIDs with
+       their ArticleID and raw statement text.
+    """
+
+    # ----- 1. Detailed trace records ------------------------------------
+    traces_jsonl_path = root_dir / "low_ratio_traces_standalone.jsonl"
+    with traces_jsonl_path.open("w", encoding="utf-8") as fh:
         for obj in data:
             fh.write(json.dumps(obj, ensure_ascii=False) + "\n")
-    print(f"✅ Consolidated {len(data)} trace records → {out_path}")
+
+    # ----- 2. Unique segment list ---------------------------------------
+    unique_rows: Dict[str, Dict[str, str]] = {}
+    for obj in data:
+        sid = obj["statement_id"]
+        if sid not in unique_rows:
+            unique_rows[sid] = {
+                "ArticleID": obj.get("article_id", ""),
+                "StatementID": sid,
+                "StatementText": obj.get("statement_text", ""),
+            }
+
+    df_segments = pd.DataFrame(list(unique_rows.values()))
+    segments_csv_path = root_dir / "low_ratio_segments_standalone.csv"
+    df_segments.to_csv(segments_csv_path, index=False)
+
+    # --------------------------------------------------------------------
+    print(f"✅ Trace records → {traces_jsonl_path.relative_to(root_dir)}  ({len(data)} lines)")
+    print(f"✅ Segment list  → {segments_csv_path.relative_to(root_dir)}  ({len(df_segments)} rows)")
 
 
 def main():

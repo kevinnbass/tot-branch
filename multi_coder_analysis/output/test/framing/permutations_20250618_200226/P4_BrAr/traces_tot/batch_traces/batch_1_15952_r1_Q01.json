@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_15952_r1",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_18_363_chunk0",
+      "answer": "no",
+      "rationale": "'highly pathogenic' is a technical term. No intensifier or comparative modifies a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_17_363_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains 'mass mortality events' (intensifier 'mass' + negative outcome) and 'largest ecological disasters' (comparative 'largest' + negative term)."
+    },
+    {
+      "segment_id": "seg_v5_16_363_chunk0",
+      "answer": "no",
+      "rationale": "'susceptible' is a risk-adjective but is not modified by an intensifier or comparative."
+    },
+    {
+      "segment_id": "seg_v5_15_363_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains 'particularly vulnerable' (intensifier 'particularly' + risk-adjective 'vulnerable')."
+    }
+  ],
+  "timestamp": "2025-06-18T20:06:13.245358"
+}

@@ -172,6 +172,7 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
                 rules.append(_r)
 
     winning_rule: Optional[PatternInfo] = None
+    first_hit_rule: Optional[PatternInfo] = None  # record first rule that fires for logging in shadow mode
 
     # Evaluate every rule to capture full coverage stats. Only allow
     # short-circuiting when ALL of the following hold:
@@ -187,6 +188,10 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
             _RULE_STATS[rule.name]["hit"] += 1
 
         # --- Short-circuit only when permitted ---
+        # Record the first hit (for shadow-mode logging) no matter what
+        if fired and first_hit_rule is None:
+            first_hit_rule = rule
+
         if (
             fired
             and not _FORCE_SHADOW  # shadow mode disables short-circuit altogether
@@ -209,8 +214,29 @@ def match(ctx) -> Optional[Answer]:  # noqa: ANN001  (HopContext is dynamically 
             # First compatible rule becomes the candidate short-circuit
             winning_rule = rule
 
+    # ─────────────────────────────────────────────────────────────
+    # SHADOW-MODE LOGGING: Even though we do **not** short-circuit we still
+    # want to surface that regex matched *some* rule for this segment so the
+    # pipeline can count segment-level utilisation without double-counting.
+    # We emit the first rule that fired via _HIT_LOG_FN but return None so
+    # control continues to the LLM.
+    # ─────────────────────────────────────────────────────────────
+
     if winning_rule is None:
-        # Record totals for live rules that did not fire (already counted)
+        if _FORCE_SHADOW and first_hit_rule is not None and _HIT_LOG_FN is not None:
+            try:
+                # For shadow logging we skip span/captures to avoid extra regex
+                _HIT_LOG_FN({
+                    "statement_id": getattr(ctx, "statement_id", None),
+                    "hop": hop,
+                    "segment": text,
+                    "rule": first_hit_rule.name,
+                    "frame": first_hit_rule.yes_frame,
+                    "mode": first_hit_rule.mode,
+                    "span": None,
+                })
+            except Exception:
+                pass  # never crash caller
         return None
 
     # Compute match object again to get span/captures (guaranteed match)

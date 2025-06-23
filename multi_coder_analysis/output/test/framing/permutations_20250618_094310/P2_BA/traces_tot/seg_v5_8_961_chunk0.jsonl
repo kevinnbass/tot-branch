@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a factual statement, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17488", "batch_size": 217, "batch_pos": 192}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verb, potent metaphor, superlative + negative noun, or critical alert phrase used.", "method": "llm_batch", "batch_id": "batch_2_17824", "batch_size": 163, "batch_pos": 139}
+{"Q": 3, "answer": "no", "rationale": "'spread' is a moderate verb, but 'by migrating wild birds' is not a specific scale/impact.", "method": "llm_batch", "batch_id": "batch_3_13380", "batch_size": 73, "batch_pos": 54}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16000", "batch_size": 59, "batch_pos": 41}
+{"Q": 5, "answer": "no", "rationale": "The segment provides factual information but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_13372", "batch_size": 49, "batch_pos": 31}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14144", "batch_size": 240, "batch_pos": 224}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17272", "batch_size": 230, "batch_pos": 215}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a transmission mechanism, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7888", "batch_size": 41, "batch_pos": 30}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 232}
+{"Q": 9, "answer": "no", "rationale": "The segment describes spread, not prices or economic metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 232}
+{"Q": 10, "answer": "no", "rationale": "The segment describes how bird flu is spread and does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 245}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 197}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually.", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 197}

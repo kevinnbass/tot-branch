@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'severe disease' but 'severe' is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_5064", "batch_size": 260, "batch_pos": 244}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language describing actions/potential outcomes ('ingesting', 'scavenge for food', 'could lead to severe disease').", "method": "llm_batch", "batch_id": "batch_2_2312", "batch_size": 260, "batch_pos": 226}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses potential outcomes based on virus amount ingested.", "method": "llm_batch", "batch_id": "batch_3_18060", "batch_size": 260, "batch_pos": 184}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15012", "batch_size": 260, "batch_pos": 172}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a potential negative outcome (severe disease) without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17516", "batch_size": 260, "batch_pos": 170}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16404", "batch_size": 260, "batch_pos": 151}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_5192", "batch_size": 260, "batch_pos": 144}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a potential transmission route and outcome, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15012", "batch_size": 260, "batch_pos": 45}
+{"Q": 9, "answer": "no", "rationale": "The segment reports potential outcomes rather than numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14520", "batch_size": 260, "batch_pos": 48}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 216, "regex": {"rule": "ReliefSpeculation", "span": [169, 174], "captures": ["could"]}}

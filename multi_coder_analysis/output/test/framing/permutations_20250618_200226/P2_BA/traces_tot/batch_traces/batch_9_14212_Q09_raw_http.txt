@@ -1,0 +1,889 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the location of infections, not prices, economic data, or numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions potential fines but does not report specific prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('second known instance') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric (a previous case) using standard language ('was reported')."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how illnesses occur, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports types of animals infected, not numerical metrics or economic data."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the severity of illness, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('890 human cases', 'fatality rate of roughly 50%') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('two dairy farms', 'one in Texas') and positive tests using standard language."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the location of virus detection, not prices, economic data, or numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a specific event ('first time... detected'), not numerical metrics or economic data in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment makes a general statement about historical impact, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('tens of millions of chickens') using standard language ('has led to the death of')."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('Thousands of chickens') using standard language ('have been culled')."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment makes a general statement about outcome, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('across 46 states') using standard language ('infected flocks... across')."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions/struggles, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('30 percent', '85 percent') using standard language ('were traced', 'compared to')."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('more than 70 percent') using standard language ('account for')."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('low risk'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a specific event ('first confirmation since 2020'), not numerical metrics or economic data in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('11 poultry farms', 'more than 400,000 birds') using standard language ('affected', 'resulting in the loss of')."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('Seven people') using standard language ('developed symptoms', 'reported')."
+  },
+  {
+    "segment_id": "seg_v5_3_800_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('eight people') using standard language ('has grown to include', 'reported')."
+  },
+  {
+    "segment_id": "seg_v5_5_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('extremely rare'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_6_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the cause of cases, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_800_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('one household member', 'six health care workers') using standard language ('infected', 'developed symptoms')."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses an opinion ('very concerned'), not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_800_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('13 other confirmed cases') using standard language ('have been')."
+  },
+  {
+    "segment_id": "seg_v5_16_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the source of cases, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_800_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('small number of confirmed cases') using standard language ('makes it difficult to estimate')."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment makes a general statement about past outbreaks, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses an opinion/alarm ('increase my level of alarm'), not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a specific event/finding, not numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_35_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports criticism, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_37_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an opinion/criticism of tone, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_38_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an opinion/criticism of messaging, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_39_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an opinion/criticism, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_46_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential future risk, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_47_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a challenge in identification, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_48_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes concerns and potential impacts, not primarily reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses vivid language ('unprecedented number', 'massive mortality'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_4_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('higher risk'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_6_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses vivid/amplifying language ('largest geographical reach on record', 'severe epidemic'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_8_1138_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('187 detections', '3,573 HPAI events') using standard language ('were notified', 'were recorded')."
+  },
+  {
+    "segment_id": "seg_v5_8_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes concerns and potential future risks, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('low risk'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_001_408_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('A person') using standard language ('has tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports types of animals infected, not numerical metrics or economic data."
+  },
+  {
+    "segment_id": "seg_v5_006_408_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('five U.S. states') using standard language ('have been found')."
+  },
+  {
+    "segment_id": "seg_v5_007_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('risk to the public remains low'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_008_408_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('second known') using standard language ('is the second known')."
+  },
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('second known', 'first') using standard language ('is the second known', 'was in 2022')."
+  },
+  {
+    "segment_id": "seg_v5_010_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and outcome for a patient, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_011_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past cases and their outcome, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_012_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the topic of a conversation, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_018_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes circumstances of a past case, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_023_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_024_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('low risk'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_029_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses an opinion/concern, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_030_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_032_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('not an issue'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_034_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports past cases and their outcome, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_035_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports past cases and asks a question, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_036_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a general statement, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_047_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_051_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the source of exposure, not numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_053_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_054_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and speculative answer, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_055_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a question and conclusion about exposure source, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_067_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_072_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_074_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_077_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question about potential impact, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a past threat and its current status, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports timing and duration, not numerical metrics or economic data in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_12_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a factor affecting spread, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_1166_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('hundreds of dead birds') using standard language ('record')."
+  },
+  {
+    "segment_id": "seg_v5_14_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports concern, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential future impact, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_1166_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports economic impact ('passing on higher poultry costs') using standard language ('has been passing on')."
+  },
+  {
+    "segment_id": "seg_v5_1_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a biographical/political description, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes topics of discussion, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses willingness to talk, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses an opinion, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal reflection, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports what someone was told, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an institute and its former head, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_12_805_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('cutting the NIAID budget by 23.9%') using standard language ('was cutting... by')."
+  },
+  {
+    "segment_id": "seg_v5_15_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('urgency, if not an emergency'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_21_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal statement, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a general statement, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_29_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_30_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses concern, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_33_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_37_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes events/interactions, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_38_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal reflection, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_41_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses a state ('traumatized'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_42_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses a state ('traumatized'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_43_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses a state, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_45_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_49_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses worry and concern ('worry about', 'very concerned'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_53_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment introduces a topic, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_55_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor ('HOV lane'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_57_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor ('genie’s out of the bottle'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_85_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports seeing a quote, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_101_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses an opinion/wish, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_879_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('138 million head') using standard language ('amounting to')."
+  },
+  {
+    "segment_id": "seg_v5_2_833_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('second case') using standard language ('was the country's second case')."
+  },
+  {
+    "segment_id": "seg_v5_4_833_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports appearance of cases, not specific numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_1_1038_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a consequence and reason, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports developments and concerns ('raised concerns'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports locations of outbreaks, not specific numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_3_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports types of developments and a specific event, not numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_9_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes viral evolution ('spawning'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports spread among species and locations, not specific numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_11_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection in locations, not specific numerical metrics in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_14_1506_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('five states') using standard language ('had been discovered')."
+  },
+  {
+    "segment_id": "seg_v5_15_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a historical event, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_1506_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('nearly 900 people', 'more than 460 people') using standard language ('have been diagnosed', 'have died')."
+  },
+  {
+    "segment_id": "seg_v5_21_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_26_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission pattern, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_30_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses concern about market impact, not reporting specific metrics."
+  },
+  {
+    "segment_id": "seg_v5_31_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes potential future economic impacts, not reporting current metrics."
+  },
+  {
+    "segment_id": "seg_v5_32_1506_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports economic condition ('tightening of supply') and a metric ('3 billion eggs') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_3_1508_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports economic data ('imports a small amount') using standard language ('imports')."
+  },
+  {
+    "segment_id": "seg_v5_9_1508_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('A person') and outcome using standard language ('tested positive', 'suffered')."
+  },
+  {
+    "segment_id": "seg_v5_005_297_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('more than 500 dead seabirds', 'two sites') using standard language ('saw')."
+  },
+  {
+    "segment_id": "seg_v5_017_297_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('246 dead birds', '107') using standard language ('found')."
+  },
+  {
+    "segment_id": "seg_v5_10_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes a risk adjective ('high case-fatality rate'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_13_269_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('145 premises', '656 wild birds', 'rise of 15', '209 detections') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_14_269_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('14 out of 134', 'four', 'one') using standard language ('were found')."
+  },
+  {
+    "segment_id": "seg_v5_15_269_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('four cases', 'four', 'one') using standard language ('there were')."
+  },
+  {
+    "segment_id": "seg_v5_16_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion/concern ('increase the possibility'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_18_269_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a historical numerical metric ('estimated 50 million people') using standard language ('killed')."
+  },
+  {
+    "segment_id": "seg_v5_19_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes viral evolution/adaptation, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_188_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('159') using standard language ('have been reported')."
+  },
+  {
+    "segment_id": "seg_v5_3_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outcome ('found dead'), not a numerical metric in the sense of Q9."
+  },
+  {
+    "segment_id": "seg_v5_4_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a designation ('unusual'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports location, not numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_14_188_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a trend ('continued to increase') using standard language ('increase')."
+  },
+  {
+    "segment_id": "seg_v5_15_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes subjective framing ('really busy season'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_17_188_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports numerical metrics ('dozens of species', 'eight species') using standard language ('has been detected')."
+  },
+  {
+    "segment_id": "seg_v5_18_188_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('11 provinces') using standard language ('has been found')."
+  },
+  {
+    "segment_id": "seg_v5_2_1183_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the location of a case, not numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('stark warning'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_2_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a statement about mutation, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes explicit framing ('real worry'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_16_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses promotional language ('gold standard', 'keeping you safe and healthy'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_18_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses promotional language ('Protect yourself'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_20_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses promotional language ('peace of mind'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_22_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses promotional language ('amazing peace of mind'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_001_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses framing language ('invisible virus', 'interfered'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_002_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses strong language to describe impact ('forced significant changes or outright cancellations'), violating the Q9 criteria."
+  },
+  {
+    "segment_id": "seg_v5_004_760_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('More than a dozen') and outcome ('relatively mild symptoms') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_008_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes impact ('disrupted'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_009_760_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a numerical metric ('second year') using standard language ('haven't been able to show')."
+  },
+  {
+    "segment_id": "seg_v5_010_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal statement, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_020_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses emotion ('very heartbreaking'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_022_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses uncertainty, not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_011_1282_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports economic impact ('impacting food prices') using standard language ('is impacting')."
+  },
+  {
+    "segment_id": "seg_v5_012_1282_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports economic impact ('impacts food prices') using standard language ('impacts')."
+  },
+  {
+    "segment_id": "seg_v5_014_1282_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports prices ('350 Japanese yen', '$2.67') and percentage change ('going up 70%') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_017_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports economic impact ('affecting... egg prices') but not specific metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection and location, not numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outbreaks and spread, not numerical metrics or economic data."
+  },
+  {
+    "segment_id": "seg_v5_7_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports concern ('raising concern'), not reporting metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not reporting prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports appearance of cases and locations, not numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_358_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a price ('$2.07 per dozen') using standard language ('remained at')."
+  },
+  {
+    "segment_id": "seg_v5_13_358_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports a price ('$1.62') and trend ('has climbed pretty steadily') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_15_358_chunk0",
+    "answer": "yes",
+    "rationale": "The segment reports prices ('$1.15', '$1.79', '$1.35') and comparison ('down from') using standard language."
+  }
+]
+```

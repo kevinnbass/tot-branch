@@ -1,0 +1,38 @@
+{
+  "batch_id": "batch_7_1292_r1",
+  "hop_idx": 7,
+  "segment_count": 6,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1933_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports deaths and positive tests, but contains no negation."
+    },
+    {
+      "segment_id": "seg_v5_2_1933_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions supportive care and worry about potential spread, but contains no negation."
+    },
+    {
+      "segment_id": "seg_v5_3_1933_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the bare negation 'hasn't been detected' without an explicit calming cue."
+    },
+    {
+      "segment_id": "seg_v5_4_1933_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes biological facts and impact, but contains no negation."
+    },
+    {
+      "segment_id": "seg_v5_5_1933_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the impact of loss, but contains no negation."
+    },
+    {
+      "segment_id": "seg_v5_6_1933_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a number before deaths, but contains no negation."
+    }
+  ],
+  "timestamp": "2025-06-20T14:07:23.265843"
+}

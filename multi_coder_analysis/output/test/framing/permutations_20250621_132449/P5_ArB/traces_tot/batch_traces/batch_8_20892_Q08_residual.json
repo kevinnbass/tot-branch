@@ -1,0 +1,437 @@
+{
+  "batch_id": "batch_8_20892",
+  "hop_idx": 8,
+  "unknown_count": 86,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_7_927_chunk0",
+      "answer": "no",
+      "rationale": "Contains an explicit low-risk statement ('risk... is low'), triggering Q5."
+    },
+    {
+      "segment_id": "seg_v5_8_927_chunk0",
+      "answer": "no",
+      "rationale": "Describes the patient's condition and future possibility, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_12_1828_chunk0",
+      "answer": "yes",
+      "rationale": "Describes an action being taken: 'officials are taking more samples'."
+    },
+    {
+      "segment_id": "seg_v5_13_1828_chunk0",
+      "answer": "yes",
+      "rationale": "Describes support for an investigation: 'CDC is also supporting the investigation'."
+    },
+    {
+      "segment_id": "seg_v5_14_1828_chunk0",
+      "answer": "no",
+      "rationale": "Contains an explicit low-risk statement ('risk... remains low'), triggering Q5."
+    },
+    {
+      "segment_id": "seg_v5_17_1828_chunk0",
+      "answer": "no",
+      "rationale": "Contains an explicit low-risk statement ('risk to most people remains low'), triggering Q5."
+    },
+    {
+      "segment_id": "seg_v5_36_1944_chunk0",
+      "answer": "no",
+      "rationale": "Reports a factual condition and feeling, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_37_1944_chunk0",
+      "answer": "yes",
+      "rationale": "Describes response measures: 'officials have been... to deploy a virus-killing spray... and advised all the villagers to report'."
+    },
+    {
+      "segment_id": "seg_v5_38_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'Pet owners have been advised not to feed'."
+    },
+    {
+      "segment_id": "seg_v5_39_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'shared advice... on how pet owners can take preventive measures'."
+    },
+    {
+      "segment_id": "seg_v5_44_1552_chunk0",
+      "answer": "no",
+      "rationale": "Describes a common practice, not a specific capability or preparedness measure for the outbreak."
+    },
+    {
+      "segment_id": "seg_v5_45_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'Davis urged pet owners to avoid feeding'."
+    },
+    {
+      "segment_id": "seg_v5_46_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'take great caution with pets and raw milk'."
+    },
+    {
+      "segment_id": "seg_v5_47_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'not recommended that anyone... consume raw milk products'."
+    },
+    {
+      "segment_id": "seg_v5_48_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes an action taken: 'FDA conducted additional testing'."
+    },
+    {
+      "segment_id": "seg_v5_50_1552_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'Ferret owners also should take caution to keep their pets safe'."
+    },
+    {
+      "segment_id": "seg_v5_51_1552_chunk0",
+      "answer": "no",
+      "rationale": "Describes susceptibility, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_56_1609_chunk0",
+      "answer": "yes",
+      "rationale": "Describes response measures: 'staff were on the ground to help contain and eradicate the virus'."
+    },
+    {
+      "segment_id": "seg_v5_61_1984_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing collaboration and support for control efforts: 'CDC continues to collaborate... to support state-run efforts to control the spread'."
+    },
+    {
+      "segment_id": "seg_v5_64_1984_chunk0",
+      "answer": "no",
+      "rationale": "Contains an explicit low-risk statement ('risks remain low'), triggering Q5."
+    },
+    {
+      "segment_id": "seg_v5_70_1984_chunk0",
+      "answer": "yes",
+      "rationale": "Describes recommendations: 'agency recommended that individuals should avoid contact... and not preparing or eating'."
+    },
+    {
+      "segment_id": "seg_v5_71_1984_chunk0",
+      "answer": "yes",
+      "rationale": "Describes recommendations: 'CDC also recommended... to wear personal protective equipment (PPE)'."
+    },
+    {
+      "segment_id": "seg_v5_72_1984_chunk0",
+      "answer": "yes",
+      "rationale": "Describes recommendations: 'CDC recommends that if you get sick... contact your local health department and a health care provider'."
+    },
+    {
+      "segment_id": "seg_v5_74_919_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure taken by authorities: 'Botswana has banned the importation'."
+    },
+    {
+      "segment_id": "seg_v5_76_919_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure taken by authorities: 'the import... is banned with immediate effect'."
+    },
+    {
+      "segment_id": "seg_v5_78_919_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/warning: 'authorities warned the public to be vigilant and to report any deaths'."
+    },
+    {
+      "segment_id": "seg_v5_81_1053_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure taken and its purpose: 'chickens and turkeys will be killed in order to prevent the virus from spreading'."
+    },
+    {
+      "segment_id": "seg_v5_87_1053_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a factor related to preparedness/safeguards: 'Much depends on... improved biosecurity on farms'."
+    },
+    {
+      "segment_id": "seg_v5_88_1053_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/recommendation: 'best way to handle chicken and eggs is to cook them... as a general food safety precaution'."
+    },
+    {
+      "segment_id": "seg_v5_91_1080_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing work/measures: 'officials were working jointly on additional surveillance and testing'."
+    },
+    {
+      "segment_id": "seg_v5_92_1080_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing work/development: 'USDA is working with other countries on options for vaccines'."
+    },
+    {
+      "segment_id": "seg_v5_94_920_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure to be taken: 'authorities will cull 40,000 laying hens'."
+    },
+    {
+      "segment_id": "seg_v5_97_920_chunk0",
+      "answer": "yes",
+      "rationale": "Describes measures taken and their purpose: 'authorities try to contain the spread of the disease'."
+    },
+    {
+      "segment_id": "seg_v5_99_94_chunk0",
+      "answer": "yes",
+      "rationale": "Describes measures taken and their purpose: 'flock... was killed and was being composted to guard against spread'."
+    },
+    {
+      "segment_id": "seg_v5_100_94_chunk0",
+      "answer": "yes",
+      "rationale": "Describes future measures: 'department will test other flocks'."
+    },
+    {
+      "segment_id": "seg_v5_102_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes capability/future possibility: 'could make hundreds of millions of bird flu shots... within months'."
+    },
+    {
+      "segment_id": "seg_v5_103_1272_chunk0",
+      "answer": "no",
+      "rationale": "Contains an explicit low-risk statement ('risk... is still low'), triggering Q5."
+    },
+    {
+      "segment_id": "seg_v5_104_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing development/testing: 'are already developing or about to test sample human vaccines'."
+    },
+    {
+      "segment_id": "seg_v5_105_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes preparedness: 'stand ready to begin production if needed, with existing H5N1 vaccine strains in stock'."
+    },
+    {
+      "segment_id": "seg_v5_106_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes development effort: 'push among companies to develop a bird flu vaccine for poultry'."
+    },
+    {
+      "segment_id": "seg_v5_107_1272_chunk0",
+      "answer": "no",
+      "rationale": "Contains explicit framing ('Less reassuring'), not a capability statement without framing."
+    },
+    {
+      "segment_id": "seg_v5_108_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes plans/policy: 'pandemic plans say flu shots should go first to the most vulnerable'."
+    },
+    {
+      "segment_id": "seg_v5_109_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a framework/plan: 'international framework... allocates 10% of global supply'."
+    },
+    {
+      "segment_id": "seg_v5_110_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes an action/goal: 'WHO is seeking guarantees of 20% global supply'."
+    },
+    {
+      "segment_id": "seg_v5_111_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes agreements/plans: 'agency... has signed legally binding agreements... for 10% of their pandemic flu vaccine'."
+    },
+    {
+      "segment_id": "seg_v5_112_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes details of agreements/plans: 'agreements include six of the largest seasonal flu manufacturers'."
+    },
+    {
+      "segment_id": "seg_v5_113_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes development of mechanisms: 'mechanisms were being developed so that countries can work together... to respond'."
+    },
+    {
+      "segment_id": "seg_v5_114_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes capability: 'have the capacity to make hundreds of millions of doses'."
+    },
+    {
+      "segment_id": "seg_v5_115_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a process/plan: 'Data on how well the vaccines actually protect... would be gathered in real-time'."
+    },
+    {
+      "segment_id": "seg_v5_116_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes existing resources: 'there are close to 20 licensed vaccines against the broader H5 strain'."
+    },
+    {
+      "segment_id": "seg_v5_117_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes existing resources/capability: 'Existing antiviral treatments... will also help mitigate the impact'."
+    },
+    {
+      "segment_id": "seg_v5_118_1272_chunk0",
+      "answer": "no",
+      "rationale": "Describes a potential timeline/limitation, not a capability statement without qualification."
+    },
+    {
+      "segment_id": "seg_v5_119_1272_chunk0",
+      "answer": "no",
+      "rationale": "Describes a method/process, not a capability statement without qualification."
+    },
+    {
+      "segment_id": "seg_v5_120_1272_chunk0",
+      "answer": "no",
+      "rationale": "Describes advocacy, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_121_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes past research/development: 'Moderna's mRNA vaccine research actually began with pandemic flu'."
+    },
+    {
+      "segment_id": "seg_v5_122_1272_chunk0",
+      "answer": "yes",
+      "rationale": "Describes plans and capability: 'company plans to launch a small human trial... could respond very quickly'."
+    },
+    {
+      "segment_id": "seg_v5_123_1272_chunk0",
+      "answer": "no",
+      "rationale": "Describes future action and past outcome, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_124_1272_chunk0",
+      "answer": "no",
+      "rationale": "Describes awareness and lack of contracts, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_125_1272_chunk0",
+      "answer": "no",
+      "rationale": "Describes a current limitation/stance, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_127_1933_chunk0",
+      "answer": "no",
+      "rationale": "Describes care being given but immediately follows with 'worried', preventing it from being a simple capability statement without framing."
+    },
+    {
+      "segment_id": "seg_v5_133_1933_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing studies/research: 'studies are still underway to understand the cause'."
+    },
+    {
+      "segment_id": "seg_v5_136_586_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a system/process: 'virus was detected through the state's disease surveillance system'."
+    },
+    {
+      "segment_id": "seg_v5_138_586_chunk0",
+      "answer": "no",
+      "rationale": "Reports a factual finding and history, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_139_586_chunk0",
+      "answer": "no",
+      "rationale": "Reports a factual characteristic, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_140_586_chunk0",
+      "answer": "no",
+      "rationale": "Reports a factual characteristic, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_141_586_chunk0",
+      "answer": "no",
+      "rationale": "Explicitly negates reassurance ('never say it's a relief'), not a capability statement without framing."
+    },
+    {
+      "segment_id": "seg_v5_144_586_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/urging: 'Cooke urged poultry farmers... to report any unexplained bird deaths'."
+    },
+    {
+      "segment_id": "seg_v5_145_586_chunk0",
+      "answer": "yes",
+      "rationale": "Describes advice/urging: 'Bird farmers and owners have been urged to maintain strong biosecurity practices and be on the lookout'."
+    },
+    {
+      "segment_id": "seg_v5_146_586_chunk0",
+      "answer": "no",
+      "rationale": "Reports historical outbreaks and outcomes, not a current capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_148_586_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure to be taken and its purpose: 'to control this outbreak... there would be a 'depopulation''."
+    },
+    {
+      "segment_id": "seg_v5_149_586_chunk0",
+      "answer": "yes",
+      "rationale": "Describes measures taken and their purpose: 'property has been placed under quarantine and authorities have established an... zone... in an attempt to stop the spread'."
+    },
+    {
+      "segment_id": "seg_v5_152_797_chunk0",
+      "answer": "no",
+      "rationale": "Describes a past event and its consequence, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_153_797_chunk0",
+      "answer": "no",
+      "rationale": "Describes past events and their consequence, not a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_159_922_chunk0",
+      "answer": "no",
+      "rationale": "Describes a persistent threat, not a capability or preparedness measure without framing."
+    },
+    {
+      "segment_id": "seg_v5_161_922_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a necessary future action/research: 'Analysing the genetic data of the virus will be necessary'."
+    },
+    {
+      "segment_id": "seg_v5_163_63_chunk0",
+      "answer": "yes",
+      "rationale": "Describes actions taken: 'Samples from the flock were tested... and confirmed'."
+    },
+    {
+      "segment_id": "seg_v5_171_1257_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure taken: 'All remaining birds were culled'."
+    },
+    {
+      "segment_id": "seg_v5_172_1257_chunk0",
+      "answer": "no",
+      "rationale": "Contains explicit framing ('worrying'), not a capability statement without framing."
+    },
+    {
+      "segment_id": "seg_v5_174_1257_chunk0",
+      "answer": "yes",
+      "rationale": "Describes a measure taken by authorities: 'Argentina this week suspended its poultry exports'."
+    },
+    {
+      "segment_id": "seg_v5_176_127_chunk0",
+      "answer": "yes",
+      "rationale": "Describes an action being taken: 'other eagle carcasses are being checked'."
+    },
+    {
+      "segment_id": "seg_v5_179_127_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing surveillance: 'wild bird surveillance continues'."
+    },
+    {
+      "segment_id": "seg_v5_180_127_chunk0",
+      "answer": "no",
+      "rationale": "Contains an explicit low-risk statement ('threat... remains low'), triggering Q5."
+    },
+    {
+      "segment_id": "seg_v5_187_71_chunk0",
+      "answer": "yes",
+      "rationale": "Describes an action taken to allow resources for response measures: 'Gov. Kim Reynolds signed a disaster proclamation... to allow state resources to help with disposal... and disinfection'."
+    },
+    {
+      "segment_id": "seg_v5_189_71_chunk0",
+      "answer": "yes",
+      "rationale": "Describes what the declaration provides: 'provides resources for tracking, monitoring and the rapid detection'."
+    },
+    {
+      "segment_id": "seg_v5_190_71_chunk0",
+      "answer": "yes",
+      "rationale": "Describes measures taken: 'turkeys have been killed and disposed of'."
+    },
+    {
+      "segment_id": "seg_v5_195_71_chunk0",
+      "answer": "yes",
+      "rationale": "Describes ongoing work/measures: 'officials are working with producers to trace back, control and eradicate this disease'."
+    }
+  ]
+}

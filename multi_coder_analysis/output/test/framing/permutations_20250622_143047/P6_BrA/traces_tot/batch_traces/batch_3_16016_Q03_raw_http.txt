@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_8_1683_chunk0",
+    "answer": "yes",
+    "rationale": "'spread across' is a moderate verb paired with scale 'most of the U.S. states' and 'over 80 dairy farms'."
+  },
+  {
+    "segment_id": "seg_v5_9_1683_chunk0",
+    "answer": "no",
+    "rationale": "Contains scale ('three people') but no moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_10_1683_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information."
+  },
+  {
+    "segment_id": "seg_v5_12_1683_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('risk... low'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_13_1683_chunk0",
+    "answer": "no",
+    "rationale": "Contains scale ('111 million doses') but no moderate verb from the list describing impact."
+  },
+  {
+    "segment_id": "seg_v5_1_690_chunk0",
+    "answer": "no",
+    "rationale": "'infected' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('infected', 'had direct contact'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_3_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('developed', 'received', 'has recovered'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_690_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_5_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('developed', 'had'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_6_690_chunk0",
+    "answer": "no",
+    "rationale": "'detected' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_7_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('infected') and explicit calming ('risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_8_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('shown'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_9_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains risk assessment ('at higher risk'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_10_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('infected', 'being monitored', 'developed'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_11_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('were inconclusive', 'tested positive'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('are pending'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_13_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains scale ('more than 135 dairy herds', 'dozen states') but no moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_1_1041_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_1041_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verbs ('killed', 'slaughter') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_1_1779_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_1779_chunk0",
+    "answer": "no",
+    "rationale": "'spreads' is a moderate verb but is not paired with a specific scale/impact metric."
+  },
+  {
+    "segment_id": "seg_v5_3_1779_chunk0",
+    "answer": "no",
+    "rationale": "'jump into' is not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_1779_chunk0",
+    "answer": "no",
+    "rationale": "'emerged' and 'confirmed' are not moderate verbs from the list, despite scale ('multi-state outbreak', 'four human cases')."
+  },
+  {
+    "segment_id": "seg_v5_5_1779_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_6_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('rare'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_7_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains risk assessment ('at most risk') and explicit calming ('risk... still negligible')."
+  },
+  {
+    "segment_id": "seg_v5_8_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('were working', 'had direct contact'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_9_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('symptoms... have been mild')."
+  },
+  {
+    "segment_id": "seg_v5_10_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('still does not pose a significant risk')."
+  },
+  {
+    "segment_id": "seg_v5_11_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('still does not pose a significant risk') and potential risk, not moderate verb + scale for realised impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1779_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential future impact ('could also evolve', 'could trigger'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('are investigating', 'has changed', 'show signs'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_14_1779_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('recommends'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_15_1779_chunk0",
+    "answer": "no",
+    "rationale": "This is a question, not a statement with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1174_chunk0",
+    "answer": "no",
+    "rationale": "'swept through' is a moderate verb but is not paired with a specific scale/impact metric."
+  },
+  {
+    "segment_id": "seg_v5_2_1174_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('killed') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_3_1174_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('carried', 'transmit'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_1174_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('slaughtered') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_1_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('slaughtered'), triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_2_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain verb. 'spreading quickly' describes a condition, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_3_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('culling') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_4_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('attracting', 'can be transmitted'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_5_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain verb, despite scale ('21 human infections', 'more than in the whole of 2020')."
+  },
+  {
+    "segment_id": "seg_v5_6_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain verb, despite scale ('around 770,000 poultry')."
+  },
+  {
+    "segment_id": "seg_v5_7_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('slaughtered'), triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_8_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain verb."
+  },
+  {
+    "segment_id": "seg_v5_9_30_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_10_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain verb, despite scale ('7,000 birds')."
+  },
+  {
+    "segment_id": "seg_v5_11_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('circulates', 'can be spread'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('put', 'ordering', 'identified'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_13_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('followed'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_14_30_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('culled'), triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_15_30_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential impact ('can affect humans'), not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('comes'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('detected', 'leading'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_3_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('identified'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('comes', 'advising'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_5_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is', 'were in place', 'being detected'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_6_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('do not need to be worried')."
+  },
+  {
+    "segment_id": "seg_v5_7_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verbs ('disposed of', 'cleaned', 'cleared'), triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_8_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('wasn't surprised', 'attributing'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_10_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains advice ('remind'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_11_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains advice ('advised'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_12_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('noted', 'remain', 'have been extended'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_13_1680_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_14_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('said', 'is implementing', 'has been following'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_16_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('discovered'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_19_1680_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('can mutate quickly', 'can quickly develop'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_20_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('died'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_21_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('had been', 'had'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_22_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is unknown', 'has been reported'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_23_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('applied'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_24_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('can be imported', 'are accompanied', 'treated'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('announced', 'was found'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_3_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('killed') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_4_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verbs ('killed', 'slaughtered') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_5_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('has been dealing'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_6_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('slaughtered') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_7_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is', 'has been found'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_9_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verbs ('slaughtered', 'killed') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_10_355_chunk0",
+    "answer": "yes",
+    "rationale": "'lost' is a moderate verb paired with scale 'more than 5.5 million birds'."
+  },
+  {
+    "segment_id": "seg_v5_11_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verbs ('slaughtered', 'killed') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_12_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('reported', 'began', 'can be found', 'is spread'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_13_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('take', 'requiring', 'limiting', 'sealing'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_14_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('isn't a threat') and containment verbs ('slaughtered', 'kill')."
+  },
+  {
+    "segment_id": "seg_v5_15_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('rare'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1851_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains scale ('15') but no moderate verb from the list describing impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1851_chunk0",
+    "answer": "no",
+    "rationale": "'tested positive' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_1851_chunk0",
+    "answer": "no",
+    "rationale": "'jump to' is not a moderate verb from the list. 'concerned' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is', 'suggesting'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_6_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('suffered'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_7_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is being treated', 'staying home', 'added'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_8_1851_chunk0",
+    "answer": "no",
+    "rationale": "'suffering an outbreak' is not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_9_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('experienced'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_10_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('said', 'reported', 'was hospitalized'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_11_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('began testing positive'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('continue to be safe to consume')."
+  },
+  {
+    "segment_id": "seg_v5_13_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('risk... remains low') and risk assessment ('at higher risk')."
+  },
+  {
+    "segment_id": "seg_v5_14_1851_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_15_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('developed', 'was not confirmed'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_16_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('watching', 'has begun to spread'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_17_1851_chunk0",
+    "answer": "no",
+    "rationale": "Describes a plan ('would begin testing'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_18_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('remain safe to consume')."
+  },
+  {
+    "segment_id": "seg_v5_19_1851_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('came back', 'is underway'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_1_582_chunk0",
+    "answer": "no",
+    "rationale": "'reported' and 'sickening' are not moderate verbs from the list, despite scale ('at least nine states')."
+  },
+  {
+    "segment_id": "seg_v5_2_582_chunk0",
+    "answer": "no",
+    "rationale": "'scaling up' is not a moderate verb from the list, despite scale ('190 sites', '36 states')."
+  },
+  {
+    "segment_id": "seg_v5_3_582_chunk0",
+    "answer": "no",
+    "rationale": "Describes a plan ('will begin sharing data'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_4_582_chunk0",
+    "answer": "no",
+    "rationale": "Describes a condition ('in the dark'), not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_5_582_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('could give... way to spot potential outbreaks'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_7_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('heard', 'would be useful', 'can help understand', 'may be happening'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_8_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('developed', 'detects', 'has been found'), not moderate verbs from the list, despite scale ('52 dairy herds', 'nine states')."
+  },
+  {
+    "segment_id": "seg_v5_9_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('sat unused', 'began lighting up', 'were confirmed'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_10_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('went back', 'applied', 'found'), not moderate verbs from the list, despite scale ('large amounts')."
+  },
+  {
+    "segment_id": "seg_v5_11_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('hypothesized'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is', 'determine', 'can end up'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_13_582_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline/reference, not a statement with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_14_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('were released', 'were published'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_15_582_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_16_582_chunk0",
+    "answer": "no",
+    "rationale": "'began finding' is not a moderate verb from the list, despite scale ('19 plants', 'nine Texas cities')."
+  },
+  {
+    "segment_id": "seg_v5_17_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('got', 'gaining'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_18_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('operates', 'monitors'), not moderate verbs from the list, despite scale ('600 sites')."
+  },
+  {
+    "segment_id": "seg_v5_19_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('began releasing'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_20_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('is not doing', 'shows'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_21_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('tend to circulate', 'could be'), not moderate verbs from the list, despite scale ('very low levels', 'high levels')."
+  },
+  {
+    "segment_id": "seg_v5_22_582_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline/reference, not a statement with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_23_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('serves up', 'providing', 'determine', 'being seen'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_24_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains scale ('80th percentile or higher') but no moderate verb from the list describing impact."
+  },
+  {
+    "segment_id": "seg_v5_25_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('is including'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_26_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('told', 'is in communication', 'understand'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_28_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('are continuing to review', 'may improve'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_29_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('agreed', 'has to learn'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_30_582_chunk0",
+    "answer": "no",
+    "rationale": "'hungry for' is metaphorical, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_31_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('are', 'being driven'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_32_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('Being able to disambiguate', 'understand', 'coming from', 'been getting'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_33_582_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline/reference, not a statement with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_34_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('isn't', 'are using', 'try to track'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_35_582_chunk0",
+    "answer": "no",
+    "rationale": "'Frustrated' is an emotion. Contains plain verbs ('being shared', 'begun sequencing', 'monitor', 'look for'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_36_582_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_37_582_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_38_582_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('were to become endemic', 'would increase the potential risks'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1824_chunk0",
+    "answer": "no",
+    "rationale": "'tested positive' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_1824_chunk0",
+    "answer": "no",
+    "rationale": "'detected' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_3_1824_chunk0",
+    "answer": "no",
+    "rationale": "'tested positive' and 'reported' are plain verbs, despite scale ('14th human bird flu case')."
+  },
+  {
+    "segment_id": "seg_v5_4_1824_chunk0",
+    "answer": "no",
+    "rationale": "'was hospitalized' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_5_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('said', 'was sent', 'was confirmed'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_6_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('did not provide', 'contracted', 'experienced'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_7_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_8_1824_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_9_1824_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_10_1824_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain outcome verb."
+  },
+  {
+    "segment_id": "seg_v5_11_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('said', 'has been', 'including', 'increase', 'detection'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_1824_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('could lead', 'creates'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1824_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_15_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('acknowledged', 'are rare', 'said', 'aims', 'do', 'reduce'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_1_1948_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('euthanized') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_2_1948_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('came', 'were raised', 'reported'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_3_1948_chunk0",
+    "answer": "no",
+    "rationale": "'were confirmed' is a plain outcome verb, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_7_1948_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('come', 'announced', 'has helped protect'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_8_1948_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verb ('has yet to receive'), not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_10_1948_chunk0",
+    "answer": "no",
+    "rationale": "Contains advice ('is urging', 'call'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_2_1669_chunk0",
+    "answer": "no",
+    "rationale": "'crossed a new frontier' is metaphorical, not a moderate verb from the list."
+  },
+  {
+    "segment_id": "seg_v5_3_1669_chunk0",
+    "answer": "yes",
+    "rationale": "'spreading' is a moderate verb paired with scale 'unprecedented outbreak' and 'killed thousands'."
+  },
+  {
+    "segment_id": "seg_v5_4_1669_chunk0",
+    "answer": "no",
+    "rationale": "'raises concerns' is a psychological verb. Describes potential implications."
+  },
+  {
+    "segment_id": "seg_v5_5_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('began', 'observing'), not moderate verbs from the list, despite scale ('significant rise')."
+  },
+  {
+    "segment_id": "seg_v5_6_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('identified', 'marking'), not moderate verbs from the list, despite scale ('approximately 17,000 seal pups dead')."
+  },
+  {
+    "segment_id": "seg_v5_7_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('used', 'reveal', 'has separated', 'is'), not moderate verbs from the list, despite 'unprecedented'."
+  },
+  {
+    "segment_id": "seg_v5_8_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('found', 'suggesting', 'has adapted'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_9_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains advice/warning ('should be alert'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_10_1669_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('adapts', 'becomes'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1669_chunk0",
+    "answer": "no",
+    "rationale": "'has shown a worrying ability' describes potential/ability, not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_1_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verbs ('killing') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('kill') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains containment verb ('kill') and scale, triggering containment override."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale describing impact."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale describing impact."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_7_102_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is a plain verb, despite scale ('35,500 birds')."
+  },
+  {
+    "segment_id": "seg_v5_9_102_chunk0",
+    "answer": "no",
+    "rationale": "'shows' and 'confirmed' are plain verbs, despite scale ('23 states')."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('blamed', 'can contaminate'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_11_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('have been found', 'has been circulating'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_12_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('do not present an immediate public health concern')."
+  },
+  {
+    "segment_id": "seg_v5_13_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming ('No human cases... have been detected', 'remains safe to eat')."
+  },
+  {
+    "segment_id": "seg_v5_15_102_chunk0",
+    "answer": "no",
+    "rationale": "Plain statement, no moderate verb or scale."
+  },
+  {
+    "segment_id": "seg_v5_16_102_chunk0",
+    "answer": "no",
+    "rationale": "Describes a correction, not the impact itself. Contains containment verb ('killed')."
+  },
+  {
+    "segment_id": "seg_v5_17_102_chunk0",
+    "answer": "no",
+    "rationale": "Describes a correction, not the impact itself. Contains containment verb ('killed')."
+  },
+  {
+    "segment_id": "seg_v5_1_1674_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' and 'had spread' are plain verbs, despite scale ('at least one person', '36 dairy herds')."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "no",
+    "rationale": "'announced' and 'had' are plain verbs, despite scale ('one in five', 'trace amounts')."
+  },
+  {
+    "segment_id": "seg_v5_3_1674_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('restricted', 'is testing'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is a plain verb, despite scale ('56 percent')."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a plain outcome verb, not a moderate verb from the list, despite scale ('Half')."
+  },
+  {
+    "segment_id": "seg_v5_8_1674_chunk0",
+    "answer": "no",
+    "rationale": "'hasn't been detected' is a plain verb."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "no",
+    "rationale": "'estimates' is a plain verb, despite scale ('around four and a half percent')."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "'has been linked' is a plain verb."
+  },
+  {
+    "segment_id": "seg_v5_12_1674_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('see', 'keep giving', 'are less likely to see', 'harmed'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_13_1674_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('do not allow', 'meaning', 'may have to go through', 'buy'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_1_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('issued', 'becoming infected'), not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_2_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains plain verbs ('announced', 'had been diagnosed', 'marking'), not moderate verbs from the list, despite scale ('second national case')."
+  }
+]
+```

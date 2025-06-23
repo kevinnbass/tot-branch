@@ -1,0 +1,2 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'high pathogenicity' (a technical term) but no intensifier/comparative + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5064", "batch_size": 260, "batch_pos": 18}
+{"Q": 2, "answer": "yes", "rationale": "regex:HighPotencyVerbMetaphor matched", "method": "regex", "batch_id": "batch_2_2312", "batch_size": 260, "batch_pos": 9, "regex": {"rule": "HighPotencyVerbMetaphor", "span": [0, 41], "captures": []}}

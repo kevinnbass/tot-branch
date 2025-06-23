@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_3_15036",
+  "hop_idx": 3,
+  "unknown_count": 3,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_15_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infected' and 'killing', which are not moderate verbs from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_061_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment states 'nothing that suggests...that it's become more infectious', which is not a moderate verb paired with a scale."
+    },
+    {
+      "segment_id": "seg_v5_062_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment states 'there's just a whole lot more of it out there'. 'A whole lot more' is vague and not a specific scale."
+    }
+  ]
+}

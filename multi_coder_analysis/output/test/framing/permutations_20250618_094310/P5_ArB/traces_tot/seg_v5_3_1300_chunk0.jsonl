@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17404", "batch_size": 260, "batch_pos": 134}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'analyzing samples' and 'pointing out that no confirmed cases... have ever been reported'.", "method": "llm_batch", "batch_id": "batch_2_15516", "batch_size": 260, "batch_pos": 122}
+{"Q": 3, "answer": "no", "rationale": "'analyzing samples', 'pointing out', 'reported' do not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_5284", "batch_size": 260, "batch_pos": 87}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_17836", "batch_size": 260, "batch_pos": 80}
+{"Q": 5, "answer": "no", "rationale": "The segment reports testing and a bare positive fact ('no confirmed cases'), not framed for calming.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 77}
+{"Q": 6, "answer": "no", "rationale": "Contains 'no confirmed cases' but not in a minimiser + scale contrast structure.", "method": "llm_batch", "batch_id": "batch_6_6448", "batch_size": 260, "batch_pos": 55}
+{"Q": 7, "answer": "yes", "rationale": "'no confirmed cases of influenza A have ever been reported' is a bare negation without explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_17148", "batch_size": 260, "batch_pos": 51}

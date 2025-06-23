@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_2_20668",
+  "hop_idx": 2,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_49_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question and contains a containment verb ('kill'), which bypasses Q2. It lacks high-potency verbs or potent metaphors."
+    },
+    {
+      "segment_id": "seg_v5_50_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms factually using nouns/gerunds ('paralysis', 'swelling', 'twisting'). It does not use a high-potency verb or potent metaphor as defined for Q2."
+    },
+    {
+      "segment_id": "seg_v5_001_1010_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'posing a likely threat' does not contain a high-potency verb, potent metaphor, superlative, or intensifier + harm noun as required by Q2."
+    }
+  ],
+  "timestamp": "2025-06-21T16:49:45.589320"
+}

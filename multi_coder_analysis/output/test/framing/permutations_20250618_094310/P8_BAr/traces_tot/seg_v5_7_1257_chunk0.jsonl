@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'worrying', which describes a feeling, not an intensified risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 153}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'worrying' (psychological state), not a Q2 cue for threat impact.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 137}
+{"Q": 3, "answer": "no", "rationale": "'described... as 'worrying'' is evaluative/psychological; 'were found' is a plain outcome verb.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 106}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 102}
+{"Q": 5, "answer": "no", "rationale": "The segment reports concern ('worrying') and cases but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 98}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 73}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 69}
+{"Q": 8, "answer": "no", "rationale": "The segment describes sentiment and cases, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_14608", "batch_size": 260, "batch_pos": 252}
+{"Q": 9, "answer": "no", "rationale": "The segment includes explicit framing ('worrying').", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 60}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 13}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a description and cases, but does not speculate about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_7984_r1", "batch_size": 260, "batch_pos": 13}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses a bare risk adjective ('worrying').", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 260}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 260, "regex": {"rule": "NeutralStats", "span": [78, 99], "captures": ["confirm", "cases"]}}

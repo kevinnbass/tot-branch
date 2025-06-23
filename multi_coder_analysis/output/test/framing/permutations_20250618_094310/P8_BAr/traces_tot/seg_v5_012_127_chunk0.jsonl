@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'sweeping bird flu', but 'sweeping' describes scope, not an intensified risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 167}
+{"Q": 2, "answer": "no", "rationale": "The segment uses the moderate verb 'sweeping' and the general phrase 'taking a toll', which are not Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 150}
+{"Q": 3, "answer": "no", "rationale": "'taking a toll' is evaluative but not a moderate verb + scale pattern.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 117}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 113}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative impact ('taking a toll') but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 109}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 84}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 80}
+{"Q": 8, "answer": "no", "rationale": "Segment describes impact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17936", "batch_size": 260, "batch_pos": 1}
+{"Q": 9, "answer": "no", "rationale": "The segment uses mild descriptive language ('sweeping', 'taking a toll') but does not report specific metrics.", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 66}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 17}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current impact and does not speculate about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_7984_r1", "batch_size": 260, "batch_pos": 17}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17244", "batch_size": 224, "batch_pos": 4}
+{"Q": 12, "answer": "no", "rationale": "Contains moderate verb 'taking a toll' describing impact (Q3).", "method": "llm_batch", "batch_id": "batch_12_14348", "batch_size": 224, "batch_pos": 4}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'poor' modifies 'tracking' (a noun), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17592", "batch_size": 217, "batch_pos": 111}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language ('poor tracking', 'have reported infections', 'are undercounts', 'don’t know the scale').", "method": "llm_batch", "batch_id": "batch_2_15628", "batch_size": 163, "batch_pos": 66}
+{"Q": 3, "answer": "no", "rationale": "The segment uses 'have reported' (not moderate) and discusses undercounts (evaluative, not Q3 pattern).", "method": "llm_batch", "batch_id": "batch_3_4424", "batch_size": 260, "batch_pos": 257}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17252", "batch_size": 260, "batch_pos": 240}
+{"Q": 5, "answer": "no", "rationale": "The segment reports negative assessments (poor tracking, undercounts, don't know scale) but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_2816", "batch_size": 260, "batch_pos": 233}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16772", "batch_size": 260, "batch_pos": 186}
+{"Q": 7, "answer": "no", "rationale": "'don't know' is not one of the specified bare negation types.", "method": "llm_batch", "batch_id": "batch_7_16660", "batch_size": 252, "batch_pos": 171}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 230, "regex": {"rule": "CapabilityNoReassurance", "span": [230, 239], "captures": []}}

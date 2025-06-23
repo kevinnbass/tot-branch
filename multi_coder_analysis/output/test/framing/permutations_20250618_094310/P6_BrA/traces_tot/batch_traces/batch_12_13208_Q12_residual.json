@@ -1,0 +1,32 @@
+{
+  "batch_id": "batch_12_13208",
+  "hop_idx": 12,
+  "unknown_count": 5,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_12_647_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains vivid description of symptoms ('Screaming very loud, whole-body tremors'), triggering Q1."
+    },
+    {
+      "segment_id": "seg_v5_13_647_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains explicit emotional language ('very sad thing to see') framing the impact, triggering Q1."
+    },
+    {
+      "segment_id": "seg_v5_27_647_chunk0",
+      "answer": "no",
+      "rationale": "Segment contains vivid description of animal behavior ('writhing on the ground'), triggering Q1."
+    },
+    {
+      "segment_id": "seg_v5_28_647_chunk0",
+      "answer": "yes",
+      "rationale": "Factual statement about virus changes and uncertainty without explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_29_647_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of no spread and a descriptive comparison to Covid, not framing the threat."
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 9}
+{"Q": 2, "answer": "no", "rationale": "The segment describes labeling changes and reasons using neutral language.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 215}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact information.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 146}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 135}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17952_r1", "batch_size": 260, "batch_pos": 135}
+{"Q": 5, "answer": "no", "rationale": "Quotes about labels explaining temporary housing, a neutral fact.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 127}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 81}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 81}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 74}
+{"Q": 8, "answer": "yes", "rationale": "Describes a communication measure ('Shoppers may notice different labels') and the purpose of housing ('protect their health and welfare').", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 135}

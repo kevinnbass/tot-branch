@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16400", "batch_size": 260, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "'Frustrated' describes a feeling, not the threat's impact. 'sequencing' is neutral.", "method": "llm_batch", "batch_id": "batch_2_3168", "batch_size": 260, "batch_pos": 9}
+{"Q": 3, "answer": "no", "rationale": "Discusses frustration (feeling) and beginning sequencing (action), not a moderate verb + scale of impact.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 249}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 248}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 248}
+{"Q": 5, "answer": "no", "rationale": "The segment reports scientists sequencing milk due to frustration, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 245}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 235}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 235}
+{"Q": 8, "answer": "yes", "rationale": "Describes implemented surveillance/monitoring: 'scientists have begun sequencing the bird flu virus from store-bought milk as a way to monitor its movement'.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 224}

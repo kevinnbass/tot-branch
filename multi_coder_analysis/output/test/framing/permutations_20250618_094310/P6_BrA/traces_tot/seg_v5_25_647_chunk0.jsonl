@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14828", "batch_size": 260, "batch_pos": 186}
+{"Q": 2, "answer": "no", "rationale": "Description of symptom severity.", "method": "llm_batch", "batch_id": "batch_2_4512", "batch_size": 260, "batch_pos": 150}
+{"Q": 3, "answer": "no", "rationale": "The segment describes symptoms, not a moderate verb + scale of the virus's impact.", "method": "llm_batch", "batch_id": "batch_3_16988", "batch_size": 260, "batch_pos": 109}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17640", "batch_size": 260, "batch_pos": 102}
+{"Q": 5, "answer": "no", "rationale": "The segment reports severity of symptoms in animals, which is not calming.", "method": "llm_batch", "batch_id": "batch_5_10144", "batch_size": 260, "batch_pos": 97}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17584", "batch_size": 260, "batch_pos": 77}
+{"Q": 7, "answer": "no", "rationale": "The segment quotes seizure severity but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_15984", "batch_size": 260, "batch_pos": 72}
+{"Q": 8, "answer": "no", "rationale": "The segment is an opinion about symptom severity, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7588", "batch_size": 260, "batch_pos": 212}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_8464", "batch_size": 260, "batch_pos": 168}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 37}
+{"hop_idx": 11, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 14}
+{"Q": 11, "answer": "yes", "rationale": "Attributed quote describes severity as 'something I really hadn't seen before', amplifying the negative fact. ||FRAME=Alarmist", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_11_15980_r1", "batch_size": 248, "batch_pos": 14}

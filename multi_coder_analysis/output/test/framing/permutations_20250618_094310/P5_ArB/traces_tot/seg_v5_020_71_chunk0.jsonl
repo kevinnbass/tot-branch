@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'unusual' describes frequency, not the virus's inherent danger amplified by an intensifier.", "method": "llm_batch", "batch_id": "batch_1_17592", "batch_size": 217, "batch_pos": 38}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_17260", "batch_size": 260, "batch_pos": 255}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses potential transmission ('can be transmitted'), not realised impact (rule 3).", "method": "llm_batch", "batch_id": "batch_3_4424", "batch_size": 260, "batch_pos": 188}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17252", "batch_size": 260, "batch_pos": 172}
+{"Q": 5, "answer": "no", "rationale": "The segment reports facts about transmission risk ('unusual') but it is not intensified as required for Q5.", "method": "llm_batch", "batch_id": "batch_5_2816", "batch_size": 260, "batch_pos": 165}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16772", "batch_size": 260, "batch_pos": 121}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word combined with an explicit scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16772_r1", "batch_size": 260, "batch_pos": 121}
+{"Q": 7, "answer": "no", "rationale": "'is unusual' is not one of the specified bare negation types.", "method": "llm_batch", "batch_id": "batch_7_16660", "batch_size": 252, "batch_pos": 106}
+{"Q": 8, "answer": "yes", "rationale": "The segment describes transmission possibility and likelihood ('transmission... is unusual'), a factual description without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 171}

@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 145}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('on edge', 'on the rise', 'impacted') without high-potency verbs or metaphors. 'on edge' is psychological, 'on the rise' is a trend.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 140}
+{"Q": 3, "answer": "no", "rationale": "'on the rise' is a present tense moderate verb (Neutral per Q3 table rule).", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 139}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 138}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 138}
+{"Q": 5, "answer": "no", "rationale": "This segment reports negative state ('on edge') and negative facts without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 138}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 133}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 133}
+{"Q": 7, "answer": "no", "rationale": "The segment describes a situation (on edge, on the rise) but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 129}
+{"Q": 8, "answer": "no", "rationale": "The segment describes farmers on edge and rise in HPAI, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 101}
+{"Q": 9, "answer": "no", "rationale": "Uses framing language ('farmers across the country are on edge').", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 72}
+{"Q": 10, "answer": "no", "rationale": "The segment reports current situation and impact, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 42}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 34}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; reports farmers 'on edge' (psychological state) and trend factually.", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 33}

@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'concerning' is a risk-adjective but is not intensified or comparative.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 193}
+{"Q": 2, "answer": "no", "rationale": "'concerning' is a psychological adjective, not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 179}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 144}
+{"Q": 3, "answer": "no", "rationale": "'concerning' is an adjective describing a reaction/condition, not a moderate verb + scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 144}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 138}
+{"Q": 5, "answer": "no", "rationale": "The segment reports developments are concerning, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 136}
+{"Q": 6, "answer": "no", "rationale": "'many' is not a minimiser.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 99}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 91}
+{"Q": 8, "answer": "no", "rationale": "Segment describes uncertainty, concern, and findings, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 246}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential economic impact but does not report specific metrics.", "method": "llm_batch", "batch_id": "batch_9_2216", "batch_size": 260, "batch_pos": 45}
+{"Q": 10, "answer": "no", "rationale": "The segment reports current concern and potential future negative impact, not relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 204}
+{"Q": 11, "answer": "no", "rationale": "Quote uses 'concerning' which is a bare risk adjective, not intensified.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 184}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; reports developments are 'concerning' (psychological state). Context guard applies.", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 183}

@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'over' modifies quantity.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 126}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 123}
+{"Q": 3, "answer": "no", "rationale": "Discusses signing a contract and shipments (future actions), not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 114}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 114}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 114}
+{"Q": 5, "answer": "no", "rationale": "The segment reports securing vaccine doses, which is preparedness but not explicitly calming for the public.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 111}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 105}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 105}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 103, "regex": {"rule": "CapabilityNoReassurance", "span": [99, 106], "captures": []}}

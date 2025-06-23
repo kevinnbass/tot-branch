@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a psychological verb ('worried') but not an intensified or comparative risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 5}
+{"Q": 2, "answer": "no", "rationale": "'worried experts' describes a reaction.", "method": "llm_batch", "batch_id": "batch_2_17012", "batch_size": 260, "batch_pos": 217}
+{"Q": 3, "answer": "no", "rationale": "'worried experts' is a psychological verb, neutral per context guard.", "method": "llm_batch", "batch_id": "batch_3_15000", "batch_size": 260, "batch_pos": 156}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15604", "batch_size": 260, "batch_pos": 146}
+{"Q": 5, "answer": "no", "rationale": "The segment reports the infection worried experts, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_1716", "batch_size": 260, "batch_pos": 141}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about a risk or problem.", "method": "llm_batch", "batch_id": "batch_7_13928", "batch_size": 260, "batch_pos": 89}
+{"Q": 8, "answer": "no", "rationale": "Describes why an infection worried experts, not a capability, preparedness, safeguard, or hopeful future possibility.", "method": "llm_batch", "batch_id": "batch_8_8444", "batch_size": 260, "batch_pos": 206}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 54}
+{"Q": 9, "answer": "no", "rationale": "The segment contains 'worried experts', not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 54}
+{"Q": 10, "answer": "no", "rationale": "The segment states the infection worried experts and does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 120}
+{"Q": 11, "answer": "no", "rationale": "No direct quote providing a dominant frame. 'worried experts' is authorial.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 80}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually. 'worried experts' is reaction (context guard).", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 80}

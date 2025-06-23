@@ -1,0 +1,73 @@
+{
+  "batch_id": "batch_1_15312_r1",
+  "hop_idx": 1,
+  "segment_count": 13,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes factual detections without using intensifiers or risk-adjectives."
+    },
+    {
+      "segment_id": "seg_v5_2_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a factual detection without using intensifiers or risk-adjectives."
+    },
+    {
+      "segment_id": "seg_v5_3_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment states detections do not present a concern, which is not an intensifier/comparative + risk-adjective pattern."
+    },
+    {
+      "segment_id": "seg_v5_4_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment states no human cases have been detected, which is not an intensifier/comparative + risk-adjective pattern."
+    },
+    {
+      "segment_id": "seg_v5_5_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides cooking instructions, not using intensifiers or risk-adjectives."
+    },
+    {
+      "segment_id": "seg_v5_6_1002_chunk0",
+      "answer": "no",
+      "rationale": "'highly pathogenic' is a technical term modifying a pathogen name, ignored by TECH_TERM_GUARD."
+    },
+    {
+      "segment_id": "seg_v5_7_1005_chunk0",
+      "answer": "no",
+      "rationale": "'most expensive' modifies a noun ('disaster'), not a risk-adjective from the list."
+    },
+    {
+      "segment_id": "seg_v5_8_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment identifies the strain and its relation without using intensifiers or risk-adjectives."
+    },
+    {
+      "segment_id": "seg_v5_9_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the virus's circulation history without using intensifiers or risk-adjectives."
+    },
+    {
+      "segment_id": "seg_v5_10_1005_chunk0",
+      "answer": "no",
+      "rationale": "'low pathogenic' is a technical term indicating low risk, not an intensifier/comparative + risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_11_1005_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the comparative 'more' modifying the risk-adjective 'deadly'."
+    },
+    {
+      "segment_id": "seg_v5_12_1005_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the fixed lethal-from-outset idiom 'deadly from the start'."
+    },
+    {
+      "segment_id": "seg_v5_13_1005_chunk0",
+      "answer": "no",
+      "rationale": "'raised concerns' is a psychological verb phrase not paired with an intensifier or concrete scale of harm."
+    }
+  ],
+  "timestamp": "2025-06-20T13:38:49.185642"
+}

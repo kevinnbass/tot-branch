@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5880", "batch_size": 260, "batch_pos": 76}
+{"Q": 2, "answer": "no", "rationale": "The segment contains factual safety advice.", "method": "llm_batch", "batch_id": "batch_2_14696", "batch_size": 260, "batch_pos": 60}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb describing threat impact is present.", "method": "llm_batch", "batch_id": "batch_3_17360", "batch_size": 260, "batch_pos": 45}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4428", "batch_size": 260, "batch_pos": 41}
+{"Q": 5, "answer": "no", "rationale": "The segment provides advice for food safety precaution, but does not explicitly state the food is currently safe using Q5 keywords.", "method": "llm_batch", "batch_id": "batch_5_16904", "batch_size": 260, "batch_pos": 41}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_13084", "batch_size": 260, "batch_pos": 35}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the threat.", "method": "llm_batch", "batch_id": "batch_7_16696", "batch_size": 260, "batch_pos": 31}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11608", "batch_size": 260, "batch_pos": 245, "regex": {"rule": "CapabilityNoReassurance", "span": [149, 158], "captures": []}}

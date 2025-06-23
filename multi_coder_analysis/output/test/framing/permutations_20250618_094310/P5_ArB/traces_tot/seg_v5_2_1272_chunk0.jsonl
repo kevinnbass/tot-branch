@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16232", "batch_size": 260, "batch_pos": 163}
+{"Q": 2, "answer": "no", "rationale": "'killed record numbers' describes scale, but 'killed' is factual and 'record numbers' is not a negative noun.", "method": "llm_batch", "batch_id": "batch_2_17260", "batch_size": 260, "batch_pos": 124}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'killed' and 'infected' are plain outcome verbs (rule 4), not moderate verbs from the list.", "method": "llm_batch", "batch_id": "batch_3_4424", "batch_size": 260, "batch_pos": 60}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17252", "batch_size": 260, "batch_pos": 45}
+{"Q": 5, "answer": "no", "rationale": "The segment reports negative facts but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_2816", "batch_size": 260, "batch_pos": 39}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12008", "batch_size": 260, "batch_pos": 259}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14300", "batch_size": 260, "batch_pos": 247}
+{"Q": 8, "answer": "no", "rationale": "The segment describes outbreak impact, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 79}
+{"Q": 9, "answer": "no", "rationale": "The segment uses framing language ('killed record numbers').", "method": "llm_batch", "batch_id": "batch_9_14112", "batch_size": 243, "batch_pos": 116}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a current outbreak and impact, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_18376", "batch_size": 260, "batch_pos": 225}
+{"Q": 11, "answer": "no", "rationale": "Contains 'killed record numbers' but it is authorial, not a quote or attributed statement.", "method": "llm_batch", "batch_id": "batch_11_16340", "batch_size": 260, "batch_pos": 185}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_17448", "batch_size": 260, "batch_pos": 185, "regex": {"rule": "NeutralStats", "span": [74, 88], "captures": ["record", "numbers"]}}

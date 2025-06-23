@@ -9,6 +9,7 @@ from typing import Dict, Optional
 import threading
 import signal
 import shutil
+import multiprocessing as _mp, os as _os, signal as _signal
 
 # --- Import step functions from other modules --- #
 # from run_multi_coder import run_coding_step  # TODO: Create this for standard pipeline
@@ -16,8 +17,10 @@ import shutil
 # "python -m multi_coder_analysis.main" (module) invocation styles.
 try:
     from .run_multi_coder_tot import run_coding_step_tot  # package-relative when executed as module
+    from . import run_multi_coder_tot as _tot_mod
 except ImportError:
     from run_multi_coder_tot import run_coding_step_tot  # direct import when executed as script
+    import run_multi_coder_tot as _tot_mod
 # from merge_human_and_models import run_merge_step  # TODO: Create this
 # from reliability_stats import run_stats_step  # TODO: Create this
 # from sampling import run_sampling_for_phase  # TODO: Create this
@@ -35,15 +38,50 @@ except ImportError:
 # --- Global Shutdown Event ---
 shutdown_event = threading.Event()
 
-# --- Signal Handler ---
-def handle_sigint(sig, frame):
-    print()  # Print newline after ^C
-    logging.warning("SIGINT received. Attempting graceful shutdown...")
+# ---------------------------------------------------------------------------
+# Immediate SIGINT handler
+# ---------------------------------------------------------------------------
+# Many runs spawn background threads *and* ProcessPool workers.  In practice
+# the default graceful KeyboardInterrupt takes several seconds (or never
+# finishes) while those workers clean up.  Users have asked for an
+# *instant* abort when they hit Ctrl-C.  The new handler terminates all
+# active child processes, sets the global shutdown flag (so long-running
+# loops that catch KeyboardInterrupt can still see it), flushes the
+# logging streams, and then exits the interpreter via os._exit which does
+# not invoke cleanup handlers – but guarantees prompt return to the shell.
+# ---------------------------------------------------------------------------
+
+def _terminate_children() -> None:  # pragma: no cover – best effort clean-up
+    try:
+        for p in _mp.active_children():
+            try:
+                p.terminate()
+            except Exception:
+                pass
+    except Exception:
+        # Multiprocessing may not be initialised yet; ignore
+        pass
+
+
+def handle_sigint(sig, frame):  # type: ignore[override]
+    print()  # newline after ^C so next prompt starts fresh
+    logging.error("⌧  Ctrl-C received – aborting run immediately …")
+
+    # Notify any cooperative loops
     shutdown_event.set()
-    # Force immediate termination so the user regains control promptly.
-    # Using SystemExit keeps cleanup handlers (atexit) intact but stops
-    # further execution even if worker threads are busy.
-    raise SystemExit(130)  # 130 is the conventional exit code for SIGINT
+
+    # Kill child processes (ProcessPoolExecutor workers, etc.)
+    _terminate_children()
+
+    # Flush logging to be sure the message appears
+    for h in logging.getLogger().handlers:
+        try:
+            h.flush()
+        except Exception:
+            pass
+
+    # Exit *now* – bypass atexit/finally blocks to avoid hangs
+    _os._exit(130)  # 130 conventionally signals SIGINT termination
 
 # --- Configuration Loading ---
 def load_config(config_path):
@@ -140,17 +178,20 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
         base_output_dir.mkdir(parents=True, exist_ok=True)
         logging.info(f"Created output directory: {base_output_dir}")
 
-        # --- Concatenate Prompts into run-specific output directory ---
-        logging.info("--- Concatenating prompt files ---")
-        prompt_concat_path = concatenate_prompts(
-            prompts_dir="multi_coder_analysis/prompts",
-            output_file=f"concatenated_prompts_{pipeline_timestamp}.txt",
-            target_dir=base_output_dir,
-        )
-        if prompt_concat_path:
-            logging.info(f"Concatenated prompts saved to: {prompt_concat_path}")
-        else:
-            logging.warning("Prompt concatenation failed, but continuing with pipeline...")
+        # --- Copy prompt directory verbatim for auditability (replaces old concatenation) ---
+        try:
+            src_prompt_dir = Path(args.prompts_dir)
+            dst_prompt_dir = base_output_dir / "prompts"
+            shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
+            logging.info("Copied prompt folder → %s", dst_prompt_dir)
+            # Override prompts dir globally for ToT module
+            try:
+                _tot_mod.PROMPTS_DIR = src_prompt_dir.resolve()
+                logging.info("Using custom prompts directory: %s", _tot_mod.PROMPTS_DIR)
+            except Exception as _e:
+                logging.warning("Could not override PROMPTS_DIR in run_multi_coder_tot: %s", _e)
+        except Exception as e:
+            logging.warning("Could not copy prompts folder: %s", e)
 
         # ------------------------------------------------------------------
         # Copy the exact regex catalogue used for this run into the output
@@ -163,28 +204,7 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
         except Exception as e:
             logging.warning("Could not copy hop_patterns.yml (%s): %s", patterns_src, e)
 
-        # ------------------------------------------------------------------
-        # ALSO dump the *compiled* regex table (one line per rule) so that
-        # reviewers can see *exactly* what the engine ran, after any
-        # compile-time rewrites/downgrades.  Creates an easy-to-read TSV
-        # called "compiled_rules.txt" in the same output folder.
-        # ------------------------------------------------------------------
-        try:
-            from multi_coder_analysis import regex_rules as _rr
-
-            dump_path = base_output_dir / "compiled_rules.txt"
-            with dump_path.open("w", encoding="utf-8") as fh:
-                fh.write("Hop\tMode\tFrame\tRuleName\tRegex\n")
-
-                # Use RAW_RULES because it contains the compiled PatternInfo
-                # objects (post-processing) in the original ordering.
-                for r in _rr.RAW_RULES:
-                    pattern_str = getattr(r.yes_regex, "pattern", str(r.yes_regex))
-                    fh.write(f"{r.hop}\t{r.mode}\t{r.yes_frame or ''}\t{r.name}\t{pattern_str}\n")
-
-            logging.info("Compiled regex table dumped → %s", dump_path)
-        except Exception as e:
-            logging.warning("Could not write compiled_rules.txt: %s", e)
+        # Compiled_rules.txt no longer generated (redundant with hop_patterns.yml)
 
         # Determine input file source
         if args.input:
@@ -249,6 +269,7 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 regex_mode=args.regex_mode,
                 shuffle_batches=args.shuffle_batches,
                 skip_eval=args.no_eval,
+                only_hop=args.only_hop,
             )
         except Exception as e:
             logging.error(f"Tree-of-Thought pipeline failed with error: {e}", exc_info=True)
@@ -302,9 +323,49 @@ def main():
     parser.add_argument('--perm-workers', type=int, default=1,
                         help='Number of permutations to execute in parallel (process-based). Default 1 (serial).')
 
+    # Threshold for identifying low majority-ratio segments (used in permutation suite)
+    parser.add_argument('--low-ratio-threshold', type=float, default=7,
+                        help='Majority-label ratio below which a segment is considered low-confidence (default: 7)')
+
     # Skip evaluation even if Gold Standard column is present
     parser.add_argument('--no-eval', action='store_true',
                         help='Disable any comparison against the Gold Standard column. The pipeline will still run and output majority labels, but no accuracy metrics or mismatch files are created.')
+
+    # Fallback pass: re-run permutations on low_ratio_segments.csv only
+    parser.add_argument('--fallback-low-ratio', action='store_true',
+                        help='After the normal permutation suite finishes, run an extra pass on low_ratio_segments.csv and write *_fallback files. Off by default.')
+
+    # Custom prompts directory
+    parser.add_argument('--prompts-dir', default=str(Path('multi_coder_analysis') / 'prompts'),
+                        help='Path to prompts directory to use instead of the package default')
+
+    # Diagnostic: run a single hop only (1-12)
+    parser.add_argument('--only-hop', type=int, help='If set, run only the specified hop index (1-12) for diagnostic testing')
+
+    # ------------------------------------------------------------------
+    # NEW – Consensus strategy & self-consistency decoding (pipeline mode)
+    # ------------------------------------------------------------------
+
+    parser.add_argument('--consensus', default='final', choices=['hop', 'final'],
+                        help="Consensus strategy: 'hop' = per-hop majority, 'final' = legacy end-of-tree vote (default)")
+
+    parser.add_argument('--decode-mode', default='normal', choices=['normal', 'self-consistency'],
+                        help='Decoding mode: normal (single deterministic path) or self-consistency')
+
+    parser.add_argument('--votes', type=int, default=1, dest='sc_votes',
+                        help='# paths/votes for self-consistency')
+
+    parser.add_argument('--sc-rule', default='majority', choices=['majority', 'ranked', 'ranked-raw'],
+                        help='Aggregation rule for self-consistency votes')
+
+    parser.add_argument('--sc-temperature', type=float, default=0.7,
+                        help='Sampling temperature for self-consistency')
+
+    parser.add_argument('--sc-top-k', type=int, default=40,
+                        help='top-k sampling cutoff (0 disables)')
+
+    parser.add_argument('--sc-top-p', type=float, default=0.95,
+                        help='nucleus sampling p-value')
 
     args = parser.parse_args()
 
@@ -327,6 +388,10 @@ def main():
 
     if args.batch_size < 1:
         logging.error("--batch-size must be >= 1")
+        sys.exit(1)
+
+    if args.only_hop is not None and not (1 <= args.only_hop <= 12):
+        logging.error("--only-hop must be between 1 and 12")
         sys.exit(1)
 
     # --- Load Configuration ---
@@ -366,10 +431,32 @@ def main():
                     sys.exit(1)
 
         try:
-            run_permutation_suite(config, args, shutdown_event)
+            perm_root = run_permutation_suite(config, args, shutdown_event)
         except Exception as e:
             logging.error("Permutation suite failed: %s", e, exc_info=True)
             sys.exit(1)
+
+        # ------------------------------------------------------------------
+        # Optional fallback permutation on low_ratio_segments.csv
+        # ------------------------------------------------------------------
+        if args.fallback_low_ratio:
+            import pandas as _pd
+            low_csv = Path(perm_root) / "low_ratio_segments.csv"
+            if low_csv.exists():
+                logging.info("🔁  Fallback permutation pass on %s", low_csv)
+                try:
+                    df_low = _pd.read_csv(low_csv)
+                    run_permutation_suite(
+                        config,
+                        args,
+                        shutdown_event,
+                        override_df=df_low,
+                        out_dir_suffix="fallback",
+                    )
+                except Exception as _e:
+                    logging.error("Fallback permutation failed: %s", _e, exc_info=True)
+            else:
+                logging.warning("--fallback-low-ratio requested but %s not found", low_csv)
         return  # Skip the rest of main once permutations complete
 
     try:

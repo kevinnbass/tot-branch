@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15064", "batch_size": 260, "batch_pos": 229}
+{"Q": 2, "answer": "no", "rationale": "The segment describes actions for protection using neutral language.", "method": "llm_batch", "batch_id": "batch_2_11532", "batch_size": 260, "batch_pos": 192}
+{"Q": 3, "answer": "no", "rationale": "The phrase 'has made available' is not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_8472", "batch_size": 260, "batch_pos": 148}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_11556", "batch_size": 260, "batch_pos": 141}
+{"Q": 5, "answer": "no", "rationale": "The segment reports preparedness actions without explicit calming language or link to public safety.", "method": "llm_batch", "batch_id": "batch_5_15512", "batch_size": 260, "batch_pos": 137}
+{"Q": 6, "answer": "no", "rationale": "The segment contains a preparedness statement ('has made that protective equipment available') but not the Q6 pattern.", "method": "llm_batch", "batch_id": "batch_6_12052", "batch_size": 260, "batch_pos": 101}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17040", "batch_size": 260, "batch_pos": 96}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17040", "batch_size": 260, "batch_pos": 96}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18200", "batch_size": 260, "batch_pos": 257, "regex": {"rule": "CapabilityNoReassurance", "span": [224, 233], "captures": []}}

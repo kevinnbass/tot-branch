@@ -1,0 +1,22 @@
+{
+  "batch_id": "batch_7_7280",
+  "hop_idx": 7,
+  "unknown_count": 3,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_23_1506_chunk0",
+      "answer": "no",
+      "rationale": "No bare negation found."
+    },
+    {
+      "segment_id": "seg_v5_25_1506_chunk0",
+      "answer": "no",
+      "rationale": "'risk is low' is a calming cue from Q5, so it's not a bare negation without calming."
+    },
+    {
+      "segment_id": "seg_v5_17_1508_chunk0",
+      "answer": "yes",
+      "rationale": "'did not say' is a bare negation without additional calming language."
+    }
+  ]
+}

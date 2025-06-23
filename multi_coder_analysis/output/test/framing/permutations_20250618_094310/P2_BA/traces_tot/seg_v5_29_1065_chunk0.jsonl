@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18020", "batch_size": 260, "batch_pos": 17}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'hardest hit' uses a moderate verb 'hit' and does not meet the high-potency threshold for Q2.", "method": "llm_batch", "batch_id": "batch_2_11532", "batch_size": 260, "batch_pos": 236}
+{"Q": 3, "answer": "no", "rationale": "The phrase 'hardest hit' is descriptive, not a verb. The verb 'are' is not a moderate verb.", "method": "llm_batch", "batch_id": "batch_3_8472", "batch_size": 260, "batch_pos": 191}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_11556", "batch_size": 260, "batch_pos": 182}
+{"Q": 5, "answer": "no", "rationale": "The segment reports negative facts (locations) without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15512", "batch_size": 260, "batch_pos": 178}
+{"Q": 6, "answer": "no", "rationale": "The segment lists the hardest hit states but does not use a minimiser or scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_12052", "batch_size": 260, "batch_pos": 141}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17040", "batch_size": 260, "batch_pos": 136}
+{"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_8444", "batch_size": 260, "batch_pos": 27}
+{"Q": 8, "answer": "no", "rationale": "The segment describes current impact ('hardest hit states') not capabilities, preparedness, or safeguards.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_8444_r1", "batch_size": 260, "batch_pos": 27}
+{"Q": 9, "answer": "no", "rationale": "The segment lists states, not numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_7228", "batch_size": 260, "batch_pos": 210}
+{"Q": 10, "answer": "no", "rationale": "The segment lists hardest hit states and does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 67}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 33}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually. 'hardest hit' is factual description.", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 33}

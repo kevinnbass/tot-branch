@@ -1,0 +1,19 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_13_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('more than 135 dairy herds', 'a dozen states') using standard language ('had reported infections')."
+  },
+  {
+    "segment_id": "seg_v5_1_1041_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event ('new outbreak') using a standard verb ('reported'), but not primarily prices, economic data, or numerical metrics in the context of Q9."
+  },
+  {
+    "segment_id": "seg_v5_2_1041_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('killed 6,770 birds', 'nearly 34,000 animals') using standard verbs ('killed', 'led to the slaughter')."
+  }
+]
+```

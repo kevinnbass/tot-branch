@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'voluntary' modifies 'Participation'. 'safe to consume' is an explicit calming phrase (Q5).", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 240}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 235}
+{"Q": 3, "answer": "no", "rationale": "Discusses participation and contains a Reassuring cue, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 215}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 214}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 214}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'pasteurized dairy products remain safe to consume' is a direct consumption safety assurance from an official source.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 211}

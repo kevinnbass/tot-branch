@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'risk is low', which is a factual statement, not intensified.", "method": "llm_batch", "batch_id": "batch_1_17488", "batch_size": 217, "batch_pos": 41}
+{"Q": 2, "answer": "no", "rationale": "Segment contains a Q5 cue ('public health risk is low') but no Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 248}
+{"Q": 3, "answer": "no", "rationale": "The segment states the risk is low and there is no sign of spread, which is Neutral/Reassuring (Q5), not Q3.", "method": "llm_batch", "batch_id": "batch_3_3036", "batch_size": 260, "batch_pos": 170}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_13904", "batch_size": 260, "batch_pos": 159}
+{"Q": 5, "answer": "no", "rationale": "Reports 'public health risk is low' but lacks an intensifier like 'very'.", "method": "llm_batch", "batch_id": "batch_5_16884", "batch_size": 260, "batch_pos": 149}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14144", "batch_size": 240, "batch_pos": 87}
+{"Q": 7, "answer": "yes", "rationale": "'there is no sign that bird flu is spreading person to person' is a bare evidence negation.", "method": "llm_batch", "batch_id": "batch_7_17272", "batch_size": 230, "batch_pos": 79}

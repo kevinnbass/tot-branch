@@ -1,0 +1,1008 @@
+{
+  "batch_id": "batch_3_7732",
+  "hop_idx": 3,
+  "segment_count": 200,
+  "responses": [
+    {
+      "segment_id": "seg_v5_3_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a lack of public health concern, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_2_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_1_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports finding the flu, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_16_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('down 14 percent', 'down 23 percent'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_15_1000_chunk0",
+      "answer": "no",
+      "rationale": "'hitting the country' is a moderate verb, but 'supplies have dropped' is not explicit numeric or record-type scale."
+    },
+    {
+      "segment_id": "seg_v5_14_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prevention efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_13_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('largest producer', 'second-largest exporter'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_12_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports trade restrictions ('banning or limiting poultry imports'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_11_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes biosecurity and surveillance efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_010_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports expected test results, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_009_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a food safety assurance, which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_008_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the outbreak is 'not expected to lower overall chicken production levels', which is not a moderate verb + scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_007_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prevention efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_006_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds being 'culled', which is a containment verb and neutralizes Q3 by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_004_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports birds were 'infected', which is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_003_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports trade restrictions ('limited poultry purchases'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_002_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports trade restrictions ('triggered more restrictions on U.S. exports', 'blocking poultry products'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_8_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cooking safety, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_6_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports no human cases and states safety, which are reassuring cues (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_5_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a lack of public health concern, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_3_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports cases at farms, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_2_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'millions of fowl have been killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_1_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that 'will have to be killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_16_1002_chunk0",
+      "answer": "no",
+      "rationale": "'emerged' is not a moderate verb on the list, and 'large outbreaks' is vague scale."
+    },
+    {
+      "segment_id": "seg_v5_15_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports no human cases, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_14_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment states human infections are 'rare', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_13_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('exported'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_12_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports production metrics ('seventh biggest chicken meat-producing state'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_11_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('largest producer', 'second-largest exporter'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_018_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('down 14 percent', 'down 23 percent'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_017_1003_chunk0",
+      "answer": "no",
+      "rationale": "'hitting the market' is a moderate verb, but 'supplies are down' is not explicit numeric or record-type scale."
+    },
+    {
+      "segment_id": "seg_v5_016_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('exported'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_015_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports production metrics ('seventh biggest chicken-meat producing state'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_014_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('largest producer', 'second-largest exporter'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_013_1003_chunk0",
+      "answer": "no",
+      "rationale": "'spreading the virus' describes mechanism, not impact scale, and 'dozens' is not significant scale per examples."
+    },
+    {
+      "segment_id": "seg_v5_012_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a lack of public health concern, which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_011_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds being 'culled', which is a containment verb and neutralizes Q3 by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_14_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that were 'killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_13_1004_chunk0",
+      "answer": "no",
+      "rationale": "'threatens to spark shortages' is hypothetical/future impact and uses a psychological verb, excluded by guards."
+    },
+    {
+      "segment_id": "seg_v5_12_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment states risk is 'very low' and food safety, which are reassuring cues (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_11_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prevention efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_4_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'turkey deaths', but 'deaths' is a plain outcome (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_3_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes police action, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_2_1_chunk0",
+      "answer": "no",
+      "rationale": "'planning to cull' describes a future action, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'deaths of at least 25,000 turkeys', but 'deaths' is a plain outcome (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_12_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions people who 'have contracted' and 'deaths', which are plain outcome verbs/nouns (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment states human infection is 'rare', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_34_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment is an article amendment, not related to impact framing."
+    },
+    {
+      "segment_id": "seg_v5_33_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a general statement about difficulty, not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_32_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a general statement about difficulty, not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_31_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes area closures and procedures, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_30_363_chunk0",
+      "answer": "no",
+      "rationale": "'reported mass deaths' mentions scale ('mass deaths') but 'reported' is not a moderate verb describing impact (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_29_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes challenges in recording, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_28_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes research actions, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_27_363_chunk0",
+      "answer": "no",
+      "rationale": "'removal of vast numbers' is scale, but 'may have long-term ecosystem effects' is hypothetical/future (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_26_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains emotive language ('terrible news', 'very worried') but not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_25_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the strain 'has not yet reached', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_22_363_chunk0",
+      "answer": "no",
+      "rationale": "'taking significant declines' is not a moderate verb on the list, and 'significant' is not explicit numeric/record scale."
+    },
+    {
+      "segment_id": "seg_v5_21_363_chunk0",
+      "answer": "no",
+      "rationale": "'could have very big impacts' is hypothetical/future (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_20_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions the virus 'has killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_18_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment states consequences are 'unknown', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_16_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment states susceptibility, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_14_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains emotive language ('devastating') but not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_13_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports 'no recorded cases' and an expected future arrival (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_12_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports cases being 'confirmed' or 'suspected', not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_11_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment lists symptoms, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_10_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports animals 'exhibiting symptoms', not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_9_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports 'confirmed bird flu deaths' and 'disease is suspected', but 'deaths' is a plain outcome (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_8_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a 'likely chance', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_7_363_chunk0",
+      "answer": "no",
+      "rationale": "'mass mortalities' is scale, but 'had' or 'getting into' are not moderate verbs describing impact."
+    },
+    {
+      "segment_id": "seg_v5_6_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the situation was 'concerning', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_5_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports cases being 'confirmed', not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_4_363_chunk0",
+      "answer": "no",
+      "rationale": "'reported mass deaths' mentions scale ('mass deaths') but 'reported' is not a moderate verb describing impact (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_3_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the virus was 'reported', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_31_743_chunk0",
+      "answer": "yes",
+      "rationale": "'has impacted' is a moderate verb paired with explicit numeric scale 'millions of animals'."
+    },
+    {
+      "segment_id": "seg_v5_30_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a 'real risk', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_29_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states risk 'remains low', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_28_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment identifies individuals, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_27_743_chunk0",
+      "answer": "no",
+      "rationale": "'handful of cases' is not significant scale per the examples."
+    },
+    {
+      "segment_id": "seg_v5_26_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports test status and potential future cases, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_25_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_24_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states cases are 'mild', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_23_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions workers who 'got sick', which is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_22_743_chunk0",
+      "answer": "no",
+      "rationale": "'nine known human cases' is not significant scale per the examples."
+    },
+    {
+      "segment_id": "seg_v5_21_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes training and access expansion, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_20_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes funding use, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_19_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports funding allocation, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_17_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a vaccine is 'not necessary', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_16_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a vaccine 'does not provide protection', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_15_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes reliance on trust, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_14_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes vaccine distribution plans, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_13_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a vaccine 'will not be mandatory', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_12_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes risk reduction goals, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_11_743_chunk0",
+      "answer": "no",
+      "rationale": "'has occurred' is not a moderate verb on the list, and 'concern' is not scale."
+    },
+    {
+      "segment_id": "seg_v5_10_743_chunk0",
+      "answer": "no",
+      "rationale": "'was thought to be' is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_9_743_chunk0",
+      "answer": "no",
+      "rationale": "'emerged' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_8_743_chunk0",
+      "answer": "no",
+      "rationale": "'has happened' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_7_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment states something is 'preventable', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_6_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a 'theoretical' risk and future steps, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_4_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a potential future risk, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_3_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes potential future risk reduction, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_2_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the goal of an initiative, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_1_743_chunk0",
+      "answer": "no",
+      "rationale": "'could emerge' is hypothetical/future, and 'in circulation in millions' describes presence, not impact scale."
+    },
+    {
+      "segment_id": "seg_v5_17_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cooking safety, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_15_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the virus 'doesn’t represent a significant health threat', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_14_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the virus is 'difficult to keep out', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_13_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prevention efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_10_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that 'were killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_9_2030_chunk0",
+      "answer": "no",
+      "rationale": "'sizeable bird flu cases confirmed' mentions scale ('sizeable') but 'confirmed' is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_8_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that were 'killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_6_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes farm size, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_5_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that were 'killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_4_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that were 'killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_035_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a 'pathway to prevention', not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_034_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes PPE use, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_033_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds being 'euthanized', which is a containment verb and neutralizes Q3 by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_032_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes feathers being whipped up, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_031_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes difficulty keeping masks sealed, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_030_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'culling poultry', which is a containment verb and neutralizes Q3 by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_029_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'culling poultry', which is a containment verb and neutralizes Q3 by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_026_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes challenges in preventing spread, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_025_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_024_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment states cases were 'mild', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_023_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a hypothesis, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_022_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a hypothesis, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_021_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a hypothesis, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_020_721_chunk0",
+      "answer": "no",
+      "rationale": "'transmitted' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_019_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes genetic matching, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_018_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions herds that 'have been infected' and virus that is 'spreading', but 'infected' is plain outcome (rule 4) and 'spreading' describes mechanism."
+    },
+    {
+      "segment_id": "seg_v5_017_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions herds that 'have been infected', but 'infected' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_016_721_chunk0",
+      "answer": "no",
+      "rationale": "'reached' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_015_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cases among people involved in culling, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_014_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an update on a 'cluster', but 'provided an update' is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_013_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes lack of control and high probability of future infection, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_012_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes farmer actions, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_011_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions herds that 'have reported infections', but 'reported' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_010_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes resource provision, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_008_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes systemic problems, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_007_721_chunk0",
+      "answer": "no",
+      "rationale": "'gaining ground' is a metaphor not on the list of moderate verbs for Q3."
+    },
+    {
+      "segment_id": "seg_v5_006_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a possible future action, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_005_721_chunk0",
+      "answer": "no",
+      "rationale": "'moves' is not a moderate verb on the list, and 'arrest the spread' is about containment."
+    },
+    {
+      "segment_id": "seg_v5_004_721_chunk0",
+      "answer": "no",
+      "rationale": "'spreading' describes mechanism, not impact scale, and 'contain it' is about containment."
+    },
+    {
+      "segment_id": "seg_v5_003_721_chunk0",
+      "answer": "no",
+      "rationale": "'spreading' describes mechanism, not impact scale."
+    },
+    {
+      "segment_id": "seg_v5_002_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment expresses confidence in elimination, which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_001_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes increasing doubts (background), expresses belief in elimination (reassuring Q5), and mentions continued spread (mechanism)."
+    },
+    {
+      "segment_id": "seg_v5_14_1881_chunk0",
+      "answer": "no",
+      "rationale": "'would bring that figure up' describes a potential future number, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_13_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions cases being 'reported', but 'reported' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_12_1881_chunk0",
+      "answer": "no",
+      "rationale": "'can lead to' describes potential future impact, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_11_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptom range, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_10_1881_chunk0",
+      "answer": "no",
+      "rationale": "'spreads easily' describes mechanism, and 'can prove deadly' is potential/future."
+    },
+    {
+      "segment_id": "seg_v5_9_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes monitoring and provision of resources, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_8_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes response efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_7_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes testing status and potential future changes, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_6_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions workers who 'experienced mild symptoms', but 'experienced' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_5_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes testing prompted by an outbreak, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_4_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that were 'euthanized', which is a containment verb and neutralizes Q3 by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_3_1881_chunk0",
+      "answer": "no",
+      "rationale": "'emerged' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_2_1881_chunk0",
+      "answer": "no",
+      "rationale": "'may be infected' describes potential future status, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_1_1881_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions workers who 'experienced only mild symptoms', but 'experienced' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_37_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a single case with no symptoms, not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_36_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes genetic characteristics, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_35_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions the virus 'has caused' infections and fatalities, but 'caused' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_34_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions the virus 'has caused' infections, but 'caused' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_33_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes evolution and mutation, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_32_137_chunk0",
+      "answer": "no",
+      "rationale": "'can leverage' describes potential, and 'prompted calls' describes reaction, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_31_137_chunk0",
+      "answer": "no",
+      "rationale": "'can leverage' describes potential, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_30_137_chunk0",
+      "answer": "no",
+      "rationale": "'We've created' is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_29_137_chunk0",
+      "answer": "no",
+      "rationale": "'has been found' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_28_137_chunk0",
+      "answer": "no",
+      "rationale": "'has increased' is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_27_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes monitoring and 'rising threat'/'could spread' (potential/future)."
+    },
+    {
+      "segment_id": "seg_v5_26_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions an outbreak that 'killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_25_137_chunk0",
+      "answer": "no",
+      "rationale": "'moving along' describes mechanism, not impact scale with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_24_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment states the virus is 'not related', which is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_23_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that 'have been infected', but 'infected' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_22_137_chunk0",
+      "answer": "no",
+      "rationale": "'taken flight' is a metaphor not on the list, and 'reported' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_21_137_chunk0",
+      "answer": "no",
+      "rationale": "'made its first appearance' is not a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_19_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prevention efforts, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_18_137_chunk0",
+      "answer": "no",
+      "rationale": "'have shuttered' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_17_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a protest action, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_16_137_chunk0",
+      "answer": "no",
+      "rationale": "'ignited protests' uses a psychological verb ('ignited') related to public reaction, excluded by guard."
+    },
+    {
+      "segment_id": "seg_v5_15_137_chunk0",
+      "answer": "no",
+      "rationale": "'forced the destruction' uses a containment verb ('destruction') and is neutralized by rule 5."
+    },
+    {
+      "segment_id": "seg_v5_14_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds to be 'killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_13_137_chunk0",
+      "answer": "no",
+      "rationale": "'can be deadly' is potential, and 'spread rapidly' describes mechanism/speed, not impact scale."
+    },
+    {
+      "segment_id": "seg_v5_12_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment states eating is 'safe', which is a reassuring cue (Q5), not Q3."
+    },
+    {
+      "segment_id": "seg_v5_11_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions cases being 'documented' or 'reported', which are plain outcome verbs (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_10_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes recommendations for protection, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_9_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment states risk is 'low' (reassuring Q5) and mentions 'rising concerns'/'increasing threats' (background/potential)."
+    },
+    {
+      "segment_id": "seg_v5_8_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions birds that 'have been killed', but 'killed' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_6_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('prices more than doubled'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_5_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a consequence ('pay more'), not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_4_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes business actions ('raise my prices'), not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_3_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a business action ('raised my prices'), not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_2_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a consequence ('are paying more'), not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_1_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports financial/trade metrics ('edged egg costs higher'), which are excluded by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_5_1401_chunk0",
+      "answer": "no",
+      "rationale": "'could avoid' describes potential future outcome, not realised impact (rule 3 under Q3 Pattern Recognition Table)."
+    },
+    {
+      "segment_id": "seg_v5_4_1401_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions a case being 'reported', but 'reported' is a plain outcome verb (rule 4)."
+    },
+    {
+      "segment_id": "seg_v5_3_1401_chunk0",
+      "answer": "no",
+      "rationale": "'has seen' is not a moderate verb on the list."
+    },
+    {
+      "segment_id": "seg_v5_2_1401_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a plan to keep trade moving, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_1_1401_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes working on a plan, not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_026_71_chunk0",
+      "answer": "no",
+      "rationale": "'confirmed' is not a moderate verb on the list."
+    }
+  ],
+  "timestamp": "2025-06-19T07:57:19.380079"
+}

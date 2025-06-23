@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6120", "batch_size": 260, "batch_pos": 13}
+{"Q": 2, "answer": "no", "rationale": "The segment describes a price trend using moderate language ('climbed pretty steadily').", "method": "llm_batch", "batch_id": "batch_2_16740", "batch_size": 260, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "Rule 6 excludes financial/trade metrics.", "method": "llm_batch", "batch_id": "batch_3_16548", "batch_size": 260, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 13}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_2772", "batch_size": 260, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a factual increase in price based on data, lacking explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_2772_r1", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_7008", "batch_size": 260, "batch_pos": 13}
+{"Q": 7, "answer": "no", "rationale": "The segment describes price changes, which is not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17840", "batch_size": 260, "batch_pos": 13}
+{"Q": 8, "answer": "no", "rationale": "Describes chicken prices, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_7648", "batch_size": 260, "batch_pos": 11}
+{"Q": 9, "answer": "yes", "rationale": "'price... has climbed pretty steadily since it was at $1.62' reports price and change factually.", "method": "llm_batch", "batch_id": "batch_9_16280", "batch_size": 260, "batch_pos": 5}

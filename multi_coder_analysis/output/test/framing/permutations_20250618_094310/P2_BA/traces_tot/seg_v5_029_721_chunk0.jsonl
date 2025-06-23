@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15064", "batch_size": 260, "batch_pos": 21}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language to describe PPE requirements during culling.", "method": "llm_batch", "batch_id": "batch_2_11532", "batch_size": 260, "batch_pos": 1}
+{"Q": 3, "answer": "no", "rationale": "'culling' and 'depopulation' are containment actions, which neutralize Q3.", "method": "llm_batch", "batch_id": "batch_3_17548", "batch_size": 260, "batch_pos": 226}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13320", "batch_size": 260, "batch_pos": 220}
+{"Q": 5, "answer": "no", "rationale": "Describes a PPE requirement, a factual action.", "method": "llm_batch", "batch_id": "batch_5_16624", "batch_size": 260, "batch_pos": 216}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18212", "batch_size": 260, "batch_pos": 185}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_18236", "batch_size": 260, "batch_pos": 183}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18200", "batch_size": 260, "batch_pos": 116, "regex": {"rule": "CapabilityNoReassurance", "span": [103, 112], "captures": []}}

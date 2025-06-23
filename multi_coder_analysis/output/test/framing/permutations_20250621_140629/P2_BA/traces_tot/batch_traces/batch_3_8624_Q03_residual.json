@@ -1,0 +1,592 @@
+{
+  "batch_id": "batch_3_8624",
+  "hop_idx": 3,
+  "unknown_count": 117,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_8_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('meat supply is safe') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_9_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection and numbers of herds/states but does not use a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_10_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a single case but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_11_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('risk is low') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_12_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes work conditions but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_18_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential impact ('could all change quickly') but not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_21_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes virus behavior but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_29_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'growing list' which is not a specific scale/quantity required for Q3."
+    },
+    {
+      "segment_id": "seg_v5_46_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_86_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_89_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an expert statement but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_96_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports personal experience and future possibility but does not use a moderate verb paired with explicit scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_97_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'on the rise' which is a trend description, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_98_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential price increase but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_99_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a consequence of precautions but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_100_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses evaluative language ('death sentence') but not a moderate verb paired with explicit scale of outbreak impact."
+    },
+    {
+      "segment_id": "seg_v5_101_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment explains a policy but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_102_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions and dates but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_103_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'de-populated' which is a containment verb, triggering the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_104_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about containment without a moderate verb or scale."
+    },
+    {
+      "segment_id": "seg_v5_105_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an expert statement but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_106_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides identification but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_107_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers affected but uses 'affected' which is a plain outcome verb, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_108_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about industry size but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_109_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses financial/trade metrics ('Chicken prices rise') which is excluded from Q3 by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_110_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses financial/trade metrics ('cost of eggs has doubled') which is excluded from Q3 by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_111_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about business but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_112_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes reaction ('anxiously watching') but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_113_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses hypothetical/potential impact ('could very easily be the next one') but not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_114_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about business but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_115_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes precautions but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_116_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes precautions and potential outcome but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_117_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers affected but uses 'affected' which is a plain outcome verb, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_118_1065_chunk0",
+      "answer": "yes",
+      "rationale": "The segment uses the moderate verb 'hardest hit' paired with the scale 'states'."
+    },
+    {
+      "segment_id": "seg_v5_119_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports policy and condition but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_120_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses emotive language ('Scary thing') and discusses hypothetical outcome ('will that safety net be there') but not realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_121_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_122_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports recommendations but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_123_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a technical explanation but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_124_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an expectation/prediction but does not use a moderate verb paired with explicit scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_125_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'destroy' which is a containment verb, triggering the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_126_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'reported' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_127_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_128_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'culled' which is a containment verb, triggering the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_129_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_130_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports rationale for action but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_131_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the first case but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_132_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of cases but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_133_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of states but uses 'reported' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_134_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('risk to human health is low') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_135_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_136_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers of deaths but uses 'died' and 'killed' which are plain outcome verbs, not moderate verbs from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_137_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports findings but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_138_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports findings but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_139_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_140_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome but uses 'died' which is a plain outcome verb, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_141_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an expectation/prediction but does not use a moderate verb paired with explicit scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_142_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a finding but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_143_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_144_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('low risk') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_145_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('risk... appears low') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_146_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a past event ('spread rapidly') but not the current threat's realised impact with a moderate verb and scale."
+    },
+    {
+      "segment_id": "seg_v5_147_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a past event outcome but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_148_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an event but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_149_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers of cases and outcome but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_150_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'sparked' which is a psychological verb, not a moderate verb describing the threat's impact scale."
+    },
+    {
+      "segment_id": "seg_v5_151_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a recommendation but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_152_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'reported' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_153_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a strategy but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_154_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'reported' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_155_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a finding but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_156_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides a technical explanation but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_157_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research finding but uses 'killed' which is a plain outcome verb, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_158_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research finding but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_159_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_160_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_161_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_162_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research finding but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_163_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research finding and potential but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_164_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_165_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_166_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research limitation but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_167_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research limitation but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_168_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a research recommendation but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_169_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an official statement but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_170_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports testing results but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_171_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports ongoing actions but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_172_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports testing results and uses 'condemned to be slaughtered' which is related to containment/disposal, not a Q3 moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_173_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_174_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an experiment but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_175_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an experiment outcome but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_176_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information about spread but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_177_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers but uses 'tested positive' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_178_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers but uses 'tested positive' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_179_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers and recommendations but uses 'tested positive' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_180_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports investigation and detection but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_181_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports case details but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_182_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions and historical data but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_183_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('risk to humans is low') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_184_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_185_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential financial/trade impact ('risk nearly $10 billion') which is excluded from Q3 by rule 6."
+    },
+    {
+      "segment_id": "seg_v5_186_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a future action but does not use a moderate verb paired with explicit scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_187_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'detected' which is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_188_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports expert concern and virus behavior but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_189_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'prompted' which is a psychological verb, not a moderate verb describing the threat's impact scale."
+    },
+    {
+      "segment_id": "seg_v5_190_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'slaughtered' which is a containment verb, triggering the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_191_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information about production but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_192_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers affected but uses 'affected' which is a plain outcome verb, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_193_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information about production but does not use a moderate verb paired with explicit scale of threat impact."
+    },
+    {
+      "segment_id": "seg_v5_194_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'died' which is a plain outcome verb and 'culled' which is a containment verb, triggering the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_195_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a percentage but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_196_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('risk to the public is low', 'food supply remains safe and stable') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_197_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('no concern', 'affects the safety') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_198_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_199_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome but does not use a moderate verb paired with explicit scale."
+    },
+    {
+      "segment_id": "seg_v5_200_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('not a food safety concern') and no moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_3_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'infected and killed millions', which includes scale, but 'infected' and 'killed' are plain outcome verbs, not the specific moderate verbs required by Q3."
+    }
+  ]
+}

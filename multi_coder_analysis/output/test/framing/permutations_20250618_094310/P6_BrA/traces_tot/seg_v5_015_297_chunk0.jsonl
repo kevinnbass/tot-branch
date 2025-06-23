@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'global pandemic', which is a noun phrase, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 76}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'global pandemic' is a classification, not a potent metaphor or high-potency verb.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 22}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a noun phrase ('global pandemic') not a moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 211}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 200}
+{"Q": 5, "answer": "no", "rationale": "Calls the situation 'management of a global pandemic' and suggests offering assistance, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 192}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 145}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 145}
+{"Q": 7, "answer": "no", "rationale": "The negation ('with less resources') is about resources, not a bare negation about a risk, threat, or fact pattern listed in Q7.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 136}
+{"Q": 8, "answer": "yes", "rationale": "Describes the nature of the situation and a recommended action/approach ('we should at least be offering assistance').", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 196}

@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a factual rule/condition, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 160}
+{"Q": 2, "answer": "no", "rationale": "The language describes factual rules, not high-potency framing of the threat.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 106}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_18132", "batch_size": 81, "batch_pos": 34}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16304", "batch_size": 64, "batch_pos": 20}
+{"Q": 5, "answer": "no", "rationale": "Reports conditions (allowed if test negative) but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16440", "batch_size": 56, "batch_pos": 12}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 220}
+{"Q": 6, "answer": "no", "rationale": "The word 'only' modifies a condition, not a quantity relative to a scale.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 220}
+{"Q": 7, "answer": "no", "rationale": "The negation ('have proof of negative flu tests') is about test results, not a bare negation about a risk, threat, or fact pattern listed in Q7.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 211}
+{"Q": 8, "answer": "yes", "rationale": "Describes implemented safeguards/measures ('only if they have proof of negative flu tests') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_16644", "batch_size": 49, "batch_pos": 9}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16524", "batch_size": 260, "batch_pos": 9}
+{"Q": 2, "answer": "no", "rationale": "The segment uses a neutral idiom ('could change in the rub of an eye').", "method": "llm_batch", "batch_id": "batch_2_2312", "batch_size": 260, "batch_pos": 251}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses how things could change quickly.", "method": "llm_batch", "batch_id": "batch_3_18060", "batch_size": 260, "batch_pos": 209}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15012", "batch_size": 260, "batch_pos": 197}
+{"Q": 5, "answer": "no", "rationale": "The segment reports negative framing ('could change quickly') without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17516", "batch_size": 260, "batch_pos": 195}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16404", "batch_size": 260, "batch_pos": 176}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_5192", "batch_size": 260, "batch_pos": 169}
+{"Q": 8, "answer": "no", "rationale": "The segment discusses the potential for rapid change, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15012", "batch_size": 260, "batch_pos": 62}
+{"Q": 9, "answer": "no", "rationale": "The segment uses metaphorical language rather than reporting numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14520", "batch_size": 260, "batch_pos": 58}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 224, "regex": {"rule": "ReliefSpeculation", "span": [32, 37], "captures": ["could"]}}

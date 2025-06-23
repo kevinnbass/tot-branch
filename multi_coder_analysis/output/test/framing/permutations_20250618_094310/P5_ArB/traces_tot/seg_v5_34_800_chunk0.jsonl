@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18296", "batch_size": 260, "batch_pos": 198}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes action and support ('led by', 'with remote assistance from').", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 192}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale/impact information.", "method": "llm_batch", "batch_id": "batch_3_11032", "batch_size": 260, "batch_pos": 164}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_9508", "batch_size": 260, "batch_pos": 159}
+{"Q": 5, "answer": "no", "rationale": "This segment describes who is leading the investigation and contains no calming cue.", "method": "llm_batch", "batch_id": "batch_5_17760", "batch_size": 260, "batch_pos": 156}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_17008", "batch_size": 260, "batch_pos": 149}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16740", "batch_size": 260, "batch_pos": 146}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14728", "batch_size": 260, "batch_pos": 108, "regex": {"rule": "CapabilityNoReassurance", "span": [44, 53], "captures": []}}

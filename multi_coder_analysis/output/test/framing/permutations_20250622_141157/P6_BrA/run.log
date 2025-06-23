@@ -1,0 +1,44 @@
+2025-06-22 14:12:23,905 - INFO - File logging enabled → multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\run.log
+2025-06-22 14:12:23,959 - INFO - Processing with batch size = 200 and concurrency=20
+2025-06-22 14:12:23,979 - INFO - Hop 01 → active:10   regex_yes:0   ( 16.0s)
+2025-06-22 14:12:23,983 - INFO - Hop 1: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,132 - ERROR - Batch processing error in hop 1: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,133 - INFO - Hop 02 → active:9    regex_yes:1   ( 16.2s)
+2025-06-22 14:12:24,134 - INFO - Hop 2: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,254 - ERROR - Batch processing error in hop 2: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,260 - INFO - Hop 03 → active:9    regex_yes:1   ( 16.3s)
+2025-06-22 14:12:24,261 - INFO - Hop 3: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,452 - ERROR - Batch processing error in hop 3: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,454 - INFO - Hop 04 → active:9    regex_yes:1   ( 16.5s)
+2025-06-22 14:12:24,455 - INFO - Hop 4: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,504 - ERROR - Batch processing error in hop 4: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,511 - INFO - Hop 05 → active:9    regex_yes:1   ( 16.6s)
+2025-06-22 14:12:24,514 - INFO - Hop 5: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,571 - ERROR - Batch processing error in hop 5: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,579 - INFO - Hop 06 → active:9    regex_yes:1   ( 16.6s)
+2025-06-22 14:12:24,580 - INFO - Hop 6: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,732 - ERROR - Batch processing error in hop 6: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,746 - INFO - Hop 07 → active:9    regex_yes:1   ( 16.8s)
+2025-06-22 14:12:24,746 - INFO - Hop 7: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,865 - ERROR - Batch processing error in hop 7: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,866 - INFO - Hop 08 → active:9    regex_yes:1   ( 16.9s)
+2025-06-22 14:12:24,867 - INFO - Hop 8: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:24,951 - ERROR - Batch processing error in hop 8: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:24,953 - INFO - Hop 09 → active:7    regex_yes:3   ( 17.0s)
+2025-06-22 14:12:24,956 - INFO - Hop 9: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:25,135 - ERROR - Batch processing error in hop 9: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:25,136 - INFO - Hop 10 → active:7    regex_yes:3   ( 17.2s)
+2025-06-22 14:12:25,136 - INFO - Hop 10: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:25,221 - ERROR - Batch processing error in hop 10: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:25,222 - INFO - Hop 11 → active:7    regex_yes:3   ( 17.3s)
+2025-06-22 14:12:25,227 - INFO - Hop 11: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:25,449 - ERROR - Batch processing error in hop 11: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:25,450 - INFO - Hop 12 → active:7    regex_yes:3   ( 17.5s)
+2025-06-22 14:12:25,451 - INFO - Hop 12: processing 1 batches (size=200) with concurrency=20
+2025-06-22 14:12:25,610 - ERROR - Batch processing error in hop 12: unsupported operand type(s) for |: 'type' and 'NoneType'
+2025-06-22 14:12:25,636 - INFO - ToT processing complete. Labels saved to: multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\model_labels_tot.csv
+2025-06-22 14:12:25,655 - INFO - Token summary written to multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\token_usage_summary.json
+2025-06-22 14:12:25,666 - INFO - Regex rule stats written to multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\regex_rule_stats.csv
+2025-06-22 14:12:25,675 - INFO - Regex rules snapshot written to multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\regex_rules_snapshot.jsonl
+2025-06-22 14:12:25,716 - INFO - Run parameter summary written to multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\run_parameters_summary.json
+2025-06-22 14:12:25,789 - INFO - Run-level summary written to: multi_coder_analysis\output\test\framing\permutations_20250622_141157\P6_BrA\run_summary.txt

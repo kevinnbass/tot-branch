@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17452", "batch_size": 260, "batch_pos": 153}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'worrying' describes a psychological state, not the threat's impact with high-potency language.", "method": "llm_batch", "batch_id": "batch_2_7488", "batch_size": 260, "batch_pos": 137}
+{"Q": 3, "answer": "no", "rationale": "'worrying' is evaluative. 'found' is a plain outcome verb.", "method": "llm_batch", "batch_id": "batch_3_17548", "batch_size": 260, "batch_pos": 107}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13320", "batch_size": 260, "batch_pos": 102}
+{"Q": 5, "answer": "no", "rationale": "WHO described the situation as 'worrying', negative framing.", "method": "llm_batch", "batch_id": "batch_5_16624", "batch_size": 260, "batch_pos": 98}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18212", "batch_size": 260, "batch_pos": 72}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_18236", "batch_size": 260, "batch_pos": 70}
+{"Q": 8, "answer": "no", "rationale": "Reports an opinion ('worrying') and facts about cases, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18200", "batch_size": 260, "batch_pos": 12}
+{"Q": 9, "answer": "no", "rationale": "The segment contains psychological language ('worrying') and is not solely factual reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_7228", "batch_size": 260, "batch_pos": 37}
+{"Q": 10, "answer": "no", "rationale": "The segment states the WHO described the situation as 'worrying,' which is about current concern, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16768", "batch_size": 260, "batch_pos": 226}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement uses 'worrying' which is a risk adjective but not explicitly intensified.", "method": "llm_batch", "batch_id": "batch_11_9680", "batch_size": 260, "batch_pos": 207}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_16484", "batch_size": 260, "batch_pos": 207, "regex": {"rule": "NeutralStats", "span": [78, 99], "captures": ["confirm", "cases"]}}

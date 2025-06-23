@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_6_3584",
+  "hop_idx": 6,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_5_690_chunk0",
+      "answer": "no",
+      "rationale": "Segment uses bare numerals ('Three', 'Two', 'one') but lacks a specific minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X', 'nationwide', '%')."
+    },
+    {
+      "segment_id": "seg_v5_4_690_chunk0",
+      "answer": "no",
+      "rationale": "Segment uses a bare numeral ('Three') but lacks a specific minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X', 'nationwide', '%')."
+    },
+    {
+      "segment_id": "seg_v5_3_690_chunk0",
+      "answer": "no",
+      "rationale": "Segment lacks both a minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X', 'nationwide', '%')."
+    },
+    {
+      "segment_id": "seg_v5_13_1683_chunk0",
+      "answer": "no",
+      "rationale": "Segment lacks both a minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X', 'nationwide', '%'). '111 million' is not a minimiser."
+    },
+    {
+      "segment_id": "seg_v5_12_1683_chunk0",
+      "answer": "no",
+      "rationale": "Segment lacks both a minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X', 'nationwide', '%'). Contains explicit calming ('risk...low') but that is Q5, not Q6."
+    },
+    {
+      "segment_id": "seg_v5_10_1683_chunk0",
+      "answer": "no",
+      "rationale": "Segment uses 'no active cases' which includes 'no' as a potential minimiser, but lacks the required explicit numerical or percentage scale contrast ('out of X', '%')."
+    },
+    {
+      "segment_id": "seg_v5_9_1683_chunk0",
+      "answer": "no",
+      "rationale": "Segment uses 'no confirmed human-to-human transfers' which includes 'no' as a potential minimiser, but lacks the required explicit numerical or percentage scale contrast ('out of X', '%'). 'three people' is a bare numeral."
+    },
+    {
+      "segment_id": "seg_v5_8_1683_chunk0",
+      "answer": "no",
+      "rationale": "Segment lacks both a minimiser token ('only', 'just', etc.) and the specific type of explicit scale contrast ('out of X', 'nationwide', '%') required for Q6. 'over 80' is not a minimiser."
+    },
+    {
+      "segment_id": "seg_v5_6_1683_chunk0",
+      "answer": "no",
+      "rationale": "Segment lacks both a minimiser token ('only', 'just', etc.) and an explicit scale contrast ('out of X', 'nationwide', '%'). 'over 40 million' is not a minimiser."
+    }
+  ],
+  "timestamp": "2025-06-20T17:35:17.892730"
+}

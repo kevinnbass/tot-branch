@@ -1,0 +1,52 @@
+{
+  "batch_id": "batch_1_6224",
+  "hop_idx": 1,
+  "segment_count": 3,
+  "matches": [
+    {
+      "statement_id": "seg_v5_1_355_chunk0",
+      "regex": {
+        "rule": "IntensifierRiskAdjV2",
+        "span": [
+          102,
+          119
+        ],
+        "captures": [
+          "contagious"
+        ]
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_5_1174_chunk0",
+      "regex": {
+        "rule": "IntensifierRiskAdjV2",
+        "span": [
+          84,
+          101
+        ],
+        "captures": [
+          "contagious"
+        ]
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_066_258_chunk0",
+      "regex": {
+        "rule": "IntensifierRiskAdjV2",
+        "span": [
+          102,
+          117
+        ],
+        "captures": [
+          "infectious"
+        ]
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    }
+  ]
+}

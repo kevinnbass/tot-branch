@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'mostly' modifies 'due'. 'large' modifies 'amounts'.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 250}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 245}
+{"Q": 3, "answer": "no", "rationale": "Uses 'went back and applied' (action) and 'found' (plain outcome verb) with vague scale ('large amounts').", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 225}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 224}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 224}
+{"Q": 5, "answer": "no", "rationale": "The segment reports applying probe and finding viral fragments, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 221}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 211}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 211}
+{"Q": 8, "answer": "yes", "rationale": "Describes applying a method and finding results (research/surveillance activity).", "method": "llm_batch", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 200}

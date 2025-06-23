@@ -1,0 +1,959 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_2_948_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a response measure ('restricted zones... have been established') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "Describes a negative fact and reaction ('source of concern'), not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_5_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports case numbers and severity, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports outbreaks and numbers affected, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_3_1534_chunk0",
+    "answer": "no",
+    "rationale": "Describes a safeguard ('working to confirm the safety') but includes the calming keyword 'safety'."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "no",
+    "rationale": "Reports a case, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_1_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes preparedness actions ('sweating in gloves, gowns... disinfection') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "States the presence of the virus, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the virus's nature and impact, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports findings in mammals, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_8_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes impact on people, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_15_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes a future possibility/risk, not a current capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_16_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_17_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_18_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_19_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes research findings and transmission route, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_20_647_chunk0",
+    "answer": "no",
+    "rationale": "Expresses emotion about the disease, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a specific incident, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_28_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports symptoms, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_30_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes an experimental setup, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_31_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes experimental results, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_32_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes an experimental setup, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_33_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes experimental results and explicitly calls them 'good news', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_34_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a future plan/capability ('plans to repeat the tests') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_35_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes a future possibility/risk, not a current capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_36_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes a mechanism for change/risk, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_37_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the nature of viruses, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_38_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the nature of viruses, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_39_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes an existing safeguard ('flu vaccines help build immunity') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_40_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the nature of findings ('sobering'), not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_41_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports past mild cases but warns of future serious illness possibility, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_42_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports past cases and severity spectrum, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_43_647_chunk0",
+    "answer": "no",
+    "rationale": "Explains a potential reason for severity difference, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_44_647_chunk0",
+    "answer": "yes",
+    "rationale": "Discusses the importance of a preparedness measure ('vaccination would still be important') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_45_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a preparedness measure ('ordered 20,000 doses') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_46_647_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_47_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes preparedness measures ('made protective equipment available', 'made additional funding available') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_48_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses limitations/concerns about implementing a safeguard, not a straightforward capability statement."
+  },
+  {
+    "segment_id": "seg_v5_49_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a development capability ('working on the development of a rapid test') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_50_647_chunk0",
+    "answer": "no",
+    "rationale": "Explains a potential factor for symptom severity, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_51_647_chunk0",
+    "answer": "no",
+    "rationale": "Explains a potential transmission route and outcome, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_52_647_chunk0",
+    "answer": "no",
+    "rationale": "Explains a potential transmission route and outcome, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_76_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the virus's capability, not a human/system capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_79_647_chunk0",
+    "answer": "no",
+    "rationale": "States agreement, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_80_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the virus's nature, not a human/system capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_81_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the virus's impact, not a human/system capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_82_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms in animals, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_83_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms in animals, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_84_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes the virus's impact and expresses negative sentiment, not a human/system capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_90_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes an attempt with a negative outcome, not a successful capability/safeguard."
+  },
+  {
+    "segment_id": "seg_v5_91_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes outcomes for animals, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_92_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes precautions and explicitly states they 'were effective', linking safeguard to positive outcome."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes a situation and reaction ('on edge'), not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_6_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes precautions taken ('Disease precautions kept...') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_7_1065_chunk0",
+    "answer": "no",
+    "rationale": "States risk is 'rare' for people, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_8_1065_chunk0",
+    "answer": "yes",
+    "rationale": "States a necessary action/protocol ('whole flock has to go') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_9_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a preparedness/surveillance measure ('watching the outbreak closely') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_11_1065_chunk0",
+    "answer": "yes",
+    "rationale": "States a necessary action/protocol ('do need to be de-populated') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_12_1065_chunk0",
+    "answer": "no",
+    "rationale": "States the effect of a response measure ('stops the virus'), linking action to positive outcome."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "no",
+    "rationale": "Provides identification, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected and industry size, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_17_1065_chunk0",
+    "answer": "no",
+    "rationale": "States a fact about industry size/ranking, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_18_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports economic impact, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_19_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports economic impact, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "no",
+    "rationale": "Provides company information, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes a company, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_27_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a safeguard requirement ('has to be absolutely sterile') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_29_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports affected locations, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_30_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a safeguard ('Agriculture Department pays farmers') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_31_1065_chunk0",
+    "answer": "no",
+    "rationale": "Expresses fear and questions a safeguard, not a straightforward capability statement."
+  },
+  {
+    "segment_id": "seg_v5_34_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes response measures/safeguards ('temporarily banned... events') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_35_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a preparedness/surveillance recommendation ('asking people... to watch out... and call') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission route, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_37_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes a future possibility linked to actions ('expected to stop'), linking precautions to positive outcome."
+  },
+  {
+    "segment_id": "seg_v5_1_1198_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a planned action/response measure ('preparing to destroy') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_1198_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event and trigger, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_3_1198_chunk0",
+    "answer": "no",
+    "rationale": "Describes a positive outcome from a process, not a general capability/preparedness statement."
+  },
+  {
+    "segment_id": "seg_v5_4_1198_chunk0",
+    "answer": "yes",
+    "rationale": "States a necessary action/protocol ('will have to be culled') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_192_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a safeguard principle ('to err on the side of caution') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_3_192_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "no",
+    "rationale": "Reports case numbers, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "no",
+    "rationale": "Reports affected locations, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_6_192_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_1_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports deaths and describes an investigation/response measure ('trying to determine') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event and finding, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_4_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Describes response measures ('captured', 'sent') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_5_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outcomes and a response measure/safeguard ('have been quarantined') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "no",
+    "rationale": "Describes a future expectation/risk, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "no",
+    "rationale": "Describes where the virus occurs/has been found, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "no",
+    "rationale": "Describes a past event, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "no",
+    "rationale": "Describes the outcome of a past event, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_4_914_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a surveillance/response measure ('has reported the matter to the WHO') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_5_914_chunk0",
+    "answer": "no",
+    "rationale": "Reports cases and symptoms, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_6_914_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event and trigger for action, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "no",
+    "rationale": "Reports past outbreaks, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_11_914_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a strategy/preparedness measure ('developing... vaccine viruses', 'strategy for... preparedness') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_001_1352_chunk0",
+    "answer": "no",
+    "rationale": "Reports an outbreak, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "no",
+    "rationale": "Reports details of an outbreak, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission route, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_2_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes a study finding, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_3_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes a step in a study, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_4_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes a step in a study, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_5_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a requirement/protocol ('must be pasteurized') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_6_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes study findings, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_7_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes study findings and implications, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "no",
+    "rationale": "Provides publication information, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_10_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes study limitations, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_12_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Describes needed future research/actions ('Replication... is needed', 'extension... is needed', 'study... needed') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_15_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Describes ongoing research/studies ('in the midst of conducting pasteurization studies', 'testing the use of homogenizers') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_18_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a past study ('performed another study') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes the virus's history and spread, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports cases, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_23_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Provides recommendations/protocols ('should be cautious', 'should don protective equipment', 'monitor themselves') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_1_1300_chunk0",
+    "answer": "yes",
+    "rationale": "Describes an investigation ('is investigating') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_1300_chunk0",
+    "answer": "yes",
+    "rationale": "Describes actions taken for a case ('is being monitored', 'in isolation') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_4_1300_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low' and cases are 'rare', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_5_1300_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a preparedness measure ('is adopting an extra cautious stance') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_6_1300_chunk0",
+    "answer": "no",
+    "rationale": "Describes a potential negative consequence/risk, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_1_1917_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a planned action/safeguard ('will start vaccinating birds') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_2_1917_chunk0",
+    "answer": "no",
+    "rationale": "Reports a past event/finding, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "no",
+    "rationale": "Provides production numbers, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "no",
+    "rationale": "Provides production numbers, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_7_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a statistic about safeguards/response measures ('subject to avian flu controls') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_4_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Describes an action/protocol ('are being separated') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "no",
+    "rationale": "Describes outcome for animals, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_8_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a requirement/protocol ('is required to be pasteurized') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_10_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an action taken by a company ('temporarily halted operations') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_11_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Reports actions taken by a company ('culled') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "Expresses caution about future possibility, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_17_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Describes effort ('trying to figure it out') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_001_803_chunk0",
+    "answer": "yes",
+    "rationale": "Describes an investigation ('An investigation... has turned up') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_004_803_chunk0",
+    "answer": "yes",
+    "rationale": "Discusses needed future action/research ('needs further exploration', 'Testing... should answer') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "Explicitly states risk is 'low', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "Expresses concern about credibility, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_014_803_chunk0",
+    "answer": "yes",
+    "rationale": "Suggests a potential future capability/approach ('Sequencing wastewater material may be the key') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "Expresses concern about the speed of a response/investigation, not a straightforward capability statement."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "no",
+    "rationale": "Describes a situation and risk level based on whether precautions were in place, not just stating the safeguard exists."
+  },
+  {
+    "segment_id": "seg_v5_017_803_chunk0",
+    "answer": "yes",
+    "rationale": "Describes an action taken ('blood samples have been collected') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_022_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports case numbers and describes the situation, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected and notes a limitation in data, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_025_803_chunk0",
+    "answer": "yes",
+    "rationale": "Describes surveillance activities ('is doing bulk tank testing') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports findings from surveillance, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports findings from surveillance, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports deaths, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_003_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports estimated deaths and context, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "Provides historical context, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "no",
+    "rationale": "Describes spread, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports numbers affected, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports deaths and impact, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports a death, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "Describes past understanding of transmission, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "Describes new evidence about transmission, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_013_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports study findings about transmission, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_015_813_chunk0",
+    "answer": "no",
+    "rationale": "Provides reasoning about transmission, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "no",
+    "rationale": "States a conclusion about transmission, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_017_813_chunk0",
+    "answer": "no",
+    "rationale": "Provides reasoning about transmission, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_018_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports spread and suggests transmission route, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "no",
+    "rationale": "Describes implications of transmission route for risk, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_021_813_chunk0",
+    "answer": "yes",
+    "rationale": "States a necessary action/recommendation ('We must quickly study') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports a statistic, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_2_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Provides production projections (industry capability) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_3_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Provides production projections and growth figures (industry capability) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_4_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Provides market share projections (industry capability) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_5_1397_chunk0",
+    "answer": "no",
+    "rationale": "Praises a capability ('Brazil's ability to protect'), linking it to a positive outcome."
+  },
+  {
+    "segment_id": "seg_v5_6_1397_chunk0",
+    "answer": "no",
+    "rationale": "Praises a capability ('Brazil's ability to protect'), linking it to a positive outcome."
+  },
+  {
+    "segment_id": "seg_v5_7_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Provides export figures (industry capability) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_8_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Provides export projections (industry capability) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a restriction (response measure) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports detections, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_004_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports action taken ('euthanised') and its purpose ('in an effort to stop the spread'), linking action to desired outcome."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a restriction (response measure) without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_006_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a restriction (response measure) and its temporary nature without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_009_644_chunk0",
+    "answer": "no",
+    "rationale": "States 'egg supply was not at risk', triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_010_644_chunk0",
+    "answer": "no",
+    "rationale": "Denies nationwide shortage, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection events, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_013_644_chunk0",
+    "answer": "no",
+    "rationale": "Praises surveillance activities ('working well to date'), linking activity to effectiveness."
+  },
+  {
+    "segment_id": "seg_v5_014_644_chunk0",
+    "answer": "yes",
+    "rationale": "Describes an action taken ('Control areas were set up') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports findings within control areas, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_016_644_chunk0",
+    "answer": "yes",
+    "rationale": "Describes response measures/protocols ('all birds... were euthanised', 'carcasses safely disposed of') without explicit calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a restriction and the warning that preceded it, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "Provides an opinion on the reason for an action, not a capability/preparedness."
+  },
+  {
+    "segment_id": "seg_v5_023_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a surveillance finding ('has not been detected') without explicit calming keywords."
+  }
+]
+```

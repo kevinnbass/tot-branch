@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains metaphorical language, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 145}
+{"Q": 2, "answer": "no", "rationale": "The verb 'interfered' is moderate. 'invisible virus' is descriptive, not high-potency.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 91}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_18132", "batch_size": 81, "batch_pos": 19}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16304", "batch_size": 64, "batch_pos": 8}
+{"Q": 5, "answer": "no", "rationale": "Describes past interference with a rite, not a calming cue about the current situation.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 260}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 208}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 208}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 199}
+{"Q": 8, "answer": "no", "rationale": "The segment uses a metaphor about a virus interfering, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 257}
+{"Q": 9, "answer": "no", "rationale": "The segment reports interference, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 249}
+{"Q": 10, "answer": "no", "rationale": "The segment describes past interference, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_4860", "batch_size": 33, "batch_pos": 9}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 224}
+{"Q": 12, "answer": "yes", "rationale": "'invisible virus' is descriptive; 'interfered' is moderate verb not amplified.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 223}

@@ -1,0 +1,494 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_1_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infected farms and birds killed using standard verbs ('infected', 'forcing the killing')."
+  },
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports total number of birds killed across the nation using standard verbs ('had to kill', 'including')."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds killed in Iowa using standard verbs ('having to kill')."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports Iowa's ranking and number of chickens on farms using standard verbs ('is', 'had')."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports annual number of turkeys raised using a standard verb ('raises')."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports location of cases, not primarily prices, economic data, or numerical metrics in the Q9 sense."
+  },
+  {
+    "segment_id": "seg_v5_7_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports confirmation of virus on a farm with a specific number of birds, not primarily economic data or prices."
+  },
+  {
+    "segment_id": "seg_v5_8_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of states with confirmed cases using standard verbs ('shows', 'have confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_9_102_chunk0",
+    "answer": "no",
+    "rationale": "Explains the cause of spread, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports a statement about public health concern, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports updates to total numbers of birds killed using standard verbs ('updated to correct')."
+  },
+  {
+    "segment_id": "seg_v5_12_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports updates to total numbers of birds killed using standard verbs ('updated to correct')."
+  },
+  {
+    "segment_id": "seg_v5_1_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of dairy herds confirmed using standard verbs ('confirmed', 'have been confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports FDA finding on milk samples using standard verbs ('announced its finding', 'had trace amounts')."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports fatality rate of human cases using standard verbs ('reported', 'were fatal')."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cats that died using a standard verb ('died')."
+  },
+  {
+    "segment_id": "seg_v5_9_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports increase in sales using standard verbs and quantification ('jumped 27 percent', 'from $12 million... to $19.4 million')."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports research estimate on consumption percentage using a standard verb ('estimates')."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "Discusses link between raw milk consumption and other diseases, not primarily metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports CDC issuing a health alert, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risks to the general public remain low')."
+  },
+  {
+    "segment_id": "seg_v5_9_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports symptom in a patient, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "no",
+    "rationale": "Lists potential symptoms, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports fatality rate of human cases using standard verbs ('have resulted in death')."
+  },
+  {
+    "segment_id": "seg_v5_17_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports officials expressing concerns, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_18_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread to states using standard verbs ('began', 'quickly spread', 'include cases')."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports first outbreak detection and confirmation of case type, not primarily economic data or large-scale metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "Discusses increase in infections and concern, not specific numerical metrics being reported factually."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreaks and total number of poultry affected using standard verbs ('reported', 'totalling')."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Reports confirmation of one case using a standard verb ('has been confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('overall public health risk is low')."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "Introduces bird flu, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports impact on birds using standard verbs ('infected and killed')."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports finding in mammals and number of kinds using standard verbs ('been found in')."
+  },
+  {
+    "segment_id": "seg_v5_7_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using framing language ('a global zoonotic animal pandemic')."
+  },
+  {
+    "segment_id": "seg_v5_8_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a metaphor ('collateral damage'), not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses a potential future scenario, not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports seeing infected animals, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms in animals, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms and duration, but primarily focuses on vivid description of impact, not Q9 metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms and duration, but primarily focuses on vivid description of impact, not Q9 metrics."
+  },
+  {
+    "segment_id": "seg_v5_23_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports lack of prior knowledge, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports research findings, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using an intensifier ('really hadn't seen before') applied to severity."
+  },
+  {
+    "segment_id": "seg_v5_26_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using emotional language ('very sad thing to see')."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of human infections and duration using standard verbs ('known to have infected', 'have been')."
+  },
+  {
+    "segment_id": "seg_v5_31_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote defining a term, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_32_647_chunk0",
+    "answer": "no",
+    "rationale": "Explains how infections happen, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_34_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infections in workers using a standard verb ('have been')."
+  },
+  {
+    "segment_id": "seg_v5_35_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms in workers using a standard verb ('developed')."
+  },
+  {
+    "segment_id": "seg_v5_36_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports details of a case using a standard verb ('reported')."
+  },
+  {
+    "segment_id": "seg_v5_37_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms in a worker using a standard verb ('developed')."
+  },
+  {
+    "segment_id": "seg_v5_47_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of herds and states tested positive using standard verbs ('have tested positive', 'across')."
+  },
+  {
+    "segment_id": "seg_v5_50_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a comparison to suggest potential for change, not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_51_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses opportunity for virus change, not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_52_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using intensifiers ('very quickly') applied to rate of change (background condition)."
+  },
+  {
+    "segment_id": "seg_v5_53_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using intensifiers ('very quickly', 'very easily') applied to rate of change/spread (background conditions)."
+  },
+  {
+    "segment_id": "seg_v5_56_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes study findings as 'sobering', which is framing language."
+  },
+  {
+    "segment_id": "seg_v5_58_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases and their severity using standard verbs ('have been mild', 'is possible')."
+  },
+  {
+    "segment_id": "seg_v5_59_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of human infections and spectrum of severity using standard verbs ('there's been')."
+  },
+  {
+    "segment_id": "seg_v5_61_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert opinion, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_62_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert statement about lack of testing, not primarily metrics."
+  },
+  {
+    "segment_id": "seg_v5_63_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert opinion, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_64_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential for milder symptoms, not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_65_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential for severe disease, not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_66_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert quote on virus infecting organs, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_67_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert agreement, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_68_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes infected animal behavior, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_69_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes specific animal behavior, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_70_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using an intensifier ('very, very severe disease') applied to impact."
+  },
+  {
+    "segment_id": "seg_v5_71_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert quote on virus changes and uncertainty, not primarily metrics."
+  },
+  {
+    "segment_id": "seg_v5_72_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infected foxes and outcome using standard verbs ('had... that survived', 'went blind')."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "no",
+    "rationale": "Contains framing language ('on edge', 'on the rise')."
+  },
+  {
+    "segment_id": "seg_v5_2_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on price increases using standard verbs ('cost more', 'could get even higher')."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "no",
+    "rationale": "Identifies a person's role, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds affected using a standard verb ('have been affected')."
+  },
+  {
+    "segment_id": "seg_v5_17_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports state ranking using a standard verb ('are')."
+  },
+  {
+    "segment_id": "seg_v5_18_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports chicken prices rising using standard verbs ('prices rise', 'hits')."
+  },
+  {
+    "segment_id": "seg_v5_19_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports egg cost doubling using a standard verb ('has doubled')."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports amount of turkey raised annually using a standard verb ('raises')."
+  },
+  {
+    "segment_id": "seg_v5_23_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote about uncertainty, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "no",
+    "rationale": "Identifies a company, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_26_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote about equipment cleaning, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds, states, and flocks affected using a standard verb ('has affected')."
+  },
+  {
+    "segment_id": "seg_v5_29_1065_chunk0",
+    "answer": "no",
+    "rationale": "Lists hardest hit states, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_30_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports department payment and uncertainty, not specific numerical metrics being reported factually."
+  },
+  {
+    "segment_id": "seg_v5_33_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote using a risk adjective ('devastating') applied to potential economic impact."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports expert statement on virus carriers, not primarily prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_192_chunk0",
+    "answer": "no",
+    "rationale": "Reports first confirmed case of a strain, not primarily economic data or large-scale metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases confirmed using a standard verb ('have been confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "no",
+    "rationale": "Reports 'Most states' which is qualitative, not a specific numerical metric."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "no",
+    "rationale": "Reports finding a dead bird testing positive, not primarily economic data or large-scale metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds testing positive and results pending using standard verbs ('found dead also tested positive', 'aren’t yet completed')."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "no",
+    "rationale": "Discusses expected rise in exposure, not factual reporting of metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports where avian flu has been found and number of states using a standard verb ('has been found')."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('Humans are considered to be at low risk')."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risk... appears low')."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "yes",
+    "rationale": "Describes severity of a past outbreak using a standard verb ('turned out to be mild')."
+  }
+]
+```

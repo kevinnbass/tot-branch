@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 232}
+{"Q": 2, "answer": "no", "rationale": "The segment uses the moderate verb 'leverage' which is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 214}
+{"Q": 3, "answer": "no", "rationale": "'can leverage' is not a moderate verb denoting impact.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 179}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 174}
+{"Q": 5, "answer": "no", "rationale": "The segment reports capability of pathogens but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 170}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 144}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 140}
+{"Q": 8, "answer": "no", "rationale": "Segment describes characteristic of pathogens, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17936", "batch_size": 260, "batch_pos": 52}
+{"Q": 9, "answer": "no", "rationale": "The segment is a general statement, not reporting prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 100}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 30}
+{"Q": 10, "answer": "no", "rationale": "The segment describes potential and does not speculate about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_7984_r1", "batch_size": 260, "batch_pos": 30}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement is descriptive, not framing risk or safety.", "method": "llm_batch", "batch_id": "batch_11_17244", "batch_size": 224, "batch_pos": 16}
+{"Q": 12, "answer": "yes", "rationale": "Factual statement using bare capability 'can leverage'.", "method": "llm_batch", "batch_id": "batch_12_14348", "batch_size": 224, "batch_pos": 16}

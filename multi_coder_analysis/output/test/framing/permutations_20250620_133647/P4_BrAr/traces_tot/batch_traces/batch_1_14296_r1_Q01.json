@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_1_14296_r1",
+  "hop_idx": 1,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_10_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'very low', which intensifies a low-risk state, not a negative risk-adjective like 'deadly' or 'dangerous' as required by Q1."
+    },
+    {
+      "segment_id": "seg_v5_12_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes monitoring actions and does not contain an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_11_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'pretty rare', which intensifies a low-frequency state, not a negative risk-adjective like 'deadly' or 'dangerous' as required by Q1."
+    }
+  ],
+  "timestamp": "2025-06-20T13:39:01.825600"
+}

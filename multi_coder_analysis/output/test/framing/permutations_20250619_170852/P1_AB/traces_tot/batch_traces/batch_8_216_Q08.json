@@ -1,0 +1,1008 @@
+{
+  "batch_id": "batch_8_216",
+  "hop_idx": 8,
+  "segment_count": 200,
+  "responses": [
+    {
+      "segment_id": "seg_v5_8_1851_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a factual event (person working at an infected facility) but does not state a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_1851_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a person's symptoms but does not state a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_11_1851_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cows testing positive but does not state a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_13_1851_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_16_1851_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes scientists 'watching closely' for signs, which is a form of surveillance/preparedness, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_17_1851_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the FDA beginning testing, which is a surveillance/safeguard measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes researchers reporting the 'ability to scan' wastewater, which is a capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_2_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a network 'has begun scaling up' testing, which is a preparedness/capability measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_3_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes an effort that 'will begin sharing data', which is a preparedness/response measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_4_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a lack of testing and officials being 'in the dark', focusing on a deficiency rather than stating a capability."
+    },
+    {
+      "segment_id": "seg_v5_5_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes wastewater testing as a 'way to spot potential outbreaks', which is a safeguard/capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_7_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes that 'more information would be useful, and that this is one extra piece of information that can help officials understand', describing the utility of a capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_8_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the team 'developed a probe', which is a capability/development, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_9_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes past events and findings ('assay sat unused until this spring', 'began lighting up their dashboard'), not stating a current capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_10_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes researchers finding viral fragments, which is a finding, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_11_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a hypothesis, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_13_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a related news item title, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_14_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes results being released and published, which are events/findings, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_16_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes researchers finding sequences, which is a finding, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_17_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes wastewater monitoring capacity getting a 'huge boost', indicating increased capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_18_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the CDC operating a surveillance system, which is a preparedness/capability measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_19_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the CDC beginning to release data on a dashboard, which is a preparedness/response measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_21_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes high levels of influenza A as a 'reliable indicator', describing the utility of a surveillance capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_22_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment is a related news item title about 'launching wastewater dashboard', indicating a preparedness/capability measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_23_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the CDC map 'serves up current levels' and 'providing needed context', describing a preparedness/capability measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_24_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the agency 'works with state and local partners to investigate further', which is a response/preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_26_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the agency 'is in communication with WastewaterSCAN and other academic groups to better understand the potential value of more widespread testing', describing a preparedness/research measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_28_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'We are continuing to review data and methodologies that may improve our public health surveillance', describing efforts towards improving preparedness, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_29_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes needing to learn how to interpret data, focusing on limitations rather than stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_30_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes authorities being 'hungry for' data, focusing on demand rather than stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_31_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment poses a question about data interpretation, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_32_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'Being able to disambiguate that, and understand where these signals are coming from, is something we've been getting a lot of interest in', describing the utility of a capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_33_582_chunk0",
+      "answer": "yes",
+      "rationale": "The segment is a related news item title about milk as 'another way to track', indicating a surveillance/capability measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_36_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes confirming a human case, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_37_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_38_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes evolutionary capacity and potential risks, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_1824_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes patient hospitalization, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_5_1824_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a sample being sent to the agency where it 'was confirmed', indicating a testing/surveillance capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_7_1824_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_12_1824_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the potential for genetic reassortment, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_14_1824_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes a hypothetical virus outcome, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_15_1824_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes the agency 'aims \"to do everything we can\" to reduce the risk', describing an effort towards preparedness/response, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_1948_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes birds being euthanized, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_1948_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the reason for a decision based on concerns and reports, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_3_1948_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cases being confirmed, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_7_1948_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a 'new vaccine' that 'has helped protect them', indicating a development/safeguard, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_10_1948_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a department 'is urging poultry owners... to call the CDFA Sick Bird Hotline', indicating a reporting/response system (preparedness), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes scientists 'warning people to 'be alert'', which is a warning, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the virus crossing a new frontier, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a development raising concerns, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_6_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes findings about dead seal pups and transmission, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_7_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes using genomic analysis to reveal findings, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_8_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes researchers finding mutations, which is a finding, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about increased evidence and needing to be alert, which is a warning/interpretation, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_10_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about adaptation becoming more important, which is an interpretation/warning, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_11_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the virus showing ability to adapt, which is a characteristic, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_13_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the virus reaching the Americas, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_15_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about viruses commonly mutating, which is a general characteristic, not stating a specific capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_16_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about the virus being capable of adapting, which is a characteristic, not stating a specific capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_17_1669_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes authors stressing the 'importance of continued research', indicating a call for ongoing capability/effort, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_18_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes adaptation as concerning, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_19_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about increased risk of mutations, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_20_1669_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about interactions facilitating spread, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_3_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms of infected workers, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes scientists warning about potential mutation and pandemic, which is a warning, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_5_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes 'keeping tabs on farmworkers' to track infections, learn danger, and be alerted, indicating surveillance/monitoring capabilities, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_8_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes a belief about virus spread, which is an opinion, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes a critique of a surveillance method, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_10_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes others being 'actively monitored' for symptoms, which is a preparedness/surveillance measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_11_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes announcing payment for testing and incentives for farm owners to allow testing, indicating measures for surveillance/preparedness, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_12_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the incentive payment compensating workers for time 'contributing to the monitoring', indicating the purpose of a preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_13_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_16_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes a critique of the payment amount, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_17_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes health officials 'would provide short-term medical care', which is a response/preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_19_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes workers' concerns, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_20_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes fear of attention, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_21_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes historical blaming of communities, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_22_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes past events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_24_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'Education needs to be a part of testing efforts', recommending an improvement to a preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_25_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes about conversations being conducted in language with trusted people, recommending an improvement to a preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_28_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the CDC 'asked states... to share personal protective equipment', indicating a preparedness/response measure (resource distribution), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_29_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes state health departments 'said they have offered to distribute such equipment', indicating a preparedness/response measure (resource distribution), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_30_601_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes farms having 'requested protective equipment from the state stockpile', indicating the use of a preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_32_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes that equipment offerings 'need to be practical', which is a critique/recommendation, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_35_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes other workers facing potential infection, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_37_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes worry about workers due to exposure, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_38_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about proximity to milk/udders, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_1_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes animal deaths, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes where animals died, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_3_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes test results confirming cause of death, which is a finding, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_6_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes WHO/CDC saying there has been an increase in outbreaks, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_7_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a patient diagnosis, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_8_1983_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the patient 'was successfully treated with antiviral medications' and 'has since been discharged', indicating a response/treatment outcome, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_10_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes prior cases after exposure, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_11_1983_chunk0",
+      "answer": "no",
+      "rationale": "The segment is an attribution, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_7_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the virus infecting mammals, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_8_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cows testing positive, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a person contracting the virus, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_10_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_12_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes historical human deaths, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_16_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about the virus being a bird virus, which is a characteristic, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_18_812_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the WHO 'is working closely with the CDC to track the virus', indicating a preparedness/surveillance measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_19_812_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the USDA 'has also stepped up surveillance efforts', indicating a preparedness/surveillance measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_21_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about evidence suggesting spread, which is a finding/interpretation, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_22_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cows becoming ill, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_23_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about the biggest question being transmission, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_24_812_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes 'Genetic sequencing will help trace the virus’s spread', indicating a capability and its utility, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_25_812_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes advising farmers to 'provide workers with masks, gloves and other protective equipment', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_26_812_chunk0",
+      "answer": "yes",
+      "rationale": "The segment advises people 'should also avoid raw milk', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_27_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_30_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a photo caption about cows testing positive, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_001_1714_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a rapid rise in infected herds, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_002_1714_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes reliance on farmers leaving the industry vulnerable, which is a critique of preparedness, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_004_1714_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a challenge for the federal response and opportunity for mutation, focusing on risks/challenges, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_005_1714_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a rapid rise in infected herds and confirmed infections, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_008_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes officials are 'still working closely to understand the breadth', indicating ongoing effort/investigation (preparedness/response), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_009_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes animal samples 'have been tested' and 'under a federal order requiring dairy cow testing', indicating surveillance/testing measures (capability/preparedness), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_010_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes paying 'a lot of attention' to potential spread, indicating focus/monitoring (preparedness), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_013_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes creating a 'National Animal Disease Preparedness and Response Program', indicating a preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_014_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the program 'would be reauthorized', indicating the status of a preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_015_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes federal officials have been 'good partners' in the response, indicating collaboration in response/preparedness, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_016_1714_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes that information flow 'could be improved', which is a critique of a capability, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_017_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes USDA and CDC 'are working on building up their muscles for communicating across agencies', indicating effort towards improving a capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_018_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes introducing a bill that 'would ban the intentional adding of animal excrement to animal feed', indicating a proposed safeguard/preventive measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_019_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes what the bill 'targets', indicating the subject of a proposed safeguard, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_020_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes hoping 'to curb that' practice, indicating the purpose of a proposed safeguard, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_021_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'We must put an end to unsanitary factory farming practices', indicating a call for a safeguard/preventive measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_022_1714_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a study finding rapid decline of virus 'with heat treatment', indicating a finding relevant to a safeguard (pasteurization), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_001_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a report that the U.S. government 'is near a deal to fund a late-stage trial of the drugmaker's experimental mRNA bird-flu vaccine', indicating funding for development of a future capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_002_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes funding details and a 'commitment to purchase vaccine doses if the trial is successful', indicating funding/planning for a future capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_003_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes the company confirming 'we are in discussions with the U.S. government on advancing our pandemic flu candidate', indicating development of a future capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_004_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'Dosing is complete in an earlier-stage trial of the vaccine, with data expected soon', indicating the status of development of a future capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_005_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'We remain committed to using our mRNA platform to respond to public health concerns', indicating a general capability/commitment, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_007_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the agency 'is pursuing the addition of an mRNA platform for influenza vaccines, which could be integrated into its national pre-pandemic flu vaccine stockpile program', indicating development/integration of a capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_008_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the agency 'already has antigens that are well-matched to the currently circulating strain... within that vaccine stockpile program', indicating an existing capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_009_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the agency 'started the fill and finish process for about 4.8 million doses of vaccine', indicating action towards having a capability (vaccine doses ready), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_010_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes 'efforts to step up vaccine research and production', indicating preparedness efforts, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_011_1648_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes that the H5 vaccines 'cover the same virus family as the variant circulating in the U.S.', indicating the relevance of a developed capability, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_012_1648_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_014_1648_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes stock performance, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_177_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes restrictions being lifted, which is about the status of a measure, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_3_177_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the state 'halted poultry and waterfowl exhibitions May 10 as a precaution', indicating a safeguard/preventive measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_4_177_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a ban being lifted, which is about the status of a measure, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_7_177_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes spread and euthanizing birds, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_8_177_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes how it can spread, which is information about the virus, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_177_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the state saying transporting poultry 'creates a significant risk' when banning shows, indicating the reason for a safeguard, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_10_177_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes a 'similar ban on Michigan poultry shows' in the past, indicating a past preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_11_177_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the latest outbreak and culling, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_12_177_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes infected flocks and impacted birds, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_13_177_chunk0",
+      "answer": "yes",
+      "rationale": "The segment states 'More information about avian flu can be found at Michigan.gov/birdflu', indicating a resource/information measure (preparedness), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_86_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes restrictions being lifted, which is about the status of a measure, not stating a capability without reassurance."
+    },
+    {
+      "segment_id": "seg_v5_3_86_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an outbreak occurring, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_86_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes officials 'quarantined the affected premises and established a 10-kilometer surveillance zone', indicating response/preparedness measures, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_927_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a man hospitalized, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_927_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes confirmation of finding and hospitalization, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_927_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the infection as accidental transmission, which is a characteristic, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_5_927_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_6_927_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the man's condition and expected discharge, which is an outcome, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_1_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment announces presumptive positive cases, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes workers getting sick and displaying symptoms, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes bird flu detected affecting birds, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_5_1828_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes state officials 'are taking more samples... to confirm', indicating a surveillance/testing measure (capability/preparedness), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_6_1828_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the CDC 'is also supporting the investigation', indicating support for a response/preparedness measure, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_7_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_8_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment confirms a case in a dairy worker, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a previous detection, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_10_1828_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the explicit calming keyword 'low' risk, which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_12_1828_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes that people at increased risk 'should take precautions', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a child dying, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_2_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes laboratory tests confirming death, which is a finding, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_3_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes ministry announcing a man died, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a previous fatality, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_5_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a father found infected but survived, which is an outcome, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_6_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a headline about a death, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_7_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a global tally of cases and deaths, which is factual data, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_8_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes historical cases, which is factual data, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_9_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about virus spreading and becoming endemic, which is information about the virus, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_10_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes outbreaks resulting in infections and deaths, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_11_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes where human cases have been reported, which is factual data, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_12_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes CDC saying outbreaks were on the rise, which is factual information, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_13_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment states bird flu 'only rarely infects humans', which triggers a higher-precedence rule (Q5 Reassuring)."
+    },
+    {
+      "segment_id": "seg_v5_15_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a headline asking about pandemic spread and what to know, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_16_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the mother telling about her daughter falling sick, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_17_1944_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes the girl 'received treatment from a local physician' and was 'sent... for advanced care', indicating response/treatment measures, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_19_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes chickens dying, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_20_1944_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes she 'had discarded the chickens that died', indicating a preventive measure/safeguard, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_21_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes how people have caught the virus, which is information about transmission, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_22_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment quotes about not knowing why daughter contracted virus and presuming source, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_23_1944_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes family members' health status and mother's worry, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_24_1944_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes health officials 'have been to her village to deploy a virus-killing spray' and 'advised all the villagers to report if they get sick', indicating response/preparedness measures, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_1_1552_chunk0",
+      "answer": "yes",
+      "rationale": "The segment states pet owners 'have been advised not to feed their animals raw milk', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_2_1552_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes sharing 'advice for Newsweek readers on how pet owners can take preventive measures', indicating providing advice on safeguards, without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_3_1552_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cats being susceptible, which is a characteristic, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_4_1552_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cases of cats dying, which is a factual event, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_5_1552_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes owners 'should try to keep their pets away from dairy cows or poultry', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_6_1552_chunk0",
+      "answer": "no",
+      "rationale": "The segment defines HPAI and how it spreads, which is information about the virus, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_7_1552_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes an outbreak and human cases, which are factual events, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_8_1552_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes farmers keeping guard dogs, which is a factual observation, not stating a capability or preparedness measure."
+    },
+    {
+      "segment_id": "seg_v5_10_1552_chunk0",
+      "answer": "yes",
+      "rationale": "The segment describes Davis 'urged pet owners to avoid feeding their pets raw milk', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    },
+    {
+      "segment_id": "seg_v5_11_1552_chunk0",
+      "answer": "yes",
+      "rationale": "The segment quotes 'take great caution with pets and raw milk', indicating a safeguard/preventive measure (advice), without explicit calming keywords."
+    }
+  ],
+  "timestamp": "2025-06-19T17:28:49.908100"
+}

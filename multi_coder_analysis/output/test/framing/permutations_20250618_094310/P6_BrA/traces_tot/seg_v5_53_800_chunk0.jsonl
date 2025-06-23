@@ -1,0 +1,9 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 39}
+{"Q": 1, "answer": "no", "rationale": "'big' modifies 'outbreak' (a noun), not a risk-adjective. No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_16760_r1", "batch_size": 260, "batch_pos": 39}
+{"Q": 2, "answer": "no", "rationale": "The segment provides neutral advice.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 250}
+{"Q": 3, "answer": "no", "rationale": "Segment reports recommendation, not impact.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 192}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 184}
+{"Q": 5, "answer": "no", "rationale": "This segment recommends testing and investigation, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 177}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 143}
+{"Q": 7, "answer": "no", "rationale": "The segment describes what health officials should do but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 136}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 214, "regex": {"rule": "CapabilityNoReassurance", "span": [14, 23], "captures": []}}

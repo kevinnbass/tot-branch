@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_6_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes monitoring and vaccine access, not a bare negation of risk or cases."
+  },
+  {
+    "segment_id": "seg_v5_9_1683_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'no confirmed human-to-human transfers' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_10_1683_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'no active cases in humans or in cattle' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_12_1683_chunk0",
+    "answer": "no",
+    "rationale": "States the risk 'is considered to be low', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_13_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes securing vaccine doses, not a bare negation of risk or cases."
+  },
+  {
+    "segment_id": "seg_v5_1_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about an infection, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about contact, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about symptoms and recovery, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about reported cases, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about symptoms, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_6_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a detected case, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_690_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'does not change' but is immediately followed by the calming cue 'risk...remains low' (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_8_690_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'shown no unusual activity' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_10_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about monitoring, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_11_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about test results, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_12_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about pending results, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_13_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about reported infections, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1041_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a reported outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1041_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about deaths and slaughter, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about confirmed cases, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a definition, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about an outbreak and confirmed cases, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about case location, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_6_1779_chunk0",
+    "answer": "no",
+    "rationale": "States 'It is rare', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_7_1779_chunk0",
+    "answer": "no",
+    "rationale": "States 'risk...is still negligible', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_8_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about infected individuals, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about symptoms, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'still does not pose a significant risk' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_11_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'still does not pose a significant risk' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_12_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a potential future development, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_13_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a recommendation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_15_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a reported outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about deaths, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about cases and slaughter, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about actions taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about reported outbreaks, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about impact, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about reported infections, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_6_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a reported outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about action taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_8_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a reported outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about serotype, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a reported outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_11_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_13_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about action taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about actions taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_15_30_chunk0",
+    "answer": "no",
+    "rationale": "States 'can affect humans in rare cases', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_1_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a death, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a detected case, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about test results, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a death, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about location and controls, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1680_chunk0",
+    "answer": "no",
+    "rationale": "Describes actions for safe disposal and cleaning, which are preparedness/control cues (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_8_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion and attribution, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides advice on minimizing contact, which is a preparedness cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_11_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides advice on biosecurity practices, which is a preparedness cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_12_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about existing controls, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_13_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a rule, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states actions being implemented, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_16_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a discovery, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_19_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability and potential development, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_20_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about a death and symptoms, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_21_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about the individual's condition, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_22_1680_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'is unknown' but the main clause states a fact about reporting, not a negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_23_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_24_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a condition for import, not a negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_2_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about virus detection, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action taken for prevention, which is a preparedness cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_4_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about birds to be killed, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about dealing with an outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_6_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about birds slaughtered and impact, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about the first operation affected, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about quantity, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about loss, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_11_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about cases and spread capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_12_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states actions taken by farmers, which are preparedness cues (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_14_355_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'isn't a threat' but is immediately followed by explanations (slaughtering, cooking) which are calming cues (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_15_355_chunk0",
+    "answer": "no",
+    "rationale": "States 'Infections in humans are rare', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_1_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about confirmed cases, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about total infections, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a positive test, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about spread and concern, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'no known link or contact' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_6_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about symptoms, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about treatment and condition, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_8_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about location and outbreak, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about symptoms, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'neither person reported respiratory symptoms nor was hospitalized' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_11_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about testing positive, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about confirming bird flu, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_15_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'the virus was not confirmed in any of them' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_16_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action and concern, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_17_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_19_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'came back negative' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_1_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about reported ability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action that will begin, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a condition ('largely in the dark'), not a bare negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_5_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a potential capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states opinions about utility, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_8_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about developing a probe, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about past activity, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a finding, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_11_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a hypothesis, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_12_582_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'no good way to determine the exact source' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_13_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a reported case, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about results being published, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_16_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about findings, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_17_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about capacity improvement, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_18_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about system operation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_19_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_20_582_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'is not doing H5-specific testing' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_21_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about circulation levels and potential indicators, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_22_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_23_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action and utility, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_24_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action taken under conditions, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_25_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a limitation on data inclusion, not a negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_26_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_28_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_29_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about learning needed, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_30_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about data demand, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_31_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_32_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability and interest, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_33_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an alternative tracking method, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_34_582_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'Wastewater isn't the only workaround' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_35_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states actions taken due to frustration, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_36_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a confirmed case, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_37_582_chunk0",
+    "answer": "no",
+    "rationale": "States 'risk...remains low', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_38_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability and potential risk increase, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'did not work with any poultry or dairy farms' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'had no known contact with an infected animal' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_3_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'did not work with any poultry or dairy farms' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_4_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about hospitalization, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about sample confirmation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_6_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'did not provide details', which is a negation about information, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_7_1824_chunk0",
+    "answer": "no",
+    "rationale": "States 'risk...remains low', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_8_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'lack of an obvious animal exposure', which describes a condition, not a bare negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_9_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'cannot be identified', which describes a limitation, not a bare negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_10_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negation 'has not reported any H5 infections in dairy cattle' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_11_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the bare negations 'no sign of unusual influenza activity', 'no increase', and 'no laboratory detection' without explicit calming cues."
+  },
+  {
+    "segment_id": "seg_v5_12_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a potential outcome, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a characteristic, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_15_1824_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'rare' (Q5) and describes action to reduce risk (Q5), not a bare negation without calming."
+  },
+  {
+    "segment_id": "seg_v5_1_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about action taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about concerns and reported tests, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about confirmation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a positive outcome ('has helped protect'), which is a calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_8_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a condition ('has yet to receive'), not a bare negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_10_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an urging/recommendation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a warning, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about a development, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about raising concerns, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about an outbreak and deaths, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a finding, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_8_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a finding and suggestion, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a warning, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a potential outcome, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_11_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability and concern, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_12_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about past events and impact, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_13_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about reaching a location, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'was not until August', which is a temporal statement, not a bare negation of risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_15_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_16_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a capability, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_17_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion about importance, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_20_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a potential cause, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_1_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about exposure and potential lack of resources, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_3_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about symptoms, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_8_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a belief, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_9_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion/description, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_11_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action being taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_12_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action and purpose, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_13_601_chunk0",
+    "answer": "no",
+    "rationale": "States 'believes the virus currently poses a low risk', which is an explicit low-risk calming cue (Q5)."
+  },
+  {
+    "segment_id": "seg_v5_14_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'couldn't afford', which is a negation about financial capability, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_16_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_17_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action that would be provided, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_18_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'wouldn't necessarily cover', which is a negation about coverage, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_19_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a concern, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_20_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fear, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_21_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a historical fact, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_22_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facts about past events, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_23_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'have been told very little', which is a negation about information, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_24_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion/recommendation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_26_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'will not be reported', which is a negation about reporting status, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_27_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'have not decided', which is a negation about a decision, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_28_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action taken, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_29_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an offer made, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_30_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about requests, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_31_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'did not immediately receive requests', which is a negation about receiving requests, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_32_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion/recommendation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_33_601_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'wouldn't be realistic', which is a negation about practicality, not risk/cases."
+  },
+  {
+    "segment_id": "seg_v5_34_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an opinion/recommendation, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_35_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a potential risk, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_37_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a concern, not a negation."
+  },
+  {
+    "segment_id": "seg_v5_38_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact about proximity, not a negation."
+  }
+]
+```

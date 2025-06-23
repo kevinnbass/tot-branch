@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14828", "batch_size": 260, "batch_pos": 237}
+{"Q": 2, "answer": "no", "rationale": "Factual description of virus location in organs.", "method": "llm_batch", "batch_id": "batch_2_4512", "batch_size": 260, "batch_pos": 199}
+{"Q": 3, "answer": "no", "rationale": "'is able to infect' is a capability, Neutral. 'a number of' is vague scale. 'been found in' is plain.", "method": "llm_batch", "batch_id": "batch_3_16988", "batch_size": 260, "batch_pos": 158}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17640", "batch_size": 260, "batch_pos": 151}
+{"Q": 5, "answer": "no", "rationale": "The segment reports scientific fact without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10144", "batch_size": 260, "batch_pos": 146}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17584", "batch_size": 260, "batch_pos": 125}
+{"Q": 7, "answer": "no", "rationale": "The segment repeats information about virus location but contains no new bare negation.", "method": "llm_batch", "batch_id": "batch_7_15984", "batch_size": 260, "batch_pos": 119}
+{"Q": 8, "answer": "no", "rationale": "The segment provides background information, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7588", "batch_size": 260, "batch_pos": 249}
+{"Q": 9, "answer": "no", "rationale": "The segment does not report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_8464", "batch_size": 260, "batch_pos": 193}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 52}
+{"Q": 11, "answer": "no", "rationale": "Quote is a factual description of virus location, not framed language.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 25}
+{"hop_idx": 12, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 24}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of viral distribution in animals without explicit framing cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_12_13208_r1", "batch_size": 247, "batch_pos": 24}

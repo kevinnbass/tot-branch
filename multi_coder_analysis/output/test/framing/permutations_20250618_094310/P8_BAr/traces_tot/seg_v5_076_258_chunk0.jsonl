@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "'rare' modifies 'case'. 'severe' is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 74}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 73}
+{"Q": 3, "answer": "no", "rationale": "Discusses agreement, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 69}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 69}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 69}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a rare severe case, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 67}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 62}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_7692_r1", "batch_size": 260, "batch_pos": 62}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 62}
+{"Q": 8, "answer": "no", "rationale": "Reports a specific recent case ('rare severe case'), not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 60}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a case/severity, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 50}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a recent severe case, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 49}
+{"Q": 11, "answer": "no", "rationale": "Authorial statement provides factual description of a case.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 44}
+{"Q": 12, "answer": "no", "rationale": "Describes a case as 'severe', which is a risk adjective, preventing default to neutral.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 44}

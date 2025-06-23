@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 95}
+{"Q": 2, "answer": "no", "rationale": "'Transmit' is a neutral verb. 'Highly pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_2_10144", "batch_size": 260, "batch_pos": 60}
+{"Q": 3, "answer": "no", "rationale": "'transmit' is a neutral verb; technical term guard.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 244}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 223}
+{"Q": 5, "answer": "no", "rationale": "The segment reports transmission method, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 220}
+{"Q": 6, "answer": "no", "rationale": "The segment describes how wild birds transmit the virus but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 169}
+{"Q": 7, "answer": "no", "rationale": "The segment states transmission method, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 156}
+{"Q": 8, "answer": "no", "rationale": "The segment describes modes of transmission, not capabilities, preparedness, possibilities, or safeguards.", "method": "llm_batch", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 238}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_16860", "batch_size": 239, "batch_pos": 66}
+{"Q": 9, "answer": "no", "rationale": "The segment describes transmission methods, not numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_16860_r1", "batch_size": 239, "batch_pos": 66}
+{"Q": 10, "answer": "no", "rationale": "The segment states a fact about transmission ('transmit the virus... through their feces') rather than speculating about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 193}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a frame.", "method": "llm_batch", "batch_id": "batch_11_10328", "batch_size": 244, "batch_pos": 160}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of transmission method. 'highly pathogenic' is technical term.", "method": "llm_batch", "batch_id": "batch_12_4324", "batch_size": 244, "batch_pos": 160}

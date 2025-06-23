@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 241}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 229}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs and Reassuring cue 'low risk'.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 208}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 203}
+{"Q": 5, "answer": "no", "rationale": "The statement 'low risk' is a bare low-risk statement, not intensified.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 201}
+{"Q": 6, "answer": "no", "rationale": "'low risk' is a reassurance cue, but not 'minimiser + scale contrast'.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 182}
+{"Q": 7, "answer": "no", "rationale": "'low risk' is a calming cue (Q5), not a bare negation without calming.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 174}
+{"Q": 8, "answer": "no", "rationale": "The segment contains an explicit reassurance ('low risk for humans'), triggering Q5.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 100}
+{"Q": 9, "answer": "no", "rationale": "The segment includes explicit reassuring language ('risk assessment... remains that there is low risk').", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 197}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 115}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('low risk for humans'), falling under Q5 Reassuring, not Q10 speculation without calming.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 115}
+{"Q": 11, "answer": "yes", "rationale": "Quote explicitly states 'low risk for humans' and 'I support that'. ||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 100}
+{"Q": 12, "answer": "no", "rationale": "Contains explicit Reassuring cue: 'low risk for humans'.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 97}

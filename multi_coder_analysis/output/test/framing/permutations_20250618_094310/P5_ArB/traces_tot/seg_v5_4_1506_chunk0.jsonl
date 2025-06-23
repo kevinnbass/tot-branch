@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective. 'low' is a low-risk adjective. 'rising concern' modifies a noun.", "method": "llm_batch", "batch_id": "batch_1_6120", "batch_size": 260, "batch_pos": 200}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language; 'risk to the public remains low' is a Q5 cue, 'rising concern' is not Q2.", "method": "llm_batch", "batch_id": "batch_2_16740", "batch_size": 260, "batch_pos": 199}
+{"Q": 3, "answer": "no", "rationale": "'rising concern' is a psychological noun; rule guard applies.", "method": "llm_batch", "batch_id": "batch_3_16548", "batch_size": 260, "batch_pos": 186}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 182}
+{"Q": 5, "answer": "no", "rationale": "Reports low risk (not intensified) but also 'rising concern', which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_2772", "batch_size": 260, "batch_pos": 182}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_7008", "batch_size": 260, "batch_pos": 177}
+{"Q": 7, "answer": "no", "rationale": "The segment states risk remains low, which is an explicit calming cue (Q5).", "method": "llm_batch", "batch_id": "batch_7_17840", "batch_size": 260, "batch_pos": 174}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_7648", "batch_size": 260, "batch_pos": 169, "regex": {"rule": "CapabilityNoReassurance", "span": [16, 25], "captures": []}}

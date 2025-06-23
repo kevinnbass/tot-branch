@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'ignited protests', which describes a reaction, not an intensified risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 217}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'ignited protests' (public reaction), not a Q2 cue for threat impact.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 199}
+{"Q": 3, "answer": "no", "rationale": "'ignited protests' is a psychological verb + public reaction, Neutral for Q3.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 165}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 160}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a reaction ('ignited protests') but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 156}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 130}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 126}
+{"Q": 8, "answer": "no", "rationale": "Segment describes impact (protests), not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17936", "batch_size": 260, "batch_pos": 39}
+{"Q": 9, "answer": "no", "rationale": "The segment uses a psychological verb context guard ('ignited protests') without meeting the criteria for framing.", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 90}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 26}
+{"Q": 10, "answer": "no", "rationale": "The segment describes reactions and does not speculate about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_7984_r1", "batch_size": 260, "batch_pos": 26}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17244", "batch_size": 224, "batch_pos": 12}
+{"Q": 12, "answer": "yes", "rationale": "Psychological verb 'ignited protests' describes a reaction, not threat impact, and is not amplified (Neutral per guard).", "method": "llm_batch", "batch_id": "batch_12_14348", "batch_size": 224, "batch_pos": 12}

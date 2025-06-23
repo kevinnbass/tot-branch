@@ -1,0 +1,979 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_2_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreaks, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'risk to the public remains low' which is a Q5 Reassuring cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'virus has already been well studied' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'raises our concern level', no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_6_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'known to us', 'studying it', and 'preparing for avian flu' which are Q5 Preparedness cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports detection locations, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_9_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports deaths, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_11_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports discovery locations, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_12_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports historical identification, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_13_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports historical cases and deaths, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_14_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'neither were fatal' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_15_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports a case, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_16_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports symptoms and recovery, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_17_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports symptoms, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_18_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports symptoms, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_19_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports instances of spread, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_20_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports spread within families, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_21_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'risk is low' which is a Q5 Low-Risk cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_22_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'latest developments are concerning', no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_23_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'We don’t have a magic forcefield', no bare negation about the virus present."
+  },
+  {
+    "segment_id": "seg_v5_24_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'There is a concern', no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_25_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses potential future impacts, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_26_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports tightening supply, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_27_1506_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports number of hens and prices, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_1_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports import restrictions, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_2_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports trade limitation, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports import amount, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_4_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports ban details, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_5_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports temporary restrictions, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_6_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports shipments may be held, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_8_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports measures aim to contain spread, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_9_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports a positive test and symptom, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_10_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'no U.S. beef cattle have tested positive' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_12_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'don't feel that import restrictions... have any scientific basis', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_13_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports officials talking, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_14_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports requests for information, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_15_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports responding to requests, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_16_1508_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports officials did not say, no bare negation about the virus present."
+  },
+  {
+    "segment_id": "seg_v5_001_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports dead birds and call for funding, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_002_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreak could affect birds unless funding is secured, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_003_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports burying dead birds, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_004_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreak confirmation, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_005_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreaks threaten birds, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_007_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses cost of spreading, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_008_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses limited funds, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_009_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses reliance on funding, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_010_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses government priorities, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_011_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment states rapid reaction is critical, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_012_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'having staff on the ground with the resources that enable them to act is essential' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_013_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports asking for funding, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_015_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses management of a global pandemic, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_016_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment states minimising spread is a big task, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_017_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports finding dead birds, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_020_297_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports sadness about birds dying, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_2_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'preparing plans to deploy lateral flow tests' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_3_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'preparing plans to deploy lateral flow tests' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'working on blood tests' and 'will analyse' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_6_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports trying to establish cause, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_7_269_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'virus does not pass easily to people' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_10_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports historical cases and fatality rate, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_12_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'direct risks of infection were low' which is a Q5 Low-Risk cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports finding cases, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_14_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports finding cases in mammals, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_15_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports cases in mammals, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_16_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'could increase the possibility of further human infections', no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_18_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports historical pandemic, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_19_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports historical adaptation, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_20_269_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'important to detect human cases as quickly as possible and make sure that we give as little opportunity' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_1_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports deaths and investigation, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_2_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports number of strandings, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports seals found dead, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_4_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports designation, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_5_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'authorizes a federal investigation to try to determine the cause and minimize deaths' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_6_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports positive tests, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_7_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'The risk to the public... is low' which is a Q5 Low-Risk cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_8_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains advice 'not to touch ill, stranded or floating dead seals', not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_9_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports stranding locations, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_10_188_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'It rarely affects humans' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_12_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'working with local, state, tribal, federal and international groups' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports responding to strandings, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_14_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports strandings have increased, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_15_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports strandings have increased and busy season, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_16_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'trying to catch all the reports' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_17_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports detection in birds and mammals, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_18_188_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports virus affecting Canada, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_1_1183_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports ordered deaths, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_2_1183_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports case location, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_1183_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports number of birds killed by state, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_4_1183_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports number of birds killed nationally, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_5_1183_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'effects to human health are minimal' which is a Q5 Low-Risk cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_2_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment states virus is mutating, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'continue to prepare' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_4_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses worry about jumping to lungs and mortality rate, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_5_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Gotta have testing, gotta have anti-virals and we need to have a vaccine ready' which are Q5 Preparedness cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_7_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports adding Tamiflu to a kit, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_8_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'built to prepare the public' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Out of an abundance of caution, we are adding Tamiflu' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_12_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment describes drug function, not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_13_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Take steps today to prepare' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_15_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'we have the tools available to defend our health' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_17_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Never be caught without these critical drugs' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_18_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Protect yourself and your family with the Wellness Company’s Contagion Kit' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_19_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment mentions 'prescription Contagion Kit' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_21_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'encourage everyone to buy one of these for emergencies' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_23_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'thankful to have it' (referring to the kit) which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_24_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Don’t be caught unprepared' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_25_1645_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Order the Wellness Company’s Contagion Kit' which is a Q5 Preparedness cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_001_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'invisible virus once again interfered', no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_002_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreak forced changes/cancellations, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_004_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports infections and symptoms, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_005_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'The risk to humans... remains low' which is a Q5 Low-Risk cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_006_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports strained businesses and losses, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_007_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports layoffs following an outbreak, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_008_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports disrupted traditions, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_009_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'haven't been able to show', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_010_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'can't show', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_012_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'ordered strict testing and public health measures, including banning the exhibition' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_013_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'must test negative' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_014_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'restrictions didn't outright ban', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_015_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'made changes to try to lessen the chances' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_016_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'only if they have proof of negative flu tests' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_017_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'excluded... as a precaution against bird flu' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_018_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports canceled attractions, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_019_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'take steps to protect livestock and people' and 'stressing testing and biosecurity measures' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_020_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses opportunity not being there, no bare negation about the virus present."
+  },
+  {
+    "segment_id": "seg_v5_021_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment states it's probably going to be around, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_022_760_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'I don't know what next year's going to hold', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_002_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports problems finding land, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_004_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment states fighting another outbreak, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_005_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports culling and struggling to find land, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_006_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'culled to prevent the risk' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_008_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'can't just be buried anywhere', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_009_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'addressing the problem by securing... or by incinerating' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_010_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'not all of them have enough capacity', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_011_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment states culling is impacting prices, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_012_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment states culling impacts prices, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_013_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment states culling impacts prices, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_014_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports price increase, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_015_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports suspending food items, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_016_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports companies suspending items, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_017_1282_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'It's not just Japan', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_1_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports detecting a virus, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_2_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'slaughter the chickens and disinfect the farm to prevent the spread' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_3_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports virus is spreading quickly, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_4_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'prompting the government to impose poultry flocks be kept indoors' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_5_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports culling, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_6_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreaks can prompt restrictions, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_7_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports raising concern, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_8_961_chunk0",
+    "answer": "no",
+    "rationale": "Segment describes how virus is spread, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_1_358_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'consumers aren't seeing as much impact' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment compares numbers killed, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'worrisome indication' and 'likely always be at risk', no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_4_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment describes how virus spreads and mutates, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_5_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment states it is hard to keep virus out, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_7_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports cases popping up, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_10_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports price peak, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_11_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports prices remained, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_12_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports price climb, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_13_358_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains multiple bare negations ('haven't been hit as hard', 'haven't been as many cases', 'don't live as long', 'less chance of infection') without explicit calming cues."
+  },
+  {
+    "segment_id": "seg_v5_15_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports prices are down, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_16_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'gone to great lengths by requiring... sanitizing... investing' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_17_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'upgraded barn ventilation and installed laser systems to discourage' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_18_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'biosecurity, biosecurity, biosecurity' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_19_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'apply the lessons learned' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_21_358_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'doesn't represent a significant health threat' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_24_358_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'will also kill any viruses' which is a Q5 Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_25_358_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'remain impractical' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_26_358_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'might not accept vaccinated birds' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_27_358_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'not economically feasible' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_1_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports confirmed cases and warning about prices, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_2_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports cases confirmed, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_3_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment describes how virus spreads and its effect on poultry, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_4_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'working closely with state animal health officials' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_5_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'affected areas have been quarantined and birds... will be depopulated to prevent the spread' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_6_1055_chunk0",
+    "answer": "yes",
+    "rationale": "Segment contains the bare negation 'will not enter the food system' without an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_7_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports cases detected and flock set to be euthanized, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_8_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'birds would 'be humanely depopulated and disposed of in an approved manner,' and that the farm had also been quarantined immediately' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_9_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'officials are surveilling and conducting testing' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_10_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreaks occurred, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_11_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreaks and number killed, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_12_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'The United States has the strongest AI surveillance program' and 'USDA is working with its partners to actively look' which are Q5 Preparedness/Capability cues, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_14_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreaks could contribute to price changes, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_15_1055_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'the risk of humans contracting the virus still remains low' which is a Q5 Low-Risk cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_001_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports remembering becoming fearful, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_002_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports infections and deaths, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_005_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports outbreak triggering fears, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_006_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'mink outbreak is concerning, there is no doubt about that', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_007_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment discusses relation between minks and ferrets, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_008_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'it's important to remember that we've been somewhere like this before' which is a Q5 Confidence cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_009_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'Not precisely this spot', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_012_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports virus quieted down and scientists hedging bets, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_014_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports scientists were first to report, no bare negation present."
+  },
+  {
+    "segment_id": "seg_v5_017_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'I just don't know what it's going to do', which is not a bare negation about the virus itself."
+  },
+  {
+    "segment_id": "seg_v5_018_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment contains 'sent... to help in the investigation' which is a Q5 Preparedness/Capability cue, not merely a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_020_258_chunk0",
+    "answer": "no",
+    "rationale": "Segment reports retirement, no bare negation present."
+  }
+]
+```

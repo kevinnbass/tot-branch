@@ -1,0 +1,9 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_16416", "batch_size": 260, "batch_pos": 74}
+{"Q": 1, "answer": "no", "rationale": "The segment discusses policy recommendations and does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_16416_r1", "batch_size": 260, "batch_pos": 74}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes recommended actions ('include targeted conservation funding as well as compensation').", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 70}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale/impact information.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 47}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 41}
+{"Q": 5, "answer": "no", "rationale": "The segment suggests actions but does not contain an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 41}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 36}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or statement of uncertainty/low risk.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 32}
+{"Q": 8, "answer": "yes", "rationale": "The segment states the UK response should include funding/compensation, describing a future possibility/recommendation.", "method": "llm_batch", "batch_id": "batch_8_6120", "batch_size": 260, "batch_pos": 20}

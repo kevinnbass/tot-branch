@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'real' modifies 'challenge'. 'so much' modifies quantity. 'gives me a pit in my stomach' is an idiom.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 96}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 95}
+{"Q": 2, "answer": "no", "rationale": "The segment describes a lack of encouragement and a personal feeling ('pit in my stomach'), not the threat's impact with high-potency language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_17304_r1", "batch_size": 260, "batch_pos": 95}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 87}
+{"Q": 3, "answer": "no", "rationale": "The segment contains no moderate verb paired with scale or impact information.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_10616_r1", "batch_size": 260, "batch_pos": 87}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 87}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 87}
+{"Q": 5, "answer": "no", "rationale": "The quote expresses lack of encouragement and worry ('pit in my stomach'), which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 85}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 80}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16024_r1", "batch_size": 260, "batch_pos": 80}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 80}
+{"Q": 8, "answer": "yes", "rationale": "Describes the ability/capability of people/governments/policymakers to address the challenge.", "method": "llm_batch", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 78}

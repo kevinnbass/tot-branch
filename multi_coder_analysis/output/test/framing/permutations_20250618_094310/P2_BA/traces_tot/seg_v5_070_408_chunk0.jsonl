@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'surely' which modifies a statement, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 129}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 81}
+{"Q": 2, "answer": "no", "rationale": "The language used ('surely avoid', 'one more addition') does not employ high-potency verbs or metaphors to frame the situation alarmingly.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_6416_r1", "batch_size": 260, "batch_pos": 81}
+{"Q": 3, "answer": "no", "rationale": "The segment advises avoiding certain foods and calls the risk an 'addition', lacking a moderate verb paired with scale or impact.", "method": "llm_batch", "batch_id": "batch_3_3036", "batch_size": 260, "batch_pos": 12}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_13904", "batch_size": 260, "batch_pos": 1}
+{"Q": 5, "answer": "no", "rationale": "The segment states H5N1 risk is one more addition to reasons to avoid unpasteurized products, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_1716", "batch_size": 260, "batch_pos": 255}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about a risk or problem.", "method": "llm_batch", "batch_id": "batch_7_13928", "batch_size": 260, "batch_pos": 197}
+{"Q": 8, "answer": "yes", "rationale": "Gives advice/recommendation ('surely avoid') which is a safeguard.", "method": "llm_batch", "batch_id": "batch_8_17188", "batch_size": 260, "batch_pos": 42}

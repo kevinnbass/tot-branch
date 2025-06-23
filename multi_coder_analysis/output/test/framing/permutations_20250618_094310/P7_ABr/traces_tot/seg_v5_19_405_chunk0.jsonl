@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 108}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 96}
+{"Q": 3, "answer": "no", "rationale": "Neutral verb 'has been' and no significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 84}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 80}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical context but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 79}
+{"Q": 6, "answer": "no", "rationale": "The segment provides historical context but does not use a minimiser or scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 66}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 58}
+{"Q": 8, "answer": "no", "rationale": "The segment provides background information, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 5}
+{"Q": 9, "answer": "no", "rationale": "The segment states bird flu has historically been a problem, not primarily reporting prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 150}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 84}
+{"Q": 10, "answer": "no", "rationale": "The segment describes historical impact, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 84}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 73}
+{"Q": 12, "answer": "yes", "rationale": "Factual historical context; 'problem' is mild descriptor, not strong framing.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 70}

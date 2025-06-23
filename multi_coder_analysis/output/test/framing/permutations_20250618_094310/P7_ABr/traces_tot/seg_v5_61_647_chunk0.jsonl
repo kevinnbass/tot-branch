@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15452", "batch_size": 260, "batch_pos": 111}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('thinks', 'may be due') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_16972", "batch_size": 260, "batch_pos": 109}
+{"Q": 3, "answer": "no", "rationale": "Statement about symptom severity, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_11860", "batch_size": 260, "batch_pos": 108}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_16028", "batch_size": 260, "batch_pos": 107}
+{"Q": 5, "answer": "no", "rationale": "The segment discusses a potential reason for severity difference without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10380", "batch_size": 260, "batch_pos": 107}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14764", "batch_size": 260, "batch_pos": 104}
+{"Q": 7, "answer": "no", "rationale": "The segment discusses symptom severity but contains no negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_10756", "batch_size": 260, "batch_pos": 98}
+{"Q": 8, "answer": "no", "rationale": "The segment reports an expert opinion on the reason for severity difference, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 85}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 59}
+{"Q": 9, "answer": "no", "rationale": "Does not primarily report numerical metrics (prices, economic data, counts, etc.).", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_14480_r1", "batch_size": 260, "batch_pos": 59}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 32, "regex": {"rule": "ReliefSpeculation", "span": [145, 151], "captures": ["may be"]}}

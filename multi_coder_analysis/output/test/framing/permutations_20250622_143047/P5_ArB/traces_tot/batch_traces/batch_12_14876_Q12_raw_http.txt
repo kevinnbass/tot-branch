@@ -1,0 +1,989 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_001_760_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of impact using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_004_760_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of cases and symptom severity; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_005_760_chunk0",
+    "answer": "no",
+    "rationale": "Explicit reassuring cue found ('risk... remains low'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_006_760_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of impact and scale; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_008_760_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of impact on traditions; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_009_760_chunk0",
+    "answer": "yes",
+    "rationale": "Quote reporting personal impact factually; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_010_760_chunk0",
+    "answer": "yes",
+    "rationale": "Quote reporting personal impact factually; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_020_760_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal emotion about a lost opportunity; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_021_760_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing speculation using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_022_760_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing uncertainty using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_002_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of a logistical problem; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_004_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_008_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of a reason using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_011_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of impact using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_012_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of impact using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_015_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of business action; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_017_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of scope and impact; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_961_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_7_961_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_8_961_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_4_358_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description using technical and neutral terms; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_7_358_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_20_358_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of financial loss; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_1055_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_13_1055_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of expected price increase; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_006_258_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of concern using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_007_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual biological information; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_008_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual information and historical context; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_009_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of scope using neutral quantifiers; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_017_258_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing uncertainty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_020_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual biographical information; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_021_258_chunk0",
+    "answer": "yes",
+    "rationale": "Question using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_022_258_chunk0",
+    "answer": "yes",
+    "rationale": "Question using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_025_258_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing opinion; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_026_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of reporting method; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_027_258_chunk0",
+    "answer": "yes",
+    "rationale": "Report of experts' state of mind; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_028_258_chunk0",
+    "answer": "yes",
+    "rationale": "Report of experts' state of mind; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_029_258_chunk0",
+    "answer": "yes",
+    "rationale": "Report of experts' state of mind; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_030_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_031_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_038_258_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal worry and factual observation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_040_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_045_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of expert's view using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_047_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of impact using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_050_258_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of uncertainty and possibility using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_053_258_chunk0",
+    "answer": "yes",
+    "rationale": "Statement about effect on researchers; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_056_258_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of difficulty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_057_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement of capability; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_060_258_chunk0",
+    "answer": "yes",
+    "rationale": "Quote referencing past experience; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_079_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement of origin; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_081_258_chunk0",
+    "answer": "yes",
+    "rationale": "Technical description using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_083_258_chunk0",
+    "answer": "yes",
+    "rationale": "Report of expert's worry; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_086_258_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('pandemic for sure'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_087_258_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('pandemic for sure'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_089_258_chunk0",
+    "answer": "yes",
+    "rationale": "Report of agreement among experts; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_095_258_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of other viruses and outcomes; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_096_258_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing perspective and factual presence of viruses; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_099_258_chunk0",
+    "answer": "yes",
+    "rationale": "Report of expert's worry; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_32_805_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_33_805_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using a metaphor for a background condition; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_37_805_chunk0",
+    "answer": "yes",
+    "rationale": "Report of past events using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_38_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal thought; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_39_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal feeling about a past event; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_41_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal feeling about a past event; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_42_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal feeling about a past event; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_43_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal feeling about a past event; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_45_805_chunk0",
+    "answer": "yes",
+    "rationale": "Question expressing desire for information; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_46_805_chunk0",
+    "answer": "yes",
+    "rationale": "Statement explicitly avoiding alarmist language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_47_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote describing a reaction and reporting factual observation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_53_805_chunk0",
+    "answer": "yes",
+    "rationale": "Topic transition; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_55_805_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using a metaphor for transmission mechanism; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_57_805_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using a metaphor for containment difficulty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_64_805_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about scientific challenges; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_4_833_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of occurrence; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_1_1038_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of consequence and reason; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_5_1038_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of official statement; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_12_1038_chunk0",
+    "answer": "yes",
+    "rationale": "Quote stating a goal; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_1_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_2_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of outbreaks; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of new occurrences; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_9_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_10_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of spread using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_15_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual historical statement using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_19_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of mild outcome; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_21_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of symptom using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_22_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of symptoms; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_26_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of transmission pattern; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_28_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of uncertainty and concern using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_2_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of consequence and interpretation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of trade volume; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_6_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about potential procedure; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_9_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of case and symptom; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_14_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of action taken; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_004_297_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of confirmation and location; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_007_297_chunk0",
+    "answer": "yes",
+    "rationale": "Statement about cost using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_008_297_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about resources; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_009_297_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about funding; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_010_297_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_011_297_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_015_297_chunk0",
+    "answer": "yes",
+    "rationale": "Description using technical/standard terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_020_297_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal sadness and factual observation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_19_269_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_188_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of outcome; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_4_188_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of official classification; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_7_188_chunk0",
+    "answer": "no",
+    "rationale": "Explicit reassuring cue found ('risk... is low'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_9_188_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of location; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_2_1183_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of location; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_1_1645_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('stark warning'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_2_1645_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about viral characteristic; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_6_800_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about transmission route; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('very concerned'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_23_800_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('numbers that overwhelm'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement and interpretation using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('increase my level of alarm'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of development and characteristic; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_35_800_chunk0",
+    "answer": "yes",
+    "rationale": "Report of criticism using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_36_800_chunk0",
+    "answer": "yes",
+    "rationale": "Quote about epidemiological methods; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_37_800_chunk0",
+    "answer": "yes",
+    "rationale": "Report of criticism using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_38_800_chunk0",
+    "answer": "yes",
+    "rationale": "Quote criticizing communication tone; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_48_800_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using a metaphor for difficulty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_55_800_chunk0",
+    "answer": "yes",
+    "rationale": "Quote stating need for action; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_2_1138_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('devastation it can cause'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_4_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of transmission; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_9_1745_chunk0",
+    "answer": "no",
+    "rationale": "Explicit reassuring cue found ('risk... remains low'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_001_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of a case using technical terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of species infected; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_006_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of location and species infected; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_007_408_chunk0",
+    "answer": "no",
+    "rationale": "Explicit reassuring cue found ('risk to the public remains low'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_008_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of case count; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of case count and details; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_010_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of symptoms and outcome; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_011_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of past severity and context; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_012_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of reporting method; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_023_408_chunk0",
+    "answer": "yes",
+    "rationale": "Question about likelihood; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_024_408_chunk0",
+    "answer": "no",
+    "rationale": "Explicit reassuring cue found ('low risk for humans'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_025_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual historical comparison; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_026_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual historical comparison and report of low numbers; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_027_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual historical comparison, report of low numbers, and explanation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_029_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal concern about monitoring strategy; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_030_408_chunk0",
+    "answer": "yes",
+    "rationale": "Question about severity; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_034_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of past severity; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_035_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of past severity and question; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_036_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote referencing past experience; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_041_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual historical report of increase; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_043_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual historical report and quoted past prediction; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_044_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about outcome; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_047_408_chunk0",
+    "answer": "yes",
+    "rationale": "Statement using a metaphor for vigilance; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_048_408_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of mechanism and outcome; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_053_408_chunk0",
+    "answer": "yes",
+    "rationale": "Question about source of infection; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_055_408_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of uncertainty and conclusion; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_068_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote giving advice using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_069_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote giving advice and context; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_070_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote giving advice and context; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_073_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing uncertainty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_074_408_chunk0",
+    "answer": "yes",
+    "rationale": "Question about biological mechanism; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_075_408_chunk0",
+    "answer": "yes",
+    "rationale": "Question and statement of uncertainty and possibility; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_077_408_chunk0",
+    "answer": "yes",
+    "rationale": "Question about impact; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_078_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing uncertainty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_079_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing expectation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_082_408_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing uncertainty; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_2_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Statement framing a past threat; no explicit framing cues remain for the current threat."
+  },
+  {
+    "segment_id": "seg_v5_8_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of spread; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_9_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of timing and duration; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_12_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Factual statement about a factor affecting spread; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_14_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Report of worry; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_15_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of potential outcome and scale; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_16_1166_chunk0",
+    "answer": "no",
+    "rationale": "Explicit alarmist cue found ('real risk'), indicating a non-Neutral frame was identified by a higher-priority rule."
+  },
+  {
+    "segment_id": "seg_v5_17_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of potential impact using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_1_805_chunk0",
+    "answer": "yes",
+    "rationale": "Biographical information and commentary on past perception; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_805_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of interview topic; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_5_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing willingness to discuss; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_6_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing communication sources; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_7_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing personal adjustment; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_8_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote reporting a statement; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_9_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote describing an institute and former head; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_11_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing personal responsibility and past events; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_15_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote describing a past situation; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_17_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote reporting others' sentiment; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_21_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote providing personal background; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_22_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing a job transition; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_23_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing communication strategy; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_24_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing past communication practices; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_25_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote discussing communication strategy; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_29_805_chunk0",
+    "answer": "yes",
+    "rationale": "Question setting up topic; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_30_805_chunk0",
+    "answer": "yes",
+    "rationale": "Quote expressing personal concern; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of past outbreaks and locations; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of location and scale; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of transmission; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_2_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of study finding using technical terminology; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_3_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of study method; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_4_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of study method; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_6_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of study findings; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_7_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of study interpretation using neutral language; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report about publication; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report about disclosures; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of historical pattern and recent change; no explicit framing cues remain."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Factual report of outcome; no explicit framing cues remain."
+  }
+]
+```

@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16416", "batch_size": 260, "batch_pos": 185}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes complexity and difficulty ('muddy the picture further', 'making it difficult to identify').", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 179}
+{"Q": 3, "answer": "no", "rationale": "Hypothetical outcome, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 151}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 145}
+{"Q": 5, "answer": "no", "rationale": "The segment reports difficulty in identification and does not contain an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 144}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 138}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a statement about difficulty, not a bare negation about a risk or fact.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 134}
+{"Q": 8, "answer": "no", "rationale": "The segment describes factors making identification difficult, not a capability, preparedness measure, or safeguard.", "method": "llm_batch", "batch_id": "batch_8_6120", "batch_size": 260, "batch_pos": 93}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses seasonal viruses muddying the picture, not economic/price reporting.", "method": "llm_batch", "batch_id": "batch_9_16720", "batch_size": 260, "batch_pos": 202}
+{"Q": 10, "answer": "no", "rationale": "The segment speculates about future difficulty, not relief.", "method": "llm_batch", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 159}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17420", "batch_size": 260, "batch_pos": 149}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_14564", "batch_size": 260, "batch_pos": 149, "regex": {"rule": "NeutralStats", "span": [154, 173], "captures": ["identify", "cases"]}}

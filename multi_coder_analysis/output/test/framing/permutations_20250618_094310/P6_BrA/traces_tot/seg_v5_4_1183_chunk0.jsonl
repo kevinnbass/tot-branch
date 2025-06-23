@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers/location, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 120}
+{"Q": 2, "answer": "no", "rationale": "The verb 'killed' describes an outcome factually, not the threat's impact with high potency. 'persisted' is moderate.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 66}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a containment verb ('have been killed') paired with a large number ('52.5 million'), which is Neutral per rules.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 254}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 243}
+{"Q": 5, "answer": "no", "rationale": "Reports national birds killed number and persistence, neutral facts.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 235}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 187}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 187}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 178}
+{"Q": 8, "answer": "no", "rationale": "The segment provides national culling numbers and duration, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 236}
+{"Q": 9, "answer": "yes", "rationale": "'52.5 million birds have been killed in 46 states' reports numerical metrics using a standard verb.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 244}

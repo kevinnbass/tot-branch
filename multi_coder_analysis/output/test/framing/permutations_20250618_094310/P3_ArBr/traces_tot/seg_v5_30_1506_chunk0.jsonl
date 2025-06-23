@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective. 'concern' is a noun, not a modified risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14164", "batch_size": 260, "batch_pos": 174}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a quote expressing 'concern', which is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_17076", "batch_size": 260, "batch_pos": 173}
+{"Q": 3, "answer": "no", "rationale": "'might impact' is hypothetical/future, excluded by rule 3 table.", "method": "llm_batch", "batch_id": "batch_3_17808", "batch_size": 260, "batch_pos": 161}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_3592", "batch_size": 260, "batch_pos": 156}
+{"Q": 5, "answer": "no", "rationale": "Reports concern. Not calming.", "method": "llm_batch", "batch_id": "batch_5_18076", "batch_size": 260, "batch_pos": 156}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12128", "batch_size": 260, "batch_pos": 153}
+{"Q": 7, "answer": "no", "rationale": "The segment discusses concern about impact, not a bare negation of risk, impact, or cases.", "method": "llm_batch", "batch_id": "batch_7_7488", "batch_size": 260, "batch_pos": 151}
+{"Q": 8, "answer": "no", "rationale": "Expresses concern about potential impact, not capability/preparedness/safeguard/future possibility.", "method": "llm_batch", "batch_id": "batch_8_3500", "batch_size": 260, "batch_pos": 141}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote expressing concern about market impact, not reporting specific metrics.", "method": "llm_batch", "batch_id": "batch_9_16720", "batch_size": 260, "batch_pos": 87}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 63, "regex": {"rule": "ReliefSpeculation", "span": [53, 58], "captures": ["might"]}}

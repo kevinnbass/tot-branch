@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment states a factual statistic, not an intensified risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 115}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_10144", "batch_size": 260, "batch_pos": 80}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs used; scale/impact present but verbs are neutral.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 260}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 239}
+{"Q": 5, "answer": "no", "rationale": "The segment reports historical facts, including high fatality rate, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 236}
+{"Q": 6, "answer": "no", "rationale": "The segment reports human cases and fatality rate but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 184}
+{"Q": 7, "answer": "no", "rationale": "The segment states a fact, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 171}
+{"Q": 8, "answer": "no", "rationale": "The segment provides historical statistics, not capabilities, preparedness, possibilities, or safeguards.", "method": "llm_batch", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 252}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_16860", "batch_size": 239, "batch_pos": 74}
+{"Q": 9, "answer": "yes", "rationale": "Reports numerical counts '890 human cases' and percentage 'fatality rate of roughly 50%' using standard phrasing.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_16860_r1", "batch_size": 239, "batch_pos": 74}

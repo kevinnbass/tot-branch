@@ -3,3 +3,30 @@ description:
 globs:
 alwaysApply: false
 ---
+---
+description: Keeps README.md and CHANGELOG.md in sync with Python code changes.
+globs:
+  - "multi_coder_analysis/**/*.py"
+  - "utils/**/*.py"
+  - "README.md"
+  - "CHANGELOG.md"
+alwaysApply: false
+---
+
+When this rule is attached due to a change in a `.py` file, perform the following actions:
+
+1.  **Analyze the Staged Changes:** Thoroughly examine the diff of the staged Python files. Identify all significant changes to the public API, including:
+    - New, modified, or removed functions, classes, or methods.
+    - Changes to function signatures (parameters, return types).
+    - Added, removed, or modified CLI flags, sub-commands, or environment variables.
+
+2.  **Update `README.md`:**
+    - Locate the section delimited by `<!-- API-REFERENCE:START -->` and `<!-- API-REFERENCE:END -->`.
+    - Completely regenerate the content within these tags to create a concise, accurate API reference based on the detected changes and the current state of the code.
+    - Scan the entire `README.md` for any code snippets and update them to be correct and compilable with the new code.
+
+3.  **Update `CHANGELOG.md`:**
+    - Add a new bullet point under the `## [Unreleased]` heading.
+    - The new entry should be a short, imperative summary of the changes. For example: `- Add new high-level analysis module`.
+    - If multiple, related changes were made, group them under a single, coherent entry.
+    - Do not add an entry if the changes are trivial (e.g., typo fixes, comment changes, code formatting).

@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15452", "batch_size": 260, "batch_pos": 175}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('says', 'is carried') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_16972", "batch_size": 260, "batch_pos": 169}
+{"Q": 3, "answer": "no", "rationale": "Statement about virus carriers, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_11860", "batch_size": 260, "batch_pos": 164}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_16028", "batch_size": 260, "batch_pos": 162}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a transmission source without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10380", "batch_size": 260, "batch_pos": 161}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14764", "batch_size": 260, "batch_pos": 158}
+{"Q": 7, "answer": "no", "rationale": "The segment describes virus carriers but contains no negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_10756", "batch_size": 260, "batch_pos": 151}
+{"Q": 8, "answer": "no", "rationale": "The segment describes how the virus is carried, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 125}
+{"Q": 9, "answer": "no", "rationale": "The segment describes how the virus is carried, not primarily reporting prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 80}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 47}
+{"Q": 10, "answer": "no", "rationale": "The segment describes virus transmission, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 47}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 38}
+{"Q": 12, "answer": "yes", "rationale": "Factual statement about transmission vector. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 35}

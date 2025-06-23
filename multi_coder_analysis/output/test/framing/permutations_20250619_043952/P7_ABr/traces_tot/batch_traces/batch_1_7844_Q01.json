@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_7844",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_001_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_7_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'negligible' which is a low-risk adjective, not a risk-adjective amplified by an intensifier."
+    },
+    {
+      "segment_id": "seg_v5_039_408_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'a major pandemic virus' uses 'major' as an intensifier for the risk concept 'pandemic virus'."
+    },
+    {
+      "segment_id": "seg_v5_9_1272_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'much worse problem' uses a comparative ('worse') intensified by 'much' to describe a potential negative outcome."
+    }
+  ],
+  "timestamp": "2025-06-19T04:40:17.522932"
+}

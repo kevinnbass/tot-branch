@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18296", "batch_size": 260, "batch_pos": 160}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'increase the risk' is a Q1 cue. 'touching off a pandemic' describes the start of a potential event, not its impact, and is not a high-potency verb/metaphor per Q2 examples.", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 156}
+{"Q": 3, "answer": "no", "rationale": "Hypothetical outcome, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_11032", "batch_size": 260, "batch_pos": 130}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_9508", "batch_size": 260, "batch_pos": 125}
+{"Q": 5, "answer": "no", "rationale": "This segment reports scientists are concerned, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17760", "batch_size": 260, "batch_pos": 122}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_17008", "batch_size": 260, "batch_pos": 115}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16740", "batch_size": 260, "batch_pos": 112}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a concern about future risk/possibility, not current capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_14728", "batch_size": 260, "batch_pos": 79}
+{"Q": 9, "answer": "no", "rationale": "'concerned' is framing language.", "method": "llm_batch", "batch_id": "batch_9_16280", "batch_size": 260, "batch_pos": 208}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_1596", "batch_size": 260, "batch_pos": 176, "regex": {"rule": "ReliefSpeculation", "span": [84, 89], "captures": ["could"]}}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'low' and 'rare, sporadic' indicate low risk/frequency, not intensified risk.", "method": "llm_batch", "batch_id": "batch_1_18192", "batch_size": 260, "batch_pos": 102}
+{"Q": 2, "answer": "no", "rationale": "'risks remain low' and 'rare, sporadic infections' are Q4 cues, not Q2 high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_304", "batch_size": 260, "batch_pos": 86}
+{"Q": 3, "answer": "no", "rationale": "'caused' is a plain outcome verb and scale is not specific.", "method": "llm_batch", "batch_id": "batch_3_17716", "batch_size": 260, "batch_pos": 71}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_id": "batch_4_12868", "batch_size": 260, "batch_pos": 68}
+{"Q": 5, "answer": "no", "rationale": "The segment states risks 'remain low' for the public, which is a low-risk evaluation but not intensified enough for Q5.", "method": "llm_batch", "batch_id": "batch_5_7456", "batch_size": 260, "batch_pos": 67}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12256", "batch_size": 260, "batch_pos": 60}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'risks remain low' which is a low-risk fact, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16800", "batch_size": 260, "batch_pos": 60}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16640", "batch_size": 260, "batch_pos": 22, "regex": {"rule": "CapabilityNoReassurance", "span": [7, 16], "captures": []}}

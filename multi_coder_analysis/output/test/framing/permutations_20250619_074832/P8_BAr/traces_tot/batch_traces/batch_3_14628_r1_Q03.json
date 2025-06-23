@@ -1,0 +1,83 @@
+{
+  "batch_id": "batch_3_14628_r1",
+  "hop_idx": 3,
+  "segment_count": 14,
+  "responses": [
+    {
+      "segment_id": "seg_v5_10_1009_chunk0",
+      "answer": "no",
+      "rationale": "'discovered' is not a moderate verb from the list, and 'flocks of birds' is not significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_1_101_chunk0",
+      "answer": "no",
+      "rationale": "'killed' is a containment verb, which neutralizes the large number according to the rule."
+    },
+    {
+      "segment_id": "seg_v5_3_101_chunk0",
+      "answer": "yes",
+      "rationale": "'hard hit' is a moderate verb paired with significant impact 'disasters being declared'."
+    },
+    {
+      "segment_id": "seg_v5_5_101_chunk0",
+      "answer": "no",
+      "rationale": "'spreads' and 'makes' are not moderate verbs, and 'difficult to contain' is not a specific scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_6_101_chunk0",
+      "answer": "no",
+      "rationale": "'infected' is a plain outcome verb, excluded by rule 4."
+    },
+    {
+      "segment_id": "seg_v5_7_101_chunk0",
+      "answer": "no",
+      "rationale": "'reported' is not a moderate verb, and 'outbreaks' is not specific scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_8_101_chunk0",
+      "answer": "no",
+      "rationale": "This is a question, not a statement describing impact or scale."
+    },
+    {
+      "segment_id": "seg_v5_9_101_chunk0",
+      "answer": "no",
+      "rationale": "Contains a reassuring cue ('very low risk') but no moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_011_1010_chunk0",
+      "answer": "no",
+      "rationale": "'detected' is not a moderate verb, and 'No human infections' is a lack of scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_013_1010_chunk0",
+      "answer": "no",
+      "rationale": "'halted' is not a moderate verb, and 'halted imports' is a financial/trade metric (Neutral)."
+    },
+    {
+      "segment_id": "seg_v5_014_1010_chunk0",
+      "answer": "no",
+      "rationale": "'halted' is trade/financial (Neutral). 'felt' is background. 'emerged' is not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_015_1010_chunk0",
+      "answer": "no",
+      "rationale": "'halted' is not a moderate verb, and 'halted imports' is a financial/trade metric (Neutral)."
+    },
+    {
+      "segment_id": "seg_v5_016_1010_chunk0",
+      "answer": "no",
+      "rationale": "'halted' is trade/financial (Neutral). 'felt' is background. 'emerged' is not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_010_1010_chunk0",
+      "answer": "no",
+      "rationale": "Contains reassuring cues ('Fortunately', 'rarely transmissible', 'no evidence') but no moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_012_1010_chunk0",
+      "answer": "no",
+      "rationale": "'impose' is not a moderate verb, and the impact is financial/hypothetical (Neutral)."
+    }
+  ],
+  "timestamp": "2025-06-19T07:56:23.874227"
+}

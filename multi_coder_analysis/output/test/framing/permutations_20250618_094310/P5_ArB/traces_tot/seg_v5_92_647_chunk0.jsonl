@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17404", "batch_size": 260, "batch_pos": 229}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral/positive language describing actions/feelings ('precautions they took', 'safely work with', 'grateful they were effective').", "method": "llm_batch", "batch_id": "batch_2_15516", "batch_size": 260, "batch_pos": 213}
+{"Q": 3, "answer": "no", "rationale": "About precautions.", "method": "llm_batch", "batch_id": "batch_3_5284", "batch_size": 260, "batch_pos": 172}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_17836", "batch_size": 260, "batch_pos": 163}
+{"Q": 5, "answer": "no", "rationale": "The segment reports gratitude that precautions were effective, which is a positive sentiment about past actions, not an explicit calming cue about current public safety.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 159}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_6448", "batch_size": 260, "batch_pos": 137}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17148", "batch_size": 260, "batch_pos": 132}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16516", "batch_size": 260, "batch_pos": 51, "regex": {"rule": "CapabilityNoReassurance", "span": [46, 50], "captures": []}}

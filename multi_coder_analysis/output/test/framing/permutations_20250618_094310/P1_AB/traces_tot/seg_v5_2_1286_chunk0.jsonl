@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "'Highly Pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 189}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('suspected', 'found dead', 'testing showed', 'had') without high-potency verbs or metaphors. 'Highly Pathogenic Avian Influenza (HPAI)' is technical.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 182}
+{"Q": 3, "answer": "no", "rationale": "'found dead' and 'showed' are plain verbs.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 177}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 175}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 174}
+{"Q": 5, "answer": "no", "rationale": "This segment reports animal death and cause (negative fact) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 174}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 169}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 169}
+{"Q": 7, "answer": "no", "rationale": "The segment describes factual events (found dead, testing showed) but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 164}
+{"Q": 8, "answer": "no", "rationale": "The segment describes animal death and testing result, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 135}
+{"Q": 9, "answer": "no", "rationale": "The segment reports finding a dead condor and testing results, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 89}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event and finding, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 51}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 42}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; reports events and findings factually. 'sick'/'dead' are factual.", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 41}

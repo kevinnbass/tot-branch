@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 40}
+{"Q": 2, "answer": "no", "rationale": "The segment describes past spread using factual language; 'spread' is moderate.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 246}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a moderate verb ('spread') but the scale ('within families') is limited, not significant.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 176}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 165}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17952_r1", "batch_size": 260, "batch_pos": 165}
+{"Q": 5, "answer": "no", "rationale": "Describes spread within families, a neutral fact.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 157}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 110}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 110}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 101}
+{"Q": 8, "answer": "no", "rationale": "The segment describes past spread pattern, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 162}
+{"Q": 9, "answer": "no", "rationale": "The segment reports spread mechanism, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 202}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 243}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 201}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of spread pattern.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 200}

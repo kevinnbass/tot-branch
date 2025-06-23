@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective. 'safe' is a low-risk adjective.", "method": "llm_batch", "batch_id": "batch_1_15064", "batch_size": 260, "batch_pos": 163}
+{"Q": 2, "answer": "no", "rationale": "The segment states negative test results and reaffirms safety, which are not Alarmist cues for Q2.", "method": "llm_batch", "batch_id": "batch_2_11532", "batch_size": 260, "batch_pos": 130}
+{"Q": 3, "answer": "no", "rationale": "The verbs 'tested' and 'reaffirm' are not moderate verbs from the list. 'Safe' is likely a Q5 cue.", "method": "llm_batch", "batch_id": "batch_3_8472", "batch_size": 260, "batch_pos": 87}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_11556", "batch_size": 260, "batch_pos": 80}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_15512", "batch_size": 260, "batch_pos": 76}
+{"Q": 5, "answer": "yes", "rationale": "The quote explicitly states 'the meat supply is safe', which is a direct safety assurance cue.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_15512_r1", "batch_size": 260, "batch_pos": 76}

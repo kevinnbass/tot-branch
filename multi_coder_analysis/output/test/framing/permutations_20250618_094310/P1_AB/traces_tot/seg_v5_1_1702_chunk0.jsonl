@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 210}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('killed', 'report') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 202}
+{"Q": 3, "answer": "no", "rationale": "'killed' is a plain outcome verb (Neutral per rule 4).", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 196}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 193}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 192}
+{"Q": 5, "answer": "no", "rationale": "This segment reports incomplete killing of virus (negative finding) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 192}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 187}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 187}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'not all, of the virus was killed'.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 182}

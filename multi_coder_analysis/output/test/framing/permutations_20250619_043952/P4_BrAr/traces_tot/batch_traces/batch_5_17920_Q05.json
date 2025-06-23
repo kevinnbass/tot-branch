@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_5_17920",
+  "hop_idx": 5,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_039_408_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a past feared event 'didn't happen' but lacks explicit calming language or required marker tokens for current safety/control."
+    },
+    {
+      "segment_id": "seg_v5_7_1779_chunk0",
+      "answer": "no",
+      "rationale": "States risk is 'negligible' but does not contain any of the required explicit calming marker tokens."
+    },
+    {
+      "segment_id": "seg_v5_001_721_chunk0",
+      "answer": "no",
+      "rationale": "States officials 'believe the country can still eliminate' but lacks explicit calming language or required marker tokens."
+    }
+  ],
+  "timestamp": "2025-06-19T04:40:49.119865"
+}

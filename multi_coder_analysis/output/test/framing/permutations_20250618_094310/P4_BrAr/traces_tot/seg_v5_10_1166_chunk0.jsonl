@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment reports factual numbers ('as high as 1mn birds') without using intensifiers or comparative adjectives modifying risk-adjectives.", "method": "llm_batch", "batch_id": "batch_1_17900", "batch_size": 260, "batch_pos": 174}
+{"Q": 2, "answer": "no", "rationale": "The noun phrase 'loss estimates' is not a high-potency verb, metaphor, superlative, or critical alert phrase.", "method": "llm_batch", "batch_id": "batch_2_17580", "batch_size": 260, "batch_pos": 139}
+{"Q": 3, "answer": "no", "rationale": "'range as high as' is not a moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 76}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 57}
+{"Q": 5, "answer": "no", "rationale": "The segment reports loss estimates, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 55}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions loss estimates but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 8}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17040", "batch_size": 260, "batch_pos": 256}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 115, "regex": {"rule": "CapabilityNoReassurance", "span": [39, 46], "captures": []}}

@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "'higher' modifies 'prices'. 'spread' is a verb. 'reputational strain' is a noun phrase.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 196}
+{"Q": 2, "answer": "no", "rationale": "'reputational strain' is not a Q2 cue.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 182}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 147}
+{"Q": 3, "answer": "no", "rationale": "'continues to spread' is hypothetical ('if it continues') and the potential impact ('reputational strain') is not a concrete scale/impact per Q3 rules.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 147}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 141}
+{"Q": 5, "answer": "no", "rationale": "The segment reports potential negative consequences without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 139}
+{"Q": 6, "answer": "no", "rationale": "'some industries' is not a minimiser with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 102}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 94}
+{"Q": 8, "answer": "no", "rationale": "Segment describes potential future impacts, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 249}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential future impacts ('higher prices', 'reputational strain') but does not report current metrics.", "method": "llm_batch", "batch_id": "batch_9_2216", "batch_size": 260, "batch_pos": 48}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 207, "regex": {"rule": "ReliefSpeculation", "span": [52, 57], "captures": ["could"]}}

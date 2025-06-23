@@ -1,0 +1,47 @@
+{
+  "batch_id": "batch_3_11328",
+  "hop_idx": 3,
+  "unknown_count": 8,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_32_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb from the specified list paired with scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_33_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports production metrics, which are treated as Neutral under Rule 6."
+    },
+    {
+      "segment_id": "seg_v5_34_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports production metrics, which are treated as Neutral under Rule 6."
+    },
+    {
+      "segment_id": "seg_v5_35_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports trade metrics, which are treated as Neutral under Rule 6."
+    },
+    {
+      "segment_id": "seg_v5_36_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'killed' which is an outcome verb, not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_37_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'killed' which is an outcome verb, not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_38_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports trade metrics ('record', 'million tons', 'billion'), which are treated as Neutral under Rule 6."
+    },
+    {
+      "segment_id": "seg_v5_39_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports trade metrics ('million tons'), which are treated as Neutral under Rule 6."
+    }
+  ]
+}

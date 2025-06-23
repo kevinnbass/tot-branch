@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_3_17840_r1",
+  "hop_idx": 3,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_14_812_chunk0",
+      "answer": "no",
+      "rationale": "The segment states a positive fact and does not use a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_12_812_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'have died' is a plain outcome verb, not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_10_582_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes findings in wastewater ('spikes', 'large amounts') which is background condition, not realised impact of the threat."
+    }
+  ],
+  "timestamp": "2025-06-19T06:39:00.859069"
+}

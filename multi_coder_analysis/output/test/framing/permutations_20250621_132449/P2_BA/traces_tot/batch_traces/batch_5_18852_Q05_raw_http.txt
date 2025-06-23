@@ -1,0 +1,919 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about human cases without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive outcome (patient recovered) but lacks explicit calming language from the source or author."
+  },
+  {
+    "segment_id": "seg_v5_011_408_chunk0",
+    "answer": "no",
+    "rationale": "Compares current strain to previous deadly cases but lacks explicit calming language or keywords."
+  },
+  {
+    "segment_id": "seg_v5_012_408_chunk0",
+    "answer": "no",
+    "rationale": "Introduces an interview topic without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_014_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes the nature of the infections factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_015_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes the nature of the infections factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_018_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about a past case without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_019_408_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential symptom relation and describes the second case factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_021_408_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'That’s reassuring' is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_023_408_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_024_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports 'low risk for humans' which is a bare low-risk statement, not intensified as required for Reassuring under Q5."
+  },
+  {
+    "segment_id": "seg_v5_025_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past high-risk situations without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_026_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact ('very few cases') but lacks explicit calming language from the source or author."
+  },
+  {
+    "segment_id": "seg_v5_027_408_chunk0",
+    "answer": "no",
+    "rationale": "Provides a factual explanation for low case numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_028_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports an absence of evidence ('no evidence yet') which is a bare negation, not explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_029_408_chunk0",
+    "answer": "no",
+    "rationale": "Expresses concern about a specific animal species."
+  },
+  {
+    "segment_id": "seg_v5_030_408_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_031_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes a factual limitation of the virus ('just is not infecting lower parts') without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_032_408_chunk0",
+    "answer": "no",
+    "rationale": "States 'at least for now, it’s not an issue' which is a bare negation of a problem, not explicit calming using required keywords."
+  },
+  {
+    "segment_id": "seg_v5_034_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports previous fatal cases without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_035_408_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_036_408_chunk0",
+    "answer": "no",
+    "rationale": "Refers to past events without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_037_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past predictions that didn't materialize, which is implicitly reassuring but lacks explicit calming language or keywords."
+  },
+  {
+    "segment_id": "seg_v5_039_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past predictions that didn't materialize, which is implicitly reassuring but lacks explicit calming language or keywords."
+  },
+  {
+    "segment_id": "seg_v5_041_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past events without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_042_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past events without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_043_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past predictions without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_044_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual outcome ('Nothing happened') without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_045_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual outcome and draws a lesson, but lacks explicit calming language about the current situation."
+  },
+  {
+    "segment_id": "seg_v5_046_408_chunk0",
+    "answer": "no",
+    "rationale": "Advises vigilance ('keep your eye on it') which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_047_408_chunk0",
+    "answer": "no",
+    "rationale": "Advises vigilance ('sleep with one eye open') which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_048_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes past severe cases without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_050_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports an absence of evidence ('no evidence') which is a bare negation, not explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_051_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about exposures without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_052_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports an absence of evidence ('haven’t seen any evidence') which is a bare negation, not explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_053_408_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_054_408_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential source without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_055_408_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential source without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_057_408_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_058_408_chunk0",
+    "answer": "no",
+    "rationale": "An admission of not knowing is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_059_408_chunk0",
+    "answer": "no",
+    "rationale": "A statement about future knowledge is not a calming cue about the present."
+  },
+  {
+    "segment_id": "seg_v5_080_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes seasonal virus movement factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_081_408_chunk0",
+    "answer": "no",
+    "rationale": "Describes seasonal virus movement and uncertainty ('genetic roulette') without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_082_408_chunk0",
+    "answer": "no",
+    "rationale": "An admission of not knowing is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_083_408_chunk0",
+    "answer": "no",
+    "rationale": "States a need for preparedness, but does not explicitly link it to current public safety or use required calming keywords."
+  },
+  {
+    "segment_id": "seg_v5_084_408_chunk0",
+    "answer": "no",
+    "rationale": "States 'I don't believe poses a major risk' which is a bare negation of risk, not explicit calming using required keywords."
+  },
+  {
+    "segment_id": "seg_v5_085_408_chunk0",
+    "answer": "no",
+    "rationale": "Qualifies a previous statement about risk without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1166_chunk0",
+    "answer": "no",
+    "rationale": "Suggests policy actions without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1166_chunk0",
+    "answer": "no",
+    "rationale": "Provides background context about Covid without explicit calming language about the current threat."
+  },
+  {
+    "segment_id": "seg_v5_4_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about control measures without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about culling numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports impact on wildlife without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1166_chunk0",
+    "answer": "no",
+    "rationale": "Describes spread mechanism factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_1166_chunk0",
+    "answer": "no",
+    "rationale": "Describes outbreak persistence factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports loss estimates without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1166_chunk0",
+    "answer": "no",
+    "rationale": "Describes a factor accelerating contagion without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about dead birds without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_14_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports that scientists 'worry' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_16_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports a species is at 'real risk' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_17_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports impact on a sector without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_18_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about culling and economic impact without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_20_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports economic impact without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_21_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports price increases factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_22_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports potential rule changes due to 'fears' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_23_1166_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about compensation without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_24_1166_chunk0",
+    "answer": "no",
+    "rationale": "Suggests policy action without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_805_chunk0",
+    "answer": "no",
+    "rationale": "Provides background information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_805_chunk0",
+    "answer": "no",
+    "rationale": "Provides background information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_805_chunk0",
+    "answer": "no",
+    "rationale": "Introduces interview topics without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_805_chunk0",
+    "answer": "no",
+    "rationale": "Mentions a 'highly concerning situation' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_5_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states they are 'happy to talk' which is about their willingness, not explicit calming about the topic."
+  },
+  {
+    "segment_id": "seg_v5_6_805_chunk0",
+    "answer": "no",
+    "rationale": "Discusses sources of information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker discusses getting used to the job without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports what the speaker was told without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes an inherited institute without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes a part of the job without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker discusses their first responsibility without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes budget cuts without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes budget cuts and rationale without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_17_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports people saying 'This is really bad' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_19_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker describes their work without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_20_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive outcome (flat budget) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_21_805_chunk0",
+    "answer": "no",
+    "rationale": "Provides background information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_22_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker comments on a restart without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_23_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker comments on past behavior without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_24_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes past practice without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_25_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes current practice without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_29_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_30_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I am concerned' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_31_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports an effort to be cautious, which is a factual description of action, not explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_32_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual assessment ('fairly constant') without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_33_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes a 'hangover period' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_34_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes reluctance and inability to mandate masks, which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_37_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes disturbance and accusation, which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_38_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker's thought about people's desires is not a calming cue about the situation."
+  },
+  {
+    "segment_id": "seg_v5_39_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'It was so painful' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_41_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'We’re still all traumatized' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_42_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'We’re still all traumatized' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_43_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'None of us are over that' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_44_805_chunk0",
+    "answer": "no",
+    "rationale": "Mentions 'raising an alarm' in the context of avoiding it, but does not state there is 'no cause for alarm'."
+  },
+  {
+    "segment_id": "seg_v5_45_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_46_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I don’t want to be alarmist' which is about the speaker's rhetoric, not an explicit calming statement about the situation using required keywords."
+  },
+  {
+    "segment_id": "seg_v5_47_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'you just can’t help but worry' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_48_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I worry about' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_49_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I am very concerned' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_50_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I worry there’s going to be delayed diagnosis and delayed detection' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_51_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I worry there’s going to be delayed diagnosis and delayed detection' and 'you’ve just got to respect it' which are not calming cues."
+  },
+  {
+    "segment_id": "seg_v5_53_805_chunk0",
+    "answer": "no",
+    "rationale": "Introduces a new topic without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_54_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_59_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I don’t even think we know what the magnitude of the problem is' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_60_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'it’s a very high alert situation' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_61_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive action ('really important') but lacks explicit calming language about safety or risk."
+  },
+  {
+    "segment_id": "seg_v5_62_805_chunk0",
+    "answer": "no",
+    "rationale": "Discusses future actions without explicit calming language about the current situation."
+  },
+  {
+    "segment_id": "seg_v5_63_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_64_805_chunk0",
+    "answer": "no",
+    "rationale": "Discusses scientific challenges without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_65_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_66_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports positive research findings ('amazing papers') but lacks explicit calming language about a threat."
+  },
+  {
+    "segment_id": "seg_v5_67_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'the field is getting really exciting' which is about the research field, not explicit calming about a threat."
+  },
+  {
+    "segment_id": "seg_v5_68_805_chunk0",
+    "answer": "yes",
+    "rationale": "Speaker states 'I do feel like there are some incipient breakthroughs. So I don’t think it’s time to give up.' which expresses confidence/optimism."
+  },
+  {
+    "segment_id": "seg_v5_70_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_71_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'What worries me is' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_72_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'What worries me is' which is not a calming cue, despite a later positive statement about vaccines."
+  },
+  {
+    "segment_id": "seg_v5_74_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_75_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about effectiveness without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_77_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'it would probably work well' which is a positive opinion, not explicit calming about a threat."
+  },
+  {
+    "segment_id": "seg_v5_78_805_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'safe sex' uses the keyword 'safe' as a direct safety assurance."
+  },
+  {
+    "segment_id": "seg_v5_82_805_chunk0",
+    "answer": "no",
+    "rationale": "Discusses effectiveness without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_83_805_chunk0",
+    "answer": "no",
+    "rationale": "Discusses effectiveness without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_85_805_chunk0",
+    "answer": "no",
+    "rationale": "Introduces a topic without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_86_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports working on a plan without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_87_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports working on a plan without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_88_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes a plan without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_90_805_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_91_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I would love to see' which expresses hope, not explicit calming about a current threat."
+  },
+  {
+    "segment_id": "seg_v5_92_805_chunk0",
+    "answer": "no",
+    "rationale": "Reports positive study results factually without explicit calming language about a threat."
+  },
+  {
+    "segment_id": "seg_v5_93_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'such a signal achievement to me' which is a positive evaluation of a study aspect, not explicit calming about a threat."
+  },
+  {
+    "segment_id": "seg_v5_94_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'you could make a huge dent' which expresses potential impact, not explicit calming about a current threat."
+  },
+  {
+    "segment_id": "seg_v5_95_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'could create a path for serious control' which expresses potential future control, not explicit calming about a current threat."
+  },
+  {
+    "segment_id": "seg_v5_96_805_chunk0",
+    "answer": "yes",
+    "rationale": "Speaker states 'I’m encouraged about tuberculosis' which is an explicit confidence cue."
+  },
+  {
+    "segment_id": "seg_v5_97_805_chunk0",
+    "answer": "no",
+    "rationale": "Describes a study that 'will be very interesting' which is a positive evaluation of research, not explicit calming about a threat."
+  },
+  {
+    "segment_id": "seg_v5_98_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'Hopefully we’ll make some inroads' which expresses hope, not explicit calming about a current threat."
+  },
+  {
+    "segment_id": "seg_v5_100_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I don’t think we’re going to end it' which is a bare negation about a future outcome, not explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_101_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I wish I could 100% buy into that idea' which expresses doubt, not explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_102_805_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'I think we can aim for some incredible game-changing interventions' which expresses ambition, not explicit calming about a current threat."
+  },
+  {
+    "segment_id": "seg_v5_2_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about discovery without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_879_chunk0",
+    "answer": "no",
+    "rationale": "States 'Humans cannot contract bird flu from eating poultry or eggs' which is a bare negation of risk, not using the required keyword 'safe'."
+  },
+  {
+    "segment_id": "seg_v5_5_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about control measures without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about culling numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about population size without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about a past outbreak without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about a past outbreak without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_879_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about cases and culling in other countries without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_833_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about culling numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_833_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about infection details without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_833_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about cases in other countries without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_833_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about another farm and potential culling without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1038_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about egg labeling changes without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1038_chunk0",
+    "answer": "no",
+    "rationale": "Explains the reason for labeling changes factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1038_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a spokesman reporting factual information about labeling changes without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_1038_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about signs and future changes without explicit calming language about current safety/risk."
+  },
+  {
+    "segment_id": "seg_v5_7_1038_chunk0",
+    "answer": "no",
+    "rationale": "Quotes an adviser explaining the reason for housing ('to protect their health and welfare') which is positive but not explicit calming about human safety/risk."
+  },
+  {
+    "segment_id": "seg_v5_8_1038_chunk0",
+    "answer": "no",
+    "rationale": "Describes future conditions ('birds will be able to go outside again') which is a positive future outcome, not explicit calming about current safety/risk."
+  },
+  {
+    "segment_id": "seg_v5_9_1038_chunk0",
+    "answer": "no",
+    "rationale": "Explains a labeling rule factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1038_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about trialling vaccines without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1038_chunk0",
+    "answer": "no",
+    "rationale": "Fragment 'Protect health and welfare' is positive but not explicit calming about human safety/risk."
+  },
+  {
+    "segment_id": "seg_v5_1_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports developments that 'have raised concerns' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about outbreaks without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about developments without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports 'risk to the public remains low' which is a bare low-risk statement, not intensified as required for Reassuring under Q5."
+  },
+  {
+    "segment_id": "seg_v5_5_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports agency is taking it seriously and virus is 'well studied' which is about preparedness/knowledge, not explicit calming about current safety/risk."
+  },
+  {
+    "segment_id": "seg_v5_6_1506_chunk0",
+    "answer": "no",
+    "rationale": "Speaker states 'definitely raises our concern level' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_7_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Speaker states 'The good news is that' which is an explicit positive amplification cue."
+  },
+  {
+    "segment_id": "seg_v5_8_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports preparedness ('preparing for avian flu for 20 years') from an official source, but does not explicitly link it to current public safety within the required span."
+  },
+  {
+    "segment_id": "seg_v5_9_1506_chunk0",
+    "answer": "no",
+    "rationale": "Describes virus evolution factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1506_chunk0",
+    "answer": "no",
+    "rationale": "Describes spread among animal species factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection locations factually without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about culling numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about detection without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_14_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about detection locations without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports historical information without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_16_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports historical cases and deaths factually without explicit calming language about the present."
+  },
+  {
+    "segment_id": "seg_v5_17_1506_chunk0",
+    "answer": "no",
+    "rationale": "Reports positive facts ('only two cases', 'neither were fatal') but lacks explicit calming language or keywords."
+  },
+  {
+    "segment_id": "seg_v5_18_1506_chunk0",
+    "answer": "no",
+    "rationale": "Describes a past case factually without explicit calming language."
+  }
+]
+```

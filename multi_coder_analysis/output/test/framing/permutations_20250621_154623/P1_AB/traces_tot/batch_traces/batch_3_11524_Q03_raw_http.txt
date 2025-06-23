@@ -1,0 +1,969 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_2_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses containment verbs ('killed', 'slaughtered') with large numbers, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses evaluative language ('worrisome') and discusses risk ('at risk') but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses difficulty ('hard to keep out') but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_358_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'popping up' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_7_358_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'affected' is a plain outcome verb, not a moderate verb from the list. 'small portion' is not a scale indicator for Alarmist."
+  },
+  {
+    "segment_id": "seg_v5_8_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports financial metrics ('remained at $2.07'), which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_358_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'climbed' is not on the list of moderate verbs for Q3. The segment reports financial metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports financial metrics ('averaged $1.15 per pound'), which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the moderate verb 'hit' but it is negated ('haven't been hit as hard') and paired with a comparative ('as hard') rather than a specific scale/impact metric."
+  },
+  {
+    "segment_id": "seg_v5_15_358_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'cost' is not on the list of moderate verbs for Q3. The segment reports financial metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_358_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'suffered' is not on the list of moderate verbs for Q3. The segment reports financial metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'killed' with a large number, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_18_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'doesn't represent a significant health threat' but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_19_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes cases as 'extremely rare' and discusses food safety, lacking a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_20_358_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'kill' is a plain outcome verb, not a moderate verb from the list for Q3."
+  },
+  {
+    "segment_id": "seg_v5_21_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses vaccine development and practicality but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_22_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses market acceptance and costs but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_23_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses economic feasibility and costs, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential future impact ('could see Americans paying more') and financial metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_2_1055_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'confirmed' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_1055_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spreads' is not on the list of moderate verbs. 'can prove deadly' is potential, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_4_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses response efforts but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'depopulated', triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses food safety but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'euthanized' with a large number, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'depopulated', triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses surveillance and testing but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1055_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'occurred' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_11_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'kill' with large numbers, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a surveillance program but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the moderate verb 'surge' and scale '5 percent', but this refers to financial metrics (prices), which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential future impact ('could contribute') and financial metrics, which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_002_258_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'infected' and 'killing' are plain outcome verbs, not moderate verbs from the list for Q3."
+  },
+  {
+    "segment_id": "seg_v5_005_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'triggering the latest round of fears', which is about public reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_006_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the evaluative term 'concerning' but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_007_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses animal relationships but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_008_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses animal relationships and past situations but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_009_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infect' is a plain outcome verb. 'much larger geographic footprint' and 'many more species' are comparative but not specific Q3 scale indicators."
+  },
+  {
+    "segment_id": "seg_v5_012_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'quieted down' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_014_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'report' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_017_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses uncertainty but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_018_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses past actions ('was sent', 'help') but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_020_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'retired' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_021_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spread' is not on the list of moderate verbs. 'infected' is a plain outcome verb. 'lengthening list' is not a specific Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_022_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'portends' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_025_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses agreement but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_026_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses asking experts for assessment but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_027_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worrying', which is about reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_028_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion ('like') but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_029_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses opinion ('like') and difficulty ('struggled') and reaction ('worried'), lacking a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_030_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'raised the specter' refers to potential or fear, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_031_258_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'moved' and 'spread' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_032_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'recorded' is not on the list of moderate verbs. 'unsettling succession' is emotive but not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_033_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'detected' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_034_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'died' is a plain outcome verb, not a moderate verb from the list for Q3."
+  },
+  {
+    "segment_id": "seg_v5_036_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worrying', which is about reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_037_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worrying' and 'worries', which are about reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_038_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worries', which is about reaction. 'seeing' is not a moderate verb. 'more chances' is not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_039_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses risk but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_040_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions a 'pandemic threat' but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_042_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses scientific work but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_043_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'fight' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_044_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'sparked' refers to a debate/reaction, not the realised impact of the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_045_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'report' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_047_258_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'occurred', 'saw', 'move about', 'sickening', and 'killing' are not on the list of moderate verbs for Q3. 'a number' is not a specific scale."
+  },
+  {
+    "segment_id": "seg_v5_048_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'euthanized' with a large number, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_050_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spread' is not on the list of moderate verbs. The statement is also hypothetical ('seems possible')."
+  },
+  {
+    "segment_id": "seg_v5_053_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'gives flu researchers pause' refers to reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_054_258_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('If a virus can transmit')."
+  },
+  {
+    "segment_id": "seg_v5_055_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reports' is not on the list of moderate verbs. '110 reports' is a number of reports, not the scale of impact itself. 'multiple types' is not a specific Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_056_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses difficulty in assessment but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_057_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'capacity to infect' refers to potential, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_058_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'died' is a plain outcome verb, not a moderate verb from the list for Q3."
+  },
+  {
+    "segment_id": "seg_v5_059_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'detected' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_060_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a colloquial phrase but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_063_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses uncertainty but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_064_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_065_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spread' is not on the list of moderate verbs. 'increasing reports' is not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_068_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'whole lot more' is not a specific Q3 scale indicator."
+  },
+  {
+    "segment_id": "seg_v5_071_258_chunk0",
+    "answer": "no",
+    "rationale": "The term 'few' is not a large scale indicator for Alarmist framing in Q3."
+  },
+  {
+    "segment_id": "seg_v5_072_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'have cases' is not a moderate verb. The numbers are used to illustrate rarity, not large scale impact."
+  },
+  {
+    "segment_id": "seg_v5_073_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'culling', triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_074_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions a number of workers but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_075_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions a person with infected birds but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_076_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. 'rare severe case' is not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_077_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'decline' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_078_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses genetic characteristics but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_079_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses origin but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_080_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'caused by' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_081_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'acquired' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_083_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worries', which is about reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_086_258_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('There will be')."
+  },
+  {
+    "segment_id": "seg_v5_087_258_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('There will be')."
+  },
+  {
+    "segment_id": "seg_v5_089_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses agreement but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_090_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses opinion and focus but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_091_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'major problem' is evaluative but not a Q3 moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_093_258_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'happened' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_095_258_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'transmitted' and 'caused' are not on the list of moderate verbs. 'wide range' is not a specific Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_096_258_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('you will find')."
+  },
+  {
+    "segment_id": "seg_v5_097_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses future needs and potential events ('could jump', 'start transmitting'), which are hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_098_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worries', which is about reaction. The verb 'eroded' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_099_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'worries', which is about reaction, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_100_258_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('If we did have')."
+  },
+  {
+    "segment_id": "seg_v5_102_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses challenges but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_104_258_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'gives me a pit in my stomach' is emotive but not a Q3 moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1813_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'resulted in the deaths' is not a moderate verb. 'spilled over' is not on the list of moderate verbs. 'more than 100 million' is a scale, but not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses risk assessment and preparation ('working to ramp up') and a hypothetical ('in case of a surge')."
+  },
+  {
+    "segment_id": "seg_v5_3_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses regulatory status but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses assistance and financial impact ('financial toll'), which are excluded from Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_1813_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'engaged' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1813_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'reported lobbying' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_1813_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'bristled' refers to reaction. The verb 'lobbying' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists organizations but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses lobbying priorities but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1813_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'reported lobbying' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_201_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'suffered' is not on the list of moderate verbs for Q3. 'multiple outbreaks' is not a specific Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_2_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the moderate verb 'hit' but it is paired with 'multiple outbreaks', which is not a specific Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_4_201_chunk0",
+    "answer": "no",
+    "rationale": "The term 'acute' is evaluative but not a moderate verb. '14 outbreaks' is a number but not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_201_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the moderate verb 'hit' intensified by 'particularly hard' and paired with the scale 'five outbreaks'."
+  },
+  {
+    "segment_id": "seg_v5_6_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'culled' with a large number, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_7_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'fears', which is about reaction. 'severely affected' is evaluative but not a Q3 moderate verb. The number '250,000' is not linked by a Q3 verb to the outbreak's impact."
+  },
+  {
+    "segment_id": "seg_v5_8_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'downplayed any concerns', which is about reaction/framing, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_11_201_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'carried' and 'spreading' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_201_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spread' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_13_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'culled', triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'culled' with a large number, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'culled' with a large number, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_16_201_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('likely to worsen'). The verb 'increases' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_17_201_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'dropped' and 'continued' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_18_201_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'called for' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_19_201_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'started' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'secure' is not on the list of moderate verbs. The number '40 million' refers to vaccine doses, not disease impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'secures' and 'includes' are not on the list of moderate verbs. The numbers refer to vaccine doses, not disease impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'procured' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses vaccine recipients but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'securing' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'monitoring' and 'ensuring access' are not on the list of moderate verbs. The number '40 million' refers to vaccine doses, not disease impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spread' is not on the list of moderate verbs. 'affecting' is a plain outcome verb. The scales ('most states', 'over 80 dairy farms') are not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_9_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infected' is a plain outcome verb. The number 'three people' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_10_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment states there are 'no active cases' but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses risk assessment ('considered to be low') but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1683_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'secured' is not on the list of moderate verbs. The number '111 million' refers to vaccine doses, not disease impact."
+  },
+  {
+    "segment_id": "seg_v5_1_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infected' is a plain outcome verb. 'reported' is not a moderate verb. 'growing outbreak' is evaluative but not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_2_690_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'had contact' and 'said' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_690_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'developed', 'received', and 'recovered' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. The number 'Three previous cases' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_690_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'developed' and 'had' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'detected' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_7_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infected' is a plain outcome verb. The segment discusses risk assessment ('risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_8_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'shown' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_10_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infected' is a plain outcome verb. The verb 'developed' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_11_690_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'were inconclusive' and 'tested positive' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses pending results but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_690_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. The number 'more than 135 dairy herds' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_1_1041_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_2_1041_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'killed' is a plain outcome verb. The verb 'slaughter' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'confirmed' and 'suspected' are not on the list of moderate verbs. The number 'fourth human bird flu case' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'spreads' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_1779_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'can sometimes jump' refers to potential, not realised impact + scale."
+  },
+  {
+    "segment_id": "seg_v5_4_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'emerged' and 'confirmed' are not on the list of moderate verbs. The number 'four human cases' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the location of cases but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infect' is a plain outcome verb. The term 'rare' is not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_8_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'infected' is a plain outcome verb. The verbs 'working' and 'had contact' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms as 'mild' but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'still does not pose a significant risk' but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses risk assessment and potential future impact ('potential to cause severe disease'), which is hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_12_1779_chunk0",
+    "answer": "no",
+    "rationale": "The statement is hypothetical ('could also evolve', 'could trigger')."
+  },
+  {
+    "segment_id": "seg_v5_13_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'investigating', 'has changed', and 'show signs' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_1779_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'recommends' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question and lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the moderate verb 'swept through' but it is paired with 'some wild pelicans', which is not a specific Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_2_1174_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'killed' is a plain outcome verb. The number '200 pelicans' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1174_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'carried' and 'transmit' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1174_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'has led to' is not a moderate verb. The verb 'slaughtered' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'slaughtered' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_2_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. 'spreading quickly' is not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_3_30_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'put the poultry industry on alert' refers to reaction. 'led to' is not a moderate verb. 'culling' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_30_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'attracting the attention' refers to reaction. 'can be transmitted' is potential."
+  },
+  {
+    "segment_id": "seg_v5_5_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. The number '21 human infections' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. The number 'around 770,000 poultry' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'slaughtered' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the virus serotype but lacks a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'reported' is not on the list of moderate verbs. The number '7,000 birds' is not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_11_30_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'circulates', 'migrate', and 'can be spread' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_30_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'put the country on increased risk' refers to framing/policy. The verbs 'ordering' and 'identified' are not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_13_30_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'followed' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_30_chunk0",
+    "answer": "no",
+    "rationale": "The verbs 'declared', 'requiring', and 'follow' are not on the list of moderate verbs. The verb 'culled' triggers the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_30_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'can affect' refers to potential. 'rare cases' is not a Q3 scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1680_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'comes amid' refers to background condition. The verb 'detected' is not on the list of moderate verbs. 'first death' is a number but not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1680_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'detected' is not on the list of moderate verbs. 'fourth case' is a number but not paired with a Q3 moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1680_chunk0",
+    "answer": "no",
+    "rationale": "The verb 'identified' is not on the list of moderate verbs for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1680_chunk0",
+    "answer": "no",
+    "rationale": "The phrase 'comes amid' refers to background condition. The verb 'advising' is not on the list of moderate verbs. 'first global death' is a number but not paired with a Q3 moderate verb."
+  }
+]
+```

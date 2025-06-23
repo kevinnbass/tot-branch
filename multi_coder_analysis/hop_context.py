@@ -17,6 +17,21 @@ if "hop_context" not in _sys.modules:  # pragma: no cover – infrastructure onl
     _sys.modules["hop_context"] = _sys.modules[__name__]
 # ---------------------------------------------------------------------------
 
+import warnings as _warnings
+from importlib import import_module as _import_module
+
+_warnings.warn(
+    "`hop_context` is deprecated; please import from `multi_coder_analysis.models` instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
+
+# Re-export everything from the new canonical location
+_new_mod = _import_module("multi_coder_analysis.models.hop")
+globals().update(_new_mod.__dict__)
+
+__all__ = _new_mod.__all__
+
 @dataclass
 class HopContext:
     """
@@ -25,12 +40,19 @@ class HopContext:
     # -------------- Static Data --------------
     statement_id: str
     segment_text: str
+    # Optional article identifier (source document) – used for trace exports
+    article_id: Optional[str] = None
 
     # -------------- Dynamic State --------------
     q_idx: int = 0
     is_concluded: bool = False
     final_frame: Optional[str] = None           # The definitive frame once concluded (e.g., Alarmist, Neutral)
     final_justification: Optional[str] = None   # The rationale for the final decision
+    
+    # NEW: Track how many consecutive 'uncertain' responses we have seen so far. This is
+    # used by run_multi_coder_tot.py to decide when to terminate early (after 3). Adding
+    # it here prevents attribute-access crashes observed during batch processing.
+    uncertain_count: int = 0
 
     # -------------- Logging & Audit Trails --------------
     analysis_history: List[str] = field(default_factory=list)      # Human-readable log (e.g., "Q1: no")

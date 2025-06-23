@@ -3,9 +3,13 @@ import logging
 from pathlib import Path
 from datetime import datetime
 from typing import Optional, Union
+import argparse
+
+# Default prompts directory relative to this file (package prompts)
+_DEFAULT_PROMPTS_DIR = Path(__file__).parent / "prompts"
 
 def concatenate_prompts(
-    prompts_dir: str = "prompts",
+    prompts_dir: Union[str, Path] = _DEFAULT_PROMPTS_DIR,
     output_file: str = "concatenated_prompts.txt",
     target_dir: Optional[Union[str, Path]] = None,
 ):
@@ -13,7 +17,7 @@ def concatenate_prompts(
     Concatenates all text files in the prompts directory into a single file.
     
     Args:
-        prompts_dir (str): Directory containing prompt files
+        prompts_dir (str | Path): Directory containing prompt files
         output_file (str): Name of the concatenated file.
         target_dir (str | Path | None): Directory where the file should be
             written. If None, a directory called "concatenated_prompts" is
@@ -92,9 +96,25 @@ def concatenate_prompts(
 
 def main():
     """Standalone execution for testing"""
+    parser = argparse.ArgumentParser(description="Concatenate prompt text files into a single file.")
+    parser.add_argument("--prompts-dir", default=str(_DEFAULT_PROMPTS_DIR), help="Directory containing prompt .txt files")
+    parser.add_argument("--out", dest="output_path", help="Output file path. If omitted, writes to ./concatenated_prompts/<timestamp>.txt inside current working directory.")
+    parser.add_argument("--dest-dir", help="Destination folder for the concatenated file (ignored if --out is absolute)")
+
+    args = parser.parse_args()
+
+    # Determine output file and directory
+    if args.output_path:
+        out_path = Path(args.output_path)
+        dest_dir = out_path.parent
+        out_name = out_path.name
+    else:
+        dest_dir = Path(args.dest_dir) if args.dest_dir else None
+        out_name = f"concatenated_prompts_{datetime.now().strftime('%Y%m%d_%H%M%S')}.txt"
+
     logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
-    
-    result = concatenate_prompts()
+
+    result = concatenate_prompts(args.prompts_dir, out_name, dest_dir)
     if result:
         print(f"Concatenation successful: {result}")
     else:

@@ -1,0 +1,979 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_5_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes securing vaccine doses using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_4_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the intended recipients of vaccine doses using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_3_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the procurement process using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_2_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a vaccine deal using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_1_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a contract signing using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_19_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses trials and questions about effectiveness using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_18_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a call for a housing order using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_17_201_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic' is a technical term guard. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_16_201_chunk0",
+    "answer": "no",
+    "rationale": "'worsen' is a moderate verb describing a future trend, not a high-potency verb describing realised impact."
+  },
+  {
+    "segment_id": "seg_v5_15_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_14_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb; Q2 override applies. 'died' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_13_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_12_201_chunk0",
+    "answer": "no",
+    "rationale": "'spreading' is a moderate verb. No high-potency verbs or metaphors used."
+  },
+  {
+    "segment_id": "seg_v5_11_201_chunk0",
+    "answer": "no",
+    "rationale": "'spreading' is a moderate verb. No high-potency verbs or metaphors used."
+  },
+  {
+    "segment_id": "seg_v5_9_201_chunk0",
+    "answer": "no",
+    "rationale": "'downplayed any concerns' relates to reassurance, not an alarmist Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_8_201_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential imports using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_7_201_chunk0",
+    "answer": "no",
+    "rationale": "'severely affected' uses an intensifier with a moderate verb, not a harm noun. 'fears' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_6_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_5_201_chunk0",
+    "answer": "no",
+    "rationale": "'hit particularly hard' uses an intensifier with a moderate verb, not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_4_201_chunk0",
+    "answer": "no",
+    "rationale": "'particularly acute' uses an intensifier with an adjective describing the situation, not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_3_201_chunk0",
+    "answer": "yes",
+    "rationale": "The quote uses the superlative + negative noun phrase 'largest ever outbreak'."
+  },
+  {
+    "segment_id": "seg_v5_2_201_chunk0",
+    "answer": "no",
+    "rationale": "'shortages' is a harm noun but lacks a superlative or intensifier. 'hit' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_1_201_chunk0",
+    "answer": "no",
+    "rationale": "'suffered' is a moderate verb. 'multiple outbreaks' does not use a Q2 intensifier."
+  },
+  {
+    "segment_id": "seg_v5_11_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses lobbying efforts using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_10_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists lobbying priorities using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_9_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists agriculture groups using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_8_1813_chunk0",
+    "answer": "no",
+    "rationale": "'bristled' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses lobbying by testing companies and trade groups using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_5_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses lobbying by animal health companies using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_4_1813_chunk0",
+    "answer": "no",
+    "rationale": "'financial toll' is a harm noun but lacks a superlative or intensifier."
+  },
+  {
+    "segment_id": "seg_v5_3_1813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the regulatory status of tests using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_2_1813_chunk0",
+    "answer": "no",
+    "rationale": "'surge' is a moderate verb. 'risk to the general public remains low' is a reassuring cue."
+  },
+  {
+    "segment_id": "seg_v5_1_1813_chunk0",
+    "answer": "no",
+    "rationale": "'resulted in the deaths' and 'spilled over' are neutral/moderate verbs, not high-potency."
+  },
+  {
+    "segment_id": "seg_v5_104_258_chunk0",
+    "answer": "no",
+    "rationale": "'pit in my stomach' is a metaphor describing a personal feeling, not the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_102_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the nature of the challenge using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_100_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses public reaction using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_099_258_chunk0",
+    "answer": "no",
+    "rationale": "'worries' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_098_258_chunk0",
+    "answer": "no",
+    "rationale": "'worries' is a psychological verb. 'eroded' is not a high-potency verb here."
+  },
+  {
+    "segment_id": "seg_v5_097_258_chunk0",
+    "answer": "no",
+    "rationale": "'jump' is a moderate verb. No high-potency verbs or metaphors used."
+  },
+  {
+    "segment_id": "seg_v5_096_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses finding viruses using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_095_258_chunk0",
+    "answer": "no",
+    "rationale": "'severe' modifies a medical condition, not a harm noun. 'fatal outcomes' lacks intensifier/superlative."
+  },
+  {
+    "segment_id": "seg_v5_093_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses involvement in investigations using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_091_258_chunk0",
+    "answer": "no",
+    "rationale": "'major problem' uses an intensifier with a negative noun, but 'problem' is not a specified harm noun."
+  },
+  {
+    "segment_id": "seg_v5_090_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses focusing on threats using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_089_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states agreement using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_087_258_chunk0",
+    "answer": "no",
+    "rationale": "'for sure' modifies certainty of a future event, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_086_258_chunk0",
+    "answer": "no",
+    "rationale": "'for sure' modifies certainty of a future event, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_085_258_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the high-potency verb 'decimated'."
+  },
+  {
+    "segment_id": "seg_v5_084_258_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the high-potency verb 'decimated'."
+  },
+  {
+    "segment_id": "seg_v5_083_258_chunk0",
+    "answer": "no",
+    "rationale": "'worries' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_081_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes genetic changes using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_080_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the origin of infections using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_079_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the origin of a virus using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_078_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes genetic stability using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_077_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses a school of thought using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_076_258_chunk0",
+    "answer": "no",
+    "rationale": "'severe case' uses an intensifier with a neutral noun ('case'), not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_075_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a past infection using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_074_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists cases using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_073_258_chunk0",
+    "answer": "no",
+    "rationale": "'culling' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_072_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment contrasts past and present case numbers using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_071_258_chunk0",
+    "answer": "no",
+    "rationale": "'mitigate some of the concern' relates to reassurance, not an alarmist Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_068_258_chunk0",
+    "answer": "no",
+    "rationale": "'a whole lot more' is an intensifier modifying quantity, not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_065_258_chunk0",
+    "answer": "no",
+    "rationale": "'sheer' modifies 'geographic spread', not a harm noun. 'spillover events' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_064_258_chunk0",
+    "answer": "no",
+    "rationale": "'Dead and sick' are descriptive adjectives, not high-potency verbs."
+  },
+  {
+    "segment_id": "seg_v5_063_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses uncertainty about transmission using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_060_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a simple statement, no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_059_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists detected infections using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_058_258_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_057_258_chunk0",
+    "answer": "no",
+    "rationale": "'capacity to infect' is neutral language."
+  },
+  {
+    "segment_id": "seg_v5_056_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses assessing significance using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_055_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports mammalian infections using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_054_258_chunk0",
+    "answer": "no",
+    "rationale": "'transmit' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_053_258_chunk0",
+    "answer": "no",
+    "rationale": "'gives flu researchers pause' describes a reaction, not the virus's impact."
+  },
+  {
+    "segment_id": "seg_v5_050_258_chunk0",
+    "answer": "no",
+    "rationale": "'spread' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_048_258_chunk0",
+    "answer": "no",
+    "rationale": "'euthanized' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_047_258_chunk0",
+    "answer": "no",
+    "rationale": "'sickening and killing' are descriptive verbs, not high-potency verbs."
+  },
+  {
+    "segment_id": "seg_v5_045_258_chunk0",
+    "answer": "no",
+    "rationale": "'third act' is a metaphor for a phase, not a potent metaphor for impact."
+  },
+  {
+    "segment_id": "seg_v5_044_258_chunk0",
+    "answer": "no",
+    "rationale": "'sparked' is a psychological verb ('sparked debate')."
+  },
+  {
+    "segment_id": "seg_v5_043_258_chunk0",
+    "answer": "no",
+    "rationale": "'dangerous how-to guide' is a metaphor for potential misuse, not the virus's impact."
+  },
+  {
+    "segment_id": "seg_v5_042_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes scientific work using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_040_258_chunk0",
+    "answer": "no",
+    "rationale": "'threat' is a negative noun but lacks a superlative or intensifier."
+  },
+  {
+    "segment_id": "seg_v5_039_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses risk using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_038_258_chunk0",
+    "answer": "no",
+    "rationale": "'worries' is a psychological verb. 'absolutely' modifies 'seeing more chances', not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_037_258_chunk0",
+    "answer": "no",
+    "rationale": "'worrying' and 'worries' are psychological verbs."
+  },
+  {
+    "segment_id": "seg_v5_036_258_chunk0",
+    "answer": "no",
+    "rationale": "'worrying' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_034_258_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_033_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case numbers using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_032_258_chunk0",
+    "answer": "no",
+    "rationale": "'unsettling succession' is descriptive, not a Q2 cue. 'fatal' is an adjective."
+  },
+  {
+    "segment_id": "seg_v5_031_258_chunk0",
+    "answer": "no",
+    "rationale": "'moved back into' and 'spread' are moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_030_258_chunk0",
+    "answer": "no",
+    "rationale": "'raised the specter' is a metaphor for raising a possibility/fear, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_029_258_chunk0",
+    "answer": "no",
+    "rationale": "'struggled' is not a high-potency verb. 'worried' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_028_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language."
+  },
+  {
+    "segment_id": "seg_v5_027_258_chunk0",
+    "answer": "no",
+    "rationale": "'worrying' is a psychological verb."
+  },
+  {
+    "segment_id": "seg_v5_026_258_chunk0",
+    "answer": "no",
+    "rationale": "'concern' is a psychological noun."
+  },
+  {
+    "segment_id": "seg_v5_025_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses discussions using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_022_258_chunk0",
+    "answer": "no",
+    "rationale": "'multi-act play' is a metaphor for history/evolution, not potent impact. 'spread' is moderate."
+  },
+  {
+    "segment_id": "seg_v5_021_258_chunk0",
+    "answer": "no",
+    "rationale": "'multi-act play' is a metaphor for history/evolution, not potent impact. 'spread' is moderate."
+  },
+  {
+    "segment_id": "seg_v5_018_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fact using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_017_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past involvement using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_014_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language."
+  },
+  {
+    "segment_id": "seg_v5_012_258_chunk0",
+    "answer": "no",
+    "rationale": "'quieted down' is opposite of high-potency. 'healthy respect' is not alarmist."
+  },
+  {
+    "segment_id": "seg_v5_011_258_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the high-potency phrase 'wreaking havoc'."
+  },
+  {
+    "segment_id": "seg_v5_010_258_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the high-potency phrase 'wreaking havoc'."
+  },
+  {
+    "segment_id": "seg_v5_009_258_chunk0",
+    "answer": "no",
+    "rationale": "'much larger' modifies 'geographic footprint', not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_008_258_chunk0",
+    "answer": "no",
+    "rationale": "'somewhere like this before' is descriptive, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_007_258_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes animal relationships using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_006_258_chunk0",
+    "answer": "no",
+    "rationale": "'concerning' is a psychological adjective."
+  },
+  {
+    "segment_id": "seg_v5_005_258_chunk0",
+    "answer": "no",
+    "rationale": "'triggering the latest round of fears' is psychological. 'inching closer' is a metaphor for potential, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_002_258_chunk0",
+    "answer": "no",
+    "rationale": "'infected' and 'killing' are neutral verbs."
+  },
+  {
+    "segment_id": "seg_v5_001_258_chunk0",
+    "answer": "no",
+    "rationale": "'vividly' modifies remembering. 'fearful' is psychological. 'devastating pandemic' is hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_15_1055_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier + harm noun phrase 'high deaths'."
+  },
+  {
+    "segment_id": "seg_v5_14_1055_chunk0",
+    "answer": "no",
+    "rationale": "'price increases' is a harm noun but lacks a superlative or intensifier. 'surge' is moderate."
+  },
+  {
+    "segment_id": "seg_v5_13_1055_chunk0",
+    "answer": "no",
+    "rationale": "'strongest' modifies 'surveillance program', not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_12_1055_chunk0",
+    "answer": "no",
+    "rationale": "'kill' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_11_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outbreaks using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_10_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses surveillance and testing using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_9_1055_chunk0",
+    "answer": "no",
+    "rationale": "'depopulated' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_8_1055_chunk0",
+    "answer": "no",
+    "rationale": "'euthanized' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_7_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses food safety using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_6_1055_chunk0",
+    "answer": "no",
+    "rationale": "'depopulated' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_5_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses working closely with officials using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_4_1055_chunk0",
+    "answer": "no",
+    "rationale": "'spreads easily' uses an intensifier with a moderate verb. 'deadly' is an adjective."
+  },
+  {
+    "segment_id": "seg_v5_3_1055_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports confirmed cases using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_2_1055_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic' is a technical term guard. 'paying more' is a harm noun but lacks intensifier/superlative."
+  },
+  {
+    "segment_id": "seg_v5_27_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses economic feasibility and costs using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_26_358_chunk0",
+    "answer": "no",
+    "rationale": "'costly' is an adjective, not an intensifier + harm noun."
+  },
+  {
+    "segment_id": "seg_v5_25_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses vaccine development and practicality using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_24_358_chunk0",
+    "answer": "no",
+    "rationale": "'kill' is a neutral verb."
+  },
+  {
+    "segment_id": "seg_v5_23_358_chunk0",
+    "answer": "no",
+    "rationale": "'extremely rare' is a reassuring cue (Q4). 'allowed' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_22_358_chunk0",
+    "answer": "no",
+    "rationale": "'significant health threat' uses an intensifier with a negative noun, but 'threat' is not a specified harm noun."
+  },
+  {
+    "segment_id": "seg_v5_21_358_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is neutral. 'less costly' is opposite of alarmist."
+  },
+  {
+    "segment_id": "seg_v5_20_358_chunk0",
+    "answer": "no",
+    "rationale": "'suffered' is moderate. 'damages' and 'costs' are harm nouns but lack intensifier/superlative."
+  },
+  {
+    "segment_id": "seg_v5_19_358_chunk0",
+    "answer": "no",
+    "rationale": "'cost' is a harm noun but lacks intensifier/superlative. 'destroy' is containment."
+  },
+  {
+    "segment_id": "seg_v5_18_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses biosecurity using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_17_358_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses farm upgrades using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_16_358_chunk0",
+    "answer": "no",
+    "rationale": "'gone to great lengths' is descriptive, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_15_358_chunk0",
+    "answer": "no",
+    "rationale": "'down from' is a neutral price verb."
+  },
+  {
+    "segment_id": "seg_v5_14_358_chunk0",
+    "answer": "no",
+    "rationale": "'hit as hard' uses an intensifier with a moderate verb. 'less chance' is reassuring."
+  },
+  {
+    "segment_id": "seg_v5_13_358_chunk0",
+    "answer": "no",
+    "rationale": "'climbed pretty steadily' is a neutral price verb phrase."
+  },
+  {
+    "segment_id": "seg_v5_11_358_chunk0",
+    "answer": "no",
+    "rationale": "'remained at' is a neutral price verb."
+  },
+  {
+    "segment_id": "seg_v5_10_358_chunk0",
+    "answer": "no",
+    "rationale": "'peaked at' is a neutral price verb. 'more than double' describes scale, not a Q2 verb/intensifier."
+  },
+  {
+    "segment_id": "seg_v5_9_358_chunk0",
+    "answer": "no",
+    "rationale": "'small portion' and 'fall closer' are reassuring cues (Q4). 'affected' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_8_358_chunk0",
+    "answer": "no",
+    "rationale": "'slaughtered' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_7_358_chunk0",
+    "answer": "no",
+    "rationale": "'popping up' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_358_chunk0",
+    "answer": "yes",
+    "rationale": "The quote uses the critical alert phrase 'on really high alert'."
+  },
+  {
+    "segment_id": "seg_v5_5_358_chunk0",
+    "answer": "no",
+    "rationale": "'hard to keep out' is descriptive, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_4_358_chunk0",
+    "answer": "no",
+    "rationale": "'highly contagious' is a technical term guard. 'spread easily' uses intensifier with moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_358_chunk0",
+    "answer": "no",
+    "rationale": "'worrisome indication' uses a psychological adjective. 'at risk' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_2_358_chunk0",
+    "answer": "no",
+    "rationale": "'killed' and 'slaughtered' are neutral/containment verbs."
+  },
+  {
+    "segment_id": "seg_v5_1_358_chunk0",
+    "answer": "no",
+    "rationale": "'slaughtered' and 'killed' are neutral/containment verbs. 'persistent' is descriptive. 'far less' is reassuring (Q4)."
+  },
+  {
+    "segment_id": "seg_v5_8_961_chunk0",
+    "answer": "no",
+    "rationale": "'spread' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_961_chunk0",
+    "answer": "no",
+    "rationale": "'raising concern' is a psychological verb phrase. 'transmitted' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_6_961_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses trade restrictions using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_5_961_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier + metaphor phrase 'massive wave'."
+  },
+  {
+    "segment_id": "seg_v5_4_961_chunk0",
+    "answer": "no",
+    "rationale": "'severe' modifies 'bird flu' (disease name), not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_3_961_chunk0",
+    "answer": "no",
+    "rationale": "'spreading quickly' uses an intensifier with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_961_chunk0",
+    "answer": "no",
+    "rationale": "'slaughter' is a containment verb; Q2 override applies. No other Q2 cues present."
+  },
+  {
+    "segment_id": "seg_v5_1_961_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic' is a technical term guard."
+  },
+  {
+    "segment_id": "seg_v5_017_1282_chunk0",
+    "answer": "no",
+    "rationale": "'affecting' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_016_1282_chunk0",
+    "answer": "no",
+    "rationale": "'suspended' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_015_1282_chunk0",
+    "answer": "no",
+    "rationale": "'suspended' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_014_1282_chunk0",
+    "answer": "no",
+    "rationale": "'going up' is a neutral price verb. Scale ('70%') is handled by Q3."
+  },
+  {
+    "segment_id": "seg_v5_013_1282_chunk0",
+    "answer": "no",
+    "rationale": "'mass culling' uses intensifier with containment verb; Q2 override applies. 'impacts' is moderate."
+  },
+  {
+    "segment_id": "seg_v5_012_1282_chunk0",
+    "answer": "no",
+    "rationale": "'mass culling' uses intensifier with containment verb; Q2 override applies. 'impacts' is moderate."
+  },
+  {
+    "segment_id": "seg_v5_011_1282_chunk0",
+    "answer": "no",
+    "rationale": "'mass culling' uses intensifier with containment verb; Q2 override applies. 'impacting' is moderate."
+  },
+  {
+    "segment_id": "seg_v5_010_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses capacity issues using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_009_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses addressing a problem using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_008_1282_chunk0",
+    "answer": "no",
+    "rationale": "'fears of contamination' is a psychological noun phrase."
+  },
+  {
+    "segment_id": "seg_v5_007_1282_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the superlative + negative noun phrase 'worst bird flu season ever'."
+  },
+  {
+    "segment_id": "seg_v5_006_1282_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb; Q2 override applies. 'severe pneumonia' uses intensifier with medical condition."
+  },
+  {
+    "segment_id": "seg_v5_005_1282_chunk0",
+    "answer": "no",
+    "rationale": "'so bad' modifies 'situation', not a harm noun. 'culled' is containment. 'record' modifies number of birds culled. 'stressing' and 'struggling' describe impact on people/governments."
+  },
+  {
+    "segment_id": "seg_v5_004_1282_chunk0",
+    "answer": "no",
+    "rationale": "'fighting' is a moderate metaphor, not a potent one."
+  },
+  {
+    "segment_id": "seg_v5_002_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses problems finding land using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_001_1282_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the superlative + negative noun phrase 'worst bird flu outbreak ever'."
+  },
+  {
+    "segment_id": "seg_v5_022_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language comparing to COVID."
+  },
+  {
+    "segment_id": "seg_v5_021_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses future presence using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_020_760_chunk0",
+    "answer": "no",
+    "rationale": "'heartbreaking' is an adjective describing emotion, not the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_019_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses suggestions and guidance using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_018_760_chunk0",
+    "answer": "no",
+    "rationale": "'canceled' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_017_760_chunk0",
+    "answer": "no",
+    "rationale": "'excluded' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_016_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses fair attendance rules using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_015_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses changes at fairs using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_014_760_chunk0",
+    "answer": "no",
+    "rationale": "'cancel' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_013_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses testing requirements using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_012_760_chunk0",
+    "answer": "no",
+    "rationale": "'strict' modifies 'testing and measures', not a harm noun. 'banning' is not a high-potency verb."
+  },
+  {
+    "segment_id": "seg_v5_011_760_chunk0",
+    "answer": "no",
+    "rationale": "'hardest-hit' uses a superlative with a moderate verb, not a harm noun."
+  },
+  {
+    "segment_id": "seg_v5_010_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language."
+  },
+  {
+    "segment_id": "seg_v5_009_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses inability to show using neutral language."
+  },
+  {
+    "segment_id": "seg_v5_008_760_chunk0",
+    "answer": "no",
+    "rationale": "'disrupted' is not a high-potency verb describing the threat's impact."
+  },
+  {
+    "segment_id": "seg_v5_007_760_chunk0",
+    "answer": "no",
+    "rationale": "'laid off' describes consequence for employees, not the virus's direct impact."
+  },
+  {
+    "segment_id": "seg_v5_006_760_chunk0",
+    "answer": "no",
+    "rationale": "'strained' is not high-potency. 'battered' modifies background condition. 'losses' lacks intensifier/superlative."
+  },
+  {
+    "segment_id": "seg_v5_005_760_chunk0",
+    "answer": "no",
+    "rationale": "'risk to humans from the bird flu virus remains low' is a reassuring cue (Q4)."
+  },
+  {
+    "segment_id": "seg_v5_004_760_chunk0",
+    "answer": "no",
+    "rationale": "'infected' is neutral. 'relatively mild symptoms' is reassuring (Q4)."
+  },
+  {
+    "segment_id": "seg_v5_003_760_chunk0",
+    "answer": "no",
+    "rationale": "'tightened restrictions' is descriptive. 'spread' is a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_002_760_chunk0",
+    "answer": "no",
+    "rationale": "'forced significant changes' uses intensifier with neutral noun. 'cancellations' lacks intensifier/superlative. 'spreading' is moderate."
+  }
+]
+```

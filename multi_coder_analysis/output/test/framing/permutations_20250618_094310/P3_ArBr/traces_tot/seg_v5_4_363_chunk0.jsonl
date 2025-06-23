@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16524", "batch_size": 260, "batch_pos": 139}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlative negative nouns, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_10428", "batch_size": 260, "batch_pos": 113}
+{"Q": 3, "answer": "no", "rationale": "Plain outcome verb 'reported' is excluded from Q3.", "method": "llm_batch", "batch_id": "batch_3_1432", "batch_size": 260, "batch_pos": 69}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14432", "batch_size": 260, "batch_pos": 55}
+{"Q": 5, "answer": "no", "rationale": "The segment reports mass deaths, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_18008", "batch_size": 260, "batch_pos": 53}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_11528", "batch_size": 260, "batch_pos": 31}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17060", "batch_size": 260, "batch_pos": 21}
+{"Q": 8, "answer": "no", "rationale": "The segment reports observations of mass deaths, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15012", "batch_size": 260, "batch_pos": 151}
+{"Q": 9, "answer": "no", "rationale": "The segment reports qualitative assessments ('mass deaths', 'increased deaths') rather than specific numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14520", "batch_size": 260, "batch_pos": 123}
+{"Q": 10, "answer": "no", "rationale": "The segment reports past/current events, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_5020", "batch_size": 260, "batch_pos": 254}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17420", "batch_size": 260, "batch_pos": 231}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_14564", "batch_size": 260, "batch_pos": 231, "regex": {"rule": "NeutralStats", "span": [43, 110], "captures": ["report", "deaths"]}}

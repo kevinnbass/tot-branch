@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "'more worrying' modifies a psychological state. 'worries me' is a psychological verb.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 45}
+{"Q": 2, "answer": "no", "rationale": "'worries me' describes a psychological state, not the threat's impact using vivid language.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 45}
+{"Q": 3, "answer": "no", "rationale": "Quote discussing worry (feeling), not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 41}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 41}
+{"Q": 4, "answer": "yes", "rationale": "The rhetorical question 'what's to stop it from transmitting between other mammalian species like ours?' implies a worrisome threat to humans.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 41}

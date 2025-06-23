@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_3_7540_r1",
+  "hop_idx": 3,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_32_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses verbs like 'leverage' and 'prompted', which are not on the list of moderate verbs for Q3."
+    },
+    {
+      "segment_id": "seg_v5_35_137_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'caused' is a plain outcome verb, explicitly excluded by Q3 rules."
+    },
+    {
+      "segment_id": "seg_v5_37_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain any moderate verbs from the Q3 list paired with scale/impact."
+    }
+  ],
+  "timestamp": "2025-06-18T20:12:21.445750"
+}

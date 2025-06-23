@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18192", "batch_size": 260, "batch_pos": 32}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_304", "batch_size": 260, "batch_pos": 18}
+{"Q": 3, "answer": "no", "rationale": "No moderate verbs paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17716", "batch_size": 260, "batch_pos": 7}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question is present in the text.", "method": "llm_batch", "batch_id": "batch_4_12868", "batch_size": 260, "batch_pos": 5}
+{"Q": 5, "answer": "no", "rationale": "The segment provides background on mRNA technology's potential, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_7456", "batch_size": 260, "batch_pos": 4}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5020", "batch_size": 260, "batch_pos": 259}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_13496", "batch_size": 260, "batch_pos": 259}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_18080", "batch_size": 260, "batch_pos": 225, "regex": {"rule": "CapabilityNoReassurance", "span": [15, 22], "captures": []}}

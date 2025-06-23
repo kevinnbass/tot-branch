@@ -1,0 +1,4 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_14164", "batch_size": 260, "batch_pos": 68}
+{"Q": 1, "answer": "no", "rationale": "The segment describes negative impacts ('strained', 'battered', 'losses', 'layoffs') but does not use intensifiers or comparatives to modify risk-adjectives.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_14164_r1", "batch_size": 260, "batch_pos": 68}
+{"Q": 2, "answer": "no", "rationale": "The segment uses moderate verbs ('strained', 'battered') and reports scale ('millions of dollars in losses') without Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_17076", "batch_size": 260, "batch_pos": 67}
+{"Q": 3, "answer": "yes", "rationale": "'strained' is a moderate verb paired with explicit impact 'millions of dollars in losses'.", "method": "llm_batch", "batch_id": "batch_3_17808", "batch_size": 260, "batch_pos": 57}

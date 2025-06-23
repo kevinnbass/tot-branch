@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'downplayed any concerns' is a psychological/framing phrase.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 116}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 113}
+{"Q": 3, "answer": "no", "rationale": "Discusses downplaying concerns, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 104}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 104}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 104}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'UK supermarkets downplayed any concerns' is an explicit calming cue from a source.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 102}

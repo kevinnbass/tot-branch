@@ -1,0 +1,38 @@
+{
+  "batch_id": "batch_12_11448",
+  "hop_idx": 12,
+  "segment_count": 6,
+  "responses": [
+    {
+      "segment_id": "seg_v5_3_1779_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of potential transmission without explicit framing cues. No intensifiers or loaded language."
+    },
+    {
+      "segment_id": "seg_v5_2_1779_chunk0",
+      "answer": "yes",
+      "rationale": "Factual definition using technical terms ('Highly pathogenic') which are neutral per TECH_TERM_GUARD. No explicit framing."
+    },
+    {
+      "segment_id": "seg_v5_1_1041_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of an event using neutral language. 'highly pathogenic' is a technical term here. No explicit framing."
+    },
+    {
+      "segment_id": "seg_v5_9_690_chunk0",
+      "answer": "yes",
+      "rationale": "Factual statement about relative risk for a specific group ('higher risk') without explicit alarmist framing."
+    },
+    {
+      "segment_id": "seg_v5_6_690_chunk0",
+      "answer": "yes",
+      "rationale": "Factual report of a past event (case detection) with specific details. No explicit framing cues."
+    },
+    {
+      "segment_id": "seg_v5_12_1683_chunk0",
+      "answer": "no",
+      "rationale": "Contains explicit low-risk framing ('considered to be low') which triggers a higher-priority rule (Q4 Reassuring)."
+    }
+  ],
+  "timestamp": "2025-06-21T20:45:51.221539"
+}

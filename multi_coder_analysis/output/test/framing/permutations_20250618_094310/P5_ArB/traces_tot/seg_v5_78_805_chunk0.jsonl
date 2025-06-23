@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6120", "batch_size": 260, "batch_pos": 249}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a quote expressing opinion, not using Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_16740", "batch_size": 260, "batch_pos": 247}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_16548", "batch_size": 260, "batch_pos": 229}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16772", "batch_size": 260, "batch_pos": 224}
+{"Q": 5, "answer": "no", "rationale": "Discusses PrEP use and 'safe sex' in a different context, not calming about bird flu.", "method": "llm_batch", "batch_id": "batch_5_2772", "batch_size": 260, "batch_pos": 224}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_7008", "batch_size": 260, "batch_pos": 219}
+{"Q": 7, "answer": "no", "rationale": "The segment contains statements about design and difference, which is not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17840", "batch_size": 260, "batch_pos": 216}
+{"Q": 8, "answer": "no", "rationale": "Discusses PrEP design differences, not a capability statement.", "method": "llm_batch", "batch_id": "batch_8_7648", "batch_size": 260, "batch_pos": 210}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote about PrEP use, not reporting prices or metrics.", "method": "llm_batch", "batch_id": "batch_9_16280", "batch_size": 260, "batch_pos": 128}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_1596", "batch_size": 260, "batch_pos": 103, "regex": {"rule": "ReliefSpeculation", "span": [81, 86], "captures": ["could"]}}

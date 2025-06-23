@@ -1,0 +1,35 @@
+{
+  "batch_id": "batch_3_16364",
+  "hop_idx": 3,
+  "segment_count": 2,
+  "matches": [
+    {
+      "statement_id": "seg_v5_9_1674_chunk0",
+      "regex": {
+        "rule": "ModerateVerbPlusScale",
+        "span": [
+          92,
+          98
+        ],
+        "captures": [
+          "jumped"
+        ]
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_19_1065_chunk0",
+      "regex": {
+        "rule": "ScaleMultiplier",
+        "span": [
+          42,
+          49
+        ],
+        "captures": []
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    }
+  ]
+}

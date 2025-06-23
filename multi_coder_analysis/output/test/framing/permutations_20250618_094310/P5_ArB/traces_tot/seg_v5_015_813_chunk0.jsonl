@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly unlikely' modifies 'unlikely', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17404", "batch_size": 260, "batch_pos": 65}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a low-risk cue ('highly unlikely') but no Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_15516", "batch_size": 260, "batch_pos": 55}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_5284", "batch_size": 260, "batch_pos": 23}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_17836", "batch_size": 260, "batch_pos": 16}
+{"Q": 5, "answer": "no", "rationale": "The segment reports something is 'highly unlikely', which is a bare low-risk statement, not an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_17008", "batch_size": 260, "batch_pos": 253}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'highly unlikely', which is not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16740", "batch_size": 260, "batch_pos": 250}
+{"Q": 8, "answer": "no", "rationale": "The segment states a conclusion about transmission likelihood, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_14728", "batch_size": 260, "batch_pos": 198}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14504", "batch_size": 260, "batch_pos": 1}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_1596", "batch_size": 260, "batch_pos": 216, "regex": {"rule": "ReliefSpeculation", "span": [63, 68], "captures": ["could"]}}

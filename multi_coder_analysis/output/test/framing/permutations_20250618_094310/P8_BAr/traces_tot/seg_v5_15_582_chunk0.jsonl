@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'scant' modifies 'literature'. 'encouraging' is a positive adjective.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 255}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 250}
+{"Q": 3, "answer": "no", "rationale": "Describes literature as 'scant but encouraging', no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 230}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 229}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 229}
+{"Q": 5, "answer": "no", "rationale": "The segment describes literature as 'encouraging,' which is a positive evaluation of research, not a calming cue about the threat itself.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 226}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 216}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 216}
+{"Q": 8, "answer": "yes", "rationale": "Describes the state of scientific literature related to capability development: 'scientific literature on wastewater detection... is scant but encouraging'.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 205}

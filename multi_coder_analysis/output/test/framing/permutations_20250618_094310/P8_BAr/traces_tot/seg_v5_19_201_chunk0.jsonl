@@ -1,0 +1,6 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 125}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_7732_r1", "batch_size": 260, "batch_pos": 125}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 122}
+{"Q": 3, "answer": "no", "rationale": "Discusses trials starting and question marks, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 113}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 113}
+{"Q": 4, "answer": "yes", "rationale": "The phrase 'question marks around' functions as a rhetorical question implying doubt and concern about effectiveness/spread.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 113}

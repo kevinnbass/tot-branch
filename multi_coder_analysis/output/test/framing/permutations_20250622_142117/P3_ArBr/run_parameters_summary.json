@@ -1,0 +1,38 @@
+{
+  "timestamp": "2025-06-22T14:23:24",
+  "input_file": "multi_coder_analysis\\output\\test\\framing\\permutations_20250622_142117\\P3_ArBr\\input_P3_ArBr.csv",
+  "total_statements": 10,
+  "provider": "gemini",
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "temperature": 0.0,
+  "top_p": 0.1,
+  "top_k": 1,
+  "batch_size": 10,
+  "concurrency": 1,
+  "individual_fallback_enabled": false,
+  "individual_fallback_note": "--individual-fallback flag NOT used",
+  "token_usage": {
+    "prompt_tokens": 38197,
+    "response_tokens": 3979,
+    "thought_tokens": 6829,
+    "total_tokens": 49005,
+    "total_hops": 86,
+    "regex_yes": 3,
+    "regex_hit_shadow": 0,
+    "llm_calls": 12,
+    "segments_regex_ids": [
+      "seg_v5_1_102_chunk0",
+      "seg_v5_8_102_chunk0",
+      "seg_v5_7_102_chunk0"
+    ]
+  },
+  "regex_yes": 3,
+  "regex_hit_shadow": 0,
+  "llm_calls": 12,
+  "regex_coverage": 0.03488372093023256,
+  "initial_mismatch_count": 0,
+  "fixed_by_individual_fallback": 0,
+  "final_mismatch_count": 0,
+  "regex_mismatch_count": 0,
+  "llm_mismatch_count": 0
+}

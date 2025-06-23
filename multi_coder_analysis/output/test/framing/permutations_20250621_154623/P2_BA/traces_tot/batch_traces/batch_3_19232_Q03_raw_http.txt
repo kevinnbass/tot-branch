@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_13_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes preparedness plans ('prepared', 'robust plans', 'executing') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes plans ('include additional restrictions', 'continuing to test') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states farms 'are automatically quarantined' but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'euthanize the flock'. 'Euthanize' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_21_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'killing and removing birds'. 'Killing' and 'removing' are containment actions, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_22_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes testing ('Testing occurs') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_23_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes disinfection and testing ('Disinfection is done', 'testing is used') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_24_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses eligibility requirements ('want to ensure eligibility', 'must have a biosecurity protocol') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_25_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a biosecurity plan ('developed a 14-point biosecurity plan', 'audited yearly', 'reviewed every two years') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_26_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes efforts to prevent disease ('working with state and federal authorities to keep the disease out') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_27_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes communications and testing ('maintaining open communications', 'offering surveillance testing') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_28_1005_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses confidence ('confident in our producers preparedness and ability to manage') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses export forecasts ('forecast to export 3.4 million tons'). This relates to trade metrics, which are Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses export growth and downturn ('growth in U.S. chicken meat export', 'downturn in exports'). This relates to trade metrics, which are Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes surveillance and testing efforts ('working together to provide additional surveillance and testing') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment advises reviewing biosecurity ('should review their biosecurity activities') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_17_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions a biosecurity tool kit and a list of cases ('offering a biosecurity tool kit', 'list of cases can be found') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_18_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the site 'lists three cases'. 'Lists' is not a moderate verb, and 'three cases' is not presented with a moderate verb for Q3."
+  },
+  {
+    "segment_id": "seg_v5_19_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment lists types of flocks ('includes commercial turkeys, a mixed-species backyard flock... and the broiler chicken flock') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_20_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an update ('updated to clarify a barn... was infected') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_21_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states HPAI 'has infected a flock'. 'Infected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_22_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states HPAI 'was found'. 'Found' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_23_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states HPAI 'was found'. 'Found' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_24_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential future impacts ('If the disease spreads... it could impact'). Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_25_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses expected future impact ('does not expect the case... to impact'). Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_6_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an outbreak 'impacted the production'. 'Impacted' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_7_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'exports dropped by $1.1 billion, or 26%'. 'Dropped' is a plain outcome verb, not a moderate verb from the Q3 list. Also relates to trade metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'Egg exports dropped 13% and turkey 23%'. 'Dropped' is a plain outcome verb, not a moderate verb from the Q3 list. Also relates to trade metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses estimated cost ('estimated the cost... was more than $1 billion'). This relates to financial metrics, which are Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_10_1006_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'does not present an immediate public health concern' and 'no human cases... have been detected'. This relates to low risk/safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states chickens 'have become infected'. 'Infected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_2_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the discovery 'intensifies an ongoing outbreak' and 'follows the destruction of 29,000 turkeys'. 'Intensifies' is a psychological verb, not a moderate verb. 'Destruction' is containment."
+  },
+  {
+    "segment_id": "seg_v5_4_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'does not present an immediate public health concern' and 'has yet to be detected'. This relates to low risk/safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states chickens 'tested positive'. 'Tested positive' is a plain outcome, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_6_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes prevention efforts ('actively working... to prevent the spread') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states avian influenza 'has been found' and wild birds 'play a significant role in spreading'. 'Found' is plain, 'spreading' is a process."
+  },
+  {
+    "segment_id": "seg_v5_8_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes preparedness ('prepared', 'robust plans', 'executing', 'heightening biosecurity', 'placing additional restrictions', 'continuing our practice of testing') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'over 700 cases... have been recorded'. 'Recorded' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_10_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states bird flu 'can cross species and infect humans' but 'this cross-transmission is rare'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_11_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how infection 'usually occurs as a result of infected birds shedding'. 'Shedding' is a process description."
+  },
+  {
+    "segment_id": "seg_v5_12_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how infection 'can happen when the virus is in the air' or 'when a person touches something'. These are process descriptions."
+  },
+  {
+    "segment_id": "seg_v5_13_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how cross infection 'usually occurs when a person has unprotected contact'. This is a process description."
+  },
+  {
+    "segment_id": "seg_v5_14_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'some infections have been identified'. 'Identified' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_15_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the range of illness ('ranges from mild to severe') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Newsweek 'reported on a rare case'. 'Reported' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_17_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the person 'had been in close contact' and 'there was no evidence of onward transmission'. No moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_18_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment advises cooking poultry ('advises that to further offset the risk... poultry and eggs should be cooked'). This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_19_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states infections 'are concerning' and discusses potential future impact ('especially if more poultry operations... are found to be affected'). Q3 requires realised impact."
+  },
+  {
+    "segment_id": "seg_v5_20_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the U.S. is the 'world's top producer' and 'number two in terms of exports'. This relates to factual metrics, which are Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_11_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a strain 'was confirmed'. 'Confirmed' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_13_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'birds from the flocks will not enter the food system'. This relates to food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states detections 'do not 'present an immediate public health concern''. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment reminds consumers about cooking poultry ('reminding consumers that properly prepared and cooked poultry and eggs... kills bacteria and viruses'). This is advice/food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_16_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states products 'remain safe' and the company is 'working... to prevent the spread'. This relates to food safety/preparedness, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_17_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes mitigation efforts ('heightening biosecurity measures', 'placing additional restrictions', 'continuing our practice of testing'). This relates to preparedness, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_18_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the incident 'is not expected to impact production levels'. Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_52_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes methods ('spraying chickens and turkeys with a foam that causes asphyxiation') but does not use a moderate verb paired with scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_53_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions using carbon dioxide 'to kill the birds'. 'Kill' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_54_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment offers an opinion ('arguably more humane than letting them die'). This is evaluative, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_55_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states avian influenza 'was discovered' and 'forcing the commercial egg producer to destroy nearly three million chickens'. 'Destroy' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_11_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states chickens 'were infected'. 'Infected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_13_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Tyson Foods 'confirmed that its birds were infected'. 'Confirmed' and 'infected' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_14_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states human infections 'do occur' but 'they're considered rare'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'No Americans are recorded to have contracted'. 'Recorded' and 'contracted' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_16_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states viruses 'believed to have emerged' and 'leading to large outbreaks' and 'spread'. These are plain outcome/process verbs. 'Large outbreaks' is vague scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Tyson Foods is 'ramping up biosecurity measures'. This relates to preparedness, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_2_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the company 'is only aware of one affected house'. This is a factual statement, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the presence was 'confirmed' and 'reigniting fears'. 'Confirmed' is plain. 'Reigniting fears' is a psychological verb not coupled with realised harm scale."
+  },
+  {
+    "segment_id": "seg_v5_4_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states bird flu 'can cause high mortality rates'. Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_5_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states '50 million birds... were killed'. 'Killed' is a containment verb, triggering the containment override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the USDA 'detected the presence'. 'Detected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_7_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds 'will be depopulated' and 'depopulation is complete'. 'Depopulated' and 'depopulation' are containment terms, triggering the override."
+  },
+  {
+    "segment_id": "seg_v5_8_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Tyson Foods 'would not disclose the size'. This is a factual statement, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the USDA 'is awaiting results of a potential second case'. This is about future events, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1008_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a flock 'also tested positive'. 'Tested positive' is a plain outcome, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_1_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states bird flu 'was detected'. 'Detected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_2_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'was detected'. 'Detected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_3_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the USDA is 'working closely... on a joint incident response'. This relates to preparedness, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds 'will be depopulated'. 'Depopulated' is a containment term, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'Birds from the flock will not enter the food system'. This relates to food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'No human cases... have been detected'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_7_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states detections 'do not present an immediate health concern'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment reminds about cooking poultry ('proper handling and cooking... kills bacteria and viruses'). This is advice/food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states partners are 'working jointly on additional surveillance and testing'. This relates to preparedness, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_10_1009_chunk0",
+    "answer": "no",
+    "rationale": "The segment states it 'came after the virus was discovered'. 'Discovered' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_2_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cases 'were found'. 'Found' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_3_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states outbreaks 'were reported' and turkeys were 'euthanized'. 'Euthanized' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states outbreaks 'were reported' and turkeys were 'euthanized'. 'Euthanized' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds 'will also be quarantined and killed off'. 'Killed off' is a containment term, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'Birds from the flocks will not enter the food system'. This relates to food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_7_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'Birds from the flocks will not enter the food system' and describes surveillance ('strongest AI surveillance program', 'working... to actively look'). This relates to food safety/preparedness, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes surveillance ('strongest AI surveillance program', 'working... to actively look') and states detections 'do not present an immediate public health concern'. This relates to preparedness/low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment states wild birds 'have been spreading the virus' and 'dozens recently tested positive'. 'Spreading' is a process. 'Tested positive' is plain outcome. 'Dozens' is vague scale."
+  },
+  {
+    "segment_id": "seg_v5_10_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment urges Americans 'to review their biosecurity activities and prevent contact'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_11_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states it's 'not impossible for humans to get this virus, but it's been pretty rare'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the CDC 'had been monitoring people'. This is a description of activity, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_13_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'no cases... have been found'. 'Found' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_14_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states properly prepared and cooked poultry and eggs 'should not pose a risk'. This relates to food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the chance is 'extremely low'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_16_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the service 'is responsible for inspecting'. This is a description of responsibility, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_17_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states inspectors 'are required to be present' and 'have unfettered access'. This is a description of procedures, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_18_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states facilities 'are required to undergo daily inspections'. This is a description of procedures, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_19_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states programs 'are additionally monitored'. This is a description of procedures, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_20_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment mentions 'mandated culling'. 'Culling' is a containment term, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_21_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the USDA 'recommends cooking poultry'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_22_101_chunk0",
+    "answer": "no",
+    "rationale": "This is a question headline, not a statement using a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_24_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states price has been 'trending sharply higher'. This describes a background condition (price), not the threat's impact (cases, deaths)."
+  },
+  {
+    "segment_id": "seg_v5_25_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential future shortages ('If infections course... there could be some shortages'). Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_26_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states prices 'were also rising'. 'Rising' is a plain outcome verb, not a moderate verb from the Q3 list. Also relates to financial metrics."
+  },
+  {
+    "segment_id": "seg_v5_27_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment warns prices 'could also become more volatile'. Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_28_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes testing procedures ('typically involves swabbing'). This is a process description."
+  },
+  {
+    "segment_id": "seg_v5_29_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes sample handling ('samples are sent... to be analyzed'). This is a process description."
+  },
+  {
+    "segment_id": "seg_v5_30_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states outbreaks 'have been detected'. 'Detected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_31_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the form 'had been detected in 19 states'. 'Detected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_32_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the number of birds 'totaled more than 17 million'. 'Totaled' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_33_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds 'would be required to be euthanized'. 'Euthanized' is a containment term, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_34_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a facility 'constituted the largest infected flock and was made up of more than 5.3 million chickens'. 'Constituted' and 'was made up of' are descriptive verbs, not moderate verbs from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_35_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a producer 'was next on the list, with more than 2.7 million chickens'. This is a descriptive phrase, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_36_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a flock 'was the third-largest infected flock, with more than 1.1 million chickens'. This is a descriptive phrase, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_37_101_chunk0",
+    "answer": "no",
+    "rationale": "This is a question headline, not a statement using a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_39_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'Nearly 50 million birds died, either from the virus or from having to be culled'. 'Died' and 'culled' are plain outcome/containment verbs. Containment override applies."
+  },
+  {
+    "segment_id": "seg_v5_40_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the footprint 'has raised concerns'. 'Raised concerns' is a psychological verb not coupled with realised harm scale."
+  },
+  {
+    "segment_id": "seg_v5_1_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'More than 15 million chickens and turkeys... have been killed'. 'Killed' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states it 'spreads via nasal secretions... which experts say makes it difficult to contain'. 'Spreads' is a process description. 'Difficult to contain' is evaluative."
+  },
+  {
+    "segment_id": "seg_v5_6_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms ('include a sudden increase... a drop... diminished consumption'). These are plain outcome descriptions."
+  },
+  {
+    "segment_id": "seg_v5_7_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus 'is closely related' and 'has infected hundreds of people'. 'Infected' is a plain outcome verb. 'Hundreds' is vague scale."
+  },
+  {
+    "segment_id": "seg_v5_8_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states prevalence 'is not unexpected' and outbreaks were 'previously reported'. 'Reported' is a plain outcome verb."
+  },
+  {
+    "segment_id": "seg_v5_9_101_chunk0",
+    "answer": "no",
+    "rationale": "This is a question headline, not a statement using a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_10_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the 'risk to humans is very low'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_011_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment states viruses are 'rarely transmissible to humans' and 'there is no evidence that the virus can spread'. This relates to low risk/food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_013_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'No human infections... have been detected'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_014_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential future burden ('could nonetheless impose a burden'). Q3 requires realised impact, not hypothetical. Also mentions 'euthanizations' (containment)."
+  },
+  {
+    "segment_id": "seg_v5_015_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment states countries 'have halted imports'. 'Halted' is a plain outcome verb, not a moderate verb from the Q3 list. Also relates to trade metrics."
+  },
+  {
+    "segment_id": "seg_v5_016_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment states countries 'have halted imports', restrictions 'may be short-lived', crunch 'is being felt', viruses 'have sporadically emerged'. No moderate verb + scale of realised impact. Also relates to trade metrics."
+  },
+  {
+    "segment_id": "seg_v5_41_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'seeing more geographic spread'. 'Seeing' is a perception verb. 'Spread' is a process. 'More geographic spread' is comparative scale but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_42_101_chunk0",
+    "answer": "no",
+    "rationale": "This is a question headline, not a statement using a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_43_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the USDA 'warned of the likelihood' and 'emphasized a hardening'. No moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_44_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes biosecurity measures ('include limiting access and requiring farm workers to practice strict hygiene measures'). This is descriptive, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_45_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states sharing 'can contribute to spreading the virus'. Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_46_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states contact 'can contribute'. Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_48_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment states producers 'has to be considering how to improve'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_49_101_chunk0",
+    "answer": "no",
+    "rationale": "This is a question headline, not a statement using a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_50_101_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms ('can experience complete paralysis, swelling... and twisting'). This is descriptive, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_001_1010_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cases 'have been detected' and 'posing a likely threat'. 'Detected' is plain. 'Posing a likely threat' is hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_1_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states bird flu 'has infected two more farms' and 'forcing the killing of 5.3 million hens and 88,000 turkeys'. 'Killing' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states farmers 'have had to kill about 22 million birds'. 'Kill' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states operations 'having to kill about 13 million chickens and 305,000 turkeys'. 'Kill' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Iowa 'is the nation’s leading egg producer and had 46 million chickens'. This is factual information about metrics, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Iowa 'raises about 11.7 million turkeys annually'. This is factual information about production volume, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cases 'were at an egg farm and a turkey farm'. 'Were at' is a plain descriptive verb."
+  },
+  {
+    "segment_id": "seg_v5_7_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states officials 'confirmed the virus on a turkey farm'. 'Confirmed' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_9_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states data 'shows 23 states have confirmed cases'. 'Shows' and 'confirmed' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states spread 'is largely blamed on the droppings... which can contaminate'. 'Blamed on' is descriptive. 'Can contaminate' is hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_11_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds 'have been found' and the virus 'has been circulating'. 'Found' is plain outcome. 'Circulating' is a process."
+  },
+  {
+    "segment_id": "seg_v5_12_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cases 'do not present an immediate public health concern'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_13_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'No human cases... have been detected' and 'It remains safe to eat poultry products'. This relates to low risk/food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cooking 'kills bacteria and viruses'. This relates to food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_16_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the story was 'updated to correct the total number of birds killed'. 'Killed' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_17_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment states it was 'updated... to correct the total number of birds killed'. 'Killed' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states it was 'confirmed that H5N1 had spread' and herds 'have been confirmed to have had cases'. 'Confirmed', 'spread', 'had cases' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the FDA 'announced its finding that one in five milk samples... had trace amounts'. 'Announced', 'finding', 'had trace amounts' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_3_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Colombia 'has restricted the import' and the USDA 'is now testing'. 'Restricted' and 'testing' are plain verbs. Also relates to trade metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states WHO 'reported that... 56 percent of bird flu cases detected... were fatal'. 'Reported', 'detected', 'were fatal' are plain outcome verbs. '56 percent' is scale but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cats 'also recently died'. 'Died' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_8_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states transmission 'hasn't been detected'. 'Detected' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a paper 'estimates that around four and a half percent of Americans are consuming'. 'Estimates' and 'are consuming' are plain verbs. 'four and a half percent' is scale but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states consumption 'has been linked to cases'. 'Linked' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_12_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process ('The more people see... algorithms will keep giving them more... then they are less likely to see'). No moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_13_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment states states 'do not allow' and people 'may have to go through more hurdles'. These are plain verbs."
+  },
+  {
+    "segment_id": "seg_v5_1_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the CDC 'has issued a health alert following confirmation of a person becoming infected'. 'Issued', 'confirmation', 'becoming infected' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_2_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the CDC 'announced... that a dairy farm worker... had been diagnosed'. 'Announced' and 'had been diagnosed' are plain outcome verbs."
+  },
+  {
+    "segment_id": "seg_v5_3_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the case 'was diagnosed'. 'Was diagnosed' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_4_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the alert 'stressed the importance' and 'pointing out that the infection had likely been acquired'. 'Stressed', 'pointing out', 'had been acquired' are plain verbs."
+  },
+  {
+    "segment_id": "seg_v5_5_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the alert 'recommends that those working... use personal protective equipment'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_6_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states PPE 'is also recommended'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the alert 'is intended to inform clinicians, while risks to the general public remain low'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the alert 'urges health care workers to monitor patients... and suggests the isolation'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_9_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the symptom 'was conjunctivitis'. This is a descriptive statement."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states bird flu 'can also cause coughing... and other serious symptoms'. Q3 requires realised impact, not hypothetical."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cases 'reported globally... have resulted in death'. 'Reported' and 'resulted' are plain outcome verbs. 'Over half' and 'over 900' are scale but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_12_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the CDC 'stressed the importance of those working with animals following recommendations'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_13_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the public 'was also urged to take common-sense measures... despite risks currently being low'. This is advice/low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'People should avoid being near sick or dead animals or surfaces contaminated'. This is advice, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_16_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'there have been no known cases of human-to-human transmission'. This relates to low risk, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_17_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states officials 'expressed concerns... following the discovery'. 'Expressed concerns' is a psychological verb not coupled with realised harm scale."
+  },
+  {
+    "segment_id": "seg_v5_18_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the outbreak 'began... and quickly spread... to include cases in at least six different states'. 'Began', 'spread', 'include' are plain outcome/process verbs. 'Quickly spread' is vivid adverb + plain verb. 'at least six different states' is scale but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_19_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment states testing 'had not revealed any genetic changes that would increase the likelihood... or hinder the effectiveness'. These are plain/hypothetical verbs."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Japan 'has detected its first outbreak' and 'confirmation of a case'. 'Detected' and 'confirmation' are plain outcomes."
+  },
+  {
+    "segment_id": "seg_v5_2_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states chickens 'are being exterminated'. 'Exterminated' is a containment term, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_3_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'we do not believe that there is any possibility... being transmitted'. This relates to low risk/food safety, not Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an 'increase in the number of people... getting infected... is turning into a source of concern'. 'Increase' and 'getting infected' are plain outcomes. 'Turning into a source of concern' is psychological."
+  },
+  {
+    "segment_id": "seg_v5_5_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states China 'has reported 21 human infections... with six dead and many of the others critically ill'. 'Reported', 'dead', 'critically ill' are plain outcomes. Scale is present but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states outbreaks 'have also been reported... totalling 650,000 poultry'. 'Reported' and 'totalling' are plain outcome verbs. Scale is present but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states Japan 'had its worst season... with more than 3 million chickens culled'. 'Culled' is a containment verb, triggering the override for Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1534_chunk0",
+    "answer": "no",
+    "rationale": "The segment states samples 'tested negative'. 'Tested negative' is a plain outcome, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_2_1534_chunk0",
+    "answer": "no",
+    "rationale": "The segment states samples 'tested negative' and results 'reaffirm that the meat supply is safe'. 'Tested negative' and 'reaffirm' are plain outcomes. 'Meat supply is safe' relates to food safety."
+  },
+  {
+    "segment_id": "seg_v5_3_1534_chunk0",
+    "answer": "no",
+    "rationale": "The segment states authorities 'have been working to confirm the safety' and 'detection of the H5N1 virus in 34 dairy cattle herds across nine states'. 'Working', 'confirm', 'detection' are plain verbs/nouns. Scale is present but not tied to a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "no",
+    "rationale": "The segment states 'one case has been confirmed'. 'Confirmed' is a plain outcome verb, not a moderate verb from the Q3 list."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the 'overall public health risk is low'. This relates to low risk, not Q3."
+  }
+]
+```

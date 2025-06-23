@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_9_16280_r1",
+  "hop_idx": 9,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_015_1282_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an action (suspension of items) rather than prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_15_1506_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a historical event and identification, not prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_14_1506_chunk0",
+      "answer": "yes",
+      "rationale": "The segment reports a numerical metric ('discovered in dairy herds in five states') using standard descriptive verbs."
+    }
+  ],
+  "timestamp": "2025-06-18T10:03:19.616879"
+}

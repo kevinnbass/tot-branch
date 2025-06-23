@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14828", "batch_size": 260, "batch_pos": 232}
+{"Q": 2, "answer": "no", "rationale": "Scientific explanation.", "method": "llm_batch", "batch_id": "batch_2_4512", "batch_size": 260, "batch_pos": 194}
+{"Q": 3, "answer": "no", "rationale": "The segment contains no moderate verb paired with scale/impact information.", "method": "llm_batch", "batch_id": "batch_3_16988", "batch_size": 260, "batch_pos": 153}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17640", "batch_size": 260, "batch_pos": 146}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a hypothesis without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10144", "batch_size": 260, "batch_pos": 141}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_17584", "batch_size": 260, "batch_pos": 120}
+{"Q": 7, "answer": "no", "rationale": "The segment discusses severity depending on exposure dose but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_15984", "batch_size": 260, "batch_pos": 114}
+{"Q": 8, "answer": "no", "rationale": "The segment provides a theory, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7588", "batch_size": 260, "batch_pos": 245}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_8464", "batch_size": 260, "batch_pos": 189}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 48}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 23}
+{"hop_idx": 12, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 22}
+{"Q": 12, "answer": "yes", "rationale": "Reports a hypothesis ('may depend on') using factual language without explicit framing cues.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_12_13208_r1", "batch_size": 247, "batch_pos": 22}

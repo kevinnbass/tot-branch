@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13748", "batch_size": 260, "batch_pos": 51}
+{"Q": 2, "answer": "no", "rationale": "The segment describes vaccine production factually using neutral verbs like 'started'.", "method": "llm_batch", "batch_id": "batch_2_4108", "batch_size": 260, "batch_pos": 20}
+{"Q": 3, "answer": "no", "rationale": "The segment contains quantity '4.8 million doses' but tied to production process, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_17940", "batch_size": 260, "batch_pos": 217}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14516", "batch_size": 260, "batch_pos": 198}
+{"Q": 5, "answer": "no", "rationale": "The segment reports action taken but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_6448", "batch_size": 260, "batch_pos": 194}
+{"Q": 6, "answer": "no", "rationale": "Contains 'about 4.8 million doses' but 'about' is not a minimiser in this context.", "method": "llm_batch", "batch_id": "batch_6_17780", "batch_size": 260, "batch_pos": 160}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, or impact.", "method": "llm_batch", "batch_id": "batch_7_9160", "batch_size": 260, "batch_pos": 139}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_11716", "batch_size": 260, "batch_pos": 231, "regex": {"rule": "CapabilityNoReassurance", "span": [139, 146], "captures": []}}

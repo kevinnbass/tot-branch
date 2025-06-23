@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17144", "batch_size": 260, "batch_pos": 148}
+{"Q": 2, "answer": "no", "rationale": "The segment reports a quote describing others' reactions ('really bad'), but does not use authorial high-potency language for the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_12832", "batch_size": 260, "batch_pos": 111}
+{"Q": 3, "answer": "no", "rationale": "The segment contains no moderate verbs paired with scale or impact information.", "method": "llm_batch", "batch_id": "batch_3_16048", "batch_size": 260, "batch_pos": 45}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16912", "batch_size": 260, "batch_pos": 25}
+{"Q": 4, "answer": "yes", "rationale": "The quoted question 'what are you guys going to do?' is loaded by the preceding statement 'This is really bad,' implying urgency.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16912_r1", "batch_size": 260, "batch_pos": 25}

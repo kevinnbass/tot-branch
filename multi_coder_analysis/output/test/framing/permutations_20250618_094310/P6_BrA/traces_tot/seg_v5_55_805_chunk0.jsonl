@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a metaphor, not an intensified or comparative risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 209}
+{"Q": 2, "answer": "no", "rationale": "'HOV lane' is a metaphor describing mpox spread mechanism, not bird flu impact.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 157}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 92}
+{"Q": 3, "answer": "no", "rationale": "'found the HOV lane' is a metaphor, not a moderate verb paired with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17212_r1", "batch_size": 260, "batch_pos": 92}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 81}
+{"Q": 5, "answer": "no", "rationale": "Uses a metaphor ('found the HOV lane') to describe spread, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 73}
+{"Q": 6, "answer": "no", "rationale": "No minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 28}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 21}
+{"Q": 8, "answer": "no", "rationale": "The segment uses a metaphor about viruses spreading, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 82}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a feeling/metaphor, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 160}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 214}
+{"Q": 11, "answer": "no", "rationale": "Quote uses a metaphor, not framed language about risk/impact.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 173}
+{"Q": 12, "answer": "yes", "rationale": "Metaphor describing spread of mpox, not framing the bird flu threat.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 172}

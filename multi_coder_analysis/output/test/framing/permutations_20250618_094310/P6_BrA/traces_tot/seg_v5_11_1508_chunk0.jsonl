@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 58}
+{"Q": 2, "answer": "no", "rationale": "The verb 'imposed' is not high-potency.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 4}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a moderate verb ('imposed') paired with a trade metric ('restrictions on U.S. beef exports'), which is Neutral for Q3.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 193}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 182}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17952_r1", "batch_size": 260, "batch_pos": 182}
+{"Q": 5, "answer": "no", "rationale": "Reports Colombia is the only country with restrictions, a neutral fact.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 174}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 127}
+{"Q": 6, "answer": "no", "rationale": "The word 'only' contrasts with other countries, not a quantity relative to a scale of the event.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 127}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 118}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a country's action and industry group's comment, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 178}
+{"Q": 9, "answer": "yes", "rationale": "'is the only country that has officially imposed restrictions' reports a numerical metric (only) using a standard verb.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 212}

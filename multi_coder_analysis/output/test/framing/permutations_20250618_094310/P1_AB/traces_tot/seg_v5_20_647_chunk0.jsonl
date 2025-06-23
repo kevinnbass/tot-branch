@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'very loud' modifying 'screaming', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 73}
+{"Q": 2, "answer": "no", "rationale": "The segment uses descriptive language ('Screaming very loud', 'whole-body tremors', 'lasted') without high-potency verbs or metaphors framing the threat's impact.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 71}
+{"Q": 3, "answer": "no", "rationale": "'Screaming very loud, whole-body tremors' triggers Q1 (Vivid description of impact).", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 70}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 69}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 69}
+{"Q": 5, "answer": "no", "rationale": "This segment reports severe symptoms (negative fact) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 69}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 66}
+{"Q": 7, "answer": "no", "rationale": "The segment describes symptoms but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 63}
+{"Q": 8, "answer": "no", "rationale": "The segment describes symptoms in animals, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 54}
+{"Q": 9, "answer": "yes", "rationale": "Reports duration of seizures ('for 20 to 30 seconds') using standard descriptive language.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 39}

@@ -1,0 +1,978 @@
+{
+  "batch_id": "batch_2_21188",
+  "hop_idx": 2,
+  "segment_count": 200,
+  "responses": [
+    {
+      "segment_id": "seg_v5_5_45_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_4_45_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_3_45_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_2_45_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'highly pathogenic' is a technical term and ignored by TECH_TERM_GUARD."
+    },
+    {
+      "segment_id": "seg_v5_1_45_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'high mortality rates' uses an intensifier ('high') coupled with a harm noun ('mortality rates'), triggering Q2."
+    },
+    {
+      "segment_id": "seg_v5_14_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'low risk' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_13_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_12_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_11_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'spread' is a moderate verb. 'critical to protecting' is not an Alarmist cue."
+    },
+    {
+      "segment_id": "seg_v5_10_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'struggled' is not a high-potency verb in this context."
+    },
+    {
+      "segment_id": "seg_v5_9_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_8_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'highly pathogenic' is a technical term and ignored by TECH_TERM_GUARD."
+    },
+    {
+      "segment_id": "seg_v5_7_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'infected' is a neutral verb. Scale ('across 46 states') alone does not trigger Q2."
+    },
+    {
+      "segment_id": "seg_v5_6_1181_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'worst avian-flu crises' uses a superlative ('worst') coupled with a negative noun ('crises'), triggering Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'record highs' refers to prices, not a harm noun. 'worsening' is not high-potency. 'red-hot inflation' is background context."
+    },
+    {
+      "segment_id": "seg_v5_4_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_3_1181_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'die' is a factual verb, not high-potency."
+    },
+    {
+      "segment_id": "seg_v5_2_1181_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'worst U.S. animal-health disaster' uses a superlative ('worst') coupled with a negative noun ('disaster'), triggering Q2."
+    },
+    {
+      "segment_id": "seg_v5_1_1181_chunk0",
+      "answer": "yes",
+      "rationale": "The verb 'wiped out' is a high-potency verb, triggering Q2. 'deadliest outbreak' also uses a superlative + negative noun."
+    },
+    {
+      "segment_id": "seg_v5_5_899_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_4_899_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_3_899_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, intensifiers, or alert phrases."
+    },
+    {
+      "segment_id": "seg_v5_2_899_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'affects' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_1_899_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'halted' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_21_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. Phrases like 'no concerns' and 'safe to consume' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_20_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'led to the death of' is not a high-potency verb."
+    },
+    {
+      "segment_id": "seg_v5_19_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'problem' is a negative noun but not coupled with a superlative or intensifier."
+    },
+    {
+      "segment_id": "seg_v5_18_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'little or no mortality' is a low-risk fact, not framed alarmingly."
+    },
+    {
+      "segment_id": "seg_v5_17_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found' and 'detected' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_16_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_15_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported', 'tested positive' are neutral. 'widespread' is not a Q2 cue."
+    },
+    {
+      "segment_id": "seg_v5_13_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported' is neutral. 'fatality rate of roughly 50%' is a severe fact stated neutrally."
+    },
+    {
+      "segment_id": "seg_v5_12_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'severe pneumonia' is a negative outcome but not framed with Q2 cues."
+    },
+    {
+      "segment_id": "seg_v5_11_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_10_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'shed' and 'become infected' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_9_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'occurred' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_8_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'monitoring', 'reported', 'began' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_7_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_6_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a neutral quote without Alarmist framing."
+    },
+    {
+      "segment_id": "seg_v5_4_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'risk remains low' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_3_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported' and 'being treated' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_1_405_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'tested positive', 'presumed to be infected', 'second known instance' are factual."
+    },
+    {
+      "segment_id": "seg_v5_035_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'assured consumers' and 'safe to consume' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_034_644_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'on high alert' is a critical alert phrase coupled with a threat ('bird flu'), triggering Q2."
+    },
+    {
+      "segment_id": "seg_v5_033_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/positive language. 'really fantastic' is positive framing. 'destroying' is a containment action."
+    },
+    {
+      "segment_id": "seg_v5_032_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'urging' is not a high-potency verb."
+    },
+    {
+      "segment_id": "seg_v5_031_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reminded' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_030_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'face potential fines' is a consequence, not Alarmist framing of the threat."
+    },
+    {
+      "segment_id": "seg_v5_029_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'issued', 'requires', 'stretches' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_028_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'issued' and 'requires' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_027_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a neutral quote."
+    },
+    {
+      "segment_id": "seg_v5_026_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'infections' is a negative noun but not coupled with a superlative or intensifier."
+    },
+    {
+      "segment_id": "seg_v5_025_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'spread' is a moderate verb. 'more at risk' is a factual comparison."
+    },
+    {
+      "segment_id": "seg_v5_024_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_023_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'detected' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_022_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a neutral quote."
+    },
+    {
+      "segment_id": "seg_v5_021_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'short-term blip' and 'resolve itself very quickly' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_020_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'short-term blip' and 'resolve itself very quickly' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_019_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is neutral advice."
+    },
+    {
+      "segment_id": "seg_v5_018_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'anticipating a flow-on impact' is factual."
+    },
+    {
+      "segment_id": "seg_v5_017_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'warning that... may have an impact' is factual."
+    },
+    {
+      "segment_id": "seg_v5_016_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'euthanised', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_015_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'identified as having' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_014_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_013_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/positive language. 'linked', 'detections were not unexpected', 'working well' are not Alarmist cues."
+    },
+    {
+      "segment_id": "seg_v5_012_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'detected' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_010_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'some disruption' is moderate. 'do not indicate a nationwide shortage' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_009_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'not at risk' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_008_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_007_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/positive language. 'working closely', 'ensure eggs remain available', 'providing support' are not Alarmist cues."
+    },
+    {
+      "segment_id": "seg_v5_006_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about a limit."
+    },
+    {
+      "segment_id": "seg_v5_005_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about a limit."
+    },
+    {
+      "segment_id": "seg_v5_004_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'euthanised', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_003_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'highly pathogenic' is a technical term. 'detected' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_002_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'rushed to reassure' and 'no shortage' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_001_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'euthanised', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_8_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual/positive statement."
+    },
+    {
+      "segment_id": "seg_v5_7_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual/positive statement. 'record' modifies exports/value, not a harm noun."
+    },
+    {
+      "segment_id": "seg_v5_6_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/positive language. 'praised', 'cautioned', 'learn how to live with' are not Alarmist cues."
+    },
+    {
+      "segment_id": "seg_v5_5_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/positive language. 'praised' is positive. 'killed' is a factual verb."
+    },
+    {
+      "segment_id": "seg_v5_4_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual/positive statement."
+    },
+    {
+      "segment_id": "seg_v5_3_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual/positive statement."
+    },
+    {
+      "segment_id": "seg_v5_2_1397_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_022_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statistic. 'died' is not a high-potency verb."
+    },
+    {
+      "segment_id": "seg_v5_021_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'increases the risk', 'chance of... adapting', 'possible risk' are factual statements about risk."
+    },
+    {
+      "segment_id": "seg_v5_020_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'increases the risk' and 'chance of... adapting' are factual statements about risk."
+    },
+    {
+      "segment_id": "seg_v5_018_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'spread rapidly' uses a moderate verb + intensifier, not a high-potency verb. 'killing' is factual."
+    },
+    {
+      "segment_id": "seg_v5_017_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'little chance' is a low-risk fact, not framed alarmingly."
+    },
+    {
+      "segment_id": "seg_v5_016_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual conclusion."
+    },
+    {
+      "segment_id": "seg_v5_015_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'highly unlikely' is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_014_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found dead' is factual. 'little to no interaction' is factual."
+    },
+    {
+      "segment_id": "seg_v5_013_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'suggested' and 'circulating' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_012_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'growing evidence' and 'spreading' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_011_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'catching' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_010_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'killed' is a factual verb, not high-potency in this context."
+    },
+    {
+      "segment_id": "seg_v5_009_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'died' and 'being affected' are factual verbs. Scale ('More than 500,000') alone does not trigger Q2."
+    },
+    {
+      "segment_id": "seg_v5_008_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'infected' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_007_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'spread more quickly' uses a moderate verb + comparative, not a high-potency intensifier."
+    },
+    {
+      "segment_id": "seg_v5_006_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'detected' and 'confined' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_003_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'killed' is a factual verb. 'highest figure' describes a number, not a superlative + harm noun framing the event."
+    },
+    {
+      "segment_id": "seg_v5_002_813_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'detected' and 'died' are factual verbs. Scale ('96 per cent') alone does not trigger Q2."
+    },
+    {
+      "segment_id": "seg_v5_027_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'declared', 'confirmed', 'affected' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_026_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found' and 'infected' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_025_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'doing testing', 'located', 'have interactions', 'affected' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_024_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'refused' and 'forced' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_023_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'tested positive' and 'believed to be an underestimate' are factual."
+    },
+    {
+      "segment_id": "seg_v5_022_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'in the grips of' is not a potent metaphor listed in the Q2 table."
+    },
+    {
+      "segment_id": "seg_v5_020_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'tested', 'studying', 'looking for', 'analyzing' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_018_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'revealed', 'became ill', 'hospitalized', 'tested' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_017_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'said', 'collected', 'were ill', 'caring for' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_016_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'identified', 'exposed', 'put in place', 'prevent spread', 'described', 'put... at higher risk' are neutral/factual."
+    },
+    {
+      "segment_id": "seg_v5_015_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'troubled by' describes a person's state, not the threat's impact. 'figure out', 'infected', 'spread' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_014_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'getting a grip on' is an idiom, not a potent metaphor."
+    },
+    {
+      "segment_id": "seg_v5_013_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'really on the line' describes credibility, not the threat's impact."
+    },
+    {
+      "segment_id": "seg_v5_012_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about procedure."
+    },
+    {
+      "segment_id": "seg_v5_011_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'tested negative', 'finding', 'released from hospital' are neutral. 'raising concerns' is a psychological verb without Q2 intensifiers or scale."
+    },
+    {
+      "segment_id": "seg_v5_010_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'tested negative' and 'was ill' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_009_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'identified as having been ill' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_008_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'released', 'took place', 'known', 'recovered', 'was in hospital' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_007_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'characterize the risk... as low' is a Reassuring cue, not Alarmist. Other verbs are neutral."
+    },
+    {
+      "segment_id": "seg_v5_006_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'characterize the risk... as low' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_005_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'closely monitor' and 'no sign of unusual activity' are not Alarmist cues."
+    },
+    {
+      "segment_id": "seg_v5_004_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'raises the specter of' is not a potent metaphor listed in the Q2 table."
+    },
+    {
+      "segment_id": "seg_v5_003_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'raises the specter of' is not a potent metaphor listed in the Q2 table."
+    },
+    {
+      "segment_id": "seg_v5_002_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'unexplained', 'turned up', 'developed symptoms', 'caring for', 'reported', 'infected', 'tested', 'were ill' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_001_803_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'unexplained', 'turned up', 'developed symptoms', 'caring for', 'reported' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_17_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a neutral quote."
+    },
+    {
+      "segment_id": "seg_v5_16_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'emerging issue', 'evolving', 'a lot that we don’t know' are factual descriptions."
+    },
+    {
+      "segment_id": "seg_v5_15_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'cautioned' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_13_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'safe to eat' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_12_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'no risk' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_11_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_10_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'halted operations' and 'finding' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_9_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'no herds... have reported' and 'recommend' are neutral/preventative. 'show symptoms', 'exposed', 'infected' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_8_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'required to be pasteurized' and 'kills' are neutral/factual."
+    },
+    {
+      "segment_id": "seg_v5_7_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'barred from selling' and 'must divert and destroy' are neutral/regulatory."
+    },
+    {
+      "segment_id": "seg_v5_6_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'not a food safety concern' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_5_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'appear to recover' is a positive/low-risk fact, not framed alarmingly."
+    },
+    {
+      "segment_id": "seg_v5_4_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'show signs', 'test positive', 'being separated' are neutral/procedural."
+    },
+    {
+      "segment_id": "seg_v5_3_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'testing', 'show symptoms' are neutral. 'sharply reduced' modifies milk supply, not a Q2 cue."
+    },
+    {
+      "segment_id": "seg_v5_2_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'no concern' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_1_1485_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'risk to the public is low' and 'remains safe and stable' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_7_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_5_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_4_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_3_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'affected' is a neutral verb. Scale ('600,000') alone does not trigger Q2."
+    },
+    {
+      "segment_id": "seg_v5_2_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_1_1186_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_5_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment verb 'slaughtered', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_4_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the containment noun 'culls', triggering the containment override for Q2."
+    },
+    {
+      "segment_id": "seg_v5_3_1917_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'carried by' and 'subsiding' are neutral. 'experts are concerned' is a psychological verb without Q2 intensifiers or scale."
+    },
+    {
+      "segment_id": "seg_v5_6_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'highly pathogenic' is a technical term. 'would risk' is a factual statement about potential risk."
+    },
+    {
+      "segment_id": "seg_v5_5_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'adopting an extra cautious stance' and 'detection' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_4_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'cases remain rare' and 'risk to humans is low' are Reassuring cues, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_3_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'analyzing samples', 'pointing out', 'no confirmed cases... have ever been reported' are not Alarmist cues."
+    },
+    {
+      "segment_id": "seg_v5_2_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'tested positive', 'being monitored', 'in isolation', 'showed mild symptoms', 'said' are neutral. 'Highly Pathogenic Avian Influenza' is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_1_1300_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'investigating a suspected case', 'confirmed cases... were detected', 'said' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_17_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'said', 'identified signs', 'prevented... from entering' are neutral/procedural."
+    },
+    {
+      "segment_id": "seg_v5_16_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'said', 'tested positive', 'detected', 'collected', 'condemned to be slaughtered' are neutral/factual. 'slaughtered' is containment but used factually."
+    },
+    {
+      "segment_id": "seg_v5_15_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'conducting studies' and 'testing' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_14_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'taken', 'found', 'tested positive', 'showed', 'yielded' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_13_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'told', 'reflected', 'should not be used to draw conclusions' are neutral. 'safety' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_12_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'needed', 'including the study', 'can alter', 'said' are neutral. 'infected' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_11_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'supported', 'may not translate', 'conducted', 'stressed' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_10_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'included using', 'spiked with', 'infected', 'could have' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_9_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement about disclosure."
+    },
+    {
+      "segment_id": "seg_v5_8_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_7_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'indicates the potential' and 'remain infectious' are factual/scientific descriptions."
+    },
+    {
+      "segment_id": "seg_v5_6_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'indicated', 'would be sufficient', 'requires', 'found', 'treated' are neutral. 'detectable amounts' is factual."
+    },
+    {
+      "segment_id": "seg_v5_5_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a factual/regulatory statement."
+    },
+    {
+      "segment_id": "seg_v5_4_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'heat-treated' is neutral/procedural."
+    },
+    {
+      "segment_id": "seg_v5_3_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'took' and 'diluted' are neutral/procedural."
+    },
+    {
+      "segment_id": "seg_v5_2_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'highly pathogenic' is a technical term. Other verbs are neutral."
+    },
+    {
+      "segment_id": "seg_v5_1_1702_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'killed' is a factual verb. 'Most, but not all' is a factual description."
+    },
+    {
+      "segment_id": "seg_v5_004_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'transmitted', 'infected', 'contaminated' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_003_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found', 'said', 'citing' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_002_1352_chunk0",
+      "answer": "yes",
+      "rationale": "The verb 'ravaged' is a high-potency verb describing the impact ('ravaged flocks'), triggering Q2."
+    },
+    {
+      "segment_id": "seg_v5_001_1352_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported' and 'said' are neutral. 'highly contagious' is a technical term."
+    },
+    {
+      "segment_id": "seg_v5_11_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'said', 'developing', 'remains an essential part' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_10_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'reported' is a neutral verb."
+    },
+    {
+      "segment_id": "seg_v5_9_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'advised against' and 'added' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_6_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'death of' is factual. 'sparked the investigation' is a psychological verb/cause-effect without Q2 intensifiers or scale of harm."
+    },
+    {
+      "segment_id": "seg_v5_5_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found to be infected', 'were asymptomatic', 'said' are neutral."
+    },
+    {
+      "segment_id": "seg_v5_4_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'registered', 'being passed', 'reported', 'said' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_3_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'turned out to be mild' is a low-risk fact, not framed alarmingly."
+    },
+    {
+      "segment_id": "seg_v5_2_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'spread rapidly' uses a moderate verb + intensifier, not a high-potency verb."
+    },
+    {
+      "segment_id": "seg_v5_1_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'risk... appears low' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_9_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral/Reassuring language. 'low risk' is a Reassuring cue, not Alarmist."
+    },
+    {
+      "segment_id": "seg_v5_8_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'occurs' and 'has been found' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_7_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'hasn’t been detected' is neutral."
+    },
+    {
+      "segment_id": "seg_v5_6_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'expected to rise' is a factual prediction, not framed alarmingly."
+    },
+    {
+      "segment_id": "seg_v5_5_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'died' is factual. 'quarantined' is neutral/procedural."
+    },
+    {
+      "segment_id": "seg_v5_4_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'manages', 'captured', 'seemed ill', 'sent' are neutral verbs."
+    },
+    {
+      "segment_id": "seg_v5_3_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral language. 'found dead', 'tested positive', 'aren’t yet completed', 'said' are neutral."
+    }
+  ],
+  "timestamp": "2025-06-20T13:41:20.034312"
+}

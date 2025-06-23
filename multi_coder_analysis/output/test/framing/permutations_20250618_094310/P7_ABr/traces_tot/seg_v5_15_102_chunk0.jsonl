@@ -1,0 +1,11 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15452", "batch_size": 260, "batch_pos": 14}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_16972", "batch_size": 260, "batch_pos": 13}
+{"Q": 2, "answer": "no", "rationale": "The segment provides a factual statement about cooking temperatures and does not use high-potency verbs or potent metaphors.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_16972_r1", "batch_size": 260, "batch_pos": 13}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_11860", "batch_size": 260, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "The segment provides factual information about cooking temperature; it does not use moderate verbs with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_11860_r1", "batch_size": 260, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_16028", "batch_size": 260, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The segment reports cases in humans and herds without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10380", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14764", "batch_size": 260, "batch_pos": 12}
+{"hop_idx": 7, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_7_10756", "batch_size": 260, "batch_pos": 12}
+{"Q": 7, "answer": "no", "rationale": "The segment states a fact about cooking killing pathogens, not a bare negation.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_7_10756_r1", "batch_size": 260, "batch_pos": 12}
+{"Q": 8, "answer": "yes", "rationale": "Describes a safeguard ('Cooking... kills bacteria and viruses') without explicitly linking it to current calm or present safety.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 11}

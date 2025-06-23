@@ -1,0 +1,27 @@
+{
+  "batch_id": "batch_1_19964",
+  "hop_idx": 1,
+  "unknown_count": 4,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_11_601_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_18_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'extremely rare', which is an intensifier modifying a low-risk adjective, not a risk-adjective as defined for Q1."
+    },
+    {
+      "segment_id": "seg_v5_20_1506_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'severe' and 'life-threatening', which are risk-adjectives, but they are not modified by an intensifier or comparative as required by Q1."
+    },
+    {
+      "segment_id": "seg_v5_35_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains 'overwhelm', which is a vivid verb, but not an intensifier or comparative directly modifying a risk-adjective."
+    }
+  ]
+}

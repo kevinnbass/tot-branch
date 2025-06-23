@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_5_15512_r1",
+  "hop_idx": 5,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1534_chunk0",
+      "answer": "no",
+      "rationale": "Reports a positive fact (tested negative) but lacks explicit calming language or framing."
+    },
+    {
+      "segment_id": "seg_v5_2_1534_chunk0",
+      "answer": "yes",
+      "rationale": "The quote explicitly states 'the meat supply is safe', which is a direct safety assurance cue."
+    },
+    {
+      "segment_id": "seg_v5_3_1534_chunk0",
+      "answer": "no",
+      "rationale": "Mentions 'working to confirm the safety' which describes an action, not an explicit statement of current safety or control."
+    },
+    {
+      "segment_id": "seg_v5_4_1534_chunk0",
+      "answer": "no",
+      "rationale": "Reports a negative fact (human case) but contains no explicit calming language."
+    }
+  ],
+  "timestamp": "2025-06-18T09:54:24.930864"
+}

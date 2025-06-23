@@ -1,0 +1,37 @@
+{
+  "batch_id": "batch_3_6352",
+  "hop_idx": 3,
+  "unknown_count": 6,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_8_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs and a number of states, but it's not framed as significant scale/impact per Q3 rules."
+    },
+    {
+      "segment_id": "seg_v5_14_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'killed' with large numbers, which is neutralized by the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_16_1674_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spread' is moderate, but the scale ('at least one person', '36 dairy herds') is not explicitly framed as significant impact per Q3 rules."
+    },
+    {
+      "segment_id": "seg_v5_17_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs and reports a finding ('one in five', 'trace amounts') but not framed as significant scale/impact per Q3 rules."
+    },
+    {
+      "segment_id": "seg_v5_18_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses neutral verbs and discusses trade/testing, which are excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_19_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a historical fatality rate ('56 percent were fatal') using neutral verbs, not describing current impact with a moderate verb + scale."
+    }
+  ]
+}

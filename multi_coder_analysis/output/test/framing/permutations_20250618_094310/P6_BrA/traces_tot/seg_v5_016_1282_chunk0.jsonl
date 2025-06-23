@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a factual number, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 182}
+{"Q": 2, "answer": "no", "rationale": "The language describes actions taken, not high-potency framing of the threat.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 128}
+{"Q": 3, "answer": "no", "rationale": "'suspended' is a plain outcome verb, not a moderate verb from the list/regex.", "method": "llm_batch", "batch_id": "batch_3_18132", "batch_size": 81, "batch_pos": 53}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16304", "batch_size": 64, "batch_pos": 38}
+{"Q": 5, "answer": "no", "rationale": "Reports actions taken ('have suspended egg-related items') but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16440", "batch_size": 56, "batch_pos": 30}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 238}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 238}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 229}
+{"Q": 8, "answer": "no", "rationale": "Describes a statistic about actions taken by companies, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16644", "batch_size": 49, "batch_pos": 27}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports a numerical metric ('About 20% of 100 listed companies') using the standard verb 'suspended'.", "method": "llm_batch", "batch_id": "batch_9_14604", "batch_size": 25, "batch_pos": 11}

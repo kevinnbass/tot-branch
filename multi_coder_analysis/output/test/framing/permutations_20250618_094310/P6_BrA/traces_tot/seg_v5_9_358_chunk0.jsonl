@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a scale metric ('small portion'), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 201}
+{"Q": 2, "answer": "no", "rationale": "The verb 'affected' is moderate. The rest describes a positive outcome (prices falling).", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 146}
+{"Q": 3, "answer": "no", "rationale": "'affected' is a plain outcome verb, not a moderate verb from the list/regex.", "method": "llm_batch", "batch_id": "batch_3_18132", "batch_size": 81, "batch_pos": 66}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16304", "batch_size": 64, "batch_pos": 51}
+{"Q": 5, "answer": "no", "rationale": "Reports positive facts ('only a small portion... has been affected', 'allowing prices to fall') but lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16440", "batch_size": 56, "batch_pos": 43}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 250}
+{"Q": 6, "answer": "yes", "rationale": "'only a small portion of the total flock nationwide' uses a minimiser ('only a small portion') with scale contrast ('of the total flock nationwide').", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 250}

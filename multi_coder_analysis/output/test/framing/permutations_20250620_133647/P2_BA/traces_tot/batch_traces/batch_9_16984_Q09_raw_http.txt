@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_12_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk... is considered to be low')."
+  },
+  {
+    "segment_id": "seg_v5_1_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case count ('A fourth farm worker has been infected') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case count ('A fourth farm worker has been infected') and context factually."
+  },
+  {
+    "segment_id": "seg_v5_4_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case count ('Three previous cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case counts ('Three previous cases', 'Two of those workers', 'one') and symptoms factually."
+  },
+  {
+    "segment_id": "seg_v5_6_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case count ('the first U.S. case') factually."
+  },
+  {
+    "segment_id": "seg_v5_7_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment includes an explicit low-risk statement ('risk to the general public remains low')."
+  },
+  {
+    "segment_id": "seg_v5_9_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case count ('A fourth farm worker has been infected') and context factually."
+  },
+  {
+    "segment_id": "seg_v5_10_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports test results ('samples sent to CDC tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_690_chunk0",
+    "answer": "yes",
+    "rationale": "Reports counts ('more than 135 dairy herds', 'a dozen states') factually."
+  },
+  {
+    "segment_id": "seg_v5_12_1041_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an outbreak ('reported a new outbreak') factually. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_13_1041_chunk0",
+    "answer": "yes",
+    "rationale": "Reports counts ('killed 6,770 birds', 'slaughter of the rest of the flock of nearly 34,000 animals') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case counts ('a fourth human bird flu case', 'a fifth also suspected') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual definition. 'Highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_3_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission."
+  },
+  {
+    "segment_id": "seg_v5_4_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case counts ('four human cases') factually. 'multi-state outbreak' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_5_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location of cases factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('It is rare')."
+  },
+  {
+    "segment_id": "seg_v5_8_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Reports context of cases factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1779_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms ('mild symptoms') factually."
+  },
+  {
+    "segment_id": "seg_v5_12_1779_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future risk ('could trigger a pandemic')."
+  },
+  {
+    "segment_id": "seg_v5_14_1779_chunk0",
+    "answer": "no",
+    "rationale": "Provides recommendations for safety."
+  },
+  {
+    "segment_id": "seg_v5_15_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question."
+  },
+  {
+    "segment_id": "seg_v5_1_1174_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an outbreak ('reported its first outbreak') factually. 'highly pathogenic' is guarded. 'swept through' is background."
+  },
+  {
+    "segment_id": "seg_v5_2_1174_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count of deaths ('killed 200 pelicans') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1174_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission."
+  },
+  {
+    "segment_id": "seg_v5_4_1174_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('tens of millions of poultry birds being slaughtered') factually. 'wave of cases' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_2_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreaks ('Several outbreaks') factually. 'severe bird flu' and 'spreading quickly' are descriptive."
+  },
+  {
+    "segment_id": "seg_v5_3_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('culling of tens of millions of birds') factually. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_4_30_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission potential."
+  },
+  {
+    "segment_id": "seg_v5_5_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case counts ('21 human infections', 'more than in the whole of 2020') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreak size ('farm of around 770,000 poultry') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an outbreak ('reported its first outbreak') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports serotype factually."
+  },
+  {
+    "segment_id": "seg_v5_10_30_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreak size ('flock of 7,000 birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_30_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about circulation and transmission."
+  },
+  {
+    "segment_id": "seg_v5_15_30_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission potential ('in rare cases')."
+  },
+  {
+    "segment_id": "seg_v5_1_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a death ('the first death') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection ('Tests have identified') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a death ('the first global death') factually."
+  },
+  {
+    "segment_id": "seg_v5_16_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection ('was discovered') factually. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_19_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about mutation potential. 'quickly' is a neutral adverb."
+  },
+  {
+    "segment_id": "seg_v5_20_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a death ('died') and symptoms factually."
+  },
+  {
+    "segment_id": "seg_v5_21_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports context about a case factually."
+  },
+  {
+    "segment_id": "seg_v5_22_1680_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection location factually."
+  },
+  {
+    "segment_id": "seg_v5_2_355_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection location and count ('three smaller flocks') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_355_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about the industry situation."
+  },
+  {
+    "segment_id": "seg_v5_6_355_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('nearly 58 million birds') and economic impact ('significantly higher egg and turkey prices') factually using standard verbs and neutral adverbs."
+  },
+  {
+    "segment_id": "seg_v5_7_355_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection location and status ('first egg-laying operation') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_355_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('more than 5.5 million birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_355_chunk0",
+    "answer": "yes",
+    "rationale": "Reports counts ('more than 16 million birds slaughtered', '5 million egg-laying chickens') factually. 'hardest hit' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_12_355_chunk0",
+    "answer": "yes",
+    "rationale": "Reports cases ('a number of cases') and transmission facts factually."
+  },
+  {
+    "segment_id": "seg_v5_14_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains explicit food safety assurances ('isn't a threat to food safety', 'will kill any viruses')."
+  },
+  {
+    "segment_id": "seg_v5_15_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('Infections in humans are rare')."
+  },
+  {
+    "segment_id": "seg_v5_1_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case count ('two human cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case count ('total U.S. bird flu infections... to 15') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('Another person... has also tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1851_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future risks ('risks to humans from further spread')."
+  },
+  {
+    "segment_id": "seg_v5_8_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location/context of a case factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms ('mild symptoms') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection event ('began testing positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_13_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk to the general public remains low')."
+  },
+  {
+    "segment_id": "seg_v5_14_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('confirmed bird flu in a person') and context factually."
+  },
+  {
+    "segment_id": "seg_v5_15_1851_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('Six healthcare workers') and outcome ('virus was not confirmed') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_582_chunk0",
+    "answer": "no",
+    "rationale": "Describes a situation ('largely in the dark')."
+  },
+  {
+    "segment_id": "seg_v5_7_582_chunk0",
+    "answer": "no",
+    "rationale": "Reports a quote about usefulness of information."
+  },
+  {
+    "segment_id": "seg_v5_9_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an observation ('began lighting up their dashboard') factually. 'unusually high' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_10_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports findings ('found the spikes were mostly due to large amounts') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_582_chunk0",
+    "answer": "no",
+    "rationale": "Reports a hypothesis."
+  },
+  {
+    "segment_id": "seg_v5_13_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('reports a human case', 'nation's second') factually."
+  },
+  {
+    "segment_id": "seg_v5_14_582_chunk0",
+    "answer": "no",
+    "rationale": "Reports publication of results."
+  },
+  {
+    "segment_id": "seg_v5_16_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports findings ('finding H5N1 sequences') and counts ('19 plants', 'nine Texas cities') factually."
+  },
+  {
+    "segment_id": "seg_v5_21_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports levels ('very low levels', 'high levels', 'higher levels') factually."
+  },
+  {
+    "segment_id": "seg_v5_26_582_chunk0",
+    "answer": "no",
+    "rationale": "Reports communication and goals."
+  },
+  {
+    "segment_id": "seg_v5_29_582_chunk0",
+    "answer": "no",
+    "rationale": "Discusses learning and interpretation."
+  },
+  {
+    "segment_id": "seg_v5_30_582_chunk0",
+    "answer": "no",
+    "rationale": "Describes demand for data."
+  },
+  {
+    "segment_id": "seg_v5_31_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('increases in influenza A') factually."
+  },
+  {
+    "segment_id": "seg_v5_32_582_chunk0",
+    "answer": "no",
+    "rationale": "Discusses understanding signals."
+  },
+  {
+    "segment_id": "seg_v5_36_582_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case count ('second human case') factually."
+  },
+  {
+    "segment_id": "seg_v5_38_582_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future risks ('increase the potential risks')."
+  },
+  {
+    "segment_id": "seg_v5_1_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('first time a patient... has tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case counts ('first time', '14th human bird flu case') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Reports context about a case factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1824_chunk0",
+    "answer": "yes",
+    "rationale": "Reports test result ('was confirmed') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1824_chunk0",
+    "answer": "no",
+    "rationale": "Reports lack of detail."
+  },
+  {
+    "segment_id": "seg_v5_7_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_9_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('while rare')."
+  },
+  {
+    "segment_id": "seg_v5_12_1824_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future events ('could lead to')."
+  },
+  {
+    "segment_id": "seg_v5_14_1824_chunk0",
+    "answer": "no",
+    "rationale": "Describes characteristics of a potential virus."
+  },
+  {
+    "segment_id": "seg_v5_2_1948_chunk0",
+    "answer": "no",
+    "rationale": "Reports concerns ('concerns were raised')."
+  },
+  {
+    "segment_id": "seg_v5_3_1948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports confirmation of cases ('positive cases were confirmed') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('low risk to human health')."
+  },
+  {
+    "segment_id": "seg_v5_1_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains a warning ('warning people to 'be alert'')."
+  },
+  {
+    "segment_id": "seg_v5_2_1669_chunk0",
+    "answer": "no",
+    "rationale": "Describes an event ('crossed a new frontier')."
+  },
+  {
+    "segment_id": "seg_v5_3_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('killed thousands') factually. 'unprecedented outbreak' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_4_1669_chunk0",
+    "answer": "no",
+    "rationale": "Reports concerns ('raises concerns') and potential implications."
+  },
+  {
+    "segment_id": "seg_v5_5_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Reports event start and observation ('observing a significant rise') factually using a neutral adverb."
+  },
+  {
+    "segment_id": "seg_v5_6_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('approximately 17,000 seal pups dead') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Reports findings ('found identical mutations') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1669_chunk0",
+    "answer": "no",
+    "rationale": "Contains advice/warning ('should be alert')."
+  },
+  {
+    "segment_id": "seg_v5_10_1669_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future importance."
+  },
+  {
+    "segment_id": "seg_v5_11_1669_chunk0",
+    "answer": "no",
+    "rationale": "Describes an ability as 'worrying ability'."
+  },
+  {
+    "segment_id": "seg_v5_13_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread/location of cases factually."
+  },
+  {
+    "segment_id": "seg_v5_14_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection/onset of symptoms factually."
+  },
+  {
+    "segment_id": "seg_v5_15_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about virus behavior."
+  },
+  {
+    "segment_id": "seg_v5_16_1669_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about virus capability."
+  },
+  {
+    "segment_id": "seg_v5_18_1669_chunk0",
+    "answer": "no",
+    "rationale": "Describes a fact as 'particularly concerning'."
+  },
+  {
+    "segment_id": "seg_v5_19_1669_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future risk ('greater the risk')."
+  },
+  {
+    "segment_id": "seg_v5_1_601_chunk0",
+    "answer": "yes",
+    "rationale": "Describes exposure level ('most intense exposures') and situation factually."
+  },
+  {
+    "segment_id": "seg_v5_3_601_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms ('experienced eye irritation') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_601_chunk0",
+    "answer": "no",
+    "rationale": "Describes behavior/situation ('rarely do that', 'lack health insurance')."
+  },
+  {
+    "segment_id": "seg_v5_8_601_chunk0",
+    "answer": "no",
+    "rationale": "Reports a belief/opinion."
+  },
+  {
+    "segment_id": "seg_v5_13_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('low risk')."
+  },
+  {
+    "segment_id": "seg_v5_14_601_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential consequences/situation ('couldn't afford')."
+  },
+  {
+    "segment_id": "seg_v5_19_601_chunk0",
+    "answer": "no",
+    "rationale": "Reports concerns ('bigger concern')."
+  },
+  {
+    "segment_id": "seg_v5_20_601_chunk0",
+    "answer": "no",
+    "rationale": "Reports fear ('may fear')."
+  },
+  {
+    "segment_id": "seg_v5_21_601_chunk0",
+    "answer": "no",
+    "rationale": "Provides a general historical statement."
+  },
+  {
+    "segment_id": "seg_v5_22_601_chunk0",
+    "answer": "no",
+    "rationale": "Reports past events/reactions."
+  },
+  {
+    "segment_id": "seg_v5_32_601_chunk0",
+    "answer": "no",
+    "rationale": "Reports a statement about equipment needs."
+  },
+  {
+    "segment_id": "seg_v5_34_601_chunk0",
+    "answer": "no",
+    "rationale": "Provides an opinion/suggestion about equipment."
+  },
+  {
+    "segment_id": "seg_v5_35_601_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about potential risk ('face potential infection')."
+  },
+  {
+    "segment_id": "seg_v5_37_601_chunk0",
+    "answer": "no",
+    "rationale": "Reports worry ('most worried')."
+  },
+  {
+    "segment_id": "seg_v5_38_601_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual description of working conditions."
+  },
+  {
+    "segment_id": "seg_v5_1_1983_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count of deaths ('Forty-seven tigers, three lions and a panther have died') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1983_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location of deaths factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1983_chunk0",
+    "answer": "yes",
+    "rationale": "Reports cause of death ('died 'because of H5N1 type A virus'') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1983_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('increase in outbreaks') factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1983_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('a patient... was diagnosed') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_1983_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case count ('prior 13 cases') and context factually."
+  },
+  {
+    "segment_id": "seg_v5_11_1983_chunk0",
+    "answer": "no",
+    "rationale": "Attribution statement."
+  },
+  {
+    "segment_id": "seg_v5_7_812_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('increasing number') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_812_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection location ('tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_812_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('A person also contracted it', 'first known case') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_812_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptom ('only symptom is eye redness') and outcome ('recovering') factually."
+  },
+  {
+    "segment_id": "seg_v5_12_812_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count and fatality rate ('Around half of the 887 people', 'have died') factually."
+  },
+  {
+    "segment_id": "seg_v5_16_812_chunk0",
+    "answer": "no",
+    "rationale": "Reports an expert opinion/characterization."
+  },
+  {
+    "segment_id": "seg_v5_20_812_chunk0",
+    "answer": "no",
+    "rationale": "States an unknown."
+  },
+  {
+    "segment_id": "seg_v5_21_812_chunk0",
+    "answer": "no",
+    "rationale": "Reports evidence/suggestion."
+  },
+  {
+    "segment_id": "seg_v5_22_812_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an event/observation ('cows in Michigan became ill') factually."
+  },
+  {
+    "segment_id": "seg_v5_23_812_chunk0",
+    "answer": "no",
+    "rationale": "Reports a question/unknown."
+  },
+  {
+    "segment_id": "seg_v5_27_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk is low')."
+  },
+  {
+    "segment_id": "seg_v5_30_812_chunk0",
+    "answer": "no",
+    "rationale": "Image caption."
+  },
+  {
+    "segment_id": "seg_v5_001_1714_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('has risen rapidly') factually using a neutral adverb."
+  },
+  {
+    "segment_id": "seg_v5_002_1714_chunk0",
+    "answer": "no",
+    "rationale": "Describes a situation/consequence ('leaving the industry vulnerable')."
+  },
+  {
+    "segment_id": "seg_v5_004_1714_chunk0",
+    "answer": "no",
+    "rationale": "Describes a challenge and potential future risk."
+  },
+  {
+    "segment_id": "seg_v5_005_1714_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('has risen rapidly') and confirmation ('confirmed initial infections') factually using a neutral adverb."
+  },
+  {
+    "segment_id": "seg_v5_010_1714_chunk0",
+    "answer": "no",
+    "rationale": "Reports attention/focus."
+  },
+  {
+    "segment_id": "seg_v5_016_1714_chunk0",
+    "answer": "no",
+    "rationale": "Reports a statement about potential improvement."
+  },
+  {
+    "segment_id": "seg_v5_019_1714_chunk0",
+    "answer": "no",
+    "rationale": "Describes a practice."
+  },
+  {
+    "segment_id": "seg_v5_020_1714_chunk0",
+    "answer": "no",
+    "rationale": "Reports hope/goal and potential risk ('could create a risk')."
+  },
+  {
+    "segment_id": "seg_v5_021_1714_chunk0",
+    "answer": "no",
+    "rationale": "Advocacy statement ('must put an end', 'unsanitary')."
+  },
+  {
+    "segment_id": "seg_v5_006_1648_chunk0",
+    "answer": "no",
+    "rationale": "Reports lack of response."
+  },
+  {
+    "segment_id": "seg_v5_012_1648_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_014_1648_chunk0",
+    "answer": "yes",
+    "rationale": "Reports stock price changes ('have jumped 48.7%', 'has climbed 10.4%') factually using standard verbs and percentages."
+  },
+  {
+    "segment_id": "seg_v5_2_177_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event/decision ('can resume')."
+  },
+  {
+    "segment_id": "seg_v5_4_177_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event ('ban was lifted')."
+  },
+  {
+    "segment_id": "seg_v5_7_177_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('millions of birds') factually. 'spreading across' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_8_177_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission."
+  },
+  {
+    "segment_id": "seg_v5_9_177_chunk0",
+    "answer": "no",
+    "rationale": "Reports a statement about risk ('creates a significant risk')."
+  },
+  {
+    "segment_id": "seg_v5_10_177_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count affected ('affecting nearly 4,000 youth') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_177_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('culling of about 37 million chickens and turkeys') factually."
+  },
+  {
+    "segment_id": "seg_v5_12_177_chunk0",
+    "answer": "yes",
+    "rationale": "Reports counts ('At least a dozen', 'nine Michigan counties', 'total 870 birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_13_177_chunk0",
+    "answer": "no",
+    "rationale": "Provides a link for more information."
+  },
+  {
+    "segment_id": "seg_v5_1_86_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event ('restrictions have been lifted')."
+  },
+  {
+    "segment_id": "seg_v5_3_86_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an event ('outbreak... occurred') factually. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_1_927_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('first ever human case') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_927_chunk0",
+    "answer": "yes",
+    "rationale": "Reports confirmation and test result ('confirmed the finding', 'tested positive') factually. 'rare virus' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_4_927_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission type."
+  },
+  {
+    "segment_id": "seg_v5_5_927_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk of large-scale transmission is low')."
+  },
+  {
+    "segment_id": "seg_v5_6_927_chunk0",
+    "answer": "yes",
+    "rationale": "Reports condition ('stable condition') and outcome ('will soon be discharged') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_1828_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case count ('three presumptive positive cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1828_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms ('mild symptoms') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1828_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count affected ('affected 1.8 million birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1828_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk to the general public... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_8_1828_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('confirmed a case') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1828_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a previous detection ('previous detection... was found') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_1828_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an explicit low-risk statement ('risk to most people remains low')."
+  },
+  {
+    "segment_id": "seg_v5_1_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports deaths ('second person... to die', 'third this year') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports death ('died Monday') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports death ('had died') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports death ('first bird flu fatality') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case and outcome ('found to be infected but survived') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports death ('DIES FROM BIRD FLU') and case ('FIRST KNOWN HUMAN INFECTION') factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports counts ('878 cases', '23 countries', '458 of them fatal') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count ('recorded 58 cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread/location/status ('has spread', 'become endemic') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports counts ('millions of poultry infections', 'several hundred human cases', 'many human deaths') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location of cases factually."
+  },
+  {
+    "segment_id": "seg_v5_12_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('outbreaks were on the rise') and count ('more than 21,000 outbreaks') factually."
+  },
+  {
+    "segment_id": "seg_v5_14_1944_chunk0",
+    "answer": "no",
+    "rationale": "Reports worry ('Scientists worry') and potential future risk ('triggering another pandemic')."
+  },
+  {
+    "segment_id": "seg_v5_16_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports symptoms and onset date factually."
+  },
+  {
+    "segment_id": "seg_v5_17_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports events and outcome ('condition worsened', 'died') factually."
+  },
+  {
+    "segment_id": "seg_v5_19_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count of deaths ('several chickens', 'at least four') factually."
+  },
+  {
+    "segment_id": "seg_v5_20_1944_chunk0",
+    "answer": "no",
+    "rationale": "Reports an action taken."
+  },
+  {
+    "segment_id": "seg_v5_21_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about transmission source."
+  },
+  {
+    "segment_id": "seg_v5_22_1944_chunk0",
+    "answer": "no",
+    "rationale": "Reports speculation/presumption."
+  },
+  {
+    "segment_id": "seg_v5_23_1944_chunk0",
+    "answer": "yes",
+    "rationale": "Reports health status ('in good health') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1552_chunk0",
+    "answer": "yes",
+    "rationale": "Provides a factual statement about susceptibility ('most susceptible')."
+  },
+  {
+    "segment_id": "seg_v5_4_1552_chunk0",
+    "answer": "yes",
+    "rationale": "Reports count of deaths ('13 cases', 'six feral and seven domesticated') factually."
+  }
+]
+```

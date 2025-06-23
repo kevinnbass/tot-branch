@@ -1,0 +1,829 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_16_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers of birds killed ('22 million', '13 million', '18 million') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_17_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers of birds killed ('22 million', '13 million', '18 million') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_1_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports dates and numbers ('April 1', 'April 30', '36 dairy herds') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports date and metric ('April 25', 'one in five milk samples') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports date, metric, and percentage ('January 2003', 'March 2024', '56 percent') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric ('Half the domestic cats') and outcome ('died') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_9_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic data/metrics ('sales jumped 27 percent, from $12 million... to $19.4 million') using a standard verb for reporting change."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric/percentage ('around four and a half percent') using a standard verb ('estimates')."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "Discusses linked diseases, not primarily reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('risks to the general public remain low')."
+  },
+  {
+    "segment_id": "seg_v5_9_1470_chunk0",
+    "answer": "no",
+    "rationale": "Describes a symptom, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "no",
+    "rationale": "Lists symptoms, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric/percentage ('Over half of the over 900 human H5N1 cases', 'resulted in death') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_13_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('risks currently being low')."
+  },
+  {
+    "segment_id": "seg_v5_17_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports events and mentions psychological reaction ('expressed concerns')."
+  },
+  {
+    "segment_id": "seg_v5_18_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports timeline and spread ('began in late March', 'quickly spread', 'at least six different states') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event ('detected its first outbreak') and uses a technical term."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports a trend and mentions psychological reaction ('source of concern')."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreaks and total number ('totalling 650,000 poultry') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and locations ('34 dairy cattle herds across nine states') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number ('one case') using a standard verb ('confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('overall public health risk is low')."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "Introduces the topic, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports impact ('infected and killed millions') using standard verbs and factual numbers."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number ('at least 26 different kinds of mammals') using a standard verb ('found')."
+  },
+  {
+    "segment_id": "seg_v5_7_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a vivid adjective ('voraciousness') and quotes a classification ('global zoonotic animal pandemic')."
+  },
+  {
+    "segment_id": "seg_v5_14_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses mutations, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential future problems, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes seeing infected animals, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms/behaviour, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_19_647_chunk0",
+    "answer": "no",
+    "rationale": "Quotes description of symptoms using an intensifier ('severe, severe seizures')."
+  },
+  {
+    "segment_id": "seg_v5_20_647_chunk0",
+    "answer": "no",
+    "rationale": "Quotes description of symptoms using vivid language ('Screaming very loud', 'whole-body tremors')."
+  },
+  {
+    "segment_id": "seg_v5_22_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports duration of seizures ('20 to 30 seconds') and its change ('get longer and longer') factually."
+  },
+  {
+    "segment_id": "seg_v5_23_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a person's prior knowledge, not prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a finding about species susceptibility, not prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_647_chunk0",
+    "answer": "no",
+    "rationale": "Quotes description of severity ('severity of the seizures')."
+  },
+  {
+    "segment_id": "seg_v5_26_647_chunk0",
+    "answer": "no",
+    "rationale": "Quotes emotional language ('very sad thing to see')."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and characteristics ('nearly 900 people', 'sporadic and usually self-limiting') factually."
+  },
+  {
+    "segment_id": "seg_v5_31_647_chunk0",
+    "answer": "no",
+    "rationale": "Defines a term, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_32_647_chunk0",
+    "answer": "no",
+    "rationale": "Explains how infection happens, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_82_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes animal behaviour, not reporting prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_83_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes animal behaviour using vivid language ('waddle in circles', 'twisting their necks', 'writhing')."
+  },
+  {
+    "segment_id": "seg_v5_90_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and outcome ('about seven infected fox kits', 'all of them died') factually."
+  },
+  {
+    "segment_id": "seg_v5_91_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and outcome ('a few foxes', 'survived', 'ultimately went blind') factually."
+  },
+  {
+    "segment_id": "seg_v5_95_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports lack of encounters and discusses potential future events."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes state of farmers ('on edge') which is framing."
+  },
+  {
+    "segment_id": "seg_v5_2_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports price change ('already cost more', 'could get even higher') factually."
+  },
+  {
+    "segment_id": "seg_v5_13_1065_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement about preventing spread."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "no",
+    "rationale": "States a person's title."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers ('more than 600,000 chickens and turkeys') and industry size ('extremely large industry') factually."
+  },
+  {
+    "segment_id": "seg_v5_17_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Quotes a factual statement about ranking ('No. 1 turkey producing state')."
+  },
+  {
+    "segment_id": "seg_v5_18_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports price change ('Chicken prices rise') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_19_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports price change ('cost of eggs has doubled') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports company size/production ('raises around 30 million pounds') factually."
+  },
+  {
+    "segment_id": "seg_v5_23_1065_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement expressing uncertainty/concern."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Describes a company ('only mobile chicken processing company') factually."
+  },
+  {
+    "segment_id": "seg_v5_26_1065_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement expressing difficulty."
+  },
+  {
+    "segment_id": "seg_v5_27_1065_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement using an intensifier ('absolutely sterile') and discussing potential problems."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and locations ('nearly 23 million birds in 24 states', '90 commercial and 38 backyard flocks') factually."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports how the virus is carried."
+  },
+  {
+    "segment_id": "seg_v5_2_1198_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location, size, and event ('150 km (90 miles)', '750,000 chickens', 'increase of deaths') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_192_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement about caution."
+  },
+  {
+    "segment_id": "seg_v5_3_192_chunk0",
+    "answer": "no",
+    "rationale": "Reports an event and date, uses a technical term."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers ('More than 100 cases') using a standard verb ('confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports scope ('Most states have reported cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "no",
+    "rationale": "Reports an expectation, not prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports locations/scope ('mainly in birds', 'in other animals', 'in all U.S. states except Hawaii') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('considered to be at low risk')."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('risk... appears low')."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "no",
+    "rationale": "Reports a historical event and classification ('pandemic')."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('turned out to be mild')."
+  },
+  {
+    "segment_id": "seg_v5_5_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and outcome ('Seven people', 'all were asymptomatic') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_914_chunk0",
+    "answer": "no",
+    "rationale": "Reports advice, not prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreaks and locations ('Outbreaks... were reported last year in poultry or wild birds in Britain... and Russia') factually."
+  },
+  {
+    "segment_id": "seg_v5_001_1352_chunk0",
+    "answer": "no",
+    "rationale": "Reports an outbreak and uses a technical term ('highly contagious')."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location and number ('in a backyard with 80 domestic birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "no",
+    "rationale": "Reports transmission method."
+  },
+  {
+    "segment_id": "seg_v5_1_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outcome/metric ('Most, but not all, of the virus was killed') factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a finding and potential ('potential for a relatively small but detectable quantity') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports where a paper was published."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports conflicts of interest."
+  },
+  {
+    "segment_id": "seg_v5_10_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports limitations of a study."
+  },
+  {
+    "segment_id": "seg_v5_13_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports a statement about a study's conditions."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical circulation and recent event ('jumped to cattle') factually."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and locations ('96 herds across 12 states') factually."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and locations ('Three farm workers, two in Michigan and one in Texas') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1300_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('cases remain rare', 'risk to humans is low')."
+  },
+  {
+    "segment_id": "seg_v5_6_1300_chunk0",
+    "answer": "yes",
+    "rationale": "Reports potential economic risk/metric ('risk nearly $10 billion of chicken exports') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports typical production numbers ('usually produce 1.2 to 1.3 million') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number affected ('around 600,000 of those free range birds being directly affected') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports typical production numbers ('usually about 8.5 to 9 million birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outcome/timeline ('appear to recover within two weeks') factually."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports caution about the situation changing."
+  },
+  {
+    "segment_id": "seg_v5_17_1485_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement about trying to figure things out."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('characterize the risk... as “low.”')."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('characterize the risk... as “low.”')."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers ('total of seven people', 'a household member and six health care workers') factually."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "Quotes framing language ('Public health credibility is really on the line here')."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "Describes a person's feeling ('troubled') and discusses timeline."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports exposure and risk level ('put this individual at higher risk') factually."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and locations ('239 herds in 14 states') factually, with context."
+  },
+  {
+    "segment_id": "seg_v5_024_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions/inaction by farmers and states."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and location ('found 64 infected herds') factually."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and location ('confirmed 41 affected farms') factually."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage and number ('Some 96 per cent', 'died') factually."
+  },
+  {
+    "segment_id": "seg_v5_003_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports estimate and number ('estimate that 17,400 baby elephant seals were killed') factually."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports historical event and location."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports trend and locations ('spread more quickly') factually."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers ('at least 320 bird and 25 mammal species') factually."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and trend ('More than 500,000 birds', 'growing number') factually."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports event and outcome ('A polar bear... was killed') factually."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports prior understanding."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports evidence."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a conclusion."
+  },
+  {
+    "segment_id": "seg_v5_018_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread and numbers ('spread rapidly', 'killing thousands') factually."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage ('96% Proportion') factually."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection and location, uses a technical term."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection, location, and date ('first detected... on 22 May', 'detected... two days later') factually."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports identification and location/scope ('identified as having H7N3', 'within the 5km restricted zone or broader 15km control area') factually."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "Quotes advice."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "Quotes opinion."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "no",
+    "rationale": "Describes a business type."
+  },
+  {
+    "segment_id": "seg_v5_025_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports transmission method and risk factor ('making free-range birds more at risk') factually."
+  },
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location of infections ('Most of the infections... have been at free-range egg producers') factually."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports consequences of breaching an order."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports event and location ('A person in Texas tested positive') and number ('second known instance') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('human health risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_6_405_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a question."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical case and location ('previous human case was reported in Colorado in 2022') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports how illnesses occurred."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports how infection happens."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports animals infected ('Infections have also been reported in animals including foxes... and dogs') factually."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "no",
+    "rationale": "Describes range of disease severity."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and fatality rate ('some 890 human cases', 'fatality rate of roughly 50%') factually."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports findings and locations ('tested positive... at two dairy farms in Kansas and one in Texas') factually."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports finding and location ('virus was found in a Michigan dairy herd') factually."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports finding and location ('virus was found in a Michigan dairy herd') and significance factually."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports historical context."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports impact and timeline ('led to the death of tens of millions... since early 2022') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number and action ('Thousands of chickens... have been culled') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outcome ('Birds often die') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "no",
+    "rationale": "Contains framing language ('worsening economic pain')."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports timeline and scope ('began in February', 'infected flocks... across 46 states') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports transmission method."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentages and comparison ('about 30 percent', 'compared to 85 percent') factually."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage ('account for more than 70 percent') factually."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit calming language ('poses a low risk')."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "yes",
+    "rationale": "Reports event and timeline ('first confirmation... since 2020') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical event, location, and impact ('affected 11 poultry farms', 'loss of more than 400,000 birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and event ('Seven people', 'developed symptoms') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and potential significance ('has grown to include eight people', 'may be the first examples') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports potential outcome."
+  },
+  {
+    "segment_id": "seg_v5_6_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports how cases occurred."
+  },
+  {
+    "segment_id": "seg_v5_7_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports identification and symptoms."
+  },
+  {
+    "segment_id": "seg_v5_8_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports potential transmission and numbers ('may have infected one household member and six health care workers') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement expressing concern ('very concerned')."
+  },
+  {
+    "segment_id": "seg_v5_13_800_chunk0",
+    "answer": "no",
+    "rationale": "Uses a vivid metaphor ('inching closer and closer')."
+  },
+  {
+    "segment_id": "seg_v5_15_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers and timeline ('13 other confirmed cases', 'since the outbreak... was announced in March') factually."
+  },
+  {
+    "segment_id": "seg_v5_16_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports how cases were acquired."
+  },
+  {
+    "segment_id": "seg_v5_19_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports why experts were worried ('worry experts')."
+  },
+  {
+    "segment_id": "seg_v5_21_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports difficulty in estimation."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports historical role of health care workers."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement expressing increased alarm ('definitely increase my level of alarm')."
+  },
+  {
+    "segment_id": "seg_v5_26_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports how officials referred to a case ('referred to... as a 'one-off'') and outcome ('said no close contacts had become sick') factually."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports disclosure and symptoms ('disclosed that someone... had developed gastrointestinal symptoms') factually."
+  }
+]
+```

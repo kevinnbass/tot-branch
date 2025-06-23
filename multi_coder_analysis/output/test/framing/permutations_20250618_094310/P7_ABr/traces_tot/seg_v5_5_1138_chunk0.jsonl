@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'at higher risk', which is a comparative modifying a noun ('risk'), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 197}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 185}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs and comparative 'likely at higher risk'.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 167}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 162}
+{"Q": 5, "answer": "no", "rationale": "The segment reports higher risk but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 161}
+{"Q": 6, "answer": "no", "rationale": "The segment discusses higher risk due to virus persistence but does not use a minimiser or scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 143}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 135}
+{"Q": 8, "answer": "no", "rationale": "The segment describes a risk factor/assessment, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 65}
+{"Q": 9, "answer": "no", "rationale": "The segment includes a risk adjective ('higher risk').", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 181}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 104}
+{"Q": 10, "answer": "no", "rationale": "The segment speculates about higher future risk, not relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 104}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement says wild birds are likely at higher risk, but lacks explicit framed language about human risk or severity.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 91}
+{"Q": 12, "answer": "yes", "rationale": "Reports quote about animals being at 'higher risk' (background), not human risk.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 88}

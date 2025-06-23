@@ -1,0 +1,42 @@
+{
+  "batch_id": "batch_3_11876",
+  "hop_idx": 3,
+  "unknown_count": 7,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_10_1080_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spread' is not on the list of moderate verbs for this rule."
+    },
+    {
+      "segment_id": "seg_v5_11_1080_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_12_1080_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'affected' is a plain outcome verb, not a moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_13_1080_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_14_1080_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_15_1080_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_16_1080_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'suffered' relates to financial/trade metrics, which are excluded from this rule."
+    }
+  ]
+}

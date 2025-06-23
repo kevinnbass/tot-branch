@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a comparative ('more expensive') modifying an economic adjective, not a risk-adjective describing the threat.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 120}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language. 'red-hot inflation' is background context.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 108}
+{"Q": 3, "answer": "no", "rationale": "Neutral verb 'sent' paired with scale, but refers to financial metrics.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 94}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 90}
+{"Q": 5, "answer": "no", "rationale": "The segment reports losses and price increases but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 89}
+{"Q": 6, "answer": "no", "rationale": "The segment describes negative economic impact but does not use a minimiser or scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 75}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 67}
+{"Q": 8, "answer": "no", "rationale": "The segment reports economic impact, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 14}
+{"Q": 9, "answer": "no", "rationale": "The segment uses framing language ('record highs', 'economic pain', 'red-hot inflation', 'more expensive').", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 153}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 86}
+{"Q": 10, "answer": "no", "rationale": "The segment describes economic impact, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 86}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 75}
+{"Q": 12, "answer": "yes", "rationale": "Reports factual economic impacts; 'worsening economic pain'/'red-hot inflation' describe background condition.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 72}

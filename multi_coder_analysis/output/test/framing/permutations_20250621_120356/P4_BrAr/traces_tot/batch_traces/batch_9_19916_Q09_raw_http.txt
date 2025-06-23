@@ -1,0 +1,889 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a consequence (death) but not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a quantity and an action (culled) but not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_2_899_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a list of affected countries, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a quantity and a consequence (death) but not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment makes a general statement about historical impact, not reporting specific prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a finding and a 'first time' event, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a finding, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('890 human cases', 'fatality rate of roughly 50%') using standard verbs ('reported')."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and severity, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports occurrence in animals, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission routes, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a specific case, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low risk', 'higher risk'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_405_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and treatment for a specific case, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical metric ('second known instance') using standard language."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports potential consequences (fines), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the location of infections, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_025_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes spread and risk factors, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a location, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about motivation, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides advice, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a restriction and a warning about potential impact, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports location and identification of the virus, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection events and locations, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a limit/restriction, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_004_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a quantity and an action (euthanised), not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection events and locations, not prices, economic data, or numerical metrics. 'highly pathogenic' is ignored by TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a restriction, a quantity, and an action (euthanised), not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_8_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metric ('up to 5.3 million tons') using standard verb ('will reach')."
+  },
+  {
+    "segment_id": "seg_v5_7_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metrics ('up to 5.15 million tons', '$9.5 billion and $10 billion') using standard verbs ('will end at', 'estimating')."
+  },
+  {
+    "segment_id": "seg_v5_4_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metric ('nearly 38% market share', 'from around 36%') using standard verbs ('hold', 'up from')."
+  },
+  {
+    "segment_id": "seg_v5_3_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metrics ('up to 14.9 million tons', 'up to 15.35 million tons', 'up to 2.6%', 'up to 3.7%') using standard verbs ('produce', 'represents an annual output increase')."
+  },
+  {
+    "segment_id": "seg_v5_2_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metric ('up to 14.9 million tons', 'up to 15.35 million tons') using standard verb ('produce')."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical metric ('96% Proportion') related to deaths."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses risk and chance of adaptation, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about a conclusion, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_013_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports study findings, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports evidence of spread, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports past understanding, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a specific death, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports quantities and consequences, but not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('at least 320 bird and 25 mammal species') using standard verb ('infected')."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports spread rate, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical detection and confinement, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_003_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('17,400 baby elephant seals', 'highest figure') using standard verbs ('estimate', 'killed')."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('96 per cent') and consequence ('died')."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('41 affected farms') using standard verb ('confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('64 infected herds') using standard verb ('found')."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('239 herds in 14 states') using standard verb ('tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a count but also describes risk level ('higher risk'), which is not purely Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a feeling ('troubled'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about credibility, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('total of seven people') using standard verb ('identified')."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low') and a count ('third time'), not purely Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a caution, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_12_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports lack of risk and recall, which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_11_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('about 1.6 million', '337,000') and action ('culled')."
+  },
+  {
+    "segment_id": "seg_v5_10_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an action and a finding, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about lack of concern ('not a food safety concern'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports recovery time, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1485_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about lack of concern/risk ('no concern', 'affects the safety'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_7_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('36% of poultry farms') using standard verb ('subject to')."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('about 8.5 to 9 million birds') using standard verb ('was')."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('around 600,000') using standard verb ('seen... affected')."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('1.2 to 1.3 million free range birds') using standard verb ('produce')."
+  },
+  {
+    "segment_id": "seg_v5_5_1917_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('At least 52 million birds', '50.2 million') using standard verb ('slaughtered')."
+  },
+  {
+    "segment_id": "seg_v5_4_1917_chunk0",
+    "answer": "no",
+    "rationale": "Uses a vivid adjective ('massive') modifying 'culls', which is not standard reporting."
+  },
+  {
+    "segment_id": "seg_v5_6_1300_chunk0",
+    "answer": "no",
+    "rationale": "Reports potential economic impact ('risk nearly $10 billion'), not factual current prices/metrics. 'highly pathogenic' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_4_1300_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports risk assessment ('rare', 'low'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Three farm workers', 'two in Michigan and one in Texas') and outcome ('tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('96 herds across 12 states') using standard verb ('tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical circulation and a jump, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes study limitations, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports conflicts of interest, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports publication details, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a finding and potential, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports testing results ('found detectable amounts'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a process, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1702_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports study findings ('found that detectable amounts... remained'), not prices, economic data, or numerical metrics. 'highly pathogenic' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('80 domestic birds')."
+  },
+  {
+    "segment_id": "seg_v5_001_1352_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an outbreak, not prices, economic data, or numerical metrics. 'highly contagious' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outbreaks and locations, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('101,000') and consequence ('death'). 'sparked the investigation' is Neutral."
+  },
+  {
+    "segment_id": "seg_v5_5_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Seven people') and condition ('asymptomatic')."
+  },
+  {
+    "segment_id": "seg_v5_4_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a 'first case' and reporting action, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports severity ('mild'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports emergence, spread, and declaration, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low risk'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports occurrence and location, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports expected change ('rise'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Two other birds', 'five others') and test results ('tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a finding and cause of death, not prices, economic data, or numerical metrics. 'Highly Pathogenic Avian Influenza (HPAI)' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a general quantity ('Most states'), not a specific numerical metric."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('More than 100 cases') using standard verb ('confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_3_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a 'first confirmed case', not prices, economic data, or numerical metrics. 'highly pathogenic' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_2_192_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about caution, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1198_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports location, capacity, and cause, but not prices, economic data, or numerical metrics in the sense required by Q9."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_29_1065_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports location of impact, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('nearly 23 million birds in 24 states, in 90 commercial and 38 backyard flocks') using standard verb ('affected')."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a company, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('around 30 million pounds') using standard verb ('raises')."
+  },
+  {
+    "segment_id": "seg_v5_19_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metric ('cost of eggs') using standard verb ('has doubled')."
+  },
+  {
+    "segment_id": "seg_v5_18_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metric ('Chicken prices') using standard verb ('rise')."
+  },
+  {
+    "segment_id": "seg_v5_17_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical metric ('No. 1')."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('more than 600,000 chickens and turkeys') using standard verb ('affected'). 'extremely large industry' is Neutral."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a title, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1065_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes contagiousness, spread, and potential consequence ('could cause some shortages'), not prices, economic data, or numerical metrics. 'highly contagious' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_2_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports economic metric ('cost', 'prices') using standard verbs ('cost more', 'could get even higher')."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('more than 24 states') using standard verb ('impacted'). 'on edge' and 'on the rise' are Neutral. 'highly pathogenic' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_91_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outcomes ('survived', 'went blind'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_82_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes behavior, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_80_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a quote with loaded language ('bad guy viruses'), not standard reporting of prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_79_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports agreement, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_78_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes where the virus is found, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_76_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes capability, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_75_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential outcomes ('could lead to severe disease'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_74_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential outcomes ('result in milder symptoms'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_73_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses a potential factor for severity, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_69_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports risk assessment ('low', 'higher risk'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_61_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an opinion/theory, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_60_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Fourteen illnesses', 'seven were fatal', 'six were mild', 'eight didn't have any symptoms') using standard verb ('were')."
+  },
+  {
+    "segment_id": "seg_v5_59_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports numerical data ('more than two dozen') but also a characteristic ('wide spectrum of severity'), not purely Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_56_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a risk adjective ('sobering') modifying 'findings', which is not standard reporting."
+  },
+  {
+    "segment_id": "seg_v5_53_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains quotes with intensifiers ('very quickly', 'very easily') not applied to prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_52_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a quote with an intensifier ('very quickly') not applied to prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_51_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses opportunity for spread/change, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_50_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor, not standard reporting of prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_37_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('A third') and outcome ('developed respiratory symptoms')."
+  },
+  {
+    "segment_id": "seg_v5_36_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a specific event ('one case'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_35_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Two') and outcome ('developed conjunctivitis')."
+  },
+  {
+    "segment_id": "seg_v5_34_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('at least three') and type of infection."
+  },
+  {
+    "segment_id": "seg_v5_32_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment explains a process, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_31_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote defining a term, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_30_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports frequency ('rarely'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('nearly 900 people') and characteristics ('sporadic', 'self-limiting')."
+  },
+  {
+    "segment_id": "seg_v5_26_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote expressing emotion ('very sad'), not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about severity ('severity'), not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a finding and a trend ('growing list'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_23_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports lack of knowledge, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses an intensifier ('longer and longer and longer') describing the duration of seizures (impact)."
+  },
+  {
+    "segment_id": "seg_v5_17_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('at least 26 different kinds') and location."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a metaphor ('Swiss Army Knife') and reports numerical data ('millions'), but the metaphor prevents it from being purely Q9."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "The segment introduces a topic, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports risk assessment ('low', 'higher'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('one case') using standard verb ('confirmed')."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('totalling 650,000 poultry')."
+  },
+  {
+    "segment_id": "seg_v5_5_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports numerical data ('21 human infections', 'only five', 'six dead') but includes a reassuring cue ('only five')."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a trend ('increase') and consequence ('source of concern'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a 'first outbreak' and confirmation of a case, not prices, economic data, or numerical metrics. 'highly pathogenic avian influenza' is ignored."
+  },
+  {
+    "segment_id": "seg_v5_17_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports expression of concern ('expressed concerns') and 'first known cases', 'first time', not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Over half', 'over 900 human H5N1 cases') and outcome ('resulted in death')."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms ('serious symptoms'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a symptom ('lone symptom'), not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk assessment ('low'), which is reassuring language, not Q9 metric reporting."
+  },
+  {
+    "segment_id": "seg_v5_12_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote about algorithms and content visibility, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports linkage to other diseases, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('around four and a half percent') using standard verb ('estimates')."
+  },
+  {
+    "segment_id": "seg_v5_9_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports economic metric ('sales') using vivid verb ('jumped')."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('Half') and consequence ('died')."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('56 percent') using standard verb ('reported')."
+  },
+  {
+    "segment_id": "seg_v5_17_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('22 million', '13 million', '18 million') using standard verb ('killed')."
+  },
+  {
+    "segment_id": "seg_v5_16_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('22 million', '13 million', '18 million') using standard verb ('killed')."
+  },
+  {
+    "segment_id": "seg_v5_11_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('at least 26 states')."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the cause of spread, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('23 states') using standard verb ('shows')."
+  },
+  {
+    "segment_id": "seg_v5_7_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('35,500 birds') and finding ('confirmed the virus')."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the location of cases, not prices, economic data, or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('about 11.7 million turkeys') using standard verb ('raises')."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('46 million chickens') using standard verb ('had'). 'leading' is a metric."
+  }
+]
+```

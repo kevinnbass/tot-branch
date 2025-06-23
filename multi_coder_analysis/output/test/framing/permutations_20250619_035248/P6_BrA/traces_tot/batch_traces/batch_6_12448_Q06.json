@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_6_12448",
+  "hop_idx": 6,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_028_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'sky-high levels' but this describes a background condition, not a minimiser + scale contrast pattern."
+    },
+    {
+      "segment_id": "seg_v5_7_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'negligible' but not in conjunction with a minimiser and scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_20_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms but does not contain a minimiser + scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_032_408_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'just' but the contrast 'lower parts of the respiratory tract' is a location, not a scale denominator."
+    },
+    {
+      "segment_id": "seg_v5_26_800_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses ''one-off'' but this is not listed as a minimiser token, and there is no explicit scale contrast like 'out of X' or 'among Y'."
+    },
+    {
+      "segment_id": "seg_v5_5_1186_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'just over one million... Of these' uses the minimiser 'just' with an explicit scale contrast ('Of these' referring to the total production)."
+    },
+    {
+      "segment_id": "seg_v5_010_644_chunk0",
+      "answer": "no",
+      "rationale": "The segment denies a nationwide shortage but does not use a minimiser + scale contrast pattern."
+    },
+    {
+      "segment_id": "seg_v5_4_1401_chunk0",
+      "answer": "yes",
+      "rationale": "The phrase 'just a fraction of the poultry it produces' uses the minimiser 'just' with an explicit scale contrast ('of the poultry it produces')."
+    },
+    {
+      "segment_id": "seg_v5_027_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'sky-high levels' but this describes a background condition, not a minimiser + scale contrast pattern."
+    }
+  ],
+  "timestamp": "2025-06-19T03:54:53.155329"
+}

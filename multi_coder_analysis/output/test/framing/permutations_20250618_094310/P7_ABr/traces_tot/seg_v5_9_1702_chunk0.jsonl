@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_15452", "batch_size": 260, "batch_pos": 218}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('listed') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_16972", "batch_size": 260, "batch_pos": 210}
+{"Q": 3, "answer": "no", "rationale": "Statement about conflicts of interest, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_11860", "batch_size": 260, "batch_pos": 204}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_16028", "batch_size": 260, "batch_pos": 201}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a disclosure without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_10380", "batch_size": 260, "batch_pos": 200}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_14764", "batch_size": 260, "batch_pos": 197}
+{"Q": 7, "answer": "no", "rationale": "The segment describes conflicts of interest but contains no negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_10756", "batch_size": 260, "batch_pos": 189}
+{"Q": 8, "answer": "no", "rationale": "The segment describes conflicts of interest, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 160}
+{"Q": 9, "answer": "no", "rationale": "The segment reports disclosure forms listed conflicts, not primarily reporting prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 95}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 57}
+{"Q": 10, "answer": "no", "rationale": "The segment provides a factual statement about disclosures, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 57}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 48}
+{"Q": 12, "answer": "yes", "rationale": "Factual statement about disclosure. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 45}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains factual numbers, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 92}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'confirmed' and 'found' are factual reporting, not high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 38}
+{"Q": 3, "answer": "no", "rationale": "The segment uses neutral verbs ('confirmed', 'had found') and a moderate verb ('rise') paired with numbers of premises/detections, not impact scale.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 226}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 215}
+{"Q": 5, "answer": "no", "rationale": "Reports case numbers in poultry and wild birds, neutral facts.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 207}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 160}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 160}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 151}
+{"Q": 8, "answer": "no", "rationale": "The segment provides data on cases in poultry and wild birds, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 209}
+{"Q": 9, "answer": "yes", "rationale": "'found avian flu cases... at 145 premises and in 656 wild birds, a rise of 15 new premises and 209 detections' reports numerical metrics using standard verbs.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 226}

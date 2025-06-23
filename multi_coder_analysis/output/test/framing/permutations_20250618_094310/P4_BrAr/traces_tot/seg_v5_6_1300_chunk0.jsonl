@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 240}
+{"Q": 2, "answer": "no", "rationale": "'Highly pathogenic' is a technical term. 'Risk nearly $10 billion' uses neutral language.", "method": "llm_batch", "batch_id": "batch_2_10144", "batch_size": 260, "batch_pos": 202}
+{"Q": 3, "answer": "no", "rationale": "Segment describes potential risk ('would risk'); not realised impact + scale.", "method": "llm_batch", "batch_id": "batch_3_3516", "batch_size": 260, "batch_pos": 118}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16620", "batch_size": 260, "batch_pos": 95}
+{"Q": 5, "answer": "no", "rationale": "Discusses risk and potential economic impact, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4860", "batch_size": 260, "batch_pos": 92}
+{"Q": 6, "answer": "no", "rationale": "The segment discusses export risk but no minimiser with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16044", "batch_size": 226, "batch_pos": 25}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_8464", "batch_size": 208, "batch_pos": 11}
+{"Q": 8, "answer": "no", "rationale": "Describes a potential risk (economic), not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_15444", "batch_size": 249, "batch_pos": 77}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses potential risk to economic data ('nearly $10 billion'), not reporting it factually.", "method": "llm_batch", "batch_id": "batch_9_16860", "batch_size": 239, "batch_pos": 132}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 230, "regex": {"rule": "ReliefSpeculation", "span": [149, 155], "captures": ["may be"]}}

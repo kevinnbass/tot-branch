@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'low' modifying 'risks', which is not a Q1 risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 40}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('urged', 'take measures', 'prevent infection', 'being low') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 39}
+{"Q": 3, "answer": "no", "rationale": "Statement about public being urged to take measures, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 39}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 39}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 39}
+{"Q": 5, "answer": "no", "rationale": "This segment reports risk is 'low' (bare low-risk) and urges measures, but lacks explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 39}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 38}
+{"Q": 7, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risks currently being low').", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 35}
+{"Q": 8, "answer": "no", "rationale": "The segment contains active reassurance ('risks currently being low').", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 33}
+{"Q": 9, "answer": "no", "rationale": "The segment reports public health advice and risk level, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 23}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risks currently being low'), which is excluded by Q10.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 10}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 10}
+{"Q": 12, "answer": "no", "rationale": "Explicitly states 'risks currently being low', triggering Q5 (Explicit Calming).", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 10}

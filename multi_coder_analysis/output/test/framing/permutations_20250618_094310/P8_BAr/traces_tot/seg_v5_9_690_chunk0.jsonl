@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'higher' modifies 'risk' (noun).", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 145}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 142}
+{"Q": 3, "answer": "no", "rationale": "Discusses higher risk (potential), not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 133}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 132}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 132}
+{"Q": 5, "answer": "no", "rationale": "The segment reports higher risk for specific groups, which is not a calming cue for the general public.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 129}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 123}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 123}
+{"Q": 8, "answer": "no", "rationale": "Describes risk factors, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 118}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a risk level for a specific group, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 91}
+{"Q": 10, "answer": "no", "rationale": "The segment states people with prolonged contact are at higher risk, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 89}
+{"Q": 11, "answer": "no", "rationale": "Authorial statement provides factual risk assessment for specific groups.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 82}
+{"Q": 12, "answer": "yes", "rationale": "Factual statement about higher risk for a specific group without explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 82}

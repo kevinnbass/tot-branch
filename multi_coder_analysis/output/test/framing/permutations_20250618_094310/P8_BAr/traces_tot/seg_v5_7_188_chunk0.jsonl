@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18168", "batch_size": 260, "batch_pos": 221}
+{"Q": 2, "answer": "no", "rationale": "The segment states the risk is low, which is reassuring language, not alarmist.", "method": "llm_batch", "batch_id": "batch_2_2264", "batch_size": 260, "batch_pos": 188}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17916", "batch_size": 260, "batch_pos": 133}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_13840", "batch_size": 260, "batch_pos": 114}
+{"Q": 5, "answer": "no", "rationale": "The segment states the risk is 'low' but lacks the required intensifier ('very', 'extremely') for Q5.", "method": "llm_batch", "batch_id": "batch_5_16708", "batch_size": 260, "batch_pos": 110}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_13548", "batch_size": 260, "batch_pos": 77}
+{"Q": 7, "answer": "no", "rationale": "'risk... is low' is a low-risk fact, not a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16620", "batch_size": 260, "batch_pos": 71}
+{"Q": 8, "answer": "no", "rationale": "Segment contains explicit reassurance ('risk to the public... is low'), caught by Q5.", "method": "llm_batch", "batch_id": "batch_8_17936", "batch_size": 260, "batch_pos": 213}
+{"Q": 9, "answer": "no", "rationale": "The segment includes explicit framing ('risk... is low').", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 201}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('risk to the public... is low'), which prevents it from being coded under Q10.", "method": "llm_batch", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 96}
+{"Q": 11, "answer": "yes", "rationale": "Attributed statement 'The risk to the public... is low' provides a dominant reassuring frame.||FRAME=Reassuring", "method": "llm_batch", "batch_id": "batch_11_17244", "batch_size": 224, "batch_pos": 78}
+{"Q": 12, "answer": "no", "rationale": "Contains explicit reassuring cue 'risk to the public...is low' (Q5).", "method": "llm_batch", "batch_id": "batch_12_14348", "batch_size": 224, "batch_pos": 78}

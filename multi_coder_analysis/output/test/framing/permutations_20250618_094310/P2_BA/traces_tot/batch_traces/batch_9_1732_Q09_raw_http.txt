@@ -1,0 +1,404 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('at least 320 bird and 25 mammal species') using a standard verb ('infected')."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('More than 500,000 birds') using a standard verb ('have died')."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical metric ('96% Proportion') using standard descriptive language."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical metric ('more than 500,000 chickens') using a standard verb ('euthanised')."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('on four farms', 'at a fifth farm') using a standard verb ('has been detected')."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical limit ('A 24-egg limit') using a standard verb ('applies')."
+  },
+  {
+    "segment_id": "seg_v5_006_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical limit ('A 24-egg limit') using a standard verb ('applies')."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports locations and timing ('at a large egg farm', 'at another egg farm') using a standard verb ('detected')."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical data ('at three other properties') using a standard verb ('were identified')."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case count ('second known instance') using standard verbs ('tested positive', 'is')."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a previous case ('previous human case') using a standard verb ('was reported')."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on species infected ('Infections have also been reported in animals') using a standard verb ('reported')."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('some 890 human cases', 'fatality rate of roughly 50%') using a standard verb ('reported')."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports findings ('tested positive') and locations/counts ('at two dairy farms', 'one in Texas') using standard verbs ('reported', 'tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a finding ('virus was found') and location ('in a Michigan dairy herd') using a standard verb ('found')."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a finding ('virus was found', 'has been detected') and its significance ('first time') using standard verbs ('found', 'detected')."
+  },
+  {
+    "segment_id": "seg_v5_34_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('tens of millions of chickens, turkeys and other birds') using a standard verb ('has led to the death')."
+  },
+  {
+    "segment_id": "seg_v5_36_899_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('Thousands of chickens and other poultry birds') using a standard verb ('have been culled')."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports prices reaching 'record highs' using a standard verb ('sent'). 'Red-hot inflation' is background context."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('across 46 states') using a standard verb ('infected')."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('30 percent', '85 percent') using a standard verb ('were traced')."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('more than 70 percent') using a standard verb ('account for')."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a confirmation ('first confirmation') and its timing ('since 2020') using a standard verb ('has said')."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('11 poultry farms', 'loss of more than 400,000 birds') using standard verbs ('affected', 'resulting in the loss')."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('Seven people') and outcome ('developed symptoms') using standard verbs ('developed', 'reported')."
+  },
+  {
+    "segment_id": "seg_v5_8_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('one household member and six health care workers') and outcome ('developed symptoms') using a standard verb ('developed')."
+  },
+  {
+    "segment_id": "seg_v5_15_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('13 other confirmed cases') using a standard verb ('have been')."
+  },
+  {
+    "segment_id": "seg_v5_20_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('no H5N1-related deaths', 'mortality rate of up to 50 percent') and describes severity ('relatively mild') using standard verbs ('reported', 'have been')."
+  },
+  {
+    "segment_id": "seg_v5_21_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('small number of confirmed cases') and its implication using a standard verb ('makes')."
+  },
+  {
+    "segment_id": "seg_v5_22_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a numerical proportion ('only a tiny fraction') in a hypothetical scenario using standard language."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a disclosure ('C.D.C. disclosed') and outcome ('had developed gastrointestinal symptoms') using standard verbs ('disclosed', 'developed')."
+  },
+  {
+    "segment_id": "seg_v5_30_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('added four more health care workers') using a standard verb ('added')."
+  },
+  {
+    "segment_id": "seg_v5_31_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('Three of the workers') and outcome ('developed symptoms', 'were not tested') using standard verbs ('developed', 'were not tested')."
+  },
+  {
+    "segment_id": "seg_v5_33_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports lack of identification ('No one... has been identified') using a standard verb ('has been identified')."
+  },
+  {
+    "segment_id": "seg_v5_78_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('187 detections', '3,573 HPAI events') using standard verbs ('notified', 'recorded')."
+  },
+  {
+    "segment_id": "seg_v5_001_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('A person... has tested positive') using standard verbs ('tested positive', 'confirmed'). 'highly pathogenic' is technical."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on species infected ('has also infected mammalian species') using a standard verb ('infected')."
+  },
+  {
+    "segment_id": "seg_v5_006_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('in five U.S. states') and location of findings ('infections have been found') using a standard verb ('found')."
+  },
+  {
+    "segment_id": "seg_v5_008_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('second known to occur') using a standard verb ('is')."
+  },
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('second known to occur', 'first was in 2022') and details using standard verbs ('is', 'was', 'tested positive')."
+  },
+  {
+    "segment_id": "seg_v5_010_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports details of a case ('tested positive') and outcome ('reported mild fatigue', 'later recovered') using standard verbs ('was', 'tested positive', 'reported', 'recovered')."
+  },
+  {
+    "segment_id": "seg_v5_119_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('hundreds of dead birds') using a standard verb ('record')."
+  },
+  {
+    "segment_id": "seg_v5_123_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on costs ('higher poultry costs') using a standard verb ('passing on')."
+  },
+  {
+    "segment_id": "seg_v5_134_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('cutting the NIAID budget by 23.9%') using a standard verb ('cutting')."
+  },
+  {
+    "segment_id": "seg_v5_2_879_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location and count ('at two egg-producing farms') of discovery ('was discovered') using a standard verb ('discovered')."
+  },
+  {
+    "segment_id": "seg_v5_7_879_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('138 million head') using a standard verb ('amounting to')."
+  },
+  {
+    "segment_id": "seg_v5_2_833_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('country's second case') and location using standard verbs ('was', 'was affected')."
+  },
+  {
+    "segment_id": "seg_v5_5_1038_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a market requirement change ('eggs must now be marketed as \"barn eggs\"') based on a time period ('16-week grace period... has now been exceeded') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_2_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports locations ('A poultry facility in Michigan and egg producer in Texas') of outbreaks using a standard verb ('reported')."
+  },
+  {
+    "segment_id": "seg_v5_3_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports developments ('infected dairy cows', 'first known instance of a human catching bird flu') using standard verbs ('include', 'catching')."
+  },
+  {
+    "segment_id": "seg_v5_10_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on spread among species and locations ('in scores of countries') using a standard verb ('spreading'). 'scores of' is a general quantifier."
+  },
+  {
+    "segment_id": "seg_v5_16_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('nearly 900 people have been diagnosed', 'more than 460 people have died') using standard verbs ('have been diagnosed', 'have died')."
+  },
+  {
+    "segment_id": "seg_v5_31_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports potential outcomes ('see higher prices', 'experience \"reputational strain\"') using standard verbs ('see', 'experience', 'affecting'). 'Higher prices' is factual."
+  },
+  {
+    "segment_id": "seg_v5_32_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports market condition ('tightening of supply') and numerical metric ('consume an average of 3 billion eggs') using standard verbs ('is experiencing', 'consume')."
+  },
+  {
+    "segment_id": "seg_v5_3_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Reports trade volume ('imports a small amount of beef') using a standard verb ('imports')."
+  },
+  {
+    "segment_id": "seg_v5_9_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on a case ('tested positive') and symptoms ('suffered conjunctivitis') using standard verbs ('tested positive', 'suffered')."
+  },
+  {
+    "segment_id": "seg_v5_005_297_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('more than 500 dead seabirds') using a standard verb ('saw')."
+  },
+  {
+    "segment_id": "seg_v5_008_297_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on funding levels ('have limited conservation funds') using a standard verb ('have')."
+  },
+  {
+    "segment_id": "seg_v5_017_297_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('found 246 dead birds', 'found 107') using a standard verb ('found')."
+  },
+  {
+    "segment_id": "seg_v5_18_269_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical numerical metric ('killed an estimated 50 million people') using a standard verb ('killed')."
+  },
+  {
+    "segment_id": "seg_v5_3_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outcome ('were found dead') using a standard verb ('found')."
+  },
+  {
+    "segment_id": "seg_v5_9_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports location ('in the southern and central coast') of strandings using a standard verb ('have happened')."
+  },
+  {
+    "segment_id": "seg_v5_14_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical trend ('continued to increase') using a standard verb ('increase')."
+  },
+  {
+    "segment_id": "seg_v5_15_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical trend ('continued to increase') using a standard verb ('increase'). 'really busy' describes the season, not the strandings themselves."
+  },
+  {
+    "segment_id": "seg_v5_004_760_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('More than a dozen') and describes severity ('relatively mild symptoms') using standard verbs ('have been infected', 'experiencing')."
+  },
+  {
+    "segment_id": "seg_v5_007_760_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('laid off close to 400 employees') using a standard verb ('laid off')."
+  },
+  {
+    "segment_id": "seg_v5_011_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports impact on prices ('is impacting food prices') using a standard verb ('impacting'). 'mass culling' describes the cause, not the price impact."
+  },
+  {
+    "segment_id": "seg_v5_012_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports impact on prices ('impacts food prices') using a standard verb ('impacts'). 'mass culling of so many chickens' describes the cause, not the price impact."
+  },
+  {
+    "segment_id": "seg_v5_013_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports impact on prices ('impacts food prices') and numerical metric ('9% of laying hens... have been culled') using standard verbs ('impacts', 'have been culled')."
+  },
+  {
+    "segment_id": "seg_v5_014_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('Prices... are 350 Japanese yen, or $2.67', 'going up 70%') using standard verbs ('are', 'going up')."
+  },
+  {
+    "segment_id": "seg_v5_015_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on business actions ('have suspended certain food items') using a standard verb ('have suspended')."
+  },
+  {
+    "segment_id": "seg_v5_016_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('About 20% of 100 listed companies') and action ('have suspended egg-related items') using a standard verb ('have suspended')."
+  },
+  {
+    "segment_id": "seg_v5_017_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on impact ('affecting the poultry industry and in turn egg prices') using a standard verb ('affecting')."
+  },
+  {
+    "segment_id": "seg_v5_1_961_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection ('has detected') and location ('on a poultry farm') using a standard verb ('detected'). 'highly pathogenic' is technical."
+  },
+  {
+    "segment_id": "seg_v5_3_961_chunk0",
+    "answer": "yes",
+    "rationale": "Reports on spread ('is spreading quickly') using a standard verb ('spreading') and neutral adverb ('quickly')."
+  },
+  {
+    "segment_id": "seg_v5_6_961_chunk0",
+    "answer": "yes",
+    "rationale": "Reports potential consequence ('impose trade restrictions') using a standard verb ('impose')."
+  },
+  {
+    "segment_id": "seg_v5_11_358_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('remained at $2.07 per dozen') using a standard verb ('remained')."
+  },
+  {
+    "segment_id": "seg_v5_13_358_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('at $1.62') and trend ('has climbed pretty steadily') using a standard verb ('climbed') and neutral adverb ('pretty steadily')."
+  },
+  {
+    "segment_id": "seg_v5_15_358_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metrics ('averaged $1.15 per pound', 'down from last year's $1.79', 'previous year's $1.35') using standard verbs ('averaged', 'down from')."
+  },
+  {
+    "segment_id": "seg_v5_19_358_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numerical metric ('has cost the government $757 million') using a standard verb ('has cost')."
+  }
+]
+```

@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'higher' which modifies a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 161}
+{"Q": 2, "answer": "no", "rationale": "Segment uses neutral language.", "method": "llm_batch", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 113}
+{"Q": 3, "answer": "no", "rationale": "The segment discusses financial/trade metrics ('passing on higher poultry costs'), which are Neutral per rule 6.", "method": "llm_batch", "batch_id": "batch_3_3036", "batch_size": 260, "batch_pos": 40}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_13904", "batch_size": 260, "batch_pos": 29}
+{"Q": 5, "answer": "no", "rationale": "Reports a negative economic impact without calming language.", "method": "llm_batch", "batch_id": "batch_5_16884", "batch_size": 260, "batch_pos": 20}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about a risk or problem.", "method": "llm_batch", "batch_id": "batch_7_13928", "batch_size": 260, "batch_pos": 222}
+{"Q": 8, "answer": "no", "rationale": "Describes economic impact, not a capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_17188", "batch_size": 260, "batch_pos": 63}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 123}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports 'higher poultry costs' using standard descriptive language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 123}

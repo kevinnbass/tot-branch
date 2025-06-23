@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment uses 'serious' modifying 'symptoms', not a risk-adjective describing the virus.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 37}
+{"Q": 2, "answer": "no", "rationale": "The segment provides factual information ('cause') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 36}
+{"Q": 3, "answer": "no", "rationale": "Statement about potential symptoms, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 36}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 36}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 36}
+{"Q": 5, "answer": "no", "rationale": "This segment reports potential severe symptoms (negative fact) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 36}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 35}
+{"Q": 7, "answer": "no", "rationale": "The segment describes symptoms but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 32}
+{"Q": 8, "answer": "no", "rationale": "The segment describes symptoms, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 30}
+{"Q": 9, "answer": "no", "rationale": "The segment lists symptoms, not prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 21}
+{"Q": 10, "answer": "no", "rationale": "The segment describes potential symptoms, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_1684", "batch_size": 260, "batch_pos": 9}
+{"Q": 11, "answer": "no", "rationale": "No dominant framed quote found.", "method": "llm_batch", "batch_id": "batch_11_8740", "batch_size": 260, "batch_pos": 9}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; lists symptoms factually. 'serious symptoms' is descriptive, not alarmist framing.", "method": "llm_batch", "batch_id": "batch_12_18052", "batch_size": 260, "batch_pos": 9}

@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17876", "batch_size": 260, "batch_pos": 29}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_11420", "batch_size": 260, "batch_pos": 20}
+{"Q": 2, "answer": "no", "rationale": "The segment states a factual number of affected farms using the neutral verb 'confirmed,' which does not meet the Q2 criteria.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_11420_r1", "batch_size": 260, "batch_pos": 20}
+{"Q": 3, "answer": "no", "rationale": "'found' is a plain verb, not a moderate verb from the Q3 list/regex.", "method": "llm_batch", "batch_id": "batch_3_10612", "batch_size": 260, "batch_pos": 10}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_9500", "batch_size": 260, "batch_pos": 7}
+{"Q": 5, "answer": "no", "rationale": "The segment reports infected herds but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_7316", "batch_size": 260, "batch_pos": 6}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 256}
+{"Q": 7, "answer": "no", "rationale": "The segment provides factual data (found infected herds) but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 251}
+{"Q": 8, "answer": "no", "rationale": "The segment describes the number of infected herds found, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 207}
+{"Q": 9, "answer": "yes", "rationale": "Reports number of infected herds ('64 infected herds') using standard verbs.", "method": "llm_batch", "batch_id": "batch_9_2152", "batch_size": 260, "batch_pos": 125}

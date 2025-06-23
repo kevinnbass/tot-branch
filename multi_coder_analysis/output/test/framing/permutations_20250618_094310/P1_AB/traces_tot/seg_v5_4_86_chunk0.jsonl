@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13712", "batch_size": 260, "batch_pos": 37}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual and moderate language like 'quarantined' and 'established', not high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_10392", "batch_size": 260, "batch_pos": 8}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb + scale of impact.", "method": "llm_batch", "batch_id": "batch_3_17744", "batch_size": 260, "batch_pos": 199}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16800", "batch_size": 260, "batch_pos": 187}
+{"Q": 5, "answer": "no", "rationale": "Reports officials quarantined premises and established a zone but lacks explicit calming language about public safety.", "method": "llm_batch", "batch_id": "batch_5_16868", "batch_size": 260, "batch_pos": 184}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18396", "batch_size": 260, "batch_pos": 127}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_6972", "batch_size": 260, "batch_pos": 114}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_13608", "batch_size": 260, "batch_pos": 224, "regex": {"rule": "CapabilityNoReassurance", "span": [9, 18], "captures": []}}

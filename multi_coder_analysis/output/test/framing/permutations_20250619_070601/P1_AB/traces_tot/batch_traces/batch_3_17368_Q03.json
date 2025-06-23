@@ -1,0 +1,943 @@
+{
+  "batch_id": "batch_3_17368",
+  "hop_idx": 3,
+  "segment_count": 188,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'killing' paired with large numbers, which is excluded by the containment override rule unless additional vivid language is present."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'kill' paired with large numbers, which is excluded by the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'kill' paired with large numbers, which is excluded by the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic about inventory ('had 46 million chickens') not impact."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic about annual production ('raises about 11.7 million turkeys')."
+    },
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports locations of cases without a moderate verb or scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation of the virus on a farm; 'confirmed' is not a moderate verb describing impact, and '35,500 birds' is farm size, not necessarily impact scale."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'Spread' as a noun and 'blamed on' which are not moderate verbs describing impact paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports birds found in states; 'found' is not a moderate verb describing impact, and '26 states' is geographic scale without impact metric."
+    },
+    {
+      "segment_id": "seg_v5_12_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_13_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_15_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment provides factual information about cooking temperature."
+    },
+    {
+      "segment_id": "seg_v5_16_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'killed' paired with large numbers, which is excluded by the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_17_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'killed' paired with large numbers, which is excluded by the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_1_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'spread to' and 'confirmed to have had cases' which are factual reporting, not moderate verbs describing impact, despite mentioning scale ('one person', '36 dairy herds')."
+    },
+    {
+      "segment_id": "seg_v5_2_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports test results ('had trace amounts') which is factual reporting, not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_3_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports actions taken ('restricted the import', 'is now testing') which is factual reporting."
+    },
+    {
+      "segment_id": "seg_v5_4_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('were fatal') paired with scale ('56 percent'), but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_5_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('died') paired with scale ('Half'), but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_8_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about transmission detection."
+    },
+    {
+      "segment_id": "seg_v5_9_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'jumped' paired with financial metrics ('sales', 'percent', 'million'), which are excluded by the financial/trade guard."
+    },
+    {
+      "segment_id": "seg_v5_10_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic about consumption."
+    },
+    {
+      "segment_id": "seg_v5_11_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'linked to' which is not a moderate verb describing impact, and 'cases of the diseases' is vague impact."
+    },
+    {
+      "segment_id": "seg_v5_12_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'harmed' which is not a moderate verb describing impact, and 'people harmed' is vague impact."
+    },
+    {
+      "segment_id": "seg_v5_13_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about purchasing difficulty."
+    },
+    {
+      "segment_id": "seg_v5_1_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an action taken ('issued a health alert') and an outcome ('becoming infected') with small scale ('a person')."
+    },
+    {
+      "segment_id": "seg_v5_2_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a diagnosis ('diagnosed') which is factual reporting, not a moderate verb describing impact, despite mentioning scale ('second national case')."
+    },
+    {
+      "segment_id": "seg_v5_3_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a diagnosis ('diagnosed') which is factual reporting."
+    },
+    {
+      "segment_id": "seg_v5_4_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'stressed' which describes the alert's action, not the virus's impact, despite mentioning scale ('human infection')."
+    },
+    {
+      "segment_id": "seg_v5_5_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual recommendation."
+    },
+    {
+      "segment_id": "seg_v5_6_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual recommendation."
+    },
+    {
+      "segment_id": "seg_v5_7_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_8_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains factual recommendations/instructions."
+    },
+    {
+      "segment_id": "seg_v5_9_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about symptoms."
+    },
+    {
+      "segment_id": "seg_v5_10_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about potential symptoms."
+    },
+    {
+      "segment_id": "seg_v5_11_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('resulted in death') paired with scale ('Over half', 'over 900 cases'), but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_12_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'stressed' which describes the CDC's action, not the virus's impact."
+    },
+    {
+      "segment_id": "seg_v5_13_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual recommendation and a reassuring element."
+    },
+    {
+      "segment_id": "seg_v5_14_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual recommendation."
+    },
+    {
+      "segment_id": "seg_v5_16_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a psychological verb ('sparking') in a hypothetical context, which is excluded by the guard."
+    },
+    {
+      "segment_id": "seg_v5_17_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a psychological verb ('expressed concerns') and 'jumped' which describes transmission, not impact, and lacks scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_18_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'spread' paired with geographic scale ('six different states'), which is not sufficient for Q3 without a stronger verb or impact metric."
+    },
+    {
+      "segment_id": "seg_v5_19_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual test results."
+    },
+    {
+      "segment_id": "seg_v5_1_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection and confirmation of a case, which is factual reporting, not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_2_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'exterminated' paired with large numbers, which is excluded by the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_3_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_4_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a psychological phrase ('source of concern') and 'getting infected' which is an outcome verb, not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_5_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outcomes ('infections', 'dead', 'critically ill') paired with scale, but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_6_948_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outbreaks and infections ('reported', 'infections') paired with scale ('650,000 poultry'), but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_1_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual test results ('tested negative')."
+    },
+    {
+      "segment_id": "seg_v5_2_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual test results and contains a reassuring statement."
+    },
+    {
+      "segment_id": "seg_v5_3_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection ('detection') which is factual reporting, not a moderate verb describing impact, despite mentioning scale ('34 dairy cattle herds', 'nine states')."
+    },
+    {
+      "segment_id": "seg_v5_4_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation of a case, which is factual reporting."
+    },
+    {
+      "segment_id": "seg_v5_5_1534_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_1_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the experience of workers and disinfection process, not the virus's impact."
+    },
+    {
+      "segment_id": "seg_v5_2_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_4_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infected' and 'killed' paired with 'millions', but 'killed' is a containment verb, triggering the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_6_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports where the virus has been found ('found') which is factual reporting, not a moderate verb describing impact, despite mentioning scale ('26 different kinds of mammals')."
+    },
+    {
+      "segment_id": "seg_v5_7_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a vivid adjective ('voraciousness') and a psychological verb ('prompted... to call it') which are excluded by guards."
+    },
+    {
+      "segment_id": "seg_v5_8_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a metaphor ('collateral damage') but lacks a moderate verb paired with specific scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_9_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_11_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about virus mutation."
+    },
+    {
+      "segment_id": "seg_v5_13_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about virus mutation."
+    },
+    {
+      "segment_id": "seg_v5_14_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about virus evolution and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_15_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a hypothetical statement."
+    },
+    {
+      "segment_id": "seg_v5_16_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual observations."
+    },
+    {
+      "segment_id": "seg_v5_17_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms and outcomes ('stumbling and uncoordinated', 'seizures started') which are not moderate verbs describing impact."
+    },
+    {
+      "segment_id": "seg_v5_20_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms ('Screaming very loud, whole-body tremors') which are not moderate verbs describing impact."
+    },
+    {
+      "segment_id": "seg_v5_22_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the duration of symptoms ('get longer and longer') not the scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_23_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about someone's knowledge."
+    },
+    {
+      "segment_id": "seg_v5_24_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'succumb' paired with vague scale ('growing list of species'), which is not sufficient for Q3."
+    },
+    {
+      "segment_id": "seg_v5_25_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the severity of symptoms ('severity of the seizures') which is not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_26_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains emotive language ('very sad thing') but not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_27_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a potential Q3 cue ('infected' + 'nearly 900 people') but also reassuring language ('sporadic and usually self-limiting'), resulting in mixed framing (Neutral)."
+    },
+    {
+      "segment_id": "seg_v5_28_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a potential Q3 cue ('infected' + 'More than 50%... have died') but also reassuring language ('isn't particularly good at infecting humans'), resulting in mixed framing (Neutral)."
+    },
+    {
+      "segment_id": "seg_v5_30_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about transmission difficulty."
+    },
+    {
+      "segment_id": "seg_v5_31_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a technical term."
+    },
+    {
+      "segment_id": "seg_v5_32_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual explanation."
+    },
+    {
+      "segment_id": "seg_v5_33_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual explanation."
+    },
+    {
+      "segment_id": "seg_v5_34_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about infections."
+    },
+    {
+      "segment_id": "seg_v5_35_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about symptoms."
+    },
+    {
+      "segment_id": "seg_v5_36_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about exposure."
+    },
+    {
+      "segment_id": "seg_v5_37_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about symptoms."
+    },
+    {
+      "segment_id": "seg_v5_38_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement about treatment."
+    },
+    {
+      "segment_id": "seg_v5_39_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement about outcomes."
+    },
+    {
+      "segment_id": "seg_v5_40_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement about transmission likelihood."
+    },
+    {
+      "segment_id": "seg_v5_41_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about an experiment."
+    },
+    {
+      "segment_id": "seg_v5_42_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about an experiment."
+    },
+    {
+      "segment_id": "seg_v5_43_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('became ill') which is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_44_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about an experiment."
+    },
+    {
+      "segment_id": "seg_v5_45_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('became ill') and contains reassuring language ('not well adapted'), which is excluded by guards/Q5 precedence."
+    },
+    {
+      "segment_id": "seg_v5_47_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outcomes ('tested positive', 'has been low') and contains reassuring language ('has apparently been low'), which is excluded by guards/Q5 precedence."
+    },
+    {
+      "segment_id": "seg_v5_48_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains reassuring language ('not well adapted', 'good news') which is excluded by guards/Q5 precedence."
+    },
+    {
+      "segment_id": "seg_v5_49_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about plans."
+    },
+    {
+      "segment_id": "seg_v5_50_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a hypothetical statement."
+    },
+    {
+      "segment_id": "seg_v5_51_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a hypothetical statement and vivid language ('pry its way') describing a potential mechanism, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_52_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about virus change rate."
+    },
+    {
+      "segment_id": "seg_v5_53_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about virus adaptability/spread potential, using vivid language ('spread very easily') in a general sense, not tied to specific realised impact scale."
+    },
+    {
+      "segment_id": "seg_v5_54_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about immune response."
+    },
+    {
+      "segment_id": "seg_v5_55_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about immune response."
+    },
+    {
+      "segment_id": "seg_v5_56_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses an adjective ('sobering') describing findings, not the virus's impact."
+    },
+    {
+      "segment_id": "seg_v5_57_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infected' and 'killed' paired with 'all the ferrets', but 'killed' is a containment verb, triggering the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_58_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains factual reporting and a hypothetical statement."
+    },
+    {
+      "segment_id": "seg_v5_59_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outcomes ('infections', 'spectrum of severity') paired with scale, but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_60_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual outcomes/severity."
+    },
+    {
+      "segment_id": "seg_v5_61_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about a hypothesis."
+    },
+    {
+      "segment_id": "seg_v5_62_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement."
+    },
+    {
+      "segment_id": "seg_v5_63_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('didn't get as sick') which is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_64_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_65_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about immune response."
+    },
+    {
+      "segment_id": "seg_v5_66_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement/recommendation."
+    },
+    {
+      "segment_id": "seg_v5_67_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about preparedness/stockpile."
+    },
+    {
+      "segment_id": "seg_v5_68_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about preparedness/action."
+    },
+    {
+      "segment_id": "seg_v5_69_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement."
+    },
+    {
+      "segment_id": "seg_v5_70_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about preparedness/support."
+    },
+    {
+      "segment_id": "seg_v5_71_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about challenges; vivid language describes background condition (heat records)."
+    },
+    {
+      "segment_id": "seg_v5_72_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about preparedness/action."
+    },
+    {
+      "segment_id": "seg_v5_73_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about a hypothesis."
+    },
+    {
+      "segment_id": "seg_v5_74_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual explanation and hypothetical outcomes."
+    },
+    {
+      "segment_id": "seg_v5_75_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual explanation and hypothetical outcomes."
+    },
+    {
+      "segment_id": "seg_v5_76_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infect' paired with vague scale ('a number of internal organs'), which is not sufficient for Q3."
+    },
+    {
+      "segment_id": "seg_v5_77_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual explanation."
+    },
+    {
+      "segment_id": "seg_v5_78_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infect' paired with vague scale ('a number of internal organs') and lists locations ('found in... brains...'), neither of which triggers Q3."
+    },
+    {
+      "segment_id": "seg_v5_79_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_82_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms/behaviour ('behave strangely or aggressively') which are not moderate verbs describing impact."
+    },
+    {
+      "segment_id": "seg_v5_83_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms/behaviour ('waddle in circles, twisting their necks, writhing') using vivid verbs, but these describe animal behaviour, not the scale of the virus's impact."
+    },
+    {
+      "segment_id": "seg_v5_84_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a strong adjective ('very, very severe') describing disease severity, but lacks a moderate verb paired with scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_85_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_87_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_88_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_90_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infected' paired with small scale ('seven') and reports an outcome ('died'). Small scale does not trigger Q3."
+    },
+    {
+      "segment_id": "seg_v5_91_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'infected' paired with small scale ('a few') and reports an outcome ('went blind'). Small scale does not trigger Q3."
+    },
+    {
+      "segment_id": "seg_v5_92_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about precautions."
+    },
+    {
+      "segment_id": "seg_v5_93_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about lack of spread."
+    },
+    {
+      "segment_id": "seg_v5_94_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement and a comparison."
+    },
+    {
+      "segment_id": "seg_v5_95_647_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_1_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses a psychological phrase ('on edge') and 'impacted' paired with geographic scale ('24 states'), which is not sufficient for Q3."
+    },
+    {
+      "segment_id": "seg_v5_2_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about prices and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_6_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about precautions."
+    },
+    {
+      "segment_id": "seg_v5_7_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring element and a vivid metaphor ('death sentence') describing outcome, not a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_8_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about policy."
+    },
+    {
+      "segment_id": "seg_v5_9_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about observation and reporting."
+    },
+    {
+      "segment_id": "seg_v5_11_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'de-populated' which is excluded."
+    },
+    {
+      "segment_id": "seg_v5_12_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about containment effectiveness."
+    },
+    {
+      "segment_id": "seg_v5_13_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about preventing spread."
+    },
+    {
+      "segment_id": "seg_v5_14_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_15_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'affected' which is an excluded outcome verb, despite being paired with scale ('more than 600,000')."
+    },
+    {
+      "segment_id": "seg_v5_17_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about production ranking."
+    },
+    {
+      "segment_id": "seg_v5_18_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'hits' paired with vague scale ('poultry farmers') and mentions financial metrics ('prices rise'), neither of which triggers Q3."
+    },
+    {
+      "segment_id": "seg_v5_19_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'doubled' paired with financial metrics ('cost of eggs'), which is excluded by the financial/trade guard."
+    },
+    {
+      "segment_id": "seg_v5_20_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a factual statistic about production volume."
+    },
+    {
+      "segment_id": "seg_v5_22_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a psychological phrase ('anxiously watching')."
+    },
+    {
+      "segment_id": "seg_v5_23_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a hypothetical statement."
+    },
+    {
+      "segment_id": "seg_v5_24_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement."
+    },
+    {
+      "segment_id": "seg_v5_26_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about cleaning difficulty."
+    },
+    {
+      "segment_id": "seg_v5_27_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about precautions and hypotheticals."
+    },
+    {
+      "segment_id": "seg_v5_28_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'affected' which is an excluded outcome verb, despite being paired with scale ('nearly 23 million birds')."
+    },
+    {
+      "segment_id": "seg_v5_29_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'hardest hit' paired with vague scale ('states'), which is not sufficient for Q3."
+    },
+    {
+      "segment_id": "seg_v5_30_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains factual information about compensation and uncertainty."
+    },
+    {
+      "segment_id": "seg_v5_31_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains emotive language ('Scary thing') and a hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_32_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains emotive language ('Scary thing') and hypotheticals, using a strong adjective ('devastating') in a hypothetical context about consequences, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_33_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains hypotheticals, using strong language ('devastating', 'out of business') in a hypothetical context about consequences, not realised impact."
+    },
+    {
+      "segment_id": "seg_v5_34_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual actions taken."
+    },
+    {
+      "segment_id": "seg_v5_35_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual recommendation."
+    },
+    {
+      "segment_id": "seg_v5_36_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about transmission."
+    },
+    {
+      "segment_id": "seg_v5_37_1065_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about expectation/prediction."
+    },
+    {
+      "segment_id": "seg_v5_2_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an increase in deaths ('increase of deaths') which is vague scale, and 'reported' is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_3_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains factual reporting and reassuring elements."
+    },
+    {
+      "segment_id": "seg_v5_4_1198_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the containment verb 'culled' which is excluded."
+    },
+    {
+      "segment_id": "seg_v5_1_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual actions taken; vivid language describes background condition ('avian flu concerns')."
+    },
+    {
+      "segment_id": "seg_v5_2_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual rationale."
+    },
+    {
+      "segment_id": "seg_v5_3_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation of a case, which is factual reporting."
+    },
+    {
+      "segment_id": "seg_v5_4_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation ('confirmed') which is factual reporting, not a moderate verb describing impact, despite mentioning scale ('More than 100 cases')."
+    },
+    {
+      "segment_id": "seg_v5_5_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports cases ('reported') which is factual reporting, not a moderate verb describing impact, despite mentioning scale ('Most states')."
+    },
+    {
+      "segment_id": "seg_v5_7_192_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual actions taken."
+    },
+    {
+      "segment_id": "seg_v5_1_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports outcomes ('died', 'killed') paired with small scale ('Three', 'five others'), which is not sufficient for Q3."
+    },
+    {
+      "segment_id": "seg_v5_2_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('found dead') which is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_3_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('found dead') which is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_4_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual actions taken."
+    },
+    {
+      "segment_id": "seg_v5_5_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports an outcome ('died') which is not a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_6_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a factual statement about expectation/prediction."
+    },
+    {
+      "segment_id": "seg_v5_7_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports factual information about detection."
+    },
+    {
+      "segment_id": "seg_v5_8_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports where the virus has been found ('found') which is factual reporting, not a moderate verb describing impact, despite mentioning geographic scale ('all U.S. states')."
+    },
+    {
+      "segment_id": "seg_v5_9_1286_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_1_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_3_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a reassuring statement and does not use a moderate verb + scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_4_914_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports registration and reporting of a case, which is factual reporting."
+    }
+  ],
+  "timestamp": "2025-06-19T07:12:06.552612"
+}

@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'major increase' which modifies a noun, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 104}
+{"Q": 2, "answer": "no", "rationale": "'major increase' is a neutral description of scale.", "method": "llm_batch", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 56}
+{"Q": 3, "answer": "no", "rationale": "'saw the major increase' uses an intensifier ('major'), firing Q1/Q2, not Q3.", "method": "llm_batch", "batch_id": "batch_3_15000", "batch_size": 260, "batch_pos": 247}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15604", "batch_size": 260, "batch_pos": 236}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a major increase in cases, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_1716", "batch_size": 260, "batch_pos": 230}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about a risk or problem.", "method": "llm_batch", "batch_id": "batch_7_13928", "batch_size": 260, "batch_pos": 174}
+{"Q": 8, "answer": "no", "rationale": "Reports historical facts, not a capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_17188", "batch_size": 260, "batch_pos": 23}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 99}
+{"Q": 9, "answer": "no", "rationale": "The segment contains 'major increase', not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 99}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a past increase in cases and does not speculate about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 151}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 109}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually. 'major increase' is factual scale.", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 109}

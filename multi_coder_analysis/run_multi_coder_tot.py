@@ -26,11 +26,16 @@ import shutil
 
 # Local project imports
 from hop_context import HopContext, BatchHopContext
+from multi_coder_analysis.models import HopContext, BatchHopContext
 from llm_providers.gemini_provider import GeminiProvider
 from llm_providers.openrouter_provider import OpenRouterProvider
+from multi_coder_analysis.providers import get_provider
 from utils.tracing import write_trace_log
 from utils.tracing import write_batch_trace
-from utils.prompt_loader import load_prompt_and_meta  # New helper
+from multi_coder_analysis.core.prompt import parse_prompt
+
+# Backward compatibility alias during refactor
+load_prompt_and_meta = parse_prompt
 
 # --- Hybrid Regex Engine ---
 try:
@@ -46,7 +51,7 @@ load_dotenv(Path(__file__).parent.parent / ".env")
 
 # Constants can be moved to config.yaml if more flexibility is needed
 TEMPERATURE = 0.0
-MAX_RETRIES = 3
+MAX_RETRIES = 10
 BACKOFF_FACTOR = 1.5
 if "PROMPTS_DIR" not in globals():
     PROMPTS_DIR = Path(__file__).parent / "prompts"
@@ -128,14 +133,14 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
         logging.error(f"Error assembling prompt for Q{ctx.q_idx}: {e}")
         raise
 
-def _call_llm_single_hop(ctx: HopContext, provider, model: str, temperature: float = TEMPERATURE) -> Dict[str, str]:
+def _call_llm_single_hop(ctx: HopContext, provider, model: str, temperature: float = TEMPERATURE, *, top_k: int | None = None, top_p: float | None = None) -> Dict[str, str]:
     """Makes a single, retrying API call to the LLM for one hop."""
     sys_prompt, user_prompt = _assemble_prompt(ctx)
     
     for attempt in range(MAX_RETRIES):
         try:
             # Use provider abstraction
-            raw_text = provider.generate(sys_prompt, user_prompt, model, temperature)
+            raw_text = provider.generate(sys_prompt, user_prompt, model, temperature, top_k=top_k, top_p=top_p)
             
             # Handle cases where content might be empty
             if not raw_text.strip():
@@ -186,7 +191,8 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
     """Orchestrates the 12-hop reasoning chain for a single text segment."""
     ctx = HopContext(
         statement_id=segment_row["StatementID"],
-        segment_text=segment_row["Statement Text"]
+        segment_text=segment_row["Statement Text"],
+        article_id=segment_row.get("ArticleID", "")
     )
     
     # Ensure positional metadata exists even when processed individually
@@ -200,7 +206,7 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
 
     for q_idx in range(1, 13):
         # Log progress for single-segment execution
-        _log_hop(q_idx, 1, token_accumulator.get('regex_yes', 0))
+        _log_hop(q_idx, 1, token_accumulator.get('regex_yes', 0), 0)
         ctx.q_idx = q_idx
         # --- metrics counter ---
         with token_lock:
@@ -254,6 +260,9 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             "batch_id": ctx.batch_id,
             "batch_size": ctx.batch_size,
             "batch_pos": ctx.batch_pos,
+            # Include raw statement text and article ID for easier debugging across all traces
+            "statement_text": ctx.segment_text,
+            "article_id": ctx.article_id,
         }
         
         # Add thinking traces if available
@@ -362,9 +371,23 @@ def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPER
     sys_prompt, user_prompt = _assemble_prompt_batch(batch_ctx.segments, batch_ctx.hop_idx)
     batch_ctx.raw_prompt = sys_prompt
 
-    for attempt in range(MAX_RETRIES):
+    unresolved = list(batch_ctx.segments)
+    collected: list[dict] = []
+
+    attempt = 0
+    consecutive_none = 0  # track consecutive None/empty responses
+    while unresolved and attempt < MAX_RETRIES:
+        attempt += 1
+        sys_prompt, user_prompt = _assemble_prompt_batch(unresolved, batch_ctx.hop_idx)
         try:
-            raw_text = provider.generate(sys_prompt, user_prompt, model, temperature)
+            size_requested = len(unresolved)
+
+            try:
+                raw_text = provider.generate(sys_prompt, user_prompt, model, temperature)
+            except Exception as e:
+                logging.warning(f"Error generating batch response: {e}")
+                raise
+
             if not raw_text.strip():
                 raise ValueError("Empty response from LLM")
 
@@ -374,26 +397,92 @@ def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPER
             elif content.startswith('```') and content.endswith('```'):
                 content = content[3:-3].strip()
 
-            parsed = json.loads(content)
-            if not isinstance(parsed, list):
-                raise ValueError("Batch response is not a JSON array")
-            # basic validation: ensure each dict has required keys
+            try:
+                parsed = json.loads(content)
+                if not isinstance(parsed, list):
+                    raise ValueError("Batch response is not a JSON array")
+            except json.JSONDecodeError as dex:
+                # ------------------------------------------------------
+                # Truncated / malformed JSON – attempt best-effort salvage
+                # ------------------------------------------------------
+                import re as _re, json as _json
+
+                obj_txts = _re.findall(r"\{[^{}]*\}", content)
+                parsed = []
+                for _frag in obj_txts:
+                    try:
+                        parsed.append(_json.loads(_frag))
+                    except Exception:
+                        # Skip fragments that still fail to parse
+                        continue
+
+                logging.warning(
+                    f"Batch {batch_ctx.batch_id} Q{batch_ctx.hop_idx:02}: salvaged {len(parsed)} objects from truncated JSON (original error: {dex})"
+                )
+
+                if not parsed:
+                    raise  # re-raise to trigger retry logic
+
+            # Basic validation & matching
+            valid_objs = []
+            returned_ids = set()
             for obj in parsed:
                 if not all(k in obj for k in ("segment_id", "answer", "rationale")):
-                    raise ValueError("Batch JSON object missing keys")
-            batch_ctx.raw_response = content
-            batch_ctx.thoughts = provider.get_last_thoughts()
-            batch_ctx.raw_http = raw_text  # type: ignore[attr-defined]
-            return parsed
+                    continue  # skip malformed entry
+                sid = str(obj["segment_id"]).strip()
+                returned_ids.add(sid)
+                valid_objs.append(obj)
+
+            collected.extend(valid_objs)
+
+            # Filter unresolved list to those still missing
+            unresolved = [c for c in unresolved if c.statement_id not in returned_ids]
+
+            # store raw for first attempt only to keep size small
+            if attempt == 1:
+                batch_ctx.raw_http = raw_text  # type: ignore[attr-defined]
+
+            logging.info(
+                f"Batch {batch_ctx.batch_id} Q{batch_ctx.hop_idx:02}: attempt {attempt} succeeded for {len(valid_objs)}/{size_requested} objects; still missing {len(unresolved)}"
+            )
+
         except Exception as e:
-            logging.warning(f"Batch Q{batch_ctx.hop_idx}: attempt {attempt+1} failed: {e}")
-            time.sleep(BACKOFF_FACTOR * (2 ** attempt))
-    logging.error(f"Batch Q{batch_ctx.hop_idx}: All retries failed – marking all segments uncertain")
-    # create fallback uncertain list
-    fallback = []
-    for ctx in batch_ctx.segments:
-        fallback.append({"segment_id": ctx.statement_id, "answer": "uncertain", "rationale": "LLM call failed."})
-    return fallback
+            # Preserve raw response for diagnostics even when parsing fails or provider errors
+            if attempt == 1 and not hasattr(batch_ctx, 'raw_http'):
+                # Best-effort capture of whatever content we have
+                try:
+                    batch_ctx.raw_http = raw_text  # type: ignore[attr-defined]
+                except Exception:
+                    batch_ctx.raw_http = f"<no response captured – {e}>"  # type: ignore[attr-defined]
+
+            # Track consecutive None-type failures to trigger cool-down
+            if isinstance(e, TypeError) and "NoneType" in str(e):
+                consecutive_none += 1
+            else:
+                consecutive_none = 0
+
+            logging.warning(
+                f"Batch {batch_ctx.batch_id} Q{batch_ctx.hop_idx:02}: attempt {attempt} failed: {e} (missing {len(unresolved)} segments)"
+            )
+
+            # Short-circuit: after 2 consecutive None failures, signal caller
+            if consecutive_none >= 2:
+                batch_ctx._cooldown_required = True  # type: ignore[attr-defined]
+                break
+
+            time.sleep(BACKOFF_FACTOR * (2 ** (attempt - 1)))
+
+    # mark any still-unresolved segments as uncertain
+    for ctx in unresolved:
+        collected.append({
+            "segment_id": ctx.statement_id,
+            "answer": "uncertain",
+            "rationale": "LLM call failed after incremental retries."})
+
+    # NEW: expose attempts used to caller
+    batch_ctx.attempts_used = attempt
+
+    return collected
 
 # --- NEW: Batch Orchestration with Concurrency ---
 
@@ -408,17 +497,32 @@ def run_tot_chain_batch(
     token_lock: threading.Lock = None,
     temperature: float = TEMPERATURE,
     shuffle_batches: bool = False,
+    hop_range: Optional[list[int]] = None,
 ) -> List[HopContext]:
-    """Process dataframe through the 12-hop chain using batching with optional concurrency."""
+    """Process dataframe through the 12-hop chain using batching with optional concurrency.
+    Returns (contexts, summary_dict).
+    The summary dict aggregates high-level stats (batches, duplicates, residuals, tokens …) that
+    the caller can serialize into a run-level report.
+    """
     # Build HopContext objects
     contexts: List[HopContext] = [
-        HopContext(statement_id=row["StatementID"], segment_text=row["Statement Text"]) for _, row in df.iterrows()
+        HopContext(
+            statement_id=row["StatementID"],
+            segment_text=row["Statement Text"],
+            article_id=row.get("ArticleID", "")
+        )
+        for _, row in df.iterrows()
     ]
 
+    # NEW: collect batches that ultimately failed after MAX_RETRIES so we can write a run-level summary later
+    failed_batches: List[dict] = []
+    long_retry_batches: List[dict] = []
+
     def _provider_factory():
-        if provider_name == "openrouter":
-            return OpenRouterProvider()
-        return GeminiProvider()
+        return get_provider(provider_name)
+
+    # --- aggregated run-level counters -------------------------------------------
+    # (run-level summary aggregation removed; will be handled after processing)
 
     def _process_batch(batch_segments: List[HopContext], hop_idx: int):
         token_accumulator['llm_calls'] += 1
@@ -430,6 +534,8 @@ def run_tot_chain_batch(
         
         # Predefine batch_id for use in all trace entries within this batch
         batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
+        
+        # (run-level summary aggregation removed)
         
         for idx_in_batch, seg_ctx in enumerate(batch_segments, start=1):
             seg_ctx.q_idx = hop_idx  # ensure hop set
@@ -467,6 +573,9 @@ def run_tot_chain_batch(
                     "batch_size": seg_ctx.batch_size,
                     "batch_pos": seg_ctx.batch_pos,
                     "regex": r_answer.get("regex", {}),
+                    # Include raw statement text and article ID for easier debugging across all traces
+                    "statement_text": seg_ctx.segment_text,
+                    "article_id": seg_ctx.article_id,
                 }
                 write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
                 
@@ -485,7 +594,9 @@ def run_tot_chain_batch(
                     "frame": r_answer.get("frame"),
                     "answer": r_answer["answer"],
                 })
+                # (run-level summary aggregation removed)
             else:
+                # No definitive regex answer → send to LLM later
                 unresolved_segments.append(seg_ctx)
         
         # Step 2: If any segments remain unresolved, call LLM for the batch
@@ -512,8 +623,60 @@ def run_tot_chain_batch(
             
             # Call LLM for the batch
             provider_inst = _provider_factory()
-            batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
-            
+
+            # --------------------------------------------------
+            # Cool-down logic: if _call_llm_batch marks the batch
+            # with `_cooldown_required`, we wait 5 minutes and then
+            # retry *once*. If the subsequent call again sets the
+            # flag we repeat (max 3 cycles to avoid infinite loop).
+            # --------------------------------------------------
+            cooldown_cycles = 0
+            while True:
+                batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
+
+                if getattr(batch_ctx, "_cooldown_required", False):
+                    cooldown_cycles += 1
+                    if cooldown_cycles > 3:
+                        logging.warning(
+                            "Batch %s Q%02d: exceeded max cool-down cycles (%s) – marking remaining %s segments uncertain",
+                            batch_id,
+                            hop_idx,
+                            cooldown_cycles,
+                            len(unresolved_segments),
+                        )
+                        break  # give up after marking uncertain later in code
+
+                    # Clear flag for next attempt
+                    delattr(batch_ctx, "_cooldown_required")
+                    delay_sec = {1: 300, 2: 600, 3: 900}.get(cooldown_cycles, 900)
+                    human_delay = f"{delay_sec//60} minute(s)"
+                    logging.info(
+                        "Batch %s Q%02d: entering %s cool-down (cycle %s)…",
+                        batch_id,
+                        hop_idx,
+                        human_delay,
+                        cooldown_cycles,
+                    )
+                    time.sleep(delay_sec)
+                    provider_inst = _provider_factory()  # fresh client after wait
+                    continue  # retry batch
+
+                break  # normal path – no cool-down requested
+
+            # NEW: record batches that consumed >3 retries
+            attempts_used = getattr(batch_ctx, 'attempts_used', None)
+            if attempts_used and attempts_used > 3:
+                retry_stat = {
+                    "batch_id": batch_id,
+                    "hop_idx": hop_idx,
+                    "retries_used": attempts_used,
+                }
+                if token_lock:
+                    with token_lock:
+                        long_retry_batches.append(retry_stat)
+                else:
+                    long_retry_batches.append(retry_stat)
+
             # Token accounting (prompt/response/thought)
             usage = provider_inst.get_last_usage()
             if usage and token_lock:
@@ -526,6 +689,9 @@ def run_tot_chain_batch(
             # Build lookup for faster association
             sid_to_ctx = {c.statement_id: c for c in unresolved_segments}
             unknown_responses = []  # responses whose segment_id not in batch
+            # Track duplicate answers for the same segment_id within this batch
+            processed_sid_answers: dict[str, list[str]] = {}
+            duplicates_meta: list[dict] = []
 
             for resp_obj in batch_responses:
                 sid = str(resp_obj.get("segment_id", "")).strip()
@@ -534,7 +700,24 @@ def run_tot_chain_batch(
                     unknown_responses.append(resp_obj)
                     continue  # skip unknown ids
 
-                answer = str(resp_obj.get("answer", "uncertain")).lower().strip()
+                # Check for duplicate answers with conflicting content
+                answer_raw = str(resp_obj.get("answer", "uncertain")).lower().strip()
+                prev_answers = processed_sid_answers.get(sid)
+                if prev_answers is not None and answer_raw not in prev_answers:
+                    logging.warning(
+                        f"Duplicate responses for {sid} in batch {batch_id} Q{hop_idx}: prev='{prev_answers}' new='{answer_raw}'. Keeping last."
+                    )
+                    duplicates_meta.append({
+                        "segment_id": sid,
+                        "prev_answers": prev_answers,
+                        "new_answer": answer_raw,
+                    })
+                # Append current answer to list (deduplicated)
+                processed_sid_answers.setdefault(sid, [])
+                if answer_raw not in processed_sid_answers[sid]:
+                    processed_sid_answers[sid].append(answer_raw)
+
+                answer = answer_raw
                 rationale = str(resp_obj.get("rationale", "No rationale provided"))
                 
                 trace_entry = {
@@ -545,6 +728,9 @@ def run_tot_chain_batch(
                     "batch_id": batch_id,
                     "batch_size": ctx.batch_size,
                     "batch_pos": ctx.batch_pos,
+                    # Include raw statement text and article ID for easier debugging across all traces
+                    "statement_text": ctx.segment_text,
+                    "article_id": ctx.article_id,
                 }
                 write_trace_log(trace_dir, ctx.statement_id, trace_entry)
                 
@@ -588,6 +774,9 @@ def run_tot_chain_batch(
                         "batch_id": batch_id,
                         "batch_size": ctx.batch_size,
                         "batch_pos": ctx.batch_pos,
+                        # Include raw statement text and article ID for easier debugging across all traces
+                        "statement_text": ctx.segment_text,
+                        "article_id": ctx.article_id,
                     }
                     write_trace_log(trace_dir, ctx.statement_id, trace_entry)
             
@@ -662,6 +851,9 @@ def run_tot_chain_batch(
                         "batch_id": retry_batch_id,
                         "batch_size": ctx_r.batch_size,
                         "batch_pos": ctx_r.batch_pos,
+                        # Include raw statement text and article ID for easier debugging across all traces
+                        "statement_text": ctx_r.segment_text,
+                        "article_id": ctx_r.article_id,
                     }
                     write_trace_log(trace_dir, ctx_r.statement_id, trace_entry_r)
 
@@ -707,13 +899,81 @@ def run_tot_chain_batch(
                         }, fh, ensure_ascii=False, indent=2)
                 except Exception as e:
                     logging.warning("Could not write residual file %s: %s", residual_path, e)
+
+            # Dump duplicate-answer diagnostics if any were detected
+            if duplicates_meta:
+                import json as _json
+                dup_path = trace_dir / "batch_traces" / f"{batch_id}_Q{hop_idx:02}_duplicates.json"
+                try:
+                    with dup_path.open("w", encoding="utf-8") as fh:
+                        _json.dump({
+                            "batch_id": batch_id,
+                            "hop_idx": hop_idx,
+                            "duplicate_count": len(duplicates_meta),
+                            "duplicates": duplicates_meta,
+                        }, fh, ensure_ascii=False, indent=2)
+                except Exception as e:
+                    logging.warning("Could not write duplicate file %s: %s", dup_path, e)
+
+            # ------------------------------------------------------------------
+            # 📝  NEW: human-readable summary file for the batch
+            # ------------------------------------------------------------------
+            try:
+                summary_path = trace_dir / "batch_traces" / f"{batch_id}_Q{hop_idx:02}_summary.txt"
+
+                batch_ids = [c.statement_id for c in batch_segments]
+                regex_ids = [c.statement_id for c in regex_resolved]
+                llm_sent_ids = [c.statement_id for c in unresolved_segments]
+                returned_ids = list(processed_sid_answers.keys())
+                missing_ids = [sid for sid in llm_sent_ids if sid not in returned_ids]
+                residual_ids = [str(r.get("segment_id")) for r in unknown_responses]
+
+                with summary_path.open("w", encoding="utf-8") as sf:
+                    sf.write(f"Batch ID         : {batch_id}\n")
+                    sf.write(f"Hop              : Q{hop_idx:02}\n")
+                    sf.write(f"Total segments   : {len(batch_ids)}\n")
+                    sf.write(f"Regex-resolved   : {len(regex_ids)}\n")
+                    sf.write(f"Sent to LLM      : {len(llm_sent_ids)}\n")
+                    sf.write(f"Returned by LLM  : {len(returned_ids)}\n")
+                    sf.write(f"Missing in reply : {len(missing_ids)}\n")
+                    sf.write(f"Residual (extra) : {len(residual_ids)}\n")
+                    sf.write("\n=== ID LISTS ===\n")
+                    def _dump(name, ids):
+                        sf.write(f"\n{name} ({len(ids)}):\n")
+                        for _id in ids:
+                            sf.write(f"  {_id}\n")
+
+                    _dump("Batch IDs", batch_ids)
+                    _dump("Regex-resolved IDs", regex_ids)
+                    _dump("Sent to LLM IDs", llm_sent_ids)
+                    _dump("Returned IDs", returned_ids)
+                    _dump("Missing IDs", missing_ids)
+                    _dump("Residual IDs", residual_ids)
+                    sf.write(f"Duplicate conflicts : {len(duplicates_meta)}\n")
+
+                # NEW: capture batches that still have missing IDs after final retry
+                if missing_ids:
+                    failed_rec = {
+                        "batch_id": batch_id,
+                        "hop_idx": hop_idx,
+                        "missing_count": len(missing_ids),
+                        "missing_ids": missing_ids,
+                    }
+                    if token_lock:
+                        with token_lock:
+                            failed_batches.append(failed_rec)
+                    else:
+                        failed_batches.append(failed_rec)
+            except Exception as e:
+                logging.warning("Could not write batch summary %s: %s", summary_path, e)
         
         # Return all segments (resolved + unresolved)
         return regex_resolved + unresolved_segments
 
     active_contexts: List[HopContext] = contexts[:]
 
-    for hop_idx in range(1, 13):
+    _hop_iter = hop_range if hop_range else range(1, 13)
+    for hop_idx in _hop_iter:
         active_contexts = [c for c in active_contexts if not c.is_concluded]
         if not active_contexts:
             break
@@ -723,7 +983,7 @@ def run_tot_chain_batch(
             random.shuffle(active_contexts)
 
         # Log hop start from main thread
-        _log_hop(hop_idx, len(active_contexts), token_accumulator.get('regex_yes', 0))
+        _log_hop(hop_idx, len(active_contexts), token_accumulator.get('regex_yes', 0), 0)
 
         # Build batches of current active segments
         batches: List[List[HopContext]] = [
@@ -755,11 +1015,37 @@ def run_tot_chain_batch(
             ctx.final_justification = "Default to Neutral: No specific framing cue triggered in Q1-Q12."
             ctx.is_concluded = True
 
+    # NEW: write consolidated failure summary to main output folder
+    if failed_batches:
+        _fail_path = trace_dir.parent / "batch_failures.jsonl"
+        try:
+            import json as _json
+            with _fail_path.open("w", encoding="utf-8") as _fh:
+                for _rec in failed_batches:
+                    _json.dump(_rec, _fh, ensure_ascii=False)
+                    _fh.write("\n")
+            logging.info("Batch failure summary written → %s", _fail_path)
+        except Exception as _e:
+            logging.warning("Could not write batch failure summary (%s): %s", _fail_path, _e)
+
+    # NEW: write summary of batches that required >3 retries
+    if long_retry_batches:
+        _retry_path = trace_dir.parent / "batch_retries_over3.jsonl"
+        try:
+            import json as _json
+            with _retry_path.open("w", encoding="utf-8") as _fh:
+                for _rec in long_retry_batches:
+                    _json.dump(_rec, _fh, ensure_ascii=False)
+                    _fh.write("\n")
+            logging.info("Long-retry batch summary written → %s", _retry_path)
+        except Exception as _e:
+            logging.warning("Could not write long-retry summary (%s): %s", _retry_path, _e)
+
     return contexts
 
 # --- Main Entry Point for `main.py` ---
 
-def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False, skip_eval: bool = False) -> Tuple[None, Path]:
+def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False, skip_eval: bool = False, only_hop: Optional[int] = None, *, print_summary: bool = True) -> Tuple[None, Path]:
     """
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
@@ -854,6 +1140,20 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     trace_dir.mkdir(parents=True, exist_ok=True)
     logging.info(f"ToT trace files will be saved in: {trace_dir}")
 
+    # ------------------------------------------------------------------
+    # 🛠️  Attach file-handler so the full terminal log is captured next to
+    #      the other artefacts (requested by user).
+    # ------------------------------------------------------------------
+    log_file_path = output_dir / "run.log"
+    try:
+        _fh = logging.FileHandler(log_file_path, encoding="utf-8")
+        _fh.setLevel(logging.INFO)
+        _fh.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)s"))
+        logging.getLogger().addHandler(_fh)
+        logging.info("File logging enabled → %s", log_file_path)
+    except Exception as e:
+        logging.warning("Could not attach file handler %s: %s", log_file_path, e)
+
     # Path for false-negative corpus (regex miss + LLM yes)
     miss_path = output_dir / "regex_miss_llm_yes.jsonl"
     global _MISS_PATH
@@ -911,6 +1211,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     # --- Processing Path Selection ---
     if batch_size > 1:
         logging.info(f"Processing with batch size = {batch_size} and concurrency={concurrency}")
+        hop_range = [only_hop] if only_hop else None
         final_contexts = run_tot_chain_batch(
             df,
             provider_name,
@@ -921,6 +1222,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
             token_accumulator=token_accumulator,
             token_lock=token_lock,
             shuffle_batches=shuffle_batches,
+            hop_range=hop_range,
         )
         for ctx in final_contexts:
             final_json = {
@@ -1058,6 +1360,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
                 single_series = pd.Series({
                     'StatementID': statement_id,
                     'Statement Text': segment_text,
+                    'ArticleID': row.get('ArticleID', ''),
                 })
 
                 provider_obj = OpenRouterProvider() if provider_name == "openrouter" else GeminiProvider()
@@ -1198,25 +1501,42 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     logging.debug(f"Response tokens : {token_accumulator['response_tokens']}")
     logging.debug(f"Thought tokens  : {token_accumulator['thought_tokens']}")
     logging.debug(f"Total tokens    : {token_accumulator['total_tokens']}")
-    print("\n📏 Token usage:")
-    print(f"Prompt  : {token_accumulator['prompt_tokens']}")
-    print(f"Response: {token_accumulator['response_tokens']}")
-    print(f"Thought : {token_accumulator['thought_tokens']}")
-    print(f"Total   : {token_accumulator['total_tokens']}")
+    if print_summary:
+        print("\n📏 Token usage:")
+        print(f"Prompt  : {token_accumulator['prompt_tokens']}")
+        print(f"Response: {token_accumulator['response_tokens']}")
+        print(f"Thought : {token_accumulator['thought_tokens']}")
+        print(f"Total   : {token_accumulator['total_tokens']}")
 
     # --- Regex vs LLM usage summary ---
     # Recompute shadow-hit tally based on per-rule statistics so that all shadow
     # matches are counted even when no live rules exist (post-v2.20 change).
     stats_snapshot = _re_eng.get_rule_stats()
     rules_index_snapshot = {r.name: r for r in _re_eng.RAW_RULES}
-    shadow_total = sum(
-        counter.get("hit", 0)
-        for name, counter in stats_snapshot.items()
-        if rules_index_snapshot.get(name) and rules_index_snapshot[name].mode == "shadow"
-    )
 
-    # Store the aggregate for downstream logging/JSON
-    token_accumulator['regex_hit_shadow'] = shadow_total
+    # In SHADOW pipeline mode we want to know **all** regex hits because
+    # short-circuiting was disabled globally.  Counting only the rules whose
+    # YAML mode is already "shadow" hides hits from the main "live" rules and
+    # produces near-zero coverage numbers.  Instead:
+    #   • if the run was invoked with --regex-mode shadow → count every rule hit
+    #   • else (live/off)        → keep the original behaviour (shadow-rules only)
+
+    if regex_mode == "shadow":
+        shadow_total = sum(counter.get("hit", 0) for counter in stats_snapshot.values())
+    else:
+        shadow_total = sum(
+            counter.get("hit", 0)
+            for name, counter in stats_snapshot.items()
+            if rules_index_snapshot.get(name) and rules_index_snapshot[name].mode == "shadow"
+        )
+
+    # Store aggregate hits. In SHADOW mode we switch from per-rule hit counts
+    # to *unique segments* that triggered at least one regex rule so the
+    # metric is not inflated when a segment matches multiple rules/hops.
+    if regex_mode == "shadow":
+        token_accumulator['regex_hit_shadow'] = len(token_accumulator.get('segments_regex_ids', set()))
+    else:
+        token_accumulator['regex_hit_shadow'] = shadow_total
 
     regex_yes = token_accumulator.get('regex_yes', 0)
     regex_hit_shadow = token_accumulator.get('regex_hit_shadow', 0)
@@ -1231,22 +1551,23 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
     logging.debug(f"LLM calls made       : {llm_calls}")
     logging.debug(f"Regex coverage       : {regex_yes / total_hops:.2%}" if total_hops else "Regex coverage: n/a")
 
-    print("\n⚡ Hybrid stats:")
-    print(f"Total hops          : {total_hops}")
-    print(f"Regex definitive YES: {regex_yes}")
-    print(f"Regex hits (shadow) : {regex_hit_shadow}")
-    print(f"LLM calls made      : {llm_calls}")
-    if total_hops:
-        print(f"Regex coverage      : {regex_yes / total_hops:.2%}")
+    if print_summary:
+        print("\n⚡ Hybrid stats:")
+        print(f"Total hops          : {total_hops}")
+        print(f"Regex definitive YES: {regex_yes}")
+        print(f"Regex hits (shadow) : {regex_hit_shadow}")
+        print(f"LLM calls made      : {llm_calls}")
+        if total_hops:
+            print(f"Regex coverage      : {regex_yes / total_hops:.2%}")
 
-    # Segment-level utilisation
-    total_segments = len(df)
-    segments_regex = len(token_accumulator.get('segments_regex_ids', set()))
-    segments_llm = total_segments - segments_regex
+        # Segment-level utilisation
+        total_segments = len(df)
+        segments_regex = len(token_accumulator.get('segments_regex_ids', set()))
+        segments_llm = total_segments - segments_regex
 
-    print(f"Segments total      : {total_segments}")
-    print(f"Segments regex      : {segments_regex}  ({segments_regex / total_segments:.2%})")
-    print(f"Segments LLM        : {segments_llm}  ({segments_llm / total_segments:.2%})")
+        print(f"Segments total      : {total_segments}")
+        print(f"Segments regex      : {segments_regex}  ({segments_regex / total_segments:.2%})")
+        print(f"Segments LLM        : {segments_llm}  ({segments_llm / total_segments:.2%})")
 
     summary_path = output_dir / "token_usage_summary.json"
     try:
@@ -1347,6 +1668,65 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         logging.info(f"Run parameter summary written to {params_file}")
     except Exception as e:
         logging.error(f"Failed to write run parameters summary: {e}")
+
+    # ------------------------------------------------------------------
+    # 📊  RUN-LEVEL SUMMARY DOCUMENT
+    # ------------------------------------------------------------------
+    try:
+        summary_lines: list[str] = []
+        summary_lines.append("=== RUN SUMMARY ===")
+        summary_lines.append(f"Total statements          : {len(df)}")
+        summary_lines.append(f"Total hops processed      : {token_accumulator.get('total_hops', 0)}")
+        summary_lines.append(f"Regex deterministic hits  : {token_accumulator.get('regex_yes', 0)}")
+        summary_lines.append(f"Regex hits in shadow mode : {token_accumulator.get('regex_hit_shadow', 0)}")
+        summary_lines.append(f"LLM batch calls           : {token_accumulator.get('llm_calls', 0)}")
+        summary_lines.append("-- Token usage --")
+        summary_lines.append(f"  Prompt tokens   : {token_accumulator.get('prompt_tokens', 0)}")
+        summary_lines.append(f"  Response tokens : {token_accumulator.get('response_tokens', 0)}")
+        summary_lines.append(f"  Thought tokens  : {token_accumulator.get('thought_tokens', 0)}")
+        summary_lines.append(f"  Total tokens    : {token_accumulator.get('total_tokens', 0)}")
+
+        # Aggregate batch-level numbers by reading *_summary.txt inside batch_traces
+        batch_tr_dir = trace_dir / "batch_traces"
+        dup_total = 0
+        residual_total = 0
+        missing_total = 0
+        if batch_tr_dir.exists():
+            for txt_path in batch_tr_dir.glob("*_summary.txt"):
+                try:
+                    with open(txt_path, 'r', encoding='utf-8') as fh:
+                        for line in fh:
+                            if line.startswith("Duplicate conflicts"):
+                                dup_total += int(line.split(":", 1)[1].strip())
+                            elif line.startswith("Residual (extra)"):
+                                residual_total += int(line.split(":", 1)[1].strip())
+                            elif line.startswith("Missing in reply"):
+                                missing_total += int(line.split(":", 1)[1].strip())
+                except Exception:
+                    continue
+
+        summary_lines.append("-- Batch anomalies --")
+        summary_lines.append(f"  Duplicate conflicts : {dup_total}")
+        summary_lines.append(f"  Residual extras     : {residual_total}")
+        summary_lines.append(f"  Missing in replies  : {missing_total}")
+
+        run_summary_path = output_dir / "run_summary.txt"
+        with open(run_summary_path, 'w', encoding='utf-8') as sf:
+            sf.write("\n".join(summary_lines))
+        logging.info(f"Run-level summary written to: {run_summary_path}")
+    except Exception as e:
+        logging.warning("Could not write run-level summary: %s", e)
+
+    # ------------------------------------------------------------------
+    # 🧹  Detach file handler to avoid duplicate logs if function is called
+    #      again within the same Python process.
+    # ------------------------------------------------------------------
+    try:
+        if '_fh' in locals():
+            logging.getLogger().removeHandler(_fh)
+            _fh.close()
+    except Exception:
+        pass
 
     return raw_votes_path, majority_labels_path
 
@@ -1583,9 +1963,32 @@ def reorganize_traces_by_match_status(trace_dir: Path, df_comparison: pd.DataFra
 START_TIME = time.perf_counter()
 
 # Helper to log hop progress
-def _log_hop(hop_idx: int, active: int, regex_yes: int):
+def _log_hop(
+    hop_idx: int,
+    start_active: int,
+    regex_yes: int,
+    llm_yes: int = 0,
+    end_active: int | None = None,
+):
+    """Progress logger used by both legacy and pipeline code.
+ 
+    start_active – distinct unresolved StatementIDs entering the hop
+    regex_yes – number concluded by regex layer for this hop
+    llm_yes   – number concluded by LLM responses for this hop
+    end_active – optional: unresolved StatementIDs after this hop (if provided)
+    """
     elapsed = time.perf_counter() - START_TIME
-    msg = f"Hop {hop_idx:02} → active:{active:<4} regex_yes:{regex_yes:<3} ({elapsed:5.1f}s)"
+    if end_active is None:
+        end_active = max(0, start_active - regex_yes - llm_yes)
+
+    msg = (
+        f"Hop {hop_idx:02} → "
+        f"start:{start_active:<3} "
+        f"regex:{regex_yes:<2} "
+        f"llm:{llm_yes:<2} "
+        f"remain:{end_active:<3} "
+        f"({elapsed:5.1f}s)"
+    )
     logging.info(msg)
     # Remove duplicate tqdm.write and print to avoid doubled output
     # try:

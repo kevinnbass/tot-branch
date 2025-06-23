@@ -1,0 +1,3 @@
+{"Q": 1, "answer": "no", "rationale": "'decimated' is a vivid verb (Q2).", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 81}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 80}
+{"Q": 2, "answer": "yes", "rationale": "The high-potency verb 'decimated' describes the severe impact of the virus on bird species.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_3596_r1", "batch_size": 260, "batch_pos": 80}

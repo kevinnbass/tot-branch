@@ -1,0 +1,558 @@
+2025-06-21 14:06:59,578 - INFO - File logging enabled → multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\run.log
+2025-06-21 14:06:59,660 - INFO - Processing with batch size = 200 and concurrency=20
+2025-06-21 14:07:01,409 - INFO - Hop 01 → active:2036 regex_yes:0   ( 22.7s)
+2025-06-21 14:07:01,748 - INFO - Hop 1: processing 11 batches (size=200) with concurrency=20
+2025-06-21 14:07:16,155 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:16,349 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:16,651 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:16,768 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:16,893 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:17,053 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:17,105 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:17,308 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:17,513 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:17,891 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:17,968 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:07:37,433 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:07:37,436 - INFO - AFC remote call 1 is done.
+2025-06-21 14:07:37,438 - INFO - Batch batch_1_14632 Q01: attempt 1 succeeded for 36/36 objects; still missing 0
+2025-06-21 14:08:21,412 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:21,417 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:21,418 - INFO - Batch batch_1_16208 Q01: attempt 1 succeeded for 199/199 objects; still missing 13
+2025-06-21 14:08:21,421 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:23,476 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:23,481 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:23,483 - INFO - Batch batch_1_5852 Q01: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:08:32,373 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:32,378 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:32,378 - INFO - Batch batch_1_16208 Q01: attempt 2 succeeded for 13/13 objects; still missing 4
+2025-06-21 14:08:32,381 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:36,964 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:36,969 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:36,972 - INFO - Batch batch_1_18676 Q01: attempt 1 succeeded for 200/200 objects; still missing 35
+2025-06-21 14:08:36,975 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:37,690 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:37,693 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:37,694 - INFO - Batch batch_1_16208 Q01: attempt 3 succeeded for 4/4 objects; still missing 0
+2025-06-21 14:08:37,975 - WARNING - Duplicate responses for seg_v5_21_1005_chunk0 in batch batch_1_16208 Q1: prev='['yes']' new='no'. Keeping last.
+2025-06-21 14:08:38,019 - WARNING - Duplicate responses for seg_v5_22_1005_chunk0 in batch batch_1_16208 Q1: prev='['yes']' new='no'. Keeping last.
+2025-06-21 14:08:43,520 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:43,523 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:43,525 - INFO - Batch batch_1_4920 Q01: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:08:44,453 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:44,457 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:44,459 - INFO - Batch batch_1_4816 Q01: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:08:44,956 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:44,969 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:44,972 - INFO - Batch batch_1_18236 Q01: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:08:44,975 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:47,639 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:47,642 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:47,643 - INFO - Batch batch_1_18236 Q01: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:08:49,032 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:49,046 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:49,057 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:49,079 - INFO - Batch batch_1_18676 Q01: attempt 2 succeeded for 34/34 objects; still missing 2
+2025-06-21 14:08:49,085 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:49,087 - INFO - Batch batch_1_16372 Q01: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:08:49,093 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:50,580 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:50,596 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:50,603 - INFO - Batch batch_1_17400 Q01: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:08:50,611 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:51,763 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:51,771 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:51,776 - INFO - Batch batch_1_21492 Q01: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:08:52,436 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:52,439 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:52,441 - INFO - Batch batch_1_15424 Q01: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:08:52,464 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:08:53,463 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:53,549 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:53,550 - INFO - Batch batch_1_18676 Q01: attempt 3 succeeded for 2/2 objects; still missing 0
+2025-06-21 14:08:53,811 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:53,867 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:53,867 - INFO - Batch batch_1_17400 Q01: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:08:55,377 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:08:55,437 - INFO - AFC remote call 1 is done.
+2025-06-21 14:08:55,438 - INFO - Batch batch_1_15424 Q01: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:08:58,165 - INFO - Hop 02 → active:1990 regex_yes:0   (139.4s)
+2025-06-21 14:08:58,168 - INFO - Hop 2: processing 10 batches (size=200) with concurrency=20
+2025-06-21 14:09:11,258 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:11,657 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:12,024 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:12,488 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:12,923 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:13,330 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:13,865 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:14,435 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:14,590 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:09:15,319 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:10:39,374 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:39,384 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:39,387 - INFO - Batch batch_2_20412 Q02: attempt 1 succeeded for 190/190 objects; still missing 0
+2025-06-21 14:10:41,005 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:41,009 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:41,011 - INFO - Batch batch_2_1472 Q02: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:10:45,143 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:45,148 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:45,150 - INFO - Batch batch_2_19140 Q02: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:10:45,152 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:10:45,645 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:45,651 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:45,653 - INFO - Batch batch_2_8512 Q02: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:10:47,529 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:47,533 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:47,534 - INFO - Batch batch_2_19140 Q02: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:10:50,679 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:50,683 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:50,685 - INFO - Batch batch_2_16408 Q02: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:10:50,690 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:10:51,020 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:51,026 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:51,029 - INFO - Batch batch_2_16736 Q02: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:10:53,909 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:53,984 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:53,987 - INFO - Batch batch_2_16408 Q02: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:10:54,417 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:54,499 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:54,502 - INFO - Batch batch_2_5660 Q02: attempt 1 succeeded for 184/184 objects; still missing 179
+2025-06-21 14:10:54,505 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:10:54,637 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:54,642 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:54,643 - INFO - Batch batch_2_1180 Q02: attempt 1 succeeded for 198/198 objects; still missing 3
+2025-06-21 14:10:54,646 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:10:59,043 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:59,048 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:59,049 - INFO - Batch batch_2_18076 Q02: attempt 1 succeeded for 195/195 objects; still missing 6
+2025-06-21 14:10:59,052 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:10:59,818 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:10:59,825 - INFO - AFC remote call 1 is done.
+2025-06-21 14:10:59,826 - INFO - Batch batch_2_1180 Q02: attempt 2 succeeded for 3/3 objects; still missing 0
+2025-06-21 14:11:02,657 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:11:02,661 - INFO - AFC remote call 1 is done.
+2025-06-21 14:11:02,662 - INFO - Batch batch_2_13344 Q02: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:11:08,813 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:11:08,815 - INFO - AFC remote call 1 is done.
+2025-06-21 14:11:08,816 - INFO - Batch batch_2_18076 Q02: attempt 2 succeeded for 6/6 objects; still missing 0
+2025-06-21 14:12:08,679 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:12:08,688 - INFO - AFC remote call 1 is done.
+2025-06-21 14:12:08,691 - INFO - Batch batch_2_5660 Q02: attempt 2 succeeded for 179/179 objects; still missing 0
+2025-06-21 14:12:09,262 - INFO - Hop 03 → active:1895 regex_yes:0   (330.5s)
+2025-06-21 14:12:09,263 - INFO - Hop 3: processing 10 batches (size=200) with concurrency=20
+2025-06-21 14:12:11,417 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:11,609 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:11,744 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:11,804 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:11,842 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:12,035 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:12,076 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:12,255 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:12,356 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:12,369 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:12:48,467 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:12:48,472 - INFO - AFC remote call 1 is done.
+2025-06-21 14:12:48,474 - INFO - Batch batch_3_16524 Q03: attempt 1 succeeded for 95/95 objects; still missing 0
+2025-06-21 14:13:09,707 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:09,710 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:09,712 - INFO - Batch batch_3_3716 Q03: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:13:20,753 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:20,758 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:20,760 - INFO - Batch batch_3_21256 Q03: attempt 1 succeeded for 198/198 objects; still missing 2
+2025-06-21 14:13:20,763 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:13:21,313 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:21,318 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:21,319 - INFO - Batch batch_3_19416 Q03: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:13:21,321 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:13:24,099 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:24,104 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:24,105 - INFO - Batch batch_3_19416 Q03: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:13:24,747 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:24,753 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:24,754 - INFO - Batch batch_3_21256 Q03: attempt 2 succeeded for 2/2 objects; still missing 0
+2025-06-21 14:13:28,961 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:28,966 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:28,967 - INFO - Batch batch_3_19312 Q03: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:13:33,796 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:33,803 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:33,804 - INFO - Batch batch_3_19760 Q03: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:13:33,808 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:13:36,719 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:36,722 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:36,723 - INFO - Batch batch_3_19760 Q03: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:13:43,141 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:43,145 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:43,149 - INFO - Batch batch_3_12600 Q03: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:13:46,617 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:46,620 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:46,622 - INFO - Batch batch_3_13748 Q03: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:13:48,189 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:48,192 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:48,194 - INFO - Batch batch_3_18820 Q03: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:13:55,836 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:13:55,841 - INFO - AFC remote call 1 is done.
+2025-06-21 14:13:55,843 - INFO - Batch batch_3_948 Q03: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:13:56,293 - INFO - Hop 04 → active:1887 regex_yes:0   (437.5s)
+2025-06-21 14:13:56,294 - INFO - Hop 4: processing 10 batches (size=200) with concurrency=20
+2025-06-21 14:13:59,651 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:13:59,652 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:13:59,884 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:00,577 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:00,782 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:00,835 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:00,977 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:01,016 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:01,218 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:01,267 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:36,078 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:14:36,082 - INFO - AFC remote call 1 is done.
+2025-06-21 14:14:36,084 - INFO - Batch batch_4_14580 Q04: attempt 1 succeeded for 87/87 objects; still missing 0
+2025-06-21 14:14:51,244 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:14:51,248 - INFO - AFC remote call 1 is done.
+2025-06-21 14:14:51,251 - INFO - Batch batch_4_15972 Q04: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:14:51,664 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:14:51,668 - INFO - AFC remote call 1 is done.
+2025-06-21 14:14:51,669 - INFO - Batch batch_4_20196 Q04: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:14:51,670 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:14:53,748 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:14:53,752 - INFO - AFC remote call 1 is done.
+2025-06-21 14:14:53,752 - INFO - Batch batch_4_20196 Q04: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:15:07,015 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:07,020 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:07,022 - INFO - Batch batch_4_4800 Q04: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:15:09,969 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:09,973 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:09,976 - INFO - Batch batch_4_13172 Q04: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:15:12,179 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:12,184 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:12,186 - INFO - Batch batch_4_11940 Q04: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:15:13,058 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:13,063 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:13,064 - INFO - Batch batch_4_6828 Q04: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:15:14,792 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:14,795 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:14,796 - INFO - Batch batch_4_20736 Q04: attempt 1 succeeded for 198/198 objects; still missing 2
+2025-06-21 14:15:14,798 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:15,215 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:15,218 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:15,221 - INFO - Batch batch_4_684 Q04: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:15:17,994 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:17,999 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:18,000 - INFO - Batch batch_4_20736 Q04: attempt 2 succeeded for 2/2 objects; still missing 0
+2025-06-21 14:15:18,203 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:15:18,207 - INFO - AFC remote call 1 is done.
+2025-06-21 14:15:18,210 - INFO - Batch batch_4_20796 Q04: attempt 1 succeeded for 234/234 objects; still missing 0
+2025-06-21 14:15:18,714 - INFO - Hop 05 → active:1880 regex_yes:0   (520.0s)
+2025-06-21 14:15:18,715 - INFO - Hop 5: processing 10 batches (size=200) with concurrency=20
+2025-06-21 14:15:21,320 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,511 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,544 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,605 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,641 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,807 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,885 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,930 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:21,982 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:15:22,087 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:02,523 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:02,526 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:02,528 - INFO - Batch batch_5_4936 Q05: attempt 1 succeeded for 80/80 objects; still missing 0
+2025-06-21 14:16:33,668 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:33,675 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:33,678 - INFO - Batch batch_5_7312 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:35,108 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:35,114 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:35,116 - INFO - Batch batch_5_2492 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:38,385 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:38,390 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:38,392 - INFO - Batch batch_5_17520 Q05: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:16:38,394 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:39,401 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:39,405 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:39,407 - INFO - Batch batch_5_12384 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:40,956 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:40,958 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:40,961 - INFO - Batch batch_5_12664 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:41,824 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:41,828 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:41,831 - INFO - Batch batch_5_17520 Q05: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:16:46,010 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:46,013 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:46,015 - INFO - Batch batch_5_19816 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:46,221 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:46,226 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:46,228 - INFO - Batch batch_5_16604 Q05: attempt 1 succeeded for 198/198 objects; still missing 2
+2025-06-21 14:16:46,230 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:50,428 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:50,433 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:50,434 - INFO - Batch batch_5_16604 Q05: attempt 2 succeeded for 2/2 objects; still missing 0
+2025-06-21 14:16:50,921 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:50,927 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:50,929 - INFO - Batch batch_5_4856 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:51,851 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:16:51,856 - INFO - AFC remote call 1 is done.
+2025-06-21 14:16:51,857 - INFO - Batch batch_5_18836 Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:16:52,363 - INFO - Hop 06 → active:1807 regex_yes:0   (613.6s)
+2025-06-21 14:16:52,365 - INFO - Hop 6: processing 10 batches (size=200) with concurrency=20
+2025-06-21 14:16:56,006 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,145 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,156 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,190 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,278 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,358 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,512 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,647 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,760 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:16:56,825 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:17:02,982 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:17:02,988 - INFO - AFC remote call 1 is done.
+2025-06-21 14:17:02,990 - INFO - Batch batch_6_19004 Q06: attempt 1 succeeded for 7/7 objects; still missing 0
+2025-06-21 14:18:08,463 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:08,467 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:08,469 - INFO - Batch batch_6_7972 Q06: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:18:10,345 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:10,348 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:10,350 - INFO - Batch batch_6_14144 Q06: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:18:10,743 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:10,751 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:10,752 - INFO - Batch batch_6_20492 Q06: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:18:11,016 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:11,028 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:11,033 - INFO - Batch batch_6_7372 Q06: attempt 1 succeeded for 201/201 objects; still missing 0
+2025-06-21 14:18:12,158 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:12,162 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:12,164 - INFO - Batch batch_6_19340 Q06: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:18:13,829 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:13,832 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:13,834 - INFO - Batch batch_6_9820 Q06: attempt 1 succeeded for 200/200 objects; still missing 1
+2025-06-21 14:18:13,837 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:15,184 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:15,187 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:15,189 - INFO - Batch batch_6_6968 Q06: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:18:15,191 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:15,422 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:15,426 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:15,427 - INFO - Batch batch_6_12992 Q06: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:18:17,102 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:17,105 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:17,106 - INFO - Batch batch_6_9820 Q06: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:18:19,374 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:19,378 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:19,380 - INFO - Batch batch_6_6968 Q06: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:18:24,601 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:18:24,607 - INFO - AFC remote call 1 is done.
+2025-06-21 14:18:24,609 - INFO - Batch batch_6_3580 Q06: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:18:25,387 - INFO - Hop 07 → active:1781 regex_yes:0   (706.6s)
+2025-06-21 14:18:25,388 - INFO - Hop 7: processing 9 batches (size=200) with concurrency=20
+2025-06-21 14:18:30,653 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:31,304 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,433 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,653 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,894 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,960 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,961 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:18:32,963 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:19:38,339 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:38,342 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:38,351 - INFO - Batch batch_7_20308 Q07: attempt 1 succeeded for 201/201 objects; still missing 0
+2025-06-21 14:19:40,548 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:40,552 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:40,554 - INFO - Batch batch_7_11848 Q07: attempt 1 succeeded for 181/181 objects; still missing 0
+2025-06-21 14:19:44,326 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:44,331 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:44,333 - INFO - Batch batch_7_15516 Q07: attempt 1 succeeded for 202/202 objects; still missing 0
+2025-06-21 14:19:45,646 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:45,651 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:45,652 - INFO - Batch batch_7_20060 Q07: attempt 1 succeeded for 213/213 objects; still missing 7
+2025-06-21 14:19:45,655 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:19:47,618 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:47,622 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:47,624 - INFO - Batch batch_7_6192 Q07: attempt 1 succeeded for 198/198 objects; still missing 6
+2025-06-21 14:19:47,628 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:19:51,845 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:51,847 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:51,848 - INFO - Batch batch_7_20060 Q07: attempt 2 succeeded for 7/7 objects; still missing 0
+2025-06-21 14:19:52,853 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:52,860 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:52,862 - INFO - Batch batch_7_17600 Q07: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:19:52,864 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:19:53,721 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:53,725 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:53,726 - INFO - Batch batch_7_6192 Q07: attempt 2 succeeded for 6/6 objects; still missing 0
+2025-06-21 14:19:55,386 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:55,390 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:55,393 - INFO - Batch batch_7_14596 Q07: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:19:55,686 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:19:55,693 - INFO - AFC remote call 1 is done.
+2025-06-21 14:19:55,694 - INFO - Batch batch_7_17600 Q07: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:20:00,975 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:20:00,978 - INFO - AFC remote call 1 is done.
+2025-06-21 14:20:00,981 - INFO - Batch batch_7_13932 Q07: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:20:00,983 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:01,220 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:20:01,226 - INFO - AFC remote call 1 is done.
+2025-06-21 14:20:01,228 - INFO - Batch batch_7_21420 Q07: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:20:01,231 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:03,382 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:20:03,386 - INFO - AFC remote call 1 is done.
+2025-06-21 14:20:03,387 - INFO - Batch batch_7_13932 Q07: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:20:04,241 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:20:04,244 - INFO - AFC remote call 1 is done.
+2025-06-21 14:20:04,245 - INFO - Batch batch_7_21420 Q07: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:20:04,704 - INFO - Hop 08 → active:1498 regex_yes:0   (806.0s)
+2025-06-21 14:20:04,705 - INFO - Hop 8: processing 8 batches (size=200) with concurrency=20
+2025-06-21 14:20:07,182 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,454 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,455 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,536 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,584 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,645 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,646 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:07,708 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:20:56,163 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:20:56,167 - INFO - AFC remote call 1 is done.
+2025-06-21 14:20:56,168 - INFO - Batch batch_8_20068 Q08: attempt 1 succeeded for 98/98 objects; still missing 0
+2025-06-21 14:21:21,860 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:21,864 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:21,866 - INFO - Batch batch_8_21464 Q08: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:21:26,913 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:26,921 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:26,923 - INFO - Batch batch_8_19776 Q08: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:21:28,215 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:28,222 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:28,224 - INFO - Batch batch_8_15968 Q08: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:21:32,402 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:32,406 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:32,409 - INFO - Batch batch_8_17164 Q08: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:21:32,411 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:35,609 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:35,612 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:35,614 - INFO - Batch batch_8_17164 Q08: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:21:39,308 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:39,313 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:39,315 - INFO - Batch batch_8_15368 Q08: attempt 1 succeeded for 197/197 objects; still missing 3
+2025-06-21 14:21:39,316 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:39,653 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:39,657 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:39,659 - INFO - Batch batch_8_12124 Q08: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:21:45,037 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:45,043 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:45,044 - INFO - Batch batch_8_15368 Q08: attempt 2 succeeded for 3/3 objects; still missing 0
+2025-06-21 14:21:50,190 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:21:50,194 - INFO - AFC remote call 1 is done.
+2025-06-21 14:21:50,196 - INFO - Batch batch_8_19596 Q08: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:21:50,714 - INFO - Hop 09 → active:1066 regex_yes:0   (912.0s)
+2025-06-21 14:21:50,715 - INFO - Hop 9: processing 6 batches (size=200) with concurrency=20
+2025-06-21 14:21:52,507 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:52,557 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:52,568 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:52,595 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:52,606 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:21:52,618 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:22:24,938 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:22:24,941 - INFO - AFC remote call 1 is done.
+2025-06-21 14:22:24,943 - INFO - Batch batch_9_732 Q09: attempt 1 succeeded for 66/66 objects; still missing 0
+2025-06-21 14:23:04,674 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:23:04,677 - INFO - AFC remote call 1 is done.
+2025-06-21 14:23:04,679 - INFO - Batch batch_9_20648 Q09: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:23:05,017 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:23:05,022 - INFO - AFC remote call 1 is done.
+2025-06-21 14:23:05,026 - INFO - Batch batch_9_16484 Q09: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:23:17,941 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:23:17,946 - INFO - AFC remote call 1 is done.
+2025-06-21 14:23:17,949 - INFO - Batch batch_9_16568 Q09: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:23:18,781 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:23:18,790 - INFO - AFC remote call 1 is done.
+2025-06-21 14:23:18,793 - INFO - Batch batch_9_18136 Q09: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:23:22,563 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:23:22,569 - INFO - AFC remote call 1 is done.
+2025-06-21 14:23:22,571 - INFO - Batch batch_9_20780 Q09: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:23:23,279 - INFO - Hop 10 → active:752  regex_yes:0   (1004.5s)
+2025-06-21 14:23:23,280 - INFO - Hop 10: processing 4 batches (size=200) with concurrency=20
+2025-06-21 14:23:24,901 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:23:25,110 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:23:25,153 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:23:25,252 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:24:20,314 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:24:20,317 - INFO - AFC remote call 1 is done.
+2025-06-21 14:24:20,320 - INFO - Batch batch_10_20248 Q10: attempt 1 succeeded for 152/152 objects; still missing 0
+2025-06-21 14:24:38,329 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:24:38,335 - INFO - AFC remote call 1 is done.
+2025-06-21 14:24:38,337 - INFO - Batch batch_10_17012 Q10: attempt 1 succeeded for 198/198 objects; still missing 2
+2025-06-21 14:24:38,341 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:24:41,729 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:24:41,738 - INFO - AFC remote call 1 is done.
+2025-06-21 14:24:41,740 - INFO - Batch batch_10_20720 Q10: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:24:41,789 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:24:41,794 - INFO - AFC remote call 1 is done.
+2025-06-21 14:24:41,795 - INFO - Batch batch_10_17012 Q10: attempt 2 succeeded for 2/2 objects; still missing 0
+2025-06-21 14:24:45,461 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:24:45,465 - INFO - AFC remote call 1 is done.
+2025-06-21 14:24:45,466 - INFO - Batch batch_10_19748 Q10: attempt 1 succeeded for 199/199 objects; still missing 1
+2025-06-21 14:24:45,469 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:24:47,971 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:24:47,973 - INFO - AFC remote call 1 is done.
+2025-06-21 14:24:47,974 - INFO - Batch batch_10_19748 Q10: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:24:48,342 - INFO - Hop 11 → active:742  regex_yes:0   (1089.6s)
+2025-06-21 14:24:48,343 - INFO - Hop 11: processing 4 batches (size=200) with concurrency=20
+2025-06-21 14:24:49,393 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:24:49,477 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:24:49,528 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:24:49,530 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:25:36,037 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:25:36,042 - INFO - AFC remote call 1 is done.
+2025-06-21 14:25:36,044 - INFO - Batch batch_11_18632 Q11: attempt 1 succeeded for 142/142 objects; still missing 4
+2025-06-21 14:25:36,046 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:25:41,806 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:25:41,809 - INFO - AFC remote call 1 is done.
+2025-06-21 14:25:41,811 - INFO - Batch batch_11_18632 Q11: attempt 2 succeeded for 4/4 objects; still missing 0
+2025-06-21 14:25:49,037 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:25:49,041 - INFO - AFC remote call 1 is done.
+2025-06-21 14:25:49,042 - INFO - Batch batch_11_12100 Q11: attempt 1 succeeded for 202/202 objects; still missing 1
+2025-06-21 14:25:49,044 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:25:53,249 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:25:53,254 - INFO - AFC remote call 1 is done.
+2025-06-21 14:25:53,255 - INFO - Batch batch_11_12100 Q11: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:26:12,585 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:26:12,590 - INFO - AFC remote call 1 is done.
+2025-06-21 14:26:12,592 - INFO - Batch batch_11_13636 Q11: attempt 1 succeeded for 194/194 objects; still missing 6
+2025-06-21 14:26:12,594 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:26:18,232 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:26:18,235 - INFO - AFC remote call 1 is done.
+2025-06-21 14:26:18,236 - INFO - Batch batch_11_13636 Q11: attempt 2 succeeded for 6/6 objects; still missing 0
+2025-06-21 14:26:28,006 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:26:28,010 - INFO - AFC remote call 1 is done.
+2025-06-21 14:26:28,013 - INFO - Batch batch_11_7096 Q11: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:26:28,421 - INFO - Hop 12 → active:742  regex_yes:0   (1189.7s)
+2025-06-21 14:26:28,421 - INFO - Hop 12: processing 4 batches (size=200) with concurrency=20
+2025-06-21 14:26:29,833 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:26:29,843 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:26:30,001 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:26:30,081 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:27:42,353 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:27:42,357 - INFO - AFC remote call 1 is done.
+2025-06-21 14:27:42,359 - INFO - Batch batch_12_18340 Q12: attempt 1 succeeded for 142/142 objects; still missing 0
+2025-06-21 14:28:04,419 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:28:04,424 - INFO - AFC remote call 1 is done.
+2025-06-21 14:28:04,425 - INFO - Batch batch_12_12612 Q12: attempt 1 succeeded for 200/200 objects; still missing 1
+2025-06-21 14:28:04,427 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:28:07,281 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:28:07,348 - INFO - AFC remote call 1 is done.
+2025-06-21 14:28:07,350 - INFO - Batch batch_12_5364 Q12: attempt 1 succeeded for 200/200 objects; still missing 1
+2025-06-21 14:28:07,353 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-21 14:28:08,123 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:28:08,127 - INFO - AFC remote call 1 is done.
+2025-06-21 14:28:08,129 - INFO - Batch batch_12_20636 Q12: attempt 1 succeeded for 200/200 objects; still missing 0
+2025-06-21 14:28:09,321 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:28:09,325 - INFO - AFC remote call 1 is done.
+2025-06-21 14:28:09,326 - INFO - Batch batch_12_12612 Q12: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:28:12,170 - INFO - HTTP Request: POST https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-04-17:generateContent "HTTP/1.1 200 OK"
+2025-06-21 14:28:12,175 - INFO - AFC remote call 1 is done.
+2025-06-21 14:28:12,176 - INFO - Batch batch_12_5364 Q12: attempt 2 succeeded for 1/1 objects; still missing 0
+2025-06-21 14:28:14,061 - INFO - ToT processing complete. Labels saved to: multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\model_labels_tot.csv
+2025-06-21 14:28:14,070 - INFO - Token summary written to multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\token_usage_summary.json
+2025-06-21 14:28:14,129 - INFO - Regex rule stats written to multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\regex_rule_stats.csv
+2025-06-21 14:28:14,198 - INFO - Regex rules snapshot written to multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\regex_rules_snapshot.jsonl
+2025-06-21 14:28:14,237 - INFO - Run parameter summary written to multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\run_parameters_summary.json
+2025-06-21 14:28:15,563 - INFO - Run-level summary written to: multi_coder_analysis\output\test\framing\permutations_20250621_140629\P8_BAr\run_summary.txt

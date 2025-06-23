@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'really consistent' which modifies 'signal', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 24}
+{"Q": 2, "answer": "no", "rationale": "The segment describes messaging tone.", "method": "llm_batch", "batch_id": "batch_2_17012", "batch_size": 260, "batch_pos": 236}
+{"Q": 3, "answer": "no", "rationale": "Quote expressing opinion, not a moderate verb + scale pattern.", "method": "llm_batch", "batch_id": "batch_3_15000", "batch_size": 260, "batch_pos": 174}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15604", "batch_size": 260, "batch_pos": 164}
+{"Q": 5, "answer": "no", "rationale": "The quote describes messaging as confident and placating, but does not present a calming cue itself.", "method": "llm_batch", "batch_id": "batch_5_1716", "batch_size": 260, "batch_pos": 159}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about a risk or problem.", "method": "llm_batch", "batch_id": "batch_7_13928", "batch_size": 260, "batch_pos": 106}
+{"Q": 8, "answer": "no", "rationale": "Quotes commentary on communication, not a capability, preparedness, safeguard, or hopeful future possibility.", "method": "llm_batch", "batch_id": "batch_8_8444", "batch_size": 260, "batch_pos": 222}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 67}
+{"Q": 9, "answer": "no", "rationale": "The segment contains criticism of tone, not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 67}
+{"Q": 10, "answer": "no", "rationale": "The segment reports on messaging containing calming cues, but does not speculate about future relief from the outbreak itself.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 126}
+{"Q": 11, "answer": "no", "rationale": "Quote describes messaging tone ('more confident and a little more placating'), not framing the threat itself.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 86}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually. Criticizes communication tone.", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 86}

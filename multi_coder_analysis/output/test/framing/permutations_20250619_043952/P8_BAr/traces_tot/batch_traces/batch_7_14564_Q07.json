@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_7_14564",
+  "hop_idx": 7,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_9_1272_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future problems and does not contain a bare negation about a current or past situation."
+    },
+    {
+      "segment_id": "seg_v5_039_408_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the bare negation 'It didn’t happen' referring to a past predicted event, without explicit calming."
+    },
+    {
+      "segment_id": "seg_v5_7_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the phrase 'risk of illness in those persons is still negligible', which is an explicit calming cue (Low-Risk Framing) per Q5 rules."
+    },
+    {
+      "segment_id": "seg_v5_001_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains the phrase 'believe the country can still eliminate', which is an explicit calming cue (Confidence/Preparedness Framing) per Q5 rules."
+    }
+  ],
+  "timestamp": "2025-06-19T04:41:08.303388"
+}

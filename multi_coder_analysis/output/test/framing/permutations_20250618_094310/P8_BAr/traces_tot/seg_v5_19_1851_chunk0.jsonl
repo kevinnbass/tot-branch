@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'Prior' modifies 'testing'. 'more such' modifies 'testing'. 'negative' describes test result.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 241}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 236}
+{"Q": 3, "answer": "no", "rationale": "Uses 'came back negative' and 'is underway' (plain outcome/status), not moderate verbs + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 216}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 215}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 215}
+{"Q": 5, "answer": "no", "rationale": "The segment reports prior testing negative and more testing underway, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 212}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 202}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'came back negative'.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 202}

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16456", "batch_size": 260, "batch_pos": 152}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 105}
+{"Q": 2, "answer": "no", "rationale": "The language used ('found dead', 'had little to no interaction') is factual and lacks high-potency verbs or potent metaphors.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_6540_r1", "batch_size": 260, "batch_pos": 105}
+{"Q": 3, "answer": "no", "rationale": "Segment reports findings, not impact.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 55}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 47}
+{"Q": 5, "answer": "no", "rationale": "This segment reports a bare fact about interaction with birds, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 40}
+{"Q": 6, "answer": "no", "rationale": "Contains 'only' but not used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 17}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'little to no interaction' without an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 10}

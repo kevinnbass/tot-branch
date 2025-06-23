@@ -1,0 +1,994 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_5_1186_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about production, deaths, culling, and unknown price impact, lacking explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_1186_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic about farms under control, lacking explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit calming cues 'risk to the public is low' and 'food supply remains safe'."
+  },
+  {
+    "segment_id": "seg_v5_2_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit calming cues 'no concern that this circumstance poses a risk to consumer health' and 'safety of the interstate commercial milk supply'."
+  },
+  {
+    "segment_id": "seg_v5_3_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions (farmers testing cows) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions (separating sick animals) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact (animals recover) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_1485_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'not a food safety concern', which is a bare negation of concern, not an explicit safety assurance using required keywords like 'safe'."
+  },
+  {
+    "segment_id": "seg_v5_7_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual rules about selling milk without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual safety measure (pasteurization) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact (no infected herds linked to raw milk providers) and a recommendation, but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual event (halted operations) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions (culling numbers) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1485_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'no risk', which is a bare negation of risk, not an explicit safety assurance using required keywords like 'safe'."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports caution, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_16_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports uncertainty and evolving situation, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_17_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports effort to figure things out, not a statement of current safety or control."
+  },
+  {
+    "segment_id": "seg_v5_001_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual events (investigation, ill workers) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_002_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about uncertainty and lack of testing, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_005_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'no sign of unusual influenza activity', a bare negation of a negative indicator, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'risk... as “low.”', which is a bare low-risk statement, not intensified or framed with explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'risk... as “low.”' (bare low risk) and reports finding more ill workers (negative fact), lacking explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_008_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual lack of details without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic (total ill people) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact (tested negative) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_011_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports finding individuals is raising concerns, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_012_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about CDC capability and state action, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a statement about credibility being on the line, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_014_803_chunk0",
+    "answer": "no",
+    "rationale": "This is a related story title, not a statement of current safety or control."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports someone is troubled, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about risk level for one individual, without explicit calming language for the public."
+  },
+  {
+    "segment_id": "seg_v5_017_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (blood samples collected) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_018_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual events (household contact ill, not tested) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_020_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (CDC studying samples) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual statistics (positive herds) and notes likely underestimate, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_024_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about farmers refusing testing and states not forcing the issue, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_025_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about testing practices in specific states, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic (infected herds in Colorado) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic (affected farms in California) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative statistic (high mortality rate) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_003_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative statistic (estimated deaths) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual statistics about species infected without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative statistics (deaths, species affected) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (polar bear killed) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about past understanding without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual scientific finding (growing evidence of mammal-to-mammal spread) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_013_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual scientific findings (studies suggesting circulation) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_014_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual observation (little interaction with birds) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_015_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual scientific reasoning (high unlikelihood without transmission) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a factual scientific conclusion ('mammal-to-mammal transmission') without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_017_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual biological details without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_018_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual scientific observation/reasoning (rapid spread suggesting transmission) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "no",
+    "rationale": "States that mammal-to-mammal transmission increases risk, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_021_813_chunk0",
+    "answer": "no",
+    "rationale": "States that mammal-to-mammal transmission increases risk and calls for study, neither of which is calming language."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1397_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic projections without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1397_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic projections and increases without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1397_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic data (market share) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1397_chunk0",
+    "answer": "no",
+    "rationale": "Praises Brazil's ability to protect farms, but the speaker is not a government/public health authority and it doesn't explicitly link to public/consumer safety."
+  },
+  {
+    "segment_id": "seg_v5_6_1397_chunk0",
+    "answer": "no",
+    "rationale": "Reports caution and need to live with the disease, which is not calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_1397_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic data (export records, value) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1397_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic projections (exports, demand) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative events (restriction, euthanised chickens) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_002_644_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit calming cue 'reassure consumers that there is no shortage'."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about strain detection without explicit calming language. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_004_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative statistic (chickens euthanised) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (egg limit) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about a temporary limit without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_007_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (working with suppliers) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_008_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about another store's policy without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_644_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'not at risk', a bare negation of risk, and discusses messaging, neither of which is explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_644_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'do not indicate a nationwide shortage', a bare negation of a negative outcome, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual dates and locations of detection without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_013_644_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit confidence cue 'surveillance activities are working well to date' from an official source."
+  },
+  {
+    "segment_id": "seg_v5_014_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (control areas set up) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about detection at other properties without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_016_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions (euthanised, disposed of) without explicit calming language for the public."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a warning about impact, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_018_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports anticipating impact and working hard, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice on where to shop, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_020_644_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit transient-issue minimiser cues 'short-term blip that will resolve itself very quickly'."
+  },
+  {
+    "segment_id": "seg_v5_021_644_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit transient-issue minimiser cues 'short-term blip that will resolve itself very quickly'."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual opinion about Coles' action without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_023_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact (virus not detected) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about a business type without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_025_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about spread mechanism and risk without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about infection locations without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_027_644_chunk0",
+    "answer": "no",
+    "rationale": "Quotes factual information about farming practice without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_028_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (housing requirement issued) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_029_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (housing requirement issued) and geographical detail without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about potential fines without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_031_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a reminder to follow biosecurity practice, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_032_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports vets urging measures, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_033_644_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit positive amplification cue 'outbreak management so far had been 'really fantastic''."
+  },
+  {
+    "segment_id": "seg_v5_035_644_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit direct consumption safety assurance 'assured consumers that eggs and poultry products are safe to consume'."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (human case detected) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual medical details (symptom, treatment) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'risk... remains low', which is a bare low-risk statement, not intensified or framed with explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_405_chunk0",
+    "answer": "no",
+    "rationale": "Quotes a question expressing a desire to understand, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (agency monitoring) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about how illnesses occur without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about virus shedding and infection without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about infections in other animals without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual medical information about disease severity without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual statistics (worldwide cases, fatality rate) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative findings (positive tests) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative finding (virus found in herd) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative finding and states it's the first time in cattle, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_18_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact (little or no mortality) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative statistic (death of millions of birds) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_21_405_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit calming cues 'no concerns with the safety of the commercial milk supply right now' and 'safety'."
+  },
+  {
+    "segment_id": "seg_v5_1_899_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual action (halted imports) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_899_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual details (list of countries) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_899_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual rule about imports without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_899_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual action (suspension of imports) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative statistic (birds culled) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative outcome (birds die) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions/outcomes (culling flocks) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative economic impacts (high prices, economic pain) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about the outbreak's start and scope without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about virus transmission without explicit calming language. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_9_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about spread and states prevention is critical, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative outcome (farmers struggled) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual statistics comparing origins without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (officials studying) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic (percentage of infected farms) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'poses a low risk', which is a bare low-risk statement, not intensified or framed with explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_45_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'hasn't spread', a bare negation of spread, not explicit calming language. 'high mortality rates' is a negative fact."
+  },
+  {
+    "segment_id": "seg_v5_2_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact ('all of the tests were negative') but lacks explicit calming language. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_3_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (testing will continue) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions (testing will continue, flocks under quarantine) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (staff reached out) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative action (euthanized turkeys) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_45_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'does not present an immediate public health concern' and 'no human cases', which are bare negations, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical information without explicit calming language. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical information and negative statistics without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (people developed symptoms) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (undergoing tests) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative events (infected farms, birds killed) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative statistic (total birds killed) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative statistics (Iowa cases, birds killed) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic data without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual economic data without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual details (location of cases) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about an earlier confirmation without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic (states with cases) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about disease spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about infected wild birds and virus circulation without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_102_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'do not present an immediate public health concern', which is a bare negation of concern, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual safety measure (cooking temperature kills viruses) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_16_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports metadata about a story update without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_17_102_chunk0",
+    "answer": "no",
+    "rationale": "Reports metadata about a story update without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative events (human infection, confirmed herds) and notes likely undercount, without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative finding (trace amounts in milk) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual actions (import restriction, USDA testing) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual statistics (worldwide cases, fatality rate) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (cats died) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1674_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'hasn't been detected', a bare negation of detection, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual statistic (Americans consuming raw milk) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative information (linked to other diseases) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1674_chunk0",
+    "answer": "no",
+    "rationale": "Quotes information about social media algorithms and seeing fewer stories about harm, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_1674_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about raw milk sales regulations and hurdles without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (CDC issued alert) and event (person infected) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (person diagnosed) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical information without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about the alert's purpose and content without explicit calming language. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_5_1470_chunk0",
+    "answer": "no",
+    "rationale": "Recommends PPE use, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_1470_chunk0",
+    "answer": "no",
+    "rationale": "Recommends PPE use, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'risks to the general public remain low', which is a bare low-risk statement, not intensified or framed with explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1470_chunk0",
+    "answer": "no",
+    "rationale": "Urges health care workers to monitor and suggests isolation, which are instructions/recommendations, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual medical detail (lone symptom) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual medical information about other possible symptoms without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual statistics (global cases, fatality rate) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_1470_chunk0",
+    "answer": "no",
+    "rationale": "Stresses importance of following recommendations, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'risks currently being low', which is a bare low-risk statement, not intensified or framed with explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_14_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports what people should avoid, which is a recommendation, not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_16_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports concerns and a positive fact (no human-to-human transmission detected), but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_17_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports officials expressed concerns, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_18_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about the outbreak's start and spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_19_1470_chunk0",
+    "answer": "no",
+    "rationale": "Reports positive factual findings (no concerning genetic changes) but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative events (outbreak detected, confirmation) without explicit calming language. 'highly pathogenic' is guarded."
+  },
+  {
+    "segment_id": "seg_v5_2_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative actions (chickens exterminated, zones established) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_948_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit direct consumption safety assurance 'do not believe that there is any possibility of avian influenza being transmitted to humans through the consumption of chicken meat or eggs'."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports increase in human infections is turning into a source of concern, which is the opposite of calming."
+  },
+  {
+    "segment_id": "seg_v5_5_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative statistics (human infections, deaths) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual negative events (outbreaks, affected poultry) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_7_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual historical negative statistics (worst season, chickens culled) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_1534_chunk0",
+    "answer": "no",
+    "rationale": "Reports a positive fact ('all samples... tested negative') but lacks explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit direct consumption safety assurance 'reaffirm that the meat supply is safe'."
+  },
+  {
+    "segment_id": "seg_v5_3_1534_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual action (working to confirm safety) and event (detection in herds) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual negative event (human case confirmed) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'overall public health risk is low', which is a bare low-risk statement, not intensified or framed with explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes factual work and measures without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "States H5N1 was something to contend with, which is not explicit calming language."
+  }
+]
+```

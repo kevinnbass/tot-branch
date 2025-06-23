@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 94}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('placed', 'could touch, nose and lick', 'became ill') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 92}
+{"Q": 3, "answer": "no", "rationale": "'became ill' is a plain outcome.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 91}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 90}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 90}
+{"Q": 5, "answer": "no", "rationale": "This segment describes experimental results (negative outcome for ferrets) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 90}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 87}
+{"Q": 7, "answer": "no", "rationale": "The segment describes an experiment outcome but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 84}
+{"Q": 8, "answer": "yes", "rationale": "Describes research/study actions and results ('three healthy ferrets were placed', 'all of them became ill') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 70}

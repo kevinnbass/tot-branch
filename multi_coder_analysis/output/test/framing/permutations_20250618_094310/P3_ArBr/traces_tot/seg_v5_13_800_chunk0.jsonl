@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16416", "batch_size": 260, "batch_pos": 219}
+{"Q": 2, "answer": "no", "rationale": "The metaphor 'inching closer and closer' describes proximity to a state, not a high-potency verb/metaphor describing impact per Q2 examples.", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 213}
+{"Q": 3, "answer": "no", "rationale": "'is inching closer' is a metaphor, not a moderate verb + scale of realised impact.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 183}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 177}
+{"Q": 5, "answer": "no", "rationale": "The segment warns of potential progression towards pandemic and does not contain an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 176}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 170}
+{"Q": 7, "answer": "no", "rationale": "The segment contains a statement about potential increase in alarm, not a bare negation about a risk or fact.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 165}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_6120", "batch_size": 260, "batch_pos": 113, "regex": {"rule": "CapabilityNoReassurance", "span": [3, 12], "captures": []}}

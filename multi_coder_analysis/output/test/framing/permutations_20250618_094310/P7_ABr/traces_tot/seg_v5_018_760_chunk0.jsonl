@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11792", "batch_size": 260, "batch_pos": 53}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_16924", "batch_size": 260, "batch_pos": 37}
+{"Q": 2, "answer": "no", "rationale": "The segment describes actions taken ('canceled two attractions') neutrally.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_16924_r1", "batch_size": 260, "batch_pos": 37}
+{"Q": 3, "answer": "no", "rationale": "Describes consequences (cancellations), not the threat's direct impact.", "method": "llm_batch", "batch_id": "batch_3_12716", "batch_size": 260, "batch_pos": 258}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 253}
+{"Q": 5, "answer": "no", "rationale": "The segment reports cancellations but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17836", "batch_size": 260, "batch_pos": 251}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_18368", "batch_size": 260, "batch_pos": 226}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3220", "batch_size": 260, "batch_pos": 212}
+{"Q": 9, "answer": "no", "rationale": "The segment reports cancellation of attractions, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_15788", "batch_size": 260, "batch_pos": 106}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 256}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a past event (cancellation - negative impact), not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 256}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 230}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of cancellations. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 227}

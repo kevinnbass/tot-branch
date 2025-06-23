@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_9_19120",
+  "hop_idx": 9,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the location of cases, not prices or economic metrics using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the location and number of birds on an infected farm, not prices or economic metrics using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a numerical metric (\"23 states\") using a standard verb (\"shows\") without vivid language."
+    },
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the cause of disease spread, not prices or economic metrics using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of birds killed, but the verb \"forcing the killing\" is not a standard economic verb like 'rose' or 'fell'."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of birds killed, but the verb \"have had to kill\" is not a standard economic verb like 'rose' or 'fell'."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports the number of birds killed, but the verb \"having to kill\" is not a standard economic verb like 'rose' or 'fell'."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a numerical metric (\"46 million chickens\") using a standard verb (\"had\") without vivid language."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports a numerical metric (\"11.7 million turkeys\") using a standard verb (\"raises\") without vivid language."
+    }
+  ],
+  "timestamp": "2025-06-21T11:04:48.609709"
+}

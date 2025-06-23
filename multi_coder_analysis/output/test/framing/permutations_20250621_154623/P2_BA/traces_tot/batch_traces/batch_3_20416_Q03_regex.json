@@ -1,0 +1,37 @@
+{
+  "batch_id": "batch_3_20416",
+  "hop_idx": 3,
+  "segment_count": 2,
+  "matches": [
+    {
+      "statement_id": "seg_v5_10_177_chunk0",
+      "regex": {
+        "rule": "ModerateVerbPlusScale",
+        "span": [
+          19,
+          27
+        ],
+        "captures": [
+          "prompted"
+        ]
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_11_177_chunk0",
+      "regex": {
+        "rule": "ModerateVerbPlusScale",
+        "span": [
+          33,
+          36
+        ],
+        "captures": [
+          "hit"
+        ]
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    }
+  ]
+}

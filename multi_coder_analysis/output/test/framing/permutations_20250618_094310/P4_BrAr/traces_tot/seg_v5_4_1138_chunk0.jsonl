@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 22}
+{"Q": 2, "answer": "no", "rationale": "The verb 'transmitted' is neutral and does not frame the situation alarmingly.", "method": "llm_batch", "batch_id": "batch_2_17580", "batch_size": 260, "batch_pos": 247}
+{"Q": 3, "answer": "no", "rationale": "'is transmitted' is a neutral verb.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 175}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 156}
+{"Q": 5, "answer": "no", "rationale": "The segment reports transmission method, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 153}
+{"Q": 6, "answer": "no", "rationale": "The segment describes transmission methods but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 104}
+{"Q": 7, "answer": "no", "rationale": "The segment states transmission method, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 92}
+{"Q": 8, "answer": "no", "rationale": "The segment describes modes of transmission, not capabilities, preparedness, possibilities, or safeguards.", "method": "llm_batch", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 187}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_16860", "batch_size": 239, "batch_pos": 37}
+{"Q": 9, "answer": "no", "rationale": "The segment describes transmission methods, not numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_16860_r1", "batch_size": 239, "batch_pos": 37}
+{"Q": 10, "answer": "no", "rationale": "The segment states a fact about transmission ('It is transmitted by infected migrating wild birds') rather than speculating about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 170}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a frame.", "method": "llm_batch", "batch_id": "batch_11_10328", "batch_size": 244, "batch_pos": 139}
+{"Q": 12, "answer": "yes", "rationale": "Factual report of transmission method. No explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_4324", "batch_size": 244, "batch_pos": 139}

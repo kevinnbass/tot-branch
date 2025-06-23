@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_1_5504",
+  "hop_idx": 1,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_7_1779_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'negligible' which is a low-risk adjective, not a risk-adjective modified by an intensifier or comparative."
+    },
+    {
+      "segment_id": "seg_v5_001_721_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes 'increasing doubts' and 'spread to new herds' but lacks an intensifier or comparative modifying a risk-adjective."
+    },
+    {
+      "segment_id": "seg_v5_039_408_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the phrase 'a major pandemic virus', where 'major' intensifies the risk implied by 'pandemic virus'."
+    },
+    {
+      "segment_id": "seg_v5_9_1272_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the phrase 'a much worse problem', where 'much' intensifies the comparative 'worse' modifying 'problem'."
+    }
+  ],
+  "timestamp": "2025-06-19T04:40:18.388657"
+}

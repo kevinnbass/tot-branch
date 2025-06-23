@@ -1,0 +1,989 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds killed ('kill about 22 million birds', 'including 1.8 million', '1.9 million', '1.9 million') using standard verbs and quantification."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds killed ('kill about 13 million chickens and 305,000 turkeys') using standard verbs and quantification."
+  },
+  {
+    "segment_id": "seg_v5_4_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of chickens on farms ('had 46 million chickens') using standard verbs and quantification."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports annual production number ('raises about 11.7 million turkeys annually') using standard verbs and quantification."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of states with confirmed cases ('shows 23 states have confirmed cases') using standard verbs and quantification."
+  },
+  {
+    "segment_id": "seg_v5_9_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports and corrects numerical metrics ('correct the total number of birds killed... to 22 million', 'correct the number killed in Iowa to 13 million') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports and corrects numerical metrics ('correct the total number of birds killed... at 22 million', 'in Iowa to 13 million') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people and herds affected ('at least one person', '36 dairy herds have been confirmed') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a proportion ('one in five milk samples') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a fatality rate ('56 percent of bird flu cases... were fatal') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a proportion of animals affected ('Half the domestic cats... recently died') factually."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a percentage ('around four and a half percent of Americans') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "no",
+    "rationale": "Discusses linkage to diseases, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risks to the general public remain low')."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases and proportion of deaths ('Over half of the over 900 human H5N1 cases... have resulted in death') factually."
+  },
+  {
+    "segment_id": "seg_v5_13_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risks currently being low')."
+  },
+  {
+    "segment_id": "seg_v5_18_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread and number of states affected ('quickly spread... to include cases in at least six different states') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection of an outbreak/case, not prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "no",
+    "rationale": "Reports an increase in cases and a source of concern, not specific metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreaks and total number of affected poultry ('totalling 650,000 poultry') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('one case has been confirmed') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('overall public health risk is low')."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "Introduces the topic, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports scale of animals affected ('infected and killed millions of wild and farmed birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of species affected ('found in at least 26 different kinds of mammals') factually."
+  },
+  {
+    "segment_id": "seg_v5_15_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains speculative language about future risk ('could become a major problem')."
+  },
+  {
+    "segment_id": "seg_v5_16_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports observation of infected animals, not prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms/condition, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms/duration, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes duration/progression of symptoms, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_23_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a person's knowledge/realization, not prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports joining a list of species, not specific metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports a person's observation of severity, not a numerical metric."
+  },
+  {
+    "segment_id": "seg_v5_26_647_chunk0",
+    "answer": "no",
+    "rationale": "Expresses emotion/opinion, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases and describes their nature ('infected nearly 900 people', 'sporadic and usually self-limiting') factually."
+  },
+  {
+    "segment_id": "seg_v5_34_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infections ('at least three of these apparently dead-end infections') factually."
+  },
+  {
+    "segment_id": "seg_v5_35_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of workers and outcome ('Two of the workers developed conjunctivitis') factually."
+  },
+  {
+    "segment_id": "seg_v5_36_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('In one case') factually."
+  },
+  {
+    "segment_id": "seg_v5_43_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers of animals and outcome ('three healthy ferrets were placed', 'three of the sick animals', 'all of them became ill') factually."
+  },
+  {
+    "segment_id": "seg_v5_44_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers of herds, states, and infections ('more than 80 dairy herds have tested positive', 'across at least 12 states', 'number of human infections has apparently been low') factually."
+  },
+  {
+    "segment_id": "seg_v5_45_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains speculative language about future change ('all of this could change')."
+  },
+  {
+    "segment_id": "seg_v5_46_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses opportunity for spread/change, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_47_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses speed of change ('change very quickly') using an intensifier on a background condition."
+  },
+  {
+    "segment_id": "seg_v5_48_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses speed of change/spread ('change very quickly', 'spread very easily') using intensifiers on background conditions."
+  },
+  {
+    "segment_id": "seg_v5_49_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses exposure, immunity, and viral difference, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_50_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes findings as 'sobering', which is framing language."
+  },
+  {
+    "segment_id": "seg_v5_51_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infections ('more than two dozen human infections') factually."
+  },
+  {
+    "segment_id": "seg_v5_52_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential cause of severity difference, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_53_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports lack of testing, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_54_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential cause of severity, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_75_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential outcome based on exposure level, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_76_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes viral capability/impact, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_79_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports agreement, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_82_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes animal behavior, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_87_647_chunk0",
+    "answer": "no",
+    "rationale": "Discusses viral evolution/capability, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_91_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports outcome for a few animals, not specific metrics or economic data."
+  },
+  {
+    "segment_id": "seg_v5_95_647_chunk0",
+    "answer": "no",
+    "rationale": "Reports personal experience/action, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "no",
+    "rationale": "Contains framing language ('poultry farmers across the country are on edge')."
+  },
+  {
+    "segment_id": "seg_v5_2_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports price changes ('cost more', 'prices could get even higher') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "no",
+    "rationale": "Factual statement about a person's role, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of animals affected ('more than 600,000 chickens and turkeys have been affected') factually."
+  },
+  {
+    "segment_id": "seg_v5_17_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a ranking/metric ('We are the No. 1 turkey producing state') factually."
+  },
+  {
+    "segment_id": "seg_v5_18_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports price change ('Chicken prices rise') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports production metric ('raises around 30 million pounds of turkey') factually."
+  },
+  {
+    "segment_id": "seg_v5_23_1065_chunk0",
+    "answer": "no",
+    "rationale": "Expresses uncertainty/lack of preparedness, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "no",
+    "rationale": "Factual statement about a company, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_26_1065_chunk0",
+    "answer": "no",
+    "rationale": "Reports a decision/reasoning, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds, states, and flocks affected ('affected nearly 23 million birds in 24 states, in 90 commercial and 38 backyard flocks') factually."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission method, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1198_chunk0",
+    "answer": "yes",
+    "rationale": "Reports farm capacity ('can house up to 750,000 chickens') and increase of deaths factually."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('More than 100 cases have been confirmed') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports proportion of states ('Most states have reported cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "no",
+    "rationale": "Reports finding/testing outcome, not prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds and test results ('Two other birds... tested positive', 'test results aren’t yet completed for five others') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports expected increase in exposure ('Exposure to the virus is expected to rise') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "no",
+    "rationale": "Describes occurrence/distribution, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('Humans are considered to be at low risk')."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risk... appears low')."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread ('spread rapidly worldwide') using a standard verb and neutral adverb."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "no",
+    "rationale": "Describes severity as 'mild', which is framing language."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "no",
+    "rationale": "Lists locations where outbreaks were reported, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds ('outbreak was found in a backyard with 80 domestic birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission method, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports a finding/result, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes a method/action, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports experimental parameters (temperatures), not economic or impact metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports findings/results, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports publication detail, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports disclosure detail, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1702_chunk0",
+    "answer": "no",
+    "rationale": "Reports study limitation, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "no",
+    "rationale": "Describes historical circulation and recent jump, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of herds and states tested positive ('cows in 96 herds across 12 states have been tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of workers tested positive ('Three farm workers... have tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_6_1300_chunk0",
+    "answer": "yes",
+    "rationale": "Reports potential economic risk ('risk nearly $10 billion of chicken exports') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1917_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection of a strain, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_1917_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds slaughtered ('At least 52 million birds have been slaughtered', 'compared with 50.2 million') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports production numbers ('usually produce 1.2 to 1.3 million free range birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds affected ('seen around 600,000 of those free range birds being directly affected') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports production numbers ('total turkey production... was usually about 8.5 to 9 million birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_5_1485_chunk0",
+    "answer": "no",
+    "rationale": "Reports recovery time, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_1485_chunk0",
+    "answer": "no",
+    "rationale": "Expresses caution/potential change, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risk posed... as “low.”')."
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('risk posed... as “low.”')."
+  },
+  {
+    "segment_id": "seg_v5_009_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people ill ('a total of seven people... have been identified as having been ill') factually."
+  },
+  {
+    "segment_id": "seg_v5_013_803_chunk0",
+    "answer": "no",
+    "rationale": "Expresses opinion/concern, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_015_803_chunk0",
+    "answer": "no",
+    "rationale": "Expresses emotion/concern, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_016_803_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level ('at higher risk'), which is framing."
+  },
+  {
+    "segment_id": "seg_v5_023_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of herds and states tested positive ('239 herds in 14 states have tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_024_803_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions/lack of action, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_026_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infected herds ('Colorado has found 64 infected herds') factually."
+  },
+  {
+    "segment_id": "seg_v5_027_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of affected farms ('confirmed 41 affected farms') factually."
+  },
+  {
+    "segment_id": "seg_v5_002_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage died ('Some 96 per cent of elephant seal pups... died') factually."
+  },
+  {
+    "segment_id": "seg_v5_003_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports estimated number killed ('estimate that 17,400 baby elephant seals were killed') and comparison ('highest figure') factually."
+  },
+  {
+    "segment_id": "seg_v5_006_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection date/location, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_007_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread and speed ('has spread more quickly') using a standard verb and neutral adverb."
+  },
+  {
+    "segment_id": "seg_v5_008_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of species infected ('infected at least 320 bird and 25 mammal species') factually."
+  },
+  {
+    "segment_id": "seg_v5_009_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds died ('More than 500,000 birds... have died') factually."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports an instance of death, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports past belief about transmission, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports growing evidence of transmission route, not specific metrics."
+  },
+  {
+    "segment_id": "seg_v5_013_813_chunk0",
+    "answer": "no",
+    "rationale": "Reports study suggestions about circulation, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_015_813_chunk0",
+    "answer": "no",
+    "rationale": "Expresses likelihood/conclusion about transmission, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "no",
+    "rationale": "States a conclusion about transmission, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "no",
+    "rationale": "Discusses increased risk/chance, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_022_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a percentage died ('96% Proportion of elephant seal pups that have died') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports production projections ('produce up to 14.9 million tons... and up to 15.35 million tons') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage increase projections ('annual output increase of up to 2.6%... and up to 3.7%') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports market share percentages and change ('hold a nearly 38% market share... up from around 36%') factually."
+  },
+  {
+    "segment_id": "seg_v5_7_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports export volume and value projections ('end at a record of up to 5.15 million tons', 'value of exports at between $9.5 billion and $10 billion') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1397_chunk0",
+    "answer": "yes",
+    "rationale": "Reports export volume projection ('exports will reach up to 5.3 million tons') factually."
+  },
+  {
+    "segment_id": "seg_v5_001_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of chickens euthanised ('more than 500,000 chickens euthanised') factually."
+  },
+  {
+    "segment_id": "seg_v5_003_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of farms affected ('detected on four farms', 'detected at a fifth farm') factually."
+  },
+  {
+    "segment_id": "seg_v5_005_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a limit/restriction ('A 24-egg limit applies') factually."
+  },
+  {
+    "segment_id": "seg_v5_012_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports detection location/type, not prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_015_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of properties/chickens identified ('Chickens at three other properties... were identified') factually."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports a restriction and a warning about potential impact, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "no",
+    "rationale": "Gives advice, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "no",
+    "rationale": "Expresses opinion/reasoning, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "no",
+    "rationale": "Describes the type of business, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_025_644_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission and risk level ('more at risk'), which is framing."
+  },
+  {
+    "segment_id": "seg_v5_026_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports proportion of infections ('Most of the infections... have been') factually."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "no",
+    "rationale": "Reports potential consequence, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('A person in Texas tested positive', 'second known instance of human infection') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports symptom and treatment, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring language ('human health risk... remains low')."
+  },
+  {
+    "segment_id": "seg_v5_6_405_chunk0",
+    "answer": "no",
+    "rationale": "Expresses personal inquiry, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a previous case ('previous human case was reported in Colorado in 2022') factually."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "no",
+    "rationale": "Describes typical occurrence/transmission, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "no",
+    "rationale": "Describes shedding and infection route, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports types of animals infected, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases and fatality rate ('some 890 human cases have been reported', 'fatality rate of roughly 50%') factually."
+  },
+  {
+    "segment_id": "seg_v5_15_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of farms and test results ('at two dairy farms in Kansas and one in Texas... tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_16_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports finding the virus in a herd, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_405_chunk0",
+    "answer": "no",
+    "rationale": "Reports finding the virus and states it's the first time, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "no",
+    "rationale": "Describes historical impact, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports scale of death ('led to the death of tens of millions of chickens') factually."
+  },
+  {
+    "segment_id": "seg_v5_2_899_chunk0",
+    "answer": "no",
+    "rationale": "Reports a suspension and lists countries, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_899_chunk0",
+    "answer": "yes",
+    "rationale": "Reports scale of animals culled ('Thousands of chickens... have been culled') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "no",
+    "rationale": "Describes outcome, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_1181_chunk0",
+    "answer": "no",
+    "rationale": "Contains framing language about economic impact ('worsening economic pain', 'red-hot inflation', 'more expensive')."
+  },
+  {
+    "segment_id": "seg_v5_7_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of states affected ('infected flocks... across 46 states') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentages ('30 percent of the cases were traced', 'compared to 85 percent') factually."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage of farms affected ('account for more than 70 percent') factually."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "Gives advice and contains explicit reassuring language ('outbreak poses a low risk')."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "no",
+    "rationale": "Reports a historical first/confirmation, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of farms affected ('affected 11 poultry farms') and number of birds lost ('loss of more than 400,000 birds') factually."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people and outcome ('Seven people... also developed symptoms') factually."
+  },
+  {
+    "segment_id": "seg_v5_3_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people in a cluster ('has grown to include eight people') factually."
+  },
+  {
+    "segment_id": "seg_v5_4_800_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential implications, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes rarity ('extremely rare'), which is framing."
+  },
+  {
+    "segment_id": "seg_v5_6_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes typical cause of cases, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people and outcome ('infected one household member and six health care workers, all of whom developed symptoms') factually."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "Expresses opinion/concern ('We should be very concerned'), which is framing."
+  },
+  {
+    "segment_id": "seg_v5_15_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('There have been 13 other confirmed cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_16_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes how cases were acquired, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('small number of confirmed cases') factually."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes role/significance, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "Expresses potential increase in alarm ('definitely increase my level of alarm'), which is framing."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "no",
+    "rationale": "Reports an outcome/symptom, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_36_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes what epidemiologists can learn, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_37_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes tone as 'unduly optimistic', which is framing/criticism."
+  },
+  {
+    "segment_id": "seg_v5_38_800_chunk0",
+    "answer": "no",
+    "rationale": "Describes messaging as 'a little more confident and a little more placating', which is framing/criticism."
+  },
+  {
+    "segment_id": "seg_v5_46_800_chunk0",
+    "answer": "no",
+    "rationale": "Discusses opportunities for viral evolution, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_55_800_chunk0",
+    "answer": "no",
+    "rationale": "Expresses opinion/call to action, which is framing."
+  },
+  {
+    "segment_id": "seg_v5_4_1138_chunk0",
+    "answer": "no",
+    "rationale": "Describes transmission method, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_1138_chunk0",
+    "answer": "no",
+    "rationale": "Discusses risk level ('likely at higher risk'), which is framing."
+  },
+  {
+    "segment_id": "seg_v5_8_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of detections/events ('187 detections were notified', '3,573 HPAI events were recorded') factually."
+  },
+  {
+    "segment_id": "seg_v5_8_1745_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential increase in risk/ability/outcome, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_001_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a case ('A person in Texas has tested positive') factually."
+  },
+  {
+    "segment_id": "seg_v5_003_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports treatment and outcome, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports types of animals infected, not reporting prices or numerical metrics."
+  },
+  {
+    "segment_id": "seg_v5_006_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of states ('infections have been found in cattle in five U.S. states') factually."
+  },
+  {
+    "segment_id": "seg_v5_008_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('new human case is the second known') factually."
+  },
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('new human case is the second known', 'first was in 2022') factually."
+  },
+  {
+    "segment_id": "seg_v5_010_408_chunk0",
+    "answer": "no",
+    "rationale": "Reports symptom and outcome, not reporting prices or numerical metrics."
+  }
+]
+```

@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a metaphor, not an intensified or comparative risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 20}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes who is leading the investigation.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 231}
+{"Q": 3, "answer": "no", "rationale": "Segment reports who is leading the investigation, not impact.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 174}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 166}
+{"Q": 5, "answer": "no", "rationale": "This segment reports bare facts about who leads the investigation, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 159}
+{"Q": 6, "answer": "no", "rationale": "Contains 'only a portion' but not used with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 125}
+{"Q": 7, "answer": "no", "rationale": "The segment describes who leads the investigation but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 118}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 202, "regex": {"rule": "CapabilityNoReassurance", "span": [44, 53], "captures": []}}

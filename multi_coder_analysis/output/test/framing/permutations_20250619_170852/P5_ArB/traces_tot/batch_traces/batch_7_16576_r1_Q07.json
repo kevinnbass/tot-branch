@@ -1,0 +1,23 @@
+{
+  "batch_id": "batch_7_16576_r1",
+  "hop_idx": 7,
+  "segment_count": 3,
+  "responses": [
+    {
+      "segment_id": "seg_v5_13_137_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes negative facts but does not contain a bare negation keyword."
+    },
+    {
+      "segment_id": "seg_v5_15_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses trust and vaccines but contains no bare negation keyword."
+    },
+    {
+      "segment_id": "seg_v5_26_743_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the bare negation 'no additional tests pending' without an explicit calming cue."
+    }
+  ],
+  "timestamp": "2025-06-19T17:21:38.972476"
+}

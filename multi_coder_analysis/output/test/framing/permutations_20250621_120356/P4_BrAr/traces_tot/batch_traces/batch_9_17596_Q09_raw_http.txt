@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_015_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports actions (suspension of items) rather than prices or economic metrics."
+  },
+  {
+    "segment_id": "seg_v5_014_1282_chunk0",
+    "answer": "yes",
+    "rationale": "Reports prices and percentage increase ('Prices... are 350 Japanese yen', 'going up 70%') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_013_1282_chunk0",
+    "answer": "no",
+    "rationale": "Uses 'impacts food prices' which is not a standard economic verb for reporting price changes."
+  },
+  {
+    "segment_id": "seg_v5_012_1282_chunk0",
+    "answer": "no",
+    "rationale": "Uses 'impacts food prices' which is not a standard economic verb for reporting price changes."
+  },
+  {
+    "segment_id": "seg_v5_011_1282_chunk0",
+    "answer": "no",
+    "rationale": "Uses 'impacting food prices' which is not a standard economic verb for reporting price changes."
+  },
+  {
+    "segment_id": "seg_v5_008_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses carcass disposal and fears of contamination, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_004_1282_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses outbreaks, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_022_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal quote about uncertainty, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_021_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal quote about future presence, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_020_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses emotion ('very heartbreaking'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_010_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal statement, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_009_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal statement about inability to show, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_008_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses disruption of traditions, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_007_760_chunk0",
+    "answer": "yes",
+    "rationale": "Reports layoffs ('laid off close to 400 employees') using a standard verb for this metric."
+  },
+  {
+    "segment_id": "seg_v5_006_760_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metrics ('millions of dollars in losses and worker layoffs') using standard verbs ('leading to')."
+  },
+  {
+    "segment_id": "seg_v5_005_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level ('risk... remains low'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_004_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case numbers and symptoms, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_002_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports changes and cancellations, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_001_760_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'interfered', not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion ('amazing peace of mind'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion ('peace of mind'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses media reaction and prediction ('impending crisis'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses 'real worry' and potential future events, not factual reporting of current prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a characteristic of the virus ('is mutating'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1645_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a 'stark warning', not factual reporting of prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1183_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds killed ('52.5 million birds have been killed') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1183_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds killed ('6 million', '15.5 million') using standard verbs ('stands at', 'leading')."
+  },
+  {
+    "segment_id": "seg_v5_2_1183_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the location of a case, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_18_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports geographical spread, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports detection in species, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('Strandings have continued to increase') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_14_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports metric change ('Strandings have continued to increase') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_10_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number killed ('killed tens of million') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_9_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports location, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level ('risk... is low'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports test results and geographical spread, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_188_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an outcome ('were found dead'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_188_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of strandings ('159 have been reported') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_19_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes virus evolution, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_18_269_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical death toll ('killed an estimated 50 million people') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_16_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses possibility of future infections, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case numbers in animals, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_14_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case numbers in animals, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_269_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case numbers and a 'rise' in detections using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_12_269_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a warning and risk level, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_269_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case numbers ('over 850 cases') and fatality rate ('high case-fatality rate') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_020_297_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses emotion ('definitely so sad'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_017_297_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of dead birds found ('found 246 dead birds', 'found 107') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_010_297_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses government priorities, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_009_297_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses funding sources, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_005_297_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of dead seabirds seen ('saw more than 500 dead seabirds') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_16_1508_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports lack of information, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_1508_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an action ('are talking'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_12_1508_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion and discusses impact ('big deal'), not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1508_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case details, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_1508_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential action ('may still be held'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1508_chunk0",
+    "answer": "yes",
+    "rationale": "Reports amount imported ('imports a small amount') using a standard verb and neutral description."
+  },
+  {
+    "segment_id": "seg_v5_33_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of birds killed, number of hens, and price change ('prices are down about 25%') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_32_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports consumption metric ('consume an average of 3 billion eggs') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_31_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential future outcomes ('see higher prices', 'experience 'reputational strain''), not current prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_30_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses concern ('There is a concern'), not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_28_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential impact and expresses concern ('concerning'), not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_27_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level ('current public health risk is low'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_26_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a spread pattern, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical instances, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports symptoms, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a symptom, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a diagnosis, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_19_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports symptoms and outcome, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_18_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a historical case, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_1506_chunk0",
+    "answer": "yes",
+    "rationale": "Reports case numbers ('nearly 900 people have been diagnosed') and deaths ('more than 460 people have died') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_15_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a historical event, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_14_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports geographical spread, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a finding, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports geographical spread, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports spread among species, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports virus evolution, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level and 'rising concern', not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports developments (infected cows, human case), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outbreaks, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1506_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports developments and 'raised concerns', not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_12_1038_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a quote, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_9_1038_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a regulation, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1038_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports potential shopper observation, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_1038_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a regulation change, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_1_1038_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a future event ('will disappear'), not current prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_833_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports appearance of cases, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_833_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case number and location, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_879_chunk0",
+    "answer": "yes",
+    "rationale": "Reports population size ('population amounting to 138 million head') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_2_879_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports discovery location, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_101_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_93_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about metrics, it does not report them."
+  },
+  {
+    "segment_id": "seg_v5_90_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about metrics, it does not report them."
+  },
+  {
+    "segment_id": "seg_v5_88_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses metrics, it does not report them factually."
+  },
+  {
+    "segment_id": "seg_v5_70_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_65_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about likelihood, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_63_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_54_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_53_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment introduces a topic, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_50_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses worry, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_47_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses worry, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_46_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential spread and avoids alarmism, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_45_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_42_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses feeling ('traumatized'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_41_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses feeling ('traumatized'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_38_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses a thought, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_33_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses an opinion/state, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_32_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an action ('kept their assessment'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_31_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an effort, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_30_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses feeling ('I am concerned'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_29_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_24_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses past experience, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a personal statement, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_20_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports budget proposal ('proposed a flat budget', 'getting the same amount') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_19_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_17_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports others' reactions/quotes, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_11_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses feeling and action, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses a personal need, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_5_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses willingness, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports budget amount ('$6.6 billion annual budget') using a standard verb ('sign off on')."
+  },
+  {
+    "segment_id": "seg_v5_1_805_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports personnel change and historical context, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_22_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports 'Fears of a turkey shortage', not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports price increases ('prices... rose at 21 per cent', 'rise of 14 per cent', '12 per cent') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_17_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses future impact ('will also be hit'), not current prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_16_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level ('real risk'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_15_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports estimated loss ('half of all adult birds may have perished') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_14_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports worry, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of dead birds ('hundreds of dead birds') using standard verbs ('record', 'washing up')."
+  },
+  {
+    "segment_id": "seg_v5_12_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses a factor affecting contagion, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_10_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports loss estimates ('loss estimates range as high as 1mn birds') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_9_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports timing and duration of outbreak, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports spread, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a metric ('A bigger toll') using a standard verb ('is falling upon')."
+  },
+  {
+    "segment_id": "seg_v5_2_1166_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses threat level, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_079_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses expectation, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_077_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about potential effect, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_074_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about a biological process, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_072_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about transmission route, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_067_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about transmission route, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_059_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about scientific activity, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_058_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes conditions for detection, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_057_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about detection, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_053_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about transmission route, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_048_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a biological process and severity ('severe issue'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_047_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor and discusses worry, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_043_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical increase ('major increase') and number of cases ('hundreds of cases') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_042_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical increase ('major increase') and number of cases ('hundreds of cases') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_041_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical increase ('major increase') using a standard noun."
+  },
+  {
+    "segment_id": "seg_v5_036_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses perspective, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_035_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical fatal cases and asks a question about risk, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_034_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical fatal cases, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_030_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question, not reporting prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_024_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level ('low risk'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_023_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment asks a question about likelihood, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_012_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an action ('talked to'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_011_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports historical cases and outcome ('were deadly'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_009_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case number and details, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_008_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a case number, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_006_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports geographical spread, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports spread among species, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1745_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports concern and potential future events, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_1745_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of infected herds ('infected more than 130 herds') and states ('12 states') using a standard verb."
+  },
+  {
+    "segment_id": "seg_v5_8_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Reports numbers of detections/events ('187 detections were notified', '3,573 HPAI events were recorded') using standard verbs."
+  },
+  {
+    "segment_id": "seg_v5_6_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a risk adjective ('severe epidemic'), not factual reporting without framing."
+  },
+  {
+    "segment_id": "seg_v5_5_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a risk level ('higher risk'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission route, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_2_1138_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a strong negative noun ('devastation'), not factual reporting without framing."
+  },
+  {
+    "segment_id": "seg_v5_54_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion and prediction ('big outbreak'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_52_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses a hypothetical scenario and detection method, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_49_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses public health response, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_47_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses factors affecting case identification, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_46_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses virus evolution and potential future event, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_38_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses messaging tone, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_37_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses communication tone, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_35_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports criticism, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_28_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case details, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_27_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case details, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses potential increase in 'level of alarm', which is explicit framing."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses historical role of healthcare workers, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_23_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses the scale of a potential pandemic, not current prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_21_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('small number') using factual quantification."
+  },
+  {
+    "segment_id": "seg_v5_15_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of cases ('13 other confirmed cases') using a standard verb ('have been')."
+  },
+  {
+    "segment_id": "seg_v5_16_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a metaphor ('inching closer and closer') and discusses a potential future event, not factual reporting."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses opinion ('should be very concerned'), not factual reporting of prices/metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports potential case numbers, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_7_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports case details, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_6_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports source of cases, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_4_800_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential implication, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_3_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people ('eight people') using a standard verb ('has grown to include')."
+  },
+  {
+    "segment_id": "seg_v5_1_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of people ('Seven people') and outcome ('developed symptoms') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_9_45_chunk0",
+    "answer": "yes",
+    "rationale": "Reports number of farms affected ('affected 11 poultry farms') and loss ('loss of more than 400,000 birds') using standard terms."
+  },
+  {
+    "segment_id": "seg_v5_8_45_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports confirmation of infection, not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a recommendation and risk level ('low risk'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_13_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentage ('more than 70 percent') and number of farms using a standard verb ('account for')."
+  },
+  {
+    "segment_id": "seg_v5_11_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports percentages ('30 percent', '85 percent') using a standard verb ('were traced')."
+  },
+  {
+    "segment_id": "seg_v5_10_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an action ('struggled'), not prices or metrics."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes transmission route, not prices or metrics."
+  }
+]
+```

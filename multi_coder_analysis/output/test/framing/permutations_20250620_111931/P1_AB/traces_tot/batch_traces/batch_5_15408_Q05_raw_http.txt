@@ -1,0 +1,479 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_19_1007_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'concerning' which is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_20_1007_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about production/exports, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_11_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factual detection, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_13_1008_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation 'will not enter the food system' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_14_1008_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation 'do not present an immediate public health concern' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_15_1008_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice on cooking temperature, not an explicit calming cue about current safety."
+  },
+  {
+    "segment_id": "seg_v5_16_1008_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the direct consumption safety assurance 'remain safe for consumers'."
+  },
+  {
+    "segment_id": "seg_v5_17_1008_chunk0",
+    "answer": "no",
+    "rationale": "Describes actions taken (biosecurity measures), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_18_1008_chunk0",
+    "answer": "no",
+    "rationale": "Bare positive fact 'is not expected to impact production levels' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_52_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes a method (culling), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_53_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes a method (culling), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_54_101_chunk0",
+    "answer": "no",
+    "rationale": "States an opinion about humaneness for birds, not a calming cue for human safety."
+  },
+  {
+    "segment_id": "seg_v5_55_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about an outbreak and culling, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_11_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports factual information about location and strain, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_13_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports a confirmation, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_14_1009_chunk0",
+    "answer": "no",
+    "rationale": "States rarity ('rare') without an intensifier required for Q5 low-risk cue."
+  },
+  {
+    "segment_id": "seg_v5_15_1009_chunk0",
+    "answer": "no",
+    "rationale": "Bare positive fact 'No Americans are recorded to have contracted' is handled under Q7."
+  },
+  {
+    "segment_id": "seg_v5_16_1009_chunk0",
+    "answer": "no",
+    "rationale": "Provides historical context, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_1_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken (ramping up biosecurity), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports scope of detection, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_3_1008_chunk0",
+    "answer": "no",
+    "rationale": "Uses 'reigniting fears' which is Neutral per the context guard for psychological verbs."
+  },
+  {
+    "segment_id": "seg_v5_5_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports historical facts/impact, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_6_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports a detection, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_7_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken (depopulation), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_8_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports a non-disclosure, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_9_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports pending results, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_10_1008_chunk0",
+    "answer": "no",
+    "rationale": "Reports a detection, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports a detection, no explicit calming cue. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_2_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports details of detection, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_3_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken ('working closely'), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_4_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken (quarantine, depopulation), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_5_1009_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation 'will not enter the food system' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_6_1009_chunk0",
+    "answer": "no",
+    "rationale": "Bare positive fact 'No human cases... have been detected' is handled under Q7."
+  },
+  {
+    "segment_id": "seg_v5_7_1009_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation 'do not present an immediate health concern' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_8_1009_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice on cooking temperature, not an explicit calming cue about current safety."
+  },
+  {
+    "segment_id": "seg_v5_9_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken ('working jointly on additional surveillance'), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_10_1009_chunk0",
+    "answer": "no",
+    "rationale": "Reports sequence of events, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_1000_chunk0",
+    "answer": "no",
+    "rationale": "Reports detections, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_3_1000_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts about outbreaks and culling, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_4_1000_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts about outbreaks and culling, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_5_1000_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken (quarantine/killed) and a bare positive fact (no human cases), handled under Q7."
+  },
+  {
+    "segment_id": "seg_v5_6_1000_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation 'will not enter the food system' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_7_1000_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation (Q7) and boast about surveillance ('strongest AI surveillance program') without explicit safety link (Q7)."
+  },
+  {
+    "segment_id": "seg_v5_8_1000_chunk0",
+    "answer": "no",
+    "rationale": "Boast about surveillance (Q7) and bare negation of concern (Q7)."
+  },
+  {
+    "segment_id": "seg_v5_9_1000_chunk0",
+    "answer": "no",
+    "rationale": "Reports a belief about spread, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_10_1000_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice/urging, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_11_101_chunk0",
+    "answer": "no",
+    "rationale": "States rarity ('pretty rare') without an intensifier required for Q5 low-risk cue."
+  },
+  {
+    "segment_id": "seg_v5_12_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports actions taken (monitoring), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_13_101_chunk0",
+    "answer": "no",
+    "rationale": "Bare positive fact 'no cases... have been found' is handled under Q7."
+  },
+  {
+    "segment_id": "seg_v5_14_101_chunk0",
+    "answer": "no",
+    "rationale": "Bare negation 'should not pose a risk' is handled under Q7, not Q5."
+  },
+  {
+    "segment_id": "seg_v5_15_101_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the low-risk evaluation with intensifier 'extremely low'."
+  },
+  {
+    "segment_id": "seg_v5_16_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes responsibilities, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_17_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes procedures, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_18_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes procedures, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_19_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes procedures, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_20_101_chunk0",
+    "answer": "no",
+    "rationale": "States current status as animal health issue, not framed as calming for humans (Q7)."
+  },
+  {
+    "segment_id": "seg_v5_21_101_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice on cooking temperature, not an explicit calming cue about current safety."
+  },
+  {
+    "segment_id": "seg_v5_22_101_chunk0",
+    "answer": "no",
+    "rationale": "A question, not a statement with a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_24_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports price trend, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_25_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports potential negative outcome (shortages), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_26_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports price trend, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_27_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports potential negative outcome (volatility), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_28_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes a process, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_29_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes a process, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_30_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a fact, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_31_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts, no explicit calming cue. 'highly pathogenic' is a technical term."
+  },
+  {
+    "segment_id": "seg_v5_32_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a number, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_33_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a requirement/action, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_34_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a fact/number, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_35_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a fact/number, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_36_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a fact/number, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_37_101_chunk0",
+    "answer": "no",
+    "rationale": "A question, not a statement with a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_39_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts/numbers, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_40_101_chunk0",
+    "answer": "no",
+    "rationale": "Uses 'raised concerns' which is Neutral per the context guard for psychological verbs."
+  },
+  {
+    "segment_id": "seg_v5_1_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts/numbers, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts/numbers, no explicit calming cue. 'highly contagious' is factual."
+  },
+  {
+    "segment_id": "seg_v5_3_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports facts/impact, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_5_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes spread and difficulty, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_6_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_7_101_chunk0",
+    "answer": "no",
+    "rationale": "Provides context/history, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_8_101_chunk0",
+    "answer": "no",
+    "rationale": "States something is 'not unexpected', which is Neutral (Q7)."
+  },
+  {
+    "segment_id": "seg_v5_10_101_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the low-risk evaluation with intensifier 'very low'."
+  },
+  {
+    "segment_id": "seg_v5_011_1010_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the explicit calming cue 'Fortunately for consumers'."
+  },
+  {
+    "segment_id": "seg_v5_013_1010_chunk0",
+    "answer": "no",
+    "rationale": "Bare positive fact 'No human infections... have been detected' is handled under Q7."
+  },
+  {
+    "segment_id": "seg_v5_014_1010_chunk0",
+    "answer": "no",
+    "rationale": "Discusses potential negative impact (cost burden), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_015_1010_chunk0",
+    "answer": "no",
+    "rationale": "Reports a negative consequence (halted imports), no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_016_1010_chunk0",
+    "answer": "yes",
+    "rationale": "Contains the transient-issue minimiser 'may be short-lived'."
+  },
+  {
+    "segment_id": "seg_v5_41_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports an observation about spread, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_42_101_chunk0",
+    "answer": "no",
+    "rationale": "A question, not a statement with a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_43_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a warning and emphasis on measures, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_44_101_chunk0",
+    "answer": "no",
+    "rationale": "Describes measures, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_45_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factor in spread, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_46_101_chunk0",
+    "answer": "no",
+    "rationale": "Reports a factor in spread, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_48_101_chunk0",
+    "answer": "no",
+    "rationale": "Provides advice/opinion, no explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_001_1010_chunk0",
+    "answer": "no",
+    "rationale": "Reports detections and a potential negative outcome ('likely threat'), no explicit calming cue."
+  }
+]
+```

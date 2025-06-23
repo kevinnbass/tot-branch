@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13712", "batch_size": 260, "batch_pos": 46}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language like 'announced' and 'were found', not high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_10392", "batch_size": 260, "batch_pos": 17}
+{"Q": 3, "answer": "no", "rationale": "Plain verbs used; scale not paired with moderate verb.", "method": "llm_batch", "batch_id": "batch_3_17744", "batch_size": 260, "batch_pos": 208}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16800", "batch_size": 260, "batch_pos": 196}
+{"Q": 5, "answer": "no", "rationale": "The segment reports presumptive positive cases but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_16868", "batch_size": 260, "batch_pos": 193}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18396", "batch_size": 260, "batch_pos": 135}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_6972", "batch_size": 260, "batch_pos": 122}
+{"Q": 8, "answer": "no", "rationale": "The segment reports human cases, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_13608", "batch_size": 260, "batch_pos": 230}
+{"Q": 9, "answer": "no", "rationale": "The segment reports presumptive positive cases found, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14032", "batch_size": 260, "batch_pos": 77}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15748", "batch_size": 260, "batch_pos": 165}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement reports factual events, no framing.", "method": "llm_batch", "batch_id": "batch_11_16676", "batch_size": 247, "batch_pos": 127}
+{"Q": 12, "answer": "yes", "rationale": "regex:NeutralStats matched", "method": "regex", "batch_id": "batch_12_14284", "batch_size": 246, "batch_pos": 126, "regex": {"rule": "NeutralStats", "span": [57, 111], "captures": ["announce", "cases"]}}

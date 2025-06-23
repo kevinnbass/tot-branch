@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "'nearly' modifies a number.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 54}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 54}
+{"Q": 3, "answer": "no", "rationale": "Uses 'were euthanized' (containment verb), which is explicitly neutralised even with scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 50}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 50}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 50}
+{"Q": 5, "answer": "no", "rationale": "The segment reports euthanasia and uncertainty, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 49}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 46}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_7692_r1", "batch_size": 260, "batch_pos": 46}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 46}
+{"Q": 8, "answer": "no", "rationale": "Reports a past event (euthanasia) focusing on scale, not ongoing capability.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 45}
+{"Q": 9, "answer": "no", "rationale": "The segment reports the number of animals euthanized, not prices, economic data, or numerical metrics in the defined sense.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 35}
+{"Q": 10, "answer": "no", "rationale": "The segment reports culling and uncertainty about entry, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 34}
+{"Q": 11, "answer": "no", "rationale": "Authorial statement provides factual reporting of events and lack of clarity.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 31}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of euthanasia count and lack of clarity without explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 31}

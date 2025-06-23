@@ -1,0 +1,1008 @@
+{
+  "batch_id": "batch_3_16792",
+  "hop_idx": 3,
+  "segment_count": 200,
+  "responses": [
+    {
+      "segment_id": "seg_v5_016_1282_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains scale information ('20%', '100 listed companies') but lacks a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_017_1282_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'affecting' is not a moderate verb from the specified list, and no specific scale is provided."
+    },
+    {
+      "segment_id": "seg_v5_1_961_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list, and no specific scale is provided."
+    },
+    {
+      "segment_id": "seg_v5_2_961_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('slaughter') which triggers the containment override for Q3. The action is also planned ('are to slaughter')."
+    },
+    {
+      "segment_id": "seg_v5_3_961_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spreading' is not a moderate verb from the specified list, and no specific scale of realised impact is provided."
+    },
+    {
+      "segment_id": "seg_v5_4_961_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'prompting' is a moderate verb, but it is paired with 'Several cases' which is not a specific numeric or record-type scale."
+    },
+    {
+      "segment_id": "seg_v5_5_961_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('cull') which triggers the containment override for Q3, despite the scale ('over 3 million ducks')."
+    },
+    {
+      "segment_id": "seg_v5_6_961_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'prompt' is a moderate verb, but it is paired with 'trade restrictions' which falls under financial/trade metrics excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_7_961_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'raising concern' is a psychological verb and is not paired with a vivid intensifier or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_8_961_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spread' is not a moderate verb from the specified list, and no specific scale is provided."
+    },
+    {
+      "segment_id": "seg_v5_1_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('slaughtered') which triggers the containment override for Q3, despite the scale ('Nearly 5 million')."
+    },
+    {
+      "segment_id": "seg_v5_2_358_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'killed' and 'slaughtered' are either plain outcome verbs or containment verbs, preventing Q3 from firing despite the large numbers."
+    },
+    {
+      "segment_id": "seg_v5_3_358_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'worrisome indication' is evaluative language, not a moderate verb paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_5_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_7_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'popping up' is not a moderate verb from the specified list, and no specific scale is provided."
+    },
+    {
+      "segment_id": "seg_v5_8_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('slaughtered') which triggers the containment override for Q3, despite the large numbers."
+    },
+    {
+      "segment_id": "seg_v5_9_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'affected' is a plain outcome verb, not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_10_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'peaked' is a moderate verb, but it is paired with financial metrics ('$4.82', '$1.93') which are excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_11_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information linked to such a verb."
+    },
+    {
+      "segment_id": "seg_v5_12_358_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'spiked' and 'soared' are moderate verbs, but they are paired with financial metrics ('prices', 'costs') which are excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_13_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'climbed' is not a moderate verb from the specified list, and the segment discusses financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_14_358_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'hit as hard' contains 'hit', but it is not paired with a specific numeric or record-type scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_15_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and discusses financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_16_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_17_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_18_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_19_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'cost' is not a moderate verb from the specified list, despite being paired with a large number."
+    },
+    {
+      "segment_id": "seg_v5_20_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'suffered' is not a moderate verb from the specified list, despite being paired with a large number."
+    },
+    {
+      "segment_id": "seg_v5_21_358_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'killed' is a plain outcome verb, not a moderate verb from the specified list for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_22_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_23_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_24_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_25_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_26_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_27_358_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_1_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'warned' is not a moderate verb from the specified list, and the scale ('paying more') is hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_2_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'confirmed' is not a moderate verb from the specified list, and the scale ('five more states') is not a significant impact metric for Q3."
+    },
+    {
+      "segment_id": "seg_v5_3_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spreads' is not a moderate verb from the specified list, and 'prove deadly' is an outcome, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_4_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_5_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('depopulated') which triggers the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_6_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_7_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('euthanized') which triggers the containment override for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_8_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('depopulated') which triggers the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_9_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_10_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'occurred' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_11_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'reported' and 'kill' are not moderate verbs from the specified list for Q3, despite the large numbers."
+    },
+    {
+      "segment_id": "seg_v5_12_1055_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_13_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'surge' is a moderate verb, but it is paired with financial metrics ('food prices', '5 percent') which are excluded from Q3."
+    },
+    {
+      "segment_id": "seg_v5_14_1055_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'contribute' and 'decrease' are not moderate verbs from the specified list, and the segment discusses financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_002_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'infected' and 'killing' are plain outcome verbs, not moderate verbs from the specified list for Q3, despite the numbers."
+    },
+    {
+      "segment_id": "seg_v5_005_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'triggering fears' is a psychological verb and not paired with a vivid intensifier or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_006_258_chunk0",
+      "answer": "no",
+      "rationale": "The word 'concerning' is an adjective, not a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_007_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_008_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_009_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'infect' is a plain outcome verb, not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_012_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_014_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'report' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_017_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_018_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_020_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_021_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'spread' and 'infected' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_022_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'spread' and 'infected' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_025_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_026_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_027_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worrying' is a psychological verb."
+    },
+    {
+      "segment_id": "seg_v5_028_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_029_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'like' and 'struggled' are not moderate verbs from the specified list, and 'worried' is a psychological verb."
+    },
+    {
+      "segment_id": "seg_v5_030_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'raised the specter' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_031_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'moved' and 'spread' are not moderate verbs from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_032_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'recorded' is not a moderate verb from the specified list for Q3, despite the numbers."
+    },
+    {
+      "segment_id": "seg_v5_033_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list for Q3, despite the number."
+    },
+    {
+      "segment_id": "seg_v5_034_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'died' is a plain outcome verb, not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_036_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worrying' is a psychological verb."
+    },
+    {
+      "segment_id": "seg_v5_037_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'worrying' and 'worries' are psychological verbs."
+    },
+    {
+      "segment_id": "seg_v5_038_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worries' is a psychological verb, and 'seeing more chances' is not a moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_039_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_040_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_042_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_043_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_044_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'sparked' is a psychological verb ('sparked debate') and not paired with a vivid intensifier or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_045_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_047_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'occurred', 'saw', 'move about', 'sickening', and 'killing' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_048_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('euthanized') which triggers the containment override for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_050_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spread' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_053_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'gives pause' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_054_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'transmit' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_055_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'reports' is not a moderate verb from the specified list for Q3, despite the number."
+    },
+    {
+      "segment_id": "seg_v5_056_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_057_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'infect' is a plain outcome verb, not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_058_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'died' and 'infected' are plain outcome verbs, not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_059_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_060_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_063_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'infected' and 'moved about' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_064_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'infected' and 'reported' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_065_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'spread', 'reports', and 'infects' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_066_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_068_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'a whole lot more' is not a specific numeric or record-type scale."
+    },
+    {
+      "segment_id": "seg_v5_071_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'mitigate concern' is not a moderate verb + scale pattern."
+    },
+    {
+      "segment_id": "seg_v5_072_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'have' and 'reports' are not moderate verbs from the specified list for Q3, despite the numbers."
+    },
+    {
+      "segment_id": "seg_v5_073_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culling') which triggers the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_074_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_075_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'had' is not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_076_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'reported' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_077_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_078_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_079_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_080_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'caused' is not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_081_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'acquired' and 'infect' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_083_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worries' is a psychological verb."
+    },
+    {
+      "segment_id": "seg_v5_086_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_087_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_089_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_090_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_091_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'major problem' is evaluative language, not a moderate verb paired with scale."
+    },
+    {
+      "segment_id": "seg_v5_093_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'happened' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_095_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'circulating', 'transmitted', and 'caused' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_096_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_097_258_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'caused', 'jump', and 'transmitting' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_098_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worries' is a psychological verb, and 'eroded' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_099_258_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worries' is a psychological verb."
+    },
+    {
+      "segment_id": "seg_v5_100_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_102_258_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_104_258_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'gives me a pit in my stomach' is vivid but describes a personal feeling, not a moderate verb + scale of realised impact."
+    },
+    {
+      "segment_id": "seg_v5_1_1813_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'resulted in the deaths' and 'spilled over' are not moderate verbs from the specified list for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_2_1813_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'surge' is a moderate verb, but it is paired with a hypothetical future event ('in case of a surge'), not a realised impact."
+    },
+    {
+      "segment_id": "seg_v5_3_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_4_1813_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'offset' and 'incentivize' are not moderate verbs from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_5_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_6_1813_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'reported' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_8_1813_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'bristled' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_9_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_10_1813_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_11_1813_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'reported' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_1_201_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'suffered' is not a moderate verb from the specified list, and 'multiple outbreaks' is not a specific numeric or record-type scale."
+    },
+    {
+      "segment_id": "seg_v5_2_201_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'hit' is a moderate verb, but it is paired with 'multiple bird flu outbreaks' which is not a specific numeric or record-type scale."
+    },
+    {
+      "segment_id": "seg_v5_4_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a number ('14 outbreaks') but lacks a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_5_201_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'hit particularly hard' contains 'hit', but it is paired with 'five outbreaks' which is not considered a significant scale for Q3."
+    },
+    {
+      "segment_id": "seg_v5_6_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culled') which triggers the containment override for Q3, despite the scale ('Thousands')."
+    },
+    {
+      "segment_id": "seg_v5_7_201_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'affected' is a plain outcome verb, not a moderate verb from the specified list for Q3, despite the number."
+    },
+    {
+      "segment_id": "seg_v5_8_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_9_201_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'downplayed concerns' is not a moderate verb + scale pattern."
+    },
+    {
+      "segment_id": "seg_v5_11_201_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spreading' is not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_12_201_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'spreading' and 'spread' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_13_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culled') which triggers the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_14_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culled') which triggers the containment override for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_15_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culled') which triggers the containment override for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_16_201_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'worsen' and 'increases' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_17_201_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'dropped' and 'continued' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_18_201_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_19_201_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'started' and 'spread' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_1_1683_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'secure' is not a moderate verb from the specified list, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_2_1683_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'secures' is not a moderate verb from the specified list, despite the numbers."
+    },
+    {
+      "segment_id": "seg_v5_3_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_4_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_5_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_001_1010_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list, and 'posing a likely threat' is hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_50_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'experience' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_49_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'kill' is a plain outcome verb, not a moderate verb from the specified list for Q3, despite the number. The segment is also a question."
+    },
+    {
+      "segment_id": "seg_v5_48_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_46_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_45_101_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'contribute' and 'spreading' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_44_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_43_101_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'warned' and 'emphasized' are not moderate verbs from the specified list, and the scale is hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_42_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_016_1010_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'halted', 'felt', and 'emerged' are not moderate verbs from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_015_1010_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'halted' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_014_1010_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'impose a burden' and 'adding' are not moderate verbs from the specified list, and the scale is hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_013_1010_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_011_1010_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'transmissible' and 'spread' are not moderate verbs from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_10_101_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'very low' is a Reassuring cue (Q5), not a Q3 Alarmist cue."
+    },
+    {
+      "segment_id": "seg_v5_9_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'worried' is a psychological verb, and the segment is a question."
+    },
+    {
+      "segment_id": "seg_v5_8_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'reported' is not a moderate verb from the specified list."
+    },
+    {
+      "segment_id": "seg_v5_7_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'infected' is a plain outcome verb, not a moderate verb from the specified list for Q3, despite the number."
+    },
+    {
+      "segment_id": "seg_v5_6_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information linked to such a verb."
+    },
+    {
+      "segment_id": "seg_v5_5_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spreads' is not a moderate verb from the specified list for Q3."
+    },
+    {
+      "segment_id": "seg_v5_3_101_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'particularly hard hit' contains 'hit', but it is paired with 'disasters being declared' which is not a specific numeric or record-type scale for Q3."
+    },
+    {
+      "segment_id": "seg_v5_1_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'killed' is a plain outcome verb, not a moderate verb from the specified list for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_40_101_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'raised concerns' is a psychological verb and not paired with a vivid intensifier or concrete scale of realised harm."
+    },
+    {
+      "segment_id": "seg_v5_39_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'died' is a plain outcome verb, and 'culled' is a containment verb, preventing Q3 from firing despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_37_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_36_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'infected' is not a moderate verb from the specified list for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_35_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_34_101_chunk0",
+      "answer": "no",
+      "rationale": "The verbs 'constituted' and 'made up' are not moderate verbs from the specified list for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_33_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('euthanized') which triggers the containment override for Q3. The action is also planned ('would be required to be euthanized')."
+    },
+    {
+      "segment_id": "seg_v5_32_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'totaled' is not a moderate verb from the specified list for Q3, despite the large number."
+    },
+    {
+      "segment_id": "seg_v5_31_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list for Q3, despite the number."
+    },
+    {
+      "segment_id": "seg_v5_30_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'detected' is not a moderate verb from the specified list for Q3, despite the number."
+    },
+    {
+      "segment_id": "seg_v5_29_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_28_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_27_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'warned' is not a moderate verb from the specified list, and the scale ('more volatile') is hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_26_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'rising' is not a moderate verb from the specified list, and the segment discusses financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_25_101_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'course through' is not a moderate verb from the specified list, and the scale ('some shortages') is hypothetical."
+    },
+    {
+      "segment_id": "seg_v5_24_101_chunk0",
+      "answer": "no",
+      "rationale": "The phrase 'trending sharply higher' is not a moderate verb from the specified list, and the segment discusses financial metrics."
+    },
+    {
+      "segment_id": "seg_v5_22_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_21_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_20_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culling') which triggers the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_19_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_18_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    },
+    {
+      "segment_id": "seg_v5_17_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('slaughtering') which triggers the containment override for Q3."
+    },
+    {
+      "segment_id": "seg_v5_16_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment lacks a moderate verb from the specified list and specific scale information."
+    }
+  ],
+  "timestamp": "2025-06-19T19:15:43.448541"
+}

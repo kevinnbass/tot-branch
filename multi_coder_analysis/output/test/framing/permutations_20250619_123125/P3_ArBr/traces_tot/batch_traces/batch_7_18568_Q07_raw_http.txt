@@ -1,0 +1,954 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_22_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past events and media actions, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_21_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a historical pattern, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_20_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a fear of future events, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_19_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a concern about potential job loss, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_18_601_chunk0",
+    "answer": "yes",
+    "rationale": "'wouldn't necessarily cover hospitalization' is a bare negation about the scope of care without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_17_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes medical care provision, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_16_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a perceived negative outcome, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_14_601_chunk0",
+    "answer": "yes",
+    "rationale": "'couldn't afford to do either' is a bare negation about capability/affordability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_13_601_chunk0",
+    "answer": "no",
+    "rationale": "'poses a low risk to public health' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_12_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an incentive payment, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a new program, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the number of people tested, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_9_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a method as 'passive', but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a belief about spread, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_6_601_chunk0",
+    "answer": "yes",
+    "rationale": "'unlikely to go to a doctor' is a bare negation about action/capability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_4_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential future risk, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms experienced, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes exposures and lack of resources, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_20_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how spread was facilitated, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_19_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes an increased risk of mutation, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_17_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment stresses the importance of research, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus is capable of adapting, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how viruses mutate and adapt, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1669_chunk0",
+    "answer": "yes",
+    "rationale": "'not until August that marine mammals began showing symptoms' is a bare negation about timing without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_13_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus reached the Americas, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past mortality and spread, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a 'worrying ability to adapt', but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus becomes more important for humans, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states there is increased evidence to be alert, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment suggests the virus has adapted, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a finding from genomic analysis, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment identifies deaths and transmission, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus crossed a new frontier, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus crossed a new frontier, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a warning to 'be alert', but no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains an urging to call a hotline, but no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1948_chunk0",
+    "answer": "yes",
+    "rationale": "'has yet to receive a formal seal of approval' is a bare negation about approval status without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_7_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a vaccine has helped protect birds, which is a positive fact, not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_3_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cases were confirmed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states concerns were raised, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds were euthanized, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1824_chunk0",
+    "answer": "no",
+    "rationale": "'dual infections are rare' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_14_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes characteristics of a potential virus, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential outcome (genetic reassortment), but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'no sign of unusual influenza activity', 'no increase', and 'no laboratory detection' are bare negations without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_10_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'Missouri has not reported any H5 infections' is a bare negation about reporting without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_9_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'animal source cannot be identified' is a bare negation about identification capability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_8_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'lack of an obvious animal exposure' is a bare negation about exposure absence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_7_1824_chunk0",
+    "answer": "no",
+    "rationale": "'risk to the general public from avian flu remains low' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_6_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states details were not provided, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a sample was confirmed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the patient was hospitalized, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'who did not work with any poultry or dairy farms' is a bare negation about exposure absence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_2_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'who had no known contact with an infected animal' is a bare negation about exposure absence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_1_1824_chunk0",
+    "answer": "yes",
+    "rationale": "'who did not work with any poultry or dairy farms' is a bare negation about exposure absence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_38_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a potential future increase in risk, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_37_582_chunk0",
+    "answer": "no",
+    "rationale": "'risk to the public from H5N1 remains low' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_36_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment confirms a second human case, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_35_582_chunk0",
+    "answer": "yes",
+    "rationale": "'lack of testing and limited genetic data' are bare negations about availability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_34_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states wastewater isn't the only workaround, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_33_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment suggests another way to track, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_32_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses disambiguating data, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_31_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment poses a question, which is not a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_30_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states authorities are hungry for data, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_29_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states there is still a lot to learn, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_28_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states data and methodologies are being reviewed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_26_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the agency is in communication, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_25_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the CDC is only including certain data, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_24_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken at certain levels, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_23_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how the CDC presents data, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_22_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a dashboard launch, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_21_582_chunk0",
+    "answer": "yes",
+    "rationale": "'tend to circulate at very low levels' is a bare negation about frequency/impact without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_20_582_chunk0",
+    "answer": "yes",
+    "rationale": "'agency is not doing H5-specific testing' is a bare negation about action/capability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_19_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the CDC began releasing data, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_18_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a surveillance system, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_17_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states monitoring capacity got a boost, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_16_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states researchers began finding sequences, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_582_chunk0",
+    "answer": "yes",
+    "rationale": "'scientific literature... is scant' is a bare negation about availability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_14_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states results were published, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_13_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a human case, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_582_chunk0",
+    "answer": "yes",
+    "rationale": "'there's currently no good way to determine the exact source' is a bare negation about capability without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_11_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a hypothesis, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states spikes were found, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_9_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an assay sat unused, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a probe was developed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_7_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states more information would be useful, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment suggests another way to spot outbreaks, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_582_chunk0",
+    "answer": "yes",
+    "rationale": "'widespread reluctance... to test' and 'are largely in the dark' are bare negations about testing/information without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_3_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states data sharing will begin, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states testing has begun scaling up, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment states researchers reported an ability to scan, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_19_1851_chunk0",
+    "answer": "yes",
+    "rationale": "'came back negative' is a bare negation about test results without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_17_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the FDA would begin testing, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states scientists are watching for signs of spread, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1851_chunk0",
+    "answer": "yes",
+    "rationale": "'virus was not confirmed in any of them' is a bare negation about confirmation without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_14_1851_chunk0",
+    "answer": "yes",
+    "rationale": "'who had no immediate known animal exposure' is a bare negation about exposure absence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_13_1851_chunk0",
+    "answer": "no",
+    "rationale": "'The risk to the general public remains low' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_11_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states cows began testing positive, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1851_chunk0",
+    "answer": "yes",
+    "rationale": "'neither person reported respiratory symptoms nor was hospitalized' contains bare negations about symptoms/hospitalization without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_9_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the person experienced mild symptoms, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the person works at a facility with an outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the person is being treated and staying home, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the person only suffered conjunctivitis, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1851_chunk0",
+    "answer": "yes",
+    "rationale": "'There is no known link or contact between the two human cases' is a bare negation about connection without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_4_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the jump and infections have concerned officials, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1851_chunk0",
+    "answer": "yes",
+    "rationale": "'who had no immediate known contact with animals has also tested positive' is a bare negation about exposure absence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_2_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the total number of cases, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment confirms two human cases, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_355_chunk0",
+    "answer": "no",
+    "rationale": "'Infections in humans are rare' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_14_355_chunk0",
+    "answer": "no",
+    "rationale": "'bird flu isn't a threat to food safety' is a bare negation followed by explicit calming cues ('because all the birds... are slaughtered... and properly cooking... will kill any viruses'), triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_13_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes biosecurity steps, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes cases and spread, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_9_355_chunk0",
+    "answer": "yes",
+    "rationale": "'there will only have been about 3.4 million birds killed' is a bare negation about quantity without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_8_355_chunk0",
+    "answer": "yes",
+    "rationale": "'toll overall has been much lower' and 'number of cases... plummeted' are bare negations about quantity/frequency without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_7_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the farm is the first of its type, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the industry has been dealing with an outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds will be killed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the entire flock is killed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus was found, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_24_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states products can be imported, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_23_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states restrictions were applied, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_22_1680_chunk0",
+    "answer": "yes",
+    "rationale": "'source of exposure to the virus is unknown' is a bare negation about knowledge without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_21_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the individual's condition, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_20_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a man died, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_19_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states viruses can mutate and develop, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a strain was discovered, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the company is implementing measures, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states permits are required, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states controls remain in place and areas extended, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment advises following biosecurity practices, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states housing birds is an effective method, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the officer wasn't surprised, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the farm is within a restricted area, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states this comes amid advising of a death, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states tests identified a strain, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a fourth case was detected, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment states this comes amid the first death, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_30_chunk0",
+    "answer": "no",
+    "rationale": "'can affect humans in rare cases' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_14_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a prevention zone was declared and measures required, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_13_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an action followed a similar move, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the country was put on increased risk and poultry ordered indoors, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how bird flu circulates and spreads, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_10_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_9_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the serotype, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_7_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states animals were slaughtered, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_6_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports an outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports human infections, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus can be transmitted, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the spread has put the industry on alert, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports outbreaks and states the virus is spreading quickly, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_30_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions taken in response to outbreaks, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1174_chunk0",
+    "answer": "yes",
+    "rationale": "'disease did not subside as previously' is a bare negation about expected behavior without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_3_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes how the disease is carried and transmitted, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus killed pelicans, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1174_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports the first outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment is a question, not a statement containing a bare negation."
+  },
+  {
+    "segment_id": "seg_v5_13_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states officials are investigating changes, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus could evolve and trigger a pandemic, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1779_chunk0",
+    "answer": "yes",
+    "rationale": "'bird flu still does not pose a significant risk to the general public' is a bare negation about risk without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_10_1779_chunk0",
+    "answer": "yes",
+    "rationale": "'bird flu still does not pose a significant risk to the general public' is a bare negation about risk without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_9_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states symptoms have been mild, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states who was infected and where they worked, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1779_chunk0",
+    "answer": "no",
+    "rationale": "'risk of illness in those persons is still negligible' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_6_1779_chunk0",
+    "answer": "no",
+    "rationale": "'It is rare for avian influenza to infect humans' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_5_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states who the latest cases were among, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states an outbreak has emerged and cases confirmed, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the virus can sometimes jump, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment defines the illness and how it spreads, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1779_chunk0",
+    "answer": "no",
+    "rationale": "The segment confirms a human case, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1041_chunk0",
+    "answer": "no",
+    "rationale": "The segment states birds were killed and slaughtered, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1041_chunk0",
+    "answer": "no",
+    "rationale": "The segment reports a new outbreak, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_13_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states herds had reported infections, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states results are pending, which is not a bare negation about risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_11_690_chunk0",
+    "answer": "yes",
+    "rationale": "'Tests at the state level were inconclusive' is a bare negation about results without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_10_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a farm worker has been infected, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_9_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states people with prolonged contact are at higher risk, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_8_690_chunk0",
+    "answer": "yes",
+    "rationale": "'Surveillance systems... have shown no unusual activity' is a bare negation about activity without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_7_690_chunk0",
+    "answer": "no",
+    "rationale": "'does not change the agency's assessment that the risk to the general public remains low' contains a bare negation but reinforces a Q5 Reassuring cue ('risk... remains low'), triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_6_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the first U.S. case was detected, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_5_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states previous cases have been reported, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_4_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states previous cases have been reported, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_3_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes the worker's contact, symptoms, treatment, and recovery, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_2_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a farm worker has been infected, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_1_690_chunk0",
+    "answer": "no",
+    "rationale": "The segment states a farm worker has been infected, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment states doses have been secured, but contains no bare negation about current risk or impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1683_chunk0",
+    "answer": "no",
+    "rationale": "'risk... is considered to be low' is an explicit low-risk statement, triggering Q5 Reassuring."
+  },
+  {
+    "segment_id": "seg_v5_10_1683_chunk0",
+    "answer": "yes",
+    "rationale": "'There are no active cases in humans or in cattle' is a bare negation about case presence without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_9_1683_chunk0",
+    "answer": "yes",
+    "rationale": "'there have been no confirmed human-to-human transfers' is a bare negation about transmission without explicit calming."
+  },
+  {
+    "segment_id": "seg_v5_6_1683_chunk0",
+    "answer": "no",
+    "rationale": "The segment states the situation is being monitored and access to vaccines ensured, which are preparedness cues, triggering Q5 Reassuring."
+  }
+]
+```

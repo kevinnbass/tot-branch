@@ -1,0 +1,4 @@
+{"Q": 1, "answer": "no", "rationale": "'spreading' is a verb. 'more animal species' modifies a noun.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 175}
+{"Q": 2, "answer": "no", "rationale": "'spreading' is a moderate verb. 'scores of countries' indicates scale but doesn't make the verb high-potency.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 161}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 127}
+{"Q": 3, "answer": "yes", "rationale": "'spreading' is a moderate verb paired with scale 'more animal species' and 'scores of countries'.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17456_r1", "batch_size": 260, "batch_pos": 127}

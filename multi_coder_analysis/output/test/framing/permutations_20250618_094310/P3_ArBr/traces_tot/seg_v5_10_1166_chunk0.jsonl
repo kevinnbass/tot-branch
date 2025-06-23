@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16416", "batch_size": 260, "batch_pos": 65}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally states 'difficult to measure' and provides a large number ('1mn birds') without coupling it with a vivid verb.", "method": "llm_batch", "batch_id": "batch_2_15948", "batch_size": 260, "batch_pos": 61}
+{"Q": 3, "answer": "no", "rationale": "'range as high as' is not a moderate verb from the list.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 40}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 34}
+{"Q": 5, "answer": "no", "rationale": "The segment reports loss estimates and does not contain an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 34}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 29}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation or statement of uncertainty/low risk.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 25}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_6120", "batch_size": 260, "batch_pos": 13, "regex": {"rule": "CapabilityNoReassurance", "span": [39, 46], "captures": []}}

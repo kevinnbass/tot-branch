@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16232", "batch_size": 260, "batch_pos": 110}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_17260", "batch_size": 260, "batch_pos": 72}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_4424", "batch_size": 260, "batch_pos": 10}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17772", "batch_size": 260, "batch_pos": 256}
+{"Q": 4, "answer": "no", "rationale": "The segment contains factual statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17772_r1", "batch_size": 260, "batch_pos": 256}
+{"Q": 5, "answer": "no", "rationale": "The segment reports factual findings without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12996", "batch_size": 260, "batch_pos": 250}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12008", "batch_size": 260, "batch_pos": 210}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14300", "batch_size": 260, "batch_pos": 198}
+{"Q": 8, "answer": "no", "rationale": "The segment reports cases, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 36}
+{"Q": 9, "answer": "yes", "rationale": "'Two dairy workers... tested positive' reports a numerical metric (cases) factually.", "method": "llm_batch", "batch_id": "batch_9_14112", "batch_size": 243, "batch_pos": 96}

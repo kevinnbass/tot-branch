@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'safe to eat' (a Q4 cue) but no intensifier/comparative + risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5064", "batch_size": 260, "batch_pos": 107}
+{"Q": 2, "answer": "no", "rationale": "The segment contains a reassuring statement ('safe to eat') but no Q2 cues.", "method": "llm_batch", "batch_id": "batch_2_2312", "batch_size": 260, "batch_pos": 96}
+{"Q": 3, "answer": "no", "rationale": "The segment contains a food safety assurance ('safe to eat').", "method": "llm_batch", "batch_id": "batch_3_18060", "batch_size": 260, "batch_pos": 62}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15012", "batch_size": 260, "batch_pos": 54}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_17516", "batch_size": 260, "batch_pos": 53, "regex": {"rule": "ExplicitCalming", "span": [53, 68], "captures": [null]}}

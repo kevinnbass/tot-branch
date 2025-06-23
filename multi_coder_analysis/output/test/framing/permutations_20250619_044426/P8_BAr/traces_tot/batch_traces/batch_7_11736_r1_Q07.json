@@ -1,0 +1,28 @@
+{
+  "batch_id": "batch_7_11736_r1",
+  "hop_idx": 7,
+  "segment_count": 4,
+  "responses": [
+    {
+      "segment_id": "seg_v5_1_1272_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses vaccine production capability, not a bare negation of a negative event or risk."
+    },
+    {
+      "segment_id": "seg_v5_3_1272_chunk0",
+      "answer": "no",
+      "rationale": "The segment states risk is 'low' and cases are 'rare', which are not bare negations like 'no risk' or 'no cases'."
+    },
+    {
+      "segment_id": "seg_v5_12_586_chunk0",
+      "answer": "yes",
+      "rationale": "'likely not new' is a bare negation without an explicit calming cue."
+    },
+    {
+      "segment_id": "seg_v5_13_743_chunk0",
+      "answer": "yes",
+      "rationale": "'will not be mandatory' is a bare negation without an explicit calming cue."
+    }
+  ],
+  "timestamp": "2025-06-19T05:01:01.287823"
+}

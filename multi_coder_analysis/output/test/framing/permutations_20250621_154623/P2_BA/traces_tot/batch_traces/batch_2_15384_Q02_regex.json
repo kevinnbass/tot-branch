@@ -1,0 +1,46 @@
+{
+  "batch_id": "batch_2_15384",
+  "hop_idx": 2,
+  "segment_count": 3,
+  "matches": [
+    {
+      "statement_id": "seg_v5_16_586_chunk0",
+      "regex": {
+        "rule": "HighPotencyVerbMetaphor",
+        "span": [
+          128,
+          138
+        ],
+        "captures": []
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_007_63_chunk0",
+      "regex": {
+        "rule": "HighPotencyVerbMetaphor",
+        "span": [
+          122,
+          135
+        ],
+        "captures": []
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_20_137_chunk0",
+      "regex": {
+        "rule": "OnHighAlert.Live",
+        "span": [
+          104,
+          117
+        ],
+        "captures": []
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    }
+  ]
+}

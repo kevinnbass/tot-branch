@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'increased' modifies 'risk' (noun), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 235}
+{"Q": 2, "answer": "no", "rationale": "'increased risk' is Q1. 'spread around the globe' and 'infecting' are moderate verbs.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 221}
+{"Q": 3, "answer": "no", "rationale": "'died' is a plain outcome verb, neutralised by rule 4; scale is a single case.", "method": "llm_batch", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 184}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 178}
+{"Q": 5, "answer": "no", "rationale": "The segment reports actions and context (death), not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 176}
+{"Q": 6, "answer": "no", "rationale": "'an 11-year-old girl' is not a minimiser with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 139}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 130}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15696", "batch_size": 260, "batch_pos": 24, "regex": {"rule": "CapabilityNoReassurance", "span": [112, 121], "captures": []}}

@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a superlative ('most concerned') modifying 'concerned', which describes a feeling, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 246}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, potent metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 234}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs and opinion.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 212}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 207}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a sentinel species of concern but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 205}
+{"Q": 6, "answer": "no", "rationale": "The segment expresses concern, which is the opposite of reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 186}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 175}
+{"Q": 8, "answer": "no", "rationale": "The segment provides expert opinion/concern, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 101}
+{"Q": 9, "answer": "no", "rationale": "The segment states which animal species would be of most concern, not primarily reporting prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 198}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 116}
+{"Q": 10, "answer": "no", "rationale": "The segment expresses concern, not speculation about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 116}
+{"Q": 11, "answer": "no", "rationale": "Quote identifies an animal species of concern, not framed language about human risk or severity.", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 101}
+{"Q": 12, "answer": "yes", "rationale": "Reports quote about speaker's psychological state ('most concerned'), not public warning.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 98}

@@ -1,0 +1,53 @@
+{
+  "batch_id": "batch_3_14456",
+  "hop_idx": 3,
+  "segment_count": 9,
+  "responses": [
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes the cause of spread but uses no moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "Mentions '23 states' but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "Mentions '35,500 birds' but lacks a moderate verb describing impact."
+    },
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "Mentions locations but lacks a moderate verb paired with scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "Mentions production numbers ('11.7 million turkeys annually') but not impact from the disease."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "Mentions inventory numbers ('46 million chickens') but not impact from the disease."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains scale ('13 million chickens and 305,000 turkeys') but also the containment verb 'kill', triggering the containment override."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains scale ('22 million birds') but also the containment verb 'kill', triggering the containment override."
+    },
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains scale ('5.3 million hens and 88,000 turkeys') but also the containment verb 'killing', triggering the containment override."
+    }
+  ],
+  "timestamp": "2025-06-20T13:26:27.933798"
+}

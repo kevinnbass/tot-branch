@@ -1,0 +1,1033 @@
+# Concatenated Prompts - Generated on 2025-06-19 19:48:45
+================================================================================
+
+## File 1: GLOBAL_FOOTER.txt
+------------------------------------------------------------
+# ─────────────────────────────────────────────────────────────
+#  GLOBAL FOOTER – 6-POINT SELF-AUDIT (auto-appended to every hop)
+#  -----------------------------------------------------------
+✅ **SELF-AUDIT before you reply**
+1. If you answered **"yes"**, STOP processing further questions.
+2. Quote decisive cue(s) in the *rationale*.
+3. No Alarmist on neutrally stated **bad** facts.
+4. No Reassuring on neutrally stated **good / low-risk** facts.
+5. First "yes" only – no double hits / overrides.
+6. Output must be pure JSON and **nothing else**.
+
+🔧 **Implementation hint** – add a regression test where  
+Input: "We are confident our systems are ready." → expect Q5 = yes, Reassuring.
+
+*Re-read this list; fix any violation before sending.*
+# 7. If you reach **Q12** and still cannot assign a frame with certainty,
+#    return an **Unknown** label:
+#        { "answer":"unknown",
+#          "rationale":"Q12 reached with no decisive cues; frame unresolved" }
+#    Down-stream evaluation will skip these rows.
+# ─────────────────────────────────────────────────────────────
+
+## File 2: global_header.txt
+------------------------------------------------------------
+# === GLOBAL BEDROCK PRINCIPLE (DO NOT DELETE) ===
+# You are an expert claim-framing coder following a mandatory 12-step decision tree.
+# Your analysis must be grounded *only* in the provided text and rules.
+# You will be asked one question at a time.
+#
+# Bedrock Principle: CODE THE PRESENTATION, NOT THE FACTS.
+# The frame is determined by explicit linguistic choices, not the objective severity of the facts.
+# A severe fact presented factually is Neutral. A reassuring fact presented factually is Neutral.
+# ─────────────────────────────────────────────────────────────
+#  SYMMETRY RULE  (central, referenced not repeated)
+#  -----------------------------------------------------------
+#  Alarmist ≠ "any negative fact"; Reassuring ≠ "any positive fact".
+#  • **Alarmist fires only when a negative / hazardous fact is explicitly
+#    amplified** (intensifier, vivid verb, scale exaggeration, loaded metaphor).
+#  • **Reassuring fires only when a positive / low-risk fact is explicitly
+#    framed for calm or safety** ("public can rest easy", "risk is *very* low",
+#    "fully under control", "only 1 out of 1 000 cases", etc.).
+#  • Positive or low-risk facts stated neutrally → **Neutral**.
+#  • Negative or high-risk facts stated neutrally → **Neutral**.
+# ─────────────────────────────────────────────────────────────
+
+## Context guard for vivid language
+> A vivid verb/adjective that colours a **background condition**  
+> (e.g. "amid **soaring** inflation", "during a **plunging** market")  
+> is **ignored** for Alarmist coding.  
+> Alarmist cues fire only when the vivid language depicts the threat's
+> **own realised impact** (cases, deaths, prices, losses, shortages, etc.).
+
+> **Context guard for psychological verbs**
+> *Spark, stoke, reignite,* or *raise fears* describe a **public reaction**, not the realised impact of the threat itself.
+> Treat them as **Neutral** unless the sentence either  
+> (a) uses a vivid intensifier (*"mass panic"*, *"public alarm"*) **or**  
+> (b) couples the verb with a concrete scale of realised harm  
+> (e.g. "sparked panic **after** 5 million birds died").
+> Plain "reigniting fears of another outbreak" is Neutral.
+
+#
+# ⇩ Precedence Ladder (authoritative; other hops now *reference* this ID)
+# Precedence Ladder: If multiple cues appear, the highest-ranking rule (lowest Q number) determines the frame.
+# 1. INTENSIFIER + RISK-ADJECTIVE -> Alarmist
+# 2. VIVID-VERB -> Alarmist
+# 3. MODERATE-VERB + SCALE/METRIC -> Alarmist
+# 4. EXPLICIT CALMING -> Reassuring  
+#    (Inside Q5 the row order Confidence > Preparedness > Low-Risk > Amplification)
+#   • Direct food-safety assurances ("safe to eat/for consumption") belong here.
+# 5. BARE NEGATION / CAPABILITY -> Neutral
+# 6. DEFAULT -> Neutral
+# If a segment simultaneously triggers an Alarmist cue **and** a Reassuring cue,
+# the presentation is **mixed** → code **Neutral** (see Q12 default rule).
+# **Technical‑term guard is absolute** – "highly pathogenic (avian) influenza"
+# and similar taxonomy never functions as an intensifier, even inside quotes.
+#
+# You MUST reply in JSON format ONLY. Your entire response must be a single JSON object.
+
+# ─────────────────────────────────────────────────────────────
+#  MANDATORY STEP-BY-STEP DECISION PROCESS  (applies to every hop)
+#  -----------------------------------------------------------
+#  1. Start with Q1 and evaluate strictly against its rule text.
+#  2. **If** your answer is **"yes"**:  
+#       • Emit the frame dictated by the Precedence Ladder.  
+#       • **Immediately STOP** evaluating lower-numbered hops.  
+#       • Proceed to the self-audit checks below.  
+#  3. Else → move to the next hop (Q {n + 1}) and repeat.
+#
+#  ✅ The 6-point self-audit checklist has been moved to a shared
+#  **GLOBAL_FOOTER.txt** fragment that is appended *after* the
+#  `YOUR JSON REPLY` stub inside every hop prompt so the model
+#  reads it immediately before generating its answer.
+# ─────────────────────────────────────────────────────────────
+
+## File 3: hop_Q01.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Contains INTENSIFIER (**SO / VERY / EXTREMELY / HIGHLY / FRIGHTENINGLY / MORE / DEADLIER**) **AND** RISK‑ADJ (**DEADLY / DANGEROUS / SEVERE / CATASTROPHIC / LETHAL / CONTAGIOUS / VIRULENT / DESTRUCTIVE**) in the **same clause**?  
+• Skip if it's the taxonomic phrase **"highly pathogenic (avian) influenza / HPAI"**.  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The flu is so deadly that entire flocks are culled.
+## Question: Does the segment contain an intensifier directly modifying a risk-adjective?
+## JSON Output:
+{"answer":"yes","rationale":"The intensifier 'so' modifies the risk-adjective 'deadly'."}
+
+# NO example
+## Input Segment: A highly pathogenic form of bird flu was detected.
+## Question: Does the segment contain an intensifier directly modifying a risk-adjective?
+## JSON Output:
+{"answer":"no","rationale":"'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q1
+**Q1: Intensifier/Comparative + Risk-Adjective**
+Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a comparative adjective (e.g., 'more,' 'deadlier') directly modifying a risk-adjective (e.g., 'deadly,' 'dangerous,' 'severe,' 'catastrophic') as defined in the detailed rules?
+
+**🔍 Q1 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Intensifier + Risk-Adj** | "so deadly," "very dangerous," "extremely severe," "highly lethal," "frighteningly contagious" | ✓ |
+| **Comparative + Risk-Adj** | "more deadly," "deadlier," "more dangerous," "less safe," "increasingly severe" | ✓ |
+| **Fixed Lethal-from-Outset Idiom** | "deadly from the start," "deadly from the outset" | ✓ |
+| **Base Risk-Adj (alone)** | "deadly," "dangerous," "severe" (without intensifier) | → Neutral |
+
+**🔍 Detailed Rules & Examples:**
+**Outcome when Yes :** Label = Alarmist  
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+
+| If you see… | Frame | Quick test |
+|-------------|-------|------------|
+| **Intensifier/Comparative + Risk-Adjective** | Alarmist | **Any single match is sufficient (Precedence #1)** |
+| - so/very/extremely/highly/frighteningly/particularly + deadly/lethal/dangerous/brutal/severe/contagious/virulent/destructive | | |
+| - more/less/deadlier/safer/higher/lower + same risk adjectives | | |
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)
+
+**Clarification on "deadly," "fatal," "lethal":** These terms when modified by an intensifier (e.g., 'so deadly,' 'extremely fatal,' 'particularly lethal,' 'frighteningly deadly') are Alarmist. Without such direct intensification, "deadly" (etc.) describing a factual characteristic (e.g., 'Avian flu can be deadly in domestic poultry') is typically Neutral unless other alarmist cues are present.
+
+**Minimal Pair Examples:**
+* **Neutral:** "The virus is contagious."
+* **Alarmist (Author):** "The virus is frighteningly contagious, spreading like wildfire." (Cue: 'frighteningly,' 'spreading like wildfire').
+
+**Comparative Minimal Pair Example:**
+* **Alarmist:** "Scientists warn the virus is becoming deadlier each season."
+* **Neutral:** "Scientists track how the virus becomes more common each season."
+
+**⚠ TECHNICAL OR CLINICAL TERMS**  
+A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used *clinically* (e.g. "lethal dose 50").  
+**BUT** if the same term is paired with *any intensifier or emotive verb* → **Alarmist (Precedence #1)**
+
+**#TECH_TERM_GUARD Technical‑term override (absolute – canonical; do **not** restate in other hops)**  
+`highly pathogenic (avian) influenza`, `HPAI`, or *any string that matches /\bhighly\s+pathogenic\b/i* **never count as an authorial intensifier**.  
+They stay Neutral unless a *separate* alarm cue fires.
+Why? Half of the ambiguous cases involved "highly pathogenic" being mis‑read as an intensifier; this makes the guard explicit inside Q1 rather than only in the header footnotes.
+
+**Extended technical-term guard (2025‑06‑20, reiterated here because it is a top confusion driver)**  
+Treat **"highly pathogenic / virulent / contagious / transmissible"** as a
+taxonomic label whenever it appears ≤ 3 tokens **before** the virus name
+(`H5N1`, `HPAI`, etc.). This phrase **never counts** as an authorial
+intensifier under Q1.
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – Intensifier + adjective** | "The flu is so deadly that entire flocks are culled." | **Alarmist** | "so deadly" (intensifier + risk adjective) |
+| **Alarmist – Deadly-from-outset idiom** | "H5N1 is deadly from the start, vets warn." | **Alarmist** | "deadly from the start" (fixed lethal-from-outset idiom) |
+
+**EXCLUSION — "volatile"**  
+When "volatile" modifies *prices/markets/rates* it is treated as an **economic metric** and never triggers Q1.
+
+> **Technical-term guard** – "highly pathogenic" used as part of the formal
+> disease name (HPAI) is **Neutral** unless further alarmist cues appear.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 4: hop_Q02.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
+  **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: An outbreak ravaged farms across three states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"yes","rationale":"The high-potency verb 'ravaged' actively frames the situation alarmingly."}
+
+# NO example
+## Input Segment: The outbreak affected farms in several states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"no","rationale":"'affected' is a moderate verb without dramatic framing - lacks high potency alone."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q2
+**Q2: High-Potency Verb/Metaphor**
+Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 'skyrocketed,' 'crippling') or a potent metaphor (e.g., 'ticking time-bomb,' 'nightmare scenario') to describe the event or its impacts, where such language actively frames the situation alarmingly, as detailed in the rules?
+
+**Q2 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **High-Potency Verbs** | "ravaged," "devastated," "skyrocketed," "plummeted," "crashed," "nosedived," "tanked," "crippling," "unleashed," "slaughtered" | ✓ |
+| **Neutral Economic Trend** | "prices are trending sharply higher/lower" | → **Neutral** |
+| **Superlative + Negative Noun** | "most expensive disaster," "worst crisis," "record outbreak," "record-breaking catastrophe" | ✓ |
+| **Intensifier +   Harm Noun**   | "massive mortality," "unprecedented number of outbreaks," "huge losses"                    | ✓ |
+| **Critical Alert Phrase**(**same sentence must name a threat: outbreak, virus, flu, risk, danger …**) | "on high alert" (threat can appear **before or after** in ≤ 40 chars) | ✓ |
+| **Potent Metaphors** | "ticking time-bomb," "nightmare scenario," "raging inferno," "powder keg," "house of cards" | ✓ |
+| **Moderate Verbs (alone)** | "hit," "swept," "surged" (without scale/impact details) | → Neutral |
+
+**Outcome:**
+**Outcome when Yes :** Label = Alarmist
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+
+**🔍 Detailed Rules & Examples:**
+
+**Containment override reminder** – If the sentence already contains a containment verb (cull, slaughter …) **do not** fire Q2. Let it drop to Q3, which handles the scale rule.
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+* Superlative **or intensifier** preceding a **harm noun**
+  (mortality, losses, disaster, outbreak, crisis, toll, etc.)
+  communicates scale the same way a superlative does; treat it as
+  Alarmist under Q2 unless a higher‑precedence cue fires.
+
+**Alarmist - Examples:**
+* "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+* Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+* **Example (Author-driven, vivid metaphor & intensifier):**
+  * Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+  * Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+* **Example (Vivid verb + scale from Author):** Author: "The disease ravaged poultry flocks across three states, leading to immense economic losses." (Alarmist → 'Ravaged' + 'across three states' + 'immense economic losses' create a strong alarmist frame).
+* **Example (Vivid verb + scale from Author):** Author: "Confirmed cases soared past one million, overwhelming healthcare systems." (Alarmist → 'Soared past one million' + 'overwhelming healthcare systems' creates a strong alarmist frame).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – High-potency verb** | "An outbreak ravaged farms across three states." | **Alarmist** | "ravaged" (vivid, destructive verb) |
+| **Alarmist – Superlative-negative-noun** | "The H5N1 wave is now considered the most expensive animal-health disaster in U.S. history." | **Alarmist** | "most expensive...disaster" (superlative + negative noun) |
+| **Alarmist – Critical alert phrase** | "State authorities remain on high alert for new cases." | **Alarmist** | "on high alert" (critical alert phrase) |
+| **Neutral – price trend** | "Egg prices have been *trending sharply higher* in recent weeks." | **Neutral** | ordinary price verb |
+
+Intensifier + Harm Noun fires **only** when the noun denotes realised
+damage (mortality, losses, shortage, toll, disaster, crisis).  
+Intensifier + neutral noun ("massive study", "huge survey") is Neutral.
+
+**Boundary guard:** If the verb is "hit / hitting / swept / surged" but the segment gives no numbers, adjectives or metaphors that convey magnitude, treat it as Neutral. Alarmist fires only when a concrete scale/impact phrase is coupled.
+
+**⚠ Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 5: hop_Q03.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Contains MODERATE VERB (**HIT / SWEPT / SOARED / SURGED / PLUMMETED / PROMPTED / HARD HIT**) **AND** explicit SCALE token (digit / MILLION / THOUSAND / % / RECORD / UNPRECEDENTED) in same sentence?  
+• Ignore if action is only *planned* (e.g. "to consider culling").  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The region was severely hit by the virus, resulting in record losses.
+## Question: Does the author/source use moderate verbs paired with significant scale/impact information?
+## JSON Output:
+{"answer":"yes","rationale":"'severely hit' with 'record losses' combines moderate verb with explicit large-scale impact."}
+
+# NO example
+## Input Segment: The outbreak hit several farms in the area.
+## Question: Does the author/source use moderate verbs paired with significant scale/impact information?
+## JSON Output:
+{"answer":"no","rationale":"'hit several farms' lacks specific scale/impact details to confirm alarmist framing."}
+
+# NO example (moderate verb + vague impact → Neutral)
+## Input Segment: The outbreak is hitting the market as poultry supplies are down.
+## JSON Output:
+{"answer":"no","rationale":"'hitting the market' + 'supplies are down' gives no number or record-type scale; stays Neutral."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q3
+**Q3: Moderate Verbs + Scale/Impact**
+Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 'hard hit,' 'soared,' 'plummeted') AND is this verb explicitly paired with information detailing significant scale or impact (e.g., 'millions culled,' 'record losses,' 'overwhelming systems'), as detailed in the rules?
+
+**🔍 Q3 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Moderate Verb (past-tense)** **+ Scale** | "swept across + millions culled," "hard hit + record losses," "soared + overwhelming systems," | ✓ |
+| **Moderate Verb (past-tense)** **+ Quantity** | "surged + 50 % increase," "plummeted + largest decline," "hit + thousands affected" | ✓ |
+| **Moderate Verb (present/future/plan)** *(e.g. "**planning to cull**", "could hit")* | → **Neutral** |
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q4.
+
+**🔍 Detailed Rules & Examples:**
+
+**Containment override reminder** – If the sentence already contains a containment verb (cull, slaughter …) **do not** fire Q3. The containment rule handles the scale separately.
+
+**Alarmist - Examples:**
+* Author: "The region was severely hit by the virus, resulting in record losses." (Alarmist → Author's use of "severely hit" and "record losses" to describe large-scale harm, assuming no overriding framed quote.)
+* Author: 'From Wyoming to Maine, the highly contagious bird flu swept across farms and backyard flocks, prompting millions of chickens and turkeys to be culled.' (Alarmist → The author's use of 'swept across' combined with 'highly contagious' and the large-scale consequence 'millions...culled' creates an alarmist depiction of an overwhelming, uncontrolled event, assuming no overriding framed quote.)
+* **Example (Evaluative adjective + scale from Author):** Author: "The agricultural sector was hard hit by the drought, with crop yields plummeting by over 50%." (Alarmist → 'Hard hit' coupled with the specific, severe scale of 'plummeting by over 50%' framed by the author).
+* **Example (Feared + toll from Author):** Author: "Officials feared a repeat that killed 50 million birds." (Alarmist → 'Feared' (moderate verb) paired with explicit large-scale impact '50 million birds').
+
+**Boundary Requirements:**
+1. Verb **must appear in the approved list / regex**.  
+2. Must include an explicit **numeric or record-type scale** ("50 % drop", "millions culled", "record losses"). Generic phrases like "supplies are down / have dropped" are **not enough**.
+3. Must denote realised impact (not a plan or hypothetical).
+4. Plain outcome verbs (*killed, died, affected, reported*) are excluded—Neutral unless other cues fire.
+5. **Containment override (strict).** If the same sentence contains a
+   containment verb (*culled, destroyed, euthanised, depopulated*) the
+   clause is **Neutral**, even when preceded by *swept, hit, surged* or a
+   numeric scale; Alarmist fires only when an **additional** vivid verb or
+   metaphor appears.
+6. Sentences about **financial or trade metrics** (exports, imports, sales, production) are treated as factual price/metric reporting → Neutral, not Alarmist here.
+
+**Examples of Scale/Impact Indicators:**
+- Numerical quantities: "millions," "thousands," "50%," "record numbers"
+- Comparative terms: "largest," "highest," "most severe," "unprecedented"
+- Impact descriptors: "overwhelming," "devastating losses," "widespread damage"
+
+> **New aspect guard.** The moderate-verb must denote **realised impact** – NOT merely an intention or hypothetical.  
+
+**Clarification** — Containment actions  
+Containment verbs (“were/was culled, destroyed, euthanized, depopulated”) are **Neutral even with large numbers** *unless* the author adds additional vivid or emotive language (e.g., “brutally destroyed 3 million birds”).
+
+► NEW NOTE – 2025-06-18
+Containment verbs (culled, euthanised, destroyed, depopulated) **always neutralise** a preceding ModerateVerb + Scale pattern. Do NOT fire Q3 unless an additional vivid/emotive cue is present.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 6: hop_Q04.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Sentence is a QUESTION starting with **SHOULD / CAN / COULD / WILL / WHAT IF / HOW LONG** **AND** includes **WORRIED / CONCERNED / AFRAID / IGNORE / STAND BY**?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Should consumers be worried about buying eggs?
+## Question: Does the author/source pose a loaded rhetorical question designed to imply alarm?
+## JSON Output:
+{"answer":"yes","rationale":"'Should consumers be worried' is a loaded question implying potential danger/concern."}
+
+# NO example
+## Input Segment: What are the safety protocols in place for this situation?
+## Question: Does the author/source pose a loaded rhetorical question designed to imply alarm?
+## JSON Output:
+{"answer":"no","rationale":"This is a neutral, information-seeking question without loaded emotional language."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q4
+**Q4: Loaded Rhetorical Question for Alarm**
+Does the author or a quoted source pose a loaded rhetorical question that is clearly designed to imply an Alarmist frame, instill fear/urgency, or suggest a worrisome threat (e.g., 'Should consumers worry...?', 'Are we simply going to stand by while this disaster unfolds?') AND is it distinguishable from a neutral, purely information-seeking question, as detailed in the rules?
+
+**🔍 Q4 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Loaded Questions (Worry/Fear)** | "Should consumers worry...?" "Are we facing a crisis?" "Is it safe to...?" | ✓ |
+| **Loaded Questions (Inaction)** | "Are we going to stand by while this unfolds?" "How long can we ignore this?" | ✓ |
+| **Neutral Information-Seeking** | "What are the safety protocols?" "When will results be available?" | → Neutral |
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q5.
+
+**‼ Precedence with Q5** – If the question sentence also contains a *calming keyword* ("safe", "under control", "alarm"), Q5 wins (Reassuring) and Q4 returns **"no"**.
+
+**🔍 Detailed Rules & Examples:**
+
+**Examples:**
+* **Example (Author-driven, implying worry):** Author: "With new variants emerging rapidly, should humans be worried about the next pandemic?" → Alarmist (if context suggests framing a worrisome threat).
+* **Example (Quote-driven, implying disaster):** 'The activist asked, "Are we simply going to stand by while this disaster unfolds?"' → Alarmist.
+* **Critical Distinction:** Carefully distinguish these from neutral, purely information-seeking questions (which are Neutral).
+
+**Alarmist - Inclusion Criteria:**
+* Direct questions from the author that use explicitly loaded or emotionally charged language clearly designed to imply an Alarmist frame or instill fear/urgency in the reader.
+  * **Example:** **Author:** "With the system collapsing, can anyone truly feel safe anymore?" (Alarmist. Cues: 'system collapsing,' 'truly feel safe anymore?' - rhetorical question implying no).
+  * **Non-Example (Neutral):** Author: "What are the safety protocols in place?" (Information-seeking).
+* Use of loaded rhetorical questions by the quoted source or author that are designed to evoke fear, urgency, or strong concern by implying a severe problem or a dire lack of action.
+  * Example (Author-driven): 'How many more animals have to die before we finally act decisively?' → Alarmist. (Rationale: The rhetorical question uses emotive language 'have to die' and implies criticism of inaction, framing the situation as urgent and severe.)
+  * Example (Quote-driven): 'The activist asked, "Are we simply going to stand by while this disaster unfolds?"' → Alarmist. (Rationale: The quoted rhetorical question uses 'disaster unfolds' to frame the situation alarmingly.)
+  * **Example (Rhetorical question from author implying worry):** Author: "With new variants emerging rapidly, should humans be worried about the next pandemic?" → Alarmist (if the context suggests this is not a simple information request but a way to frame emerging variants as a worrisome threat).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – Loaded Q** | "Should consumers be worried about buying eggs?" | **Alarmist** | Loaded rhetorical question implying worry |
+| **Alarmist – Necessity cull Q** | "Is it really necessary to kill millions of animals to stop the spread?" | **Alarmist** | rhetorical 'necessary to kill millions' |
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 7: hop_Q05.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Contains explicit calming keyword **SAFE / ALARM / UNDER CONTROL / REST EASY / CAUSE FOR ALARM / EXCELLENT NEWS / VERY WELL PROTECTED** in same clause as a present‑tense confidence verb?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Health officials say the outbreak is fully under control and poses no danger to the public.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'fully under control' and 'no danger to the public' are explicit calming cues communicating current safety."}
+
+# YES example (Direct Consumption Safety)
+## Input Segment: USDA said poultry products "remain safe to eat."
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'remain safe to eat' is a direct safety assurance for consumers."}
+
+# YES example (Confidence / optimism)
+## Input Segment: Officials said they *feel optimistic that the team can tackle the outbreak quickly*.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'feel optimistic' expresses explicit confidence in handling the situation, a calming cue."}
+
+# NO example
+## Input Segment: No human cases have been detected in the area.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"This reports a positive fact but lacks explicit calming/reassuring language from the source."}
+
+# NO example (Bare negation – food context)
+## Input Segment: Properly cooked poultry **should not pose a risk** to consumers.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"Lacks the keyword 'safe'; this is a bare negation and is handled under Q7."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5
+**Q5: Explicit Calming Cue for Reassurance**
+Does the author or a quoted source provide an explicit calming cue (e.g., 'no cause for alarm,' 'public can rest easy,' 'situation is fully contained,' 'excellent news and means citizens are very well protected') that directly communicates current safety, control, or significantly minimized present risk, as detailed in the Reassuring frame criteria?
+
+**🔍 Q5 Pattern Recognition Table (expanded):**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+| **Direct Safety Assurances** | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" **(must mention "safe", "alarm", or "under control")** | ✓ |
+| **Confidence Statements** | "we are confident," "I'm encouraged," "rest assured," "situation contained," "providing relief" | ✓ |
+| **Direct Consumption Safety** | "safe to eat," "safe for (human) consumption," "remains safe to eat" | ✓ |
+| **⚠ The clause must contain the literal word "safe".** <br>Expressions that merely say something "should not pose a risk / danger" **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
+| **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
+| **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
+| **Transient‑Issue Minimiser**           | "short‑term blip," "temporary setback," "expected to resolve quickly" | ✓ |
+| **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
+|                            | "**welcome news**, **encouraging news**" | ✓ |
+| **Bare Positive Facts** | "no cases reported," "tests were negative," "no problems detected," **"poses no risk"**, **"not expected to…"** | → Neutral — *do not* mark Reassuring unless the same sentence also contains an explicit calming keyword from the list above (`safe`, `alarm`, `under control`, `rest easy`, `excellent news`).  🚦Rule C reminder: capability or preparedness phrases alone never count as calming.  |
+| **"Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q6.
+
+**🔍 Detailed Rules & Examples:**
+
+**Definition: Reassuring** (Key Elements)
+Statement, either through a directly quoted source or the author's own presentation, demonstrably employs explicit language, tone, or rhetorical devices specifically chosen by the author or quoted source to actively calm audience concerns, minimize perceived current risk, emphasize safety/control, or highlight positive aspects in a way designed to reduce worry regarding the subject or its impacts. The intent to reassure must be evident in the presentation, not inferred from the facts being merely positive.
+
+**Key Differentiators from Neutral:**
+* Neutral reports positive facts; Reassuring adds explicit calming / optimistic amplification **or an intensified *low-risk* judgement about *current human safety*.**
+* Neutral uses standard descriptive terms for positive outcomes; Reassuring frames them with active confidence or relief.
+* Neutral may state a low risk; **Reassuring explicitly highlights the *very/exceptionally low* risk level to calm the audience.**
+* Neutral reports solutions/capabilities; Reassuring links them **directly to present safety for the public/consumers** *or* comes from a recognised public authority.
+
+**Inclusion Criteria (Reassuring):**
+* A directly quoted source **or the author** uses explicit calming language **or** an *intensified low-risk evaluation* ("risk is **very low** for humans") that clearly signals current safety/minimised danger.
+* Statements that not only report positive facts but also explicitly frame these facts as reasons for reduced concern or increased confidence about safety or control.
+  * **Example:** "Vaccination rates have thankfully reached 80% in the target population, a wonderfully high figure that provides excellent protection and means the community is now much safer." (Reassuring. Cues: 'thankfully,' 'wonderfully high,' 'excellent protection,' 'much safer').
+* Direct assurances of safety, control, or manageability from the author or a quoted source.
+  * **Example:** "Quote: 'We have stockpiled 30 million doses of the antiviral, which is excellent news and means our citizens are very well protected against any immediate threat from this virus.'" (Reassuring. Cues: 'excellent news,' 'very well protected').
+**Preparedness cues fire only when BOTH conditions hold (strict guard):**
+1. *Speaker is a government or public‑health authority* **AND**  
+2. *Capability phrase links explicitly to present public/consumer safety* (≤ 40 chars span) ("…so the public can rest easy", "…meaning consumers are protected").  
+Superlative boasts alone ("strongest surveillance program") are Neutral.  
+Corporate self-statements lacking a safety link stay Neutral.  
+  * **Example (Neutral):** "Tyson Foods is prepared for situations like this and has robust plans in place."
+
+**Minimal Pair Examples for Reassuring vs. Neutral:**
+* **Neutral:** "The latest tests on the water supply showed no contaminants."
+  * Reasoning: "Reports absence of negative. No explicit reassuring language from the author/source about broader safety."
+* **Reassuring:** "Officials confirmed the latest tests on the water supply showed no contaminants, declaring, 'This is excellent news, and residents can be fully confident in the safety of their drinking water.'"
+  * Reasoning: "The official's quote explicitly frames the negative test as 'excellent news' and a reason for 'full confidence' and 'safety.' Decisive cues: 'excellent news,' 'fully confident in the safety'."
+
+**⚠️ Important Exclusion:**
+* **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
+  * Reasoning: "This is a bare negation statement without additional calming amplification."
+
+> **Precedence Note** – If a sentence matches more than one row  
+> in the table above, the order top→bottom decides.  
+>   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
+
+> **Guard:** score as *Reassuring* only when the speaker is an official
+>  body or the author.  Indirect hearsay → Neutral.
+
+*Transient‑Issue Minimiser* rules fire **only if** the language
+  explicitly minimises duration **and** contains a positive or
+  self‑resolving verb ("blip", "resolve", "bounce back").  
+  Treat these as Reassuring because the author/source is actively
+  calming concern about persistence of the issue.
+
+**Required marker tokens** – need ≥ 1 of  
+`safe`, `safety`, `alarm`, `concern`, `worry`, `under control`,
+`rest easy`, `excellent news`, `very well protected`,
+**`confident`, `encouraged`, `optimistic`, `bullish`, `upbeat`, `welcome`, `encouraging`**
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 8: hop_Q06.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Contains MINIMISER (**ONLY / JUST / MERELY / A SINGLE / VERY FEW / RELATIVELY FEW**) **AND** denominator marker (**OUT OF / AMONG / ONE OF / AMONG MILLIONS / NATIONWIDE**) in same sentence?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Only one barn was infected out of thousands nationwide.
+## Question: Does the author/source use 'minimiser + scale contrast' for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'Only one barn...out of thousands nationwide' uses minimiser with explicit scale contrast for reassurance."}
+
+# NO example (missing denominator → Neutral)
+## Input Segment: Only three samples showed irregularity in testing.
+## Question: Does the author/source use 'minimiser + scale contrast' for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"'Only three samples' has minimiser but lacks the explicit contrasting scale context (no 'out of X')."}
+
+# NO example 2 (minimiser but denominator in *different* sentence → Neutral)
+## Input Segment: Only three samples were irregular. Out of 5 000, that is a tiny share.
+## JSON Output:
+{"answer":"no","rationale":"Minimiser and denominator split across sentences; rule requires same sentence."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q6
+**Q6: 'Minimiser + Scale Contrast' for Reassurance**
+Does the author or a quoted source use a 'minimiser' (e.g., 'only,' 'just,' 'merely') in conjunction with a 'scale contrast' (e.g., 'one barn out of thousands,' 'a few cases among millions') to actively downplay an event or its significance, thereby framing it reassuringly, as detailed in the rules? (Both elements must be present and work together).
+
+**🔍 Q6 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+| **Minimiser + Scale Contrast**(**minimiser token AND explicit denominator must both be present**) | "only one barn out of thousands," "just 3 out of 5 000 samples," "merely a few among millions" | ✓ |
+| **Minimiser + Explicit Comparison** | "only affecting a single facility nationwide," "just one case among the entire population" | ✓ |
+| **Minimiser without Scale** | "only three samples showed irregularity" (no "out of X") | → Neutral (missing contrast element) |
+| **Scale without Minimiser** | "one barn among thousands" (no "only/just/merely/**a single/few**") | → Neutral (missing minimising element) |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q7.
+
+**🔍 Detailed Rules & Examples:**
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Reassuring – Minimiser + contrast** | "Only one barn was infected out of thousands nationwide." | **Reassuring** | "Only...out of thousands" (minimizer + scale contrast) |
+
+**Detailed Requirements:**
+The statement must contain **both** elements **within 50 characters** (allows dash/parenthesis):  
+1. A minimiser word (`only|just|merely|no more than|a single|few`) **and**  
+2. The **denominator** may also be an *implicit total* expressed with
+quantifiers like **"nationwide"**, **"state-wide"**, **"across the EU"**.
+**A % figure (e.g. "only 0.05 %") counts as an implicit denominator.**
+Example: "Only two barns nationwide have reported infections."
+Cross-clause variants within 50 chars are acceptable.
+
+> **Clarification** A **bare numeral (e.g., "1", "one") is *not* a minimiser**  
+> unless it is **preceded by** one of the lexical cues above.  
+> - Example (Neutral): "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+
+The combination should create an overall reassuring effect about the limited scope or impact of an issue.
+
+**Examples:**
+* **Reassuring:** "While there were concerns, only 3 out of 5,000 tested samples showed any irregularity, indicating the problem is not widespread." → Reassuring.
+* **Non-Example (Missing Contrast):** "Only 3 samples showed irregularity." → Could be Neutral if the "out of X" contrast is missing and no other reassuring cues are present.
+
+**Guard clause** – If no *minimiser token* **or** no explicit denominator is found, fall through to **Q7 bare‑negation**.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 9: hop_Q07.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Sentence shows BARE NEGATION (**NO / NOT / UNLIKELY / POSES NO RISK / NO EVIDENCE / DOES NOT**) **AND** lacks any calming keyword **or optimism adjective** (**welcome / encouraging / heartening / positive / optimistic / upbeat**)?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Officials stated the new variant is not expected to be more severe.
+## Question: Does the segment contain a 'bare negation' without explicit calming cue?
+## JSON Output:
+{"answer":"yes","rationale":"'not expected to be more severe' is a bare negation without additional calming language."}
+
+# NO example
+## Input Segment: Officials stated the variant is not expected to be more severe, so there's no need for public concern.
+## Question: Does the segment contain a 'bare negation' without explicit calming cue?
+## JSON Output:
+{"answer":"no","rationale":"'so there's no need for public concern' adds explicit calming cue to the negation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q7
+**Q7: Bare Negation without Explicit Calming Cue**
+Does the segment merely state a 'bare negation' (e.g., 'not expected to cause problems,' 'unlikely to affect X,' 'no human cases detected,' 'tests were negative') WITHOUT any accompanying explicit calming cue from the author/source that actively frames this as reassuring about the broader situation, as detailed in the rules?
+
+**🔍 Q7 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Expectation Negations** | "not expected to cause problems," "unlikely to affect consumers," "not anticipated to impact" | ✓ |
+| **Evidence Negations** | "no evidence of transmission," "no human cases detected," "tests were negative" | ✓ |
+| **Risk Negations** | "doesn't pose a risk," "will not impact food supply," "not expected to enter" | ✓ |
+| **Capability Negations** | "viruses do not transmit easily," "cannot survive in," "does not spread through" | ✓ |
+| **Bare Negation + Calming Cue** | "no cases detected, so consumers can be confident," "unlikely to affect supply, keeping risk very low" | → Reassuring |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q8.
+
+**🔍 Detailed Rules & Examples:**
+
+**⚠️ Additional problematic phrasings that remain NEUTRAL:**
+- "unlikely to affect consumers"
+- "no evidence of transmission"  
+- "doesn't pose a risk to humans"
+- "not expected to cause problems"
+- "will not impact food supply"
+
+**Reassurance requires a second clause that explicitly spells out calm/safety.**
+
+**Examples:**
+* **Neutral (Bare Negation):** "Officials stated the new variant is not expected to be more severe."
+* **Reassuring (Bare Negation + Calming Cue):** "Officials stated the new variant is not expected to be more severe, meaning current health measures remain effective and there's no need for additional public concern."
+
+### Additional example
+* "The cases **do not present an immediate public-health concern**." → Neutral (bare negation).
+
+**CLARIFICATION** – "will **not** enter the food system" and similar bare-negation
+statements remain **Neutral** unless followed by an explicit calming cue
+(e.g., "…so consumers can rest easy").
+
+**Canonical bare‑negation cheat‑sheet (memorise):**  
+`poses no risk`, `unlikely to cause`, `no evidence of`, `not expected to`,
+`does not affect`, `cannot spread to`, **"does not pose a threat"**
+
+*If you see one of these **and no calming keywords from Q5** → answer "yes".*
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 10: hop_Q08.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Describes CAPABILITY / PREPAREDNESS (**PREPARED / PLAN / SYSTEM / PROTOCOL / RESOURCES / STOCKPILED / DEVELOPED**) **AND** no calming keyword (**SAFE / REST EASY / UNDER CONTROL / ALARM**) within 40 tokens?  
+• If the sentence already fires Q5 "Transient‑Issue Minimiser"  
+  (e.g. contains "short‑term blip", "resolve quickly"), **skip Q8**.
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The agency has developed a rapid deployment plan for emergencies.
+## Question: Does the segment describe capabilities/preparedness without active reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"States capability factually without explicitly linking to current calm or present safety."}
+
+# NO example
+## Input Segment: The agency's plan is a game-changer, meaning the public can rest assured help will arrive swiftly.
+## Question: Does the segment describe capabilities/preparedness without active reassurance?
+## JSON Output:
+{"answer":"no","rationale":"'game-changer' and 'public can rest assured' actively link capability to present reassurance."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q8
+**Rule C FAST‑PATH** – If the sentence merely states a capability/preparedness measure **and** does *not* contain an explicit calming keyword (`safe`, `alarm`, `no danger`, `rest easy`, `under control`) inside 40 tokens, answer "yes" → Neutral **immediately**.  
+---
+**Q8: Capability/Preparedness Statement without Active Reassurance (Rule C Test)**
+Does the segment describe capabilities, preparedness measures, hopeful future possibilities, or implemented safeguards (e.g., 'officials are working to contain,' 'vaccine can be made in X weeks,' 'systems are in place') WITHOUT the author or quoted source explicitly and actively linking these to a state of *current* calm, *present* safety, or *substantially minimized present risk* for the audience, as detailed in Rule C and related guidance?
+
+**🔍 Q8 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Development Capabilities** | "vaccine can be made in X weeks," "researchers are developing treatments," "antiviral stockpiled" | ✓ |
+| **Response Measures** | "officials are working to contain," "systems are in place," "protocols are being followed" | ✓ |
+| **Preparedness Statements** | "we have the resources," "plans are ready," "surveillance is ongoing" | ✓ |
+| **Future Possibilities** | "restrictions may be short-lived," "situation could improve," "recovery expected" | ✓ |
+| **Capability + Active Reassurance** | "stockpiled 30M doses, which is excellent news and means citizens are very well protected," "systems in place, so public can rest easy" | → Reassuring |
+
+**Guard 2 – speaker test**    
+If the capability statement comes from **industry PR** (companies, lobby groups) rather than **public authorities**, treat it as Neutral unless calming keywords appear.
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q9.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 11: hop_Q09.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Reports ECON metric with standard verb (**ROSE / FELL / INCREASED / DECLINED / WERE UP / WERE DOWN / %**) **AND** lacks vivid verbs (**SKYROCKETED / PLUMMETED / CRASHED**) or risk adjectives?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Market prices for wheat decreased by 2% this month.
+## Question: Is this factual reporting of prices/metrics using standard descriptive verbs?
+## JSON Output:
+{"answer":"yes","rationale":"'decreased by 2%' reports price change factually without vivid verbs or risk adjectives."}
+
+# NO example
+## Input Segment: Market prices for wheat took a devastating 2% dive this month, spelling trouble.
+## Question: Is this factual reporting of prices/metrics using standard descriptive verbs?
+## JSON Output:
+{"answer":"no","rationale":"'devastating dive' and 'spelling trouble' add alarmist framing beyond neutral reporting."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q9
+**Q9: Factual Reporting of Prices/Metrics**
+Is the segment primarily reporting prices, economic data, or other numerical metrics using standard descriptive verbs (e.g., 'rose,' 'declined,' 'increased,' 'fell') and potentially neutral adverbs (e.g., 'sharply,' 'significantly') BUT WITHOUT employing vivid/potent verbs (e.g., 'skyrocketed,' 'plummeted'), risk adjectives (e.g., 'catastrophic losses'), or other explicit alarmist/reassuring framing language from the author/source, as detailed in the rules for economic language?
+
+**🔍 Q9 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Standard Economic Verbs** | "prices rose," "costs declined," "rates increased," "values fell" | ✓ |
+| **Neutral Adverbs** | "sharply higher," "significantly declined," "notably increased" | ✓ |
+| **Factual Quantification** | "decreased by 2%," "gained 15 points," "lost $50M" | ✓ |
+| **Volatility adjective** *(mild)* | "prices could become **more volatile**" | ✓ |
+| **Vivid Economic Verbs** | "prices skyrocketed," "costs plummeted," "markets crashed" | → Alarmist |
+| **Risk Adjectives + Economics** | "catastrophic losses," "devastating decline," "crippling costs" | → Alarmist |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q10.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 12: hop_Q10.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Contains FUTURE‑RELIEF modal (**MAY / MIGHT / COULD / EXPECT / PREDICT / HOPE**) **AND** relief verb (**EASE / IMPROVE / NORMALIZE / END / RELIEF / RECOVERY**) without current calming keyword?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Experts predict that the supply chain issues could ease in the next quarter.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"yes","rationale":"'could ease in the next quarter' speculates about future relief without explicit current safety framing."}
+
+# NO example
+## Input Segment: Because these measures are working, restrictions may be short-lived, bringing welcome relief soon.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"no","rationale":"'Because these measures are working' frames current control, shifting toward reassuring rather than neutral speculation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q10
+**Q10: Speculation about Relief without Explicit Calming**
+Does the segment speculate about potential future relief or improvement (e.g., 'restrictions may be short-lived,' 'pressure could ease soon') WITHOUT an explicit calming cue from the author/source about the *current* state of risk or safety, as detailed in the rules?
+
+**🔍 Q10 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Future Relief Speculation** | "restrictions may be short-lived," "pressure could ease soon," "situation might improve" | ✓ |
+| **Hopeful Predictions** | "experts predict recovery," "there is hope for improvement," "conditions may normalize" | ✓ |
+| **Timeline Speculation** | "issues could resolve next quarter," "problems may end soon," "recovery expected next year" | ✓ |
+| **Future Relief + Current Reassurance** | "Because measures are working, restrictions may end soon, bringing relief," "situation improving, so outlook is positive" | → Reassuring |
+
+**🔗 See also:** Q8 for capability statements; Q5 for explicit calming cues; Q12 for default neutral
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q11.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+## File 13: hop_Q11.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• Direct QUOTE contains explicit Alarmist cue (**EXTREMELY CONCERNING / IMMEDIATE ACTION / HIGH RISK / CATASTROPHIC**) **OR** explicit Reassuring cue (**NO CAUSE FOR ALARM / EXCELLENT NEWS / SAFE TO EAT / VERY WELL PROTECTED**).  
+• If both or balanced → `"no"` (mixed → Neutral).  
+→ If one side dominant → `"yes"` and append `||FRAME=Alarmist` or `||FRAME=Reassuring`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: "Meanwhile, Kirby Institute head Professor Raina MacIntyre described the bird flu news as 'extremely concerning and requires immediate action.'"
+## Question: Does a directly quoted source provide a clear, dominant Alarmist or Reassuring frame?
+## JSON Output:
+{"answer":"yes","rationale":"Quoted source uses 'extremely concerning and requires immediate action' providing dominant alarmist frame. ||FRAME=Alarmist"}
+
+# NO example
+## Input Segment: "Meanwhile, Professor MacIntyre described the news as 'concerning,' but noted that avian flu viruses do not transmit easily in humans."
+## Question: Does a directly quoted source provide a clear, dominant Alarmist or Reassuring frame?
+## JSON Output:
+{"answer":"no","rationale":"Quote has 'concerning' but is balanced by factual counter-statement without explicit reassuring language, resulting in mixed/neutral overall."}
+
+# NEW example – balanced quote (stays Neutral)
+## Input Segment:
+## "This development is 'concerning', but the virus 'does not transmit easily in humans,' the expert said."
+## JSON Output:
+{"answer":"no","rationale":"Initial alarm word 'concerning' is balanced by neutral factual clause without explicit reassurance; no dominant frame. ||FRAME=Neutral"}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q11 (**Quote-presence hard-guard**)
+**Q11: Primacy of Framed Quotations – Dominant Quote Check**
+
+Does a directly quoted source within the segment provide a clear, dominant Alarmist or Reassuring frame (per detailed definitions in `step-0-meta-details` and specific frame definitions) that is not overridden or equally balanced by other quotes or strong authorial counter-framing, as per the "Guidance Note: Primacy of Framed Quotations"?
+
+**🔍 Q11 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **Outcome** |
+|------------------|--------------|-------------|
+| **Alarmist – Dominant Quote** | "extremely concerning and requires immediate action." | **Alarmist** | dominant alarm |
+| **Alarmist – Intensified High-Risk** | "definitely considered a period of high risk" | **Alarmist** | intensified risk assessment |
+| **Neutral – Bare risk-adj in quote** | "This virus is deadly to birds." | **Neutral** | base risk adjective without intensifier |
+| **Dominant Reassuring Quote** | "no cause for alarm," "excellent news," "very well protected" | → Reassuring |
+| **Balanced/Mixed Quotes** | "concerning, but viruses do not transmit easily" | → Neutral |
+| **Neutral Quotes Only** | "officials are monitoring," "tests are ongoing" | → Proceed to Q12 |
+
+**🔍 Detailed Rules & Examples:**
+
+**Guidance Note: Primacy of Framed Quotations (SUPERSEDES PREVIOUS QUOTE RULES)**
+**Technical-term override**  
+Before deciding that a quoted risk-adjective is Alarmist under Q11,  
+**skip** the cue if the adjective is immediately preceded (≤ 3 tokens) by the
+whitelisted biomedical collocations:  
+*"highly pathogenic"*, *"highly pathogenic avian"*, *"HPAI"*.  
+Rationale: Q1 technical-term guard has higher precedence and treats these
+as neutral taxonomy, not intensification.
+
+**Preparedness safety-link check**  
+When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but** lacks an explicit public/consumer safety link within 40 chars (e.g., "so consumers are safe"), treat it as **Neutral** rather than Reassuring.
+
+Core Principle: If – **and only if** – a statement is
+  (a) delimited by quotation marks **OR** introduced with a
+      colon‑style attribution inside ≤ 5 tokens  
+      (e.g. *Officials said: "..."*) **AND**
+  (b) spoken by a **named or institutional speaker**,  
+then treat it as a direct quotation for Q11 purposes.
+Attributions such as *"according to a report / overview / study"*
+without quoted wording are **NOT** treated as quotations and cannot
+trigger Q11.
+
+If a quoted sentence contains both alarm **and** de-escalating clauses,
+score **Neutral** unless one side clearly *outguns* the other with an
+Intensifier, Potent verb, or Explicit calming keyword.  In true *mixed*
+cases, Neutral prevails.
+
+If no regex pattern matches **and** the quote is > 600 chars, summarise manually;
+else fall through to Q12 Neutral.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'. If yes, MUST end with ||FRAME=Alarmist or ||FRAME=Reassuring>"
+}
+```
+
+## File 14: hop_Q12.txt
+------------------------------------------------------------
+### QUICK DECISION CHECK
+• After checking Q1‑Q11, are **zero** Alarmist or Reassuring cues left?  
+→ If yes → `"yes"` (Neutral); else → `"no"` and re‑evaluate higher‑priority hops.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The report documented 500,000 job losses in the last quarter.
+## Question: Are there NO remaining explicit framing cues, with facts presented purely factually?
+## JSON Output:
+{"answer":"yes","rationale":"Factual report of severe statistic without loaded language, intensifiers, or explicit framing rhetoric."}
+
+# NO example
+## Input Segment: The report detailed a catastrophic wave of 500,000 job losses.
+## Question: Are there NO remaining explicit framing cues, with facts presented purely factually?
+## JSON Output:
+{"answer":"no","rationale":"'catastrophic wave' adds explicit alarmist framing beyond factual reporting."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q12
+**Q12: Default to Neutral / Final Comprehensive Check**
+After applying all preceding checks, are there NO remaining explicit and sufficient Alarmist or Reassuring framing cues from either the author or any quoted source? Is the presentation of any severe/positive facts purely factual and descriptive, leading to a Neutral frame by default as per the "Default-to-Neutral Rule"?
+
+**🔍 Q12 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Factual Reporting** | "documented 500,000 job losses," "reported 15 cases," "detected in 3 locations" | ✓ |
+| **Technical Descriptions** | "high mortality rate," "R-value of 2.1," "lethal dose 50" | ✓ |
+| **Standard Procedures** | "officials are monitoring," "tests are ongoing," "surveillance continues" | ✓ |
+| **Neutral Metrics** | "prices rose 5%," "rates declined," "levels increased" | ✓ |
+| **Remaining Framing Cues** | Any missed intensifiers, potent verbs, explicit calming language | → Re-evaluate Q1-Q11 |
+
+**Outcome:** Yes → Label: Neutral. No → *(This path suggests a cue type potentially missed or a nuanced case. Re-evaluate based on comprehensive Alarmist/Reassuring inclusion criteria not fitting simple top-level questions.)*
+
+**🔍 Detailed Rules & Examples:**
+
+**Default-to-Neutral Rule (Strictly Presentation-Focused)**
+Heuristic: In the absence of explicit emotional language, specific framing cues (e.g., loaded adjectives, urgent tone, calming words), or a distinct rhetorical tone from EITHER the segment's author OR any directly quoted source within the segment, Neutral is the appropriate code for Dim1_Frame. 
+
+**Crucial Clarification:** This rule applies if both the author's presentation and the presentation by any quoted sources are neutral.
+
+* If a segment reports objectively severe facts, and both the author and any quoted source commenting on these facts use neutral, factual language without added alarmist rhetoric, the Dim1_Frame is Neutral.
+* Similarly, if a segment reports objectively positive facts, and both the author and any quoted source use neutral, factual language without added reassuring rhetoric, the Dim1_Frame is Neutral.
+* The focus remains on the presentation by the author and by any quoted sources.
+
+**Definition: Neutral** (Synthesized from principles, common pitfalls, and examples)
+A segment is Neutral if it presents information factually without significant, explicit linguistic or rhetorical cues from the author or quoted sources that are designed to evoke strong fear, urgency (Alarmist), or to actively calm, reassure, or minimize risk (Reassuring). Neutral framing reports events, facts, or statements, even if objectively severe or positive, in a straightforward, descriptive manner.
+
+**Examples of Neutral Framing:**
+* **Severe Fact, Neutral Presentation:**
+  * Segment: "The report documented 500,000 job losses in the last quarter."
+  * Reasoning: "Neutral. The author reports a severe statistic factually. No loaded language, intensifiers, or explicit alarmist rhetoric (e.g., 'a catastrophic wave of job losses,' 'an economic disaster unfolding') is used by the author to frame this fact."
+* **Positive Fact, Neutral Presentation:**
+  * Segment: "Vaccination rates reached 80% in the target population."
+  * Reasoning: "Neutral. The author reports a positive statistic factually. No explicit reassuring language (e.g., 'a wonderfully high rate providing excellent protection,' 'this achievement means the community is now safe') is used by the author."
+
+**Canonical NON-EXAMPLES:**
+* **NON-EXAMPLE for Reassuring (Code: Neutral):**
+  * Text: "Despite the health department conducting contact tracing, no further cases of bird flu connected to the case have been reported at the time of writing."
+  * Correct Codebook Reasoning: "Neutral. The author reports a positive fact (absence of new cases) using descriptive, neutral language. No explicit reassuring language...is used by the author to actively frame these facts reassuringly."
+* **NON-EXAMPLE for Alarmist (Code: Neutral):**
+  * Text: "These [characteristics] include a wide host range, high mutation rate, genetic reassortment, high mortality rates, and genetic reassortment."
+  * Correct Codebook Reasoning: "Neutral. The author lists factual characteristics using neutral, descriptive language. No loaded adjectives...or explicit alarmist rhetoric are used by the author to actively frame these characteristics beyond their factual statement."
+
+**Further characteristics of Neutral framing include:**
+* Factual descriptions of phenomena that inherently possess negative-sounding descriptors (e.g., 'a high fever,' 'a high mortality rate,' 'a rapidly spreading virus') if the author/source does not add further explicit alarmist framing.
+* Listing a fatality/damage rate, case/incident count, or R-value/metric without evaluative language or alarming tone from either the quoted source or the author.
+* Reporting standard descriptive terms for negative events (e.g., 'outbreak,' 'death,' 'illness,' 'culling,' 'risk,' 'concern,' 'epidemic,' 'potential for X,' 'active outbreaks') without additional explicit alarmist cues.
+* Epistemic modals (e.g., 'could,' 'might,' 'may') expressing possibility alone, unless the potential outcome is itself framed with strong alarmist intensifiers or paired with other alarmist cues.
+* Technical terms, official classifications, and procedural language reported as factual designations.
+
+**Examples from other Rules that default to Neutral:**
+* **Neutral (Capability/Preparedness - Rule C, Q8):** "The agency has developed a rapid deployment plan for emergencies."
+* **Neutral (Bare Negation - Q7):** "Not expected to lower production."
+* **Neutral (Factual Reporting of Prices/Metrics - Q9):** "Market prices for wheat decreased by 2% this month."
+* **Neutral (Speculation about Relief - Q10):** "Experts predict that the supply chain issues could ease in the next quarter."
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain|unknown",
+  "rationale": "<max 80 tokens, explaining why no explicit framing cues remain and facts are presented neutrally>"
+}
+```
+
+================================================================================
+# End of concatenated prompts (14 files)

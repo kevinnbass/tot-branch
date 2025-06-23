@@ -1,0 +1,5 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'worrisome indication' (modifies noun) and 'at risk' (state), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 195}
+{"Q": 2, "answer": "no", "rationale": "'worrisome indication' describes a psychological state. 'at risk' is a negative noun but not superlative.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 141}
+{"Q": 3, "answer": "no", "rationale": "Segment does not contain a moderate verb paired with explicit scale or impact.", "method": "llm_batch", "batch_id": "batch_3_18132", "batch_size": 81, "batch_pos": 63}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_16304", "batch_size": 64, "batch_pos": 48}
+{"Q": 5, "answer": "yes", "rationale": "regex:ExplicitCalming matched", "method": "regex", "batch_id": "batch_5_16440", "batch_size": 56, "batch_pos": 40, "regex": {"rule": "ExplicitCalming", "span": [22, 34], "captures": [null]}}

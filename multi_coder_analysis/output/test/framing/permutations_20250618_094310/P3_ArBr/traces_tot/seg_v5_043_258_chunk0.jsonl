@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'dangerous' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_6224", "batch_size": 217, "batch_pos": 168}
+{"Q": 2, "answer": "no", "rationale": "The segment uses the phrase 'dangerous how-to guide' which is a negative description, not a potent metaphor for the virus's impact.", "method": "llm_batch", "batch_id": "batch_2_16684", "batch_size": 163, "batch_pos": 114}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb from the Q3 list is present.", "method": "llm_batch", "batch_id": "batch_3_16272", "batch_size": 84, "batch_pos": 37}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_15796", "batch_size": 58, "batch_pos": 12}
+{"Q": 5, "answer": "no", "rationale": "The segment discusses concerns about research providing a 'dangerous how-to guide,' not explicit calming.", "method": "llm_batch", "batch_id": "batch_5_17340", "batch_size": 53, "batch_pos": 7}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_7664", "batch_size": 260, "batch_pos": 230}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_6736", "batch_size": 260, "batch_pos": 216}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17248", "batch_size": 260, "batch_pos": 253, "regex": {"rule": "CapabilityNoReassurance", "span": [106, 110], "captures": []}}

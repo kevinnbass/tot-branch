@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_12396", "batch_size": 260, "batch_pos": 73}
+{"Q": 2, "answer": "no", "rationale": "The segment quotes an official statement assessing the risk as not immediate, which is not a Q2 Alarmist cue.", "method": "llm_batch", "batch_id": "batch_2_17256", "batch_size": 260, "batch_pos": 44}
+{"Q": 3, "answer": "no", "rationale": "Segment contains a bare negation.", "method": "llm_batch", "batch_id": "batch_3_15120", "batch_size": 260, "batch_pos": 245}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_4752", "batch_size": 260, "batch_pos": 233}
+{"Q": 5, "answer": "no", "rationale": "The segment contains a bare negation about public health concern, which is excluded from Q5 Reassuring criteria.", "method": "llm_batch", "batch_id": "batch_5_7008", "batch_size": 260, "batch_pos": 231}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_12868", "batch_size": 260, "batch_pos": 202}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_15724", "batch_size": 260, "batch_pos": 185, "regex": {"rule": "BareNegationHealthConcern", "span": [83, 132], "captures": []}}

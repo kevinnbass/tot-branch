@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative directly modifies a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16524", "batch_size": 260, "batch_pos": 228}
+{"Q": 2, "answer": "no", "rationale": "The segment does not contain high-potency verbs, potent metaphors, superlative negative nouns, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_10428", "batch_size": 260, "batch_pos": 193}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_1432", "batch_size": 260, "batch_pos": 147}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14432", "batch_size": 260, "batch_pos": 131}
+{"Q": 5, "answer": "no", "rationale": "The segment reports potential severe outcomes, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_18008", "batch_size": 260, "batch_pos": 129}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_11528", "batch_size": 260, "batch_pos": 106}
+{"Q": 7, "answer": "no", "rationale": "The segment contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17060", "batch_size": 260, "batch_pos": 96}
+{"Q": 8, "answer": "no", "rationale": "The segment describes potential severe symptoms/outcomes, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_15012", "batch_size": 260, "batch_pos": 218}
+{"Q": 9, "answer": "no", "rationale": "The segment describes symptoms/outcomes rather than reporting numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14520", "batch_size": 260, "batch_pos": 156}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_6352", "batch_size": 200, "batch_pos": 14}
+{"Q": 10, "answer": "no", "rationale": "The segment describes potential negative outcomes, not future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_6352_r1", "batch_size": 200, "batch_pos": 14}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_17420", "batch_size": 260, "batch_pos": 251}
+{"Q": 12, "answer": "yes", "rationale": "Factual description of potential severe outcomes; stated factually, not amplified.", "method": "llm_batch", "batch_id": "batch_12_14564", "batch_size": 260, "batch_pos": 251}

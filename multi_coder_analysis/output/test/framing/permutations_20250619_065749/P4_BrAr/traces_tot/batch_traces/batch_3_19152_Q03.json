@@ -1,0 +1,103 @@
+{
+  "batch_id": "batch_3_19152",
+  "hop_idx": 3,
+  "segment_count": 19,
+  "responses": [
+    {
+      "segment_id": "seg_v5_4_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual reporting verbs ('reported', 'detected', 'were fatal') and a percentage scale, but no moderate verb from the Q3 list paired with significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_3_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual reporting verbs ('restricted', 'has been detected', 'is now testing') and lacks significant scale/impact information paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_2_1674_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual reporting verbs ('announced', 'had') and a scale ('one in five') but no moderate verb from the Q3 list paired with significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_1_1674_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'spread' is present, but the scale ('at least one person', '36 dairy herds') is not framed as significant impact according to Q3 examples (millions, record, overwhelming)."
+    },
+    {
+      "segment_id": "seg_v5_17_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the plain outcome verb 'killed', which is excluded by Q3 rule 4, even when paired with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_16_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the plain outcome verb 'killed', which is excluded by Q3 rule 4, even when paired with large numbers."
+    },
+    {
+      "segment_id": "seg_v5_15_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the verb 'kills', which is a plain outcome verb excluded by Q3 rule 4."
+    },
+    {
+      "segment_id": "seg_v5_13_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual reporting verbs ('have been detected', 'remains') and contains calming language, but no moderate verb + scale pattern."
+    },
+    {
+      "segment_id": "seg_v5_12_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual reporting verbs ('said', 'do not present') and contains calming language, but no moderate verb + scale pattern."
+    },
+    {
+      "segment_id": "seg_v5_11_102_chunk0",
+      "answer": "no",
+      "rationale": "The verb 'circulating' describes a background condition, not the realised impact of the threat itself, and is subject to the context guard."
+    },
+    {
+      "segment_id": "seg_v5_10_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual verbs ('is blamed', 'can contaminate') and lacks significant scale/impact information paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_9_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual reporting verbs ('shows', 'have confirmed') and a scale ('23 states') but no moderate verb from the Q3 list paired with significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_7_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual reporting verb 'confirmed' and a number ('35,500 birds') but no moderate verb from the Q3 list paired with significant scale/impact."
+    },
+    {
+      "segment_id": "seg_v5_6_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the factual reporting verb 'were' and lacks significant scale/impact information paired with a moderate verb."
+    },
+    {
+      "segment_id": "seg_v5_5_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the verb 'raises' and a large number ('11.7 million turkeys') but describes production, not the virus's impact, falling under the financial/trade guard."
+    },
+    {
+      "segment_id": "seg_v5_4_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses factual verbs ('is', 'had') and a large number ('46 million chickens') but describes inventory/production, not the virus's impact, falling under the financial/trade guard."
+    },
+    {
+      "segment_id": "seg_v5_3_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the plain outcome/containment verb 'kill' paired with large numbers, which is excluded by Q3 rule 4 and the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_2_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the plain outcome/containment verb 'kill' paired with large numbers, which is excluded by Q3 rule 4 and the containment override rule."
+    },
+    {
+      "segment_id": "seg_v5_1_102_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses the plain outcome verb 'infected' and the containment verb 'killing' paired with large numbers, which are excluded by Q3 rule 4 and the containment override rule."
+    }
+  ],
+  "timestamp": "2025-06-19T06:59:05.108150"
+}

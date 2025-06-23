@@ -1,0 +1,6 @@
+{"Q": 1, "answer": "no", "rationale": "'most risk' modifies people. 'negligible' modifies 'risk' (noun).", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 158}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 155}
+{"Q": 3, "answer": "no", "rationale": "Discusses risk (potential) and contains a Reassuring cue, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 146}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 145}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 145}
+{"Q": 5, "answer": "yes", "rationale": "The phrase 'risk of illness in those persons is still negligible' is an intensified low-risk evaluation.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 142}

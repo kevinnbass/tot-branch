@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'strongest' modifies 'surveillance program', not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 14}
+{"Q": 3, "answer": "no", "rationale": "Discusses surveillance program, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 13}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 13}
+{"Q": 5, "answer": "no", "rationale": "The quote states the US has the 'strongest AI surveillance program' and is 'working... to actively look,' which is capability/preparedness but lacks an explicit link to present public safety.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 13}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 13}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 13}
+{"hop_idx": 8, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 12}
+{"Q": 8, "answer": "yes", "rationale": "Describes capabilities ('strongest AI surveillance program') and preparedness ('working with its partners to actively look') without active reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_8_16892_r1", "batch_size": 260, "batch_pos": 12}

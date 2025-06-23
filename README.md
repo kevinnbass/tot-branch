@@ -8,6 +8,8 @@ This project provides a comprehensive pipeline for claim framing analysis, featu
 - **Rule-Based Decision Tree**: Transparent classification following predefined precedence rules
 - **Comprehensive Audit Trails**: Complete traceability of reasoning steps
 - **Modular Architecture**: Easy integration with existing analysis pipelines
+- **Consensus-Across-Permutations**: Run eight row-order permutations in parallel and apply per-hop majority voting.
+- **Lazy Materialisation (RAM-Friendly)**: Concluded segments are streamed to on-disk JSONL archives so that memory usage stays bounded even on very large datasets.
 
 ## Quick Start
 
@@ -39,6 +41,10 @@ python main.py --use-tot --phase test --dimension framing
 - `--dimension`: Analysis dimension (framing)
 - `--config`: Configuration file path (default: config.yaml)
 - `--limit`: Limit number of statements (for testing)
+- `--consensus {none,hop}`: Enable hop-level voting across permutations.
+- `--batch-size N`: Number of segments sent to the LLM per request.
+- `--perm-workers N`: Number of OS processes that each handle one permutation set (P1 … P8).
+- `--archive-enable/--no-archive-enable`: Toggle lazy materialisation (enabled by default).
 
 ## How It Works
 
@@ -56,6 +62,45 @@ The ToT pipeline processes each text segment through a sequential 12-hop reasoni
 10. **Q10**: Speculation about Relief → Neutral
 11. **Q11**: Framed Quotations → Variable
 12. **Q12**: Default → Neutral
+
+### Consensus-Across-Permutations (New)
+
+When you add `--permutations --consensus hop` the runner duplicates the dataset **eight times** and re-orders each copy according to a predefined AB / BA / … scheme.  All copies are then split into equal-sized batches (default *10* or the value you pass via `--batch-size`).
+
+At every hop:
+
+1. The *same* batch index is processed concurrently in **all** permutation sets using a single batched LLM call per permutation.  You will therefore see the familiar log line
+
+   ```
+   Batch Q05: attempt 1 succeeded for 200/200 objects; still missing 0
+   ```
+
+   eight times (one per permutation tag).
+2. The hop-level voting rule aggregates the eight answers for each segment.  If the rule determines a final frame the segment is marked *concluded* in **every** permutation set.
+3. An `_ArchivePruneStep` immediately streams all concluded segments to `output/archive/<run_id>_<tag>.jsonl` and removes them from memory.  Only the unresolved remainder continues to the next hop.
+
+Memory usage therefore scales with *unresolved* items, not with total dataset size, making it feasible to process tens of thousands of rows on commodity hardware.
+
+### JSONL Archive Format
+
+Each worker appends to its own file:
+
+```
+output/archive/<run_id>_<tag>.jsonl
+```
+
+Every line has the schema:
+
+```jsonc
+{
+  "statement_id": "S1234",
+  "permutation": 3,   // P4 = index 3
+  "hop": 5,
+  "frame": "alarmist yes"
+}
+```
+
+These files are append-only and can be consumed by downstream analytics without waiting for the entire run to finish.
 
 ## Output
 

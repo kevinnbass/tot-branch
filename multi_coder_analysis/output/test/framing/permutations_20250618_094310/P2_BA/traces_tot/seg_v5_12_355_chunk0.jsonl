@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'number' modifies quantity. 'easily' modifies 'spread'.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 219}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 214}
+{"Q": 3, "answer": "no", "rationale": "Uses 'reported' and 'found' (plain outcome verbs) with vague scale ('number of cases') and 'spread easily' (background condition).", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 195}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 194}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 194}
+{"Q": 5, "answer": "no", "rationale": "The segment reports cases and how the virus spreads, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 191}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 183}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 183}
+{"Q": 8, "answer": "no", "rationale": "Reports cases and describes transmission, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 176}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports the number of cases 'reported' and how the virus spreads, including factual reporting of a numerical metric.", "method": "llm_batch", "batch_id": "batch_9_16488", "batch_size": 260, "batch_pos": 103}

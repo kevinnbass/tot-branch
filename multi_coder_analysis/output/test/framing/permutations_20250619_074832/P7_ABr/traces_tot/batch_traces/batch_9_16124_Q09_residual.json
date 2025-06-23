@@ -1,0 +1,507 @@
+{
+  "batch_id": "batch_9_16124",
+  "hop_idx": 9,
+  "unknown_count": 100,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_8_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numerical metrics ('23 states') using standard verbs ('shows')."
+    },
+    {
+      "segment_id": "seg_v5_11_102_chunk0",
+      "answer": "no",
+      "rationale": "Reports a factual instruction with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_13_102_chunk0",
+      "answer": "yes",
+      "rationale": "Reports corrected numerical metrics ('22 million', '13 million') using standard verbs ('updated', 'correct')."
+    },
+    {
+      "segment_id": "seg_v5_14_1674_chunk0",
+      "answer": "no",
+      "rationale": "Reports a scientific finding with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_15_1674_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_16_1674_chunk0",
+      "answer": "no",
+      "rationale": "Reports a health statistic with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_17_1674_chunk0",
+      "answer": "no",
+      "rationale": "Reports animal deaths with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_18_1674_chunk0",
+      "answer": "yes",
+      "rationale": "Reports sales data ('sales 'jumped 27 percent, from $12 million... to $19.4 million') using descriptive verbs."
+    },
+    {
+      "segment_id": "seg_v5_19_1674_chunk0",
+      "answer": "no",
+      "rationale": "Reports a research finding with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_20_1674_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_21_1674_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_22_1674_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_23_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_24_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_25_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_26_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_27_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_28_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_29_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_30_1470_chunk0",
+      "answer": "no",
+      "rationale": "Reports a health statistic with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_31_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_32_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_33_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_34_1470_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_78_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_81_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_83_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_84_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_85_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_86_647_chunk0",
+      "answer": "no",
+      "rationale": "Reports preparedness/response with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_88_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_89_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_93_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_96_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_97_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_98_647_chunk0",
+      "answer": "no",
+      "rationale": "Contains vivid language ('top of the list in terms of bad guy viruses') not related to prices/metrics."
+    },
+    {
+      "segment_id": "seg_v5_99_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_100_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_101_647_chunk0",
+      "answer": "no",
+      "rationale": "Reports outcome for animals with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_102_647_chunk0",
+      "answer": "no",
+      "rationale": "Reports outcome for animals with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_103_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_104_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_105_647_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_106_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports price changes ('cost more', 'could get even higher') using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_107_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_108_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_109_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_110_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_111_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_112_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_113_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_114_1065_chunk0",
+      "answer": "no",
+      "rationale": "Reports outbreak scale and industry size with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_115_1065_chunk0",
+      "answer": "no",
+      "rationale": "Reports ranking with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_116_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports price changes ('prices rise') using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_117_1065_chunk0",
+      "answer": "yes",
+      "rationale": "Reports price changes ('cost of eggs has doubled') using standard verbs."
+    },
+    {
+      "segment_id": "seg_v5_118_1065_chunk0",
+      "answer": "no",
+      "rationale": "Reports production volume with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_119_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_120_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_121_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_122_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_123_1065_chunk0",
+      "answer": "no",
+      "rationale": "Reports outbreak scale with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_124_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_125_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_126_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_127_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_128_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_129_1065_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_130_1198_chunk0",
+      "answer": "no",
+      "rationale": "Reports location, capacity, and event with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_131_1198_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_132_192_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_133_192_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_134_192_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_135_192_chunk0",
+      "answer": "no",
+      "rationale": "Reports outbreak scale with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_136_192_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_137_192_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_138_1286_chunk0",
+      "answer": "no",
+      "rationale": "Reports animal deaths with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_139_1286_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_140_1286_chunk0",
+      "answer": "no",
+      "rationale": "Reports animal deaths/testing with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_141_1286_chunk0",
+      "answer": "no",
+      "rationale": "Reports actions with animals with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_142_1286_chunk0",
+      "answer": "no",
+      "rationale": "Reports outcome for animals with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_143_1286_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_144_1286_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_145_1286_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_146_914_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_147_914_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_148_914_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_149_914_chunk0",
+      "answer": "no",
+      "rationale": "Reports health statistics with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_150_914_chunk0",
+      "answer": "no",
+      "rationale": "Reports animal deaths/event trigger with numerical data, not economic/price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_151_914_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_152_914_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_153_914_chunk0",
+      "answer": "no",
+      "rationale": "Does not primarily report prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_15_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment is not primarily reporting prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_16_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains Reassuring framing ('risks to the general public remain low')."
+    },
+    {
+      "segment_id": "seg_v5_18_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment is not primarily reporting prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_19_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment is not primarily reporting prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_20_1470_chunk0",
+      "answer": "yes",
+      "rationale": "Reports numerical metrics ('Over half of the over 900 human H5N1 cases') using standard language."
+    },
+    {
+      "segment_id": "seg_v5_21_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment is not primarily reporting prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_22_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains Reassuring framing ('risks currently being low')."
+    },
+    {
+      "segment_id": "seg_v5_23_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment is not primarily reporting prices, economic data, or numerical metrics."
+    },
+    {
+      "segment_id": "seg_v5_24_1470_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a psychological verb ('expressed concerns') not related to prices/metrics."
+    }
+  ]
+}

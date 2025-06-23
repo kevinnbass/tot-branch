@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17404", "batch_size": 260, "batch_pos": 186}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language like 'announced' and 'confirmed case'. 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_2_15516", "batch_size": 260, "batch_pos": 172}
+{"Q": 3, "answer": "no", "rationale": "'announced' and 'confirmed case' are not moderate verbs from the list.", "method": "llm_batch", "batch_id": "batch_3_5284", "batch_size": 260, "batch_pos": 135}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_17836", "batch_size": 260, "batch_pos": 127}
+{"Q": 5, "answer": "no", "rationale": "The segment reports the first confirmed case but contains no explicit calming cue.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 124}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_6448", "batch_size": 260, "batch_pos": 102}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17148", "batch_size": 260, "batch_pos": 98}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16516", "batch_size": 260, "batch_pos": 24, "regex": {"rule": "CapabilityNoReassurance", "span": [21, 30], "captures": []}}

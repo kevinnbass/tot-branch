@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'emergency', which is a noun, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 72}
+{"Q": 2, "answer": "no", "rationale": "The verb 'hits' is a boundary guard verb and is Neutral without scale/impact details.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 18}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a moderate verb ('hits') but lacks significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 207}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 196}
+{"Q": 5, "answer": "no", "rationale": "Describes government priorities during emergency, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 188}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 141}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 141}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 132}
+{"Q": 8, "answer": "no", "rationale": "The segment describes government priorities, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 192}
+{"Q": 9, "answer": "no", "rationale": "The segment reports priorities during emergency, not primarily prices or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_18260", "batch_size": 260, "batch_pos": 221}
+{"Q": 10, "answer": "no", "rationale": "The segment does not speculate about potential future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_4092", "batch_size": 260, "batch_pos": 257}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_15980", "batch_size": 248, "batch_pos": 213}
+{"Q": 12, "answer": "no", "rationale": "Segment contains the noun 'emergency' describing the situation, triggering Q1.", "method": "llm_batch", "batch_id": "batch_12_13208", "batch_size": 247, "batch_pos": 212}

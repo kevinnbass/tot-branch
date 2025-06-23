@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11792", "batch_size": 260, "batch_pos": 40}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_16924", "batch_size": 260, "batch_pos": 24}
+{"Q": 2, "answer": "no", "rationale": "This segment contains a reassuring cue ('risk... remains low'), not an alarmist cue for Q2.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_16924_r1", "batch_size": 260, "batch_pos": 24}
+{"Q": 3, "answer": "no", "rationale": "Reassuring fact ('risk... remains low'), stated neutrally, does not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_12716", "batch_size": 260, "batch_pos": 246}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 241}
+{"Q": 5, "answer": "no", "rationale": "The phrase 'risk to humans... remains low' is a bare low-risk statement, not intensified, and does not meet Q5 criteria.", "method": "llm_batch", "batch_id": "batch_5_17836", "batch_size": 260, "batch_pos": 239}
+{"Q": 6, "answer": "no", "rationale": "Contains 'low' but stated neutrally, not framed with minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_18368", "batch_size": 260, "batch_pos": 214}
+{"Q": 7, "answer": "yes", "rationale": "'risk to humans from the bird flu virus remains low' is a bare negation about risk.", "method": "llm_batch", "batch_id": "batch_7_3220", "batch_size": 260, "batch_pos": 200}

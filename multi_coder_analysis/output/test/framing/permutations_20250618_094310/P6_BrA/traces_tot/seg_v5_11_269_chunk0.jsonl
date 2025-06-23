@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'vigilance', which is a noun, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 90}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'resulted' and 'required' are not high-potency. 'vigilance' is not the specific 'on high alert' phrase.", "method": "llm_batch", "batch_id": "batch_2_17968", "batch_size": 162, "batch_pos": 36}
+{"Q": 3, "answer": "no", "rationale": "The segment uses an outcome verb ('have resulted') and lacks significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 224}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 213}
+{"Q": 5, "answer": "no", "rationale": "Reports absence of human-to-human transmission (bare negation) and requirement for 'vigilance,' not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 205}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 158}
+{"Q": 6, "answer": "no", "rationale": "The phrase 'Almost all' is not a minimiser token.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 158}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation 'have not resulted in human-to-human transmission' without an explicit calming cue.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 149}

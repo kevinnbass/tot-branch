@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 46}
+{"Q": 2, "answer": "no", "rationale": "The phrase 'slow trickle' describes information flow, not the threat's impact using vivid language.", "method": "llm_batch", "batch_id": "batch_2_10144", "batch_size": 260, "batch_pos": 11}
+{"Q": 3, "answer": "no", "rationale": "Neutral verb used; 'slow trickle' is metaphor.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 197}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 178}
+{"Q": 5, "answer": "no", "rationale": "The segment reports criticism, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 175}
+{"Q": 6, "answer": "no", "rationale": "The segment criticizes slow information and lack of details but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 126}
+{"Q": 7, "answer": "no", "rationale": "The segment states criticism, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 114}
+{"Q": 8, "answer": "no", "rationale": "The segment reports criticism regarding lack/slowness of information, not the capability itself or its effectiveness.", "method": "llm_batch", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 206}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_16860", "batch_size": 239, "batch_pos": 49}
+{"Q": 9, "answer": "no", "rationale": "The segment discusses criticism of information flow and details, not numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_16860_r1", "batch_size": 239, "batch_pos": 49}
+{"Q": 10, "answer": "no", "rationale": "The segment describes past criticism ('Experts criticized this slow trickle of information') rather than speculating about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_15432", "batch_size": 260, "batch_pos": 181}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or clearly attributed statement providing a frame.", "method": "llm_batch", "batch_id": "batch_11_10328", "batch_size": 244, "batch_pos": 149}
+{"Q": 12, "answer": "yes", "rationale": "Reports experts 'criticized'. Neutral.", "method": "llm_batch", "batch_id": "batch_12_4324", "batch_size": 244, "batch_pos": 149}

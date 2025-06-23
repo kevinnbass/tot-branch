@@ -1,0 +1,27 @@
+{
+  "batch_id": "batch_3_14288",
+  "hop_idx": 3,
+  "unknown_count": 4,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_8_102_chunk0",
+      "answer": "no",
+      "rationale": "Uses reporting verb 'shows' and 'confirmed', not a moderate verb + scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_14_102_chunk0",
+      "answer": "no",
+      "rationale": "Contains containment verb 'killed' which neutralises any preceding moderate verb + scale."
+    },
+    {
+      "segment_id": "seg_v5_18_102_chunk0",
+      "answer": "no",
+      "rationale": "Reports assessment of concern, no moderate verb + scale of impact."
+    },
+    {
+      "segment_id": "seg_v5_19_102_chunk0",
+      "answer": "yes",
+      "rationale": "'circulating' paired with 'at least 26 states' and 'Europe and Asia' indicates widespread impact."
+    }
+  ]
+}

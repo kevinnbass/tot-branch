@@ -1,0 +1,1004 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_7_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a bare positive fact (absence of detection) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a negative event (detection, deaths) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts about the strain and its history. 'high pathogenicity' is a technical term. No explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a fact about frequency without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports concern elsewhere and unusual behaviour. 'causing great concern' describes a reaction, not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_12_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts about the strain's history without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a negative sentiment about the situation, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_17_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports spread to mammals without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_18_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a single human case. 'Only one case' is a quantifier but not framed with explicit calming language or linked to a low risk statement."
+  },
+  {
+    "segment_id": "seg_v5_19_586_chunk0",
+    "answer": "no",
+    "rationale": "Contains 'enormous concern' (not calming) and 'public health risk remained low' which is a bare low-risk statement, not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_20_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment provides public health advice/action without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_21_586_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'safe to consume' is a direct consumption safety assurance, which is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_22_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment provides public health advice/action and symptom list without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_23_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports historical facts and successful eradication ('successfully eradicated' is a positive outcome stated factually, not framed with explicit calming language)."
+  },
+  {
+    "segment_id": "seg_v5_25_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detections of low pathogenic strains. 'low pathogenic' is a technical term. No explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_26_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports control measures and scale without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_27_586_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports control measures without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_797_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a question, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_2_797_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a case with mild symptoms without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_797_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports lack of testing due to delay without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_797_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports lack of testing and frames it as a recurring issue, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_5_797_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports illness in contacts and one negative test. The negative test is a positive fact, but stated neutrally."
+  },
+  {
+    "segment_id": "seg_v5_1_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a first human case of a rare strain without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports presence and sporadic infection without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare negation ('no indication') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_4_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports hospitalization and diagnosis dates without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports hospitalization/diagnosis and lack of detail on infection source without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a positive health outcome (stable, ready for discharge) as a bare fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_7_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of cases in contacts as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_8_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of cases in contacts and globally as bare positive facts, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_9_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports low pathogenicity and low likelihood of large outbreak. 'low pathogenic' is a technical term. 'unlikely to cause a large-scale outbreak' is a bare low-risk assessment, not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_10_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports unknown source and absence of other cases as bare facts, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_11_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare negation ('no indication') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_12_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports sporadic infection is not surprising and calls the threat 'persistent', which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_13_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports the virus is 'not a very common virus' as a bare statement about frequency, not framed as explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_14_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports the virus is 'not a very common virus' and provides data as bare facts, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_15_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports the need for analysis, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_16_922_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of significant numbers since a past event as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_001_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detection. 'highly pathogenic' is a technical term. No explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_002_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports testing and confirmation process without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_003_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports control measures and a bare negation about food safety ('will not enter the food system'), not explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_004_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a first case and uncertainty about source, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_006_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a potential threat to poultry, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_008_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detections in multiple locations/types of farms without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare negation ('do not present... concern') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_010_63_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of human cases as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_1_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports an outbreak. 'highly pathogenic' is a technical term. No explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_2_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports details about the farm and birds without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a death and action taken without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports deaths without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_5_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports culling without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_6_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports spread, deaths, concern, disruption, price increases, and risk. 'highly contagious' is a technical term. 'raising concern' describes a reaction. Not calming."
+  },
+  {
+    "segment_id": "seg_v5_7_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports WHO description ('worrying') and human cases. 'worrying' is not a calming cue."
+  },
+  {
+    "segment_id": "seg_v5_8_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a death, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_9_1257_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports action taken (suspension) after a case, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_004_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports deaths in wild birds, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_005_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports deaths and testing without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment lists affected species without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_007_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detections in multiple states without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_008_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a fact about wild birds without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts about wild birds and potential spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports anticipation of future detections, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_011_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare low-risk statement ('remains low') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_012_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a negative impact on the industry, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_013_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports culling numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_014_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports culling and mechanism of spread/impact without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_015_127_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports rising prices, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_001_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detection and scale without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_002_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports confirmation and location details without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_003_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports official action (proclamation, resources) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_004_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports lack of disclosure, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_005_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports resources for tracking/detection (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports action taken (killing/disposal) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_007_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports control measures (zone, testing) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_008_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports details about the zone without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports discovery and frames it as 'especially troubling', which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_010_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports historical impact (culling numbers) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_011_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports historical outbreaks without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_012_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports actions being taken (working to trace, control, eradicate - preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_013_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports potential future negative impacts (prices, availability), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_014_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports spread to multiple states/types of farms without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_016_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts about transmission in chickens without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_017_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts about transmission routes without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_018_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare negation ('do not present... concern') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_019_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of human cases as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_020_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts about human transmission (unusual, close contact) without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_021_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a historical first case without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_022_71_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports additional cases and culling numbers without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_13_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports geographical spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_14_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detection timeline and spread to mammals without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_15_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a scientific fact about mutation/adaptation without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_16_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports capability of adaptation to mammals without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_17_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports importance of research without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_18_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports facts and frames them as 'particularly concerning', which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_19_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports increasing risk of human transmission with spread, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_20_1669_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a likely mechanism of spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_1_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports high exposure and lack of resources, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_2_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports the number of human cases. 'only two' is a quantifier but not framed with explicit calming language or linked to a low-risk statement."
+  },
+  {
+    "segment_id": "seg_v5_3_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports symptoms without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a warning about potential mutation and pandemic ('spark a pandemic' describes an outcome, not a public reaction cue like 'spark fears'). Not calming."
+  },
+  {
+    "segment_id": "seg_v5_6_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports reasons farmworkers may not seek treatment, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_8_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a belief about undercounting, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_9_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a criticism of surveillance methods, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_10_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports testing numbers and monitoring. 'just 40' is a quantifier but not framed with explicit calming language. 'actively monitored' is preparedness/response, not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a new program/incentive for testing (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment explains the purpose of the incentive, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_13_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare low-risk statement ('low risk') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_14_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports potential consequences for workers and their inability to afford them, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_16_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a negative perspective on the incentive/consequences, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_17_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports provision of medical care (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_18_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports limitations of care, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_19_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports workers' concerns, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_20_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports fear of social consequences, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_21_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports historical context of blame, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_22_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment provides a historical example of blame, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_23_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports lack of information provided to workers, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_24_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment advocates for education, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_25_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment advocates for specific communication methods, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_26_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment advocates for assurance regarding immigration status, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_27_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports vaccine preparation and uncertainty about distribution (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_28_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports action taken (asking states to share PPE - preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_29_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports offers to distribute PPE (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_30_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports requests for PPE, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_31_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports lack of requests for PPE, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_32_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment comments on practicality of PPE, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_33_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment comments on practicality of PPE, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_34_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment suggests alternative PPE, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_35_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports potential infection risk for other workers, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_37_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports worry about a specific group, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_38_601_chunk0",
+    "answer": "no",
+    "rationale": "This segment provides detail about exposure, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_1_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports deaths in animals, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_2_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports location of deaths without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_3_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports cause of death without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_4_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of close contact for staff as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_5_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a headline reporting a case without animal exposure, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_6_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports an increase in mammal outbreaks, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_7_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a human case without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a positive outcome for a patient (successfully treated, discharged) as a bare fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_9_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a human case and its significance (14th case, first without animal exposure), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_10_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports context for prior cases without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_11_1983_chunk0",
+    "answer": "no",
+    "rationale": "This segment is attribution, not a statement providing calming information."
+  },
+  {
+    "segment_id": "seg_v5_1_812_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'not general panic' is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_2_812_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'shouldn’t worry' is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_3_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare low-risk assessment ('not think a pandemic is likely') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_7_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports spread to mammals without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_8_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports detections in cows without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_9_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a human case without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_10_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports mild symptoms and recovery (positive facts, stated neutrally) but also states it 'can be deadly' (negative fact, stated neutrally). No explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_12_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports historical fatality rate, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_14_812_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'The good news is' is positive amplification, an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_15_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports absence of mutations that would increase risk as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_16_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports the virus is still primarily a bird virus as a bare fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_18_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports actions being taken (tracking - preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_19_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports actions being taken (surveillance - preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_20_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports an unknown, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_21_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports evidence of spread between cows without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_22_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment provides an example of spread without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_23_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a question/unknown, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_24_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a method and its limitation, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_25_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports advice for prevention (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_26_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment provides public health advice, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_27_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare low-risk statement ('risk is low') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_28_812_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'don’t panic' is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_29_812_chunk0",
+    "answer": "yes",
+    "rationale": "The phrase 'don’t panic' is an explicit calming cue."
+  },
+  {
+    "segment_id": "seg_v5_30_812_chunk0",
+    "answer": "no",
+    "rationale": "This segment is a caption reporting a fact, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_001_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a rapid increase, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_002_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a negative assessment ('leaving the industry vulnerable'), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_003_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a negative assessment ('leaving the federal government without the data necessary'), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_004_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a challenge and increasing risk, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_005_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports rapid increase and confirmations without explicit calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a challenge (lack of testing) and negative consequences ('leaving the nation vulnerable', 'greater risk'), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_007_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports number of positive herds and limited testing coverage ('mere fraction'), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_008_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports ongoing work to understand the outbreak (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports testing numbers and a federal order (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports attention being paid (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_011_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare negation about risk ('pose no health risk') which is not explicitly calming."
+  },
+  {
+    "segment_id": "seg_v5_012_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports assessment of need for action and coordination efforts (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_013_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports historical action (creating a program - preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_014_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports reauthorization of a program (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_015_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports positive assessment of partnership (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_016_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports area for improvement, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_017_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports efforts to improve communication (preparedness/response), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_018_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports introduction of a bill, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_019_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment explains what the bill targets, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_020_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports motivation for the bill (curbing practice, raising awareness of risk), which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_021_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment advocates for ending practices, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_022_1714_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports a scientific finding (rapid decline with heat) as a bare positive fact, not explicitly framed for reassurance."
+  },
+  {
+    "segment_id": "seg_v5_001_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports stock price movement and potential funding deal, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_002_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports details of potential funding, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_003_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports discussions about a vaccine candidate (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_004_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports status of a trial (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_005_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports commitment to respond (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_006_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports lack of response, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_007_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports pursuit of a vaccine platform and stockpile integration (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_008_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports having well-matched antigens in stockpile (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_009_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports vaccine production process started (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_010_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports efforts in context of new cases, which is not calming."
+  },
+  {
+    "segment_id": "seg_v5_011_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports vaccine coverage (preparedness), but it is not explicitly linked to public safety with calming language."
+  },
+  {
+    "segment_id": "seg_v5_012_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment contains a bare low-risk statement ('risk... remains low') and preparedness, but no explicit calming language like 'very low' or 'no cause for alarm'."
+  },
+  {
+    "segment_id": "seg_v5_013_1648_chunk0",
+    "answer": "no",
+    "rationale": "This segment reports current low transmissibility (bare positive fact) but also potential for change and pandemic, which is not calming."
+  }
+]
+```

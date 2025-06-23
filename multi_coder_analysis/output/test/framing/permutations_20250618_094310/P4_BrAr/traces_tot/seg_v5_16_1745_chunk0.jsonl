@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 1}
+{"Q": 2, "answer": "no", "rationale": "The verbs 'announced', 'moving', and 'provide' are neutral.", "method": "llm_batch", "batch_id": "batch_2_17580", "batch_size": 260, "batch_pos": 226}
+{"Q": 3, "answer": "no", "rationale": "Neutral verbs used; scale present but verb is neutral/future potential.", "method": "llm_batch", "batch_id": "batch_3_12000", "batch_size": 260, "batch_pos": 156}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_8508", "batch_size": 260, "batch_pos": 137}
+{"Q": 5, "answer": "no", "rationale": "The segment reports action taken, which is not a calming cue about current safety.", "method": "llm_batch", "batch_id": "batch_5_15656", "batch_size": 260, "batch_pos": 134}
+{"Q": 6, "answer": "no", "rationale": "The segment mentions moving bulk vaccine but does not use a minimiser with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_13308", "batch_size": 260, "batch_pos": 85}
+{"Q": 7, "answer": "no", "rationale": "The segment states actions taken, but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_7568", "batch_size": 260, "batch_pos": 73}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_1604", "batch_size": 260, "batch_pos": 170, "regex": {"rule": "CapabilityNoReassurance", "span": [5, 14], "captures": []}}

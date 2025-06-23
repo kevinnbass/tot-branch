@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17876", "batch_size": 260, "batch_pos": 5}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('think', 'is trying to figure it out') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 256}
+{"Q": 3, "answer": "no", "rationale": "Quote about trying to figure things out, no moderate verb + scale/impact.", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 248}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 245}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 244}
+{"Q": 5, "answer": "no", "rationale": "This segment reports effort to understand without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 244}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 234}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 234}
+{"Q": 7, "answer": "no", "rationale": "The segment describes an effort to figure things out but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 229}
+{"Q": 8, "answer": "yes", "rationale": "Describes effort related to response ('everybody is trying to figure it out as quickly as possible') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 191}

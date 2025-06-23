@@ -1,0 +1,9 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 36}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_16760_r1", "batch_size": 260, "batch_pos": 36}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes available tools.", "method": "llm_batch", "batch_id": "batch_2_6540", "batch_size": 260, "batch_pos": 247}
+{"Q": 3, "answer": "no", "rationale": "Segment reports existence of other tools, not impact.", "method": "llm_batch", "batch_id": "batch_3_9108", "batch_size": 260, "batch_pos": 189}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16088", "batch_size": 260, "batch_pos": 181}
+{"Q": 5, "answer": "no", "rationale": "This segment reports a bare fact about the existence of tools, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_17580", "batch_size": 260, "batch_pos": 174}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_5024", "batch_size": 260, "batch_pos": 140}
+{"Q": 7, "answer": "no", "rationale": "The segment describes other tools but contains no bare negation.", "method": "llm_batch", "batch_id": "batch_7_17868", "batch_size": 260, "batch_pos": 133}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17688", "batch_size": 260, "batch_pos": 212, "regex": {"rule": "CapabilityNoReassurance", "span": [36, 45], "captures": []}}

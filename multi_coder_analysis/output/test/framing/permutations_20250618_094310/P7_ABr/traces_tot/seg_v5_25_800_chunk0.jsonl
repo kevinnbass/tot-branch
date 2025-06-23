@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains an intensifier ('definitely') modifying a verb ('increase'), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 162}
+{"Q": 2, "answer": "no", "rationale": "The segment uses a psychological phrase ('increase my level of alarm') in a quote.", "method": "llm_batch", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 150}
+{"Q": 3, "answer": "no", "rationale": "Hypothetical verb 'would increase' and psychological state 'level of alarm'.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 134}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 129}
+{"Q": 5, "answer": "no", "rationale": "The segment quotes a statement about increased alarm but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 128}
+{"Q": 6, "answer": "no", "rationale": "The segment expresses increased alarm, opposite of reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 111}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3380", "batch_size": 260, "batch_pos": 103}
+{"Q": 8, "answer": "no", "rationale": "The segment expresses potential future concern, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18364", "batch_size": 260, "batch_pos": 43}
+{"Q": 9, "answer": "no", "rationale": "The segment includes explicit alarmist framing ('definitely increase my level of alarm').", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 171}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 96}
+{"Q": 10, "answer": "no", "rationale": "The segment speculates about a negative future outcome (increased alarm), not relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 96}
+{"Q": 11, "answer": "yes", "rationale": "Quote uses intensified language 'definitely increase my level of alarm'. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 84}
+{"Q": 12, "answer": "no", "rationale": "Contains intensified psychological state framed as warning: 'definitely increase my level of alarm'.", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 81}

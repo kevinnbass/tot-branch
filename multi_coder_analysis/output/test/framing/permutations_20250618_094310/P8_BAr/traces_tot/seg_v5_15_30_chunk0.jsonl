@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'rare' modifies 'cases'.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 186}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 182}
+{"Q": 3, "answer": "no", "rationale": "Describes how humans can be affected in rare cases (potential/rare), not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 169}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 168}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 168}
+{"Q": 5, "answer": "no", "rationale": "The segment describes how bird flu can affect humans in rare cases, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 165}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 158}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 158}
+{"Q": 8, "answer": "no", "rationale": "Contains an explicit low-risk statement ('rare cases'), which is active reassurance.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 151}
+{"Q": 9, "answer": "no", "rationale": "The segment describes transmission possibility/rarity, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 118}
+{"Q": 10, "answer": "no", "rationale": "The segment contains an explicit calming cue ('in rare cases'). Q10 requires the absence of such cues.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 115}
+{"Q": 11, "answer": "no", "rationale": "Authorial statement provides factual information about human infection possibility and rarity.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 107}
+{"Q": 12, "answer": "yes", "rationale": "Factual statement about rare human cases ('rare cases') and transmission routes without explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 107}

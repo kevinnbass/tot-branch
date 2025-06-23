@@ -1,0 +1,15 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_7972", "batch_size": 217, "batch_pos": 187}
+{"Q": 1, "answer": "no", "rationale": "The segment contains no intensifier or comparative modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_7972_r1", "batch_size": 217, "batch_pos": 187}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_6720", "batch_size": 173, "batch_pos": 143}
+{"Q": 2, "answer": "no", "rationale": "The segment describes a retirement and contains no language related to threats, risks, or impacts, thus no high-potency verbs or metaphors.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_6720_r1", "batch_size": 173, "batch_pos": 143}
+{"Q": 3, "answer": "no", "rationale": "Biographical detail, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_12744", "batch_size": 93, "batch_pos": 64}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17824", "batch_size": 71, "batch_pos": 42}
+{"Q": 5, "answer": "no", "rationale": "Lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12008", "batch_size": 66, "batch_pos": 37}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_18416", "batch_size": 260, "batch_pos": 254}
+{"Q": 6, "answer": "no", "rationale": "The segment states a fact about retirement date and contains no minimiser or scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_18416_r1", "batch_size": 260, "batch_pos": 254}
+{"Q": 7, "answer": "no", "rationale": "The segment is a factual statement, with no negation.", "method": "llm_batch", "batch_id": "batch_7_15196", "batch_size": 259, "batch_pos": 230}
+{"Q": 8, "answer": "no", "rationale": "The segment reports a biographical fact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_6920", "batch_size": 47, "batch_pos": 25}
+{"Q": 9, "answer": "no", "rationale": "The segment reports a retirement date, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_8340", "batch_size": 45, "batch_pos": 30}
+{"Q": 10, "answer": "no", "rationale": "The segment reports a past event, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_16660", "batch_size": 147, "batch_pos": 136}
+{"Q": 11, "answer": "no", "rationale": "No direct quotes or attributed statements providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_12844", "batch_size": 90, "batch_pos": 83}
+{"Q": 12, "answer": "yes", "rationale": "Factual biographical detail without explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_6756", "batch_size": 87, "batch_pos": 80}

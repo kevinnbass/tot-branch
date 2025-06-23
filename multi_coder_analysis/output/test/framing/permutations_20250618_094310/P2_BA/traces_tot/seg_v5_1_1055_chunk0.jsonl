@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term. 'more' modifies 'for poultry' (price), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 3}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language; 'warned' is not a high-potency verb in this context.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 3}
+{"Q": 3, "answer": "no", "rationale": "Uses 'confirmed cases' (plain outcome verb) and discusses potential future impact ('could see Americans paying more'), not realised impact with scale.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 3}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 3}
+{"Q": 5, "answer": "no", "rationale": "The segment reports confirmed cases and a warning about potential price increases, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 3}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 3}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 3}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 3, "regex": {"rule": "CapabilityNoReassurance", "span": [155, 164], "captures": []}}

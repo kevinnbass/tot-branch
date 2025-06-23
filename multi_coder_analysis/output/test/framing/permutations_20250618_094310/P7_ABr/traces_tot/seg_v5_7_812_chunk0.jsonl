@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective. 'increasing number' modifies a noun.", "method": "llm_batch", "batch_id": "batch_1_13748", "batch_size": 260, "batch_pos": 104}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs like 'infected' and describes an 'increasing number' factually.", "method": "llm_batch", "batch_id": "batch_2_4108", "batch_size": 260, "batch_pos": 71}
+{"Q": 3, "answer": "no", "rationale": "'infected' is a plain outcome verb, and 'increasing number' is vague scale.", "method": "llm_batch", "batch_id": "batch_3_14292", "batch_size": 260, "batch_pos": 8}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_14516", "batch_size": 260, "batch_pos": 247}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_6448", "batch_size": 260, "batch_pos": 243}
+{"Q": 5, "answer": "no", "rationale": "The segment reports facts about animal infections without any explicit calming language or cues for reassurance.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_6448_r1", "batch_size": 260, "batch_pos": 243}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_17780", "batch_size": 260, "batch_pos": 206}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, or impact.", "method": "llm_batch", "batch_id": "batch_7_9160", "batch_size": 260, "batch_pos": 184}
+{"Q": 8, "answer": "no", "rationale": "Describes a trend/fact, not capability/preparedness.", "method": "llm_batch", "batch_id": "batch_8_3592", "batch_size": 260, "batch_pos": 14}
+{"Q": 9, "answer": "no", "rationale": "The segment uses the framing language 'increasing number', not standard reporting of metrics.", "method": "llm_batch", "batch_id": "batch_9_15448", "batch_size": 260, "batch_pos": 122}
+{"Q": 10, "answer": "no", "rationale": "The segment describes current/past spread to mammals, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_3516", "batch_size": 260, "batch_pos": 235}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement present.", "method": "llm_batch", "batch_id": "batch_11_4276", "batch_size": 260, "batch_pos": 189}
+{"Q": 12, "answer": "yes", "rationale": "Factual description of trend; defaults to Neutral.", "method": "llm_batch", "batch_id": "batch_12_16688", "batch_size": 260, "batch_pos": 186}

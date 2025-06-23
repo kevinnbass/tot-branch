@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'worry' which is a psychological verb.", "method": "llm_batch", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 205}
+{"Q": 2, "answer": "no", "rationale": "'worry' is a psychological state; 'respect it' is advice.", "method": "llm_batch", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 154}
+{"Q": 3, "answer": "no", "rationale": "The segment uses a psychological verb ('worry') and discusses hypothetical future outcomes ('going to be delayed diagnosis').", "method": "llm_batch", "batch_id": "batch_3_3036", "batch_size": 260, "batch_pos": 81}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_13904", "batch_size": 260, "batch_pos": 70}
+{"Q": 5, "answer": "no", "rationale": "Expresses worry, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_16884", "batch_size": 260, "batch_pos": 61}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14144", "batch_size": 240, "batch_pos": 9}
+{"Q": 7, "answer": "no", "rationale": "The segment contains an expression of concern ('worry') but no bare negation fitting the Q7 pattern.", "method": "llm_batch", "batch_id": "batch_7_17272", "batch_size": 230, "batch_pos": 3}
+{"Q": 8, "answer": "no", "rationale": "Expresses worry about future outcomes, not a capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_17188", "batch_size": 260, "batch_pos": 104}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 158}
+{"Q": 9, "answer": "no", "rationale": "The segment contains 'worry', not factual reporting of metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 158}
+{"Q": 10, "answer": "no", "rationale": "The segment states 'I worry there’s going to be delayed diagnosis and delayed detection', which is about future negative outcomes, not future relief.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 207}
+{"Q": 11, "answer": "no", "rationale": "Quote contains bare 'worry', which is a psychological verb context guard case and not intensified.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 162}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually. 'worry' is reaction (context guard).", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 162}

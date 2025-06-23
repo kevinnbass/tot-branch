@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'really figure out' which modifies a verb.", "method": "llm_batch", "batch_id": "batch_1_16760", "batch_size": 260, "batch_pos": 216}
+{"Q": 2, "answer": "no", "rationale": "The segment discusses strategy for mpox control.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 163}
+{"hop_idx": 3, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 98}
+{"Q": 3, "answer": "no", "rationale": "'blunt the pace' is a phrase, not a moderate verb paired with scale/impact.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_3_17212_r1", "batch_size": 260, "batch_pos": 98}
+{"Q": 4, "answer": "no", "rationale": "No question is present in the segment.", "method": "llm_batch", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 87}
+{"Q": 5, "answer": "no", "rationale": "Expresses a goal ('blunt the pace') and a plan, not a calming cue about current safety or control.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 79}
+{"Q": 6, "answer": "no", "rationale": "No minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 34}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 27}
+{"Q": 8, "answer": "yes", "rationale": "Describes potential future actions/strategy ('blunt the pace of the outbreak', 'figure out what the next phase of control can be').", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 88}

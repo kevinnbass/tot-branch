@@ -1,0 +1,37 @@
+{
+  "batch_id": "batch_3_18504",
+  "hop_idx": 3,
+  "unknown_count": 6,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_11_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a containment verb ('culled') and scale ('More than 35,000 chickens'), triggering the containment override."
+    },
+    {
+      "segment_id": "seg_v5_12_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a technical term ('highly pathogenic') but no moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_13_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_14_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    },
+    {
+      "segment_id": "seg_v5_15_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains scale ('34 farms', '10-kilometer') but no moderate verb from the list."
+    },
+    {
+      "segment_id": "seg_v5_16_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information."
+    }
+  ]
+}

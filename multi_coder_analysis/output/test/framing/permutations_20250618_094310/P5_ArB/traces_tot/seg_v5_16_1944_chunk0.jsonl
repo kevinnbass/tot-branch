@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16232", "batch_size": 260, "batch_pos": 73}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_17260", "batch_size": 260, "batch_pos": 35}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17972", "batch_size": 260, "batch_pos": 233}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17772", "batch_size": 260, "batch_pos": 219}
+{"Q": 4, "answer": "no", "rationale": "The segment contains factual statements, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17772_r1", "batch_size": 260, "batch_pos": 219}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a factual narrative without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12996", "batch_size": 260, "batch_pos": 213}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12008", "batch_size": 260, "batch_pos": 175}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14300", "batch_size": 260, "batch_pos": 163}
+{"Q": 8, "answer": "no", "rationale": "The segment reports symptoms and timeline of a specific case, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 4}
+{"Q": 9, "answer": "no", "rationale": "The segment reports symptoms and date, not primarily numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_14112", "batch_size": 243, "batch_pos": 78}
+{"Q": 10, "answer": "no", "rationale": "The segment reports details of a case, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_18376", "batch_size": 260, "batch_pos": 204}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement describes symptoms, not framed risk or severity.", "method": "llm_batch", "batch_id": "batch_11_16340", "batch_size": 260, "batch_pos": 164}

@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a comparison/uncertainty, not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17488", "batch_size": 217, "batch_pos": 166}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verb, potent metaphor, superlative + negative noun, or critical alert phrase used.", "method": "llm_batch", "batch_id": "batch_2_17824", "batch_size": 163, "batch_pos": 113}
+{"Q": 3, "answer": "no", "rationale": "No moderate verb paired with specific scale/impact.", "method": "llm_batch", "batch_id": "batch_3_13380", "batch_size": 73, "batch_pos": 33}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16000", "batch_size": 59, "batch_pos": 20}
+{"Q": 4, "answer": "no", "rationale": "The segment is a statement expressing uncertainty, not a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16000_r1", "batch_size": 59, "batch_pos": 20}
+{"Q": 5, "answer": "no", "rationale": "The segment expresses uncertainty, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_13372", "batch_size": 49, "batch_pos": 10}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_14144", "batch_size": 240, "batch_pos": 203}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17272", "batch_size": 230, "batch_pos": 194}
+{"Q": 8, "answer": "no", "rationale": "The segment expresses uncertainty about the future, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_7888", "batch_size": 41, "batch_pos": 11}
+{"hop_idx": 9, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_9_1732", "batch_size": 239, "batch_pos": 217}
+{"Q": 9, "answer": "no", "rationale": "The segment does not primarily report prices, economic data, or numerical metrics.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_9_1732_r1", "batch_size": 239, "batch_pos": 217}
+{"Q": 10, "answer": "no", "rationale": "The segment states 'I don't know what next year's going to hold', which expresses uncertainty, not speculation about future relief.", "method": "llm_batch", "batch_id": "batch_10_17888", "batch_size": 247, "batch_pos": 241}
+{"Q": 11, "answer": "no", "rationale": "Quote is about uncertainty, not framing risk/severity.", "method": "llm_batch", "batch_id": "batch_11_7632", "batch_size": 199, "batch_pos": 193}
+{"Q": 12, "answer": "yes", "rationale": "No explicit framing cues remain; facts presented purely factually. Expresses uncertainty.", "method": "llm_batch", "batch_id": "batch_12_11768", "batch_size": 199, "batch_pos": 193}

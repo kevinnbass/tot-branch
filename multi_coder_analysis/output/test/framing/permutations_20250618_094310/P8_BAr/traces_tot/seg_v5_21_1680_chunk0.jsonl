@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'underlying' modifies 'health conditions'.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 204}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 200}
+{"Q": 3, "answer": "no", "rationale": "Plain statements about health status, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 186}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 185}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 185}
+{"Q": 5, "answer": "no", "rationale": "The segment reports details of the individual who died, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 182}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 174}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 174}
+{"Q": 8, "answer": "no", "rationale": "Provides details about a case, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 167}
+{"Q": 9, "answer": "no", "rationale": "The segment reports patient history/conditions, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 125}
+{"Q": 10, "answer": "no", "rationale": "The segment reports details about an individual's health, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 122}
+{"Q": 11, "answer": "no", "rationale": "Authorial statement provides factual description of the case.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 114}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of patient history without explicit framing cues.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 114}

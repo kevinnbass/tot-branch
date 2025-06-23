@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14828", "batch_size": 260, "batch_pos": 102}
+{"Q": 2, "answer": "no", "rationale": "No high-potency verbs or potent metaphors are used.", "method": "llm_batch", "batch_id": "batch_2_4512", "batch_size": 260, "batch_pos": 71}
+{"Q": 3, "answer": "no", "rationale": "The segment contains no moderate verb paired with scale/impact information.", "method": "llm_batch", "batch_id": "batch_3_16988", "batch_size": 260, "batch_pos": 30}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17640", "batch_size": 260, "batch_pos": 23}
+{"Q": 5, "answer": "no", "rationale": "The segment uses a bare negation ('will not enter') regarding food safety, which falls under Q7.", "method": "llm_batch", "batch_id": "batch_5_10144", "batch_size": 260, "batch_pos": 18}
+{"Q": 6, "answer": "no", "rationale": "The segment uses negation ('will not enter') which is Q5 Food Safety, not Q6.", "method": "llm_batch", "batch_id": "batch_6_17448", "batch_size": 260, "batch_pos": 260}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_13600", "batch_size": 260, "batch_pos": 257, "regex": {"rule": "BareNegationHealthConcern", "span": [31, 61], "captures": []}}

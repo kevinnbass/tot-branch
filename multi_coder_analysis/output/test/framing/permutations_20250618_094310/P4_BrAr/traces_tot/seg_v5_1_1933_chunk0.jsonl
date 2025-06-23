@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'endangered' describes a state, not an intensified risk-adjective describing the threat.", "method": "llm_batch", "batch_id": "batch_1_5880", "batch_size": 260, "batch_pos": 27}
+{"Q": 2, "answer": "no", "rationale": "The segment factually reports the number of deaths and positive tests.", "method": "llm_batch", "batch_id": "batch_2_14696", "batch_size": 260, "batch_pos": 13}
+{"Q": 3, "answer": "no", "rationale": "'died' is a plain outcome verb (Rule 4) and does not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_17360", "batch_size": 260, "batch_pos": 2}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_15820", "batch_size": 260, "batch_pos": 259}
+{"Q": 5, "answer": "no", "rationale": "The segment reports bare facts about deaths and positive tests among condors, without explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17960", "batch_size": 260, "batch_pos": 259}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_17684", "batch_size": 260, "batch_pos": 255}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about the threat or risk.", "method": "llm_batch", "batch_id": "batch_7_17272", "batch_size": 260, "batch_pos": 251}
+{"Q": 8, "answer": "no", "rationale": "The segment reports deaths and birds tested positive event, not the capability itself.", "method": "llm_batch", "batch_id": "batch_8_11608", "batch_size": 260, "batch_pos": 208}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports 'Twenty California condors... have died' and 'half of the endangered birds tested positive', which is factual quantification.", "method": "llm_batch", "batch_id": "batch_9_11992", "batch_size": 260, "batch_pos": 141}

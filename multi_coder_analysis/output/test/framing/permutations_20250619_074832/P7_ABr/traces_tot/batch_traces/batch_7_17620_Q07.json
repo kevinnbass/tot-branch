@@ -1,0 +1,48 @@
+{
+  "batch_id": "batch_7_17620",
+  "hop_idx": 7,
+  "segment_count": 8,
+  "responses": [
+    {
+      "segment_id": "seg_v5_4_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports facts about past cases but contains no negation or calming cue."
+    },
+    {
+      "segment_id": "seg_v5_3_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports facts about a case and recovery but contains no negation or calming cue."
+    },
+    {
+      "segment_id": "seg_v5_2_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports facts about a new case but contains no negation or calming cue."
+    },
+    {
+      "segment_id": "seg_v5_1_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a fact about a new case but contains no negation or calming cue."
+    },
+    {
+      "segment_id": "seg_v5_13_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a fact about vaccine doses secured but contains no negation or calming cue."
+    },
+    {
+      "segment_id": "seg_v5_12_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains an explicit calming cue ('risk... is considered to be low'), so it is not a bare negation without calming."
+    },
+    {
+      "segment_id": "seg_v5_10_1683_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the bare negation 'no active cases' without an explicit calming cue."
+    },
+    {
+      "segment_id": "seg_v5_9_1683_chunk0",
+      "answer": "yes",
+      "rationale": "The segment contains the bare negation 'no confirmed human-to-human transfers' without an explicit calming cue."
+    }
+  ],
+  "timestamp": "2025-06-19T08:03:08.268403"
+}

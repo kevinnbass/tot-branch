@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'respond very quickly', which uses an intensifier modifying an adverb, not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 79}
+{"Q": 2, "answer": "no", "rationale": "The segment uses 'very quickly' for response capability, not a Q2 cue for threat impact.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 64}
+{"Q": 3, "answer": "no", "rationale": "The segment describes capability, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 36}
+{"Q": 3, "answer": "no", "rationale": "The segment describes a plan/potential, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 36}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 32}
+{"Q": 5, "answer": "no", "rationale": "The segment reports plans and capability ('could respond very quickly') but does not explicitly link it to current public safety or frame it for reassurance.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 28}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 4}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 1}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14608", "batch_size": 260, "batch_pos": 209, "regex": {"rule": "CapabilityNoReassurance", "span": [72, 79], "captures": []}}

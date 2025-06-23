@@ -1,0 +1,672 @@
+{
+  "batch_id": "batch_9_18924",
+  "hop_idx": 9,
+  "unknown_count": 133,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_24_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports risk level using \"low\", which is explicit framing."
+    },
+    {
+      "segment_id": "seg_v5_26_743_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports impact on animals, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_30_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a likelihood (\"likely chance\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_31_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports symptoms, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_34_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number killed, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_35_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a quote about potential impacts (\"very big impacts\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_36_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports declines (\"significant declines\") and potential pressure, not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_37_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number killed (\"millions\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_38_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a quote expressing strong negative sentiment, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_39_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes effects, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_40_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a challenge, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_41_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a quote describing difficulty, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_42_363_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes increased difficulty, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_43_11_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports likelihood (\"rare\") and condition for infection; \"rare\" is explicit framing."
+    },
+    {
+      "segment_id": "seg_v5_44_1_1_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number killed, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_45_14_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers killed and cost, which are factual quantifications but not standard economic price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_46_013_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports spread mechanism and number tested positive (\"dozens\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_47_014_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports rankings/statistics, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_48_015_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a ranking, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_49_016_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a percentage and industry characteristic, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_50_017_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes market conditions using non-standard economic verbs like \"hitting the market\"."
+    },
+    {
+      "segment_id": "seg_v5_51_018_1003_chunk0",
+      "answer": "yes",
+      "rationale": "Reports supplies using standard verbs 'were down' and percentages '14 percent', '23 percent'."
+    },
+    {
+      "segment_id": "seg_v5_52_11_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports rankings/statistics, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_53_12_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a ranking, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_54_13_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a percentage and industry characteristic, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_55_16_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes historical emergence and spread, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_56_3_100_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports location of cases, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_57_002_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes consequences (restrictions, blocking), not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_58_003_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes consequences (limited purchases), not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_59_004_1003_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports infection details, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_60_12_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes consequences (banning/limiting imports), not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_61_13_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports rankings/statistics, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_62_15_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes market conditions using non-standard economic verbs like \"hitting the country\"."
+    },
+    {
+      "segment_id": "seg_v5_63_16_1000_chunk0",
+      "answer": "yes",
+      "rationale": "Reports supplies using standard verbs 'were down' and percentages '14 percent', '23 percent'."
+    },
+    {
+      "segment_id": "seg_v5_64_1_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports location and date of detection, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_65_2_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports location and date of detection, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_66_6_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports infection details, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_67_8_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number tested positive, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_68_9_1002_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes market conditions using non-standard economic verbs like \"hitting the market\"."
+    },
+    {
+      "segment_id": "seg_v5_69_10_1002_chunk0",
+      "answer": "yes",
+      "rationale": "Reports supplies using standard verbs 'were down' and percentages '14 percent', '23 percent'."
+    },
+    {
+      "segment_id": "seg_v5_70_12_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment identifies strain and relation, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_71_13_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports circulation and detection locations/dates, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_72_1_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection locations and number euthanized, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_73_2_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers tested positive (\"dozens\", \"three\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_74_5_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports culling due to positive test, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_75_9_1001_chunk0",
+      "answer": "yes",
+      "rationale": "Reports price index change using standard verbs 'saw the largest increase', 'rising' and percentage '12.2%'."
+    },
+    {
+      "segment_id": "seg_v5_76_10_1001_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports geographic spread, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_77_1_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number to be culled, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_78_3_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports lack of information, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_79_5_10_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of farms and distance, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_80_2_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports cause of fear, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_81_5_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future price/availability changes, not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_82_6_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a quote assessing risk (\"high risk\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_83_9_1005_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers killed in a past event, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_84_2_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation date and location, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_85_4_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation date and location, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_86_5_1004_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports action taken (culled), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_87_12_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes spread mechanism, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_88_16_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports lack of information, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_89_21_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports forecast numbers, not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_90_22_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes cause of growth/downturn, not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_91_26_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of cases, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_92_27_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment lists types and locations of cases, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_93_28_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes article update, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_94_1_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation of infection, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_95_2_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports finding of HPAI, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_96_3_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports finding of HPAI and number of birds, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_97_4_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future impacts, not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_98_6_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports impact on production in a past event, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_99_8_1006_chunk0",
+      "answer": "yes",
+      "rationale": "Reports export changes using standard verb 'dropped' and percentages '13%', '23%'."
+    },
+    {
+      "segment_id": "seg_v5_100_9_1006_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports estimated cost, which is a factual quantification but not standard economic price/metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_101_1_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports infection details and number of birds, using \"lethal form\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_102_2_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes consequence (\"intensifies\") and reports destruction number, not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_103_3_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports discovery details and date, using \"highly infectious pathogenic\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_104_5_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of birds tested positive, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_105_7_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports origin and spread mechanism, using \"significant role\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_106_9_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of cases, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_107_11_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes infection mechanism, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_108_12_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes infection mechanism, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_109_13_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes infection mechanism, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_110_14_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports identification of cases, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_111_15_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes range of illness severity, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_112_16_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a past case using \"rare case\"; \"rare\" is explicit framing."
+    },
+    {
+      "segment_id": "seg_v5_113_19_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes infections as \"concerning\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_114_20_1007_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports rankings, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_115_11_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation location and date, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_116_54_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a quote about culling method, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_117_55_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number destroyed, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_118_11_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports infection details, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_119_13_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation of infection, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_120_16_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes historical emergence and spread, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_121_3_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports confirmation and consequence (\"reigniting fears\"), not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_122_4_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports potential outcome (\"high mortality rates\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_123_5_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports numbers killed and cost in a past event, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_124_6_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection and number of birds, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_125_8_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports lack of disclosure, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_126_9_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports pending results and location, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_127_10_1008_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports positive test location, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_128_1_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection location and uses \"highly pathogenic\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_129_2_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection details, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_130_10_1009_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports sequence of events, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_131_1_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection and consequence (\"furthering a threat\"), using \"highly contagious\", not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_132_2_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports location of cases, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_133_8_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports program strength, actions, and public health assessment (\"do not present an immediate public health concern\"), which is explicit framing."
+    },
+    {
+      "segment_id": "seg_v5_134_9_1000_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports spread mechanism and number tested positive (\"dozens\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_135_22_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question about future prices, not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_136_24_101_chunk0",
+      "answer": "yes",
+      "rationale": "Reports price trend using standard verb 'trending' and neutral adverb 'sharply'."
+    },
+    {
+      "segment_id": "seg_v5_137_25_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future shortages, not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_138_26_101_chunk0",
+      "answer": "yes",
+      "rationale": "Reports price change using standard verb 'rising'."
+    },
+    {
+      "segment_id": "seg_v5_139_27_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future volatility, not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_140_30_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of states, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_141_31_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of states and uses \"highly pathogenic\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_142_32_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of birds, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_143_34_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of birds, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_144_35_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of birds, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_145_36_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number of birds, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_146_37_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question about comparison, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_147_39_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports number died/culled, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_148_40_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes geographic spread and consequence (\"raised concerns\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_149_1_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports a number killed, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_150_2_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes spread (\"swept across\") and consequence, using \"highly contagious\", not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_151_4_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment defines/describes the virus, using \"highly contagious and deadly\", not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_152_5_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes spread mechanism and difficulty (\"difficult to contain\"), not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_153_6_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_154_7_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes virus relation and past infections, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_155_014_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment discusses potential future impact on costs, using \"onerous\", not reporting current/past metrics."
+    },
+    {
+      "segment_id": "seg_v5_156_015_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports consequence (halted imports), not standard economic metric reporting."
+    },
+    {
+      "segment_id": "seg_v5_157_41_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a quote about geographic spread, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_158_42_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment is a question about action, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_159_45_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes spread mechanism, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_160_46_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes spread mechanism, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_161_50_101_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes symptoms, not economic prices or metrics."
+    },
+    {
+      "segment_id": "seg_v5_162_001_1010_chunk0",
+      "answer": "no",
+      "rationale": "The segment reports detection locations and potential threat (\"posing a likely threat\"), not standard economic metric reporting."
+    }
+  ]
+}

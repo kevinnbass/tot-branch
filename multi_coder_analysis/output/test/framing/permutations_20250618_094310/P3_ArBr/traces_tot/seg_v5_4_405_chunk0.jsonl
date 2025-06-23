@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'higher risk' but this is a comparative describing a noun ('risk'), not modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_5064", "batch_size": 260, "batch_pos": 14}
+{"Q": 2, "answer": "no", "rationale": "The segment describes risk neutrally ('remains low', 'at higher risk') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_2312", "batch_size": 260, "batch_pos": 5}
+{"Q": 3, "answer": "no", "rationale": "'remains low' and 'are at higher risk' are about risk level, not realised impact.", "method": "llm_batch", "batch_id": "batch_3_8852", "batch_size": 260, "batch_pos": 234}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_1416", "batch_size": 260, "batch_pos": 227}
+{"Q": 5, "answer": "no", "rationale": "The segment reports 'risk... remains low' but lacks an intensifier like 'very' or 'extremely'.", "method": "llm_batch", "batch_id": "batch_5_7360", "batch_size": 260, "batch_pos": 226}
+{"Q": 6, "answer": "no", "rationale": "'risk remains low' is a Q5 cue, not Q6.", "method": "llm_batch", "batch_id": "batch_6_2428", "batch_size": 260, "batch_pos": 217}
+{"Q": 7, "answer": "yes", "rationale": "The segment contains the bare negation/low risk statement 'The human health risk of the bird flu remains low for the U.S. general public'.", "method": "llm_batch", "batch_id": "batch_7_17416", "batch_size": 260, "batch_pos": 212}

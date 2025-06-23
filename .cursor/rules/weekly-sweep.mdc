@@ -3,3 +3,14 @@ description:
 globs:
 alwaysApply: false
 ---
+---
+description: Perform a weekly documentation health-check for the README.
+alwaysApply: false
+---
+
+When invoked with `@weekly-sweep`, perform these actions on `README.md`:
+
+1.  **Regenerate Table of Contents:** If a table of contents exists, regenerate it to be accurate.
+2.  **Check Links:** Scan for and remove any dead links.
+3.  **Proofread:** Perform a spell-check and grammar check on all headings and bullet points.
+4.  **Summarize:** Identify overly verbose sections and collapse them into more concise summaries.

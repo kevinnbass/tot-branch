@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_16736", "batch_size": 217, "batch_pos": 93}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_15284", "batch_size": 168, "batch_pos": 47}
+{"Q": 3, "answer": "no", "rationale": "Segment describes potential outcome, not realised impact with moderate verb and scale.", "method": "llm_batch", "batch_id": "batch_3_13180", "batch_size": 260, "batch_pos": 211}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17340", "batch_size": 260, "batch_pos": 186}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a potential negative outcome, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12768", "batch_size": 260, "batch_pos": 180}
+{"Q": 6, "answer": "no", "rationale": "Segment contains 'smaller dose' and 'milder symptoms' (Q5 Low-Risk) but not Q6 minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16808", "batch_size": 232, "batch_pos": 122}
+{"Q": 7, "answer": "no", "rationale": "No bare negation found.", "method": "llm_batch", "batch_id": "batch_7_12536", "batch_size": 218, "batch_pos": 112}
+{"Q": 8, "answer": "no", "rationale": "Describes risk factors and potential outcome, not a capability/preparedness/safeguard.", "method": "llm_batch", "batch_id": "batch_8_14908", "batch_size": 215, "batch_pos": 130}
+{"Q": 9, "answer": "no", "rationale": "The segment does not report prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12196", "batch_size": 218, "batch_pos": 165}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 234, "regex": {"rule": "ReliefSpeculation", "span": [169, 174], "captures": ["could"]}}

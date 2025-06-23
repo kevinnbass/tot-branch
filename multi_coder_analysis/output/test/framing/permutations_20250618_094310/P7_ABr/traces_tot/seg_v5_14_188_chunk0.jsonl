@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_11792", "batch_size": 260, "batch_pos": 3}
+{"Q": 2, "answer": "no", "rationale": "'increase' is a neutral verb.", "method": "llm_batch", "batch_id": "batch_2_6580", "batch_size": 260, "batch_pos": 247}
+{"Q": 3, "answer": "no", "rationale": "'increase' is a trend verb, not a moderate verb indicating scale of impact.", "method": "llm_batch", "batch_id": "batch_3_12716", "batch_size": 260, "batch_pos": 210}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 205}
+{"Q": 5, "answer": "no", "rationale": "The segment reports a negative trend (increase) but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17836", "batch_size": 260, "batch_pos": 203}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser used with scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_18368", "batch_size": 260, "batch_pos": 182}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_3220", "batch_size": 260, "batch_pos": 168}
+{"Q": 9, "answer": "no", "rationale": "The segment is a quote about strandings increasing, not a factual report of specific metrics.", "method": "llm_batch", "batch_id": "batch_9_15788", "batch_size": 260, "batch_pos": 72}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_17360", "batch_size": 260, "batch_pos": 231}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a current negative trend, not relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_17360_r1", "batch_size": 260, "batch_pos": 231}
+{"Q": 11, "answer": "yes", "rationale": "Quote uses intensified language 'Strandings have continued to increase'. ||FRAME=Alarmist", "method": "llm_batch", "batch_id": "batch_11_17460", "batch_size": 260, "batch_pos": 206}
+{"Q": 12, "answer": "yes", "rationale": "Reports quote stating strandings 'continued to increase'; describes trend (background).", "method": "llm_batch", "batch_id": "batch_12_16948", "batch_size": 260, "batch_pos": 203}

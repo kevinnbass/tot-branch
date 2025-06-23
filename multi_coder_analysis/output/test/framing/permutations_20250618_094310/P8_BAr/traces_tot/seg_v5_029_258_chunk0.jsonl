@@ -1,0 +1,14 @@
+{"Q": 1, "answer": "no", "rationale": "'more worried' modifies a psychological state, not a risk-adjective describing the threat.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 38}
+{"Q": 2, "answer": "no", "rationale": "'raised the specter' is not a high-potency verb or potent metaphor as defined by the rules.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 38}
+{"Q": 3, "answer": "no", "rationale": "Discusses struggling to answer, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 34}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 34}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 34}
+{"Q": 5, "answer": "no", "rationale": "The segment reports experts' sentiment and struggle to answer, lacking explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 34}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 33}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_7692_r1", "batch_size": 260, "batch_pos": 33}
+{"Q": 7, "answer": "no", "rationale": "The negation 'None of them [experts] like' is about feelings, not risk or safety.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 33}
+{"Q": 8, "answer": "no", "rationale": "Reports past events/impact, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 32}
+{"Q": 9, "answer": "no", "rationale": "The segment reports experts' state of mind, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 25}
+{"Q": 10, "answer": "no", "rationale": "The segment states experts don't like what they're seeing and struggled to answer about worry level, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_6716", "batch_size": 260, "batch_pos": 24}
+{"Q": 11, "answer": "no", "rationale": "Authorial summary describes difficulty in assessment, not the assessment itself.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 21}
+{"Q": 12, "answer": "yes", "rationale": "Reports experts' psychological states ('like', 'worried', 'struggled'), neutral per context guard.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 21}

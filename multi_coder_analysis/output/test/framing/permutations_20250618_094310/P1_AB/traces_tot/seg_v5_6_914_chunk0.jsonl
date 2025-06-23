@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13056", "batch_size": 260, "batch_pos": 202}
+{"Q": 2, "answer": "no", "rationale": "The segment uses factual language ('death', 'sparked the investigation', 'said') without high-potency verbs or metaphors. 'sparked' is used with an action, not fear/panic.", "method": "llm_batch", "batch_id": "batch_2_18320", "batch_size": 260, "batch_pos": 195}
+{"Q": 3, "answer": "no", "rationale": "'sparked' is a psychological verb (Neutral per context guard).", "method": "llm_batch", "batch_id": "batch_3_15864", "batch_size": 260, "batch_pos": 190}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_15188", "batch_size": 260, "batch_pos": 187}
+{"hop_idx": 5, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_5_14284", "batch_size": 260, "batch_pos": 186}
+{"Q": 5, "answer": "no", "rationale": "This segment reports animal deaths (negative fact) without explicit calming language.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_5_14284_r1", "batch_size": 260, "batch_pos": 186}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_11028", "batch_size": 260, "batch_pos": 181}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast for reassurance found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_11028_r1", "batch_size": 260, "batch_pos": 181}
+{"Q": 7, "answer": "no", "rationale": "The segment describes a factual event (death of hens) but contains no negation.", "method": "llm_batch", "batch_id": "batch_7_17904", "batch_size": 260, "batch_pos": 176}
+{"Q": 8, "answer": "yes", "rationale": "Describes an investigation ('death... had sparked the investigation') which is a response/surveillance action, without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_17048", "batch_size": 260, "batch_pos": 145}

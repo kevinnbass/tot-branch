@@ -1,0 +1,12 @@
+{"Q": 1, "answer": "no", "rationale": "'easily' modifies 'spreads' (a verb), not a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17592", "batch_size": 217, "batch_pos": 34}
+{"Q": 2, "answer": "no", "rationale": "'spreads easily' is moderate verb + modifier.", "method": "llm_batch", "batch_id": "batch_2_17260", "batch_size": 260, "batch_pos": 251}
+{"Q": 3, "answer": "no", "rationale": "The verb 'spreads' is present tense, and 'easily' is an intensifier, not scale.", "method": "llm_batch", "batch_id": "batch_3_4424", "batch_size": 260, "batch_pos": 184}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a question.", "method": "llm_batch", "batch_id": "batch_4_17252", "batch_size": 260, "batch_pos": 168}
+{"Q": 5, "answer": "no", "rationale": "The segment provides information about transmission but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_2816", "batch_size": 260, "batch_pos": 161}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_16772", "batch_size": 260, "batch_pos": 117}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser word combined with an explicit scale contrast.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_16772_r1", "batch_size": 260, "batch_pos": 117}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16660", "batch_size": 252, "batch_pos": 102}
+{"Q": 8, "answer": "no", "rationale": "The segment describes virus characteristics and spread, not capabilities or preparedness.", "method": "llm_batch", "batch_id": "batch_8_18372", "batch_size": 260, "batch_pos": 169}
+{"Q": 9, "answer": "no", "rationale": "The segment describes spread mechanisms, not factual reporting of prices/metrics.", "method": "llm_batch", "batch_id": "batch_9_14112", "batch_size": 243, "batch_pos": 163}
+{"Q": 10, "answer": "no", "rationale": "The segment describes a spread mechanism, not speculation about future relief or improvement.", "method": "llm_batch", "batch_id": "batch_10_18376", "batch_size": 260, "batch_pos": 257}
+{"Q": 11, "answer": "no", "rationale": "No direct quote or attributed statement providing a dominant frame.", "method": "llm_batch", "batch_id": "batch_11_16340", "batch_size": 260, "batch_pos": 216}

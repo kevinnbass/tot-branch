@@ -1,0 +1,13 @@
+{"Q": 1, "answer": "no", "rationale": "'highly pathogenic' is a technical term.", "method": "llm_batch", "batch_id": "batch_1_14388", "batch_size": 260, "batch_pos": 147}
+{"Q": 2, "answer": "no", "rationale": "The segment reports an outbreak without using high-potency verbs, metaphors, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_18300", "batch_size": 260, "batch_pos": 132}
+{"Q": 3, "answer": "no", "rationale": "'reported' is a plain outcome verb, not a moderate verb denoting impact.", "method": "llm_batch", "batch_id": "batch_3_9068", "batch_size": 260, "batch_pos": 101}
+{"Q": 4, "answer": "no", "rationale": "Segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_312", "batch_size": 260, "batch_pos": 97}
+{"Q": 5, "answer": "no", "rationale": "The segment reports an outbreak but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_15548", "batch_size": 260, "batch_pos": 93}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_18096", "batch_size": 260, "batch_pos": 68}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14612", "batch_size": 260, "batch_pos": 64}
+{"Q": 8, "answer": "no", "rationale": "The segment describes an outbreak, not a capability or preparedness measure.", "method": "llm_batch", "batch_id": "batch_8_14608", "batch_size": 260, "batch_pos": 247}
+{"Q": 9, "answer": "no", "rationale": "The segment reports an outbreak, not prices, economic data, or numerical metrics.", "method": "llm_batch", "batch_id": "batch_9_12120", "batch_size": 260, "batch_pos": 56}
+{"hop_idx": 10, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_10_7984", "batch_size": 260, "batch_pos": 12}
+{"Q": 10, "answer": "no", "rationale": "The segment reports an outbreak and does not speculate about future relief or improvement.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_10_7984_r1", "batch_size": 260, "batch_pos": 12}
+{"Q": 11, "answer": "no", "rationale": "Attributed statement provides factual reporting of an outbreak; 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_11_16888", "batch_size": 260, "batch_pos": 259}
+{"Q": 12, "answer": "yes", "rationale": "Factual reporting of an outbreak location; 'highly pathogenic' is technical.", "method": "llm_batch", "batch_id": "batch_12_17032", "batch_size": 260, "batch_pos": 259}

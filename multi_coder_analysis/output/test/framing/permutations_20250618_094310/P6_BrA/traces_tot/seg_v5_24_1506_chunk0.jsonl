@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains a scale metric ('vast majority') and describes an attitude ('on guard'), not triggering Q1.", "method": "llm_batch", "batch_id": "batch_1_17724", "batch_size": 217, "batch_pos": 38}
+{"Q": 2, "answer": "no", "rationale": "'on guard' is a mild idiom, not a critical alert phrase meeting the specific pattern.", "method": "llm_batch", "batch_id": "batch_2_6716", "batch_size": 260, "batch_pos": 244}
+{"Q": 3, "answer": "no", "rationale": "The segment uses an outcome verb ('have gotten') and lacks significant scale/impact.", "method": "llm_batch", "batch_id": "batch_3_17212", "batch_size": 260, "batch_pos": 174}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_17952", "batch_size": 260, "batch_pos": 163}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_17952_r1", "batch_size": 260, "batch_pos": 163}
+{"Q": 5, "answer": "no", "rationale": "Reports how people get infected and scientists being 'on guard,' which is about vigilance, not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14696", "batch_size": 260, "batch_pos": 155}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_14364", "batch_size": 260, "batch_pos": 108}
+{"Q": 6, "answer": "no", "rationale": "No minimiser + scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_14364_r1", "batch_size": 260, "batch_pos": 108}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16768", "batch_size": 252, "batch_pos": 100}
+{"Q": 8, "answer": "yes", "rationale": "Describes a preparedness measure/stance ('scientists are on guard for any sign of spread among people').", "method": "llm_batch", "batch_id": "batch_8_17088", "batch_size": 260, "batch_pos": 161}

@@ -1,0 +1,994 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_2_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('detected') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_1_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('found') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_16_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('down') to describe data, not high-potency verbs or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_15_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses moderate verbs ('hitting', 'dropped') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_14_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('working diligently', 'prevent') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_13_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_12_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('banning or limiting') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_11_1000_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('urged', 'review', 'prevent', 'working jointly') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_010_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('expect test results') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_009_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_008_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('expected to lower') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_007_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('working with', 'prevent', 'heightening safety measures') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_006_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_004_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('infected with'). 'highly pathogenic' is a technical term ignored by TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_003_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('limited poultry purchases') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_002_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('triggered more restrictions', 'blocking') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_8_100_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information ('kills bacteria and viruses') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_6_100_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('detected'). It contains a Reassuring cue ('safe to eat'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_5_100_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('do not present'). It contains a Reassuring cue ('no immediate public health concern'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_3_100_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('were at') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_2_100_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_1_100_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_16_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('emerged', 'leading to', 'spread') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_15_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('recorded to have contracted'). 'highly pathogenic' is a technical term ignored by TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_14_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('do occur', 'considered rare'). It contains a Reassuring cue ('considered rare'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_13_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_12_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_11_1002_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_018_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('showed', 'down') to describe data, not high-potency verbs or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_017_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses moderate verbs ('hitting', 'down') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_016_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_015_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_014_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_013_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('thought to be spreading', 'tested positive') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_012_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('do not present'). It contains a Reassuring cue ('no immediate public health concern'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_011_1003_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culled', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_14_1004_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_13_1004_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a psychological verb ('threatens to spark') without a vivid intensifier or scale of realised harm, and 'soaring' modifies a background condition ('inflation')."
+  },
+  {
+    "segment_id": "seg_v5_12_1004_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language. It contains a Reassuring cue ('very low'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_11_1004_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides neutral advice ('prevent contact', 'report sick birds') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_4_1_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('confirmed', 'responsible for'). 'deadly' is an adjective, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_3_1_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'cull', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_2_1_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'cull', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_1_1_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('responsible for the deaths') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_12_1001_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('no record', 'contracted', 'resulting in deaths') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_11_1001_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is rare', 'can occur'). It contains a Reassuring cue ('rare'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_34_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment is irrelevant to the framing of the threat."
+  },
+  {
+    "segment_id": "seg_v5_33_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('harder') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_32_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('hard to estimate') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_31_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('closed', 'go through procedures', 'stop the disease spreading') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_30_363_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier 'mass' with the harm noun 'deaths'."
+  },
+  {
+    "segment_id": "seg_v5_29_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('challenging to record') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_28_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('identifying', 'testing', 'sharing data') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_27_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses an intensifier ('vast numbers') but the noun ('removal') is not a harm noun from the Q2 list."
+  },
+  {
+    "segment_id": "seg_v5_26_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment expresses concern ('terrible news', 'very worried') but does not use high-potency verbs, metaphors, or intensifiers to describe the event/impact."
+  },
+  {
+    "segment_id": "seg_v5_25_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has not yet reached') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_24_363_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the high-potency verb 'decimated'."
+  },
+  {
+    "segment_id": "seg_v5_22_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses descriptive language ('significant declines', 'large outbreaks', 'further pressure') but not Q2 high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_21_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses descriptive language ('very big impacts') but not Q2 high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_20_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_19_363_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier 'devastating' with the harm noun 'impacts' and the intensifier 'catastrophic' with harm nouns 'breeding failure' and 'mortality events'."
+  },
+  {
+    "segment_id": "seg_v5_18_363_chunk0",
+    "answer": "no",
+    "rationale": "'highly pathogenic avian influenza (HPAI)' is a technical term. The segment uses neutral language ('consequences... are unknown')."
+  },
+  {
+    "segment_id": "seg_v5_17_363_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier 'mass' with the harm noun 'mortality events' and the superlative 'largest' with the harm noun 'disasters'."
+  },
+  {
+    "segment_id": "seg_v5_16_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('show they are susceptible') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_14_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'devastating' to describe the speaker's emotional reaction ('to watch'), not the event's realised impact."
+  },
+  {
+    "segment_id": "seg_v5_13_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('no recorded cases', 'expected to arrive') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_12_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('confirmed', 'classed as suspected') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_11_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a neutral description of symptoms and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_10_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a neutral description of symptoms and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_9_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('confirmed bird flu deaths', 'suspected') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_8_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('likely chance') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_7_363_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier 'mass' with the harm noun 'mortalities'."
+  },
+  {
+    "segment_id": "seg_v5_6_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('was concerning') which expresses worry, not a high-potency description of the event/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('Cases have been confirmed') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_4_363_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the intensifier 'mass' with the harm noun 'deaths'."
+  },
+  {
+    "segment_id": "seg_v5_3_363_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('was first reported') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_31_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a moderate verb ('impacted') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_30_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('real risk') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_29_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('remains low'). It contains a Reassuring cue ('remains low'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_28_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_27_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('have been a handful of cases') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_26_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('no additional tests pending', 'could be additional cases') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_25_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a neutral description of symptoms and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_24_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('are mild'). It contains a Reassuring cue ('mild'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_23_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culling', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_22_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('are nine known human cases') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_21_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('will provide training', 'will expand access') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_20_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('will use the money', 'partner') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_19_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('announced', 'will be sent', 'help prevent') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_18_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('have been additional cases', 'have been mild', 'is still extremely low'). It contains Reassuring cues ('mild', 'extremely low'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_17_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('does not think... is necessary') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_16_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information ('does not provide protection') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_15_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('relies upon trust', 'making the case') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_14_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('will bring vaccines') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_13_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('will not be mandatory') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_12_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('reduce the likelihood', 'reduce as much as possible') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_11_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has occurred', 'it's a concern') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_10_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has happened') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_7_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('predictable', 'preventable') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_6_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is theoretical', 'could happen', 'want to take steps', 'reduce that effect') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_4_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is always a risk', 'could mix together', 'create') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_3_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('Preventing', 'reduce the risk', 'emerging') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_2_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('goal is to protect', 'begin to circulate') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_1_743_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('announced', 'offer', 'reduce the public health concern', 'emerge', 'been in circulation'). It contains a Reassuring cue ('reduce the public health concern'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_17_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information ('will also kill') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_16_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('are allowed'). It contains a Reassuring cue ('extremely rare'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_15_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('doesn’t represent'). It contains a Reassuring cue ('doesn’t represent a significant health threat'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_14_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('difficult to keep out') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_13_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('working hard to keep', 'taking steps', 'requiring', 'sanitizing', 'investing') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_11_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'slaughtered', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_10_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_9_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('sizeable bird flu cases confirmed') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_8_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_7_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_6_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_5_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_4_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_1_2030_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'slaughtered', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_035_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('highlight a pathway to prevention', 'able to avoid') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_034_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('was not optimal') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_033_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'euthanized', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_032_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses descriptive language ('whipping up') not a high-potency verb describing the virus's impact."
+  },
+  {
+    "segment_id": "seg_v5_031_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('had a hard time keeping') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_030_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verbs 'culling' and 'depopulation', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_029_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verbs 'culling' and 'depopulation', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_028_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses an intensifier ('sky-high') but the noun ('levels') is not a harm noun from the Q2 list."
+  },
+  {
+    "segment_id": "seg_v5_027_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses an intensifier ('sky-high') but the noun ('levels') is not a harm noun from the Q2 list."
+  },
+  {
+    "segment_id": "seg_v5_026_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('underscored some of the challenges') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_025_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a neutral description of symptoms and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_024_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('were all mild'). It contains a Reassuring cue ('mild'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_023_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is a hypothesis', 'needs and requires') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_022_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is a hypothesis', 'needs and requires') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_021_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is a hypothesis') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_020_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('does raise the possibility', 'was transmitted') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_019_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('was an exact match', 'tied to') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_018_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('noted that there have been', 'indicated that... was related') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_017_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('noted that there have been') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_016_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('suggests that', 'possibly reached') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_015_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'culling', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_014_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('came as', 'provided an update') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_013_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('no clear signs', 'about to come under control', 'considered high') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_012_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('have shown', 'continued to move', 'shown signs') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_011_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('believe that', 'impeded', 'isn’t keeping up', 'have reported', 'are undercounts', 'don’t know') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_010_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has started providing', 'could improve') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_008_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('argued that', 'impeded', 'isn’t keeping up', 'haven’t changed') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_007_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('increasingly skeptical', 'continues to gain') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_006_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('added that', 'could further facilitate', 'remains under discussion') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_005_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('understand that', 'moves with', 'should get us to a point', 'can arrest the spread') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_004_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('means that', 'cutting off', 'can contain it', 'noted that', 'have not seen', 'started') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_003_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('reason for that confidence is', 'investigations have shown', 'is spreading') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_002_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('All the signs that we have are', 'will be able to eliminate'). It contains a Reassuring cue ('eliminate'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_001_721_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('Facing increasing doubts', 'reiterated', 'believe', 'can still eliminate', 'continues to spread'). It contains a Reassuring cue ('eliminate'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_14_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('would bring that figure up to') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_13_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('have been... reported') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_12_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('can lead to'). 'extreme cases' is descriptive, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_11_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a neutral description of symptoms and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_10_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('spreads easily', 'can prove deadly'). 'deadly' is an adjective, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_9_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('being monitored', 'being provided') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_8_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('working with', 'have been given') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_7_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is currently underway', 'may change') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_6_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('experienced mild symptoms', 'have been provided'). It contains a Reassuring cue ('mild symptoms'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_5_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('prompted testing', 'tested', 'sent', 'await') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_4_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'euthanized', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_3_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('emerged at', 'was the site of') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_2_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('may be infected', 'stated'). 'highly pathogenic avian influenza' is a technical term ignored by TECH_TERM_GUARD."
+  },
+  {
+    "segment_id": "seg_v5_1_1881_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('experienced only mild symptoms', 'are employed at', 'was the site of'). It contains a Reassuring cue ('mild symptoms'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_37_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides a neutral description of a case and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_36_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment provides factual information ('lacks genetic characteristics') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_35_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has caused', 'were fatal') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_34_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has caused') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_33_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has been evolving', 'mutating and swapping genes') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_32_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('can leverage', 'prompted calls', 'strengthen', 'minimize the risk'). It contains a Reassuring cue ('minimize the risk'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_31_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('can leverage') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_30_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('We've created opportunities', 'share time and space') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_29_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('pointed to', 'has been found') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_28_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('has increased') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_27_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('are monitoring', 'rising concerns', 'increasing threats', 'could spread', 'mutating'). 'rising' and 'increasing' are descriptive, not Q2 intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_26_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_25_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('showed', 'moving along') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_24_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is not related to', 'made... sick') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_23_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('shows', 'have been infected') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_22_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('had taken flight', 'was reported') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_21_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('made its first appearance', 'land', 'blown across') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_20_137_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the critical alert phrase 'on high alert'."
+  },
+  {
+    "segment_id": "seg_v5_19_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('keeping their chickens in', 'trying to keep... out', 'protect') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_18_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('have shuttered', 'protect') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_17_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'euthanasia', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_16_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses a psychological verb ('ignited protests') without a vivid intensifier or scale of realised harm."
+  },
+  {
+    "segment_id": "seg_v5_15_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment noun 'destruction', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_14_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_13_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('can be deadly', 'spread rapidly'). 'deadly' is an adjective, not a Q2 cue."
+  },
+  {
+    "segment_id": "seg_v5_12_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('is safe'). It contains a Reassuring cue ('safe'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_11_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('have been documented', 'has been reported') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_10_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('recommends', 'take steps to protect') and does not contain high-potency verbs, metaphors, or intensifiers."
+  },
+  {
+    "segment_id": "seg_v5_9_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('risk... is low', 'rising concerns', 'increasing threats', 'spreading'). 'rising' and 'increasing' are descriptive, not Q2 intensifiers. It contains a Reassuring cue ('risk... is low'), but no Q2 cues."
+  },
+  {
+    "segment_id": "seg_v5_8_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains the containment verb 'killed', triggering the containment override for Q2."
+  },
+  {
+    "segment_id": "seg_v5_7_137_chunk0",
+    "answer": "yes",
+    "rationale": "The segment uses the superlative 'worst' with the harm noun 'outbreak'."
+  },
+  {
+    "segment_id": "seg_v5_6_137_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses neutral language ('more than doubled') to describe prices, not a high-potency verb like 'skyrocketed'."
+  }
+]
+```

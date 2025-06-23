@@ -1,0 +1,17 @@
+{
+  "batch_id": "batch_7_16732",
+  "hop_idx": 7,
+  "unknown_count": 2,
+  "unknown_responses": [
+    {
+      "segment_id": "seg_v5_16_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment does not contain a bare negation."
+    },
+    {
+      "segment_id": "seg_v5_18_2030_chunk0",
+      "answer": "no",
+      "rationale": "The segment contains a safety instruction ('will also kill any viruses'), not a bare negation."
+    }
+  ]
+}

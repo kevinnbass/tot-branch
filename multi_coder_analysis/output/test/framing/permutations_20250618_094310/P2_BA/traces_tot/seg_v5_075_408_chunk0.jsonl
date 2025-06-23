@@ -1,0 +1,5 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_17944", "batch_size": 260, "batch_pos": 134}
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_17944_r1", "batch_size": 260, "batch_pos": 134}
+{"Q": 2, "answer": "no", "rationale": "Segment uses neutral language.", "method": "llm_batch", "batch_id": "batch_2_6416", "batch_size": 260, "batch_pos": 86}
+{"Q": 3, "answer": "no", "rationale": "The segment asks a question and states uncertainty/possibility, lacking a moderate verb paired with scale or impact.", "method": "llm_batch", "batch_id": "batch_3_3036", "batch_size": 260, "batch_pos": 17}
+{"Q": 4, "answer": "yes", "rationale": "The question 'Will taking the virus down your throat... cause the exposure...?' is loaded, implying a potential risk pathway.", "method": "llm_batch", "batch_id": "batch_4_13904", "batch_size": 260, "batch_pos": 6}

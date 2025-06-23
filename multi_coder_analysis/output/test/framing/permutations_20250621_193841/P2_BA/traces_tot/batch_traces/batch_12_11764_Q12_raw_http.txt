@@ -1,0 +1,969 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_6_101_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of symptoms without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_7_101_chunk0",
+    "answer": "yes",
+    "rationale": "Factual description of the virus and its history without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_015_1010_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual consequence (halted imports) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_41_101_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual comparison of geographic spread without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_42_101_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_45_101_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a potential transmission method factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_46_101_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a potential transmission method factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_001_1010_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection and a likely threat factually; 'likely threat' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_2_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers of birds killed without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_3_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers of birds killed without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_5_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual statistic about production without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_6_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual location of cases without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_10_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports transmission mechanism factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_11_102_chunk0",
+    "answer": "yes",
+    "rationale": "Reports geographic spread and duration factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_16_102_chunk0",
+    "answer": "yes",
+    "rationale": "Editorial note about a correction, presented factually."
+  },
+  {
+    "segment_id": "seg_v5_17_102_chunk0",
+    "answer": "yes",
+    "rationale": "Editorial note about a correction, presented factually."
+  },
+  {
+    "segment_id": "seg_v5_2_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual finding ('trace amounts' is neutral) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_5_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual event (deaths) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_10_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual statistic without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_11_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual links to other diseases; 'ironic' is mild author comment."
+  },
+  {
+    "segment_id": "seg_v5_12_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote about information exposure and potential harm factually."
+  },
+  {
+    "segment_id": "seg_v5_13_1674_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual regulations and consequences without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_7_1470_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'risks to the general public remain low'."
+  },
+  {
+    "segment_id": "seg_v5_9_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual symptom without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_10_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports potential symptoms factually; 'serious symptoms' is a factual descriptor."
+  },
+  {
+    "segment_id": "seg_v5_11_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual mortality rate without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_18_1470_chunk0",
+    "answer": "yes",
+    "rationale": "Reports spread factually; 'quickly spread' is descriptive, not alarmist."
+  },
+  {
+    "segment_id": "seg_v5_1_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection and uses technical term 'highly pathogenic avian influenza'."
+  },
+  {
+    "segment_id": "seg_v5_4_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual increase and 'source of concern' (Neutral per Q11 guard)."
+  },
+  {
+    "segment_id": "seg_v5_5_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers and severity ('critically ill' is factual descriptor)."
+  },
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "yes",
+    "rationale": "Reports outbreaks and numbers factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual case count without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'overall public health risk is low'."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "yes",
+    "rationale": "Introduces the topic; 'to contend with' is mild, not strong framing."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "yes",
+    "rationale": "Uses metaphor and describes capability/impact factually without alarmist framing."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual detection in species without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_7_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'voraciousness', 'global zoonotic animal pandemic'."
+  },
+  {
+    "segment_id": "seg_v5_16_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual events and a personal reaction without alarmist framing."
+  },
+  {
+    "segment_id": "seg_v5_19_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'severe, severe seizures' (intensifier)."
+  },
+  {
+    "segment_id": "seg_v5_20_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'Screaming very loud, whole-body tremors' (vivid language)."
+  },
+  {
+    "segment_id": "seg_v5_22_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'longer and longer and longer' (amplification)."
+  },
+  {
+    "segment_id": "seg_v5_25_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'severity... something I really hadn't seen before' (amplification)."
+  },
+  {
+    "segment_id": "seg_v5_26_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote expressing sadness, not alarmist framing."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains reassuring framing: 'sporadic and usually self-limiting'."
+  },
+  {
+    "segment_id": "seg_v5_30_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains reassuring framing: 'it rarely gets passed'."
+  },
+  {
+    "segment_id": "seg_v5_31_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains reassuring framing: 'dead-end infections'."
+  },
+  {
+    "segment_id": "seg_v5_34_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual case count and links to previous concept; no new framing."
+  },
+  {
+    "segment_id": "seg_v5_35_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual symptoms without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_36_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual exposure method without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_37_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual symptoms and exposure without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_38_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a positive outcome factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_47_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'human infections has apparently been low'."
+  },
+  {
+    "segment_id": "seg_v5_51_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes potential future risk/capability factually; 'pry its way' is mild."
+  },
+  {
+    "segment_id": "seg_v5_52_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote stating viruses 'can change very quickly' (describes characteristic)."
+  },
+  {
+    "segment_id": "seg_v5_53_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote stating viruses 'can spread very easily' (describes characteristic)."
+  },
+  {
+    "segment_id": "seg_v5_54_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote about immune response factually."
+  },
+  {
+    "segment_id": "seg_v5_56_647_chunk0",
+    "answer": "yes",
+    "rationale": "Describes findings as 'sobering' (describes nature of findings, not threat impact)."
+  },
+  {
+    "segment_id": "seg_v5_57_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual outcome of a study without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_58_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains reassuring cue: 'cases... have been mild'."
+  },
+  {
+    "segment_id": "seg_v5_59_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual case count and range of severity factually."
+  },
+  {
+    "segment_id": "seg_v5_63_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an opinion/hypothesis factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_64_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual limitation of a study without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_73_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an opinion/hypothesis factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_76_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual characteristic/capability of the virus without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_79_647_chunk0",
+    "answer": "yes",
+    "rationale": "Introduces a speaker without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_80_647_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'top of the list in terms of bad guy viruses' (loaded metaphor)."
+  },
+  {
+    "segment_id": "seg_v5_82_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual symptoms/behaviour in animals without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_90_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual events and outcome (died) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_91_647_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual events and outcomes (survived but went blind) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports farmers are 'on edge' (Neutral per Q11 guard) and virus is 'on the rise' (descriptive)."
+  },
+  {
+    "segment_id": "seg_v5_13_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote expressing a desire to prevent spread factually."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Provides context about the speaker factually."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers affected; 'extremely large industry' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Provides factual context about a person and business size."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Provides factual information about a company."
+  },
+  {
+    "segment_id": "seg_v5_26_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote about a procedural change factually."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers affected without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_29_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about locations; 'hardest hit' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about transmission without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual case count without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual events and uses technical term HPAI."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual expectation based on behaviour without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about host range and geographic spread."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'Humans are considered to be at low risk'."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'risk... appears low'."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical event factually; 'spread rapidly' is descriptive."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual outcome (mild) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_5_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual case count and outcome (asymptomatic) without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_10_914_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual locations of outbreaks without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_001_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Reports an outbreak and uses technical term 'highly contagious'."
+  },
+  {
+    "segment_id": "seg_v5_003_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual location and size of outbreak without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_004_1352_chunk0",
+    "answer": "yes",
+    "rationale": "Reports transmission methods factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_2_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual finding from a study; 'detectable amounts' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_6_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual findings from a study; 'detectable amounts' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_7_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual finding and potential implication; 'relatively small but detectable' is neutral."
+  },
+  {
+    "segment_id": "seg_v5_8_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual publication information without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_9_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about disclosures without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_20_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual history and recent event without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_21_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_22_1702_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual case count and source without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_2_1917_chunk0",
+    "answer": "yes",
+    "rationale": "Reports detection and uses 'severe' (factual descriptor of strain) without alarmist framing."
+  },
+  {
+    "segment_id": "seg_v5_5_1917_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers of birds slaughtered without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_1_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual proportion and scale ('largest-ever' is factual comparison)."
+  },
+  {
+    "segment_id": "seg_v5_2_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Provides factual context about production numbers."
+  },
+  {
+    "segment_id": "seg_v5_3_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers affected without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_4_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Provides factual context about production numbers."
+  },
+  {
+    "segment_id": "seg_v5_5_1186_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual numbers affected and uncertainty factually."
+  },
+  {
+    "segment_id": "seg_v5_16_1485_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote describing issue as 'emerging' and pathogen as 'evolving' factually."
+  },
+  {
+    "segment_id": "seg_v5_006_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'characterize the risk... as “low.”'"
+  },
+  {
+    "segment_id": "seg_v5_007_803_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'characterize the risk... as “low.”'"
+  },
+  {
+    "segment_id": "seg_v5_024_803_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual actions/inactions without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_010_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual death without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_011_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports previous understanding factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_012_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual development and potential transmission route factually."
+  },
+  {
+    "segment_id": "seg_v5_016_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote stating a conclusion about transmission route factually."
+  },
+  {
+    "segment_id": "seg_v5_020_813_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual consequences of transmission route without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_017_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual action and a warning ('warning' is neutral)."
+  },
+  {
+    "segment_id": "seg_v5_019_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote giving advice factually."
+  },
+  {
+    "segment_id": "seg_v5_022_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote speculating on motivation factually."
+  },
+  {
+    "segment_id": "seg_v5_024_644_chunk0",
+    "answer": "yes",
+    "rationale": "Provides factual context about a location."
+  },
+  {
+    "segment_id": "seg_v5_030_644_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual consequences of breaching an order without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_4_405_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'human health risk... remains low'."
+  },
+  {
+    "segment_id": "seg_v5_6_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote expressing a desire for understanding factually."
+  },
+  {
+    "segment_id": "seg_v5_9_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about typical transmission without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_10_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about shedding and transmission without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_11_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about infected species without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_12_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports the range of severity factually; 'severe pneumonia' is a factual descriptor."
+  },
+  {
+    "segment_id": "seg_v5_19_405_chunk0",
+    "answer": "yes",
+    "rationale": "Reports historical context; 'problem' is a mild descriptor, not strong framing."
+  },
+  {
+    "segment_id": "seg_v5_3_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual outcome without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_8_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports transmission method and uses technical term HPAI."
+  },
+  {
+    "segment_id": "seg_v5_10_1181_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual actions and difficulty ('struggled' is descriptive)."
+  },
+  {
+    "segment_id": "seg_v5_14_1181_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'outbreak poses a low risk'."
+  },
+  {
+    "segment_id": "seg_v5_11_800_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'We should be very concerned' (intensifier + psychological state)."
+  },
+  {
+    "segment_id": "seg_v5_24_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote about historical patterns factually."
+  },
+  {
+    "segment_id": "seg_v5_25_800_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'definitely increase my level of alarm' (intensifier + psychological state)."
+  },
+  {
+    "segment_id": "seg_v5_37_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote criticizing communication style, not framing the threat."
+  },
+  {
+    "segment_id": "seg_v5_38_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote criticizing communication style, not framing the threat."
+  },
+  {
+    "segment_id": "seg_v5_54_800_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'just a matter of time before we're dealing with the big outbreak' (prediction of imminent large impact)."
+  },
+  {
+    "segment_id": "seg_v5_55_800_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a quote urging action, not framing the threat itself."
+  },
+  {
+    "segment_id": "seg_v5_2_1138_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'devastation it can cause' (moderate verb + scale/metric)."
+  },
+  {
+    "segment_id": "seg_v5_4_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Reports transmission methods factually without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_5_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual expectation ('likely at higher risk') based on conditions."
+  },
+  {
+    "segment_id": "seg_v5_6_1138_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual scale ('largest geographical reach on record') and describes epidemic as 'severe' (factual descriptor)."
+  },
+  {
+    "segment_id": "seg_v5_9_1745_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'risk to the general public from bird flu remains low'."
+  },
+  {
+    "segment_id": "seg_v5_001_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual case and uses technical term 'highly pathogenic avian influenza'."
+  },
+  {
+    "segment_id": "seg_v5_005_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about infected species without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_007_408_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'risk to the public remains low'."
+  },
+  {
+    "segment_id": "seg_v5_011_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual history ('deadly' is factual descriptor) and context."
+  },
+  {
+    "segment_id": "seg_v5_012_408_chunk0",
+    "answer": "yes",
+    "rationale": "Provides context for an interview factually."
+  },
+  {
+    "segment_id": "seg_v5_023_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_024_408_chunk0",
+    "answer": "no",
+    "rationale": "Contains explicit reassuring cue: 'low risk for humans'."
+  },
+  {
+    "segment_id": "seg_v5_029_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote expressing personal concern ('most concerned' is personal state)."
+  },
+  {
+    "segment_id": "seg_v5_030_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_034_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual history ('fatal cases' is factual descriptor)."
+  },
+  {
+    "segment_id": "seg_v5_035_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual history ('fatal cases' is factual descriptor) and asks a neutral question."
+  },
+  {
+    "segment_id": "seg_v5_036_408_chunk0",
+    "answer": "yes",
+    "rationale": "Statement of historical perspective, presented neutrally."
+  },
+  {
+    "segment_id": "seg_v5_041_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual historical event ('major increase' describes scale, not alarmist)."
+  },
+  {
+    "segment_id": "seg_v5_043_408_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'it’s just imminent now that we're going to see an influenza pandemic' (prediction of imminent large impact)."
+  },
+  {
+    "segment_id": "seg_v5_047_408_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'sleep with one eye open' (loaded metaphor)."
+  },
+  {
+    "segment_id": "seg_v5_048_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual biological mechanism and outcome ('severe issue' is factual descriptor)."
+  },
+  {
+    "segment_id": "seg_v5_051_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports a factual finding about exposure source."
+  },
+  {
+    "segment_id": "seg_v5_053_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_055_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual information about exposure source without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_057_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_059_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_068_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote giving strong advice ('surely avoid'), not framing the threat."
+  },
+  {
+    "segment_id": "seg_v5_069_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote giving strong advice and context, not framing the threat."
+  },
+  {
+    "segment_id": "seg_v5_070_408_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote giving strong advice and adding H5N1 as 'just one more addition'."
+  },
+  {
+    "segment_id": "seg_v5_074_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question about biological mechanism."
+  },
+  {
+    "segment_id": "seg_v5_077_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question about potential impact."
+  },
+  {
+    "segment_id": "seg_v5_079_408_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral statement about future knowledge."
+  },
+  {
+    "segment_id": "seg_v5_2_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Describes Covid threat as 'receded' (positive framing of background condition)."
+  },
+  {
+    "segment_id": "seg_v5_7_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Describes impact as 'bigger toll' ('toll' is neutral, 'bigger' is comparison)."
+  },
+  {
+    "segment_id": "seg_v5_12_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual factor influencing spread ('accelerates contagion' describes speed)."
+  },
+  {
+    "segment_id": "seg_v5_14_1166_chunk0",
+    "answer": "yes",
+    "rationale": "Reports scientists 'worry' (Neutral per Q11 guard)."
+  },
+  {
+    "segment_id": "seg_v5_16_1166_chunk0",
+    "answer": "yes",
+    "rationale": "States species is at 'real risk of dying out' (factual risk assessment)."
+  },
+  {
+    "segment_id": "seg_v5_17_1166_chunk0",
+    "answer": "yes",
+    "rationale": "States a factual expectation ('will also be hit')."
+  },
+  {
+    "segment_id": "seg_v5_1_805_chunk0",
+    "answer": "yes",
+    "rationale": "Provides biographical context factually."
+  },
+  {
+    "segment_id": "seg_v5_5_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote expressing willingness to discuss factually."
+  },
+  {
+    "segment_id": "seg_v5_6_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about communication sources factually."
+  },
+  {
+    "segment_id": "seg_v5_7_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about personal adjustment factually."
+  },
+  {
+    "segment_id": "seg_v5_11_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about personal responsibility and past events ('really ruptured' describes past)."
+  },
+  {
+    "segment_id": "seg_v5_17_805_chunk0",
+    "answer": "no",
+    "rationale": "Contains alarmist framing: 'This is really bad' (intensifier + negative adjective)."
+  },
+  {
+    "segment_id": "seg_v5_19_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about past actions factually."
+  },
+  {
+    "segment_id": "seg_v5_21_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about personal experience factually."
+  },
+  {
+    "segment_id": "seg_v5_22_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote using a metaphor unrelated to threat framing."
+  },
+  {
+    "segment_id": "seg_v5_24_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about past expectations factually."
+  },
+  {
+    "segment_id": "seg_v5_29_805_chunk0",
+    "answer": "yes",
+    "rationale": "Neutral question without explicit framing cues."
+  },
+  {
+    "segment_id": "seg_v5_30_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote stating 'concerned' (Neutral per Q11 guard)."
+  },
+  {
+    "segment_id": "seg_v5_33_805_chunk0",
+    "answer": "yes",
+    "rationale": "Uses metaphor to describe state after Covid, unrelated to bird flu threat."
+  },
+  {
+    "segment_id": "seg_v5_37_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports factual events and reactions unrelated to bird flu threat framing."
+  },
+  {
+    "segment_id": "seg_v5_38_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote about personal thought/observation factually."
+  },
+  {
+    "segment_id": "seg_v5_41_805_chunk0",
+    "answer": "yes",
+    "rationale": "Reports quote stating 'traumatized' (Neutral per Q11 guard)."
+  }
+]
+```

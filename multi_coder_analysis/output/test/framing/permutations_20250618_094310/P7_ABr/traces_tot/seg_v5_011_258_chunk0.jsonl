@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'wreaking havoc' is a vivid verb. 'raising global concerns' describes reaction. No Q1 match.", "method": "llm_batch", "batch_id": "batch_1_7972", "batch_size": 217, "batch_pos": 192}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral/idiomatic phrases ('quieted down', 'healthy respect', 'hedging their bets') without high-potency framing.", "method": "llm_batch", "batch_id": "batch_2_6720", "batch_size": 173, "batch_pos": 148}
+{"Q": 3, "answer": "no", "rationale": "'wreaking havoc' is a vivid verb (Q2), not a moderate verb + scale pattern for Q3.", "method": "llm_batch", "batch_id": "batch_3_12744", "batch_size": 93, "batch_pos": 69}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17824", "batch_size": 71, "batch_pos": 47}
+{"Q": 5, "answer": "no", "rationale": "Lacks explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12008", "batch_size": 66, "batch_pos": 42}
+{"Q": 6, "answer": "no", "rationale": "Segment does not contain a minimiser combined with a scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_18416", "batch_size": 260, "batch_pos": 259}
+{"Q": 7, "answer": "no", "rationale": "The segment is a statement about impact, capability, concern, potential, and change, with no negation.", "method": "llm_batch", "batch_id": "batch_7_15196", "batch_size": 259, "batch_pos": 235}
+{"Q": 8, "answer": "no", "rationale": "The segment describes past events and concerns, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_6920", "batch_size": 47, "batch_pos": 29}
+{"Q": 9, "answer": "no", "rationale": "The segment uses vivid language ('wreaking havoc') and discusses concerns, failing Q9 criteria.", "method": "llm_batch", "batch_id": "batch_9_8340", "batch_size": 45, "batch_pos": 34}
+{"Q": 10, "answer": "yes", "rationale": "regex:ReliefSpeculation matched", "method": "regex", "batch_id": "batch_10_16660", "batch_size": 147, "batch_pos": 140, "regex": {"rule": "ReliefSpeculation", "span": [208, 213], "captures": ["might"]}}

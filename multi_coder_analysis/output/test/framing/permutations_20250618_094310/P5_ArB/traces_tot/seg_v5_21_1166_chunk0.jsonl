@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_18296", "batch_size": 260, "batch_pos": 56}
+{"Q": 2, "answer": "no", "rationale": "The segment neutrally describes price changes with numbers ('rose at 21 per cent', 'outstripping the rise').", "method": "llm_batch", "batch_id": "batch_2_17892", "batch_size": 260, "batch_pos": 52}
+{"Q": 3, "answer": "no", "rationale": "The verb 'rose' is paired with scale '21 per cent', but this refers to a financial/price metric, which is excluded.", "method": "llm_batch", "batch_id": "batch_3_11032", "batch_size": 260, "batch_pos": 32}
+{"Q": 4, "answer": "no", "rationale": "Segment contains no question.", "method": "llm_batch", "batch_id": "batch_4_9508", "batch_size": 260, "batch_pos": 27}
+{"Q": 5, "answer": "no", "rationale": "This segment reports price increases and contains no calming cue.", "method": "llm_batch", "batch_id": "batch_5_17760", "batch_size": 260, "batch_pos": 27}
+{"Q": 6, "answer": "no", "rationale": "No 'minimiser + scale contrast' found.", "method": "llm_batch", "batch_id": "batch_6_17008", "batch_size": 260, "batch_pos": 21}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_16740", "batch_size": 260, "batch_pos": 18}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14728", "batch_size": 260, "batch_pos": 11, "regex": {"rule": "CapabilityNoReassurance", "span": [191, 198], "captures": []}}

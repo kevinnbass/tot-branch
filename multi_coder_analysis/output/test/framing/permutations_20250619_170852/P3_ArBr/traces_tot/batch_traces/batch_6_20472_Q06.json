@@ -1,0 +1,48 @@
+{
+  "batch_id": "batch_6_20472",
+  "hop_idx": 6,
+  "segment_count": 8,
+  "responses": [
+    {
+      "segment_id": "seg_v5_6_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'the first U.S. case' but does not use a minimiser token ('only', 'just', etc.) combined with a scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_5_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'Three previous cases' and 'Two of those workers'/'one' but uses bare numerals, not minimisers like 'only' or 'just', nor a scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_4_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions 'Three previous cases' but uses a bare numeral, not a minimiser like 'only' or 'just', nor a scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_3_690_chunk0",
+      "answer": "no",
+      "rationale": "The segment describes a single case ('The worker', 'The man') but does not use a minimiser token ('only', 'just', etc.) combined with a scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_13_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment mentions '111 million doses' which is a large number, not a minimiser, and lacks a scale contrast for downplaying."
+    },
+    {
+      "segment_id": "seg_v5_12_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment states 'risk...is considered to be low' which is a Q5 Low-Risk cue, not a Q6 minimiser + scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_10_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment states 'There are no active cases' which is a bare negation (Q7), not a Q6 minimiser + scale contrast."
+    },
+    {
+      "segment_id": "seg_v5_9_1683_chunk0",
+      "answer": "no",
+      "rationale": "The segment uses 'no confirmed human-to-human transfers' (bare negation, Q7) and 'three people' (bare numeral), neither is a Q6 minimiser + scale contrast."
+    }
+  ],
+  "timestamp": "2025-06-19T17:18:37.533352"
+}

@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_7972", "batch_size": 217, "batch_pos": 210}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral verbs ('detected', 'set to be euthanized') without potent framing.", "method": "llm_batch", "batch_id": "batch_2_6720", "batch_size": 173, "batch_pos": 166}
+{"Q": 3, "answer": "no", "rationale": "Focuses on food safety, no moderate verb + scale.", "method": "llm_batch", "batch_id": "batch_3_12744", "batch_size": 93, "batch_pos": 86}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17824", "batch_size": 71, "batch_pos": 64}
+{"Q": 5, "answer": "no", "rationale": "Bare negation ('will not enter') about food safety, not the keyword 'safe'.", "method": "llm_batch", "batch_id": "batch_5_12008", "batch_size": 66, "batch_pos": 59}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_18120", "batch_size": 23, "batch_pos": 16}
+{"Q": 7, "answer": "yes", "rationale": "regex:BareNegationHealthConcern matched", "method": "regex", "batch_id": "batch_7_15196", "batch_size": 259, "batch_pos": 252, "regex": {"rule": "BareNegationHealthConcern", "span": [31, 61], "captures": []}}

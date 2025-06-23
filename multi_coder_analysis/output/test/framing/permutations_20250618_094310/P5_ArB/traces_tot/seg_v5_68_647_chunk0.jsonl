@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17404", "batch_size": 260, "batch_pos": 251}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language describing actions/risk ('ordered doses', 'will be used', 'protect workers', 'might be vulnerable').", "method": "llm_batch", "batch_id": "batch_2_15516", "batch_size": 260, "batch_pos": 233}
+{"Q": 3, "answer": "no", "rationale": "About action/preparedness.", "method": "llm_batch", "batch_id": "batch_3_5284", "batch_size": 260, "batch_pos": 191}
+{"Q": 4, "answer": "no", "rationale": "No loaded rhetorical question detected.", "method": "llm_batch", "batch_id": "batch_4_17836", "batch_size": 260, "batch_pos": 182}
+{"Q": 5, "answer": "no", "rationale": "The segment reports ordering vaccines for vulnerable workers, implying preparedness for a specific group but not general public safety.", "method": "llm_batch", "batch_id": "batch_5_6644", "batch_size": 260, "batch_pos": 178}
+{"Q": 6, "answer": "no", "rationale": "Contains 'risk is low' but not in a minimiser + scale contrast structure.", "method": "llm_batch", "batch_id": "batch_6_6448", "batch_size": 260, "batch_pos": 156}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_17148", "batch_size": 260, "batch_pos": 151}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16516", "batch_size": 260, "batch_pos": 65, "regex": {"rule": "CapabilityNoReassurance", "span": [271, 280], "captures": []}}

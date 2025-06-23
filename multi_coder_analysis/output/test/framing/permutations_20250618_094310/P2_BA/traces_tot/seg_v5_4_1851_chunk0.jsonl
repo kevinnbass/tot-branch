@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'concerned' is a psychological state. 'further' modifies 'spread'.", "method": "llm_batch", "batch_id": "batch_1_11480", "batch_size": 260, "batch_pos": 226}
+{"Q": 2, "answer": "no", "rationale": "'concerned scientists' describes a psychological state, not the threat's impact using vivid language.", "method": "llm_batch", "batch_id": "batch_2_17304", "batch_size": 260, "batch_pos": 221}
+{"Q": 3, "answer": "no", "rationale": "Uses 'jump' (plain verb) and 'infections' (noun), and 'have concerned' (feeling), not a moderate verb + scale of impact.", "method": "llm_batch", "batch_id": "batch_3_10616", "batch_size": 260, "batch_pos": 201}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_14520", "batch_size": 260, "batch_pos": 200}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_14520_r1", "batch_size": 260, "batch_pos": 200}
+{"Q": 5, "answer": "no", "rationale": "The segment reports concern among scientists/officials, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_14524", "batch_size": 260, "batch_pos": 197}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16024", "batch_size": 260, "batch_pos": 189}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_13440", "batch_size": 260, "batch_pos": 189}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_16892", "batch_size": 260, "batch_pos": 182, "regex": {"rule": "CapabilityNoReassurance", "span": [117, 126], "captures": []}}

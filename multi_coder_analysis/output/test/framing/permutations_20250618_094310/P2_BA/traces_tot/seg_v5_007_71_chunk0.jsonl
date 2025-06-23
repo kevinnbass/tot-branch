@@ -1,0 +1,10 @@
+{"hop_idx": 1, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_1_17452", "batch_size": 260, "batch_pos": 177}
+{"Q": 1, "answer": "no", "rationale": "No intensifier or comparative modifies a risk-adjective.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_1_17452_r1", "batch_size": 260, "batch_pos": 177}
+{"Q": 2, "answer": "no", "rationale": "The segment reports a control area was established using neutral language.", "method": "llm_batch", "batch_id": "batch_2_7488", "batch_size": 260, "batch_pos": 160}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with significant scale or impact.", "method": "llm_batch", "batch_id": "batch_3_17548", "batch_size": 260, "batch_pos": 129}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13320", "batch_size": 260, "batch_pos": 124}
+{"Q": 5, "answer": "no", "rationale": "Describes a control area and testing, factual actions.", "method": "llm_batch", "batch_id": "batch_5_16624", "batch_size": 260, "batch_pos": 120}
+{"hop_idx": 6, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_6_18212", "batch_size": 260, "batch_pos": 94}
+{"Q": 6, "answer": "no", "rationale": "No minimiser ('only', 'just', etc.) combined with a scale contrast found.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_6_18212_r1", "batch_size": 260, "batch_pos": 94}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_18236", "batch_size": 260, "batch_pos": 92}
+{"Q": 8, "answer": "yes", "rationale": "Describes actions taken ('control area has been established', 'extensive testing is done') as safeguards/preparedness without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_18200", "batch_size": 260, "batch_pos": 32}

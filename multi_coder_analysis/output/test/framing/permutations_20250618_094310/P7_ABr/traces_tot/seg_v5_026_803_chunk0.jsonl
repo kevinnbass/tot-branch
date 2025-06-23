@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_6812", "batch_size": 260, "batch_pos": 29}
+{"hop_idx": 2, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_2_18032", "batch_size": 260, "batch_pos": 20}
+{"Q": 2, "answer": "no", "rationale": "The segment states a factual number of affected farms using the neutral verb 'confirmed,' which does not meet the Q2 criteria.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_2_18032_r1", "batch_size": 260, "batch_pos": 20}
+{"Q": 3, "answer": "no", "rationale": "Neutral verb 'found' paired with a number, not a moderate verb + scale pattern.", "method": "llm_batch", "batch_id": "batch_3_18152", "batch_size": 260, "batch_pos": 10}
+{"Q": 4, "answer": "no", "rationale": "The segment contains no questions.", "method": "llm_batch", "batch_id": "batch_4_14956", "batch_size": 260, "batch_pos": 7}
+{"Q": 5, "answer": "no", "rationale": "The segment reports infected herd numbers but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_17384", "batch_size": 260, "batch_pos": 6}
+{"Q": 6, "answer": "no", "rationale": "The segment states a number of infected herds but does not use a minimiser or scale contrast for reassurance.", "method": "llm_batch", "batch_id": "batch_6_828", "batch_size": 260, "batch_pos": 1}
+{"Q": 7, "answer": "no", "rationale": "The segment describes infected herds but contains no negation or calming cue.", "method": "llm_batch", "batch_id": "batch_7_10756", "batch_size": 260, "batch_pos": 253}
+{"Q": 8, "answer": "no", "rationale": "The segment reports the outcome of testing, not the testing capability itself.", "method": "llm_batch", "batch_id": "batch_8_16568", "batch_size": 260, "batch_pos": 209}
+{"Q": 9, "answer": "yes", "rationale": "Reports number of infected herds found ('64 infected herds') using the standard verb 'has found'.", "method": "llm_batch", "batch_id": "batch_9_14480", "batch_size": 260, "batch_pos": 119}

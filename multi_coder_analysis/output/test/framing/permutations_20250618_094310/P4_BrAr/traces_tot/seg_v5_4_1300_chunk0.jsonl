@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "'low' is a risk-adjective but is not modified by an intensifier or comparative.", "method": "llm_batch", "batch_id": "batch_1_11412", "batch_size": 260, "batch_pos": 242}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs, metaphors, superlatives, or critical alert phrases.", "method": "llm_batch", "batch_id": "batch_2_10144", "batch_size": 260, "batch_pos": 204}
+{"Q": 3, "answer": "no", "rationale": "Segment contains reassuring language (Q5).", "method": "llm_batch", "batch_id": "batch_3_3516", "batch_size": 260, "batch_pos": 120}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16620", "batch_size": 260, "batch_pos": 97}
+{"Q": 5, "answer": "no", "rationale": "Reports a low-risk assessment ('low') but it is not intensified as required for Q5.", "method": "llm_batch", "batch_id": "batch_5_4860", "batch_size": 260, "batch_pos": 94}
+{"Q": 6, "answer": "no", "rationale": "The segment states cases remain rare and risk is low but does not use a minimiser with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_16044", "batch_size": 226, "batch_pos": 27}
+{"Q": 7, "answer": "no", "rationale": "The segment contains 'cases remain rare' and 'risk to humans is low', which are low-risk facts framed as reassuring.", "method": "llm_batch", "batch_id": "batch_7_8464", "batch_size": 208, "batch_pos": 13}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_15444", "batch_size": 249, "batch_pos": 79, "regex": {"rule": "CapabilityNoReassurance", "span": [69, 78], "captures": []}}

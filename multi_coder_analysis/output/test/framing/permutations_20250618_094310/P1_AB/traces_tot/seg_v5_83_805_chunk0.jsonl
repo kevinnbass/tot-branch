@@ -1,0 +1,9 @@
+{"Q": 1, "answer": "no", "rationale": "'effective' is not a risk-adjective. 'hitting it out of the park' and 'getting a single' are metaphors.", "method": "llm_batch", "batch_id": "batch_1_17216", "batch_size": 260, "batch_pos": 122}
+{"Q": 2, "answer": "no", "rationale": "Metaphors describe effectiveness/success, not a threat's impact.", "method": "llm_batch", "batch_id": "batch_2_13784", "batch_size": 260, "batch_pos": 109}
+{"Q": 3, "answer": "no", "rationale": "The segment does not contain a moderate verb paired with explicit scale or impact information.", "method": "llm_batch", "batch_id": "batch_3_17456", "batch_size": 260, "batch_pos": 80}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_16596", "batch_size": 260, "batch_pos": 75}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_16596_r1", "batch_size": 260, "batch_pos": 75}
+{"Q": 5, "answer": "no", "rationale": "The segment reports the speaker's assessment of effectiveness using metaphors, not explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_16424", "batch_size": 260, "batch_pos": 73}
+{"Q": 6, "answer": "no", "rationale": "'a single' is used metaphorically, not as a minimiser of quantity with scale contrast.", "method": "llm_batch", "batch_id": "batch_6_12048", "batch_size": 260, "batch_pos": 40}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation about risk, cases, evidence, or capability.", "method": "llm_batch", "batch_id": "batch_7_6756", "batch_size": 260, "batch_pos": 34}
+{"Q": 8, "answer": "yes", "rationale": "Describes a capability ('It’s biomedically effective') without active reassurance.", "method": "llm_batch", "batch_id": "batch_8_3600", "batch_size": 260, "batch_pos": 192}

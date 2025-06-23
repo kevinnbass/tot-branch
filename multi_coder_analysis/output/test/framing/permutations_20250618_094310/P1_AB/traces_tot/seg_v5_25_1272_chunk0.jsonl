@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_13712", "batch_size": 260, "batch_pos": 186}
+{"Q": 2, "answer": "no", "rationale": "The segment reports factual history ('research actually began', 'was modified') without high-potency verbs or metaphors.", "method": "llm_batch", "batch_id": "batch_2_10392", "batch_size": 260, "batch_pos": 156}
+{"Q": 3, "answer": "no", "rationale": "'plans to launch' is a plan, not realised impact. 'could respond' is hypothetical/capability.", "method": "llm_batch", "batch_id": "batch_3_1504", "batch_size": 260, "batch_pos": 84}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_17472", "batch_size": 260, "batch_pos": 72}
+{"Q": 5, "answer": "no", "rationale": "The segment reports history but contains no explicit calming language.", "method": "llm_batch", "batch_id": "batch_5_12592", "batch_size": 260, "batch_pos": 68}
+{"Q": 6, "answer": "no", "rationale": "No minimiser or scale contrast found.", "method": "llm_batch", "batch_id": "batch_6_16676", "batch_size": 251, "batch_pos": 5}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_6972", "batch_size": 260, "batch_pos": 250}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_14348", "batch_size": 260, "batch_pos": 88, "regex": {"rule": "CapabilityNoReassurance", "span": [15, 22], "captures": []}}

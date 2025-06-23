@@ -1,0 +1,999 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_2_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'detected' and 'leading to a farm being placed in quarantine', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'identified', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'advising', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes location and controls ('is within a restricted area', 'were already in place') without using a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('do not need to be worried') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses containment verbs ('disposed of', 'cleaned and cleared') which neutralise Q3, and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'wasn't surprised' and 'attributing it to', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'remind', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'noted', 'remain in place', and 'have been extended', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are required', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is implementing' and 'has been following', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'was discovered', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_19_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses capability ('can mutate quickly', 'can quickly develop') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_20_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'died', not a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_21_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes past condition and health status without using a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_22_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is unknown' and 'has been reported', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_23_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'applied the restriction', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_24_1680_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses import conditions ('can be imported', 'are accompanied', 'treated') without using a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'announced' and 'was found', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'killed', which neutralises Q3, and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses containment verbs ('killed', 'slaughtered') which neutralise Q3, and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has been dealing with', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_6_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'slaughtered', which neutralises Q3, even with the scale 'nearly 58 million birds'."
+  },
+  {
+    "segment_id": "seg_v5_7_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is the first' and 'has been found', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses containment verbs ('slaughtered', 'killed') which neutralise Q3, even with the scale '940,000 chickens' and '3.4 million birds'."
+  },
+  {
+    "segment_id": "seg_v5_10_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'lost', not a moderate verb from the list, even with the scale 'more than 5.5 million birds'."
+  },
+  {
+    "segment_id": "seg_v5_11_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the moderate verb 'hardest hit' and scale 'more than 16 million birds', but the containment verb 'slaughtered' in the same clause neutralises Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'have been... reported', 'began to migrate', 'can be found', and 'is spread', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes actions ('take steps', 'requiring', 'sanitize', etc.) without using a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains reassuring language ('isn't a threat') and containment verbs ('slaughtered', 'kill') which neutralise Q3."
+  },
+  {
+    "segment_id": "seg_v5_15_355_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are rare' and 'come only', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'confirmed', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'bring total... to 15', which is not a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has also tested positive', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the psychological verb 'concerned', which does not meet the criteria for Q3 without a vivid intensifier or concrete scale of realised harm."
+  },
+  {
+    "segment_id": "seg_v5_5_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is no known link', 'suggesting only', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'suffered', not a moderate verb from the list, even with the symptom 'conjunctivitis'."
+  },
+  {
+    "segment_id": "seg_v5_7_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is being treated', 'staying home', and 'added', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'works' and 'suffering', neither of which is a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'was described', 'experienced mild symptoms', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said', 'reported', and 'was hospitalized', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'began testing positive', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('continue to be safe to consume') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('risk to the general public remains low') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'confirmed', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'developed respiratory symptoms' and 'was not confirmed', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are watching closely', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_17_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a plan ('would begin testing') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_18_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('remain safe to consume') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_19_1851_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'came back negative' and 'is underway', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'reported' and 'sickening', neither of which is a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has begun scaling up', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes a future action ('will begin sharing data') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_4_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'trying to assess' and 'are largely in the dark', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses capability ('could give communities another way to spot') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_7_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'heard', 'would be useful', 'can help officials understand', and 'may be happening', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'developed a probe' and 'has now been found', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'sat unused', 'began lighting up', and 'were confirmed', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'went back', 'applied the probe', and 'found', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'hypothesized' and 'were the result of', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is currently no good way to determine' and 'can also end up there', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'reports', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'were released' and 'were published', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_15_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is scant but encouraging', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'began finding', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_17_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'got a huge boost' and 'gaining visibility and credibility', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_18_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'operates' and 'monitors', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_19_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'began releasing data', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_20_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is not doing' and 'shows only', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_21_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'tend to circulate', 'could be a reliable indicator', 'is going on', and 'return', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_22_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'launching', which describes a plan, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_23_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'serves up', 'providing needed context', and 'determine', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_24_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are at the 80th percentile or higher' (scale) and 'works... to investigate' (verb), but 'are' and 'works' are not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_25_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is only including data', 'were collecting samples', and 'starting', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_26_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'told', 'is in communication', and 'understand', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_28_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are continuing to review' and 'may improve', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_29_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'agreed', 'has to learn', and 'will soon be collecting', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_30_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are hungry for' and 'said', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_31_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are increases' (scale) and 'being driven by' (verb), but 'are' and 'being driven by' are not moderate verbs from the list."
+  },
+  {
+    "segment_id": "seg_v5_32_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'Being able to disambiguate', 'understand', and 'been getting a lot of interest in', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_33_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'Move over', which is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_34_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'isn't the only workaround' and 'are using to try to track', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_35_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'Frustrated', 'have begun sequencing', 'monitor', and 'look for', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_36_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'confirmed', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_37_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains reassuring language ('risk... remains low') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_38_582_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses capability ('are notorious', 'were to become endemic', 'would increase the potential risks') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is the first time', 'did not work', and 'has tested positive', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has detected', 'had no known contact', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is the first time', 'did not work', 'has tested positive', and 'is the 14th... reported', none of which is a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'had underlying health conditions' and 'was hospitalized', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said', 'was sent', and 'was confirmed', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'did not provide details', 'contracted', and 'experienced', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('remains low') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'will be particularly important', 'in light of the current lack', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is important to note', 'have been novel influenza A cases', and 'cannot be identified', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has not reported', 'have been some cases reported', and 'according to', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said', 'has been no sign', 'including no increase', and 'laboratory detection', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses capability ('could lead to', 'mixes and creates') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_14_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has the transmissibility', 'the severity', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1824_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains reassuring language ('infections are rare') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the containment verb 'euthanized', which neutralises Q3, even with the scale '250,000 birds'."
+  },
+  {
+    "segment_id": "seg_v5_2_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'came as concerns were raised' (psychological) and 'reported positive avian flu tests', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'were confirmed', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'come just weeks after' and 'announced that... has helped protect', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has yet to receive', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1948_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is urging... to call', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are warning people to 'be alert'' and 'continues to adapt and change', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has just crossed a new frontier' and 'reported', neither of which is a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is spreading' (not a moderate verb) and 'has killed' (plain outcome verb) with the scale 'thousands', but not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_4_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the psychological verb 'raises concerns', which does not meet the criteria for Q3."
+  },
+  {
+    "segment_id": "seg_v5_5_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'began' and 'observing' (not moderate verbs) with 'significant rise' (scale), but not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_6_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'identified' (not a moderate verb) with the scale 'approximately 17,000' and plain outcome 'dead', not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_7_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'used... to reveal' and 'has separated' (not moderate verbs) with 'unprecedented' (scale), but not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_8_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'found' and 'suggesting... has adapted', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is increased evidence', 'should be alert', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'adapts' and 'becomes', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'affects' and 'has shown a worrying ability', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'made global headlines' (not a moderate verb) with 'causing significant mortality' (scale), but not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_13_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'had reached' and 'cases reported', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'was detected', 'began showing symptoms', and 'reported', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_15_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'mutate and exchange', 'enabling them to adapt', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses capability ('is capable of adapting') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_17_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'stressed the importance' and 'understand the potential consequences', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_19_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential risk ('greater the risk of it acquiring mutations that could enable human transmission') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_20_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'likely facilitated the spread' and 'added', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_21_1669_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the vivid metaphor 'created a perfect storm' (Q2) and 'spread rapidly' (not moderate verb + scale), not a Q3 pattern."
+  },
+  {
+    "segment_id": "seg_v5_1_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'face some of the most intense exposures' and 'would lack resources', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'have tested positive' and 'spreading' (not a moderate verb), not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_3_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'experienced eye irritation', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses potential outcomes ('could mutate', 'could spark a pandemic') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_6_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'rarely do that', 'lack', 'said', 'are unlikely to go', and 'become very ill', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'believe the virus has spread to more people' ('spread' is not a moderate verb), not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_9_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'has been very passive', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_10_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'told reporters', 'had been tested', and 'are being 'actively monitored'', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes plans/actions ('announced', 'would pay', 'are being prepared', 'offers incentives') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_12_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said', 'compensates workers', and 'contributing to the monitoring', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_13_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('poses a low risk') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'tests positive', 'likely be instructed', 'stay home', 'said', and 'couldn't afford', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_16_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'starts to sound like a really bad deal', 'are supposed to feed', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_17_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'would provide', which describes a plan, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_18_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses hypothetical outcomes ('wouldn't necessarily cover', 'were needed') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_19_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said', 'appears to be', 'would have to stay home', 'might even lose their jobs', and 'tested positive', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_20_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the psychological verb 'fear', which does not meet the criteria for Q3."
+  },
+  {
+    "segment_id": "seg_v5_21_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'have a long history of blaming', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_22_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'were verbally attacked' and 'used... to push', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_23_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'have been told very little about this new disease spreading' ('spreading' is not a moderate verb), not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_24_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'needs to be a part' and 'said', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_25_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'should be conducted', 'are likely to trust', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_26_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'must make clear', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_27_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said', 'are being prepared', and 'have not decided', which describe plans, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_28_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'asked states... to share' and 'help them shield', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_29_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'have offered to distribute', which describes a plan, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_30_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'had requested', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_31_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'did not immediately receive requests', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_32_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'need to be practical', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_33_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'wouldn't be realistic to expect', 'wear', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_34_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'seem like a better option', 'prevent', 'could cause infection', and 'said', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_35_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'face potential infection', which discusses capability rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_37_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'said' and 'is most worried', which describes a psychological state, not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_38_601_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'are approximately 5 inches away' and 'said', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'have died', not a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_2_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'died', not a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_3_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'died', not a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'noted', 'were in close contact', and 'contracted', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_5_1983_chunk0",
+    "answer": "no",
+    "rationale": "This is a headline, not a sentence with a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_6_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'have said' and 'has been an increase in outbreaks' ('increase' is scale, but 'has been' is not a moderate verb), not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_7_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'was diagnosed', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'had underlying medical conditions', 'was successfully treated', and 'has since been discharged', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'was diagnosed' and 'marks the 14th person... to contract' ('marks' is not a moderate verb, '14th' is scale), not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_10_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'came after exposure', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1983_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'contributed', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_1_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'should spark expert investigation' (not moderate verb + scale) and 'not general panic' (negates vivid cue)."
+  },
+  {
+    "segment_id": "seg_v5_2_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'infecting' (plain outcome), 'exposed', 'may raise concerns' (psychological), and 'shouldn’t worry' (reassuring), none of which is a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_3_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('would not think a pandemic is likely') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_4_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('risk to humans is quite low... very, very low') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_7_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'infected' (plain outcome) with 'an increasing number' (scale), but not a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_8_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'tested positive', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_9_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'contracted it' (plain outcome) and 'jumping' (potentially vivid, but not moderate verb + scale), not a Q3 pattern."
+  },
+  {
+    "segment_id": "seg_v5_10_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment describes symptoms and recovery, and discusses capability ('can be deadly'), without using a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_12_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the plain outcome verb 'have died', not a moderate verb from the list paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_14_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'hasn’t been transmitted', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_15_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'don’t show mutations that would significantly increase that risk', which discusses potential, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_16_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is still very much a bird virus' and 'says', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_18_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is why', 'says', and 'is working closely... to track', none of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_19_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'has also stepped up surveillance efforts', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_20_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses a question about transmission ('is whether the virus is spreading') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_21_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'suggests that is the case' and 'says', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_22_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'became ill' and 'were introduced', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_23_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is how it is transmitted' and 'says', neither of which is a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_24_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment discusses future action ('will help trace') and duration ('will take time') rather than realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_25_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is advising', 'provide', and 'prevent', which describe actions/plans, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_26_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'should also avoid' and 'can transmit', which discuss capability/recommendation, not realised impact with a moderate verb and scale."
+  },
+  {
+    "segment_id": "seg_v5_27_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('risk is low') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_28_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('don’t panic') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_29_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment contains a reassuring statement ('don’t panic') and does not use a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_30_812_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'have tested positive', which is not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_001_1714_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses the moderate verb 'risen' but pairs it with the intensifier 'rapidly', not an explicit scale/impact metric like a number or percentage."
+  },
+  {
+    "segment_id": "seg_v5_002_1714_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is leaving... vulnerable', which is evaluative, not a moderate verb paired with explicit scale/impact."
+  },
+  {
+    "segment_id": "seg_v5_003_1714_chunk0",
+    "answer": "no",
+    "rationale": "The segment uses 'is leaving... without the data necessary', which is evaluative, not a moderate verb paired with explicit scale/impact."
+  }
+]
+```

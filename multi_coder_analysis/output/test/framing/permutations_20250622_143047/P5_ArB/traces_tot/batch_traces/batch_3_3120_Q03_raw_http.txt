@@ -1,0 +1,994 @@
+```json
+[
+  {
+    "segment_id": "seg_v5_6_948_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. 'totalling 650,000' is scale but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_948_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb, overriding Q3 even with scale. 'affected' is a plain outcome verb."
+  },
+  {
+    "segment_id": "seg_v5_1_1534_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_2_1534_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_3_1534_chunk0",
+    "answer": "no",
+    "rationale": "'detection' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1534_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_5_1534_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_1_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes working conditions, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_2_647_chunk0",
+    "answer": "no",
+    "rationale": "'to contend with' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_647_chunk0",
+    "answer": "no",
+    "rationale": "'infected and killed' are plain outcome verbs, not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_6_647_chunk0",
+    "answer": "no",
+    "rationale": "'found in' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_647_chunk0",
+    "answer": "no",
+    "rationale": "'prompted' is a moderate verb, but paired with a classification ('pandemic') not a scale metric of realised impact."
+  },
+  {
+    "segment_id": "seg_v5_9_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential, not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_11_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes mutation rate, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_13_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes mutation outcome, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_14_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes mutation outcome, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_15_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes a hypothetical scenario, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_16_647_chunk0",
+    "answer": "no",
+    "rationale": "'seen' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_17_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_19_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses vivid adjective ('severe, severe'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_20_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses vivid description, not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_22_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses comparative language, not moderate verb + specific scale."
+  },
+  {
+    "segment_id": "seg_v5_23_647_chunk0",
+    "answer": "no",
+    "rationale": "'hadn't known' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_24_647_chunk0",
+    "answer": "no",
+    "rationale": "'joined' is not a moderate verb. 'growing list' is vague, not specific scale."
+  },
+  {
+    "segment_id": "seg_v5_25_647_chunk0",
+    "answer": "no",
+    "rationale": "Evaluates severity, but does not use a moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_26_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses emotive language ('very sad thing'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_27_647_chunk0",
+    "answer": "no",
+    "rationale": "'infected' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_28_647_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_30_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a classification ('dead-end infections'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_31_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes how infection happens, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_32_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes virus adaptation, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_33_647_chunk0",
+    "answer": "no",
+    "rationale": "'infections' is not a verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_34_647_chunk0",
+    "answer": "no",
+    "rationale": "'developed' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_35_647_chunk0",
+    "answer": "no",
+    "rationale": "'reported getting splashed' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_36_647_chunk0",
+    "answer": "no",
+    "rationale": "'developed' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_37_647_chunk0",
+    "answer": "no",
+    "rationale": "'were successfully treated' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_38_647_chunk0",
+    "answer": "no",
+    "rationale": "'developed' and 'infected' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_39_647_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_40_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes experiment setup, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_41_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes experiment setup, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_42_647_chunk0",
+    "answer": "no",
+    "rationale": "'became ill' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_43_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes experiment setup, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_44_647_chunk0",
+    "answer": "no",
+    "rationale": "'became ill' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_45_647_chunk0",
+    "answer": "no",
+    "rationale": "'tested positive' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_46_647_chunk0",
+    "answer": "no",
+    "rationale": "'became ill' is not a moderate verb. Scale is present but not paired with a moderate verb. Contains Reassuring cue."
+  },
+  {
+    "segment_id": "seg_v5_47_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes a plan, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_48_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_49_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_50_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses vivid adverb ('very quickly'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_51_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses vivid adverbs ('very quickly', 'very easily'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_52_647_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_53_647_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_54_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses evaluative adjective ('sobering'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_55_647_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_56_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('possible that there will be'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_57_647_chunk0",
+    "answer": "no",
+    "rationale": "'wide spectrum' is vague, not specific scale."
+  },
+  {
+    "segment_id": "seg_v5_58_647_chunk0",
+    "answer": "no",
+    "rationale": "Lists outcomes with numbers, but verbs ('were', 'didn't have') are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_59_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential cause, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_60_647_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_61_647_chunk0",
+    "answer": "no",
+    "rationale": "'didn't get as sick' is not a moderate verb + specific scale."
+  },
+  {
+    "segment_id": "seg_v5_62_647_chunk0",
+    "answer": "no",
+    "rationale": "'hasn't tested' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_63_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes immune response, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_64_647_chunk0",
+    "answer": "no",
+    "rationale": "'difficult to predict' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_65_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes vaccine availability/preparation, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_66_647_chunk0",
+    "answer": "no",
+    "rationale": "'ordered' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_67_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_68_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes resource availability, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_69_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes conditions and concerns, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_70_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes development work, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_71_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential outcome, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_72_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential outcome, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_73_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential outcome, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_74_647_chunk0",
+    "answer": "no",
+    "rationale": "'infect' is a plain outcome verb. 'a number' is vague, not specific scale."
+  },
+  {
+    "segment_id": "seg_v5_75_647_chunk0",
+    "answer": "no",
+    "rationale": "'doesn't just locate' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_76_647_chunk0",
+    "answer": "no",
+    "rationale": "'infect' and 'found in' are plain outcome verbs. 'a number' is vague."
+  },
+  {
+    "segment_id": "seg_v5_77_647_chunk0",
+    "answer": "no",
+    "rationale": "'agrees' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_78_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses vivid metaphor ('top of the list in terms of bad guy viruses'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_79_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes symptoms, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_80_647_chunk0",
+    "answer": "no",
+    "rationale": "'hasn't made' is not a moderate verb. Describes potential, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_81_647_chunk0",
+    "answer": "no",
+    "rationale": "'hasn't made' and 'I've been a student' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_82_647_chunk0",
+    "answer": "no",
+    "rationale": "'been amazed' and 'looking for evidence' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_90_647_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_91_647_chunk0",
+    "answer": "no",
+    "rationale": "Verbs are not moderate verbs. Scale ('a few') is vague."
+  },
+  {
+    "segment_id": "seg_v5_92_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes conditions and feelings, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_93_647_chunk0",
+    "answer": "no",
+    "rationale": "'never spread' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_94_647_chunk0",
+    "answer": "no",
+    "rationale": "Uses a comparison, not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_95_647_chunk0",
+    "answer": "no",
+    "rationale": "Describes anticipation, not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_1_1065_chunk0",
+    "answer": "no",
+    "rationale": "'on the rise' is vivid (Q2). 'impacted' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes financial/trade metrics, which are Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_1065_chunk0",
+    "answer": "no",
+    "rationale": "'spreading across' is a moderate verb, but no explicit scale is present in this sentence."
+  },
+  {
+    "segment_id": "seg_v5_6_1065_chunk0",
+    "answer": "no",
+    "rationale": "'kept' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_8_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes a plan ('has to go'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_9_1065_chunk0",
+    "answer": "no",
+    "rationale": "'watching' and 'reported' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_11_1065_chunk0",
+    "answer": "no",
+    "rationale": "'de-populated' is a containment verb, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_12_1065_chunk0",
+    "answer": "no",
+    "rationale": "'stops' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_13_1065_chunk0",
+    "answer": "no",
+    "rationale": "'don’t want... spreading' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_14_1065_chunk0",
+    "answer": "no",
+    "rationale": "Identification statement."
+  },
+  {
+    "segment_id": "seg_v5_15_1065_chunk0",
+    "answer": "no",
+    "rationale": "'affected' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_17_1065_chunk0",
+    "answer": "no",
+    "rationale": "Factual statement about ranking, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_18_1065_chunk0",
+    "answer": "no",
+    "rationale": "'hits' is a moderate verb, but paired with a financial metric ('prices rise'), which is Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_20_1065_chunk0",
+    "answer": "no",
+    "rationale": "Factual statement about production volume, which is Neutral for Q3."
+  },
+  {
+    "segment_id": "seg_v5_22_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes anticipation and observation, not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_23_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes a hypothetical scenario, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_24_1065_chunk0",
+    "answer": "no",
+    "rationale": "Identification statement."
+  },
+  {
+    "segment_id": "seg_v5_26_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes equipment handling, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_27_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential outcomes, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_28_1065_chunk0",
+    "answer": "no",
+    "rationale": "'affected' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_29_1065_chunk0",
+    "answer": "no",
+    "rationale": "'hardest hit' is a moderate verb phrase, but no explicit scale is present in this sentence."
+  },
+  {
+    "segment_id": "seg_v5_30_1065_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is containment (Neutral). No moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_31_1065_chunk0",
+    "answer": "no",
+    "rationale": "Uses emotive language ('Scary thing') and describes potential, not realised impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_34_1065_chunk0",
+    "answer": "no",
+    "rationale": "'banned' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_35_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes recommendations, not virus impact with moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_36_1065_chunk0",
+    "answer": "no",
+    "rationale": "'is carried' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_37_1065_chunk0",
+    "answer": "no",
+    "rationale": "Describes expectation, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_1_1198_chunk0",
+    "answer": "no",
+    "rationale": "'preparing to destroy' is a plan/containment (Neutral). Scale is present but paired with a plan/containment verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1198_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. 'increase of deaths' is vague, not specific scale."
+  },
+  {
+    "segment_id": "seg_v5_3_1198_chunk0",
+    "answer": "no",
+    "rationale": "'revealed' and 'could be spared' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_4_1198_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_192_chunk0",
+    "answer": "no",
+    "rationale": "'decided against' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_192_chunk0",
+    "answer": "no",
+    "rationale": "'believed' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_192_chunk0",
+    "answer": "no",
+    "rationale": "'announced' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_192_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_192_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. Scale ('Most states') is vague."
+  },
+  {
+    "segment_id": "seg_v5_7_192_chunk0",
+    "answer": "no",
+    "rationale": "'opted against' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_1_1286_chunk0",
+    "answer": "no",
+    "rationale": "'died' and 'killed' are plain outcome verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1286_chunk0",
+    "answer": "no",
+    "rationale": "'found dead' and 'showed' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_3_1286_chunk0",
+    "answer": "no",
+    "rationale": "'found dead' and 'tested positive' are not moderate verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1286_chunk0",
+    "answer": "no",
+    "rationale": "'captured' and 'sent' are not moderate verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1286_chunk0",
+    "answer": "no",
+    "rationale": "'died' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_1286_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('expected to rise'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_7_1286_chunk0",
+    "answer": "no",
+    "rationale": "'hasn’t been detected' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_8_1286_chunk0",
+    "answer": "no",
+    "rationale": "'occurs' and 'has been found' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_9_1286_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level and reported cases, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_1_914_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level and identification, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_2_914_chunk0",
+    "answer": "no",
+    "rationale": "Uses vivid adverb ('rapidly'), not moderate verb + scale."
+  },
+  {
+    "segment_id": "seg_v5_3_914_chunk0",
+    "answer": "no",
+    "rationale": "'turned out to be mild' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_914_chunk0",
+    "answer": "no",
+    "rationale": "'registered' and 'has reported' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_6_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb, overriding Q3 even with scale."
+  },
+  {
+    "segment_id": "seg_v5_7_201_chunk0",
+    "answer": "no",
+    "rationale": "'fears' is a psychological verb. 'severely affected' is evaluative, not moderate verb + scale of realised harm."
+  },
+  {
+    "segment_id": "seg_v5_8_201_chunk0",
+    "answer": "no",
+    "rationale": "'seek out' and 'look at' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_9_201_chunk0",
+    "answer": "no",
+    "rationale": "'did not respond' and 'downplayed' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_11_201_chunk0",
+    "answer": "no",
+    "rationale": "'spreading' is a moderate verb, but no scale/impact is mentioned in this clause."
+  },
+  {
+    "segment_id": "seg_v5_12_201_chunk0",
+    "answer": "no",
+    "rationale": "'spread' is a plain verb."
+  },
+  {
+    "segment_id": "seg_v5_13_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_14_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is containment (Neutral). 'died' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_15_201_chunk0",
+    "answer": "no",
+    "rationale": "'culled' is a containment verb, overriding Q3 even with scale."
+  },
+  {
+    "segment_id": "seg_v5_16_201_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('likely to worsen', 'increases the risk'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_17_201_chunk0",
+    "answer": "no",
+    "rationale": "'dropped' and 'continued' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_18_201_chunk0",
+    "answer": "no",
+    "rationale": "'has called for' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_19_201_chunk0",
+    "answer": "no",
+    "rationale": "'have started' and 'are question marks' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_1_1683_chunk0",
+    "answer": "no",
+    "rationale": "'securing' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1683_chunk0",
+    "answer": "no",
+    "rationale": "'secures' and 'includes' are not moderate verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1683_chunk0",
+    "answer": "no",
+    "rationale": "'procured' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_4_1683_chunk0",
+    "answer": "no",
+    "rationale": "'intended for' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1683_chunk0",
+    "answer": "no",
+    "rationale": "'securing' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_1683_chunk0",
+    "answer": "no",
+    "rationale": "'monitoring' and 'ensuring access' are not moderate verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_8_1683_chunk0",
+    "answer": "yes",
+    "rationale": "The moderate verb 'has spread across' is paired with scale 'most of the U.S. states' and 'over 80 dairy farms'."
+  },
+  {
+    "segment_id": "seg_v5_9_1683_chunk0",
+    "answer": "no",
+    "rationale": "'infected' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_10_1683_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_12_1683_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level, not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1683_chunk0",
+    "answer": "no",
+    "rationale": "'secured' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_690_chunk0",
+    "answer": "no",
+    "rationale": "'had', 'developed', and 'has recovered' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_4_690_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_690_chunk0",
+    "answer": "no",
+    "rationale": "'developed' and 'had' are not moderate verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_690_chunk0",
+    "answer": "no",
+    "rationale": "'detected' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_8_690_chunk0",
+    "answer": "no",
+    "rationale": "'shown' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_11_690_chunk0",
+    "answer": "no",
+    "rationale": "'were inconclusive' and 'tested positive' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_12_690_chunk0",
+    "answer": "no",
+    "rationale": "'are pending' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_13_690_chunk0",
+    "answer": "no",
+    "rationale": "'reported infections' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_1_1041_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1041_chunk0",
+    "answer": "no",
+    "rationale": "'killed' and 'led to the slaughter' are plain outcome/containment verbs. 'slaughter' is containment, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_1779_chunk0",
+    "answer": "no",
+    "rationale": "'confirmed' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_2_1779_chunk0",
+    "answer": "no",
+    "rationale": "Definition statement."
+  },
+  {
+    "segment_id": "seg_v5_3_1779_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('can sometimes jump'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_4_1779_chunk0",
+    "answer": "no",
+    "rationale": "'emerged' and 'confirmed' are not moderate verbs. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_5_1779_chunk0",
+    "answer": "no",
+    "rationale": "No moderate verb or scale/impact information present."
+  },
+  {
+    "segment_id": "seg_v5_6_1779_chunk0",
+    "answer": "no",
+    "rationale": "Describes rarity (Reassuring cue), not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_8_1779_chunk0",
+    "answer": "no",
+    "rationale": "'infected' is a plain outcome verb. Scale ('all those') is vague."
+  },
+  {
+    "segment_id": "seg_v5_9_1779_chunk0",
+    "answer": "no",
+    "rationale": "'have been mild' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_10_1779_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level (Reassuring cue), not moderate verb + scale of impact."
+  },
+  {
+    "segment_id": "seg_v5_11_1779_chunk0",
+    "answer": "no",
+    "rationale": "Describes risk level (Reassuring cue) and potential, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_12_1779_chunk0",
+    "answer": "no",
+    "rationale": "Describes potential ('could also evolve', 'could trigger'), not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_13_1779_chunk0",
+    "answer": "no",
+    "rationale": "'investigating' and 'show signs' are not moderate verbs. Describes potential, not realised impact."
+  },
+  {
+    "segment_id": "seg_v5_14_1779_chunk0",
+    "answer": "no",
+    "rationale": "Provides recommendations."
+  },
+  {
+    "segment_id": "seg_v5_15_1779_chunk0",
+    "answer": "no",
+    "rationale": "Question."
+  },
+  {
+    "segment_id": "seg_v5_1_1174_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. 'swept through' is a moderate verb, but paired with vague scale ('some wild pelicans')."
+  },
+  {
+    "segment_id": "seg_v5_2_1174_chunk0",
+    "answer": "no",
+    "rationale": "'killed' is a plain outcome verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_3_1174_chunk0",
+    "answer": "no",
+    "rationale": "'carried' and 'transmit' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_4_1174_chunk0",
+    "answer": "no",
+    "rationale": "'has led to' is not a moderate verb. 'slaughtered' is containment, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_1_30_chunk0",
+    "answer": "no",
+    "rationale": "'slaughtered' is a containment verb, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_2_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. 'spreading quickly' uses a vivid adverb (Q2)."
+  },
+  {
+    "segment_id": "seg_v5_3_30_chunk0",
+    "answer": "no",
+    "rationale": "'put... on alert' and 'led to' are not moderate verbs. 'culling' is containment, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_4_30_chunk0",
+    "answer": "no",
+    "rationale": "'attracting' and 'transmitted' are not moderate verbs."
+  },
+  {
+    "segment_id": "seg_v5_5_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb. Scale is present but not paired with a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_6_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_7_30_chunk0",
+    "answer": "no",
+    "rationale": "'slaughtered' is a containment verb, overriding Q3."
+  },
+  {
+    "segment_id": "seg_v5_8_30_chunk0",
+    "answer": "no",
+    "rationale": "'reported' is not a moderate verb."
+  },
+  {
+    "segment_id": "seg_v5_9_30_chunk0",
+    "answer": "no",
+    "rationale": "Identification statement."
+  }
+]
+```

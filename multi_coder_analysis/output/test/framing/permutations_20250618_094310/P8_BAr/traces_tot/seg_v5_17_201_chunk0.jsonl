@@ -1,0 +1,10 @@
+{"Q": 1, "answer": "no", "rationale": "'rare' modifies 'cases'.", "method": "llm_batch", "batch_id": "batch_1_7732", "batch_size": 260, "batch_pos": 123}
+{"Q": 2, "answer": "no", "rationale": "The segment uses neutral language without high-potency verbs or potent metaphors.", "method": "llm_batch", "batch_id": "batch_2_3596", "batch_size": 260, "batch_pos": 120}
+{"Q": 3, "answer": "no", "rationale": "Uses 'dropped' and 'continued' (plain verbs) with no scale mentioned.", "method": "llm_batch", "batch_id": "batch_3_2272", "batch_size": 260, "batch_pos": 111}
+{"hop_idx": 4, "answer": "uncertain", "rationale": "Missing response from batch", "method": "fallback", "batch_id": "batch_4_7536", "batch_size": 260, "batch_pos": 111}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch_retry", "retry": 1, "batch_id": "batch_4_7536_r1", "batch_size": 260, "batch_pos": 111}
+{"Q": 5, "answer": "no", "rationale": "The segment reports outbreaks continued and experts suspect endemic variants, which is not a calming cue.", "method": "llm_batch", "batch_id": "batch_5_4312", "batch_size": 260, "batch_pos": 109}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser used in conjunction with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_7692", "batch_size": 260, "batch_pos": 103}
+{"Q": 7, "answer": "no", "rationale": "No bare negation present.", "method": "llm_batch", "batch_id": "batch_7_12868", "batch_size": 260, "batch_pos": 103}
+{"Q": 8, "answer": "no", "rationale": "Reports change in pattern and expert suspicion/assessment, not capability or preparedness.", "method": "llm_batch", "batch_id": "batch_8_12092", "batch_size": 260, "batch_pos": 101}
+{"Q": 9, "answer": "yes", "rationale": "The segment reports a trend in cases over time using a standard verb: 'cases dropped'.", "method": "llm_batch", "batch_id": "batch_9_16296", "batch_size": 260, "batch_pos": 85}

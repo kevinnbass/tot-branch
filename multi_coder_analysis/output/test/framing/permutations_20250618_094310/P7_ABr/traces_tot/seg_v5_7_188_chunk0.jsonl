@@ -1,0 +1,7 @@
+{"Q": 1, "answer": "no", "rationale": "The segment contains 'risk... is low', triggering Q5 (Reassuring), not Q1 (Alarmist).", "method": "llm_batch", "batch_id": "batch_1_16540", "batch_size": 260, "batch_pos": 257}
+{"Q": 2, "answer": "no", "rationale": "The segment contains explicit low-risk language (Q5).", "method": "llm_batch", "batch_id": "batch_2_6580", "batch_size": 260, "batch_pos": 241}
+{"Q": 3, "answer": "no", "rationale": "Reassuring statement ('risk... is low'), stated neutrally, does not trigger Q3.", "method": "llm_batch", "batch_id": "batch_3_12716", "batch_size": 260, "batch_pos": 204}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_16612", "batch_size": 260, "batch_pos": 199}
+{"Q": 5, "answer": "no", "rationale": "The phrase 'risk to the public... is low' is a bare low-risk statement, not intensified, and the rest is advice/warning.", "method": "llm_batch", "batch_id": "batch_5_17836", "batch_size": 260, "batch_pos": 197}
+{"Q": 6, "answer": "no", "rationale": "Contains 'low' but stated neutrally, not framed with minimiser + scale contrast.", "method": "llm_batch", "batch_id": "batch_6_18368", "batch_size": 260, "batch_pos": 176}
+{"Q": 7, "answer": "yes", "rationale": "'risk to the public... is low' is a bare negation about risk.", "method": "llm_batch", "batch_id": "batch_7_3220", "batch_size": 260, "batch_pos": 162}

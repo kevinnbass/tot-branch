@@ -1,0 +1,67 @@
+{
+  "batch_id": "batch_10_5784",
+  "hop_idx": 10,
+  "segment_count": 4,
+  "matches": [
+    {
+      "statement_id": "seg_v5_101_805_chunk0",
+      "regex": {
+        "rule": "ReliefSpeculation",
+        "span": [
+          9,
+          14
+        ],
+        "captures": [
+          "could"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_30_1506_chunk0",
+      "regex": {
+        "rule": "ReliefSpeculation",
+        "span": [
+          53,
+          58
+        ],
+        "captures": [
+          "might"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_31_1506_chunk0",
+      "regex": {
+        "rule": "ReliefSpeculation",
+        "span": [
+          52,
+          57
+        ],
+        "captures": [
+          "could"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_16_269_chunk0",
+      "regex": {
+        "rule": "ReliefSpeculation",
+        "span": [
+          58,
+          63
+        ],
+        "captures": [
+          "could"
+        ]
+      },
+      "frame": "Neutral",
+      "answer": "yes"
+    }
+  ]
+}

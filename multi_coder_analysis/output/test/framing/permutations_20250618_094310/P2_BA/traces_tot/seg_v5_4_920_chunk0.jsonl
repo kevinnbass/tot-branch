@@ -1,0 +1,8 @@
+{"Q": 1, "answer": "no", "rationale": "The segment does not contain an intensifier or comparative adjective directly modifying a risk-adjective.", "method": "llm_batch", "batch_id": "batch_1_17452", "batch_size": 260, "batch_pos": 47}
+{"Q": 2, "answer": "no", "rationale": "The segment reports the number of birds culled using neutral language.", "method": "llm_batch", "batch_id": "batch_2_7488", "batch_size": 260, "batch_pos": 33}
+{"Q": 3, "answer": "no", "rationale": "'culled' is a containment verb, which neutralizes Q3 even with large numbers.", "method": "llm_batch", "batch_id": "batch_3_17548", "batch_size": 260, "batch_pos": 6}
+{"Q": 4, "answer": "no", "rationale": "The segment does not contain a loaded rhetorical question.", "method": "llm_batch", "batch_id": "batch_4_13320", "batch_size": 260, "batch_pos": 2}
+{"Q": 5, "answer": "no", "rationale": "The segment reports culling numbers and reason ('try to contain'), not explicitly framed as calming.", "method": "llm_batch", "batch_id": "batch_5_12100", "batch_size": 260, "batch_pos": 258}
+{"Q": 6, "answer": "no", "rationale": "The segment does not contain a minimiser combined with a scale contrast.", "method": "llm_batch", "batch_id": "batch_6_18356", "batch_size": 260, "batch_pos": 236}
+{"Q": 7, "answer": "no", "rationale": "The segment does not contain a bare negation.", "method": "llm_batch", "batch_id": "batch_7_14600", "batch_size": 260, "batch_pos": 235}
+{"Q": 8, "answer": "yes", "rationale": "regex:CapabilityNoReassurance matched", "method": "regex", "batch_id": "batch_8_17636", "batch_size": 260, "batch_pos": 197, "regex": {"rule": "CapabilityNoReassurance", "span": [132, 139], "captures": []}}
