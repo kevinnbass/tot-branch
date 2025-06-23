@@ -1,6 +1,7 @@
 ### QUICK DECISION CHECK
 • Sentence is a QUESTION starting with **SHOULD / CAN / COULD / WILL / WHAT IF / HOW LONG** **AND** includes **WORRIED / CONCERNED / AFRAID / IGNORE / STAND BY**?  
 → If yes → `"yes"`; else → `"no"`.
+• Regex now pre-catches **"Is it safe to …?"** and **"How many more … have to die?"** rhetorical questions; you can ignore those.
 
 === FEW-SHOT EXAMPLES ===
 # YES example

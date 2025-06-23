@@ -50,7 +50,7 @@ Does the author or a quoted source provide an explicit calming cue (e.g., 'no ca
 | **⚠ The clause must contain the literal word "safe".** <br>Expressions that merely say something "should not pose a risk / danger" **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
 | **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
 | **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
-| **Transient‑Issue Minimiser**           | "short‑term blip," "temporary setback," "expected to resolve quickly" | ✓ |
+| **Transient-Issue Minimiser** *(now caught by regex)* | — | — |
 | **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
 |                            | "**welcome news**, **encouraging news**" | ✓ |
 | **Bare Positive Facts** | "no cases reported," "tests were negative," "no problems detected," **"poses no risk"**, **"not expected to…"** | → Neutral — *do not* mark Reassuring unless the same sentence also contains an explicit calming keyword from the list above (`safe`, `alarm`, `under control`, `rest easy`, `excellent news`).  🚦Rule C reminder: capability or preparedness phrases alone never count as calming.  |
