@@ -83,9 +83,8 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
     def run(self, ctxs: List[HopContext]) -> List[HopContext]:  # type: ignore[override]
         # --- Progress log (aggregated) ----------------------------------
         try:
-            # Unique unresolved segments
-            _active_ids = {c.statement_id for c in ctxs if not c.is_concluded}
-            _active = len(_active_ids)
+            # Count *all* unresolved permutation instances, not just unique SIDs
+            _active = sum(1 for c in ctxs if not c.is_concluded)
 
             # This is filled later during batch processing – initialise empty set
             regex_yes_ids: set[str] = set()
@@ -133,6 +132,9 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
 
         llm_yes_ids: set[str] = set()
         banner_printed = False
+
+        # Collect all LLM tasks across *all* permutations
+        all_tasks: list[tuple[BatchHopContext, dict[str, HopContext]]] = []
 
         for perm_id, segs in groups.items():
             num_batches = ceil(len(segs) / self._batch_size)
@@ -184,8 +186,7 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
                 batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=self.hop_idx, segments=unresolved)
 
                 sid_to_ctx = {c.statement_id: c for c in unresolved}
-                tasks: list[tuple[BatchHopContext, dict[str, HopContext]]] = []
-                tasks.append((batch_ctx, sid_to_ctx))
+                all_tasks.append((batch_ctx, sid_to_ctx))
 
         # Re-attach results in original ordering
         sid_to_processed = {c.statement_id: c for c in results}
@@ -220,14 +221,14 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
                 pass
 
         # --- Execute all queued LLM batches in parallel ------------------
-        if tasks:
+        if all_tasks:
             from concurrent.futures import ThreadPoolExecutor, as_completed
 
             def _worker(bctx: BatchHopContext):
                 return _legacy._call_llm_batch(bctx, self._provider, self._model, self._temperature)
 
             with ThreadPoolExecutor(max_workers=self._concurrency) as exe:
-                future_map = {exe.submit(_worker, ctx): (ctx, sid_map) for ctx, sid_map in tasks}
+                future_map = {exe.submit(_worker, ctx): (ctx, sid_map) for ctx, sid_map in all_tasks}
 
                 for fut in as_completed(future_map):
                     batch_ctx, sid_to_ctx = future_map[fut]
