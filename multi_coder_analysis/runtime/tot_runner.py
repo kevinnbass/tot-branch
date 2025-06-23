@@ -126,6 +126,8 @@ def execute(cfg: RunConfig) -> Path:
                     temperature=cfg.sc_temperature,
                     top_k=cfg.sc_top_k,
                     top_p=cfg.sc_top_p,
+                    ranked_list=cfg.ranked_list,
+                    max_candidates=cfg.max_candidates,
                 )
 
                 frame, conf = aggregate(pairs, rule=cfg.sc_rule)
@@ -179,6 +181,8 @@ def execute(cfg: RunConfig) -> Path:
                 run_id=run_id,
                 archive_dir=legacy.get("archive_dir", Path("output/archive")) if legacy.get("archive_enable", True) else Path(),
                 tag=cfg.archive_tag or "main",
+                ranked_list=cfg.ranked_list,
+                max_candidates=cfg.max_candidates,
             )
         else:
             pipeline = build_tot_pipeline(
@@ -186,6 +190,8 @@ def execute(cfg: RunConfig) -> Path:
                 cfg.model,
                 top_k=(None if cfg.sc_top_k == 0 else cfg.sc_top_k),
                 top_p=cfg.sc_top_p,
+                ranked_list=cfg.ranked_list,
+                max_candidates=cfg.max_candidates,
             )
             hop_var = {}
 

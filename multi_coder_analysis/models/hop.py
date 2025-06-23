@@ -31,6 +31,7 @@ class HopContext:
     is_concluded: bool = False
     final_frame: Optional[str] = None           # The definitive frame once concluded (e.g., Alarmist, Neutral)
     final_justification: Optional[str] = None   # The rationale for the final decision
+    ranking: Optional[list[str]] = None         # ordered list when ranked_list=True
 
     # Track consecutive "uncertain" responses to support early termination.
     uncertain_count: int = 0

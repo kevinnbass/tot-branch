@@ -59,6 +59,8 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
         run_id: str,
         archive_dir: Path,
         tag: str,
+        ranked_list: bool = False,
+        max_candidates: int = 5,
     ):
         self.hop_idx = hop_idx  # store for progress logging
         self._inner = _HopStep(
@@ -68,6 +70,8 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
             temperature=temperature,
             top_k=top_k,
             top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
         )
         self._provider = provider
         self._model = model
@@ -275,6 +279,8 @@ def build_consensus_pipeline(
     run_id: str,
     archive_dir: Path,
     tag: str,
+    ranked_list: bool = False,
+    max_candidates: int = 5,
 ) -> Tuple[Pipeline[List[HopContext]], HopVariability]:
     """Return a pipeline operating on *lists* of HopContext objects."""
 
@@ -295,6 +301,8 @@ def build_consensus_pipeline(
                 run_id=run_id,
                 archive_dir=archive_dir,
                 tag=tag,
+                ranked_list=ranked_list,
+                max_candidates=max_candidates,
             )
         )
         steps.append(ConsensusStep(h, var, tie_collector=tie_collector))

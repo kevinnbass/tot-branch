@@ -34,6 +34,8 @@ class _HopStep(Step[HopContext]):
         temperature: float,
         top_k: int | None = None,
         top_p: float | None = None,
+        ranked_list: bool = False,
+        max_candidates: int = 5,
     ):
         self.hop_idx = hop_idx
         self._provider = provider
@@ -41,6 +43,8 @@ class _HopStep(Step[HopContext]):
         self._temperature = temperature
         self._top_k = top_k
         self._top_p = top_p
+        self._ranked_list = ranked_list
+        self._max_candidates = max(1, max_candidates)
 
     # ------------------------------------------------------------------
     # The heavy lifting is delegated to code already battle-tested in the
@@ -67,9 +71,28 @@ class _HopStep(Step[HopContext]):
             temperature=self._temperature,
             top_k=self._top_k,
             top_p=self._top_p,
+            ranked=self._ranked_list,
+            max_candidates=self._max_candidates,
         )  # type: ignore[arg-type]
+
         ctx.raw_llm_responses.append(llm_resp)
-        if llm_resp.get("answer") == "yes":
+
+        # --- ranked-list aware extraction ---
+        raw_ans = llm_resp.get("answer", "")
+        try:
+            from multi_coder_analysis.run_multi_coder_tot import _extract_frame_and_ranking  # lazy import to avoid cycles
+            top, ranking = _extract_frame_and_ranking(raw_ans)
+        except Exception:
+            top, ranking = None, None
+
+        if ranking:
+            ranking = ranking[: self._max_candidates]
+            ctx.ranking = ranking
+            top_choice = ranking[0]
+        else:
+            top_choice = raw_ans
+
+        if str(top_choice).lower().strip() == "yes":
             ctx.final_frame = _legacy.Q_TO_FRAME[self.hop_idx]
             ctx.final_justification = llm_resp.get("rationale", "").strip()
             ctx.is_concluded = True
@@ -83,6 +106,8 @@ def build_tot_pipeline(
     temperature: float = 0.0,
     top_k: int | None = None,
     top_p: float | None = None,
+    ranked_list: bool = False,
+    max_candidates: int = 5,
 ) -> Pipeline[HopContext]:
     """Return a :class:`Pipeline` implementing the 12-hop deterministic chain."""
 
@@ -94,6 +119,8 @@ def build_tot_pipeline(
             temperature=temperature,
             top_k=top_k,
             top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
         )
         for h in range(1, 13)
     ]

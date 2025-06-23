@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
-from pydantic import BaseModel, Field, validator
+from pydantic import BaseModel, Field, validator, root_validator
 
 __all__ = ["RunConfig"]
 
@@ -49,8 +49,18 @@ class RunConfig(BaseModel):
     sc_votes: int = Field(1, ge=1, le=200, description="Number of sampled paths for self-consistency")
     sc_rule: str = Field(
         "majority",
-        pattern="^(majority|ranked|ranked-raw)$",
-        description="Voting aggregation rule for self-consistency",
+        pattern=(
+            r"^(majority|"                     # legacy
+            r"ranked|ranked-raw|"              # legacy weighted
+            r"irv|borda|mrr)$"                 # new ranked-list rules
+        ),
+        description=(
+            "Aggregation rule:\n"
+            "  • majority        – single-answer hard vote\n"
+            "  • ranked          – single-answer length-norm\n"
+            "  • ranked-raw      – single-answer raw score\n"
+            "  • irv|borda|mrr   – ranked-list self-consistency",
+        ),
     )
     sc_top_k: int = Field(40, ge=0, description="top-k sampling cutoff (0 disables)")
     sc_top_p: float = Field(0.95, ge=0.0, le=1.0, description="nucleus sampling p-value")
@@ -58,6 +68,35 @@ class RunConfig(BaseModel):
 
     # housekeeping – whether tot_runner should copy & concatenate the prompts
     copy_prompts: bool = Field(True, description="Copy prompt folder into output_dir and concatenate prompts.txt")
+
+    # ───────── Ranked-list decoding ─────────
+    ranked_list: bool = Field(
+        False,
+        description=(
+            "If true, prompts instruct model to emit an ordered list "
+            "of candidate answers instead of a single value.",
+        ),
+    )
+    max_candidates: int = Field(
+        5,
+        ge=1,
+        le=10,
+        description="Max candidates to keep from the ranked list. "
+                    "Ignored when ranked_list == False.",
+    )
+
+    # ─────────────────────────────────────────────────────────────
+    # Root-level validator – field order requires this approach.
+    # ─────────────────────────────────────────────────────────────
+    @root_validator(skip_on_failure=True)
+    def _validate_ranked_combo(cls, values):  # noqa: D401
+        ranked = values.get("ranked_list", False)
+        rule = values.get("sc_rule")
+        if ranked and rule in {"majority", "ranked", "ranked-raw"}:
+            raise ValueError(
+                "sc_rule must be one of {'irv', 'borda', 'mrr'} when ranked_list=True"
+            )
+        return values
 
     @validator("output_dir", pre=True)
     def _expand_output_dir(cls, v):  # noqa: D401

@@ -46,7 +46,11 @@ def run(
         help="normal | self-consistency",
     ),
     votes: int = typer.Option(1, "--votes", "-n", help="# paths/votes for self-consistency"),
-    sc_rule: str = typer.Option("majority", "--sc-rule", help="majority | ranked | ranked-raw"),
+    sc_rule: str = typer.Option(
+        "majority",
+        "--sc-rule",
+        help="majority | ranked | ranked-raw | irv | borda | mrr",
+    ),
     sc_temperature: float = typer.Option(0.7, "--sc-temperature", help="Sampling temperature"),
     sc_top_k: int = typer.Option(40, "--sc-top-k", help="top-k sampling cutoff (0 disables)"),
     sc_top_p: float = typer.Option(0.95, "--sc-top-p", help="nucleus sampling p value"),
@@ -55,6 +59,17 @@ def run(
         "--print-cost",
         help="Print total USD cost when the run finishes",
         rich_help_panel="Cost",
+    ),
+    # ---- ranked-list flags ----
+    ranked_list: bool = typer.Option(
+        False,
+        "--ranked-list",
+        help="Prompt LLM to output an ordered list of answers and aggregate with irv|borda|mrr rules.",
+    ),
+    max_candidates: int = typer.Option(
+        5,
+        "--max-candidates",
+        help="How many candidates to retain from each ranked list (1 keeps only the top choice).",
     ),
 ):
     """Run the deterministic Tree-of-Thought coder."""
@@ -76,6 +91,8 @@ def run(
         sc_temperature=sc_temperature,
         sc_top_k=sc_top_k,
         sc_top_p=sc_top_p,
+        ranked_list=ranked_list,
+        max_candidates=max_candidates,
     )
     out_path = execute(cfg)
     if print_cost:

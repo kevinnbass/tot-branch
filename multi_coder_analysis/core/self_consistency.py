@@ -41,7 +41,9 @@ def decode_paths(
     temperature: float,
     top_k: int,
     top_p: float,
-) -> List[Tuple[str, float]]:
+    ranked_list: bool = False,
+    max_candidates: int = 5,
+) -> List[Tuple[list[str] | str, float]]:
     """Run the ToT pipeline *votes* times with stochastic sampling.
 
     Parameters
@@ -59,13 +61,18 @@ def decode_paths(
         internal ToT pipeline currently passes only *temperature*.  Providers
         expose *top_k*/*top_p* anyway, so we call them directly when ToT falls
         through to the LLM.
+    ranked_list
+        Whether to return a ranked list of candidates.
+    max_candidates
+        Maximum number of candidates to return in ranked list.
 
     Returns
     -------
     list of tuples
         Each tuple is (answer, score) where *answer* is the final frame label
-        and *score* is a rough heuristic of likelihood (negative length-
-        normalised token count when probability not available).
+        or a list of labels if multiple answers are possible, and *score* is a
+        rough heuristic of likelihood (negative length-normalised token count
+        when probability not available).
     """
 
     # Build a *fresh* pipeline so state does not leak across samples.
@@ -75,9 +82,11 @@ def decode_paths(
         temperature=temperature,
         top_k=(None if top_k == 0 else top_k),
         top_p=top_p,
+        ranked_list=ranked_list,
+        max_candidates=max_candidates,
     )
 
-    samples: List[Tuple[str, float]] = []
+    samples: List[Tuple[list[str] | str, float]] = []
     for _ in range(votes):
         # Create a shallow copy of the base context
         ctx = HopContext(
@@ -87,12 +96,15 @@ def decode_paths(
         )
         # Run ToT
         pipeline.run(ctx)
-        ans = ctx.final_frame or "∅"
+        if ctx.ranking:
+            ans_payload = ctx.ranking[: max_candidates]
+        else:
+            ans_payload = ctx.final_frame or "∅"
 
         # Use token count as crude negative log-prob if real logprobs missing
         usage = provider.get_last_usage() or {}
         score = -float(usage.get("total_tokens", 0))
-        samples.append((ans, score))
+        samples.append((ans_payload, score))
 
     return samples
 
@@ -101,8 +113,17 @@ def decode_paths(
 # Voting aggregation
 # ---------------------------------------------------------------------------
 
-def _majority(pairs: List[Tuple[str, float]]) -> Tuple[str, float]:
-    counts = Counter(a for a, _ in pairs)
+def _majority(pairs):  # type: ignore[override]
+    """Hard vote.
+
+    If an element is a ranked list, use its first candidate. Otherwise treat it
+    as a plain string label.
+    """
+
+    def _top(label):
+        return label[0] if isinstance(label, list) else label
+
+    counts = Counter(_top(a) for a, _ in pairs)
     ans, freq = counts.most_common(1)[0]
     return ans, freq / len(pairs)
 
@@ -124,9 +145,57 @@ def _ranked(pairs: List[Tuple[str, float]], normalise: bool) -> Tuple[str, float
     return ans, buckets[ans]
 
 
-def aggregate(pairs: List[Tuple[str, float]], rule: str = "majority") -> Tuple[str, float]:
+def _irv(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
+    from collections import Counter
+    rankings = [(r if isinstance(r, list) else [r]) for r, _ in pairs]
+    if not rankings:
+        return _majority([(str(a), s) for a, s in pairs])
+    while True:
+        first = Counter(r[0] for r in rankings if r)
+        winner, votes = first.most_common(1)[0]
+        if votes > len(rankings) / 2:
+            return winner, votes / len(rankings)
+        loser = first.most_common()[-1][0]
+        rankings = [[c for c in r if c != loser] for r in rankings]
+
+
+def _borda(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
+    from collections import defaultdict
+    scores = defaultdict(int)
+    for ranking, _ in pairs:
+        if not isinstance(ranking, list):
+            continue
+        for idx, cand in enumerate(ranking):
+            scores[cand] += len(ranking) - idx
+    if not scores:
+        return _majority([(str(a), s) for a, s in pairs])
+    winner = max(scores, key=scores.get)
+    return winner, scores[winner]
+
+
+def _mrr(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
+    from collections import defaultdict
+    mrr_scores = defaultdict(float)
+    for ranking, _ in pairs:
+        if not isinstance(ranking, list):
+            continue
+        for idx, cand in enumerate(ranking, 1):
+            mrr_scores[cand] += 1 / idx
+    if not mrr_scores:
+        return _majority([(str(a), s) for a, s in pairs])
+    winner = max(mrr_scores, key=mrr_scores.get)
+    return winner, mrr_scores[winner] / len(pairs)
+
+
+def aggregate(pairs, rule: str = "majority") -> tuple[str, float]:
     """Collapse *pairs* into (answer, confidence) according to *rule*."""
     rule = rule.lower()
+    if rule == "irv":
+        return _irv(pairs)
+    if rule == "borda":
+        return _borda(pairs)
+    if rule == "mrr":
+        return _mrr(pairs)
     if rule == "majority":
         return _majority(pairs)
     if rule == "ranked":

@@ -62,4 +62,8 @@ __all__ = [
     "Step",
     "FunctionStep",
     "Pipeline",
-] 
+    "build_tot_pipeline",
+]
+
+# Re-export for higher layers needing direct access without circular imports
+from .tot import build_tot_pipeline  # noqa: F401 

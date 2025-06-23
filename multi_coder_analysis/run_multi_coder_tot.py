@@ -133,7 +133,17 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
         logging.error(f"Error assembling prompt for Q{ctx.q_idx}: {e}")
         raise
 
-def _call_llm_single_hop(ctx: HopContext, provider, model: str, temperature: float = TEMPERATURE, *, top_k: int | None = None, top_p: float | None = None) -> Dict[str, str]:
+def _call_llm_single_hop(
+    ctx: HopContext,
+    provider,
+    model: str,
+    temperature: float = TEMPERATURE,
+    *,
+    top_k: int | None = None,
+    top_p: float | None = None,
+    ranked: bool = False,
+    max_candidates: int = 5,
+) -> Dict[str, str]:
     """Makes a single, retrying API call to the LLM for one hop."""
     sys_prompt, user_prompt = _assemble_prompt(ctx)
     
@@ -247,7 +257,19 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
         
         ctx.raw_llm_responses.append(llm_response)
         
-        choice = llm_response.get("answer", "uncertain").lower().strip()
+        # --------------------------------------------------------------
+        # NEW: Support ranked-list output
+        # --------------------------------------------------------------
+        raw_answer_text = llm_response.get("answer", "") or ""
+        choice, ranking = _extract_frame_and_ranking(raw_answer_text)
+
+        if ranking:
+            _MAX_KEEP = 5  # fallback when pipeline config not available in this scope
+            ctx.ranking = ranking[:_MAX_KEEP]
+            # fall back to top choice for downstream yes/uncertain logic
+            choice = ranking[0] if ranking else choice
+
+        choice = (choice or "uncertain").lower().strip()
         rationale = llm_response.get("rationale", "No rationale provided.")
         
         # Update logs and traces
@@ -1998,3 +2020,58 @@ def _log_hop(
         print(f"*** {msg_plain} ***", flush=True)
     except Exception:
         pass
+
+# ---------------------------------------------------------------------------
+# Parsing helpers
+# ---------------------------------------------------------------------------
+_RANK_RE = re.compile(r"ranking\s*[:\-]\s*(.*)", re.I | re.S)
+
+def _extract_frame_and_ranking(text: str) -> tuple[str | None, list[str] | None]:
+    """Extract (top_frame, ranking_list) from LLM *text*.
+
+    The helper supports both legacy single-answer responses and the new
+    ranked-list format of the form::
+
+        Ranking: A > B > C
+
+    Returns
+    -------
+    tuple
+        (top_frame, ranking_list) where *ranking_list* may be ``None`` if no
+        ranking pattern is detected.
+    """
+    if not text:
+        return None, None
+
+    m = _RANK_RE.search(text)
+    if not m:
+        # fallback: legacy answer extraction (e.g., "answer: <frame>")
+        m_ans = re.search(r"answer\s*[:\-]\s*([\w\s]+)", text, re.I)
+        if m_ans:
+            return m_ans.group(1).strip(), None
+        return None, None
+
+    seq = [s.strip(" .") for s in re.split(r"[>]", m.group(1))]
+    seq = [s for s in seq if s]
+    top = seq[0] if seq else None
+    return top, seq or None
+
+# ---------------------------------------------
+# Ranked-list parsing helpers (early definition)
+# ---------------------------------------------
+
+_RANK_RE = re.compile(r"ranking\s*[:\-]\s*(.*)", re.I | re.S)
+
+
+def _extract_frame_and_ranking(text: str) -> tuple[str | None, list[str] | None]:  # noqa: D401
+    """Return (top_frame, ranking list) parsed from *text*."""
+    if not text:
+        return None, None
+
+    m = _RANK_RE.search(text)
+    if not m:
+        m_ans = re.search(r"answer\s*[:\-]\s*([\w\s]+)", text, re.I)
+        return (m_ans.group(1).strip(), None) if m_ans else (None, None)
+
+    seq = [s.strip(" .") for s in re.split(r"[>]", m.group(1)) if s.strip()]
+    return (seq[0] if seq else None), (seq or None)
