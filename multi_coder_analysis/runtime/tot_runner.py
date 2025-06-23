@@ -288,12 +288,33 @@ def execute(cfg: RunConfig) -> Path:
                             w.writerow([sid, hop, json.dumps(dist)])
 
         logging.info(
-            "LLM stats – calls=%s prompt=%s response=%s total=%s",
+            "LLM stats – calls=%s prompt=%s response=%s total=%s  cost=$%.4f",
             token_accumulator.get("llm_calls", 0),
             token_accumulator.get("prompt_tokens", 0),
             token_accumulator.get("response_tokens", 0),
             token_accumulator.get("total_tokens", 0),
+            token_accumulator.get("cost_usd", 0.0),
         )
+
+        # ───────── Ledger append ─────────
+        try:
+            ledger_dir = cfg.output_dir / "cost_ledger"
+            ledger_dir.mkdir(exist_ok=True)
+            ledger_file = ledger_dir / "run_cost_breakdown.jsonl"
+
+            import time, json as _json
+            with ledger_file.open("a", encoding="utf-8") as fh:
+                fh.write(_json.dumps({
+                    "run_id": run_id,
+                    "ts": time.time(),
+                    "model": cfg.model,
+                    "provider": cfg.provider,
+                    **token_accumulator,
+                }, ensure_ascii=False) + "\n")
+
+            logging.info("📄 Cost ledger appended ➜ %s", ledger_file)
+        except Exception as _e:
+            logging.debug("Could not write cost ledger: %s", _e)
 
         # --- parameter summary ---
         _write_param_summary(cfg, cfg.output_dir)
@@ -330,6 +351,7 @@ def _write_param_summary(cfg: RunConfig, output_dir: Path) -> None:
         "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
         "command_line": " ".join(sys.argv),
         "parameters": cfg.dict(),
+        "usage": token_accumulator,
     }
 
     out_file = output_dir / "parameters_summary.json"

@@ -8,6 +8,7 @@ from typing import Optional
 
 from multi_coder_analysis.config.run_config import RunConfig
 from multi_coder_analysis.runtime.tot_runner import execute
+from multi_coder_analysis.providers.base import get_cost_accumulator
 
 app = typer.Typer(help="Multi-Coder Analysis toolkit (ToT refactor)")
 
@@ -49,6 +50,12 @@ def run(
     sc_temperature: float = typer.Option(0.7, "--sc-temperature", help="Sampling temperature"),
     sc_top_k: int = typer.Option(40, "--sc-top-k", help="top-k sampling cutoff (0 disables)"),
     sc_top_p: float = typer.Option(0.95, "--sc-top-p", help="nucleus sampling p value"),
+    print_cost: bool = typer.Option(
+        False,
+        "--print-cost",
+        help="Print total USD cost when the run finishes",
+        rich_help_panel="Cost",
+    ),
 ):
     """Run the deterministic Tree-of-Thought coder."""
 
@@ -70,7 +77,10 @@ def run(
         sc_top_k=sc_top_k,
         sc_top_p=sc_top_p,
     )
-    execute(cfg)
+    out_path = execute(cfg)
+    if print_cost:
+        typer.echo(f"\n💰  Run cost = ${get_cost_accumulator():.4f}\n")
+    return out_path
 
 
 if __name__ == "__main__":

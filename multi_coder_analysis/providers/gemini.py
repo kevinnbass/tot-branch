@@ -98,7 +98,14 @@ class GeminiProvider:  # implements ProviderProtocol via duck-typing
                 'model': model,
             }
         else:
-            self._last_usage = {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}
+            self._last_usage = {
+                'prompt_tokens': 0,
+                'response_tokens': 0,
+                'thought_tokens': 0,
+                'cached_tokens': 0,
+                'total_tokens': 0,
+                'model': model,
+            }
         
         # Stitch together parts (Gemini returns list‑of‑parts)
         thoughts = ""
