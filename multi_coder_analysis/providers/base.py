@@ -63,7 +63,7 @@ class ProviderProtocol(Protocol):
 # Global usage accumulator – lightweight telemetry across providers and threads
 # ---------------------------------------------------------------------------
 
-_USAGE_ACCUMULATOR: Dict[str, int] = {
+_USAGE_ACCUMULATOR: Dict[str, float] = {
     "prompt_tokens": 0,
     "response_tokens": 0,
     "thought_tokens": 0,
@@ -72,6 +72,8 @@ _USAGE_ACCUMULATOR: Dict[str, int] = {
     "regex_yes": 0,
     "regex_hit_shadow": 0,
     "total_hops": 0,
+    # running USD cost across the whole process
+    "cost_usd": 0.0,
 }
 
 _USAGE_LOCK = threading.Lock()
@@ -102,6 +104,40 @@ def track_usage(fn: Callable):  # type: ignore[type-arg]
                 _USAGE_ACCUMULATOR["thought_tokens"] += _safe_int(usage.get("thought_tokens"))
                 _USAGE_ACCUMULATOR["total_tokens"] += _safe_int(usage.get("total_tokens"))
                 _USAGE_ACCUMULATOR["llm_calls"] += 1
+
+                # ---------- per-call cost ----------
+                try:
+                    from multi_coder_analysis.pricing import estimate_cost
+
+                    provider_name = self.__class__.__name__.replace("Provider", "").lower()
+                    # model positional arg index 2 in generate(system, user, model, ...)
+                    model_name = kwargs.get("model") if "model" in kwargs else (
+                        args[2] if len(args) > 2 else ""
+                    )
+
+                    cost_info = estimate_cost(
+                        provider=provider_name,
+                        model=model_name,
+                        prompt_tokens=_safe_int(usage.get("prompt_tokens")),
+                        response_tokens=_safe_int(usage.get("response_tokens")),
+                        cached_tokens=_safe_int(usage.get("cached_tokens", 0)),
+                    )
+
+                    _USAGE_ACCUMULATOR["cost_usd"] += cost_info["cost_total_usd"]
+
+                    # store cost back on usage dict for provider-level inspection
+                    usage["cost_usd"] = cost_info["cost_total_usd"]
+                except Exception:  # pragma: no cover – cost calc must never crash run
+                    pass
         return out
 
     return _wrap 
+
+# ------------------------------------------------------------
+# Convenience helper for callers interested only in the dollars
+# ------------------------------------------------------------
+
+def get_cost_accumulator() -> float:  # noqa: D401
+    """Return the running USD cost for the current Python process."""
+    with _USAGE_LOCK:
+        return float(_USAGE_ACCUMULATOR.get("cost_usd", 0.0)) 

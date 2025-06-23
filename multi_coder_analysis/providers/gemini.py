@@ -87,12 +87,15 @@ class GeminiProvider:  # implements ProviderProtocol via duck-typing
             # SDK renamed field from response_token_count → candidates_token_count
             resp_toks = _safe_int(getattr(usage_meta, 'response_token_count', getattr(usage_meta, 'candidates_token_count', 0)))
             thought_toks = _safe_int(getattr(usage_meta, 'thoughts_token_count', 0))
+            cached_toks  = _safe_int(getattr(usage_meta, 'cached_token_count', 0))
             total_toks = _safe_int(getattr(usage_meta, 'total_token_count', 0))
             self._last_usage = {
                 'prompt_tokens': prompt_toks,
                 'response_tokens': resp_toks,
                 'thought_tokens': thought_toks,
-                'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks)
+                'cached_tokens':  cached_toks,
+                'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks),
+                'model': model,
             }
         else:
             self._last_usage = {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}
