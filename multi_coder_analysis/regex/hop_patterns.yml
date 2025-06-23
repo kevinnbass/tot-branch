@@ -34,14 +34,15 @@
       (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
   # Added negative look‑behind to exclude "deadly toll", "deadly cost"
   pattern: |-
+    (?i)    # case-insensitive once – faster compile
     # block idioms unrelated to epidemiological danger
-    # add new intensifiers; block 'so‑called' hedge
     (?<!toll\s|cost\s|sins\s|silence\s|so\scalled\s)
     \b(?:(?:highly(?!\s+(?:pathogenic|susceptible)\b))
-        |very|deadlier|more|extremely|severely|so|alarmingly|unusually
-        |particularly|frighteningly|definitely|certainly|ever[-\s]*more|progressively)  
+        |alarmingly|certainly|deadlier|definitely|ever[-\s]*more|extremely|
+        frighteningly|more|particularly|progressively|severely|so|unusually|very)  # A-Z order
         (?:\s+\w+){0,3}\s+
-    (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
+    (?:brutal|catastrophic|contagious|dangerous|deadly|destructive|
+       infectious|lethal|severe|transmissible|virulent)\b|
     \bless\s+safe\b|                                       # (2025-06-23) comparative risk form
     \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
     \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
@@ -77,6 +78,8 @@
     (?i)\b(?:slaughter(?:ed|ing)?|culled?|destroyed?|euthan(?:iz|is)ed|
            depopulated|disposed|buried)\b
   pattern: |-
+    # Hop-2 literal guard – keep "spark shortages" Neutral
+    (?i)
     # Guard — "spark shortages" stays Neutral
     (?!\b(?:spark|sparking)\s+shortage(?:s)?\b)
 
@@ -116,11 +119,11 @@
          (?:mass(?:ive)?\s+|widespread\s+|public\s+|nationwide\s+|
             global\s+)?(?:panic|alarm|outrage|anxiety)\b
       |
-      # intensifier + harm noun  (2025-06-23)
-      \b(?:massive|huge|enormous|immense|unprecedented|major|
-         severe|significant|record(?:-breaking)?|vast|gigantic)\s+
-         (?:mortality|loss(?:es)?|outbreaks?|deaths?|fatalities|
-         damage|disaster|crisis|shortages?|toll)\b
+      # intensifier + harm-noun (alphabetised for readability)
+      \b(?:enormous|gigantic|huge|immense|major|massive|
+         record(?:-breaking)?|severe|significant|unprecedented|vast)\s+
+         (?:crisis|damage|deaths?|disaster|fatalities|
+         loss(?:es)?|mortality|outbreaks?|shortages?|toll)\b
     )
 
 # 2025-06-20 • Zero-FP rule promoted to live
@@ -202,9 +205,9 @@
         (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
         (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
         \b(?:encouraging|welcome|heartening|excellent)\s+news\b|
-        \bvery\s+well\s+protected\b|
         \bwonderfully\s+high\b|
-        \bproviding\s+relief\b|
+        \bvery\s+well\s+protected\b|
+        \bprovid(?:ing|es)\s+relief\b|
         \bshort[-\s]?term\s+blip\b|
         \btemporary\s+setback\b|
         (?:expected|likely|set)\s+to\s+resolve\s+quickly\b|
@@ -246,6 +249,7 @@
   frame: Reassuring
   pattern: |-
     # minimiser MUST be paired with an explicit denominator token
+    (?i)
     \b(?:only|just|merely|a\s+single|very\s+few|relatively\s+few|no\s+more\s+than)\b
          [^.;\n]{0,30}
          \b(?:out\s+of|one\s+of|one\s+in|among|nationwide|statewide|across|worldwide|globally)\b
@@ -286,7 +290,7 @@
     |
     \bno\s+(?:sign|indication|evidence)\s+of\s+(?:spread|transmission)\b
     |
-    \b(?:is|are|was|were|will|would|should|could|may|might)\s+unlikely\s+to\s+
+    \b(?:is|are|was|were|will|would|could|may|might|should)\s+unlikely\s+to\s+
        (?:affect|impact|cause|pose|present|enter|spread|infect)\b
     |
     \b(?:has|have|had|did)\s+(?:not|n't)\s+
@@ -341,7 +345,12 @@
   mode: live
   frame: Neutral
   pattern: |-
-    \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b)|(?:officials|vaccine|system|plan|protocol|measure|safeguard|capability|prepare|develop|implement|work|contain|resource(?:s)?|stockpile(?:d|s|ing)?|surveillance|monitor(?:ing)?)\b)\b
+    (?i)
+    \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:consumers?|customers?|people|public|residents|citizens)\b)|
+       (?:capability|contain|develop|implement|measure|
+       monitor(?:ing)?|officials|plan|prepare|protocol|
+       resource(?:s)?|safeguard|stockpile(?:d|s|ing)?|
+       surveillance|system|vaccine|work))\b
 
 9:
 - name: NeutralPriceMetrics
