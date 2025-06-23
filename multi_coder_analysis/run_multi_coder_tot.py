@@ -1981,7 +1981,7 @@ def _log_hop(
     if end_active is None:
         end_active = max(0, start_active - regex_yes - llm_yes)
 
-    msg = (
+    msg_plain = (
         f"Hop {hop_idx:02} → "
         f"start:{start_active:<3} "
         f"regex:{regex_yes:<2} "
@@ -1989,10 +1989,12 @@ def _log_hop(
         f"remain:{end_active:<3} "
         f"({elapsed:5.1f}s)"
     )
-    logging.info(msg)
-    # Remove duplicate tqdm.write and print to avoid doubled output
-    # try:
-    #     from tqdm import tqdm  # local import to avoid hard dep elsewhere
-    #     tqdm.write(msg)
-    # except Exception:
-    #     print(msg) 
+
+    # keep existing INFO log for file handlers
+    logging.info(msg_plain)
+
+    # Also emit human-readable banner with asterisks once to stdout
+    try:
+        print(f"*** {msg_plain} ***", flush=True)
+    except Exception:
+        pass
