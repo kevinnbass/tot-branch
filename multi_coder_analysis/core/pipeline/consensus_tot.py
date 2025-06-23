@@ -83,8 +83,9 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
     def run(self, ctxs: List[HopContext]) -> List[HopContext]:  # type: ignore[override]
         # --- Progress log (aggregated) ----------------------------------
         try:
-            # Count *all* unresolved permutation instances, not just unique SIDs
-            _active = sum(1 for c in ctxs if not c.is_concluded)
+            # Unique unresolved statement IDs – matches legacy banner expectation
+            _active_ids = {c.statement_id for c in ctxs if not c.is_concluded}
+            _active = len(_active_ids)
 
             # This is filled later during batch processing – initialise empty set
             regex_yes_ids: set[str] = set()
