@@ -1,0 +1,15 @@
+=== RUN SUMMARY ===
+Total statements          : 259
+Total hops processed      : 2184
+Regex deterministic hits  : 75
+Regex hits in shadow mode : 7
+LLM batch calls           : 12
+-- Token usage --
+  Prompt tokens   : 111295
+  Response tokens : 81280
+  Thought tokens  : 95790
+  Total tokens    : 288365
+-- Batch anomalies --
+  Duplicate conflicts : 0
+  Residual extras     : 11
+  Missing in replies  : 0
