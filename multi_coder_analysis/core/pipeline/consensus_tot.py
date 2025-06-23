@@ -193,34 +193,6 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
         sid_to_processed = {c.statement_id: c for c in results}
         ordered: List[HopContext] = [sid_to_processed[c.statement_id] if c.statement_id in sid_to_processed else c for c in ctxs]
 
-        # ----------- Final progress log update ----------------
-        end_active = _active - len(regex_yes_ids) - len(llm_yes_ids)
-
-        # If no batches needed an LLM call the banner might still be missing
-        if _primary and not banner_printed:
-            if len(regex_yes_ids) > 0:
-                print(
-                    f"*** REGEX HIT Hop {self.hop_idx:02} → regex:{len(regex_yes_ids)} ***",
-                    flush=True,
-                )
-            else:
-                print(
-                    f"*** REGEX MISS Hop {self.hop_idx:02} ***",
-                    flush=True,
-                )
-
-        # ---------------- FINISH banner -------------------
-        if _primary:
-            try:
-                print(
-                    f"*** FINISH Hop {self.hop_idx:02} → start:{_active} "
-                    f"regex:{len(regex_yes_ids)} llm:{len(llm_yes_ids)} "
-                    f"remain:{end_active} ***",
-                    flush=True,
-                )
-            except Exception:
-                pass
-
         # --- Execute all queued LLM batches in parallel ------------------
         if all_tasks:
             from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -260,6 +232,31 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
                     for ctx in sid_to_ctx.values():
                         if ctx not in results and ctx.is_concluded is False:
                             results.append(ctx)
+
+        # ---------------- FINISH banner -------------------
+        if _primary:
+            end_active = _active - len(regex_yes_ids) - len(llm_yes_ids)
+            # Ensure regex banner emitted at least once
+            if not banner_printed:
+                if len(regex_yes_ids) > 0:
+                    print(
+                        f"*** REGEX HIT Hop {self.hop_idx:02} → regex:{len(regex_yes_ids)} ***",
+                        flush=True,
+                    )
+                else:
+                    print(
+                        f"*** REGEX MISS Hop {self.hop_idx:02} ***",
+                        flush=True,
+                    )
+            try:
+                print(
+                    f"*** FINISH Hop {self.hop_idx:02} → start:{_active} "
+                    f"regex:{len(regex_yes_ids)} llm:{len(llm_yes_ids)} "
+                    f"remain:{end_active} ***",
+                    flush=True,
+                )
+            except Exception:
+                pass
 
         return ordered
 
