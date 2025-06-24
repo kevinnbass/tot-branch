@@ -464,8 +464,11 @@ def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPER
             if attempt == 1:
                 batch_ctx.raw_http = raw_text  # type: ignore[attr-defined]
 
+            # Include the original `size_requested` denominator so users can easily
+            # spot discrepancies across batches/permutations (helpful when regex
+            # pre-filtering removes items before the LLM call).
             logging.info(
-                f"Batch {batch_ctx.batch_id} Q{batch_ctx.hop_idx:02}: attempt {attempt} succeeded for {len(valid_objs)}/{size_requested} objects; still missing {len(unresolved)}"
+                f"Batch {batch_ctx.batch_id} Q{batch_ctx.hop_idx:02}: attempt {attempt} succeeded for {len(valid_objs)}/{size_requested} objects; still missing {len(unresolved)}/{size_requested}"
             )
 
         except Exception as e:

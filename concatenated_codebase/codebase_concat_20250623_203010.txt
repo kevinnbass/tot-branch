@@ -1,0 +1,3560 @@
+# Full Codebase Snapshot — generated 2025-06-23T20:30:17
+====================================================================================================
+
+## 0001. config.yaml
+----------------------------------------------------------------------------------------------------
+file_paths:
+  file_patterns:
+    model_majority_output: '{phase}_model_labels.csv'
+logging:
+  level: INFO
+runtime_flags:
+  enable_regex: true
+
+
+## 0002. multi_coder_analysis\config\__init__.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Configuration loading utilities (Phase 6)."""
+
+import warnings
+from functools import lru_cache
+from pathlib import Path
+import yaml
+
+# ---------------------------------------------------------------------------
+# Optional dependency guard – ``Settings`` relies on *pydantic-settings* which
+# may be absent in minimal runtime environments.  We fall back to a dummy class
+# that behaves like an empty mapping so that modules which only import
+# ``multi_coder_analysis.config`` for its *side effects* (i.e. our permutation
+# workers) do not crash.  Full-feature runs that *need* Settings should add the
+# dependency as usual:  pip install pydantic-settings
+# ---------------------------------------------------------------------------
+
+try:
+    from .settings import Settings  # noqa: F401
+except ModuleNotFoundError as _e:
+    if _e.name == "pydantic_settings":
+        warnings.warn(
+            "pydantic_settings not installed – falling back to minimal Settings stub.",
+            RuntimeWarning,
+            stacklevel=2,
+        )
+
+        class Settings(dict):  # type: ignore
+            """Minimal stub that accepts **kwargs and stores them."""
+
+            def __init__(self, **kwargs):
+                super().__init__(**kwargs)
+
+            # maintain attribute access semantics used elsewhere
+            def __getattr__(self, item):
+                return self.get(item)
+
+            def dict(self):  # mimic Pydantic API subset
+                return dict(self)
+
+    else:
+        raise
+
+_CFG_PATH = Path.cwd() / "config.yaml"
+
+
+@lru_cache(maxsize=1)
+def load_settings(path: Path | None = None) -> Settings:  # noqa: D401
+    """Load settings from *path* or environment overrides.
+    
+    If *config.yaml* is detected, it is parsed and **deprecated** – values are
+    fed into the new Pydantic Settings model and a warning is issued.
+    """
+    cfg_path = Path(path) if path else _CFG_PATH
+
+    if cfg_path.exists():
+        warnings.warn(
+            "Reading legacy config.yaml is deprecated; migrate to environment variables or TOML config.",
+            DeprecationWarning,
+            stacklevel=2,
+        )
+        try:
+            data = yaml.safe_load(cfg_path.read_text(encoding="utf-8")) or {}
+        except Exception as e:
+            warnings.warn(f"Could not parse {cfg_path}: {e}")
+            data = {}
+    else:
+        data = {}
+
+    return Settings(**data) 
+
+## 0003. multi_coder_analysis\config\run_config.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+from pathlib import Path
+from pydantic import BaseModel, Field, validator, root_validator
+
+__all__ = ["RunConfig"]
+
+
+class RunConfig(BaseModel):
+    """Central runtime configuration for ToT execution."""
+
+    phase: str = Field(
+        "pipeline",
+        pattern="^(legacy|pipeline)$",
+        description="Execution mode: 'legacy' = old monolithic runner, 'pipeline' = new modular ToT stack",
+    )
+    dimension: str | None = Field(
+        None,
+        description="(deprecated) reserved for backward compatibility; ignored by pipeline",
+    )
+    input_csv: Path = Field(..., description="Path to input CSV of statements")
+    output_dir: Path = Field(..., description="Directory to write outputs")
+    provider: str = Field("gemini", pattern="^(gemini|openrouter)$", description="LLM provider to use")
+    model: str = Field("models/gemini-2.5-flash-preview-04-17", description="Model identifier")
+    batch_size: int = Field(1, ge=1, description="Batch size for LLM calls")
+
+    # Worker-local file suffix for archive (permutation tag, etc.)
+    archive_tag: str | None = Field(
+        None,
+        description="Optional tag appended to run_id for per-worker archive files",
+    )
+
+    concurrency: int = Field(1, ge=1, description="Thread pool size for batch mode")
+    regex_mode: str = Field("live", pattern="^(live|shadow|off)$", description="Regex layer mode")
+    shuffle_batches: bool = Field(False, description="Randomise batch order for load spreading")
+    consensus_mode: str = Field(
+        "final",
+        pattern="^(hop|final)$",
+        description="Consensus strategy: 'hop' = per-hop majority, 'final' = legacy end-of-tree vote",
+    )
+
+    # ---------------- Self-consistency decoding ----------------
+    decode_mode: str = Field(
+        "normal",
+        pattern="^(normal|self-consistency)$",
+        description="Decoding mode: normal = single path, self-consistency = multi-path sampling + voting",
+    )
+
+    sc_votes: int = Field(1, ge=1, le=200, description="Number of sampled paths for self-consistency")
+    sc_rule: str = Field(
+        "majority",
+        pattern=(
+            r"^(majority|"                     # legacy
+            r"ranked|ranked-raw|"              # legacy weighted
+            r"irv|borda|mrr)$"                 # new ranked-list rules
+        ),
+        description=(
+            "Aggregation rule:\n"
+            "  • majority        – single-answer hard vote\n"
+            "  • ranked          – single-answer length-norm\n"
+            "  • ranked-raw      – single-answer raw score\n"
+            "  • irv|borda|mrr   – ranked-list self-consistency",
+        ),
+    )
+    sc_top_k: int = Field(40, ge=0, description="top-k sampling cutoff (0 disables)")
+    sc_top_p: float = Field(0.95, ge=0.0, le=1.0, description="nucleus sampling p-value")
+    sc_temperature: float = Field(0.7, ge=0.0, description="Sampling temperature for self-consistency")
+
+    # housekeeping – whether tot_runner should copy & concatenate the prompts
+    copy_prompts: bool = Field(True, description="Copy prompt folder into output_dir and concatenate prompts.txt")
+
+    # ───────── Ranked-list decoding ─────────
+    ranked_list: bool = Field(
+        False,
+        description=(
+            "If true, prompts instruct model to emit an ordered list "
+            "of candidate answers instead of a single value.",
+        ),
+    )
+    max_candidates: int = Field(
+        5,
+        ge=1,
+        le=10,
+        description="Max candidates to keep from the ranked list. "
+                    "Ignored when ranked_list == False.",
+    )
+
+    # ─────────────────────────────────────────────────────────────
+    # Root-level validator – field order requires this approach.
+    # ─────────────────────────────────────────────────────────────
+    @root_validator(skip_on_failure=True)
+    def _validate_ranked_combo(cls, values):  # noqa: D401
+        ranked = values.get("ranked_list", False)
+        rule = values.get("sc_rule")
+        decode_mode = values.get("decode_mode")
+        if ranked:
+            if decode_mode != "self-consistency":
+                raise ValueError("ranked_list=True requires decode_mode='self-consistency'")
+            if rule not in {"irv", "borda", "mrr"}:
+                raise ValueError(
+                    "When ranked_list=True, sc_rule must be one of {'irv', 'borda', 'mrr'}"
+                )
+        return values
+
+    @validator("output_dir", pre=True)
+    def _expand_output_dir(cls, v):  # noqa: D401
+        return Path(v).expanduser().absolute()
+
+    @validator("input_csv", pre=True)
+    def _expand_input_csv(cls, v):  # noqa: D401
+        return Path(v).expanduser().absolute()
+
+    # ----- deprecations -----
+    @validator("decode_mode", pre=True)
+    def _alias_perm(cls, v):  # noqa: D401
+        if v == "permute":
+            import warnings
+            warnings.warn(
+                "decode_mode='permute' is deprecated and treated as 'normal'.",
+                DeprecationWarning,
+                stacklevel=2,
+            )
+            return "normal"
+        return v 
+
+## 0004. multi_coder_analysis\config\settings.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Pydantic Settings model for configuration (Phase 6)."""
+
+from pydantic_settings import BaseSettings
+from pydantic import Field
+from typing import Optional
+from pathlib import Path
+
+__all__ = ["Settings"]
+
+
+class Settings(BaseSettings):
+    """Application settings with environment variable overrides.
+    
+    Environment variables are prefixed with MCA_ (e.g., MCA_PROVIDER=openrouter).
+    """
+    
+    # Core execution settings
+    phase: str = Field("pipeline", description="Pipeline phase label")
+    provider: str = Field("gemini", description="LLM provider name")
+    model: str = Field("models/gemini-2.5-flash-preview-04-17", description="Model identifier")
+    
+    # Performance settings
+    batch_size: int = Field(10, ge=1, description="Batch size for LLM calls")
+    concurrency: int = Field(1, ge=1, description="Thread pool size")
+    
+    # Feature flags
+    enable_regex: bool = Field(True, description="Enable regex short-circuiting")
+    regex_mode: str = Field("live", description="Regex mode: live|shadow|off")
+    shuffle_batches: bool = Field(False, description="Randomise batch order")
+    
+    # API keys (optional - can be set via environment)
+    google_api_key: Optional[str] = Field(None, description="Google Gemini API key")
+    openrouter_api_key: Optional[str] = Field(None, description="OpenRouter API key")
+    
+    # Observability
+    log_level: str = Field("INFO", description="Log level")
+    json_logs: bool = Field(False, description="Emit JSON-formatted logs")
+    
+    # ---------------- Lazy materialisation ----------------
+    archive_enable: bool = Field(
+        True,
+        description="Enable on-disk archiving of concluded segments",
+    )
+    archive_dir: Path = Field(
+        default=Path("output/archive"),
+        description="Directory for JSONL archives (auto-created)",
+    )
+    
+    class Config:
+        env_prefix = "MCA_"
+        env_file = ".env"
+        case_sensitive = False
+        # Accept legacy keys that are no longer explicitly modelled so that
+        # users can keep an old config.yaml without breaking validation.
+        extra = "allow" 
+
+## 0005. multi_coder_analysis\core\__init__.py
+----------------------------------------------------------------------------------------------------
+from importlib import import_module as _imp
+
+# ---------------------------------------------------------------------------
+# Backward-compat shim: early notebooks did
+#   from multi_coder_analysis.core import Engine
+# After the package re-org that path vanished.  Re-export the default
+# implementation so existing user code keeps working without edits.
+# ---------------------------------------------------------------------------
+
+Engine = _imp("multi_coder_analysis.core.regex").Engine  # type: ignore[attr-defined]
+
+__all__: list[str] = ["Engine"]
+
+# Export consensus utilities for external reuse
+from .consensus import ConsensusStep  # type: ignore[E402,F401]
+__all__.append("ConsensusStep") 
+
+## 0006. multi_coder_analysis\core\consensus.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Per-hop consensus reduction utilities."""
+
+from collections import defaultdict
+from typing import Dict, List, Tuple, Iterable
+
+from multi_coder_analysis.models import HopContext
+from multi_coder_analysis.core.pipeline import Step
+from multi_coder_analysis.core.tiebreaker import conservative_tiebreak
+from multi_coder_analysis.utils.tie import is_perfect_tie
+from multi_coder_analysis import run_multi_coder_tot as _legacy
+
+__all__ = ["ConsensusStep", "HopVariability"]
+
+# hop -> list[(statement_id, distribution)]
+HopVariability = Dict[int, List[Tuple[str, Dict[str, int]]]]
+
+
+class ConsensusStep(Step[List[HopContext]]):  # type: ignore[misc]
+    """Collapse *k* permutations into (optionally) a single survivor.
+
+    The step expects **all** permutations for the same segment at a given hop
+    to be present in the incoming list.
+    """
+
+    def __init__(
+        self,
+        hop_idx: int,
+        variability_log: HopVariability,
+        *,
+        tie_collector: list | None = None,
+        decision_collector: list | None = None,
+    ):
+        self.hop_idx = hop_idx
+        self._var = variability_log
+        self._tie_collector = tie_collector
+        self._dec_collector = decision_collector
+
+    def run(self, ctxs: List[HopContext]) -> List[HopContext]:  # type: ignore[override]
+        # Group by segment / statement_id
+        buckets: Dict[str, List[HopContext]] = defaultdict(list)
+        for c in ctxs:
+            buckets[c.statement_id].append(c)
+
+        survivors: List[HopContext] = []
+        for sid, perms in buckets.items():
+            # Collect votes from permutations ("yes" / "no" / "uncertain")
+            votes: List[str] = [
+                (p.raw_llm_responses[-1].get("answer", "") if p.raw_llm_responses else "uncertain")
+                for p in perms
+            ]
+
+            decided, winner = conservative_tiebreak(votes)
+
+            # Record distribution regardless of outcome
+            dist = {v: votes.count(v) for v in set(votes)}
+            self._var.setdefault(self.hop_idx, []).append((sid, dist))
+
+            if decided and winner == "yes":
+                # Select representative permutation (first) to continue
+                rep = perms[0]
+                rep.is_concluded = True
+                if not rep.final_frame:
+                    from multi_coder_analysis import run_multi_coder_tot as _legacy
+                    rep.final_frame = _legacy.Q_TO_FRAME.get(self.hop_idx)
+                survivors.append(rep)
+
+                # ------------------- record decision -------------------
+                if self._dec_collector is not None:
+                    perm_entries = []
+                    for p in perms:
+                        last_resp = p.raw_llm_responses[-1] if p.raw_llm_responses else {}
+                        perm_entries.append({
+                            "perm_idx": getattr(p, "permutation_idx", None),
+                            "answer": last_resp.get("answer", "uncertain"),
+                            "rationale": last_resp.get("rationale", ""),
+                            "via": ("regex" if last_resp.get("regex") else "llm")
+                        })
+
+                    self._dec_collector.append(
+                        {
+                            "statement_id": sid,
+                            "statement_text": rep.segment_text,
+                            "hop": self.hop_idx,
+                            "frame": rep.final_frame,
+                            "decision": "yes",
+                            "distribution": dist,
+                            "permutations": perm_entries,
+                        }
+                    )
+            elif decided and winner == "no":
+                # No conclusion – all permutations progress
+                survivors.extend(perms)
+            else:
+                # Tie / no majority – mark concluded as tie (filtered out)
+                for p in perms:
+                    p.is_concluded = True
+                    p.final_frame = "tie"
+
+                if self._tie_collector is not None:
+                    entry = {
+                        "hop": self.hop_idx,
+                        "statement_id": sid,
+                        "permutations": []
+                    }
+                    for p in perms:
+                        entry["permutations"].append({
+                            "permutation_id": getattr(p, "permutation_idx", None),
+                            "answer": (p.raw_llm_responses[-1].get("answer") if p.raw_llm_responses else "uncertain"),
+                            "raw_llm_responses": p.raw_llm_responses,
+                            "analysis_history": p.analysis_history,
+                            "reasoning_trace": p.reasoning_trace,
+                        })
+                    self._tie_collector.append(entry)
+
+                if self._dec_collector is not None:
+                    perm_entries = []
+                    for p in perms:
+                        last_resp = p.raw_llm_responses[-1] if p.raw_llm_responses else {}
+                        perm_entries.append({
+                            "perm_idx": getattr(p, "permutation_idx", None),
+                            "answer": last_resp.get("answer", "uncertain"),
+                            "rationale": last_resp.get("rationale", ""),
+                            "via": ("regex" if last_resp.get("regex") else "llm")
+                        })
+                    self._dec_collector.append(
+                        {
+                            "statement_id": sid,
+                            "statement_text": perms[0].segment_text,
+                            "hop": self.hop_idx,
+                            "frame": "tie",
+                            "decision": "tie",
+                            "distribution": dist,
+                            "permutations": perm_entries,
+                        }
+                    )
+                # Not forwarded further
+        return survivors 
+
+## 0007. multi_coder_analysis\core\pipeline\__init__.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Lightweight functional pipeline primitives used by the Tree-of-Thought refactor.
+
+The goal is to decouple algorithmic steps from I/O and orchestration while
+remaining extremely small and dependency-free.  Each `Step[T]` receives and
+returns the same context object enabling natural chaining and testability.
+"""
+
+from typing import Generic, TypeVar, Protocol, Callable, List
+
+T_co = TypeVar("T_co", covariant=True)
+T = TypeVar("T")
+
+
+class Step(Generic[T], Protocol):
+    """A pure-function processing step.
+
+    Sub-classes implement :py:meth:`run` and **MUST NOT** mutate global state or
+    perform side-effects outside the provided context object.
+    """
+
+    def run(self, ctx: T) -> T:  # noqa: D401
+        """Transform *ctx* and return it (or a *new* instance).
+        
+        The default Tree-of-Thought implementation mutates the context in-place
+        and returns the same object for convenience.
+        """
+        raise NotImplementedError
+
+
+class FunctionStep(Generic[T]):
+    """Adapter turning a plain function into a :class:`Step`."""
+
+    def __init__(self, fn: Callable[[T], T]):
+        self._fn = fn
+
+    def run(self, ctx: T) -> T:  # type: ignore[override]
+        return self._fn(ctx)
+
+
+class Pipeline(Generic[T]):
+    """Composable list of :class:`Step` objects executed sequentially."""
+
+    def __init__(self, steps: List[Step[T]]):
+        self._steps = steps
+
+    def run(self, ctx: T) -> T:
+        for step in self._steps:
+            # Allow steps (e.g., answer evaluators) to signal early termination
+            if (
+                isinstance(ctx, list)
+                and ctx
+                and all(getattr(c, "is_concluded", False) for c in ctx)
+            ) or getattr(ctx, "is_concluded", False):
+                break
+            ctx = step.run(ctx)
+        return ctx
+
+
+__all__ = [
+    "Step",
+    "FunctionStep",
+    "Pipeline",
+    "build_tot_pipeline",
+]
+
+# Re-export for higher layers needing direct access without circular imports
+from .tot import build_tot_pipeline  # noqa: F401 
+
+## 0008. multi_coder_analysis\core\pipeline\consensus_tot.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Consensus-aware Tree-of-Thought pipeline builder."""
+
+from typing import List, Tuple
+from pathlib import Path
+import os as _os
+
+from multi_coder_analysis.models import HopContext, BatchHopContext
+from multi_coder_analysis.core.pipeline import Pipeline, Step
+from multi_coder_analysis.core.pipeline.tot import _HopStep  # type: ignore
+from multi_coder_analysis.core.consensus import ConsensusStep, HopVariability
+from multi_coder_analysis.providers import ProviderProtocol
+from multi_coder_analysis import run_multi_coder_tot as _legacy
+from multi_coder_analysis.core.regex import Engine
+
+__all__ = ["build_consensus_pipeline"]
+
+# ------------------------------------------------------------
+#  New pruning step – must run *after* ConsensusStep so that the
+#  decision to conclude a statement is global across permutations
+# ------------------------------------------------------------
+
+class _ArchivePruneStep(Step[List[HopContext]]):  # type: ignore[misc]
+    def __init__(self, *, run_id: str, archive_dir: Path, tag: str):
+        self._run_id = run_id
+        self._archive_dir = archive_dir
+        self._tag = tag
+
+    def run(self, ctxs: List[HopContext]) -> List[HopContext]:  # type: ignore[override]
+        from multi_coder_analysis.utils import archive_resolved
+
+        # Persist concluded contexts
+        archive_resolved(
+            ctxs,
+            run_id=self._run_id,
+            tag=self._tag,
+            archive_dir=self._archive_dir,
+        )
+
+        # Return only unresolved segments to keep RAM low
+        return [c for c in ctxs if not c.is_concluded]
+
+
+class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
+    """Map a single-hop step across all permutations in the list."""
+
+    def __init__(
+        self,
+        hop_idx: int,
+        provider: ProviderProtocol,
+        model: str,
+        *,
+        batch_size: int,
+        temperature: float,
+        concurrency: int,
+        top_k: int | None = None,
+        top_p: float | None = None,
+        run_id: str,
+        archive_dir: Path,
+        tag: str,
+        ranked_list: bool = False,
+        max_candidates: int = 5,
+    ):
+        self.hop_idx = hop_idx  # store for progress logging
+        self._inner = _HopStep(
+            hop_idx,
+            provider,
+            model,
+            temperature=temperature,
+            top_k=top_k,
+            top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
+        )
+        self._provider = provider
+        self._model = model
+        self._temperature = temperature
+        self._batch_size = max(1, batch_size)
+        self._concurrency = max(1, concurrency)
+        # Preserve for child steps (needed only for _log_hop; kept anyway)
+        self._run_id = run_id
+        self._archive_dir = archive_dir
+        self._tag = tag
+        self._rx = Engine.default()
+
+    def run(self, ctxs: List[HopContext]) -> List[HopContext]:  # type: ignore[override]
+        # --- Progress log (aggregated) ----------------------------------
+        try:
+            # Unique unresolved statement IDs – matches legacy banner expectation
+            _active_ids = {c.statement_id for c in ctxs if not c.is_concluded}
+            _active = len(_active_ids)
+
+            # This is filled later during batch processing – initialise empty set
+            regex_yes_ids: set[str] = set()
+        except Exception:  # noqa: BLE001 – logging must never break flow
+            pass
+
+        # Emit *start* banner before any processing
+        _primary = _os.getenv("PRIMARY_PERMUTATION", "1") == "1"
+
+        try:
+            if _primary:
+                print(
+                    f"*** START Hop {self.hop_idx:02} → start:{_active} regex:0 llm:0 remain:{_active} ***",
+                    flush=True,
+                )
+        except Exception:
+            pass
+
+        # ------------------ Batch processing ---------------------------
+        results: List[HopContext] = []
+
+        # Align output ordering with input
+        pending: List[HopContext] = []
+        for c in ctxs:
+            if c.is_concluded:
+                results.append(c)
+            else:
+                pending.append(c)
+
+        # Early exit if nothing to do
+        if not pending:
+            return results
+
+        # ------------------------------------------------------
+        # Split pending into *per-permutation* mini-pools so that
+        # batches are formed independently within each permutation.
+        # ------------------------------------------------------
+        from collections import defaultdict
+        from math import ceil
+
+        groups: defaultdict[int | None, list[HopContext]] = defaultdict(list)
+        for seg in pending:
+            perm_id = getattr(seg, "permutation_idx", None)
+            groups[perm_id].append(seg)
+
+        llm_yes_ids: set[str] = set()
+        banner_printed = False
+
+        # Collect all LLM tasks across *all* permutations
+        all_tasks: list[tuple[BatchHopContext, dict[str, HopContext]]] = []
+
+        for perm_id, segs in groups.items():
+            num_batches = ceil(len(segs) / self._batch_size)
+            for b_idx in range(num_batches):
+                batch_segments = segs[b_idx * self._batch_size : (b_idx + 1) * self._batch_size]
+
+                # -------------- Regex pre-check -----------------
+                unresolved: List[HopContext] = []
+                for seg in batch_segments:
+                    seg.q_idx = self.hop_idx
+                    rx_ans = None
+                    try:
+                        rx_ans = self._rx.match(seg)
+                    except Exception as _e:
+                        import logging as _lg
+                        _lg.warning("Regex engine error on %s Q%s: %s", seg.statement_id, self.hop_idx, _e)
+
+                    if rx_ans and rx_ans.get("answer") == "yes":
+                        seg.raw_llm_responses.append(rx_ans)  # type: ignore[arg-type]
+                        seg.final_frame = rx_ans.get("frame") or _legacy.Q_TO_FRAME.get(self.hop_idx)
+                        seg.final_justification = rx_ans.get("rationale")
+                        seg.is_concluded = True
+                        results.append(seg)
+                        regex_yes_ids.add(seg.statement_id)
+                    else:
+                        unresolved.append(seg)
+
+                if _primary and not banner_printed:
+                    # Emit regex banner before the first LLM call (or immediately
+                    # if the entire hop resolves via regex and no LLM call is needed).
+                    if len(regex_yes_ids) > 0:
+                        print(
+                            f"*** REGEX HIT Hop {self.hop_idx:02} → regex:{len(regex_yes_ids)} ***",
+                            flush=True,
+                        )
+                    else:
+                        print(
+                            f"*** REGEX MISS Hop {self.hop_idx:02} ***",
+                            flush=True,
+                        )
+                    banner_printed = True
+
+                if not unresolved:
+                    continue  # this batch fully resolved by regex
+
+                # -------------- Defer LLM batch ------------------
+                import uuid
+                batch_id = f"batch_{self.hop_idx}_{perm_id}_{uuid.uuid4().hex[:6]}"
+                batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=self.hop_idx, segments=unresolved)
+
+                sid_to_ctx = {c.statement_id: c for c in unresolved}
+                all_tasks.append((batch_ctx, sid_to_ctx))
+
+        # Re-attach results in original ordering
+        sid_to_processed = {c.statement_id: c for c in results}
+        ordered: List[HopContext] = [sid_to_processed[c.statement_id] if c.statement_id in sid_to_processed else c for c in ctxs]
+
+        # --- Execute all queued LLM batches in parallel ------------------
+        if all_tasks:
+            from concurrent.futures import ThreadPoolExecutor, as_completed
+
+            def _worker(bctx: BatchHopContext):
+                return _legacy._call_llm_batch(
+                    bctx,
+                    self._provider,
+                    self._model,
+                    self._temperature,
+                    ranked=self._inner._ranked_list,
+                    max_candidates=self._inner._max_candidates,
+                )
+
+            with ThreadPoolExecutor(max_workers=self._concurrency) as exe:
+                future_map = {exe.submit(_worker, ctx): (ctx, sid_map) for ctx, sid_map in all_tasks}
+
+                for fut in as_completed(future_map):
+                    batch_ctx, sid_to_ctx = future_map[fut]
+                    try:
+                        resp_objs = fut.result()
+                    except Exception as exc:
+                        import logging as _lg
+                        _lg.error("LLM batch %s failed: %s", batch_ctx.batch_id, exc)
+                        resp_objs = []
+
+                    for obj in resp_objs:
+                        sid = str(obj.get("segment_id", "")).strip()
+                        ctx = sid_to_ctx.get(sid)
+                        if ctx is None:
+                            continue
+                        ans = str(obj.get("answer", "uncertain")).lower().strip()
+                        rationale = str(obj.get("rationale", ""))
+
+                        ctx.raw_llm_responses.append(obj)  # type: ignore[arg-type]
+
+                        if ans == "yes":
+                            # Hop 11 special: look for explicit frame tag in rationale
+                            _frame = None
+                            if self.hop_idx == 11:
+                                import re as _re
+                                m_tag = _re.search(r"\|\|FRAME=(Alarmist|Reassuring)", rationale, _re.I)
+                                if m_tag:
+                                    _frame = m_tag.group(1).title()
+
+                            ctx.final_frame = _frame or _legacy.Q_TO_FRAME.get(self.hop_idx)
+                            ctx.final_justification = rationale
+                            ctx.is_concluded = True
+                            llm_yes_ids.add(ctx.statement_id)
+
+                    # any still unresolved after responses
+                    for ctx in sid_to_ctx.values():
+                        if ctx not in results and ctx.is_concluded is False:
+                            results.append(ctx)
+
+        # ---------------- FINISH banner -------------------
+        if _primary:
+            end_active = _active - len(regex_yes_ids) - len(llm_yes_ids)
+            # Ensure regex banner emitted at least once
+            if not banner_printed:
+                if len(regex_yes_ids) > 0:
+                    print(
+                        f"*** REGEX HIT Hop {self.hop_idx:02} → regex:{len(regex_yes_ids)} ***",
+                        flush=True,
+                    )
+                else:
+                    print(
+                        f"*** REGEX MISS Hop {self.hop_idx:02} ***",
+                        flush=True,
+                    )
+            try:
+                print(
+                    f"*** FINISH Hop {self.hop_idx:02} → start:{_active} "
+                    f"regex:{len(regex_yes_ids)} llm:{len(llm_yes_ids)} "
+                    f"remain:{end_active} ***",
+                    flush=True,
+                )
+            except Exception:
+                pass
+
+        return ordered
+
+
+def build_consensus_pipeline(
+    provider: ProviderProtocol,
+    model: str,
+    temperature: float = 0.0,
+    batch_size: int = 10,
+    concurrency: int = 1,
+    top_k: int | None = None,
+    top_p: float | None = None,
+    tie_collector: list | None = None,
+    variability_log: HopVariability | None = None,
+    *,
+    run_id: str,
+    archive_dir: Path,
+    tag: str,
+    ranked_list: bool = False,
+    max_candidates: int = 5,
+    **kwargs,
+) -> Tuple[Pipeline[List[HopContext]], HopVariability]:
+    """Return a pipeline operating on *lists* of HopContext objects."""
+
+    var: HopVariability = variability_log or {}
+
+    decision_collector = kwargs.get("decision_collector") if isinstance(kwargs.get("decision_collector"), list) else None
+
+    steps: List[Step[List[HopContext]]] = []
+    for h in range(1, 13):
+        steps.append(
+            _ParallelHopStep(
+                h,
+                provider,
+                model,
+                batch_size=batch_size,
+                temperature=temperature,
+                concurrency=concurrency,
+                top_k=top_k,
+                top_p=top_p,
+                run_id=run_id,
+                archive_dir=archive_dir,
+                tag=tag,
+                ranked_list=ranked_list,
+                max_candidates=max_candidates,
+            )
+        )
+        steps.append(ConsensusStep(h, var, tie_collector=tie_collector, decision_collector=decision_collector))
+        steps.append(_ArchivePruneStep(run_id=run_id, archive_dir=archive_dir, tag=tag))
+
+    return Pipeline(steps), var 
+
+## 0009. multi_coder_analysis\core\pipeline\tot.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Pure-function Tree-of-Thought pipeline built on :class:`Step`. (Phase 5)"""
+
+from typing import List
+
+from multi_coder_analysis.models import HopContext
+from multi_coder_analysis.core.pipeline import Step, Pipeline
+from multi_coder_analysis.core.regex import Engine
+from multi_coder_analysis.providers import ProviderProtocol
+
+# Re-use existing helper from legacy implementation to avoid code duplication
+from multi_coder_analysis import run_multi_coder_tot as _legacy
+
+__all__ = ["build_tot_pipeline"]
+
+
+class _HopStep(Step[HopContext]):
+    """Single-hop processing step.
+
+    The step first tries the regex engine; if inconclusive it delegates to the
+    provider using the _legacy._call_llm_single_hop helper to preserve existing
+    behaviour.  The class is internal – use :func:`build_tot_pipeline` instead.
+    """
+
+    _rx = Engine.default()
+
+    def __init__(
+        self,
+        hop_idx: int,
+        provider: ProviderProtocol,
+        model: str,
+        *,
+        temperature: float,
+        top_k: int | None = None,
+        top_p: float | None = None,
+        ranked_list: bool = False,
+        max_candidates: int = 5,
+    ):
+        self.hop_idx = hop_idx
+        self._provider = provider
+        self._model = model
+        self._temperature = temperature
+        self._top_k = top_k
+        self._top_p = top_p
+        self._ranked_list = ranked_list
+        self._max_candidates = max(1, max_candidates)
+
+    # ------------------------------------------------------------------
+    # The heavy lifting is delegated to code already battle-tested in the
+    # legacy module.  This guarantees behavioural parity while moving the
+    # orchestration into the new pipeline layer.
+    # ------------------------------------------------------------------
+    def run(self, ctx: HopContext) -> HopContext:  # noqa: D401
+        ctx.q_idx = self.hop_idx
+
+        regex_ans = self._rx.match(ctx)
+        if regex_ans:
+            ctx.raw_llm_responses.append(regex_ans)
+            if regex_ans.get("answer") == "yes":
+                ctx.final_frame = regex_ans.get("frame") or _legacy.Q_TO_FRAME[self.hop_idx]
+                ctx.final_justification = regex_ans.get("rationale")
+                ctx.is_concluded = True
+            return ctx
+
+        # Fall-through to LLM
+        llm_resp = _legacy._call_llm_single_hop(
+            ctx,
+            self._provider,
+            self._model,
+            temperature=self._temperature,
+            top_k=self._top_k,
+            top_p=self._top_p,
+            ranked=self._ranked_list,
+            max_candidates=self._max_candidates,
+        )  # type: ignore[arg-type]
+
+        ctx.raw_llm_responses.append(llm_resp)
+
+        # --- ranked-list aware extraction ---
+        raw_ans = llm_resp.get("answer", "")
+        try:
+            from multi_coder_analysis.run_multi_coder_tot import _extract_frame_and_ranking  # lazy import to avoid cycles
+            _, ranking = _extract_frame_and_ranking(raw_ans)
+        except Exception:
+            ranking = None
+
+        if ranking:
+            ranking = ranking[: self._max_candidates]
+            ctx.ranking = ranking
+            top_choice = ranking[0]
+        else:
+            top_choice = raw_ans
+
+        if str(top_choice).lower().strip() == "yes":
+            ctx.final_frame = _legacy.Q_TO_FRAME[self.hop_idx]
+            ctx.final_justification = llm_resp.get("rationale", "").strip()
+            ctx.is_concluded = True
+        return ctx
+
+
+def build_tot_pipeline(
+    provider: ProviderProtocol,
+    model: str,
+    *,
+    temperature: float = 0.0,
+    top_k: int | None = None,
+    top_p: float | None = None,
+    ranked_list: bool = False,
+    max_candidates: int = 5,
+) -> Pipeline[HopContext]:
+    """Return a :class:`Pipeline` implementing the 12-hop deterministic chain."""
+
+    steps: List[Step[HopContext]] = [
+        _HopStep(
+            h,
+            provider,
+            model,
+            temperature=temperature,
+            top_k=top_k,
+            top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
+        )
+        for h in range(1, 13)
+    ]
+    return Pipeline(steps) 
+
+## 0010. multi_coder_analysis\core\prompt.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+from functools import lru_cache
+from pathlib import Path
+from typing import Tuple, Dict, Any, TypedDict
+import re
+
+import yaml
+
+__all__ = ["parse_prompt", "PromptMeta"]
+
+
+class PromptMeta(TypedDict, total=False):
+    hop: int
+    short_name: str
+    description: str
+    # Extend with other known keys as needed.
+
+
+# Regex to match YAML front-matter at top of file
+_FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n?", re.DOTALL)
+
+
+@lru_cache(maxsize=128)
+def parse_prompt(path: Path) -> Tuple[str, PromptMeta]:
+    """Return (prompt_body, front_matter) for *path*.
+
+    The result is cached for the lifetime of the process to avoid unnecessary
+    disk I/O during batch processing.
+    """
+    text = path.read_text(encoding="utf-8")
+
+    m = _FM_RE.match(text)
+    if not m:
+        return text, {}  # type: ignore[return-value]
+
+    meta_yaml = m.group(1)
+    try:
+        meta: PromptMeta = yaml.safe_load(meta_yaml) or {}
+    except Exception:
+        meta = {}  # type: ignore[assignment]
+
+    body = text[m.end() :]
+    # Normalise – drop the *single* blank line often left between '---' and
+    # the actual prompt content so downstream tokenisers don't pay for it.
+    if body.startswith("\n"):
+        body = body.lstrip("\n")
+
+    return body, meta 
+
+## 0011. multi_coder_analysis\core\prompt_utils.py
+----------------------------------------------------------------------------------------------------
+from pathlib import Path
+
+# Default directory points to the project prompts folder.
+_PROMPTS_DIR = Path(__file__).resolve().parent.parent / "prompts"
+
+__all__ = ["build_prompts"]
+
+
+def build_prompts(question: str, *, ranked: bool) -> tuple[str, str]:
+    """Return (system, user) prompt pair.
+
+    Parameters
+    ----------
+    question : str
+        The raw question or hop prompt body (with placeholders already filled).
+    ranked : bool
+        When True, instructs the model to emit a ranked list of answers.  When
+        False, the legacy single-answer format is used.
+    """
+    # Load global header once for both modes.
+    try:
+        system_block = (_PROMPTS_DIR / "global_header.txt").read_text(encoding="utf-8")
+    except FileNotFoundError:
+        # Fallback to new canonical name if legacy not found.
+        system_block = (_PROMPTS_DIR / "GLOBAL_HEADER.txt").read_text(encoding="utf-8")
+
+    # Mode-specific few-shot examples and footer.
+    flavour = "ranked" if ranked else "single"
+    examples_path = _PROMPTS_DIR / f"examples_{flavour}.txt"
+    footer_path = _PROMPTS_DIR / f"footer_{flavour}.txt"
+
+    examples = examples_path.read_text(encoding="utf-8") if examples_path.exists() else ""
+    footer = footer_path.read_text(encoding="utf-8") if footer_path.exists() else ""
+
+    user_block_parts = []
+    if examples:
+        user_block_parts.append(examples)
+    user_block_parts.append(question)
+    if footer:
+        user_block_parts.append(footer)
+
+    user_block = "\n\n".join(user_block_parts)
+
+    return system_block, user_block 
+
+## 0012. multi_coder_analysis\core\regex\__init__.py
+----------------------------------------------------------------------------------------------------
+from .engine import Engine
+from . import stats
+from . import loader
+
+__all__ = ["Engine"] 
+
+## 0013. multi_coder_analysis\core\regex\engine.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Class-based regex engine for the 12-hop Tree-of-Thought pipeline.
+
+The Engine class encapsulates regex matching logic as a stateless, first-class
+object that can be instantiated with different rule sets.
+"""
+
+# Prefer the "regex" engine if available (supports variable-width look-behinds).
+try:
+    import regex as re  # type: ignore
+except ImportError:  # pragma: no cover
+    import re  # type: ignore
+
+import logging
+from typing import Optional, TypedDict, Callable
+from collections import Counter
+import threading
+import importlib
+
+# Import rules - handle both package and script contexts
+try:
+    from ...regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
+except ImportError:  # pragma: no cover
+    try:
+        from multi_coder_analysis.regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
+    except ImportError:
+        # Final fallback for script execution
+        from regex_rules import COMPILED_RULES, PatternInfo, RAW_RULES  # type: ignore
+
+__all__ = ["Engine", "Answer"]
+
+
+class Answer(TypedDict):
+    """Typed structure returned when a regex rule fires."""
+    answer: str
+    rationale: str
+    frame: Optional[str]
+    regex: dict  # detailed match information
+
+
+class Engine:
+    """Stateless regex matching engine with configurable rule sets.
+    
+    Each Engine instance encapsulates its own rule statistics and configuration,
+    enabling multiple engines with different behaviors to coexist.
+    """
+    
+    # Class-level singleton for the default engine
+    _DEFAULT: Optional["Engine"] = None
+    
+    def __init__(
+        self,
+        rules: Optional[dict[int, list[PatternInfo]]] = None,
+        global_enabled: bool = True,
+        force_shadow: bool = False,
+        hit_logger: Optional[Callable[[dict], None]] = None,
+    ):
+        """Initialize a new Engine instance.
+        
+        Args:
+            rules: Hop -> PatternInfo mapping. If None, uses COMPILED_RULES.
+            global_enabled: Whether regex matching is enabled.
+            force_shadow: If True, regex runs but never short-circuits.
+            hit_logger: Optional callback for successful matches.
+        """
+        self._rules = rules if rules is not None else COMPILED_RULES
+        self._global_enabled = global_enabled
+        self._force_shadow = force_shadow
+        self._hit_logger = hit_logger
+        self._rule_stats: dict[str, Counter] = {}
+        self._stat_lock = threading.Lock()
+    
+    @classmethod
+    def default(cls) -> "Engine":
+        """Get the default singleton Engine instance.
+        
+        This provides backward compatibility with the module-level API.
+        """
+        if cls._DEFAULT is None:
+            cls._DEFAULT = cls()
+        return cls._DEFAULT
+    
+    def set_global_enabled(self, flag: bool) -> None:
+        """Enable or disable regex matching globally."""
+        self._global_enabled = flag
+    
+    def set_force_shadow(self, flag: bool) -> None:
+        """When True, regex runs but never short-circuits (shadow mode)."""
+        self._force_shadow = flag
+    
+    def set_hit_logger(self, fn: Optional[Callable[[dict], None]]) -> None:
+        """Register a callback to receive detailed match information."""
+        self._hit_logger = fn
+    
+    def get_rule_stats(self) -> dict[str, Counter]:
+        """Get per-rule statistics for this engine instance."""
+        return dict(self._rule_stats)
+    
+    def _rule_fires(self, rule: PatternInfo, text: str) -> bool:
+        """Return True iff rule matches positively and is not vetoed."""
+        if not isinstance(rule.yes_regex, re.Pattern):
+            logging.error("COMPILED_RULES must contain compiled patterns")
+            return False
+
+        positive = bool(rule.yes_regex.search(text))
+        if not positive:
+            return False
+
+        if rule.veto_regex and isinstance(rule.veto_regex, re.Pattern):
+            if rule.veto_regex.search(text):
+                return False
+        return True
+    
+    def match(self, ctx) -> Optional[Answer]:  # noqa: ANN001
+        """Attempt to answer the current hop deterministically.
+
+        Parameters
+        ----------
+        ctx : HopContext
+            The current hop context (expects attributes: `q_idx`, `segment_text`).
+
+        Returns
+        -------
+        Optional[Answer]
+            • Dict with keys {answer, rationale, frame} when a single live rule
+              fires with certainty.
+            • None when no rule (or >1 rules) fire, or hop not covered, or rule is
+              in shadow mode.
+        """
+        hop: int = getattr(ctx, "q_idx")
+        text: str = getattr(ctx, "segment_text")
+
+        if not self._global_enabled:
+            return None
+
+        rules = self._rules.get(hop, [])
+        if not rules:
+            # Try lazy reload for robustness
+            try:
+                from ... import regex_rules as _rr  # type: ignore
+                importlib.reload(_rr)
+                rules = _rr.COMPILED_RULES.get(hop, [])
+            except Exception:  # pragma: no cover
+                rules = []
+
+        if not rules:
+            return None
+
+        # Safety net: merge missing canonical rules
+        try:
+            from ... import regex_rules as _rr  # package context
+        except ImportError:  # script context
+            try:
+                from multi_coder_analysis import regex_rules as _rr  # type: ignore
+            except ImportError:
+                import regex_rules as _rr  # type: ignore
+
+        _master_rules = _rr.COMPILED_RULES.get(hop, [])
+        if _master_rules:
+            existing_names = {r.name for r in rules}
+            for _r in _master_rules:
+                if _r.name not in existing_names:
+                    rules.append(_r)
+
+        winning_rule: Optional[PatternInfo] = None
+        first_hit_rule: Optional[PatternInfo] = None
+
+        # Evaluate every rule for statistics
+        for rule in rules:
+            fired = self._rule_fires(rule, text)
+
+            # Thread-safe stats update
+            with self._stat_lock:
+                ctr = self._rule_stats.setdefault(rule.name, Counter())
+                ctr["total"] += 1
+                if fired:
+                    ctr["hit"] += 1
+
+            # Record first hit for shadow-mode logging
+            if fired and first_hit_rule is None:
+                first_hit_rule = rule
+
+            if (
+                fired
+                and not self._force_shadow
+                and (rule.mode == "live" or rule.mode == "shadow")
+            ):
+                if winning_rule is not None:
+                    # Tolerate multiple hits if they agree on frame
+                    if rule.yes_frame == winning_rule.yes_frame:
+                        continue
+
+                    # Conflicting frames → fall-through to LLM
+                    logging.debug(
+                        "Regex engine ambiguity: >1 conflicting rule fired for hop %s (%s vs %s)",
+                        hop,
+                        winning_rule.name,
+                        rule.name,
+                    )
+                    return None
+                winning_rule = rule
+
+        # Shadow-mode logging
+        if winning_rule is None:
+            logging.debug("No regex rule matched for hop %s", hop)
+
+            # shadow mode accounting
+            from multi_coder_analysis.providers.base import _USAGE_ACCUMULATOR as _ACC  # avoid cycle
+            _ACC["total_hops"] = _ACC.get("total_hops", 0) + 1
+            if self._force_shadow:
+                _ACC["regex_hit_shadow"] = _ACC.get("regex_hit_shadow", 0) + 1
+
+            return None
+
+        # ---- counters ----
+        from multi_coder_analysis.providers.base import _USAGE_ACCUMULATOR as _ACC  # local import
+        _ACC["regex_yes"] = _ACC.get("regex_yes", 0) + 1
+        _ACC["total_hops"] = _ACC.get("total_hops", 0) + 1
+
+        # Compute match details
+        m = winning_rule.yes_regex.search(text)  # type: ignore[arg-type]
+        span = [m.start(), m.end()] if m else None
+        captures = list(m.groups()) if m else []
+
+        rationale = f"regex:{winning_rule.name} matched"
+
+        # Emit hit record
+        if self._hit_logger is not None:
+            try:
+                self._hit_logger({
+                    "statement_id": getattr(ctx, "statement_id", None),
+                    "hop": hop,
+                    "segment": text,
+                    "rule": winning_rule.name,
+                    "frame": winning_rule.yes_frame,
+                    "mode": winning_rule.mode,
+                    "span": span,
+                })
+            except Exception as e:  # pragma: no cover
+                logging.debug("Regex hit logger raised error: %s", e, exc_info=True)
+
+        return {
+            "answer": "yes",
+            "rationale": rationale,
+            "frame": winning_rule.yes_frame,
+            "regex": {
+                "rule": winning_rule.name,
+                "span": span,
+                "captures": captures,
+            },
+        }
+
+
+# Backward compatibility: module-level functions delegate to default engine
+def match(ctx) -> Optional[Answer]:  # noqa: ANN001
+    """Backward compatibility function - delegates to Engine.default().match()."""
+    return Engine.default().match(ctx)
+
+
+def set_global_enabled(flag: bool) -> None:
+    """Backward compatibility function."""
+    Engine.default().set_global_enabled(flag)
+
+
+def set_force_shadow(flag: bool) -> None:
+    """Backward compatibility function."""
+    Engine.default().set_force_shadow(flag)
+
+
+def get_rule_stats() -> dict[str, Counter]:
+    """Backward compatibility function."""
+    return Engine.default().get_rule_stats()
+
+
+def set_hit_logger(fn: Callable[[dict], None]) -> None:
+    """Backward compatibility function."""
+    Engine.default().set_hit_logger(fn)
+
+
+# Expose module-level globals for backward compatibility
+_GLOBAL_ENABLE = True
+_FORCE_SHADOW = False
+_HIT_LOG_FN: Optional[Callable[[dict], None]] = None 
+
+## 0014. multi_coder_analysis\core\regex\loader.py
+----------------------------------------------------------------------------------------------------
+"""Regex rule loader with plugin support (Phase 3)."""
+
+from __future__ import annotations
+
+import re
+import yaml
+from importlib import resources
+from typing import List, Pattern
+
+__all__ = ["load_rules"]
+
+
+def load_rules() -> List[List[Pattern[str]]]:
+    """Load regex rules from YAML files.
+    
+    Returns:
+        List of rule lists, indexed by hop number (1-12)
+    """
+    # --------------------------------------------------
+    # Locate the bundled YAML via importlib.resources – this works regardless
+    # of whether the package is executed from an unpacked directory tree *or*
+    # an installed, zipped wheel.
+    # --------------------------------------------------
+    try:
+        # Fallback to package *root* then sub-path because 'multi_coder_analysis.regex'
+        # is not a Python package (no __init__.py).
+        rules_text = resources.files("multi_coder_analysis").joinpath("regex", "hop_patterns.yml").read_text("utf-8")
+    except (FileNotFoundError, ModuleNotFoundError):
+        # Package wasn't shipped with rules – treat as "no-op" engine.
+        return [[] for _ in range(13)]  # 0-12, using 1-12
+
+    try:
+        data = yaml.safe_load(rules_text)
+        
+        # Convert to compiled patterns
+        rules = [[] for _ in range(13)]  # 0-12, using 1-12
+        
+        if data and isinstance(data, dict):
+            for hop_key, patterns in data.items():
+                try:
+                    hop_num = int(str(hop_key).lstrip("Qq"))
+                    if 1 <= hop_num <= 12 and isinstance(patterns, list):
+                        rules[hop_num] = [
+                            re.compile(pattern, re.IGNORECASE)
+                            for pattern in patterns
+                            if isinstance(pattern, str)
+                        ]
+                except (ValueError, IndexError):
+                    continue
+        
+        return rules
+        
+    except Exception:
+        # Fallback to empty rules on any error
+        return [[] for _ in range(13)] 
+
+## 0015. multi_coder_analysis\core\regex\stats.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Regex engine statistics and reporting utilities."""
+
+from collections import Counter
+from typing import Dict, Any
+import json
+from pathlib import Path
+
+
+def format_rule_stats(stats: Dict[str, Counter]) -> Dict[str, Any]:
+    """Format rule statistics for human-readable output.
+    
+    Args:
+        stats: Dictionary mapping rule names to hit/total counters.
+        
+    Returns:
+        Formatted statistics with coverage percentages.
+    """
+    formatted = {}
+    total_evaluations = 0
+    total_hits = 0
+    
+    for rule_name, counter in stats.items():
+        hits = counter.get("hit", 0)
+        total = counter.get("total", 0)
+        coverage = (hits / total * 100) if total > 0 else 0.0
+        
+        formatted[rule_name] = {
+            "hits": hits,
+            "total_evaluations": total,
+            "coverage_percent": round(coverage, 2)
+        }
+        
+        total_evaluations += total
+        total_hits += hits
+    
+    # Add overall summary
+    overall_coverage = (total_hits / total_evaluations * 100) if total_evaluations > 0 else 0.0
+    formatted["_summary"] = {
+        "total_rules": len(stats),
+        "total_hits": total_hits,
+        "total_evaluations": total_evaluations,
+        "overall_coverage_percent": round(overall_coverage, 2)
+    }
+    
+    return formatted
+
+
+def export_stats_to_json(stats: Dict[str, Counter], output_path: Path) -> None:
+    """Export rule statistics to a JSON file.
+    
+    Args:
+        stats: Rule statistics from Engine.get_rule_stats().
+        output_path: Path where to write the JSON file.
+    """
+    formatted = format_rule_stats(stats)
+    
+    with output_path.open('w', encoding='utf-8') as f:
+        json.dump(formatted, f, indent=2, ensure_ascii=False)
+
+
+def print_stats_summary(stats: Dict[str, Counter]) -> None:
+    """Print a human-readable summary of rule statistics.
+    
+    Args:
+        stats: Rule statistics from Engine.get_rule_stats().
+    """
+    formatted = format_rule_stats(stats)
+    summary = formatted.pop("_summary")
+    
+    print(f"\n📊 Regex Engine Statistics Summary")
+    print(f"{'='*50}")
+    print(f"Total rules: {summary['total_rules']}")
+    print(f"Total evaluations: {summary['total_evaluations']}")
+    print(f"Total hits: {summary['total_hits']}")
+    print(f"Overall coverage: {summary['overall_coverage_percent']:.2f}%")
+    print()
+    
+    if formatted:
+        print("Per-rule breakdown:")
+        print(f"{'Rule Name':<30} {'Hits':<8} {'Total':<8} {'Coverage':<10}")
+        print("-" * 60)
+        
+        # Sort by coverage descending
+        sorted_rules = sorted(
+            formatted.items(),
+            key=lambda x: x[1]["coverage_percent"],
+            reverse=True
+        )
+        
+        for rule_name, data in sorted_rules:
+            print(f"{rule_name:<30} {data['hits']:<8} {data['total_evaluations']:<8} {data['coverage_percent']:<10.2f}%")
+
+
+__all__ = ["format_rule_stats", "export_stats_to_json", "print_stats_summary"] 
+
+## 0016. multi_coder_analysis\core\self_consistency.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Self-consistency decoding helpers.
+
+This module implements the multi-path sampling + voting strategy popularised
+by the *Self-Consistency* paper.  The public surface consists of two helpers:
+
+1. decode_paths() → runs *N* independent passes through the deterministic
+   Tree-of-Thought pipeline using stochastic decoding.
+2. aggregate()    → collapses the list of answers into a single prediction
+   according to one of three voting rules.
+
+The implementation is intentionally dependency-free – we rely on the existing
+`build_tot_pipeline` to perform a single ToT pass and use provider-supplied
+usage metadata as a crude log-prob proxy when length-normalisation is needed.
+"""
+
+from collections import Counter, defaultdict
+from typing import Dict, List, Tuple
+
+from multi_coder_analysis.core.pipeline.tot import build_tot_pipeline
+from multi_coder_analysis.models import HopContext
+from multi_coder_analysis.providers import ProviderProtocol, get_provider
+from multi_coder_analysis.providers.base import get_usage_accumulator
+
+__all__ = [
+    "decode_paths",
+    "aggregate",
+]
+
+
+# ---------------------------------------------------------------------------
+# Multi-path decoding
+# ---------------------------------------------------------------------------
+
+def decode_paths(
+    base_ctx: HopContext,
+    provider: ProviderProtocol,
+    model: str,
+    *,
+    votes: int,
+    temperature: float,
+    top_k: int,
+    top_p: float,
+    ranked_list: bool = False,
+    max_candidates: int = 5,
+) -> List[Tuple[list[str] | str, float]]:
+    """Run the ToT pipeline *votes* times with stochastic sampling.
+
+    Parameters
+    ----------
+    base_ctx
+        Template context holding the statement text + IDs.
+    provider
+        Provider implementing the generate() interface.
+    model
+        Model identifier.
+    votes
+        Number of independent samples.
+    temperature, top_k, top_p
+        Sampling hyper-parameters forwarded to the provider.  Note that the
+        internal ToT pipeline currently passes only *temperature*.  Providers
+        expose *top_k*/*top_p* anyway, so we call them directly when ToT falls
+        through to the LLM.
+    ranked_list
+        Whether to return a ranked list of candidates.
+    max_candidates
+        Maximum number of candidates to return in ranked list.
+
+    Returns
+    -------
+    list of tuples
+        Each tuple is (answer, score) where *answer* is the final frame label
+        or a list of labels if multiple answers are possible, and *score* is a
+        rough heuristic of likelihood (negative length-normalised token count
+        when probability not available).
+    """
+
+    # Determine provider short name once for quick cloning per vote
+    prov_name = provider.__class__.__name__.replace("Provider", "").lower()
+
+    samples: List[Tuple[list[str] | str, float]] = []
+
+    for _ in range(votes):
+        local_provider = get_provider(prov_name)
+
+        # Build fresh pipeline each vote to avoid state leakage
+        pipeline = build_tot_pipeline(
+            local_provider,
+            model,
+            temperature=temperature,
+            top_k=(None if top_k == 0 else top_k),
+            top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
+        )
+
+        before_usage = get_usage_accumulator().copy()
+
+        ctx = HopContext(
+            statement_id=base_ctx.statement_id,
+            segment_text=base_ctx.segment_text,
+            article_id=base_ctx.article_id,
+        )
+
+        pipeline.run(ctx)
+
+        after_usage = get_usage_accumulator().copy()
+
+        score = float(after_usage.get("total_tokens", 0) - before_usage.get("total_tokens", 0))
+
+        ans_payload = ctx.final_frame or (ctx.ranking or None)
+        if ans_payload is not None:
+            if isinstance(ans_payload, list):
+                ans_payload = ans_payload[: max_candidates]
+            samples.append((ans_payload, score))
+
+    return samples
+
+
+# ---------------------------------------------------------------------------
+# Voting aggregation
+# ---------------------------------------------------------------------------
+
+def _majority(pairs):  # type: ignore[override]
+    """Hard vote.
+
+    If an element is a ranked list, use its first candidate. Otherwise treat it
+    as a plain string label.
+    """
+
+    def _top(label):
+        return label[0] if isinstance(label, list) else label
+
+    counts = Counter(_top(a) for a, _ in pairs)
+    ans, freq = counts.most_common(1)[0]
+    return ans, freq / len(pairs)
+
+
+def _ranked(pairs: List[Tuple[list[str] | str, float]], normalise: bool) -> Tuple[str, float]:
+    buckets: Dict[str, float] = defaultdict(float)
+    counts: Dict[str, int] = defaultdict(int)
+
+    for ans, score in pairs:
+        key = ans[0] if isinstance(ans, list) else ans
+        buckets[key] += score
+        counts[key] += 1
+
+    if normalise:
+        # Average score per candidate
+        for ans in buckets:
+            buckets[ans] /= max(counts[ans], 1)
+
+    # Edge cases
+    ans = min(buckets, key=buckets.get)
+    best = buckets[ans]
+    worst = max(buckets.values()) or 1
+
+    # unanimous vote → certainty 1.0
+    if len(buckets) == 1:
+        return ans, 1.0
+    # zero-cost paths (all regex) → unknown confidence
+    if worst == 0:
+        return ans, 0.0
+
+    conf = 1 - (best / worst)
+    return ans, conf
+
+
+def _irv(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
+    from collections import Counter
+    rankings = [(r if isinstance(r, list) else [r]) for r, _ in pairs]
+    if not rankings:
+        return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
+    while True:
+        first = Counter(r[0] for r in rankings if r)
+        if not first:
+            return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
+        winner, votes = first.most_common(1)[0]
+        if votes > len(rankings) / 2:
+            return winner, votes / len(rankings)
+        # Determine loser deterministically (alphabetical among least votes)
+        min_votes = min(first.values())
+        losers = sorted([c for c, v in first.items() if v == min_votes])
+        loser = losers[0]
+        rankings = [[c for c in r if c != loser] for r in rankings]
+
+
+def _borda(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
+    from collections import defaultdict
+    scores = defaultdict(int)
+    for ranking, _ in pairs:
+        ranking = ranking if isinstance(ranking, list) else [ranking]
+        for idx, cand in enumerate(ranking):
+            scores[cand] += len(ranking) - idx
+    if not scores:
+        return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
+    winner = max(scores, key=scores.get)
+    total = sum(scores.values()) or 1
+    return winner, scores[winner] / total
+
+
+def _mrr(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
+    from collections import defaultdict
+    mrr_scores = defaultdict(float)
+    for ranking, _ in pairs:
+        ranking = ranking if isinstance(ranking, list) else [ranking]
+        for idx, cand in enumerate(ranking, 1):
+            mrr_scores[cand] += 1 / idx
+    if not mrr_scores:
+        return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
+    winner = max(mrr_scores, key=mrr_scores.get)
+    total = sum(mrr_scores.values()) or 1
+    return winner, mrr_scores[winner] / total
+
+
+def aggregate(pairs, rule: str = "majority") -> tuple[str, float]:
+    """Collapse *pairs* into (answer, confidence) according to *rule*."""
+    if not pairs:
+        return "unknown", 0.0
+
+    rule = rule.lower()
+    if rule == "irv":
+        return _irv(pairs)
+    if rule == "borda":
+        return _borda(pairs)
+    if rule == "mrr":
+        return _mrr(pairs)
+    if rule == "majority":
+        return _majority(pairs)
+    if rule == "ranked":
+        return _ranked(pairs, normalise=True)
+    if rule == "ranked-raw":
+        return _ranked(pairs, normalise=False)
+    raise ValueError(f"Unknown rule: {rule}") 
+
+## 0017. multi_coder_analysis\core\tiebreaker.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Generic tie-breaking utilities used by consensus layers."""
+
+from collections import Counter
+from typing import List, Optional, Tuple
+
+__all__ = ["conservative_tiebreak"]
+
+
+def conservative_tiebreak(votes: List[str]) -> Tuple[bool, Optional[str]]:
+    """Return (has_consensus, winning_value).
+
+    The function implements a conservative rule: a value only wins if it
+    secures *strict* (>50 %) majority.  Otherwise, it reports no consensus.
+    """
+    ctr = Counter(votes)
+    if not ctr:
+        return False, None
+    winner, n = ctr.most_common(1)[0]
+    if n > len(votes) / 2:
+        return True, winner
+    return False, None 
+
+## 0018. multi_coder_analysis\models\__init__.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+from .hop import HopContext, BatchHopContext  # noqa: F401
+
+__all__ = [
+    "HopContext",
+    "BatchHopContext",
+] 
+
+## 0019. multi_coder_analysis\models\hop.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+from dataclasses import dataclass, field
+from typing import Optional, List, Dict, Any, TypedDict
+
+__all__ = [
+    "HopContext",
+    "BatchHopContext",
+]
+
+# ---------------------------------------------------------------------------
+# Typed aliases help downstream static analysis without dict[str, Any] noise.
+# ---------------------------------------------------------------------------
+AnalysisHistory = List[str]
+ReasoningTrace = List[Dict[str, Any]]
+RawLLMResponses = List[Dict[str, Any]]
+
+
+@dataclass
+class HopContext:
+    """State container for a single segment as it progresses through the 12-hop ToT chain."""
+
+    # -------------- Static Data --------------
+    statement_id: str
+    segment_text: str
+    # Optional article identifier (source document) – used for trace exports
+    article_id: Optional[str] = None
+
+    # -------------- Dynamic State --------------
+    q_idx: int = 0
+    is_concluded: bool = False
+    final_frame: Optional[str] = None           # The definitive frame once concluded (e.g., Alarmist, Neutral)
+    final_justification: Optional[str] = None   # The rationale for the final decision
+    ranking: Optional[list[str]] = None         # ordered list when ranked_list=True
+
+    # Track consecutive "uncertain" responses to support early termination.
+    uncertain_count: int = 0
+
+    # -------------- Logging & Audit Trails --------------
+    analysis_history: AnalysisHistory = field(default_factory=list)
+    reasoning_trace: ReasoningTrace = field(default_factory=list)
+    raw_llm_responses: RawLLMResponses = field(default_factory=list)
+
+    # ───────── Batch Positional Meta ─────────
+    batch_pos: Optional[int] = None  # 1-based index within API call
+    batch_size: Optional[int] = None  # total number of segments in API call
+
+    # -------------- Parsed prompt metadata --------------
+    prompt_meta: Dict[str, Any] = field(default_factory=dict, repr=False)
+
+    # ───────── Permutation bookkeeping ─────────
+    permutation_idx: int | None = None
+
+    # -------------- Convenience Properties --------------
+    @property
+    def dim1_frame(self) -> Optional[str]:
+        """Alias retained for backward compatibility with downstream scripts."""
+        return self.final_frame
+
+
+@dataclass
+class BatchHopContext:
+    """Container for a batch of segments processed together at a single hop."""
+
+    batch_id: str
+    hop_idx: int
+    segments: List[HopContext]
+
+    # Raw LLM I/O for debugging
+    raw_prompt: str = ""
+    raw_response: str = ""
+    thoughts: Optional[str] = None 
+
+## 0020. multi_coder_analysis\providers\__init__.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+from importlib import import_module
+from typing import TYPE_CHECKING
+
+from .base import ProviderProtocol
+
+if TYPE_CHECKING:
+    # Avoid circular imports during type checking
+    from .gemini import GeminiProvider
+    from .openrouter import OpenRouterProvider
+
+__all__ = ["ProviderProtocol", "get_provider", "GeminiProvider", "OpenRouterProvider"]
+
+
+def get_provider(name: str, **kwargs) -> ProviderProtocol:
+    """Factory function to create provider instances.
+    
+    Args:
+        name: Provider name ('gemini' or 'openrouter').
+        **kwargs: Additional arguments passed to provider constructor.
+        
+    Returns:
+        Provider instance implementing ProviderProtocol.
+        
+    Raises:
+        ValueError: If provider name is not recognized.
+        ImportError: If provider module cannot be imported.
+    """
+    provider_map = {
+        "gemini": "multi_coder_analysis.providers.gemini",
+        "openrouter": "multi_coder_analysis.providers.openrouter",
+    }
+    
+    if name not in provider_map:
+        raise ValueError(f"Unknown provider: {name}. Available: {list(provider_map.keys())}")
+    
+    try:
+        module = import_module(provider_map[name])
+
+        from inspect import isclass
+
+        # Collect *all* candidate classes that look like providers.
+        candidates = [
+            getattr(module, attr_name)
+            for attr_name in dir(module)
+            if attr_name.endswith("Provider") and isclass(getattr(module, attr_name))
+        ]
+
+        # Return the first class that satisfies the minimal interface.
+        for cls in candidates:
+            if all(hasattr(cls, m) for m in ("generate", "get_last_thoughts", "get_last_usage")):
+                return cls(**kwargs)
+
+        raise ImportError(f"No provider class found in {provider_map[name]}")
+        
+    except ImportError as e:
+        raise ImportError(f"Could not import provider {name}: {e}") from e
+
+
+# Re-export provider classes for direct import
+def __getattr__(name: str):
+    """Lazy import of provider classes."""
+    if name == "GeminiProvider":
+        from .gemini import GeminiProvider
+        return GeminiProvider
+    elif name == "OpenRouterProvider":
+        from .openrouter import OpenRouterProvider
+        return OpenRouterProvider
+    else:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}") 
+
+## 0021. multi_coder_analysis\providers\base.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+from typing import Protocol, runtime_checkable, Callable, Dict
+import threading
+
+__all__ = ["ProviderProtocol"]
+
+
+@runtime_checkable
+class ProviderProtocol(Protocol):
+    """Protocol defining the interface for LLM providers.
+    
+    This uses PEP 544 structural subtyping, allowing any class with the
+    required methods to be used as a provider without explicit inheritance.
+    """
+    
+    def generate(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        model: str,
+        temperature: float = 0.0,
+        *,
+        top_k: int | None = None,
+        top_p: float | None = None,
+    ) -> str:
+        """Generate a response from the LLM.
+        
+        The **public** Tree-of-Thought API passes two separate prompt strings –
+        a high-level *system/developer* instruction and the actual *user*
+        content.  Providers must therefore accept both arguments explicitly so
+        the call-site ordering is unambiguous.
+        
+        Args:
+            system_prompt: Instruction that sets assistant behaviour.
+            user_prompt: The user-visible prompt or question.
+            model: Model identifier (provider-specific).
+            temperature: Sampling temperature (``0.0`` = deterministic).
+            
+        Returns:
+            The generated response text.
+        """
+        ...
+    
+    def get_last_thoughts(self) -> str:
+        """Get thinking/reasoning traces from the last generate() call.
+        
+        Returns:
+            Thinking traces as a string, or empty string if not available.
+        """
+        ...
+    
+    def get_last_usage(self) -> dict:
+        """Get token usage statistics from the last generate() call.
+        
+        Returns:
+            Dictionary with keys like 'prompt_tokens', 'response_tokens', 
+            'total_tokens', etc. Empty dict if not available.
+        """
+        ... 
+
+    # ------------------------------------------------------------------
+    # Incremental usage helpers (v0.5.3)
+    # ------------------------------------------------------------------
+
+    def reset_usage(self) -> None:  # noqa: D401
+        """Reset the internal accumulated usage counters (per-instance)."""
+        ...
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        """Return accumulated usage since last reset_usage()."""
+        ...
+
+# ---------------------------------------------------------------------------
+# Global usage accumulator – lightweight telemetry across providers and threads
+# ---------------------------------------------------------------------------
+
+_USAGE_ACCUMULATOR: Dict[str, float] = {
+    "prompt_tokens": 0,
+    "response_tokens": 0,
+    "thought_tokens": 0,
+    "total_tokens": 0,
+    "llm_calls": 0,
+    "regex_yes": 0,
+    "regex_hit_shadow": 0,
+    "total_hops": 0,
+    # running USD cost across the whole process
+    "cost_usd": 0.0,
+}
+
+_USAGE_LOCK = threading.Lock()
+
+def get_usage_accumulator() -> Dict[str, int]:  # noqa: D401
+    """Return the live, process-wide token usage counter (mutable)."""
+
+    with _USAGE_LOCK:
+        return dict(_USAGE_ACCUMULATOR)
+
+
+def track_usage(fn: Callable):  # type: ignore[type-arg]
+    """Decorator: after *fn* executes, merge provider.get_last_usage() into global counter."""
+
+    def _wrap(self, *args, **kwargs):  # type: ignore[no-self-use]
+        out = fn(self, *args, **kwargs)
+        if hasattr(self, "get_last_usage"):
+            usage = self.get_last_usage() or {}
+            def _safe_int(val):
+                try:
+                    return int(val or 0)
+                except Exception:
+                    return 0
+
+            with _USAGE_LOCK:
+                _USAGE_ACCUMULATOR["prompt_tokens"] += _safe_int(usage.get("prompt_tokens"))
+                _USAGE_ACCUMULATOR["response_tokens"] += _safe_int(usage.get("response_tokens"))
+                _USAGE_ACCUMULATOR["thought_tokens"] += _safe_int(usage.get("thought_tokens"))
+                _USAGE_ACCUMULATOR["total_tokens"] += _safe_int(usage.get("total_tokens"))
+                _USAGE_ACCUMULATOR["llm_calls"] += 1
+
+                # ---------- per-call cost ----------
+                try:
+                    from multi_coder_analysis.pricing import estimate_cost
+
+                    provider_name = self.__class__.__name__.replace("Provider", "").lower()
+                    # model positional arg index 2 in generate(system, user, model, ...)
+                    model_name = kwargs.get("model") if "model" in kwargs else (
+                        args[2] if len(args) > 2 else ""
+                    )
+
+                    cost_info = estimate_cost(
+                        provider=provider_name,
+                        model=model_name,
+                        prompt_tokens=_safe_int(usage.get("prompt_tokens")),
+                        response_tokens=_safe_int(usage.get("response_tokens")),
+                        cached_tokens=_safe_int(usage.get("cached_tokens", 0)),
+                    )
+
+                    _USAGE_ACCUMULATOR["cost_usd"] += cost_info["cost_total_usd"]
+
+                    # store cost back on usage dict for provider-level inspection
+                    usage["cost_usd"] = cost_info["cost_total_usd"]
+                except Exception:  # pragma: no cover – cost calc must never crash run
+                    pass
+        return out
+
+    return _wrap 
+
+# ------------------------------------------------------------
+# Convenience helper for callers interested only in the dollars
+# ------------------------------------------------------------
+
+def get_cost_accumulator() -> float:  # noqa: D401
+    """Return the running USD cost for the current Python process."""
+    with _USAGE_LOCK:
+        return float(_USAGE_ACCUMULATOR.get("cost_usd", 0.0)) 
+
+## 0022. multi_coder_analysis\providers\gemini.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+import os
+# NOTE: Google Gemini SDK is optional in many test environments. We therefore
+# *attempt* to import it lazily and only raise a helpful error message at
+# instantiation time, not at module import time (which would break unrelated
+# unit-tests that merely import the parent package).
+import logging
+from typing import Optional, TYPE_CHECKING
+
+# Defer heavy / optional dependency import – set sentinels instead.  We rely
+# on run-time checks within `__init__` to raise when the SDK is truly needed.
+if TYPE_CHECKING:
+    # Type-hints only (ignored at run-time when type checkers are disabled)
+    from google import genai as _genai  # pragma: no cover
+    from google.genai import types as _types  # pragma: no cover
+
+genai = None  # will attempt to import lazily in __init__
+types = None
+# Import typing protocol *only* for static type-checkers – we do **not** need to
+# subclass it at runtime.
+from .base import ProviderProtocol
+from .base import track_usage
+
+class GeminiProvider:  # implements ProviderProtocol via duck-typing
+    def __init__(self, api_key: Optional[str] = None):
+        global genai, types  # noqa: PLW0603 – we intentionally mutate module globals
+
+        # Lazy-load the Google SDK only when the provider is actually
+        # instantiated (i.e. during *production* runs, not unit-tests that
+        # only touch auxiliary helpers like _assemble_prompt).
+        if genai is None or types is None:
+            try:
+                from google import genai as _genai  # type: ignore
+                from google.genai import types as _types  # type: ignore
+
+                genai = _genai  # promote to module-level for reuse
+                types = _types
+            except ImportError as e:
+                # Surface a clear, actionable message **only** when the class
+                # is actually used.  This keeps import-time side effects
+                # minimal and avoids breaking unrelated tests.
+                raise ImportError(
+                    "The google-genai SDK is required to use GeminiProvider."
+                    "\n   ➜  pip install google-genai"
+                ) from e
+
+        key = api_key or os.getenv("GOOGLE_API_KEY")
+        if not key:
+            raise ValueError("GOOGLE_API_KEY not set")
+
+        # Initialize client directly with the API key (newer SDK style)
+        self._client = genai.Client(api_key=key)
+
+    @track_usage
+    def generate(self, system_prompt: str, user_prompt: str, model: str, temperature: float = 0.0, *, top_k: int | None = None, top_p: float | None = None) -> str:
+        cfg = {"temperature": temperature}
+        # Use provided sampling params falling back to defaults
+        if top_p is not None:
+            cfg["top_p"] = float(top_p)
+        else:
+            cfg["top_p"] = 0.1
+        if top_k is not None:
+            cfg["top_k"] = int(top_k)
+        else:
+            cfg["top_k"] = 1
+        cfg["system_instruction"] = system_prompt
+
+        if "2.5" in model:
+            cfg["thinking_config"] = types.ThinkingConfig(include_thoughts=True)
+        
+        resp = self._client.models.generate_content(
+            model=model,
+            contents=user_prompt,
+            config=types.GenerateContentConfig(**cfg)
+        )
+        
+        # Capture usage metadata if available
+        usage_meta = getattr(resp, 'usage_metadata', None)
+        if usage_meta:
+            def _safe_int(val):
+                try:
+                    return int(val or 0)
+                except Exception:
+                    return 0
+
+            prompt_toks = _safe_int(getattr(usage_meta, 'prompt_token_count', 0))
+            # SDK renamed field from response_token_count → candidates_token_count
+            resp_toks = _safe_int(getattr(usage_meta, 'response_token_count', getattr(usage_meta, 'candidates_token_count', 0)))
+            thought_toks = _safe_int(getattr(usage_meta, 'thoughts_token_count', 0))
+            cached_toks  = _safe_int(getattr(usage_meta, 'cached_token_count', 0))
+            total_toks = _safe_int(getattr(usage_meta, 'total_token_count', 0))
+            self._last_usage = {
+                'prompt_tokens': prompt_toks,
+                'response_tokens': resp_toks,
+                'thought_tokens': thought_toks,
+                'cached_tokens':  cached_toks,
+                'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks),
+                'model': model,
+            }
+        else:
+            self._last_usage = {
+                'prompt_tokens': 0,
+                'response_tokens': 0,
+                'thought_tokens': 0,
+                'cached_tokens': 0,
+                'total_tokens': 0,
+                'model': model,
+            }
+        
+        # Stitch together parts (Gemini returns list‑of‑parts)
+        thoughts = ""
+        content = ""
+        
+        for part in resp.candidates[0].content.parts:
+            if not part.text:
+                continue
+            if hasattr(part, 'thought') and part.thought:
+                thoughts += part.text
+            else:
+                content += part.text
+        
+        # Store thoughts for potential retrieval
+        self._last_thoughts = thoughts
+        
+        return content.strip()
+    
+    def get_last_thoughts(self) -> str:
+        """Retrieve thinking traces from the last generate() call."""
+        return getattr(self, '_last_thoughts', '')
+
+    def get_last_usage(self) -> dict:
+        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0}) 
+
+## 0023. multi_coder_analysis\providers\openrouter.py
+----------------------------------------------------------------------------------------------------
+"""HTTP-level OpenRouter provider.
+
+Eliminates the hard dependency on the *openai* Python package so the CLI works
+out-of-the-box in minimal environments (CI, Docker).  The implementation
+conforms to ``ProviderProtocol`` via duck-typing only – no inheritance needed.
+"""
+
+from __future__ import annotations
+
+import os
+import logging
+from typing import Optional
+
+import requests
+
+from .base import ProviderProtocol
+from .base import track_usage
+
+_LOGGER = logging.getLogger(__name__)
+
+__all__ = ["OpenRouterProvider"]
+
+
+class OpenRouterProvider:
+    """Lightweight provider that talks to https://openrouter.ai via REST."""
+
+    _ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+
+    def __init__(self, api_key: Optional[str] = None):
+        self._api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        if not self._api_key:
+            raise ValueError("OPENROUTER_API_KEY not set")
+
+        self._last_usage: dict = {}
+        self._last_thoughts: str = ""
+
+    # ------------------------------------------------------------------
+    # ProviderProtocol interface
+    # ------------------------------------------------------------------
+    @track_usage
+    def generate(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        model: str,
+        temperature: float = 0.0,
+        *,
+        top_k: int | None = None,
+        top_p: float | None = None,
+    ) -> str:
+        headers = {
+            "Authorization": f"Bearer {self._api_key}",
+            "Content-Type": "application/json",
+        }
+
+        payload = {
+            "model": model,
+            "temperature": temperature,
+            **({"top_p": float(top_p)} if top_p is not None else {}),
+            **({"top_k": int(top_k)} if top_k is not None else {}),
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+        }
+
+        resp = requests.post(self._ENDPOINT, json=payload, headers=headers, timeout=30)
+        try:
+            resp.raise_for_status()
+        except Exception as exc:  # pragma: no cover
+            _LOGGER.error("OpenRouter request failed: %s", exc)
+            raise
+
+        data = resp.json()
+
+        # Save usage metadata if available (OpenAI style)
+        self._last_usage = data.get("usage", {}) if isinstance(data, dict) else {}
+        # Provide schema-complete defaults
+        self._last_usage.setdefault("thought_tokens", 0)
+
+        choice = data["choices"][0]
+        self._last_thoughts = choice.get("thoughts", "")  # rarely provided
+
+        return choice["message"]["content"].strip()
+
+    # ------------------------------------------------------------------
+    # Introspection helpers
+    # ------------------------------------------------------------------
+    def get_last_thoughts(self) -> str:
+        return self._last_thoughts
+
+    def get_last_usage(self) -> dict:  # noqa: D401 – simple struct
+        # Ensure numeric fields are ints for downstream math
+        return {k: int(v) for k, v in self._last_usage.items()} if self._last_usage else {
+            "prompt_tokens": 0,
+            "response_tokens": 0,
+            "total_tokens": 0,
+        } 
+
+## 0024. multi_coder_analysis\regex\hop_patterns.yml
+----------------------------------------------------------------------------------------------------
+# ------------------------------------------------------------------
+# Canonical regex catalogue for 12‑hop pipeline
+# File‑name:  hop_patterns.yml        (UTF‑8, no tabs)
+# ------------------------------------------------------------------
+# Schema
+#   <hop_number> (int) :
+#     - name          : CamelCase identifier (unique within hop)
+#       mode          : live | shadow           # default = live
+#       frame         : Alarmist | Reassuring | null
+#       pattern       : |-                      # block scalar, preserves NL
+#           <raw regex, unchanged>
+#       # veto_pattern: |-                      # optional
+#           <regex that cancels a positive hit>
+#
+# Notes
+# • Newlines are significant for readability—do **not** re‑wrap patterns.
+# • Indent the block scalar exactly two spaces so YAML treats the regex
+#   as literal text (nothing is escaped).
+# • Keep ordering by hop → pattern name; the engine preserves this order.
+# ------------------------------------------------------------------
+
+1:
+- name: IntensifierRiskAdjV2
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    # TECH_TERM_GUARD (2025-06-20)
+    (?ix)
+      \b(?:
+           highly\s+(?:pathogenic|contagious|transmissible|virulent) |
+           high[-\s]?pathogenic |
+           high[-\s]?path\B
+        )\b
+      (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
+  # Added negative look‑behind to exclude "deadly toll", "deadly cost"
+  pattern: |-
+    (?i)    # case-insensitive once – faster compile
+    # block idioms unrelated to epidemiological danger
+    (?<!toll\s|cost\s|sins\s|silence\s|so\scalled\s)
+    \b(?:(?:highly(?!\s+(?:pathogenic|susceptible)\b))
+        |alarmingly|certainly|deadlier|definitely|ever[-\s]*more|extremely|
+        frighteningly|more|particularly|progressively|severely|so|unusually|very)  # A-Z order
+        (?:\s+\w+){0,3}\s+
+    (?:brutal|catastrophic|contagious|dangerous|deadly|destructive|
+       infectious|lethal|severe|transmissible|virulent)\b|
+    \bless\s+safe\b|                                       # (2025-06-23) comparative risk form
+    \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
+    \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
+    \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
+
+- name: H1.AutoIntensifierRiskAdj
+  mode: shadow
+  frame: Alarmist
+  veto_pattern: |-
+    # TECH_TERM_GUARD (2025-06-20)
+    (?ix)
+      \b(?:
+           highly\s+(?:pathogenic|contagious|transmissible|virulent) |
+           high[-\s]?pathogenic |
+           high[-\s]?path\B
+        )\b
+      (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
+  pattern: 
+    (?:highly|particularly)\s+(?:contagious|dangerous|deadly|infectious|lethal|transmissible)\b
+2:
+- name: HighPotencyVerbMetaphor
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    # (a) keep price-trend guard
+    \btrending\s+sharply\s+(?:higher|lower)\b
+    |
+    # (c) macro-context guard – price/temperature/inflation backdrop ≠ impact
+    \bsoar(?:ed|ing)?\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?)) |
+    \bplung(?:ed|ing)\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?)) |
+    # (b) **containment override** – neutralise culling verbs so they fall
+    #     through to Q3 where the containment rule already handles them
+    (?i)\b(?:slaughter(?:ed|ing)?|culled?|destroyed?|euthan(?:iz|is)ed|
+           depopulated|disposed|buried)\b
+  pattern: |-
+    # Hop-2 literal guard – keep "spark shortages" Neutral
+    (?i)
+    # Guard — "spark shortages" stays Neutral
+    (?!\b(?:spark|sparking)\s+shortage(?:s)?\b)
+
+    (?:
+      # vivid verbs / alert phrases
+      \b(?:ravaged|devastated|obliterated|skyrocketed|plummeted|crashed|nosedived|
+         tanked|exploding|raging|tearing\sthrough|
+         overwhelmed|crippling|spiralled?|ballooned|
+         writh(?:e|ed|ing)|convuls(?:e|ed|ing)|gasp(?:ing|ed)|twitch(?:ing|ed))\b
+      |
+      # verb first:  soar(ed/ing) + metric inside 20 chars after
+      \bsoar(?:ed|ing)?\b(?=[^.]{0,20}\b(?:cases?|prices?|costs?|loss(?:es)?|
+                                    deaths?|fatalities|production|output|
+                                    supply|shortages?)\b)
+      |
+      # metric first: metric … soar(ed/ing) inside 20 chars after
+      \b(?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|production|
+          output|supply|shortages?)\b[^.]{0,20}\bsoar(?:ed|ing)?\b
+      |
+      # superlative-negative nouns
+      \b(?:most|record(?:-breaking)?|worst)\s+\w{0,12}?
+           \s+(?:disaster|crisis|outbreak|catastrophe|calamity)\b
+      |
+      # potent metaphors (explicit list for deterministic hits)
+      \b(?:ticking\s+time-?bomb|nightmare\s+scenario|powder\s+keg|
+         house\s+of\s+cards|train\s+wreck|collateral\s+damage)\b
+      |
+      # "on high alert" forms
+      (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|
+                                           threat|danger|risk)\b)|
+       (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)
+         \b[^.]{0,40}on\s+high\s+alert|
+       ^[^.]{0,60}\bon\s+high\s+alert\b)
+      |
+      # spark / stoke *panic-type* emotions  (plain "fears" stays Neutral)
+      \b(?:spark|stoke|fuel|reignit(?:e|ing|ed|es))\s+
+         (?:mass(?:ive)?\s+|widespread\s+|public\s+|nationwide\s+|
+            global\s+)?(?:panic|alarm|outrage|anxiety)\b
+      |
+      # intensifier + harm-noun (alphabetised for readability)
+      \b(?:enormous|gigantic|huge|immense|major|massive|
+         record(?:-breaking)?|severe|significant|unprecedented|vast)\s+
+         (?:crisis|damage|deaths?|disaster|fatalities|
+         loss(?:es)?|mortality|outbreaks?|shortages?|toll)\b
+    )
+
+# 2025-06-20 • Zero-FP rule promoted to live
+- name: OnHighAlert.Live
+  mode: live
+  frame: Alarmist
+  pattern: (?ix)\bon\W+high\W+alert\b
+
+3:
+- name: ModerateVerbPlusScale
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    \b(hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
+       spiked|jumped|shot\s+up|prompted(?!\s+authorities\s+to\s+consider))\b
+    (?=[^.]{0,120}\b(?:\d|%|percent|hundred|hundreds|thousand|thousands|million|millions|billion|billions|record|
+                     largest|unprecedented|severe|significant|overwhelming|
+                     devastating|disasters?|emergenc(?:y|ies))\b)
+    (?![^.]{0,20}\bfear(?:s|ed|ing)?\b)   # guard: psychological verbs ≠ impact
+
+    # 2025-06-18 containment-verb veto – keeps large-scale culling Neutral
+  veto_pattern: |-
+    # extend veto to "disposed" and "buried"
+    (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered|disposed|buried)\b
+
+- name: ScaleMultiplier
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+
+4:
+- name: LoadedQuestionAlarm
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    \b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned|afraid)\b
+    (?=[^.?]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|
+                     risk|infection|infected)\b)
+    |
+    # Rhetorical necessity-of-killing question (captures 'necessary to kill millions...')
+    \b(?:is|are|was|were)\s+it\s+(?:really\s+)?necessary\s+to\s+
+        (?:kill|cull|slaughter|destroy|euthan(?:ize|ise))\b
+        [^?]{0,60}?\b(?:millions?|thousands?|record|\d{1,3}(?:[, ]\d{3})+)\b
+    |
+    # safety-question pattern (2025-06-23)
+    \b(?:is|are|was|were)\s+it\s+(?:really\s+)?safe\s+to\b
+    |
+    # "How many more … have to die?” rhetorical question
+    \bhow\s+many\s+more\s+\w+\s+have\s+to\s+(?:die|be\s+killed|be\s+culled|perish)\b
+
+  # --- 2025-06-18 addition: Challenge-question over inaction ---
+
+- name: WhatIfQuestion
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    (?i)\bwhat\s+if\s+(?:we|this|the\s+\w+)\b
+
+- name: IgnoreDisasterQ
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    (?i)\bhow\s+long\s+can\s+we\s+(?:afford\s+to\s+)?(?:ignore|stand\s+by)\b
+
+5:
+- name: ExplicitCalming
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    \bwe\b(?:\s*\[[^\]]+\]\s*)?\s+(?:are|remain|feel)\s+
+        (?:confident|positive|optimistic|hopeful)\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
+    \b(?:are|feel)\s+(?:confident|positive|optimistic|hopeful)\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
+    \b(?:no\s+cause\s+for\s+alarm|
+        public\s+can\s+rest\s+easy|
+        fully\s+under\s+control|
+        rest\s+assured|
+        completely\s+safe|
+        (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
+        (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
+        \b(?:encouraging|welcome|heartening|excellent)\s+news\b|
+        \bwonderfully\s+high\b|
+        \bvery\s+well\s+protected\b|
+        \bprovid(?:ing|es)\s+relief\b|
+        \bshort[-\s]?term\s+blip\b|
+        \btemporary\s+setback\b|
+        (?:expected|likely|set)\s+to\s+resolve\s+quickly\b|
+        \bthankfully\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b|
+        \b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
+          .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
+        \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
+    | # generic optimism/confidence without "in X" clause
+    \b(?:i|we|they|officials?|authorities?)\s+
+      (?:feel|are)\s+
+      (?:positive|optimistic|hopeful)\s+
+      (?:that|about)\b
+
+- name: ExplicitCalming.SafeToEat.Live
+  mode: live
+  frame: Reassuring
+  pattern: |
+    \b(remains?|is|are)\s+(?:perfectly\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption)\b
+
+# 2025-06-20 • Zero-FP rules promoted to live
+- name: DirectNoConcern.Live
+  mode: live
+  frame: Reassuring
+  pattern: (?ix)\bno\W+cause\W+for\W+(?:alarm|concern)\b
+
+- name: NothingToWorry.Live
+  mode: live
+  frame: Reassuring
+  pattern: (?ix)\bnothing\W+to\W+worry\W+about\b
+
+- name: LowRiskEval.Theoretical
+  mode: live
+  frame: Reassuring
+  pattern: (?i)\b(?:purely\s+)?theoretical\s+risk\b
+
+6:
+- name: MinimiserScaleContrast
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    # minimiser MUST be paired with an explicit denominator token
+    (?i)
+    \b(?:only|just|merely|a\s+single|very\s+few|relatively\s+few|no\s+more\s+than)\b
+         [^.;\n]{0,30}
+         \b(?:out\s+of|one\s+of|one\s+in|among|nationwide|statewide|across|worldwide|globally)\b
+         [^.;\n]{0,30}\b(?:hundred|thousand|million|billion|
+                        \d{1,3}(?:[, ]\d{3})*|\d+)\b
+    |
+    \b(?:only|just|merely)\s+\d+(?:[.,]\d+)?\s*(?:%|percent|per\s+cent)\b
+    |
+    \b(?:only|just|merely)\s+one\b[^.]{0,120}
+         \b(?:of|in|among)\b[^.]{0,20}\bthousands?\b
+    |
+    # allow dash or parenthesis between parts
+    \b(?:only|just|merely|a\s+single|very\s+few)\b
+         [^.;\n]{0,50}?\b                  # tolerant gap
+         \b(out\s+of|among|in|of)\b
+         [^.;\n]{0,50}?\b(total|overall|population|flocks?|barns?|nationwide|worldwide|global(?:ly)?)\b
+
+7:
+- name: BareNegationHealthConcern
+  mode: live
+  frame: Neutral
+  pattern: |-
+    \b(?:do|does|did|is|are|was|were|will|would|should)\s+(?:not|n't)\s+
+       (?:pose|present|constitute)\s+(?:an?\s+)?(?:immediate\s+)?(?:public\s+)?health\s+concern\b
+    |
+    \bno\s+(?:human|americans?|animal|bird|poultry)\s+cases?\s+
+       (?:have|has|are|were)\s+(?:been\s+)?(?:detected|reported|
+                                          recorded|found|identified)\b
+    |
+    \b(?:will|would|can|could)\s+not\s+enter\s+the\s+food\s+(?:system|chain|supply)\b
+    |
+    \b(?:tests?|samples?)\s+(?:came|come|were|was)\s+negative\b
+    |
+    \b(?:does|do|is|are|will|would|should)\s+(?:not|n't)\s+
+       pose\s+(?:an?\s+)?(?:any\s+)?risk\b
+    |
+    \b(?:pose|present|constitute)\s+no\s+(?:public\s+)?health\s+(?:threat|risk)\b
+    |
+    \bno\s+(?:sign|indication|evidence)\s+of\s+(?:spread|transmission)\b
+    |
+    \b(?:is|are|was|were|will|would|could|may|might|should)\s+unlikely\s+to\s+
+       (?:affect|impact|cause|pose|present|enter|spread|infect)\b
+    |
+    \b(?:has|have|had|did)\s+(?:not|n't)\s+
+        detect(?:ed)?\s+(?:any\s+)?(?:further|additional|new)\s+
+        (?:positive\s+)?samples?\b
+
+- name: BareNegation.PosesNoRisk.Live
+  mode: live
+  frame: Neutral
+  pattern: |
+    \b(?:poses?|present(?:s)?)\s+no\s+risk\b
+
+- name: BareNegation.NotContaminate.Live
+  mode: live
+  frame: Neutral
+  # 2025-06-20 • broadened to cover "has not detected / identified … cases"
+  pattern: |-
+    (?ix)
+    \b(?:has|have|does|do|did)\b
+    \s+(?:not|n't|never|yet\s+to)\s+
+    (?:contaminat(?:e|ed)|infect(?:ed)?)\b
+
+# NEW — 2025-06-20 -----------------------------------------------------------
+- name: BareNegation.NoFurtherCases.Live
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?i)\b(?:has|have|had|did)\s+(?:not|n't)\s+
+         (?:detected|identified|reported|found)\s+
+         (?:any\s+)?(?:further|additional|new)\s+cases?\b
+
+# NEW — 2025-06-20 -----------------------------------------------------------  
+- name: BareNegation.NothingSuggests.Live
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?ix)
+    \bnothing\s+(?:currently\s+)?(?:in\s+the\s+)?
+    (?:data|evidence|sequence|analysis|results)?\s*suggests?
+    \s+(?:that\s+)?(?:the\s+)?(?:virus|situation)?\s+
+    (?:has\s+become|is|will\s+be|has\s+grown)\s+
+    (?:more\s+)?(?:dangerous|contagious|infectious|severe|deadly|threatening)\b
+
+# 2025-06-20 • Zero-FP rule promoted to live
+- name: NoThreatNeutral.Live
+  mode: live
+  frame: Neutral
+  pattern: (?ix)\bdoes\W+not\W+pose\W+a?\W+threat\b
+
+8:
+- name: CapabilityNoReassurance
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?i)
+    \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:consumers?|customers?|people|public|residents|citizens)\b)|
+       (?:capability|contain|develop|implement|measure|
+       monitor(?:ing)?|officials|plan|prepare|protocol|
+       resource(?:s)?|safeguard|stockpile(?:d|s|ing)?|
+       surveillance|system|vaccine|work))\b
+
+9:
+- name: NeutralPriceMetrics
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?is)
+    \b(?:
+          # economic nouns
+          (?:prices?|rates?|costs?|loss(?:es)?|profit(?:s)?|revenue|
+             value|export(?:s)?|import(?:s)?|sale(?:s)?|output|production)
+          \b[^.]{0,120}?                     # allow anything up to the verb (≤ one sentence)
+          (?:rose|declined|increased|fell|dropped|gained|lost)\b
+        | # "prices were up /down 2 %" form
+          (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
+        | # PATCH 2b – claim "trending sharply higher/lower" as Neutral
+          \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)\b
+            [^.]{0,50}?\btrending\s+sharply\s+(?:higher|lower)\b
+        | # volatility (neutral)
+          \b(?:prices?|rates?|costs?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)\b
+            [^.]{0,80}?\b(?:be(?:come|came|coming)|are|were)\s+(?:more\s+)?volatile\b
+    )
+
+10:
+- name: ReliefSpeculation
+  mode: live
+  frame: Neutral
+  pattern: |-
+    \b(may\ be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b
+
+11:
+  # ─────────────────────────────────────────────────────────────
+  #  Hop 11 – "Primacy of Framed Quotations"
+  #  Two explicit patterns:
+  #    • DominantQuoteAlarmist     → frame: Alarmist
+  #    • DominantQuoteReassuring   → frame: Reassuring
+  #  First match wins; if both miss, the LLM prompt executes.
+  # ─────────────────────────────────────────────────────────────
+
+- name: DominantQuoteAlarmist
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    (?i)\bhighly\s+pathogenic\s+(?:avian\s+flu|influenza|avian)\b
+  pattern: |-
+    (?is)                                    # i=ignore case, s=dot=nl
+    ["'\u2018\u2019\u201C\u201D]             # opening quote (straight or curly)
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?    # up to 600 chars inside
+    \b(?:                                     # key alarmist cues
+         (?:extremely|highly|very|deeply|incredibly|particularly|
+            frighteningly|definitely|certainly)\s+\w{0,3}\s+
+               (?:concerning|alarming|worrying|dangerous|severe|
+                  catastrophic|critical|high[-\s]*risk)
+       | period\s+of\s+high[-\s]*risk
+       | requires\s+immediate\s+action
+       | (?:troubling|dire)\s+situation
+      )\b
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    ["'\u2018\u2019\u201C\u201D]             # closing quote
+
+- name: DominantQuoteReassuring
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?is)
+    ["'\u2018\u2019\u201C\u201D]
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    \b(?:                                     # key reassuring cues
+         no\s+cause\s+for\s+alarm
+       | fully\s+under\s+control
+       | excellent\s+news
+       | very\s+well\s+protected
+       | risk\s+(?:is|remains|stays)\s+
+             (?:very|extremely|exceptionally|remarkably)\s+low
+       | (?:completely|totally|entirely|perfectly|absolutely)\s+safe
+       | wholly\s+under\s+control
+       | safe\s+to\s+eat
+      )\b
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    ["'\u2018\u2019\u201C\u201D]
+
+- name: BaseRiskAdjQuoteNeutral          # NEW – blocks base risk adj only
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?is)
+    ["'\u2018\u2019\u201C\u201D]             # opening quote
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?    # quote body
+    \b(?:deadly|dangerous|severe|lethal|virulent|contagious|catastrophic)\b
+    (?![^"'\u2018\u2019\u201C\u201D]{0,60}?
+        (?:extremely|highly|very|deeply|incredibly|particularly|
+           frighteningly|definitely|certainly|so|more|deadlier)\b)
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    ["'\u2018\u2019\u201C\u201D]
+
+12:
+- name: NeutralStats
+  mode: live
+  frame: Neutral
+  pattern: |-
+    \b(report|document|state|announce|confirm|detect|identify|record)\w*\b.*\b(cases|deaths|losses|rates|numbers|percent)\b
+
+
+## 0025. multi_coder_analysis\runtime\cli.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Command-line interface entry point (Phase 7)."""
+
+import typer
+from pathlib import Path
+from typing import Optional
+
+from multi_coder_analysis.config.run_config import RunConfig
+from multi_coder_analysis.runtime.tot_runner import execute
+from multi_coder_analysis.providers.base import get_cost_accumulator
+
+app = typer.Typer(help="Multi-Coder Analysis toolkit (ToT refactor)")
+
+
+@app.command()
+def run(
+    input_csv: Path = typer.Argument(..., help="CSV file with statements"),
+    output_dir: Path = typer.Argument(..., help="Directory for outputs"),
+    provider: str = typer.Option("gemini", help="LLM provider: gemini|openrouter"),
+    model: str = typer.Option("models/gemini-2.5-flash-preview-04-17", help="Model identifier"),
+    batch_size: int = typer.Option(
+        1,
+        min=1,
+        help="(DEPRECATED: pipeline mode is non-batching) Batch size for legacy LLM calls",
+    ),
+    concurrency: int = typer.Option(1, min=1, help="Thread pool size"),
+    regex_mode: str = typer.Option("live", help="Regex mode: live|shadow|off"),
+    shuffle_batches: bool = typer.Option(False, help="Randomise batch order"),
+    phase: str = typer.Option(
+        "pipeline",
+        "--phase",
+        help="Execution mode: legacy | pipeline",
+        rich_help_panel="Execution mode",
+    ),
+    consensus: str = typer.Option(
+        "final",
+        help="Consensus mode: 'hop' for per-hop majority, 'final' for end-of-tree",
+        rich_help_panel="Consensus",
+    ),
+    # ---- self-consistency decoding flags ----
+    decode_mode: str = typer.Option(
+        "normal",
+        "--decode-mode",
+        "-m",
+        help="normal | self-consistency",
+    ),
+    votes: int = typer.Option(1, "--votes", "-n", help="# paths/votes for self-consistency"),
+    sc_rule: str = typer.Option(
+        "majority",
+        "--sc-rule",
+        help="majority | ranked | ranked-raw | irv | borda | mrr",
+    ),
+    sc_temperature: float = typer.Option(0.7, "--sc-temperature", help="Sampling temperature"),
+    sc_top_k: int = typer.Option(40, "--sc-top-k", help="top-k sampling cutoff (0 disables)"),
+    sc_top_p: float = typer.Option(0.95, "--sc-top-p", help="nucleus sampling p value"),
+    print_cost: bool = typer.Option(
+        False,
+        "--print-cost",
+        help="Print total USD cost when the run finishes",
+        rich_help_panel="Cost",
+    ),
+    # ---- ranked-list flags ----
+    ranked_list: bool = typer.Option(
+        False,
+        "--ranked-list",
+        help="Prompt LLM to emit an ordered list of answers. "
+              "Valid --sc-rule options in this mode: irv | borda | mrr.",
+    ),
+    max_candidates: int = typer.Option(
+        5,
+        "--max-candidates",
+        help="How many candidates to retain from each ranked list (1 keeps only the top choice).",
+    ),
+):
+    """Run the deterministic Tree-of-Thought coder."""
+
+    cfg = RunConfig(
+        input_csv=input_csv,
+        output_dir=output_dir,
+        provider=provider,
+        model=model,
+        batch_size=batch_size,
+        concurrency=concurrency,
+        regex_mode=regex_mode,
+        shuffle_batches=shuffle_batches,
+        phase=phase,
+        consensus_mode=consensus,
+        decode_mode=decode_mode,
+        sc_votes=votes,
+        sc_rule=sc_rule,
+        sc_temperature=sc_temperature,
+        sc_top_k=sc_top_k,
+        sc_top_p=sc_top_p,
+        ranked_list=ranked_list,
+        max_candidates=max_candidates,
+    )
+    out_path = execute(cfg)
+    if print_cost:
+        typer.echo(f"\n💰  Run cost = ${get_cost_accumulator():.4f}\n")
+    return out_path
+
+
+if __name__ == "__main__":
+    app() 
+
+## 0026. multi_coder_analysis\runtime\tot_runner.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Runtime orchestrator for the Tree-of-Thought pipeline.
+
+This thin wrapper bridges the *runtime* layer (CLI / env / I/O) with the
+*core* pipeline logic implemented in :pyfunc:`multi_coder_analysis.run_multi_coder_tot`.
+"""
+
+import logging
+from pathlib import Path
+import threading
+import sys
+import json
+import uuid
+
+from multi_coder_analysis.config.run_config import RunConfig
+from multi_coder_analysis import run_multi_coder_tot as tot
+from multi_coder_analysis.config import load_settings
+from multi_coder_analysis.core.pipeline.tot import build_tot_pipeline
+from multi_coder_analysis.core.pipeline.consensus_tot import build_consensus_pipeline
+from multi_coder_analysis.core.regex import Engine
+from multi_coder_analysis.providers import get_provider
+from multi_coder_analysis.providers.base import get_usage_accumulator
+from multi_coder_analysis.models import HopContext
+from multi_coder_analysis.utils.tie import is_perfect_tie
+from datetime import datetime
+
+__all__ = ["execute"]
+
+
+def execute(cfg: RunConfig) -> Path:
+    """Execute the ToT pipeline according to *cfg* and return the output CSV path.
+
+    The function merges any values present in legacy `config.yaml` (loaded via
+    `load_settings()`) but **explicit CLI/RunConfig values win**.
+    """
+
+    # Merge deprecated YAML settings for backwards compatibility
+    legacy = load_settings().dict()
+    merged_data = {**legacy, **cfg.dict(exclude_unset=True)}  # CLI overrides YAML
+    cfg = RunConfig(**merged_data)
+
+    from uuid import uuid4
+    run_id_base = datetime.now().strftime("%Y%m%d_%H%M%S") + "-" + uuid4().hex[:6]
+    run_id = f"{run_id_base}_{cfg.archive_tag or 'main'}"
+
+    logging.info(
+        "Starting ToT run: provider=%s, model=%s, batch=%s, concurrency=%s",
+        cfg.provider,
+        cfg.model,
+        cfg.batch_size,
+        cfg.concurrency,
+    )
+
+    cfg.output_dir.mkdir(parents=True, exist_ok=True)
+
+    # --------------------------------------------------
+    # 📂  Copy prompt folder and dump concatenated prompts (guarded by copy_prompts)
+    # --------------------------------------------------
+    if cfg.copy_prompts and cfg.archive_tag in (None, "main"):
+        try:
+            from multi_coder_analysis.concat_prompts import concatenate_prompts
+            import shutil as _shutil
+
+            # Source prompt directory – use legacy PROMPTS_DIR so behaviour matches
+            _src_prompts = Path(tot.PROMPTS_DIR).resolve()
+            _dst_prompts = cfg.output_dir / "prompts"
+
+            # Copy the full folder (idempotent: dirs_exist_ok)
+            _shutil.copytree(_src_prompts, _dst_prompts, dirs_exist_ok=True)
+            logging.info("Copied prompt folder ➜ %s", _dst_prompts)
+
+            # Concatenate prompts into single file in run folder
+            _concat_name = "concatenated_prompts.txt"
+            concatenate_prompts(_src_prompts, _concat_name, cfg.output_dir)
+        except Exception as _e:
+            logging.warning("Could not export prompts catalogue: %s", _e)
+
+    # regex counters collected via Regex Engine; usage stats via providers.base.track_usage
+    token_accumulator = get_usage_accumulator()
+    token_lock = threading.Lock()
+
+    if cfg.phase == "pipeline":
+        provider = cfg.provider
+        provider_inst = get_provider(provider)
+
+        # --------------------------------------------------
+        # Configure regex engine:** live / shadow / off **
+        # --------------------------------------------------
+        engine = Engine.default()
+        mode = cfg.regex_mode.lower()
+        if mode == "off":
+            engine.set_global_enabled(False)
+        elif mode == "shadow":
+            engine.set_global_enabled(True)
+            engine.set_force_shadow(True)
+        else:  # "live" (default)
+            engine.set_global_enabled(True)
+            engine.set_force_shadow(False)
+
+        # ---------- Self-consistency mode -----------
+        if cfg.decode_mode == "self-consistency":
+            from multi_coder_analysis.core.self_consistency import decode_paths, aggregate
+
+            import pandas as pd
+
+            df = pd.read_csv(cfg.input_csv, dtype={"StatementID": str})
+
+            from concurrent.futures import ThreadPoolExecutor, as_completed
+
+            results = []
+
+            def _process_row(row_data):
+                local_provider = get_provider(cfg.provider)
+                base_ctx = HopContext(
+                    statement_id=row_data["StatementID"],
+                    segment_text=row_data["Statement Text"],
+                    article_id=row_data.get("ArticleID", ""),
+                )
+
+                pairs = decode_paths(
+                    base_ctx,
+                    local_provider,
+                    cfg.model,
+                    votes=cfg.sc_votes,
+                    temperature=cfg.sc_temperature,
+                    top_k=cfg.sc_top_k,
+                    top_p=cfg.sc_top_p,
+                    ranked_list=cfg.ranked_list,
+                    max_candidates=cfg.max_candidates,
+                )
+
+                frame, conf = aggregate(pairs, rule=cfg.sc_rule)
+
+                # Usage already counted via @track_usage decorator
+
+                return {
+                    "StatementID": base_ctx.statement_id,
+                    "Frame": frame,
+                    "Consistency": f"{conf:.2f}",
+                }
+
+            with ThreadPoolExecutor(max_workers=cfg.concurrency) as exe:
+                future_to_row = {
+                    exe.submit(_process_row, row): row for _, row in df.iterrows()
+                }
+
+                for fut in as_completed(future_to_row):
+                    results.append(fut.result())
+
+            out_df = pd.DataFrame(results)
+            out_path = cfg.output_dir / f"sc_results_{datetime.now():%Y%m%d_%H%M%S}.csv"
+            out_df.to_csv(out_path, index=False)
+
+            logging.info("Self-consistency run completed ➜ %s", out_path)
+
+            # --- parameter summary ---
+            _write_param_summary(cfg, cfg.output_dir)
+            from multi_coder_analysis.runtime.tracing import TraceWriter
+            TraceWriter(cfg.output_dir / "traces").write_run_summary(token_accumulator)
+            return out_path
+
+        # 'permute' mode deprecated until implemented; behaves like 'normal'
+
+        # ---------- Normal / permute path (default) -----------
+
+        tie_records: list = []
+        decision_records: list = []
+
+        # --------------------------------------------------------------
+        # Build pipeline (consensus-aware or vanilla) only ONCE
+        # --------------------------------------------------------------
+        if cfg.consensus_mode == "hop":
+            pipeline, hop_var = build_consensus_pipeline(
+                provider_inst,
+                cfg.model,
+                batch_size=cfg.batch_size,
+                top_k=(None if cfg.sc_top_k == 0 else cfg.sc_top_k),
+                top_p=cfg.sc_top_p,
+                tie_collector=tie_records,
+                concurrency=cfg.concurrency,
+                run_id=run_id,
+                archive_dir=legacy.get("archive_dir", Path("output/archive")) if legacy.get("archive_enable", True) else Path(),
+                tag=cfg.archive_tag or "main",
+                ranked_list=cfg.ranked_list,
+                max_candidates=cfg.max_candidates,
+                decision_collector=decision_records,
+            )
+        else:
+            pipeline = build_tot_pipeline(
+                provider_inst,
+                cfg.model,
+                top_k=(None if cfg.sc_top_k == 0 else cfg.sc_top_k),
+                top_p=cfg.sc_top_p,
+                ranked_list=cfg.ranked_list,
+                max_candidates=cfg.max_candidates,
+            )
+            hop_var = {}
+
+        # --------------------------------------------------------------
+        # Build ONE big list of contexts holding the entire dataset
+        # --------------------------------------------------------------
+        import pandas as pd
+
+        df = pd.read_csv(cfg.input_csv, dtype={"StatementID": str})
+
+        all_ctxs: list[HopContext] = []
+        if cfg.consensus_mode == "hop":
+            # ----------------------------------------------------------
+            # Canonical eight permutations  (AB, BA, ArBr, …) identical
+            # to the outer permutation suite so that hop-consensus and
+            # final-consensus runs are directly comparable.
+            # ----------------------------------------------------------
+
+            mid = len(df) // 2
+            A = df.iloc[:mid].copy().reset_index(drop=True)
+            B = df.iloc[mid:].copy().reset_index(drop=True)
+
+            Ar = A.iloc[::-1].copy().reset_index(drop=True)
+            Br = B.iloc[::-1].copy().reset_index(drop=True)
+
+            permuted_dfs = [
+                pd.concat([A, B], ignore_index=True),      # P1_AB
+                pd.concat([B, A], ignore_index=True),      # P2_BA
+                pd.concat([Ar, Br], ignore_index=True),    # P3_ArBr
+                pd.concat([Br, Ar], ignore_index=True),    # P4_BrAr
+                pd.concat([Ar, B], ignore_index=True),     # P5_ArB
+                pd.concat([Br, A], ignore_index=True),     # P6_BrA
+                pd.concat([A, Br], ignore_index=True),     # P7_ABr
+                pd.concat([B, Ar], ignore_index=True),     # P8_BAr
+            ]
+
+            for i, _df_perm in enumerate(permuted_dfs):
+                for _, row in _df_perm.iterrows():
+                    all_ctxs.append(
+                        HopContext(
+                            statement_id=row["StatementID"],
+                            segment_text=row["Statement Text"],
+                            article_id=row.get("ArticleID", ""),
+                            permutation_idx=i,
+                        )
+                    )
+        else:
+            for _, row in df.iterrows():
+                all_ctxs.append(
+                    HopContext(
+                        statement_id=row["StatementID"],
+                        segment_text=row["Statement Text"],
+                        article_id=row.get("ArticleID", ""),
+                    )
+                )
+
+        # ---------------- Run the pipeline ONCE -----------------------
+        pipeline.run(all_ctxs)
+
+        # --------------------------------------------------------------
+        # Collapse back to one representative context per StatementID
+        # --------------------------------------------------------------
+        from collections import defaultdict
+
+        grouped: defaultdict[str, list[HopContext]] = defaultdict(list)
+        for c in all_ctxs:
+            grouped[c.statement_id].append(c)
+
+        contexts: list[HopContext] = []
+        for sid, ctx_list in grouped.items():
+            # Prefer a concluded context; if multiple concluded, pick first
+            rep = next((c for c in ctx_list if c.is_concluded), ctx_list[0])
+            # If consensus mode, also ensure we capture tie placeholders
+            if rep.final_frame is None and ctx_list and cfg.consensus_mode == "hop":
+                # no concluded permutation survived (perfect tie) → mark tie
+                rep.final_frame = "tie"
+                rep.is_concluded = True
+            contexts.append(rep)
+
+        # Usage already counted by decorator
+
+        # --- Persist tie traces if any ---
+        if tie_records:
+            traces_dir = cfg.output_dir / "traces"
+            traces_dir.mkdir(parents=True, exist_ok=True)
+            tie_out = traces_dir / f"tie_traces_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
+            with tie_out.open("w", encoding="utf-8") as f:
+                for rec in tie_records:
+                    json.dump(rec, f, ensure_ascii=False)
+                    f.write("\n")
+
+            logging.info("Wrote %s tie trace(s) ➜ %s", len(tie_records), tie_out)
+
+        # Convert to DataFrame
+        out_rows = [
+            {
+                "StatementID": c.statement_id,
+                "Frame": c.final_frame,
+                "Justification": c.final_justification,
+            }
+            for c in contexts
+        ]
+        out_df = pd.DataFrame(out_rows)
+        out_path = cfg.output_dir / f"tot_results_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+        out_df.to_csv(out_path, index=False)
+
+        # Save variability logs if present
+        if hop_var:
+            variab_path = cfg.output_dir / f"hop_variability_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+            variab_path.write_text(json.dumps(hop_var, indent=2, ensure_ascii=False))
+
+            # also save tie segments
+            ties_csv = cfg.output_dir / f"tie_segments_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
+            import csv
+            with ties_csv.open("w", newline="", encoding="utf-8") as fh:
+                w = csv.writer(fh)
+                w.writerow(["StatementID", "Hop", "Distribution"])
+                for hop, rows_ in hop_var.items():
+                    for sid, dist in rows_:
+                        if is_perfect_tie(dist):
+                            w.writerow([sid, hop, json.dumps(dist)])
+
+        # ---------------- Determinative votes summary ------------------
+        if decision_records:
+            import pandas as _pd
+            _dec_df = _pd.DataFrame(decision_records)
+            _dec_df.to_csv(cfg.output_dir / f"determinative_votes_{datetime.now():%Y%m%d_%H%M%S}.csv", index=False)
+
+        logging.info(
+            "LLM stats – calls=%s prompt=%s response=%s total=%s",
+            token_accumulator.get("llm_calls", 0),
+            token_accumulator.get("prompt_tokens", 0),
+            token_accumulator.get("response_tokens", 0),
+            token_accumulator.get("total_tokens", 0),
+        )
+
+        # --- parameter summary ---
+        _write_param_summary(cfg, cfg.output_dir)
+
+        # ---------------- Segment trace export ------------------------
+        try:
+            import json as _json
+            _trace_path = cfg.output_dir / f"segment_traces_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
+            with _trace_path.open("w", encoding="utf-8") as _fh:
+                for _ctx in all_ctxs:
+                    if not _ctx.is_concluded:
+                        continue  # skip ongoing
+
+                    _entry = {
+                        "statement_id": _ctx.statement_id,
+                        "statement_text": _ctx.segment_text,
+                        "permutation_idx": getattr(_ctx, "permutation_idx", None),
+                        "final_frame": _ctx.final_frame,
+                        "hop_decision": _ctx.q_idx if hasattr(_ctx, "q_idx") else None,
+                        "raw_llm_responses": _ctx.raw_llm_responses,
+                        "analysis_history": _ctx.analysis_history,
+                        "reasoning_trace": _ctx.reasoning_trace,
+                    }
+                    _fh.write(_json.dumps(_entry, ensure_ascii=False) + "\n")
+            logging.info("Per-segment traces written ➜ %s", _trace_path)
+        except Exception as _e:
+            logging.warning("Could not write segment traces: %s", _e)
+
+        # ---------------- Determinative-hop trace export -------------
+        try:
+            _det_trace_path = cfg.output_dir / f"determinative_traces_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
+            with _det_trace_path.open("w", encoding="utf-8") as _fh:
+                for _rec in decision_records:
+                    _fh.write(_json.dumps(_rec, ensure_ascii=False) + "\n")
+            logging.info("Determinative hop traces written ➜ %s", _det_trace_path)
+        except Exception as _e:
+            logging.warning("Could not write determinative traces: %s", _e)
+
+        return out_path
+
+    # --- Legacy path (default) ---
+    _, output_csv = tot.run_coding_step_tot(
+        config={},  # legacy param kept for compatibility
+        input_csv_path=cfg.input_csv,
+        output_dir=cfg.output_dir,
+        concurrency=cfg.concurrency,
+        model=cfg.model,
+        provider=cfg.provider,
+        batch_size=cfg.batch_size,
+        regex_mode=cfg.regex_mode,
+        shuffle_batches=cfg.shuffle_batches,
+        token_accumulator=token_accumulator,  # type: ignore[arg-type]
+        token_lock=token_lock,  # type: ignore[arg-type]
+    )
+
+    logging.info("ToT run completed ➜ %s", output_csv)
+    return Path(output_csv)
+
+
+# ------------------------------------------------------------
+# Helper: write comprehensive parameters summary for the run
+# ------------------------------------------------------------
+
+
+def _write_param_summary(cfg: RunConfig, output_dir: Path) -> None:
+    """Dump command-line and full RunConfig to JSON in *output_dir*."""
+
+    summary = {
+        "timestamp": datetime.utcnow().isoformat(timespec="seconds") + "Z",
+        "command_line": " ".join(sys.argv),
+        "parameters": cfg.dict(),
+    }
+
+    out_file = output_dir / "parameters_summary.json"
+    out_file.write_text(json.dumps(summary, indent=2, ensure_ascii=False, default=str), encoding="utf-8")
+
+## 0027. multi_coder_analysis\runtime\tracing.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Structured logging and tracing utilities (Phase 8)."""
+
+import json
+import logging
+import uuid
+from datetime import datetime
+from pathlib import Path
+from typing import Dict, Any, Optional
+
+import structlog
+
+__all__ = ["setup_logging", "get_logger", "TraceWriter"]
+
+# Global run ID for this process
+_RUN_ID = str(uuid.uuid4())
+
+
+def setup_logging(level: str = "INFO", json_logs: bool = False) -> None:
+    """Configure structured logging for the application.
+    
+    Args:
+        level: Log level (DEBUG, INFO, WARNING, ERROR)
+        json_logs: If True, emit JSON-formatted logs
+    """
+    
+    # Configure standard library logging
+    logging.basicConfig(
+        level=getattr(logging, level.upper()),
+        format="%(asctime)s [%(levelname)s] %(name)s: %(message)s" if not json_logs else None,
+    )
+    
+    # Configure structlog
+    processors = [
+        structlog.processors.TimeStamper(fmt="iso"),
+        structlog.processors.add_log_level,
+        structlog.processors.StackInfoRenderer(),
+    ]
+    
+    if json_logs:
+        processors.append(structlog.processors.JSONRenderer())
+    else:
+        processors.extend([
+            structlog.dev.ConsoleRenderer(),
+        ])
+    
+    structlog.configure(
+        processors=processors,
+        wrapper_class=structlog.make_filtering_bound_logger(
+            getattr(logging, level.upper())
+        ),
+        logger_factory=structlog.WriteLoggerFactory(),
+        cache_logger_on_first_use=True,
+    )
+
+
+def get_logger(name: str) -> structlog.BoundLogger:
+    """Get a structured logger instance.
+    
+    Args:
+        name: Logger name (typically __name__)
+        
+    Returns:
+        Configured structlog logger
+    """
+    return structlog.get_logger(name).bind(run_id=_RUN_ID)
+
+
+class TraceWriter:
+    """NDJSON trace writer with envelope metadata."""
+    
+    def __init__(self, trace_dir: Path):
+        self.trace_dir = Path(trace_dir)
+        self.trace_dir.mkdir(parents=True, exist_ok=True)
+        self._run_id = _RUN_ID
+        
+    def write_trace(self, statement_id: str, trace_data: Dict[str, Any]) -> None:
+        """Write a single trace entry.
+        
+        Args:
+            statement_id: Unique identifier for the statement
+            trace_data: Trace payload data
+        """
+        envelope = {
+            "run_id": self._run_id,
+            "statement_id": statement_id,
+            "timestamp": datetime.now().isoformat(),
+            "trace_data": trace_data,
+        }
+        
+        trace_file = self.trace_dir / f"{statement_id}.ndjson"
+        with trace_file.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(envelope, ensure_ascii=False) + "\n")
+    
+    def write_batch_trace(self, batch_id: str, hop_idx: int, batch_data: Dict[str, Any]) -> None:
+        """Write a batch trace entry.
+        
+        Args:
+            batch_id: Unique identifier for the batch
+            hop_idx: Hop number (1-12)
+            batch_data: Batch processing data
+        """
+        envelope = {
+            "run_id": self._run_id,
+            "batch_id": batch_id,
+            "hop_idx": hop_idx,
+            "timestamp": datetime.now().isoformat(),
+            "batch_data": batch_data,
+        }
+        
+        batch_dir = self.trace_dir / "batches"
+        batch_dir.mkdir(exist_ok=True)
+        batch_file = batch_dir / f"{batch_id}_Q{hop_idx:02d}.ndjson"
+        
+        with batch_file.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(envelope, ensure_ascii=False) + "\n")
+    
+    def write_run_summary(self, summary_data: Dict[str, Any]) -> None:
+        """Write a run-level summary.
+        
+        Args:
+            summary_data: Summary statistics and metadata
+        """
+        envelope = {
+            "run_id": self._run_id,
+            "timestamp": datetime.now().isoformat(),
+            "summary_data": summary_data,
+        }
+        
+        summary_file = self.trace_dir / f"run_summary_{self._run_id}.ndjson"
+        with summary_file.open("w", encoding="utf-8") as f:
+            f.write(json.dumps(envelope, ensure_ascii=False) + "\n")
+
+
+# Legacy compatibility adapters
+def write_trace_log(trace_dir: Path, statement_id: str, trace_entry: Dict[str, Any]) -> None:
+    """Legacy adapter for existing trace writing code."""
+    writer = TraceWriter(trace_dir)
+    writer.write_trace(statement_id, trace_entry)
+
+
+def write_batch_trace(trace_dir: Path, batch_id: str, hop_idx: int, batch_payload: Dict[str, Any]) -> None:
+    """Legacy adapter for existing batch trace writing code."""
+    writer = TraceWriter(trace_dir)
+    writer.write_batch_trace(batch_id, hop_idx, batch_payload) 
+
+## 0028. multi_coder_analysis\utils\__init__.py
+----------------------------------------------------------------------------------------------------
+"""Utility sub-package.
+
+This package exposes helper functions that are shared across the codebase.
+
+Public re-exports
+-----------------
+archive_resolved
+    Stream concluded :class:`~multi_coder_analysis.models.HopContext` objects to a
+    worker-local JSON Lines archive file.  The function lives in
+    :pymod:`multi_coder_analysis.utils.archiver` but is re-exported here for
+    convenience so callers can simply write::
+
+        from multi_coder_analysis.utils import archive_resolved
+
+    instead of remembering the full sub-module path.
+"""
+
+from .archiver import archive_resolved  # noqa: F401 
+
+## 0029. multi_coder_analysis\utils\archiver.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+import json, gzip
+from pathlib import Path
+from typing import Iterable
+
+from multi_coder_analysis.models import HopContext
+
+# ------------------------------------------------------------------
+# Public helper – *process-local* (no cross-process locks required)
+# ------------------------------------------------------------------
+def archive_resolved(
+    ctxs: Iterable[HopContext],
+    *,
+    run_id: str,
+    tag: str,
+    archive_dir: Path,
+) -> None:
+    """
+    Append concluded segments to a worker-local JSONL (.gz optional) file.
+
+    File name:  <run_id>_<tag>.jsonl[.gz]
+    """
+    if not archive_dir:
+        return
+
+    archive_dir.mkdir(parents=True, exist_ok=True)
+    file_path = archive_dir / f"{run_id}_{tag}.jsonl"
+
+    # Transparent compression when suffix = .gz
+    opener = gzip.open if file_path.suffix == ".gz" else open   # type: ignore[assignment]
+
+    with opener(file_path, "at", encoding="utf-8") as fh:       # type: ignore[arg-type]
+        for ctx in ctxs:
+            if not ctx.is_concluded:
+                continue
+
+            fh.write(
+                json.dumps(
+                    {
+                        "statement_id": ctx.statement_id,
+                        "permutation": ctx.permutation_idx,
+                        "hop": ctx.q_idx,
+                        "frame": ctx.final_frame,
+                    },
+                    ensure_ascii=False,
+                )
+                + "\n"
+            ) 
+
+## 0030. multi_coder_analysis\utils\tie.py
+----------------------------------------------------------------------------------------------------
+from __future__ import annotations
+
+"""Utility helpers for voting distributions."""
+
+from typing import Dict
+
+__all__ = ["is_perfect_tie"]
+
+
+def is_perfect_tie(dist: Dict[str, int]) -> bool:
+    """Return True when *dist* has an exact 50-50 split.
+
+    Works for any number of labels (2-way, 3-way …) as long as the most
+    frequent label accounts for exactly half of the votes.
+    """
+    if not dist:
+        return False
+    votes = list(dist.values())
+    return max(votes) * 2 == sum(votes) 
+
+====================================================================================================
+# End of snapshot — 30 files

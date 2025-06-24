@@ -1,0 +1,44 @@
+### QUICK DECISION CHECK
+• Reports ECON metric with standard verb (**ROSE / FELL / INCREASED / DECLINED / WERE UP / WERE DOWN / %**) **AND** lacks vivid verbs (**SKYROCKETED / PLUMMETED / CRASHED**) or risk adjectives?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Market prices for wheat decreased by 2% this month.
+## Question: Is this factual reporting of prices/metrics using standard descriptive verbs?
+## JSON Output:
+{"answer":"yes","rationale":"'decreased by 2%' reports price change factually without vivid verbs or risk adjectives."}
+
+# NO example
+## Input Segment: Market prices for wheat took a devastating 2% dive this month, spelling trouble.
+## Question: Is this factual reporting of prices/metrics using standard descriptive verbs?
+## JSON Output:
+{"answer":"no","rationale":"'devastating dive' and 'spelling trouble' add alarmist framing beyond neutral reporting."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q9
+**Q9: Factual Reporting of Prices/Metrics**
+Is the segment primarily reporting prices, economic data, or other numerical metrics using standard descriptive verbs (e.g., 'rose,' 'declined,' 'increased,' 'fell') and potentially neutral adverbs (e.g., 'sharply,' 'significantly') BUT WITHOUT employing vivid/potent verbs (e.g., 'skyrocketed,' 'plummeted'), risk adjectives (e.g., 'catastrophic losses'), or other explicit alarmist/reassuring framing language from the author/source, as detailed in the rules for economic language?
+
+**🔍 Q9 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+| **Standard Economic Verbs** | "prices rose," "costs declined," "rates increased," "values fell" | ✓ |
+| **Neutral Adverbs** | "sharply higher," "significantly declined," "notably increased" | ✓ |
+| **Factual Quantification** | "decreased by 2%," "gained 15 points," "lost $50M" | ✓ |
+| **Volatility adjective** *(mild)* | "prices could become **more volatile**" | ✓ |
+| **Vivid Economic Verbs** | "prices skyrocketed," "costs plummeted," "markets crashed" | → Alarmist |
+| **Risk Adjectives + Economics** | "catastrophic losses," "devastating decline," "crippling costs" | → Alarmist |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q10.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
