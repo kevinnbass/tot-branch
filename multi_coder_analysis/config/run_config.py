@@ -92,10 +92,14 @@ class RunConfig(BaseModel):
     def _validate_ranked_combo(cls, values):  # noqa: D401
         ranked = values.get("ranked_list", False)
         rule = values.get("sc_rule")
-        if ranked and rule in {"majority", "ranked", "ranked-raw"}:
-            raise ValueError(
-                "sc_rule must be one of {'irv', 'borda', 'mrr'} when ranked_list=True"
-            )
+        decode_mode = values.get("decode_mode")
+        if ranked:
+            if decode_mode != "self-consistency":
+                raise ValueError("ranked_list=True requires decode_mode='self-consistency'")
+            if rule not in {"irv", "borda", "mrr"}:
+                raise ValueError(
+                    "When ranked_list=True, sc_rule must be one of {'irv', 'borda', 'mrr'}"
+                )
         return values
 
     @validator("output_dir", pre=True)

@@ -1,0 +1,27 @@
+{
+  "timestamp": "2025-06-24T01:12:39Z",
+  "command_line": "C:\\Users\\Kevin\\tot_branch\\multi_coder_analysis\\main.py --use-tot --permutations --input C:\\Users\\Kevin\\tot_branch\\multi_coder_analysis\\data\\gold_standard_2.csv --provider gemini --model models/gemini-2.5-flash-preview-04-17 --concurrency 8 --batch-size 10 --regex-mode live --consensus hop --no-eval --low-ratio-threshold 1 --start 1 --end 20",
+  "parameters": {
+    "phase": "pipeline",
+    "dimension": null,
+    "input_csv": "C:\\Users\\Kevin\\tot_branch\\multi_coder_analysis\\output\\test\\framing\\permutations_20250623_201226\\main\\input_main.csv",
+    "output_dir": "C:\\Users\\Kevin\\tot_branch\\multi_coder_analysis\\output\\test\\framing\\permutations_20250623_201226\\main",
+    "provider": "gemini",
+    "model": "models/gemini-2.5-flash-preview-04-17",
+    "batch_size": 10,
+    "archive_tag": "main",
+    "concurrency": 8,
+    "regex_mode": "live",
+    "shuffle_batches": false,
+    "consensus_mode": "hop",
+    "decode_mode": "normal",
+    "sc_votes": 1,
+    "sc_rule": "majority",
+    "sc_top_k": 40,
+    "sc_top_p": 0.95,
+    "sc_temperature": 0.7,
+    "copy_prompts": false,
+    "ranked_list": false,
+    "max_candidates": 5
+  }
+}

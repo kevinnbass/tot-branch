@@ -388,7 +388,7 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
 
 # --- NEW: Batch LLM Call ---
 
-def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPERATURE):
+def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPERATURE, *, ranked: bool = False, max_candidates: int = 5):
     """Call the LLM on a batch of segments for a single hop and parse the JSON list response."""
     sys_prompt, user_prompt = _assemble_prompt_batch(batch_ctx.segments, batch_ctx.hop_idx)
     batch_ctx.raw_prompt = sys_prompt

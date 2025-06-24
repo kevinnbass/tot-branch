@@ -202,7 +202,14 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
             from concurrent.futures import ThreadPoolExecutor, as_completed
 
             def _worker(bctx: BatchHopContext):
-                return _legacy._call_llm_batch(bctx, self._provider, self._model, self._temperature)
+                return _legacy._call_llm_batch(
+                    bctx,
+                    self._provider,
+                    self._model,
+                    self._temperature,
+                    ranked=self._inner._ranked_list,
+                    max_candidates=self._inner._max_candidates,
+                )
 
             with ThreadPoolExecutor(max_workers=self._concurrency) as exe:
                 future_map = {exe.submit(_worker, ctx): (ctx, sid_map) for ctx, sid_map in all_tasks}
@@ -227,7 +234,15 @@ class _ParallelHopStep(Step[List[HopContext]]):  # type: ignore[misc]
                         ctx.raw_llm_responses.append(obj)  # type: ignore[arg-type]
 
                         if ans == "yes":
-                            ctx.final_frame = _legacy.Q_TO_FRAME.get(self.hop_idx)
+                            # Hop 11 special: look for explicit frame tag in rationale
+                            _frame = None
+                            if self.hop_idx == 11:
+                                import re as _re
+                                m_tag = _re.search(r"\|\|FRAME=(Alarmist|Reassuring)", rationale, _re.I)
+                                if m_tag:
+                                    _frame = m_tag.group(1).title()
+
+                            ctx.final_frame = _frame or _legacy.Q_TO_FRAME.get(self.hop_idx)
                             ctx.final_justification = rationale
                             ctx.is_concluded = True
                             llm_yes_ids.add(ctx.statement_id)
@@ -281,10 +296,13 @@ def build_consensus_pipeline(
     tag: str,
     ranked_list: bool = False,
     max_candidates: int = 5,
+    **kwargs,
 ) -> Tuple[Pipeline[List[HopContext]], HopVariability]:
     """Return a pipeline operating on *lists* of HopContext objects."""
 
     var: HopVariability = variability_log or {}
+
+    decision_collector = kwargs.get("decision_collector") if isinstance(kwargs.get("decision_collector"), list) else None
 
     steps: List[Step[List[HopContext]]] = []
     for h in range(1, 13):
@@ -305,7 +323,7 @@ def build_consensus_pipeline(
                 max_candidates=max_candidates,
             )
         )
-        steps.append(ConsensusStep(h, var, tie_collector=tie_collector))
+        steps.append(ConsensusStep(h, var, tie_collector=tie_collector, decision_collector=decision_collector))
         steps.append(_ArchivePruneStep(run_id=run_id, archive_dir=archive_dir, tag=tag))
 
     return Pipeline(steps), var 

@@ -165,6 +165,7 @@ def execute(cfg: RunConfig) -> Path:
         # ---------- Normal / permute path (default) -----------
 
         tie_records: list = []
+        decision_records: list = []
 
         # --------------------------------------------------------------
         # Build pipeline (consensus-aware or vanilla) only ONCE
@@ -183,6 +184,7 @@ def execute(cfg: RunConfig) -> Path:
                 tag=cfg.archive_tag or "main",
                 ranked_list=cfg.ranked_list,
                 max_candidates=cfg.max_candidates,
+                decision_collector=decision_records,
             )
         else:
             pipeline = build_tot_pipeline(
@@ -204,17 +206,40 @@ def execute(cfg: RunConfig) -> Path:
 
         all_ctxs: list[HopContext] = []
         if cfg.consensus_mode == "hop":
-            k = 8  # eight permutations
-            for _, row in df.iterrows():
-                all_ctxs.extend(
-                    HopContext(
-                        statement_id=row["StatementID"],
-                        segment_text=row["Statement Text"],
-                        article_id=row.get("ArticleID", ""),
-                        permutation_idx=i,
+            # ----------------------------------------------------------
+            # Canonical eight permutations  (AB, BA, ArBr, …) identical
+            # to the outer permutation suite so that hop-consensus and
+            # final-consensus runs are directly comparable.
+            # ----------------------------------------------------------
+
+            mid = len(df) // 2
+            A = df.iloc[:mid].copy().reset_index(drop=True)
+            B = df.iloc[mid:].copy().reset_index(drop=True)
+
+            Ar = A.iloc[::-1].copy().reset_index(drop=True)
+            Br = B.iloc[::-1].copy().reset_index(drop=True)
+
+            permuted_dfs = [
+                pd.concat([A, B], ignore_index=True),      # P1_AB
+                pd.concat([B, A], ignore_index=True),      # P2_BA
+                pd.concat([Ar, Br], ignore_index=True),    # P3_ArBr
+                pd.concat([Br, Ar], ignore_index=True),    # P4_BrAr
+                pd.concat([Ar, B], ignore_index=True),     # P5_ArB
+                pd.concat([Br, A], ignore_index=True),     # P6_BrA
+                pd.concat([A, Br], ignore_index=True),     # P7_ABr
+                pd.concat([B, Ar], ignore_index=True),     # P8_BAr
+            ]
+
+            for i, _df_perm in enumerate(permuted_dfs):
+                for _, row in _df_perm.iterrows():
+                    all_ctxs.append(
+                        HopContext(
+                            statement_id=row["StatementID"],
+                            segment_text=row["Statement Text"],
+                            article_id=row.get("ArticleID", ""),
+                            permutation_idx=i,
+                        )
                     )
-                    for i in range(k)
-                )
         else:
             for _, row in df.iterrows():
                 all_ctxs.append(
@@ -291,6 +316,12 @@ def execute(cfg: RunConfig) -> Path:
                         if is_perfect_tie(dist):
                             w.writerow([sid, hop, json.dumps(dist)])
 
+        # ---------------- Determinative votes summary ------------------
+        if decision_records:
+            import pandas as _pd
+            _dec_df = _pd.DataFrame(decision_records)
+            _dec_df.to_csv(cfg.output_dir / f"determinative_votes_{datetime.now():%Y%m%d_%H%M%S}.csv", index=False)
+
         logging.info(
             "LLM stats – calls=%s prompt=%s response=%s total=%s",
             token_accumulator.get("llm_calls", 0),
@@ -301,6 +332,41 @@ def execute(cfg: RunConfig) -> Path:
 
         # --- parameter summary ---
         _write_param_summary(cfg, cfg.output_dir)
+
+        # ---------------- Segment trace export ------------------------
+        try:
+            import json as _json
+            _trace_path = cfg.output_dir / f"segment_traces_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
+            with _trace_path.open("w", encoding="utf-8") as _fh:
+                for _ctx in all_ctxs:
+                    if not _ctx.is_concluded:
+                        continue  # skip ongoing
+
+                    _entry = {
+                        "statement_id": _ctx.statement_id,
+                        "statement_text": _ctx.segment_text,
+                        "permutation_idx": getattr(_ctx, "permutation_idx", None),
+                        "final_frame": _ctx.final_frame,
+                        "hop_decision": _ctx.q_idx if hasattr(_ctx, "q_idx") else None,
+                        "raw_llm_responses": _ctx.raw_llm_responses,
+                        "analysis_history": _ctx.analysis_history,
+                        "reasoning_trace": _ctx.reasoning_trace,
+                    }
+                    _fh.write(_json.dumps(_entry, ensure_ascii=False) + "\n")
+            logging.info("Per-segment traces written ➜ %s", _trace_path)
+        except Exception as _e:
+            logging.warning("Could not write segment traces: %s", _e)
+
+        # ---------------- Determinative-hop trace export -------------
+        try:
+            _det_trace_path = cfg.output_dir / f"determinative_traces_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
+            with _det_trace_path.open("w", encoding="utf-8") as _fh:
+                for _rec in decision_records:
+                    _fh.write(_json.dumps(_rec, ensure_ascii=False) + "\n")
+            logging.info("Determinative hop traces written ➜ %s", _det_trace_path)
+        except Exception as _e:
+            logging.warning("Could not write determinative traces: %s", _e)
+
         return out_path
 
     # --- Legacy path (default) ---

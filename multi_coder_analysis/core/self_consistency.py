@@ -20,7 +20,8 @@ from typing import Dict, List, Tuple
 
 from multi_coder_analysis.core.pipeline.tot import build_tot_pipeline
 from multi_coder_analysis.models import HopContext
-from multi_coder_analysis.providers import ProviderProtocol
+from multi_coder_analysis.providers import ProviderProtocol, get_provider
+from multi_coder_analysis.providers.base import get_usage_accumulator
 
 __all__ = [
     "decode_paths",
@@ -75,36 +76,44 @@ def decode_paths(
         when probability not available).
     """
 
-    # Build a *fresh* pipeline so state does not leak across samples.
-    pipeline = build_tot_pipeline(
-        provider,
-        model,
-        temperature=temperature,
-        top_k=(None if top_k == 0 else top_k),
-        top_p=top_p,
-        ranked_list=ranked_list,
-        max_candidates=max_candidates,
-    )
+    # Determine provider short name once for quick cloning per vote
+    prov_name = provider.__class__.__name__.replace("Provider", "").lower()
 
     samples: List[Tuple[list[str] | str, float]] = []
+
     for _ in range(votes):
-        # Create a shallow copy of the base context
+        local_provider = get_provider(prov_name)
+
+        # Build fresh pipeline each vote to avoid state leakage
+        pipeline = build_tot_pipeline(
+            local_provider,
+            model,
+            temperature=temperature,
+            top_k=(None if top_k == 0 else top_k),
+            top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
+        )
+
+        before_usage = get_usage_accumulator().copy()
+
         ctx = HopContext(
             statement_id=base_ctx.statement_id,
             segment_text=base_ctx.segment_text,
             article_id=base_ctx.article_id,
         )
-        # Run ToT
-        pipeline.run(ctx)
-        if ctx.ranking:
-            ans_payload = ctx.ranking[: max_candidates]
-        else:
-            ans_payload = ctx.final_frame or "∅"
 
-        # Use token count as crude negative log-prob if real logprobs missing
-        usage = provider.get_last_usage() or {}
-        score = -float(usage.get("total_tokens", 0))
-        samples.append((ans_payload, score))
+        pipeline.run(ctx)
+
+        after_usage = get_usage_accumulator().copy()
+
+        score = float(after_usage.get("total_tokens", 0) - before_usage.get("total_tokens", 0))
+
+        ans_payload = ctx.final_frame or (ctx.ranking or None)
+        if ans_payload is not None:
+            if isinstance(ans_payload, list):
+                ans_payload = ans_payload[: max_candidates]
+            samples.append((ans_payload, score))
 
     return samples
 
@@ -128,34 +137,52 @@ def _majority(pairs):  # type: ignore[override]
     return ans, freq / len(pairs)
 
 
-def _ranked(pairs: List[Tuple[str, float]], normalise: bool) -> Tuple[str, float]:
+def _ranked(pairs: List[Tuple[list[str] | str, float]], normalise: bool) -> Tuple[str, float]:
     buckets: Dict[str, float] = defaultdict(float)
     counts: Dict[str, int] = defaultdict(int)
+
     for ans, score in pairs:
-        buckets[ans] += score
-        counts[ans] += 1
+        key = ans[0] if isinstance(ans, list) else ans
+        buckets[key] += score
+        counts[key] += 1
 
     if normalise:
-        # Divide by occurrence count → mean score
+        # Average score per candidate
         for ans in buckets:
             buckets[ans] /= max(counts[ans], 1)
 
-    # Select maximum score (note score is negative token count, so higher is better)
-    ans = max(buckets, key=buckets.get)
-    return ans, buckets[ans]
+    # Edge cases
+    ans = min(buckets, key=buckets.get)
+    best = buckets[ans]
+    worst = max(buckets.values()) or 1
+
+    # unanimous vote → certainty 1.0
+    if len(buckets) == 1:
+        return ans, 1.0
+    # zero-cost paths (all regex) → unknown confidence
+    if worst == 0:
+        return ans, 0.0
+
+    conf = 1 - (best / worst)
+    return ans, conf
 
 
 def _irv(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
     from collections import Counter
     rankings = [(r if isinstance(r, list) else [r]) for r, _ in pairs]
     if not rankings:
-        return _majority([(str(a), s) for a, s in pairs])
+        return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
     while True:
         first = Counter(r[0] for r in rankings if r)
+        if not first:
+            return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
         winner, votes = first.most_common(1)[0]
         if votes > len(rankings) / 2:
             return winner, votes / len(rankings)
-        loser = first.most_common()[-1][0]
+        # Determine loser deterministically (alphabetical among least votes)
+        min_votes = min(first.values())
+        losers = sorted([c for c, v in first.items() if v == min_votes])
+        loser = losers[0]
         rankings = [[c for c in r if c != loser] for r in rankings]
 
 
@@ -163,32 +190,35 @@ def _borda(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
     from collections import defaultdict
     scores = defaultdict(int)
     for ranking, _ in pairs:
-        if not isinstance(ranking, list):
-            continue
+        ranking = ranking if isinstance(ranking, list) else [ranking]
         for idx, cand in enumerate(ranking):
             scores[cand] += len(ranking) - idx
     if not scores:
-        return _majority([(str(a), s) for a, s in pairs])
+        return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
     winner = max(scores, key=scores.get)
-    return winner, scores[winner]
+    total = sum(scores.values()) or 1
+    return winner, scores[winner] / total
 
 
 def _mrr(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
     from collections import defaultdict
     mrr_scores = defaultdict(float)
     for ranking, _ in pairs:
-        if not isinstance(ranking, list):
-            continue
+        ranking = ranking if isinstance(ranking, list) else [ranking]
         for idx, cand in enumerate(ranking, 1):
             mrr_scores[cand] += 1 / idx
     if not mrr_scores:
-        return _majority([(str(a), s) for a, s in pairs])
+        return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
     winner = max(mrr_scores, key=mrr_scores.get)
-    return winner, mrr_scores[winner] / len(pairs)
+    total = sum(mrr_scores.values()) or 1
+    return winner, mrr_scores[winner] / total
 
 
 def aggregate(pairs, rule: str = "majority") -> tuple[str, float]:
     """Collapse *pairs* into (answer, confidence) according to *rule*."""
+    if not pairs:
+        return "unknown", 0.0
+
     rule = rule.lower()
     if rule == "irv":
         return _irv(pairs)

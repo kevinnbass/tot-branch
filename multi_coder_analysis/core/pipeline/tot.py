@@ -81,9 +81,9 @@ class _HopStep(Step[HopContext]):
         raw_ans = llm_resp.get("answer", "")
         try:
             from multi_coder_analysis.run_multi_coder_tot import _extract_frame_and_ranking  # lazy import to avoid cycles
-            top, ranking = _extract_frame_and_ranking(raw_ans)
+            _, ranking = _extract_frame_and_ranking(raw_ans)
         except Exception:
-            top, ranking = None, None
+            ranking = None
 
         if ranking:
             ranking = ranking[: self._max_candidates]

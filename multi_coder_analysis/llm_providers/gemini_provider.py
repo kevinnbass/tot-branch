@@ -47,6 +47,15 @@ class GeminiProvider(LLMProvider):
         # Initialize client directly with the API key (newer SDK style)
         self._client = genai.Client(api_key=key)
 
+        # Per-instance cumulative usage (resettable)
+        self._acc_usage = {
+            'prompt_tokens': 0,
+            'response_tokens': 0,
+            'thought_tokens': 0,
+            'total_tokens': 0,
+            'cached_tokens': 0,
+        }
+
     def generate(self, system_prompt: str, user_prompt: str, model: str, temperature: float = 0.0) -> str:
         cfg = {"temperature": temperature}
         # Enforce deterministic nucleus + top-k
@@ -83,6 +92,10 @@ class GeminiProvider(LLMProvider):
                 'thought_tokens': thought_toks,
                 'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks)
             }
+            # ---- accumulate ----
+            for k, v in self._last_usage.items():
+                if isinstance(v, int):
+                    self._acc_usage[k] = self._acc_usage.get(k, 0) + v
         else:
             self._last_usage = {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}
         
@@ -108,4 +121,14 @@ class GeminiProvider(LLMProvider):
         return getattr(self, '_last_thoughts', '')
 
     def get_last_usage(self) -> dict:
-        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0}) 
+        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0})
+
+    # --------------------------------------------------------------
+    # Incremental usage helpers (new)
+    # --------------------------------------------------------------
+
+    def reset_usage(self) -> None:  # noqa: D401
+        self._acc_usage = {k: 0 for k in self._acc_usage}
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        return dict(self._acc_usage) 

@@ -30,10 +30,12 @@ class ConsensusStep(Step[List[HopContext]]):  # type: ignore[misc]
         variability_log: HopVariability,
         *,
         tie_collector: list | None = None,
+        decision_collector: list | None = None,
     ):
         self.hop_idx = hop_idx
         self._var = variability_log
         self._tie_collector = tie_collector
+        self._dec_collector = decision_collector
 
     def run(self, ctxs: List[HopContext]) -> List[HopContext]:  # type: ignore[override]
         # Group by segment / statement_id
@@ -63,6 +65,30 @@ class ConsensusStep(Step[List[HopContext]]):  # type: ignore[misc]
                     from multi_coder_analysis import run_multi_coder_tot as _legacy
                     rep.final_frame = _legacy.Q_TO_FRAME.get(self.hop_idx)
                 survivors.append(rep)
+
+                # ------------------- record decision -------------------
+                if self._dec_collector is not None:
+                    perm_entries = []
+                    for p in perms:
+                        last_resp = p.raw_llm_responses[-1] if p.raw_llm_responses else {}
+                        perm_entries.append({
+                            "perm_idx": getattr(p, "permutation_idx", None),
+                            "answer": last_resp.get("answer", "uncertain"),
+                            "rationale": last_resp.get("rationale", ""),
+                            "via": ("regex" if last_resp.get("regex") else "llm")
+                        })
+
+                    self._dec_collector.append(
+                        {
+                            "statement_id": sid,
+                            "statement_text": rep.segment_text,
+                            "hop": self.hop_idx,
+                            "frame": rep.final_frame,
+                            "decision": "yes",
+                            "distribution": dist,
+                            "permutations": perm_entries,
+                        }
+                    )
             elif decided and winner == "no":
                 # No conclusion – all permutations progress
                 survivors.extend(perms)
@@ -87,5 +113,27 @@ class ConsensusStep(Step[List[HopContext]]):  # type: ignore[misc]
                             "reasoning_trace": p.reasoning_trace,
                         })
                     self._tie_collector.append(entry)
+
+                if self._dec_collector is not None:
+                    perm_entries = []
+                    for p in perms:
+                        last_resp = p.raw_llm_responses[-1] if p.raw_llm_responses else {}
+                        perm_entries.append({
+                            "perm_idx": getattr(p, "permutation_idx", None),
+                            "answer": last_resp.get("answer", "uncertain"),
+                            "rationale": last_resp.get("rationale", ""),
+                            "via": ("regex" if last_resp.get("regex") else "llm")
+                        })
+                    self._dec_collector.append(
+                        {
+                            "statement_id": sid,
+                            "statement_text": perms[0].segment_text,
+                            "hop": self.hop_idx,
+                            "frame": "tie",
+                            "decision": "tie",
+                            "distribution": dist,
+                            "permutations": perm_entries,
+                        }
+                    )
                 # Not forwarded further
         return survivors 

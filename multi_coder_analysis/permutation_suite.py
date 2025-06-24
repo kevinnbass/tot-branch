@@ -571,10 +571,21 @@ def run_permutation_suite(
         df_votes = df_votes.merge(extra, on="StatementID")
 
     def _majority(row):
-        counts = row.value_counts()
+        """Return winning label or LABEL_TIE.
+
+        Threshold is >50% of the *available* (non-NA) votes so the function
+        works whether we have 1, 8 or any other number of permutation
+        columns.  The previous hard-coded ≥5 rule only made sense for eight
+        columns.
+        """
+        counts = row.value_counts(dropna=True)
         if counts.empty:
             return "LABEL_TIE"
-        if counts.iloc[0] >= 5:
+
+        total_votes = int(row.count())
+        required = (total_votes // 2) + 1  # simple majority (>50%)
+
+        if counts.iloc[0] >= required:
             return counts.idxmax()
         return "LABEL_TIE"
 

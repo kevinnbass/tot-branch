@@ -59,6 +59,18 @@ class ProviderProtocol(Protocol):
         """
         ... 
 
+    # ------------------------------------------------------------------
+    # Incremental usage helpers (v0.5.3)
+    # ------------------------------------------------------------------
+
+    def reset_usage(self) -> None:  # noqa: D401
+        """Reset the internal accumulated usage counters (per-instance)."""
+        ...
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        """Return accumulated usage since last reset_usage()."""
+        ...
+
 # ---------------------------------------------------------------------------
 # Global usage accumulator – lightweight telemetry across providers and threads
 # ---------------------------------------------------------------------------

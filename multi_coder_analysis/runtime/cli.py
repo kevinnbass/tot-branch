@@ -64,7 +64,8 @@ def run(
     ranked_list: bool = typer.Option(
         False,
         "--ranked-list",
-        help="Prompt LLM to output an ordered list of answers and aggregate with irv|borda|mrr rules.",
+        help="Prompt LLM to emit an ordered list of answers. "
+              "Valid --sc-rule options in this mode: irv | borda | mrr.",
     ),
     max_candidates: int = typer.Option(
         5,

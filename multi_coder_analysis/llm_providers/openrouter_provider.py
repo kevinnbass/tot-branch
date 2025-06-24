@@ -52,6 +52,14 @@ class OpenRouterProvider(LLMProvider):
         self._last_thoughts = ""
         self._last_usage = {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}
         
+        self._acc_usage = {
+            'prompt_tokens': 0,
+            'response_tokens': 0,
+            'thought_tokens': 0,
+            'total_tokens': 0,
+            'cached_tokens': 0,
+        }
+        
         return resp.choices[0].message.content.strip()
     
     def get_last_thoughts(self) -> str:
@@ -60,3 +68,9 @@ class OpenRouterProvider(LLMProvider):
 
     def get_last_usage(self) -> dict:
         return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'thought_tokens': 0, 'total_tokens': 0}) 
+
+    def reset_usage(self) -> None:  # noqa: D401
+        self._acc_usage = {k: 0 for k in self._acc_usage}
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        return dict(self._acc_usage) 
