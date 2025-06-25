@@ -23,6 +23,7 @@ from dotenv import load_dotenv
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import threading
 import shutil
+import uuid
 
 # Local project imports
 from hop_context import HopContext, BatchHopContext
@@ -87,8 +88,12 @@ Q_TO_FRAME = {
     1: "Alarmist", 2: "Alarmist", 3: "Alarmist", 4: "Alarmist",
     5: "Reassuring", 6: "Reassuring",
     7: "Neutral", 8: "Neutral", 9: "Neutral", 10: "Neutral",
-    11: "Variable",  # Special case handled in run_tot_chain
-    12: "Neutral"
+    # Hop 11 (dominant‑quote check) is now *strictly* resolved by an explicit
+    # "||FRAME=Alarmist / Reassuring" token in the LLM reply.  When that token
+    # is missing we *always* drop to Neutral and log a warning.  Never map to
+    # a pseudo‑label such as "Variable".
+    11: "Neutral",
+    12: "Neutral",
 }
 
 # --- LLM Interaction ---
@@ -194,6 +199,44 @@ def _call_llm_single_hop(
     # If all retries fail
     logging.error(f"Q{ctx.q_idx} for {ctx.statement_id}: All {MAX_RETRIES} retries failed.")
     return {"answer": "uncertain", "rationale": f"LLM call failed after {MAX_RETRIES} retries."}
+
+# --- Response Processing Helper ---
+
+def _apply_llm_response(ctx: HopContext, llm_response: dict) -> None:
+    """Apply LLM response to HopContext, handling hop 11 token guard logic."""
+    answer = llm_response.get("answer", "uncertain").lower().strip()
+    rationale = llm_response.get("rationale", "No rationale provided.")
+    hop_idx = getattr(ctx, 'current_hop', None) or getattr(ctx, 'q_idx', 11)
+    
+    if answer == "yes":
+        # ──────────────────────────────────────────────────────────
+        # HOP‑11 SPECIAL‑CASE — token‑guard then safe fallback
+        # ──────────────────────────────────────────────────────────
+        if hop_idx == 11:
+            token = re.search(r"\|\|FRAME=(Alarmist|Reassuring)\b", rationale)
+            if token:
+                ctx.final_frame = token.group(1)
+                ctx.final_justification = (
+                    f"Frame determined by Q11 explicit token {token.group(0)}."
+                )
+            else:
+                logging.warning(
+                    "Q11 answered 'yes' but missing ||FRAME token; "
+                    "defaulting to Neutral  (SID=%s)", ctx.statement_id
+                )
+                ctx.final_frame = "Neutral"
+                ctx.final_justification = (
+                    "Hop 11 'yes' without explicit token – forced Neutral."
+                )
+            ctx.is_concluded = True
+            ctx._resolved_by_llm_this_hop = True
+
+        # All other hops use the static map
+        elif hop_idx in Q_TO_FRAME:
+            ctx.final_frame = Q_TO_FRAME[hop_idx]
+            ctx.final_justification = f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
+            ctx.is_concluded = True
+            ctx._resolved_by_llm_this_hop = True
 
 # --- Core Orchestration ---
 
@@ -317,13 +360,38 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
             uncertain_streak = 0 # Reset streak on a clear answer
 
         if choice == "yes":
-            ctx.final_frame = frame_override or Q_TO_FRAME[q_idx]
-            ctx.is_concluded = True
-            # Frame override from regex, else Hop 11 logic
-            if frame_override:
-                ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+            # ──────────────────────────────────────────────────────────
+            # HOP‑11 SPECIAL‑CASE — token‑guard then safe fallback
+            # ──────────────────────────────────────────────────────────
+            if q_idx == 11 and not frame_override:
+                token = re.search(r"\|\|FRAME=(Alarmist|Reassuring)\b", rationale)
+                if token:
+                    ctx.final_frame = token.group(1)
+                    ctx.final_justification = (
+                        f"Frame determined by Q11 explicit token {token.group(0)}."
+                    )
+                else:
+                    logging.warning(
+                        "Q11 answered 'yes' but missing ||FRAME token; "
+                        "defaulting to Neutral  (SID=%s)", ctx.statement_id
+                    )
+                    ctx.final_frame = "Neutral"
+                    ctx.final_justification = (
+                        "Hop 11 'yes' without explicit token – forced Neutral."
+                    )
+                ctx.is_concluded = True
+                ctx._resolved_by_llm_this_hop = True
+
+            # All other hops use the static map or frame override
             else:
-                ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+                ctx.final_frame = frame_override or Q_TO_FRAME[q_idx]
+                ctx.is_concluded = True
+                # Frame override from regex, else standard mapping
+                if frame_override:
+                    ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+                else:
+                    ctx.final_justification = f"Frame determined by Q{q_idx} trigger. Rationale: {rationale}"
+                ctx._resolved_by_llm_this_hop = True
             break # Exit the loop on the first 'yes'
 
     # If loop completes without any 'yes' answers
@@ -550,49 +618,58 @@ def run_tot_chain_batch(
     # (run-level summary aggregation removed; will be handled after processing)
 
     def _process_batch(batch_segments: List[HopContext], hop_idx: int):
+        """Process a single batch of segments for the given hop."""
+        batch_id = f"batch_{hop_idx}_{uuid.uuid4().hex[:6]}"
+        
+        # Assign batch metadata to each segment
+        for i, seg in enumerate(batch_segments):
+            seg.batch_id = batch_id  # type: ignore[attr-defined]
+            seg.batch_size = len(batch_segments)  # type: ignore[attr-defined] 
+            seg.batch_pos = i  # type: ignore[attr-defined]
+
+        # Clear hop tracking flags
+        for seg in batch_segments:
+            seg._resolved_by_regex_this_hop = False  # type: ignore[attr-defined]
+            seg._resolved_by_llm_this_hop = False  # type: ignore[attr-defined]
+
+        # Track LLM calls for token accumulator
         token_accumulator['llm_calls'] += 1
         
-        # Step 1: Apply regex rules to all segments in this batch
+        # Step 1: Check regex patterns for early resolution
         regex_resolved: List[HopContext] = []
         unresolved_segments: List[HopContext] = []
-        regex_matches_meta = []  # collect match details for batch-level dump
-        
-        # Predefine batch_id for use in all trace entries within this batch
-        batch_id = f"batch_{hop_idx}_{threading.get_ident()}"
-        
-        # (run-level summary aggregation removed)
-        
-        for idx_in_batch, seg_ctx in enumerate(batch_segments, start=1):
-            seg_ctx.q_idx = hop_idx  # ensure hop set
-            
-            # Store batch_id on context for later reference (fallback path)
-            seg_ctx.batch_id = batch_id  # type: ignore[attr-defined]
-            
-            # ── Positional metadata (new) ───────────────────────────
-            seg_ctx.batch_size = len(batch_segments)
-            seg_ctx.batch_pos = idx_in_batch
-            
+        regex_matches_meta: List[Dict] = []
+
+        for seg_ctx in batch_segments:
+            # Skip if already concluded from a previous hop
+            if seg_ctx.is_concluded:
+                continue
+                
+            # Query regex engine for this hop/segment combo
+            seg_ctx.q_idx = hop_idx
             token_accumulator['total_hops'] += 1
             
+            r_answer = None
             try:
                 r_answer = _re_eng.match(seg_ctx)
-            except Exception as exc:
-                logging.warning(
-                    f"Regex engine error in batch {hop_idx} on {seg_ctx.statement_id}: {exc}"
-                )
-                r_answer = None
+            except Exception as e:
+                logging.warning(f"Regex engine error on {seg_ctx.statement_id} Q{hop_idx}: {e}")
             
-            if r_answer:
+            if r_answer and r_answer.get("answer") == "yes":
+                # Track that this segment was resolved by regex
+                seg_ctx._resolved_by_regex_this_hop = True  # type: ignore[attr-defined]
+                
+                # Update token accumulator
                 if _re_eng._FORCE_SHADOW:
                     token_accumulator['regex_hit_shadow'] += 1
                 else:
                     token_accumulator['regex_yes'] += 1
                 
-                # Log the regex hit
+                # Regex provided a definitive answer
                 trace_entry = {
                     "Q": hop_idx,
                     "answer": r_answer["answer"],
-                    "rationale": r_answer["rationale"],
+                    "rationale": r_answer.get("rationale", "Regex match"),
                     "method": "regex",
                     "batch_id": batch_id,
                     "batch_size": seg_ctx.batch_size,
@@ -619,7 +696,6 @@ def run_tot_chain_batch(
                     "frame": r_answer.get("frame"),
                     "answer": r_answer["answer"],
                 })
-                # (run-level summary aggregation removed)
             else:
                 # No definitive regex answer → send to LLM later
                 unresolved_segments.append(seg_ctx)
@@ -773,20 +849,36 @@ def run_tot_chain_batch(
                         ctx.final_justification = "Three consecutive uncertain responses"
                         continue
                 
-                # Check for frame override (Q11 special case)
-                if hop_idx == 11 and "||FRAME=" in rationale:
-                    frame_match = re.search(r'\|\|FRAME=([^|]+)', rationale)
-                    if frame_match:
-                        ctx.final_frame = frame_match.group(1).strip()
-                        continue
-                
-                # Set final frame if this is a frame-determining hop and answer is yes
-                if answer == "yes" and hop_idx in Q_TO_FRAME:
+                # ──────────────────────────────────────────────────────────
+                # HOP‑11 SPECIAL‑CASE — token‑guard then safe fallback
+                # ──────────────────────────────────────────────────────────
+                if answer == "yes" and hop_idx == 11:
+                    token = re.search(r"\|\|FRAME=(Alarmist|Reassuring)\b", rationale)
+                    if token:
+                        ctx.final_frame = token.group(1)
+                        ctx.final_justification = (
+                            f"Frame determined by Q11 explicit token {token.group(0)}."
+                        )
+                    else:
+                        logging.warning(
+                            "Q11 answered 'yes' but missing ||FRAME token; "
+                            "defaulting to Neutral  (SID=%s)", ctx.statement_id
+                        )
+                        ctx.final_frame = "Neutral"
+                        ctx.final_justification = (
+                            "Hop 11 'yes' without explicit token – forced Neutral."
+                        )
+                    ctx.is_concluded = True
+                    ctx._resolved_by_llm_this_hop = True
+
+                # All other hops use the static map
+                elif answer == "yes" and hop_idx in Q_TO_FRAME:
                     ctx.final_frame = Q_TO_FRAME[hop_idx]
                     ctx.final_justification = (
                         f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
                     )
                     ctx.is_concluded = True
+                    ctx._resolved_by_llm_this_hop = True
 
             # Any ctx not covered by response → mark uncertain
             for ctx in unresolved_segments:
@@ -885,9 +977,33 @@ def run_tot_chain_batch(
                     ctx_r.analysis_history.append(f"Q{hop_idx}: {answer_r} (retry{retry_idx})")
                     ctx_r.reasoning_trace.append(trace_entry_r)
 
-                    if answer_r == "yes" and hop_idx in Q_TO_FRAME:
+                    # ──────────────────────────────────────────────────────────
+                    # HOP‑11 SPECIAL‑CASE — token‑guard then safe fallback (retry)
+                    # ──────────────────────────────────────────────────────────
+                    if answer_r == "yes" and hop_idx == 11:
+                        token = re.search(r"\|\|FRAME=(Alarmist|Reassuring)\b", rationale_r)
+                        if token:
+                            ctx_r.final_frame = token.group(1)
+                            ctx_r.final_justification = (
+                                f"Frame determined by Q11 explicit token {token.group(0)}."
+                            )
+                        else:
+                            logging.warning(
+                                "Q11 answered 'yes' but missing ||FRAME token; "
+                                "defaulting to Neutral  (SID=%s)", ctx_r.statement_id
+                            )
+                            ctx_r.final_frame = "Neutral"
+                            ctx_r.final_justification = (
+                                "Hop 11 'yes' without explicit token – forced Neutral."
+                            )
+                        ctx_r.is_concluded = True
+                        ctx_r._resolved_by_llm_this_hop = True
+
+                    # All other hops use the static map
+                    elif answer_r == "yes" and hop_idx in Q_TO_FRAME:
                         ctx_r.final_frame = Q_TO_FRAME[hop_idx]
                         ctx_r.is_concluded = True
+                        ctx_r._resolved_by_llm_this_hop = True
                 # dump retry batch trace and raw http
                 retry_payload = {
                     "batch_id": retry_batch_id,
@@ -1007,9 +1123,6 @@ def run_tot_chain_batch(
         if shuffle_batches:
             random.shuffle(active_contexts)
 
-        # Log hop start from main thread
-        _log_hop(hop_idx, len(active_contexts), token_accumulator.get('regex_yes', 0), 0)
-
         # Build batches of current active segments
         batches: List[List[HopContext]] = [
             active_contexts[i : i + batch_size] for i in range(0, len(active_contexts), batch_size)
@@ -1019,19 +1132,203 @@ def run_tot_chain_batch(
             f"Hop {hop_idx}: processing {len(batches)} batches (size={batch_size}) with concurrency={concurrency}"
         )
 
+        # Print START banner
+        print(f"*** START Hop {hop_idx:02} → start:{len(active_contexts)} regex:0 llm:0 remain:{len(active_contexts)} ***", flush=True)
+
+        # PHASE 1: Process ALL regex first across all segments
+        regex_resolved_segments: List[HopContext] = []
+        llm_pending_segments: List[HopContext] = []
+        
+        for seg_ctx in active_contexts:
+            if seg_ctx.is_concluded:
+                continue
+                
+            # Query regex engine for this hop/segment combo
+            seg_ctx.q_idx = hop_idx
+            token_accumulator['total_hops'] += 1
+            
+            r_answer = None
+            try:
+                r_answer = _re_eng.match(seg_ctx)
+            except Exception as e:
+                logging.warning(f"Regex engine error on {seg_ctx.statement_id} Q{hop_idx}: {e}")
+            
+            if r_answer and r_answer.get("answer") == "yes":
+                # Track regex resolution
+                seg_ctx._resolved_by_regex_this_hop = True  # type: ignore[attr-defined]
+                
+                # Update token accumulator
+                if _re_eng._FORCE_SHADOW:
+                    token_accumulator['regex_hit_shadow'] += 1
+                else:
+                    token_accumulator['regex_yes'] += 1
+                
+                # Create trace entry
+                trace_entry = {
+                    "Q": hop_idx,
+                    "answer": r_answer["answer"],
+                    "rationale": r_answer.get("rationale", "Regex match"),
+                    "method": "regex",
+                    "regex": r_answer.get("regex", {}),
+                    "statement_text": seg_ctx.segment_text,
+                    "article_id": seg_ctx.article_id,
+                }
+                write_trace_log(trace_dir, seg_ctx.statement_id, trace_entry)
+                
+                seg_ctx.analysis_history.append(f"Q{hop_idx}: yes (regex)")
+                seg_ctx.reasoning_trace.append(trace_entry)
+                
+                # Set final frame if this is a frame-determining hop
+                if hop_idx in Q_TO_FRAME:
+                    seg_ctx.final_frame = r_answer.get("frame") or Q_TO_FRAME[hop_idx]
+                    seg_ctx.is_concluded = True
+                
+                regex_resolved_segments.append(seg_ctx)
+            else:
+                # No regex match → needs LLM processing
+                llm_pending_segments.append(seg_ctx)
+
+        # Print REGEX banner immediately after regex processing
+        regex_count = len(regex_resolved_segments)
+        if regex_count > 0:
+            print(f"*** REGEX HIT Hop {hop_idx:02} → regex:{regex_count} ***", flush=True)
+        else:
+            print(f"*** REGEX MISS Hop {hop_idx:02} ***", flush=True)
+
+        # PHASE 2: Process LLM batches only for unresolved segments
+        llm_resolved_count = 0
+        
+        if llm_pending_segments:
+            # Build batches from LLM-pending segments only
+            batches: List[List[HopContext]] = [
+                llm_pending_segments[i : i + batch_size] for i in range(0, len(llm_pending_segments), batch_size)
+            ]
+
+            logging.info(
+                f"Hop {hop_idx}: {regex_count} resolved by regex, processing {len(batches)} LLM batches (size={batch_size}) with concurrency={concurrency}"
+            )
+
+            def _process_llm_batch(batch_segments: List[HopContext]):
+                """Process a batch for LLM only (regex already done)."""
+                nonlocal llm_resolved_count
+                
+                batch_id = f"batch_{hop_idx}_{uuid.uuid4().hex[:6]}"
+                
+                # Assign batch metadata to each segment
+                for i, seg in enumerate(batch_segments):
+                    seg.batch_id = batch_id  # type: ignore[attr-defined]
+                    seg.batch_size = len(batch_segments)  # type: ignore[attr-defined] 
+                    seg.batch_pos = i  # type: ignore[attr-defined]
+                    seg._resolved_by_llm_this_hop = False  # type: ignore[attr-defined]
+
+                # Track LLM calls for token accumulator
+                token_accumulator['llm_calls'] += 1
+
+                # Create batch context (all segments need LLM)
+                batch_ctx = BatchHopContext(batch_id=batch_id, hop_idx=hop_idx, segments=batch_segments)
+                
+                # Call LLM for the batch
+                provider_inst = _provider_factory()
+                batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
+
+                # Token accounting
+                usage = provider_inst.get_last_usage()
+                if usage and token_lock:
+                    with token_lock:
+                        token_accumulator['prompt_tokens'] += usage.get('prompt_tokens', 0)
+                        token_accumulator['response_tokens'] += usage.get('response_tokens', 0)
+                        token_accumulator['thought_tokens'] += usage.get('thought_tokens', 0)
+                        token_accumulator['total_tokens'] += usage.get('total_tokens', 0)
+                
+                # Process responses
+                sid_to_ctx = {c.statement_id: c for c in batch_segments}
+                
+                for resp_obj in batch_responses:
+                    sid = str(resp_obj.get("segment_id", "")).strip()
+                    ctx = sid_to_ctx.get(sid)
+                    if ctx is None:
+                        continue
+                    
+                    answer = str(resp_obj.get("answer", "uncertain")).lower().strip()
+                    rationale = str(resp_obj.get("rationale", "No rationale provided"))
+                    
+                    trace_entry = {
+                        "Q": hop_idx,
+                        "answer": answer,
+                        "rationale": rationale,
+                        "method": "llm_batch",
+                        "batch_id": batch_id,
+                        "batch_size": ctx.batch_size,
+                        "batch_pos": ctx.batch_pos,
+                        "statement_text": ctx.segment_text,
+                        "article_id": ctx.article_id,
+                    }
+                    write_trace_log(trace_dir, ctx.statement_id, trace_entry)
+                    
+                    ctx.analysis_history.append(f"Q{hop_idx}: {answer}")
+                    ctx.reasoning_trace.append(trace_entry)
+                    
+                    # Check for early termination
+                    if answer == "uncertain":
+                        ctx.uncertain_count += 1
+                        if ctx.uncertain_count >= 3:
+                            ctx.final_frame = "LABEL_UNCERTAIN"
+                            ctx.final_justification = "Three consecutive uncertain responses"
+                            continue
+                    
+                    # ──────────────────────────────────────────────────────────
+                    # HOP‑11 SPECIAL‑CASE — token‑guard then safe fallback
+                    # ──────────────────────────────────────────────────────────
+                    if answer == "yes" and hop_idx == 11:
+                        token = re.search(r"\|\|FRAME=(Alarmist|Reassuring)\b", rationale)
+                        if token:
+                            ctx.final_frame = token.group(1)
+                            ctx.final_justification = (
+                                f"Frame determined by Q11 explicit token {token.group(0)}."
+                            )
+                        else:
+                            logging.warning(
+                                "Q11 answered 'yes' but missing ||FRAME token; "
+                                "defaulting to Neutral  (SID=%s)", ctx.statement_id
+                            )
+                            ctx.final_frame = "Neutral"
+                            ctx.final_justification = (
+                                "Hop 11 'yes' without explicit token – forced Neutral."
+                            )
+                        ctx.is_concluded = True
+                        ctx._resolved_by_llm_this_hop = True
+                        with token_lock:
+                            llm_resolved_count += 1
+
+                    # All other hops use the static map
+                    elif answer == "yes" and hop_idx in Q_TO_FRAME:
+                        ctx.final_frame = Q_TO_FRAME[hop_idx]
+                        ctx.final_justification = f"Frame determined by Q{hop_idx} trigger. Rationale: {rationale}"
+                        ctx.is_concluded = True
+                        ctx._resolved_by_llm_this_hop = True
+                        with token_lock:
+                            llm_resolved_count += 1
+
+                return batch_segments
+
+            # Process LLM batches
         if concurrency == 1:
             for batch in batches:
-                _process_batch(batch, hop_idx)
+                _process_llm_batch(batch)
         else:
-            # Concurrency handled within run_tot_chain_batch
-            # logging.warning("Concurrency >1 is not yet supported with batching. Defaulting concurrency to 1.")
             with ThreadPoolExecutor(max_workers=concurrency) as pool:
-                futs = [pool.submit(_process_batch, batch, hop_idx) for batch in batches]
+                futs = [pool.submit(_process_llm_batch, batch) for batch in batches]
                 for fut in as_completed(futs):
                     try:
                         fut.result()
                     except Exception as exc:
-                        logging.error(f"Batch processing error in hop {hop_idx}: {exc}")
+                        logging.error(f"LLM batch processing error in hop {hop_idx}: {exc}")
+
+        # Count remaining active contexts after this hop
+        remaining_contexts = [c for c in active_contexts if not c.is_concluded]
+        
+        # Print FINISH banner
+        print(f"*** FINISH Hop {hop_idx:02} → start:{len(active_contexts)} regex:{regex_count} llm:{llm_resolved_count} remain:{len(remaining_contexts)} ***", flush=True)
 
     # Final neutral assignment for any still-active contexts
     for ctx in contexts:
@@ -1070,7 +1367,7 @@ def run_tot_chain_batch(
 
 # --- Main Entry Point for `main.py` ---
 
-def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False, skip_eval: bool = False, only_hop: Optional[int] = None, *, print_summary: bool = True) -> Tuple[None, Path]:
+def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False, skip_eval: bool = False, only_hop: Optional[int] = None, gold_standard_file: Optional[str] = None, *, print_summary: bool = True) -> Tuple[None, Path]:
     """
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
@@ -1092,6 +1389,42 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
             logging.info("Regex layer in LIVE mode (default)")
 
     df = pd.read_csv(input_csv_path, dtype={'StatementID': str})
+    
+    # ------------------------------------------------------------------
+    # Load gold standard from separate file if provided
+    # ------------------------------------------------------------------
+    if gold_standard_file and not skip_eval:
+        try:
+            gold_standard_path = Path(gold_standard_file)
+            if not gold_standard_path.exists():
+                logging.error(f"Gold standard file not found: {gold_standard_file}")
+                raise FileNotFoundError(f"Gold standard file not found: {gold_standard_file}")
+            
+            logging.info(f"Loading gold standard from: {gold_standard_file}")
+            df_gold = pd.read_csv(gold_standard_path, dtype={'StatementID': str})
+            
+            # Verify gold standard file has required columns
+            if 'StatementID' not in df_gold.columns:
+                raise ValueError("Gold standard file must contain 'StatementID' column")
+            if 'Gold Standard' not in df_gold.columns:
+                raise ValueError("Gold standard file must contain 'Gold Standard' column")
+            
+            # Merge gold standard with input data based on StatementID
+            df = df.merge(df_gold[['StatementID', 'Gold Standard']], on='StatementID', how='left')
+            
+            # Log merge statistics
+            total_input = len(df)
+            has_gold = df['Gold Standard'].notna().sum()
+            missing_gold = total_input - has_gold
+            logging.info(f"Gold standard merge: {has_gold}/{total_input} statements have gold labels, {missing_gold} missing")
+            
+            if missing_gold > 0:
+                missing_ids = df[df['Gold Standard'].isna()]['StatementID'].tolist()
+                logging.warning(f"Statements missing gold standard labels: {missing_ids[:10]}{'...' if len(missing_ids) > 10 else ''}")
+                
+        except Exception as e:
+            logging.error(f"Error loading gold standard file: {e}")
+            raise
     
     # ------------------------------------------------------------------
     # Evaluation control: if the caller explicitly requests evaluation to

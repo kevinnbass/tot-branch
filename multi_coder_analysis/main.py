@@ -184,6 +184,13 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
             dst_prompt_dir = base_output_dir / "prompts"
             shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
             logging.info("Copied prompt folder → %s", dst_prompt_dir)
+            # NEW: also write a snapshot of all prompt files concatenated into one for auditability
+            try:
+                concat_filename = f"concatenated_prompts_{pipeline_timestamp}.txt"
+                concatenate_prompts(src_prompt_dir, concat_filename, base_output_dir)
+                logging.info("Generated concatenated prompts file → %s", base_output_dir / concat_filename)
+            except Exception as _e:
+                logging.warning("Could not generate concatenated prompts file: %s", _e)
             # Override prompts dir globally for ToT module
             try:
                 _tot_mod.PROMPTS_DIR = src_prompt_dir.resolve()
@@ -270,6 +277,7 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 shuffle_batches=args.shuffle_batches,
                 skip_eval=args.no_eval,
                 only_hop=args.only_hop,
+                gold_standard_file=args.gold_standard,
             )
         except Exception as e:
             logging.error(f"Tree-of-Thought pipeline failed with error: {e}", exc_info=True)
@@ -284,6 +292,137 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
 
     # TODO: Add merge and stats steps when those modules are implemented
     logging.info("Pipeline completed successfully!")
+
+def re_evaluate_run(run_dir: Path, gold_standard_file: str) -> None:
+    """Re-evaluate an existing pipeline run against a new gold standard."""
+    import pandas as pd
+    from datetime import datetime
+    
+    logging.info(f"Re-evaluating run: {run_dir}")
+    logging.info(f"Using gold standard: {gold_standard_file}")
+    
+    # Load pipeline results
+    model_labels_file = run_dir / "model_labels_tot.csv"
+    df_results = pd.read_csv(model_labels_file, dtype={'StatementID': str})
+    logging.info(f"Loaded {len(df_results)} pipeline results from {model_labels_file}")
+    
+    # Load new gold standard
+    df_gold = pd.read_csv(gold_standard_file, dtype={'StatementID': str})
+    
+    # Verify gold standard file has required columns
+    if 'StatementID' not in df_gold.columns:
+        raise ValueError("Gold standard file must contain 'StatementID' column")
+    if 'Gold Standard' not in df_gold.columns:
+        raise ValueError("Gold standard file must contain 'Gold Standard' column")
+    
+    logging.info(f"Loaded {len(df_gold)} gold standard entries from {gold_standard_file}")
+    
+    # Merge results with new gold standard
+    df_comparison = df_results.merge(
+        df_gold[['StatementID', 'Gold Standard']], 
+        on='StatementID', 
+        how='left'
+    )
+    
+    # Log merge statistics  
+    total_results = len(df_comparison)
+    has_gold = df_comparison['Gold Standard'].notna().sum()
+    missing_gold = total_results - has_gold
+    logging.info(f"Gold standard merge: {has_gold}/{total_results} results have gold labels, {missing_gold} missing")
+    
+    if missing_gold > 0:
+        missing_ids = df_comparison[df_comparison['Gold Standard'].isna()]['StatementID'].tolist()
+        logging.warning(f"Results missing gold standard labels: {missing_ids[:10]}{'...' if len(missing_ids) > 10 else ''}")
+    
+    # Filter to only results that have gold standard labels
+    df_comparison = df_comparison[df_comparison['Gold Standard'].notna()].copy()
+    
+    if len(df_comparison) == 0:
+        logging.error("No pipeline results match the new gold standard")
+        return
+    
+    # Rename columns for consistency with existing evaluation code
+    df_comparison = df_comparison.rename(columns={'Gold Standard': 'Gold_Standard'})
+    
+    # Add mismatch column
+    df_comparison['Mismatch'] = df_comparison['Gold_Standard'] != df_comparison['Pipeline_Result']
+    
+    # Create timestamped comparison file
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    comparison_path = run_dir / f"re_evaluation_{timestamp}_comparison.csv"
+    df_comparison.to_csv(comparison_path, index=False)
+    logging.info(f"Saved re-evaluation comparison to: {comparison_path}")
+    
+    # Import evaluation functions from run_multi_coder_tot
+    try:
+        from .run_multi_coder_tot import calculate_metrics, print_evaluation_report, print_mismatches, reorganize_traces_by_match_status
+    except ImportError:
+        from run_multi_coder_tot import calculate_metrics, print_evaluation_report, print_mismatches, reorganize_traces_by_match_status
+    
+    # Calculate metrics
+    predictions = df_comparison['Pipeline_Result'].tolist()
+    actuals = df_comparison['Gold_Standard'].tolist()
+    metrics = calculate_metrics(predictions, actuals)
+    
+    # Print evaluation report
+    print(f"\n🔄 RE-EVALUATION RESULTS")
+    print(f"📁 Run directory: {run_dir}")
+    print(f"📊 Gold standard: {gold_standard_file}")
+    print(f"📈 Evaluated {len(df_comparison)} results")
+    
+    # Calculate mismatch counts
+    mismatch_count = int(df_comparison["Mismatch"].sum())
+    print(f"❌ Mismatches: {mismatch_count}/{len(df_comparison)} ({mismatch_count/len(df_comparison):.1%})")
+    
+    print(f"\n🎯 OVERALL ACCURACY: {metrics['accuracy']:.2%}")
+    print(f"\n=== Per-Frame Precision / Recall ===")
+    
+    for frame, stats in metrics['frame_metrics'].items():
+        if stats['tp'] + stats['fp'] + stats['fn'] == 0:
+            continue  # Skip frames not present in the data
+            
+        p_str = f"{stats['precision']:.2%}" if stats['precision'] > 0 else "nan%"
+        r_str = f"{stats['recall']:.2%}" if stats['recall'] > 0 else "0.00%"
+        f1_str = f"{stats['f1']:.2%}" if stats['f1'] > 0 else "nan%"
+        
+        print(f"{frame:<12} P={p_str:<8} R={r_str:<8} F1={f1_str:<8} "
+              f"(tp={stats['tp']}, fp={stats['fp']}, fn={stats['fn']})")
+    
+    # Print detailed mismatches
+    if mismatch_count > 0:
+        print_mismatches(df_comparison)
+    else:
+        print(f"🎉 Perfect match! All {len(df_comparison)} results consistent with gold standard.")
+    
+    # Reorganize trace files by new match/mismatch status
+    trace_dir = run_dir / "traces_tot"
+    if trace_dir.exists():
+        logging.info("Reorganizing trace files by new match/mismatch status...")
+        
+        # Create timestamped trace directories for re-evaluation
+        re_eval_trace_dir = run_dir / f"traces_tot_re_eval_{timestamp}"
+        re_eval_trace_dir.mkdir(exist_ok=True)
+        
+        # Copy comparison dataframe with proper column names for reorganize function
+        df_for_traces = df_comparison.copy()
+        if 'Statement Text' not in df_for_traces.columns:
+            # Add a placeholder if Statement Text is missing
+            df_for_traces['Statement Text'] = df_for_traces['StatementID']
+        
+        # Copy original traces to re-evaluation directory, then reorganize
+        import shutil
+        if trace_dir.exists():
+            for trace_file in trace_dir.glob("*.jsonl"):
+                if not trace_file.name.startswith("consolidated_"):
+                    shutil.copy2(trace_file, re_eval_trace_dir)
+        
+        reorganize_traces_by_match_status(re_eval_trace_dir, df_for_traces)
+        logging.info(f"Trace files reorganized in: {re_eval_trace_dir}")
+    
+    print(f"\n✅ Re-evaluation complete!")
+    print(f"📋 Comparison saved to: {comparison_path}")
+    if trace_dir.exists():
+        print(f"📂 Reorganized traces in: {re_eval_trace_dir}")
 
 def main():
     """Main entry point for the analysis pipeline."""
@@ -343,9 +482,18 @@ def main():
     parser.add_argument('--only-hop', type=int, help='If set, run only the specified hop index (1-12) for diagnostic testing')
 
     # ------------------------------------------------------------------
+    # NEW – Gold standard reference file
+    # ------------------------------------------------------------------
+    parser.add_argument('--gold-standard', help='Path to gold standard reference CSV file (optional - if not provided, will look for Gold Standard column in input file)')
+
+    # ------------------------------------------------------------------
+    # NEW – Re-evaluation of existing runs
+    # ------------------------------------------------------------------
+    parser.add_argument('--re-evaluate', help='Path to existing run output directory to re-evaluate against a new gold standard (use with --gold-standard)')
+
+    # ------------------------------------------------------------------
     # NEW – Consensus strategy & self-consistency decoding (pipeline mode)
     # ------------------------------------------------------------------
-
     parser.add_argument('--consensus', default='final', choices=['hop', 'final'],
                         help="Consensus strategy: 'hop' = per-hop majority, 'final' = legacy end-of-tree vote (default)")
 
@@ -394,6 +542,23 @@ def main():
         logging.error("--only-hop must be between 1 and 12")
         sys.exit(1)
 
+    # Validate re-evaluation arguments
+    if args.re_evaluate:
+        if not args.gold_standard:
+            logging.error("--re-evaluate requires --gold-standard to specify the new gold standard file")
+            sys.exit(1)
+        
+        re_eval_dir = Path(args.re_evaluate)
+        if not re_eval_dir.exists() or not re_eval_dir.is_dir():
+            logging.error(f"Re-evaluation directory does not exist: {args.re_evaluate}")
+            sys.exit(1)
+            
+        # Check for required files
+        model_labels_file = re_eval_dir / "model_labels_tot.csv"
+        if not model_labels_file.exists():
+            logging.error(f"Pipeline results file not found: {model_labels_file}")
+            sys.exit(1)
+
     # --- Load Configuration ---
     if not os.path.exists(args.config):
         # Create a minimal config file if it doesn't exist
@@ -411,6 +576,17 @@ def main():
 
     config = load_config(args.config)
     setup_logging(config)
+
+    # ------------------------------------------------------------------
+    # Re-evaluation mode: evaluate existing run against new gold standard
+    # ------------------------------------------------------------------
+    if args.re_evaluate:
+        try:
+            re_evaluate_run(Path(args.re_evaluate), args.gold_standard)
+            return  # Exit after re-evaluation
+        except Exception as e:
+            logging.error(f"Re-evaluation failed: {e}", exc_info=True)
+            sys.exit(1)
 
     # ------------------------------------------------------------------
     # Permutation mode short-circuits the normal pipeline and delegates

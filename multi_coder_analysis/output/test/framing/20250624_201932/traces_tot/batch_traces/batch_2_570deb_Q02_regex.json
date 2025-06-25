@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch_2_570deb",
+  "hop_idx": 2,
+  "segment_count": 2,
+  "matches": [
+    {
+      "statement_id": "seg_v5_20_137_chunk0",
+      "regex": {
+        "rule": "OnHighAlert.Live",
+        "span": [
+          104,
+          117
+        ],
+        "captures": []
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    },
+    {
+      "statement_id": "seg_v5_26_363_chunk0",
+      "regex": {
+        "rule": "HighPotencyVerbMetaphor",
+        "span": [
+          109,
+          122
+        ],
+        "captures": []
+      },
+      "frame": "Alarmist",
+      "answer": "yes"
+    }
+  ]
+}

@@ -5,6 +5,16 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+### v2.18.4  (2025‑06‑25)
+* **BUGFIX – "Variable" label leakage**  
+  * Removed placeholder mapping (`Q_TO_FRAME[11] = "Variable"`).  
+  * Added strict `||FRAME=` token guard for Hop 11; silent omissions now
+    fall back to **Neutral** with a logged warning.  
+  * Deleted obsolete ad‑hoc override block.  
+  * Added regression tests (*tests/test_hop11_token_guard.py*).
+* **BREAKING CHANGE** – Any pipeline depending on the string "Variable"
+  must update downstream enums; the label is no longer produced.
+
 ## [1.0.0-rc1] - 2025-01-XX
 
 ### 🚀 Major Refactoring - Hexagonal Architecture

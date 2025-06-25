@@ -1,0 +1,85 @@
+### QUICK DECISION CHECK
+• Direct QUOTE contains explicit Alarmist cue (**EXTREMELY CONCERNING / IMMEDIATE ACTION / HIGH RISK / CATASTROPHIC**) **OR** explicit Reassuring cue (**NO CAUSE FOR ALARM / EXCELLENT NEWS / SAFE TO EAT / VERY WELL PROTECTED**).  
+• If both or balanced → `"no"` (mixed → Neutral).  
+→ If one side dominant → `"yes"` and append `||FRAME=Alarmist` or `||FRAME=Reassuring`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: "Meanwhile, Kirby Institute head Professor Raina MacIntyre described the bird flu news as 'extremely concerning and requires immediate action.'"
+## Question: Does a directly quoted source provide a clear, dominant Alarmist or Reassuring frame?
+## JSON Output:
+{"answer":"yes","rationale":"Quoted source uses 'extremely concerning and requires immediate action' providing dominant alarmist frame. ||FRAME=Alarmist"}
+
+# NO example
+## Input Segment: "Meanwhile, Professor MacIntyre described the news as 'concerning,' but noted that avian flu viruses do not transmit easily in humans."
+## Question: Does a directly quoted source provide a clear, dominant Alarmist or Reassuring frame?
+## JSON Output:
+{"answer":"no","rationale":"Quote has 'concerning' but is balanced by factual counter-statement without explicit reassuring language, resulting in mixed/neutral overall."}
+
+# NEW example – balanced quote (stays Neutral)
+## Input Segment:
+## "This development is 'concerning', but the virus 'does not transmit easily in humans,' the expert said."
+## JSON Output:
+{"answer":"no","rationale":"Initial alarm word 'concerning' is balanced by neutral factual clause without explicit reassurance; no dominant frame. ||FRAME=Neutral"}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q11 (**Quote-presence hard-guard**)
+**Q11: Primacy of Framed Quotations – Dominant Quote Check**
+
+Does a directly quoted source within the segment provide a clear, dominant Alarmist or Reassuring frame (per detailed definitions in `step-0-meta-details` and specific frame definitions) that is not overridden or equally balanced by other quotes or strong authorial counter-framing, as per the "Guidance Note: Primacy of Framed Quotations"?
+
+**🔍 Q11 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **Outcome** |
+|------------------|--------------|-------------|
+| **Alarmist – Dominant Quote** | "extremely concerning and requires immediate action." | **Alarmist** | dominant alarm |
+| **Alarmist – Intensified High-Risk** | "definitely considered a period of high risk" | **Alarmist** | intensified risk assessment |
+| **Neutral – Bare risk-adj in quote** | "This virus is deadly to birds." | **Neutral** | base risk adjective without intensifier |
+| **Dominant Reassuring Quote** | "no cause for alarm," "excellent news," "very well protected" | → Reassuring |
+| **Balanced/Mixed Quotes** | "concerning, but viruses do not transmit easily" | → Neutral |
+| **Neutral Quotes Only** | "officials are monitoring," "tests are ongoing" | → Proceed to Q12 |
+
+**🔍 Detailed Rules & Examples:**
+
+**Guidance Note: Primacy of Framed Quotations (SUPERSEDES PREVIOUS QUOTE RULES)**
+**Technical-term override**  
+Before deciding that a quoted risk-adjective is Alarmist under Q11,  
+**skip** the cue if the adjective is immediately preceded (≤ 3 tokens) by the
+whitelisted biomedical collocations:  
+*"highly pathogenic"*, *"highly pathogenic avian"*, *"HPAI"*.  
+Rationale: Q1 technical-term guard has higher precedence and treats these
+as neutral taxonomy, not intensification.
+
+**Preparedness safety-link check**  
+When a quote says *"fully/well prepared (ready) to handle/deal with …"* **but** lacks an explicit public/consumer safety link within 40 chars (e.g., "so consumers are safe"), treat it as **Neutral** rather than Reassuring.
+
+Core Principle: If – **and only if** – a statement is
+  (a) delimited by quotation marks **OR** introduced with a
+      colon‑style attribution inside ≤ 5 tokens  
+      (e.g. *Officials said: "..."*) **AND**
+  (b) spoken by a **named or institutional speaker**,  
+then treat it as a direct quotation for Q11 purposes.
+Attributions such as *"according to a report / overview / study"*
+without quoted wording are **NOT** treated as quotations and cannot
+trigger Q11.
+
+If a quoted sentence contains both alarm **and** de-escalating clauses,
+score **Neutral** **unless** one side *clearly outguns* the other –
+meaning it deploys a *higher‑precedence cue* **or** ≥ 2 distinct cues
+of the same polarity.  Mild "concerning" vs "not severe" remains
+Neutral.  In true *mixed*
+cases, Neutral prevails.
+
+If no regex pattern matches **and** the quote is > 600 chars, summarise manually;
+else fall through to Q12 Neutral.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'. If yes, MUST end with ||FRAME=Alarmist or ||FRAME=Reassuring>"
+}
+```
+

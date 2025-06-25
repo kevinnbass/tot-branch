@@ -1,0 +1,22 @@
+# ─────────────────────────────────────────────────────────────
+#  GLOBAL FOOTER – 6-POINT SELF-AUDIT (auto-appended to every hop)
+#  -----------------------------------------------------------
+✅ **SELF-AUDIT before you reply**
+1. If you answered **"yes"**, STOP processing further questions.
+2. Quote decisive cue(s) in the *rationale*.
+3. No Alarmist on neutrally stated **bad** facts.
+4. No Reassuring on neutrally stated **good / low-risk** facts.
+5. First "yes" only – no double hits / overrides.
+6. Output must be pure JSON and **nothing else**.
+
+🔧 **Implementation hint** – add a regression test where  
+Input: "We are confident our systems are ready." → expect Q5 = yes, Reassuring.
+
+*Re-read this list; fix any violation before sending.*
+# 7. If you reach **Q12** and still cannot assign a frame with certainty,
+#    return an **Unknown** label:
+#        { "answer":"unknown",
+#          "rationale":"Q12 reached with no decisive cues; frame unresolved" }
+#    Down-stream evaluation will skip these rows.
+# ─────────────────────────────────────────────────────────────
+
