@@ -1,0 +1,1154 @@
+{
+  "timestamp": "2025-06-26T18:56:02.760916",
+  "coverage_metrics": {
+    "overall": {
+      "total_patterns": 45,
+      "total_rules": 29,
+      "covered_patterns": 45,
+      "llm_only_patterns": 0,
+      "coverage_percentage": 100.0,
+      "rules_per_pattern": 0.6444444444444445
+    },
+    "by_hop": {
+      "Q1": {
+        "total_patterns": 3,
+        "covered_patterns": 3,
+        "coverage_percentage": 100.0,
+        "frame": "Alarmist"
+      },
+      "Q2": {
+        "total_patterns": 5,
+        "covered_patterns": 5,
+        "coverage_percentage": 100.0,
+        "frame": "Alarmist"
+      },
+      "Q3": {
+        "total_patterns": 2,
+        "covered_patterns": 2,
+        "coverage_percentage": 100.0,
+        "frame": "Alarmist"
+      },
+      "Q4": {
+        "total_patterns": 2,
+        "covered_patterns": 2,
+        "coverage_percentage": 100.0,
+        "frame": "Alarmist"
+      },
+      "Q5": {
+        "total_patterns": 8,
+        "covered_patterns": 8,
+        "coverage_percentage": 100.0,
+        "frame": "Reassuring"
+      },
+      "Q6": {
+        "total_patterns": 2,
+        "covered_patterns": 2,
+        "coverage_percentage": 100.0,
+        "frame": "Reassuring"
+      },
+      "Q7": {
+        "total_patterns": 4,
+        "covered_patterns": 4,
+        "coverage_percentage": 100.0,
+        "frame": "Neutral"
+      },
+      "Q8": {
+        "total_patterns": 4,
+        "covered_patterns": 4,
+        "coverage_percentage": 100.0,
+        "frame": "Neutral"
+      },
+      "Q9": {
+        "total_patterns": 4,
+        "covered_patterns": 4,
+        "coverage_percentage": 100.0,
+        "frame": "Neutral"
+      },
+      "Q10": {
+        "total_patterns": 3,
+        "covered_patterns": 3,
+        "coverage_percentage": 100.0,
+        "frame": "Neutral"
+      },
+      "Q11": {
+        "total_patterns": 4,
+        "covered_patterns": 4,
+        "coverage_percentage": 100.0,
+        "frame": "Variable"
+      },
+      "Q12": {
+        "total_patterns": 4,
+        "covered_patterns": 4,
+        "coverage_percentage": 100.0,
+        "frame": "Neutral"
+      }
+    },
+    "by_frame": {
+      "Alarmist": {
+        "total_patterns": 12,
+        "covered_patterns": 12,
+        "coverage_percentage": 100.0
+      },
+      "Reassuring": {
+        "total_patterns": 10,
+        "covered_patterns": 10,
+        "coverage_percentage": 100.0
+      },
+      "Neutral": {
+        "total_patterns": 19,
+        "covered_patterns": 19,
+        "coverage_percentage": 100.0
+      },
+      "Variable": {
+        "total_patterns": 4,
+        "covered_patterns": 4,
+        "coverage_percentage": 100.0
+      }
+    },
+    "trends": {}
+  },
+  "performance_profile": {
+    "complexity_distribution": {
+      "mean": 61.42857142857143,
+      "median": 40.0,
+      "std_dev": 71.64802267640854,
+      "min": 4,
+      "max": 285,
+      "percentiles": {
+        "25th": 11.0,
+        "75th": 99.5,
+        "90th": 172.7
+      }
+    },
+    "high_complexity_rules": [
+      {
+        "hop": "Q1",
+        "name": "IntensifierRiskAdjV2",
+        "complexity_score": 168,
+        "pattern_length": 1419,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q1",
+        "name": "H1.AutoIntensifierRiskAdj",
+        "complexity_score": 45,
+        "pattern_length": 336,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q2",
+        "name": "HighPotencyVerbMetaphor",
+        "complexity_score": 285,
+        "pattern_length": 2743,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q3",
+        "name": "ModerateVerbPlusScale",
+        "complexity_score": 102,
+        "pattern_length": 951,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q3",
+        "name": "ScaleMultiplier",
+        "complexity_score": 39,
+        "pattern_length": 244,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q4",
+        "name": "LoadedQuestionAlarm",
+        "complexity_score": 92,
+        "pattern_length": 697,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q5",
+        "name": "ExplicitCalming",
+        "complexity_score": 215,
+        "pattern_length": 1526,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q6",
+        "name": "MinimiserScaleContrast",
+        "complexity_score": 108,
+        "pattern_length": 807,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegationHealthConcern",
+        "complexity_score": 168,
+        "pattern_length": 1019,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegation.NotContaminate.Live",
+        "complexity_score": 41,
+        "pattern_length": 165,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegation.NothingSuggests.Live",
+        "complexity_score": 41,
+        "pattern_length": 279,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q9",
+        "name": "NeutralPriceMetrics",
+        "complexity_score": 111,
+        "pattern_length": 841,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q11",
+        "name": "DominantQuoteAlarmist",
+        "complexity_score": 60,
+        "pattern_length": 770,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q11",
+        "name": "DominantQuoteReassuring",
+        "complexity_score": 51,
+        "pattern_length": 530,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q11",
+        "name": "BaseRiskAdjQuoteNeutral",
+        "complexity_score": 47,
+        "pattern_length": 419,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      }
+    ],
+    "performance_bottlenecks": [
+      {
+        "hop": "Q1",
+        "name": "IntensifierRiskAdjV2",
+        "complexity_score": 168,
+        "pattern_length": 1419,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q1",
+        "name": "H1.AutoIntensifierRiskAdj",
+        "complexity_score": 45,
+        "pattern_length": 336,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q2",
+        "name": "HighPotencyVerbMetaphor",
+        "complexity_score": 285,
+        "pattern_length": 2743,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q3",
+        "name": "ModerateVerbPlusScale",
+        "complexity_score": 102,
+        "pattern_length": 951,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q3",
+        "name": "ScaleMultiplier",
+        "complexity_score": 39,
+        "pattern_length": 244,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q4",
+        "name": "LoadedQuestionAlarm",
+        "complexity_score": 92,
+        "pattern_length": 697,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q5",
+        "name": "ExplicitCalming",
+        "complexity_score": 215,
+        "pattern_length": 1526,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q6",
+        "name": "MinimiserScaleContrast",
+        "complexity_score": 108,
+        "pattern_length": 807,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegationHealthConcern",
+        "complexity_score": 168,
+        "pattern_length": 1019,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegation.NotContaminate.Live",
+        "complexity_score": 41,
+        "pattern_length": 165,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegation.NothingSuggests.Live",
+        "complexity_score": 41,
+        "pattern_length": 279,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q9",
+        "name": "NeutralPriceMetrics",
+        "complexity_score": 111,
+        "pattern_length": 841,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q11",
+        "name": "DominantQuoteAlarmist",
+        "complexity_score": 60,
+        "pattern_length": 770,
+        "has_veto": true,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q11",
+        "name": "DominantQuoteReassuring",
+        "complexity_score": 51,
+        "pattern_length": 530,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      },
+      {
+        "hop": "Q11",
+        "name": "BaseRiskAdjQuoteNeutral",
+        "complexity_score": 47,
+        "pattern_length": 419,
+        "has_veto": false,
+        "estimated_performance": "slow"
+      }
+    ],
+    "optimization_candidates": [
+      {
+        "hop": "Q1",
+        "name": "IntensifierRiskAdjV2",
+        "complexity_score": 168,
+        "pattern_length": 1419,
+        "has_veto": true,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules",
+          "Pattern is very long, consider modularization",
+          "Multiple lookarounds may impact performance"
+        ]
+      },
+      {
+        "hop": "Q1",
+        "name": "H1.AutoIntensifierRiskAdj",
+        "complexity_score": 45,
+        "pattern_length": 336,
+        "has_veto": true,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q2",
+        "name": "HighPotencyVerbMetaphor",
+        "complexity_score": 285,
+        "pattern_length": 2743,
+        "has_veto": true,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules",
+          "Pattern is very long, consider modularization",
+          "Multiple lookarounds may impact performance"
+        ]
+      },
+      {
+        "hop": "Q3",
+        "name": "ModerateVerbPlusScale",
+        "complexity_score": 102,
+        "pattern_length": 951,
+        "has_veto": true,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules",
+          "Multiple lookarounds may impact performance"
+        ]
+      },
+      {
+        "hop": "Q3",
+        "name": "ScaleMultiplier",
+        "complexity_score": 39,
+        "pattern_length": 244,
+        "has_veto": true,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q4",
+        "name": "LoadedQuestionAlarm",
+        "complexity_score": 92,
+        "pattern_length": 697,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q5",
+        "name": "ExplicitCalming",
+        "complexity_score": 215,
+        "pattern_length": 1526,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules",
+          "Pattern is very long, consider modularization"
+        ]
+      },
+      {
+        "hop": "Q6",
+        "name": "MinimiserScaleContrast",
+        "complexity_score": 108,
+        "pattern_length": 807,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegationHealthConcern",
+        "complexity_score": 168,
+        "pattern_length": 1019,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules",
+          "Pattern is very long, consider modularization"
+        ]
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegation.NotContaminate.Live",
+        "complexity_score": 41,
+        "pattern_length": 165,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q7",
+        "name": "BareNegation.NothingSuggests.Live",
+        "complexity_score": 41,
+        "pattern_length": 279,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q9",
+        "name": "NeutralPriceMetrics",
+        "complexity_score": 111,
+        "pattern_length": 841,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q11",
+        "name": "DominantQuoteAlarmist",
+        "complexity_score": 60,
+        "pattern_length": 770,
+        "has_veto": true,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q11",
+        "name": "DominantQuoteReassuring",
+        "complexity_score": 51,
+        "pattern_length": 530,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q11",
+        "name": "BaseRiskAdjQuoteNeutral",
+        "complexity_score": 47,
+        "pattern_length": 419,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider breaking into multiple rules"
+        ]
+      },
+      {
+        "hop": "Q12",
+        "name": "NeutralStats",
+        "complexity_score": 16,
+        "pattern_length": 119,
+        "has_veto": false,
+        "estimated_performance": "slow",
+        "optimization_suggestions": [
+          "Consider replacing .* with more specific patterns",
+          "Consider breaking into multiple rules"
+        ]
+      }
+    ]
+  },
+  "evolution_tracking": {
+    "recent_changes": [
+      {
+        "commit": "429c0e35ff",
+        "message": "Save work before switching to LeanHop"
+      },
+      {
+        "commit": "e136a33ed3",
+        "message": "Enhance consensus step in multi-coder analysis by adding decision collection functionality. Update the run_permutation_suite function to implement a dynamic majority threshold for label determination. Introduce decision records in the tot_runner for detailed output of determinative votes and segment traces."
+      },
+      {
+        "commit": "7eb89517bd",
+        "message": "Disable gitdoc in VSCode settings and enhance multi-coder analysis with support for ranked-list outputs. Update RunConfig to include new aggregation rules (irv, borda, mrr) and parameters for ranked lists. Modify relevant functions and classes to handle ranked candidates and adjust CLI options accordingly."
+      },
+      {
+        "commit": "368bcaf1f0",
+        "message": "Update compiled Python files and add new YAML and text prompt files for multi-coder analysis. Introduce new regex patterns and adjust existing ones for improved functionality. Ensure all changes reflect the latest code structure and requirements."
+      },
+      {
+        "commit": "1399b0c402",
+        "message": "Jun 23, 2025, 11:38 AM"
+      },
+      {
+        "commit": "09cbea45c8",
+        "message": "Jun 23, 2025, 11:28 AM"
+      },
+      {
+        "commit": "763ea53613",
+        "message": "Jun 23, 2025, 11:19 AM"
+      },
+      {
+        "commit": "681217a4aa",
+        "message": "Jun 23, 2025, 11:17 AM"
+      },
+      {
+        "commit": "36ca0d22c9",
+        "message": "Initial commit"
+      },
+      {
+        "commit": "ac750cc716",
+        "message": "Jun 18, 2025, 8:13 AM"
+      },
+      {
+        "commit": "d82a3f9655",
+        "message": "Jun 17, 2025, 11:42 PM"
+      },
+      {
+        "commit": "386fdb59d7",
+        "message": "Jun 17, 2025, 11:29 PM"
+      },
+      {
+        "commit": "1317ab8278",
+        "message": "Jun 17, 2025, 11:05 PM"
+      },
+      {
+        "commit": "e424a5d9dd",
+        "message": "Jun 15, 2025, 8:51 AM"
+      },
+      {
+        "commit": "a4b1a987eb",
+        "message": "Jun 14, 2025, 10:50 PM"
+      },
+      {
+        "commit": "aa90c05087",
+        "message": "Jun 14, 2025, 10:30 PM"
+      },
+      {
+        "commit": "ad8f7743cc",
+        "message": "Jun 14, 2025, 8:25 PM"
+      },
+      {
+        "commit": "e859ace941",
+        "message": "Jun 14, 2025, 8:13 PM"
+      },
+      {
+        "commit": "36dd755b22",
+        "message": "Jun 14, 2025, 4:07 AM"
+      },
+      {
+        "commit": "7636f53ec1",
+        "message": "Jun 14, 2025, 4:06 AM"
+      },
+      {
+        "commit": "50f01ce954",
+        "message": "Jun 14, 2025, 3:18 AM"
+      },
+      {
+        "commit": "fb9f46fec2",
+        "message": "Jun 14, 2025, 3:17 AM"
+      },
+      {
+        "commit": "b6fffa2d9a",
+        "message": "Jun 14, 2025, 2:12 AM"
+      },
+      {
+        "commit": "f831c63fa3",
+        "message": "Jun 14, 2025, 2:09 AM"
+      },
+      {
+        "commit": "f1331f200c",
+        "message": "Jun 14, 2025, 2:00 AM"
+      },
+      {
+        "commit": "4e19235244",
+        "message": "Jun 14, 2025, 1:43 AM"
+      },
+      {
+        "commit": "88a3eb44bb",
+        "message": "Jun 14, 2025, 1:15 AM"
+      },
+      {
+        "commit": "cf216cd211",
+        "message": "Jun 14, 2025, 1:10 AM"
+      },
+      {
+        "commit": "ab63e8d9e8",
+        "message": "Jun 14, 2025, 12:57 AM"
+      },
+      {
+        "commit": "6b9af350df",
+        "message": "Jun 14, 2025, 12:40 AM"
+      },
+      {
+        "commit": "b559e3a688",
+        "message": "Jun 14, 2025, 12:33 AM"
+      },
+      {
+        "commit": "7a679a91e0",
+        "message": "Jun 14, 2025, 12:09 AM"
+      },
+      {
+        "commit": "dfc684717c",
+        "message": "Jun 13, 2025, 12:10 PM"
+      },
+      {
+        "commit": "142590fae9",
+        "message": "Jun 13, 2025, 12:09 PM"
+      },
+      {
+        "commit": "c868af6d1c",
+        "message": "Jun 13, 2025, 12:07 PM"
+      },
+      {
+        "commit": "fe9e542c9e",
+        "message": "Jun 13, 2025, 12:06 PM"
+      },
+      {
+        "commit": "6d4948a0d2",
+        "message": "Jun 13, 2025, 12:05 PM"
+      },
+      {
+        "commit": "a200dc4fbe",
+        "message": "Jun 13, 2025, 12:04 PM"
+      },
+      {
+        "commit": "89f6cf1bd4",
+        "message": "Jun 13, 2025, 12:02 PM"
+      },
+      {
+        "commit": "78471ff067",
+        "message": "Jun 13, 2025, 12:01 PM"
+      },
+      {
+        "commit": "944508ffc7",
+        "message": "Jun 13, 2025, 11:57 AM"
+      },
+      {
+        "commit": "0d60069aeb",
+        "message": "Jun 13, 2025, 11:55 AM"
+      },
+      {
+        "commit": "ae8119dd05",
+        "message": "Jun 13, 2025, 11:40 AM"
+      },
+      {
+        "commit": "21b9b12433",
+        "message": "Jun 13, 2025, 11:34 AM"
+      },
+      {
+        "commit": "3d031cf797",
+        "message": "Jun 13, 2025, 11:33 AM"
+      },
+      {
+        "commit": "40686e3b74",
+        "message": "Jun 13, 2025, 11:03 AM"
+      },
+      {
+        "commit": "09511cbdf0",
+        "message": "Jun 13, 2025, 10:23 AM"
+      },
+      {
+        "commit": "f8b44c49d7",
+        "message": "Jun 13, 2025, 10:08 AM"
+      },
+      {
+        "commit": "70c517b720",
+        "message": "Jun 13, 2025, 10:02 AM"
+      },
+      {
+        "commit": "563a13f125",
+        "message": "Jun 13, 2025, 9:58 AM"
+      },
+      {
+        "commit": "b8395e55bd",
+        "message": "Jun 13, 2025, 9:51 AM"
+      },
+      {
+        "commit": "8ac9c4a934",
+        "message": "Jun 13, 2025, 9:50 AM"
+      },
+      {
+        "commit": "d2c0e3c788",
+        "message": "Jun 13, 2025, 9:49 AM"
+      },
+      {
+        "commit": "5e7efcc36f",
+        "message": "Jun 13, 2025, 9:48 AM"
+      },
+      {
+        "commit": "a92fe744a3",
+        "message": "Jun 13, 2025, 9:43 AM"
+      },
+      {
+        "commit": "83aa121101",
+        "message": "Jun 13, 2025, 9:40 AM"
+      },
+      {
+        "commit": "51b495a236",
+        "message": "Jun 13, 2025, 9:34 AM"
+      },
+      {
+        "commit": "a0f948655d",
+        "message": "Jun 13, 2025, 9:20 AM"
+      },
+      {
+        "commit": "2d147a9c00",
+        "message": "Jun 13, 2025, 9:16 AM"
+      },
+      {
+        "commit": "5d36aa4153",
+        "message": "Jun 13, 2025, 8:40 AM"
+      },
+      {
+        "commit": "8bb11103b1",
+        "message": "Q02 regex: remove premature group close to fix compile error and restore hop logs"
+      },
+      {
+        "commit": "6c6fa463b0",
+        "message": "Fix unmatched parentheses in Q02 critical-alert regex (verbosity / invalid-regex warning)"
+      },
+      {
+        "commit": "f40a8fe2ee",
+        "message": "Prompts: refine regex patterns, strip diff markers, and fix meta-comments for Q02, Q03, Q04, Q11"
+      },
+      {
+        "commit": "7992b39192",
+        "message": "Jun 13, 2025, 7:35 AM"
+      },
+      {
+        "commit": "0fbc948a08",
+        "message": "Jun 13, 2025, 7:33 AM"
+      },
+      {
+        "commit": "7c8e4baa7d",
+        "message": "Jun 13, 2025, 7:25 AM"
+      },
+      {
+        "commit": "acce8ea2f0",
+        "message": "Jun 13, 2025, 7:21 AM"
+      },
+      {
+        "commit": "7a9ae4bb58",
+        "message": "Jun 13, 2025, 7:20 AM"
+      },
+      {
+        "commit": "dfa5d4916a",
+        "message": "Jun 13, 2025, 7:15 AM"
+      },
+      {
+        "commit": "ca3de3875e",
+        "message": "Jun 13, 2025, 7:12 AM"
+      },
+      {
+        "commit": "4d5f0932d0",
+        "message": "Jun 13, 2025, 6:52 AM"
+      },
+      {
+        "commit": "e3d6471365",
+        "message": "Jun 13, 2025, 6:45 AM"
+      },
+      {
+        "commit": "cbd6461492",
+        "message": "Jun 13, 2025, 6:40 AM"
+      },
+      {
+        "commit": "37fe6b879c",
+        "message": "Jun 13, 2025, 6:04 AM"
+      },
+      {
+        "commit": "22e5533d19",
+        "message": "Jun 13, 2025, 6:03 AM"
+      },
+      {
+        "commit": "c1e26f00c7",
+        "message": "Jun 13, 2025, 6:02 AM"
+      },
+      {
+        "commit": "5012677ff1",
+        "message": "Jun 13, 2025, 2:28 AM"
+      },
+      {
+        "commit": "0d56c5e5b4",
+        "message": "Jun 13, 2025, 2:27 AM"
+      },
+      {
+        "commit": "a87695d793",
+        "message": "Jun 13, 2025, 2:15 AM"
+      },
+      {
+        "commit": "368709daed",
+        "message": "Jun 13, 2025, 2:14 AM"
+      },
+      {
+        "commit": "1bd3d4edc4",
+        "message": "Jun 13, 2025, 1:58 AM"
+      },
+      {
+        "commit": "ddd36366fe",
+        "message": "Jun 13, 2025, 1:53 AM"
+      },
+      {
+        "commit": "f9ee6ff234",
+        "message": "Jun 13, 2025, 1:48 AM"
+      },
+      {
+        "commit": "1da76d7868",
+        "message": "Jun 13, 2025, 1:46 AM"
+      },
+      {
+        "commit": "67463ade7d",
+        "message": "Jun 13, 2025, 1:46 AM"
+      },
+      {
+        "commit": "c3b481e4ee",
+        "message": "Jun 13, 2025, 1:40 AM"
+      },
+      {
+        "commit": "93936d0253",
+        "message": "Jun 13, 2025, 1:37 AM"
+      },
+      {
+        "commit": "088d88763e",
+        "message": "Jun 13, 2025, 1:34 AM"
+      },
+      {
+        "commit": "564bb090bc",
+        "message": "Jun 13, 2025, 1:33 AM"
+      },
+      {
+        "commit": "cba16e4b8c",
+        "message": "Jun 13, 2025, 1:29 AM"
+      },
+      {
+        "commit": "e66b2981d6",
+        "message": "Jun 13, 2025, 1:28 AM"
+      },
+      {
+        "commit": "f42bb7321a",
+        "message": "Jun 13, 2025, 1:27 AM"
+      },
+      {
+        "commit": "619758b933",
+        "message": "Jun 13, 2025, 1:19 AM"
+      },
+      {
+        "commit": "582bf24d56",
+        "message": "Jun 13, 2025, 1:07 AM"
+      },
+      {
+        "commit": "635a716bc5",
+        "message": "Jun 12, 2025, 9:38 AM"
+      },
+      {
+        "commit": "a800862c54",
+        "message": "Jun 12, 2025, 4:32 AM"
+      },
+      {
+        "commit": "cbd95538d4",
+        "message": "Initial import of multi-coder framing pipeline"
+      }
+    ],
+    "growth_metrics": {
+      "total_commits": 271,
+      "files_added": 0,
+      "lines_added": 2569,
+      "lines_removed": 1101
+    },
+    "stability_analysis": {
+      "change_frequency": {
+        "multi_coder_analysis\\regex\\hop_patterns.yml": 23,
+        "multi_coder_analysis\\prompts\\*.txt": 81
+      },
+      "volatility_score": 0.0,
+      "stable_components": [],
+      "volatile_components": []
+    },
+    "contributor_stats": {}
+  },
+  "precision_analysis": {
+    "high_precision_patterns": [
+      {
+        "rule": "IntensifierRiskAdjV2",
+        "hop": "Q1",
+        "specificity": 1.0
+      },
+      {
+        "rule": "H1.AutoIntensifierRiskAdj",
+        "hop": "Q1",
+        "specificity": 0.8500000000000001
+      },
+      {
+        "rule": "HighPotencyVerbMetaphor",
+        "hop": "Q2",
+        "specificity": 1.0
+      },
+      {
+        "rule": "ModerateVerbPlusScale",
+        "hop": "Q3",
+        "specificity": 1.0
+      },
+      {
+        "rule": "LoadedQuestionAlarm",
+        "hop": "Q4",
+        "specificity": 1.0
+      },
+      {
+        "rule": "WhatIfQuestion",
+        "hop": "Q4",
+        "specificity": 0.83
+      },
+      {
+        "rule": "IgnoreDisasterQ",
+        "hop": "Q4",
+        "specificity": 0.8999999999999999
+      },
+      {
+        "rule": "ExplicitCalming",
+        "hop": "Q5",
+        "specificity": 1.0
+      },
+      {
+        "rule": "ExplicitCalming.SafeToEat.Live",
+        "hop": "Q5",
+        "specificity": 0.8999999999999999
+      },
+      {
+        "rule": "DirectNoConcern.Live",
+        "hop": "Q5",
+        "specificity": 0.8999999999999999
+      },
+      {
+        "rule": "NothingToWorry.Live",
+        "hop": "Q5",
+        "specificity": 0.86
+      },
+      {
+        "rule": "LowRiskEval.Theoretical",
+        "hop": "Q5",
+        "specificity": 0.87
+      },
+      {
+        "rule": "LowRiskSimple",
+        "hop": "Q5",
+        "specificity": 0.8999999999999999
+      },
+      {
+        "rule": "MinimiserScaleContrast",
+        "hop": "Q6",
+        "specificity": 1.0
+      },
+      {
+        "rule": "BareNegationHealthConcern",
+        "hop": "Q7",
+        "specificity": 1.0
+      },
+      {
+        "rule": "BareNegation.PosesNoRisk.Live",
+        "hop": "Q7",
+        "specificity": 0.86
+      },
+      {
+        "rule": "BareNegation.NotContaminate.Live",
+        "hop": "Q7",
+        "specificity": 1.0
+      },
+      {
+        "rule": "BareNegation.NoFurtherCases.Live",
+        "hop": "Q7",
+        "specificity": 0.8999999999999999
+      },
+      {
+        "rule": "BareNegation.NothingSuggests.Live",
+        "hop": "Q7",
+        "specificity": 0.8999999999999999
+      },
+      {
+        "rule": "NoThreatNeutral.Live",
+        "hop": "Q7",
+        "specificity": 0.86
+      },
+      {
+        "rule": "CapabilityNoReassurance",
+        "hop": "Q8",
+        "specificity": 1.0
+      },
+      {
+        "rule": "NeutralPriceMetrics",
+        "hop": "Q9",
+        "specificity": 1.0
+      },
+      {
+        "rule": "ReliefSpeculation",
+        "hop": "Q10",
+        "specificity": 0.9999999999999999
+      }
+    ],
+    "broad_patterns": [],
+    "specificity_scores": {
+      "IntensifierRiskAdjV2": 1.0,
+      "H1.AutoIntensifierRiskAdj": 0.8500000000000001,
+      "HighPotencyVerbMetaphor": 1.0,
+      "OnHighAlert.Live": 0.77,
+      "ModerateVerbPlusScale": 1.0,
+      "ScaleMultiplier": 0.4999999999999999,
+      "LoadedQuestionAlarm": 1.0,
+      "WhatIfQuestion": 0.83,
+      "IgnoreDisasterQ": 0.8999999999999999,
+      "ExplicitCalming": 1.0,
+      "ExplicitCalming.SafeToEat.Live": 0.8999999999999999,
+      "DirectNoConcern.Live": 0.8999999999999999,
+      "NothingToWorry.Live": 0.86,
+      "LowRiskEval.Theoretical": 0.87,
+      "LowRiskSimple": 0.8999999999999999,
+      "MinimiserScaleContrast": 1.0,
+      "BareNegationHealthConcern": 1.0,
+      "BareNegation.PosesNoRisk.Live": 0.86,
+      "BareNegation.NotContaminate.Live": 1.0,
+      "BareNegation.NoFurtherCases.Live": 0.8999999999999999,
+      "BareNegation.NothingSuggests.Live": 0.8999999999999999,
+      "NoThreatNeutral.Live": 0.86,
+      "CapabilityNoReassurance": 1.0,
+      "NeutralPriceMetrics": 1.0,
+      "ReliefSpeculation": 0.9999999999999999,
+      "DominantQuoteAlarmist": 0.3999999999999998,
+      "DominantQuoteReassuring": 0.5999999999999999,
+      "BaseRiskAdjQuoteNeutral": 0.5499999999999999,
+      "NeutralStats": 0.8
+    },
+    "overlap_analysis": {
+      "potential_overlaps": [],
+      "similar_patterns": []
+    }
+  },
+  "maintenance_insights": {
+    "dead_code": [],
+    "inconsistencies": [],
+    "automation_opportunities": [
+      {
+        "type": "pattern_generation",
+        "description": "Generate regex patterns from LLM-only annotations",
+        "priority": "medium"
+      },
+      {
+        "type": "performance_monitoring",
+        "description": "Add runtime performance tracking for regex rules",
+        "priority": "high"
+      },
+      {
+        "type": "coverage_alerts",
+        "description": "Alert when coverage drops below threshold",
+        "priority": "low"
+      }
+    ],
+    "technical_debt": [
+      {
+        "type": "deprecated_rules",
+        "count": 1,
+        "description": "1 shadow/deprecated rules",
+        "priority": "low",
+        "items": [
+          "8.CapabilityNoReassurance"
+        ]
+      }
+    ]
+  },
+  "trend_analysis": {
+    "coverage_trend": [],
+    "complexity_trend": [],
+    "activity_trend": []
+  }
+}

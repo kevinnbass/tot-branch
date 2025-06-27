@@ -1,3 +1,18 @@
+---
+meta_id: Q9
+row_map:
+  Q9.1: Standard Economic Verbs
+  Q9.2: Neutral Adverbs
+  Q9.3: Factual Quantification
+  Q9.4: Volatility adjective (mild)
+regex_map:
+  Q9.1: [9.NeutralPriceMetrics]
+  Q9.2: [9.NeutralPriceMetrics]
+  Q9.3: [9.NeutralPriceMetrics]
+  Q9.4: [9.NeutralPriceMetrics]
+frame: Neutral
+summary: "Factual reporting of prices/metrics"
+---
 ### QUICK DECISION CHECK
 • Reports ECON metric with standard verb (**ROSE / FELL / INCREASED / DECLINED / WERE UP / WERE DOWN / %**) **AND** lacks vivid verbs (**SKYROCKETED / PLUMMETED / CRASHED**) or risk adjectives?  
 → If yes → `"yes"` (Neutral); else → `"no"`.
@@ -26,9 +41,13 @@ Is the segment primarily reporting prices, economic data, or other numerical met
 **🔍 Q9 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Neutral** |
 |------------------|--------------|---------------|
+<!-- Q9.1 -->
 | **Standard Economic Verbs** | "prices rose," "costs declined," "rates increased," "values fell" | ✓ |
+<!-- Q9.2 -->
 | **Neutral Adverbs** | "sharply higher," "significantly declined," "notably increased" | ✓ |
+<!-- Q9.3 -->
 | **Factual Quantification** | "decreased by 2%," "gained 15 points," "lost $50M" | ✓ |
+<!-- Q9.4 -->
 | **Volatility adjective** *(mild)* | "prices could become **more volatile**" | ✓ |
 | **Vivid Economic Verbs** | "prices skyrocketed," "costs plummeted," "markets crashed" | → Alarmist |
 | **Risk Adjectives + Economics** | "catastrophic losses," "devastating decline," "crippling costs" | → Alarmist |

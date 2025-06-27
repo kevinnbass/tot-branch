@@ -1,0 +1,426 @@
+name: Annotation System Validation
+
+on:
+  push:
+    paths:
+      - 'multi_coder_analysis/regex/hop_patterns.yml'
+      - 'multi_coder_analysis/prompts/hop_Q*.txt'
+      - 'scripts/validate_annotations.py'
+      - 'scripts/generate_coverage_report.py'
+      - 'scripts/annotation_dev_tools.py'
+      - 'scripts/annotation_analytics.py'
+  pull_request:
+    paths:
+      - 'multi_coder_analysis/regex/hop_patterns.yml'
+      - 'multi_coder_analysis/prompts/hop_Q*.txt'
+      - 'scripts/validate_annotations.py'
+      - 'scripts/generate_coverage_report.py'
+      - 'scripts/annotation_dev_tools.py'
+      - 'scripts/annotation_analytics.py'
+  schedule:
+    # Run analytics daily at 2 AM UTC
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      run_full_analytics:
+        description: 'Run full analytics suite'
+        required: false
+        default: false
+        type: boolean
+      update_documentation:
+        description: 'Update documentation'
+        required: false
+        default: true
+        type: boolean
+
+jobs:
+  validate-annotations:
+    name: Validate Annotation Consistency
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Need full history for git-based analytics
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+    
+    - name: Run annotation validation
+      run: |
+        python scripts/validate_annotations.py --ci --project-root .
+      env:
+        PYTHONPATH: .
+    
+    - name: Check for validation errors
+      if: failure()
+      run: |
+        echo "❌ Annotation validation failed!"
+        echo "Please check the annotation consistency between regex rules and prompt files."
+        echo "Run 'python scripts/validate_annotations.py' locally for detailed error messages."
+        exit 1
+
+  test-pattern-matching:
+    name: Test Pattern Matching
+    runs-on: ubuntu-latest
+    needs: validate-annotations
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Test sample patterns
+      run: |
+        echo "Testing alarmist patterns..."
+        python scripts/annotation_dev_tools.py test "The virus is extremely dangerous and spreading rapidly."
+        
+        echo "Testing reassuring patterns..."
+        python scripts/annotation_dev_tools.py test "Health officials say the situation is completely safe and under control."
+        
+        echo "Testing neutral patterns..."
+        python scripts/annotation_dev_tools.py test "The report documented 500 cases in the region."
+      env:
+        PYTHONPATH: .
+
+  run-unit-tests:
+    name: Run Unit Tests
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Run annotation system tests
+      run: |
+        python -m pytest tests/test_annotation_system.py -v
+      env:
+        PYTHONPATH: .
+
+  generate-documentation:
+    name: Generate Documentation
+    runs-on: ubuntu-latest
+    needs: [validate-annotations, test-pattern-matching]
+    if: github.event_name == 'push' || github.event.inputs.update_documentation == 'true'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Generate coverage documentation
+      run: |
+        python scripts/generate_coverage_report.py \
+          --project-root . \
+          --output-dir docs/annotations
+      env:
+        PYTHONPATH: .
+    
+    - name: Upload documentation artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: annotation-documentation
+        path: docs/annotations/
+        retention-days: 30
+    
+    - name: Commit updated documentation
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add docs/annotations/
+        if git diff --staged --quiet; then
+          echo "No documentation changes to commit"
+        else
+          git commit -m "Auto-update annotation documentation [skip ci]"
+          git push
+        fi
+
+  run-analytics:
+    name: Run Analytics Suite
+    runs-on: ubuntu-latest
+    needs: validate-annotations
+    if: github.event_name == 'schedule' || github.event.inputs.run_full_analytics == 'true'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0  # Need full history for evolution tracking
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Run full analytics
+      run: |
+        python scripts/annotation_analytics.py \
+          --project-root . \
+          --output docs/annotations/analytics_report.json \
+          --format json
+      env:
+        PYTHONPATH: .
+    
+    - name: Upload analytics results
+      uses: actions/upload-artifact@v3
+      with:
+        name: analytics-report
+        path: docs/annotations/analytics_report.json
+        retention-days: 90
+    
+    - name: Check for performance issues
+      run: |
+        python -c "
+        import json
+        with open('docs/annotations/analytics_report.json') as f:
+            data = json.load(f)
+        
+        # Check coverage threshold
+        coverage = data['coverage_metrics']['overall']['coverage_percentage']
+        if coverage < 70:
+            print(f'⚠️ Coverage below threshold: {coverage:.1f}%')
+            exit(1)
+        
+        # Check for high complexity rules
+        high_complexity = data['performance_profile']['high_complexity_rules']
+        if len(high_complexity) > 5:
+            print(f'⚠️ Too many high complexity rules: {len(high_complexity)}')
+            for rule in high_complexity[:3]:
+                print(f'  - {rule[\"name\"]} (complexity: {rule[\"complexity_score\"]})')
+        
+        print(f'✅ Analytics check passed (coverage: {coverage:.1f}%)')
+        "
+
+  check-breaking-changes:
+    name: Check for Breaking Changes
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Check for breaking changes
+      run: |
+        # Get the base branch content
+        git fetch origin ${{ github.base_ref }}
+        
+        # Check regex file changes
+        if git diff --name-only origin/${{ github.base_ref }} | grep -q "hop_patterns.yml"; then
+          echo "📋 Analyzing regex rule changes..."
+          
+          # Get old and new content
+          git show origin/${{ github.base_ref }}:multi_coder_analysis/regex/hop_patterns.yml > old_patterns.yml
+          cp multi_coder_analysis/regex/hop_patterns.yml new_patterns.yml
+          
+          # Analyze impact
+          python scripts/annotation_dev_tools.py diff \
+            multi_coder_analysis/regex/hop_patterns.yml \
+            --old old_patterns.yml \
+            --new new_patterns.yml > diff_analysis.json
+          
+          # Check for breaking changes
+          python -c "
+          import json
+          with open('diff_analysis.json') as f:
+              data = json.load(f)
+          
+          if data.get('breaking_changes'):
+              print('💥 BREAKING CHANGES DETECTED:')
+              for change in data['breaking_changes']:
+                  print(f'  - {change}')
+              print('Please review these changes carefully!')
+              exit(1)
+          else:
+              print('✅ No breaking changes detected')
+          "
+        fi
+      env:
+        PYTHONPATH: .
+
+  performance-benchmark:
+    name: Performance Benchmark
+    runs-on: ubuntu-latest
+    if: github.event_name == 'pull_request'
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: 'pip'
+    
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pyyaml
+    
+    - name: Run performance benchmark
+      run: |
+        python -c "
+        import time
+        import sys
+        sys.path.insert(0, '.')
+        from scripts.annotation_dev_tools import AnnotationDevTools
+        from pathlib import Path
+        
+        tools = AnnotationDevTools(Path('.'))
+        
+        # Test patterns for performance
+        test_cases = [
+            'The virus is extremely dangerous and spreading rapidly.',
+            'Health officials say the situation is completely safe.',
+            'Prices rose by 5% this quarter.',
+            'The outbreak ravaged farms across three states.',
+            'Only one case was detected out of thousands tested.'
+        ]
+        
+        total_time = 0
+        for test_text in test_cases:
+            start = time.time()
+            result = tools.test_pattern_matching(test_text, show_annotations=False)
+            end = time.time()
+            test_time = end - start
+            total_time += test_time
+            print(f'Pattern test took {test_time:.3f}s: {len(result[\"matches\"])} matches')
+        
+        avg_time = total_time / len(test_cases)
+        print(f'Average pattern matching time: {avg_time:.3f}s')
+        
+        if avg_time > 0.1:
+            print(f'⚠️ Performance warning: Average time {avg_time:.3f}s exceeds 0.1s threshold')
+            exit(1)
+        else:
+            print(f'✅ Performance check passed')
+        "
+      env:
+        PYTHONPATH: .
+
+  notify-on-failure:
+    name: Notify on Failure
+    runs-on: ubuntu-latest
+    needs: [validate-annotations, test-pattern-matching, run-unit-tests]
+    if: failure()
+    
+    steps:
+    - name: Create issue on validation failure
+      if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+      uses: actions/github-script@v6
+      with:
+        script: |
+          const title = '🚨 Annotation Validation Failed';
+          const body = `
+          ## Annotation System Validation Failed
+          
+          The annotation validation failed on the main branch.
+          
+          **Commit**: ${{ github.sha }}
+          **Workflow**: ${{ github.workflow }}
+          **Run**: ${{ github.run_id }}
+          
+          ### Likely Issues:
+          - Inconsistency between regex rules and prompt annotations
+          - Invalid YAML syntax in hop_patterns.yml
+          - Missing metadata in prompt files
+          - Orphaned annotations
+          
+          ### Next Steps:
+          1. Run \`python scripts/validate_annotations.py\` locally for detailed errors
+          2. Check recent changes to regex and prompt files
+          3. Ensure all new annotations follow the established format
+          
+          **Auto-generated by GitHub Actions**
+          `;
+          
+          // Check if issue already exists
+          const issues = await github.rest.issues.listForRepo({
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            state: 'open',
+            labels: ['annotation-validation', 'bug']
+          });
+          
+          const existingIssue = issues.data.find(issue => issue.title === title);
+          
+          if (!existingIssue) {
+            await github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: title,
+              body: body,
+              labels: ['annotation-validation', 'bug', 'priority-high']
+            });
+          } else {
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: existingIssue.number,
+              body: `Validation failed again on commit ${{ github.sha }}`
+            });
+          } 

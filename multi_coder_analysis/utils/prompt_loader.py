@@ -34,6 +34,9 @@ import yaml
 # file so that only a header at the top is considered.
 _FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n?", re.DOTALL)
 
+# Regex to strip HTML-style comments used for row annotations
+_HTML_COMMENT_RE = re.compile(r"<!--.*?-->", re.DOTALL)
+
 
 def load_prompt_and_meta(path: Path) -> Tuple[str, Dict[str, Any]]:
     """Return *(prompt_body, meta_dict)* for the file at *path*.
@@ -45,13 +48,18 @@ def load_prompt_and_meta(path: Path) -> Tuple[str, Dict[str, Any]]:
 
     m = _FM_RE.match(text)
     if not m:  # No front-matter found – send the entire file to the model.
-        return text, {}
-
-    meta_yaml = m.group(1)
-    try:
-        meta: Dict[str, Any] = yaml.safe_load(meta_yaml) or {}
-    except Exception:
+        body = text
         meta = {}
+    else:
+        meta_yaml = m.group(1)
+        try:
+            meta: Dict[str, Any] = yaml.safe_load(meta_yaml) or {}
+        except Exception:
+            meta = {}
 
-    body = text[m.end() :]  # strip the header including closing delimiter
+        body = text[m.end() :]  # strip the header including closing delimiter
+
+    # Strip HTML comments used for row-level annotations
+    body = _HTML_COMMENT_RE.sub("", body)
+    
     return body, meta 

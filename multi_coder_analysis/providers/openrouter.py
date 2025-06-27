@@ -33,6 +33,13 @@ class OpenRouterProvider:
 
         self._last_usage: dict = {}
         self._last_thoughts: str = ""
+        self._acc_usage: dict[str, int] = {
+            'prompt_tokens': 0,
+            'response_tokens': 0,
+            'thought_tokens': 0,
+            'cached_tokens': 0,
+            'total_tokens': 0,
+        }
 
     # ------------------------------------------------------------------
     # ProviderProtocol interface
@@ -78,6 +85,10 @@ class OpenRouterProvider:
         # Provide schema-complete defaults
         self._last_usage.setdefault("thought_tokens", 0)
 
+        # ---- accumulate per-instance usage ----
+        for k in ('prompt_tokens', 'response_tokens', 'thought_tokens', 'total_tokens'):
+            self._acc_usage[k] += int(self._last_usage.get(k, 0))
+
         choice = data["choices"][0]
         self._last_thoughts = choice.get("thoughts", "")  # rarely provided
 
@@ -95,4 +106,15 @@ class OpenRouterProvider:
             "prompt_tokens": 0,
             "response_tokens": 0,
             "total_tokens": 0,
-        } 
+        }
+
+    # ------------------------------------------------------------------
+    # Incremental usage helpers (ProviderProtocol)
+    # ------------------------------------------------------------------
+
+    def reset_usage(self) -> None:  # noqa: D401
+        for k in self._acc_usage:
+            self._acc_usage[k] = 0
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        return dict(self._acc_usage) 

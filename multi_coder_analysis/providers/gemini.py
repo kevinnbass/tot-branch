@@ -51,6 +51,14 @@ class GeminiProvider:  # implements ProviderProtocol via duck-typing
         # Initialize client directly with the API key (newer SDK style)
         self._client = genai.Client(api_key=key)
 
+        self._acc_usage: dict[str, int] = {
+            'prompt_tokens': 0,
+            'response_tokens': 0,
+            'thought_tokens': 0,
+            'cached_tokens': 0,
+            'total_tokens': 0,
+        }
+
     @track_usage
     def generate(self, system_prompt: str, user_prompt: str, model: str, temperature: float = 0.0, *, top_k: int | None = None, top_p: float | None = None) -> str:
         cfg = {"temperature": temperature}
@@ -97,6 +105,9 @@ class GeminiProvider:  # implements ProviderProtocol via duck-typing
                 'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks),
                 'model': model,
             }
+            # ---- accumulate per-instance usage ----
+            for k in ('prompt_tokens', 'response_tokens', 'thought_tokens', 'cached_tokens', 'total_tokens'):
+                self._acc_usage[k] += int(self._last_usage.get(k, 0))
         else:
             self._last_usage = {
                 'prompt_tokens': 0,
@@ -129,4 +140,17 @@ class GeminiProvider:  # implements ProviderProtocol via duck-typing
         return getattr(self, '_last_thoughts', '')
 
     def get_last_usage(self) -> dict:
-        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0}) 
+        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0})
+
+    # ------------------------------------------------------------------
+    # Incremental usage helpers (ProviderProtocol)
+    # ------------------------------------------------------------------
+
+    def reset_usage(self) -> None:  # noqa: D401
+        """Zero the accumulated token counters for this provider instance."""
+        for k in self._acc_usage:
+            self._acc_usage[k] = 0
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        """Return a *copy* of accumulated usage since last reset_usage()."""
+        return dict(self._acc_usage) 

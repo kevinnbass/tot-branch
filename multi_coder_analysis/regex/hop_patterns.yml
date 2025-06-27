@@ -32,6 +32,13 @@
            high[-\s]?path\B
         )\b
       (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
+      |
+      # NEGATION_GUARD (2025-06-26)
+      (?i)\b(?:nothing|no\s+(?:evidence|indication|data)|unlikely|does\s+not|do\s+not|did\s+not)\b
+         [^.]{0,50}?\b(?:become|is|are|was|were|grow|gets?|getting)\b
+      |
+      # LOW_RISK_LEADIN_GUARD (2025-06-26)
+      (?i)\blow\s+risk\b[^.]{0,30}?\bbut\b
   # Added negative look‑behind to exclude "deadly toll", "deadly cost"
   pattern: |-
     (?i)    # case-insensitive once – faster compile
@@ -71,12 +78,15 @@
     \btrending\s+sharply\s+(?:higher|lower)\b
     |
     # (c) macro-context guard – price/temperature/inflation backdrop ≠ impact
-    \bsoar(?:ed|ing)?\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?)) |
-    \bplung(?:ed|ing)\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?)) |
+    \bsoar(?:ed|ing)?\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?|prices?|costs?|sales?)) |
+    \bplung(?:ed|ing)\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?|prices?|costs?|sales?)) |
     # (b) **containment override** – neutralise culling verbs so they fall
     #     through to Q3 where the containment rule already handles them
     (?i)\b(?:slaughter(?:ed|ing)?|culled?|destroyed?|euthan(?:iz|is)ed|
            depopulated|disposed|buried)\b
+    |
+    # QUOTE_MILD_PHRASES_GUARD (2025-06-26)
+    (?i)\b(?:terrible\s+news|very\s+worried)\b
   pattern: |-
     # Hop-2 literal guard – keep "spark shortages" Neutral
     (?i)
@@ -146,14 +156,28 @@
 
     # 2025-06-18 containment-verb veto – keeps large-scale culling Neutral
   veto_pattern: |-
-    # extend veto to "disposed" and "buried"
+    # CONTAINMENT_GUARD (pre-existing)
     (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered|disposed|buried)\b
+    |
+    # ECON_METRIC_GUARD (2025-06-26)
+    (?ix)
+      # classic price / revenue / sales language
+      \b(?:price|prices|cost|costs|sales?|revenue|profit(?:s)?)\b
+        [^.]{0,40}?\b(?:hit|hitting|jumped|jumping|spiked|shot\W+up|soared|surged|plunged|plummeted)\b
+      |
+      # idiom "hard hit" (false Alarmist)
+      \bhard\W+hit\b
 
 - name: ScaleMultiplier
   mode: live
   frame: Alarmist
   pattern: |-
     (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+  veto_pattern: |-
+    # ECON_METRIC_GUARD (2025-06-26)
+    (?ix)
+      \b(?:price|prices|cost|costs|sales?|revenue|profit(?:s)?|value)\b
+      [^.]{0,40}?\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
 
 4:
 - name: LoadedQuestionAlarm
@@ -243,6 +267,15 @@
   frame: Reassuring
   pattern: (?i)\b(?:purely\s+)?theoretical\s+risk\b
 
+- name: LowRiskSimple
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)
+      \brisk
+      (?:\s+to\s+(?:the\s+)?(?:public|general\s+public|consumers?|people))?
+      \s+(?:is|remain|remains|stays?)\s+low\b
+
 6:
 - name: MinimiserScaleContrast
   mode: live
@@ -305,13 +338,13 @@
 
 - name: BareNegation.NotContaminate.Live
   mode: live
-  frame: Neutral
-  # 2025-06-20 • broadened to cover "has not detected / identified … cases"
+  frame: Reassuring        # was Neutral, changed 2025-06-26
   pattern: |-
     (?ix)
     \b(?:has|have|does|do|did)\b
     \s+(?:not|n't|never|yet\s+to)\s+
     (?:contaminat(?:e|ed)|infect(?:ed)?)\b
+    (?=[^.]{0,40}\b(?:food\s+(?:system|chain|supply)|table)\b)
 
 # NEW — 2025-06-20 -----------------------------------------------------------
 - name: BareNegation.NoFurtherCases.Live
@@ -342,7 +375,7 @@
 
 8:
 - name: CapabilityNoReassurance
-  mode: live
+  mode: shadow        # was live; rule deprecated 2025-06-26
   frame: Neutral
   pattern: |-
     (?i)

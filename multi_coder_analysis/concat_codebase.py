@@ -17,11 +17,11 @@ EXCLUDE_DIRS = {
     "concatenated_prompts",
     "concatenated_codebase",
     "patches",
-    "prompts",  # User has prompts separately
+    # "prompts",  # User has prompts separately
 }
 
 # Core code extensions for ToT pipeline
-ALWAYS_EXTS = {".py", ".yaml", ".yml", ".toml"}
+ALWAYS_EXTS = {".py", ".yaml", ".yml", ".toml", ".txt"}
 
 # Files to exclude - focus on non-essential files for ToT pipeline
 EXCLUDE_FILES = {
@@ -114,11 +114,16 @@ def gather_files(
 
     # Core directories for ToT pipeline execution
     CORE_DIRS = [
-        repo_root / "multi_coder_analysis" / "core",  # Core ToT logic
-        repo_root / "multi_coder_analysis" / "models",  # Data models
-        repo_root / "multi_coder_analysis" / "config",  # Configuration
-        repo_root / "multi_coder_analysis" / "regex",  # Regex rules and engine
-        repo_root / "multi_coder_analysis" / "runtime",  # Runtime components
+        repo_root / "multi_coder_analysis" / "core",      # Core ToT logic
+        repo_root / "multi_coder_analysis" / "models",    # Data models
+        repo_root / "multi_coder_analysis" / "config",    # Configuration
+        repo_root / "multi_coder_analysis" / "regex",     # Package regex rules
+        repo_root / "multi_coder_analysis" / "runtime",   # Runtime components
+
+        # Newly-added functional areas
+        repo_root / "pipeline",          # Router + LeanHop builder
+        repo_root / "regex",             # Top-level YAML rule sets
+        repo_root / "prompts",           # LeanHop templates + headers/footers
     ]
 
     # Essential utilities only (not all utils)

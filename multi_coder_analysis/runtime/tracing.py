@@ -9,7 +9,71 @@ from datetime import datetime
 from pathlib import Path
 from typing import Dict, Any, Optional
 
-import structlog
+try:
+    import structlog  # type: ignore
+except ModuleNotFoundError:  # pragma: no cover – optional dependency
+    import types, sys, logging
+
+    class _StructlogStubModule(types.ModuleType):
+        """Very small stub covering only attributes we use in this file."""
+
+        def get_logger(self, *_args, **_kwargs):  # noqa: D401 – stub
+            class _Dummy:
+                def bind(self, **_kw):
+                    return self
+
+                def __getattr__(self, _name):
+                    def _noop(*_a, **_kw):
+                        pass
+
+                    return _noop
+
+            return _Dummy()
+
+        # Factories used in setup_logging(); they just return pass-through callables
+        def make_filtering_bound_logger(self, *_a, **_kw):  # noqa: ANN002
+            def _wrapper(logger):
+                return logger
+
+            return _wrapper
+
+        class processors:  # noqa: D401
+            class TimeStamper:  # noqa: D401
+                def __init__(self, *_, **__):
+                    pass
+
+            @staticmethod
+            def add_log_level(*_a, **_kw):
+                pass
+
+            class StackInfoRenderer:  # noqa: D401
+                def __call__(self, *_, **__):
+                    pass
+
+            @staticmethod
+            def JSONRenderer(*_a, **_kw):
+                def _json_proc(event_dict):
+                    return str(event_dict)
+
+                return _json_proc
+
+        class dev:  # noqa: D401
+            @staticmethod
+            def ConsoleRenderer(*_a, **_kw):
+                def _console_proc(event_dict):
+                    return str(event_dict)
+
+                return _console_proc
+
+        def configure(self, *_, **__):
+            pass
+
+        class WriteLoggerFactory:  # noqa: D401
+            def __call__(self, *a, **kw):  # noqa: ANN001
+                return logging.getLogger("structlog_stub")
+
+    structlog = _StructlogStubModule("structlog_stub")  # type: ignore
+    sys.modules["structlog"] = structlog
 
 __all__ = ["setup_logging", "get_logger", "TraceWriter"]
 

@@ -1,3 +1,16 @@
+---
+meta_id: Q1
+row_map:
+  Q1.1: Intensifier + Risk-Adj
+  Q1.2: Comparative + Risk-Adj
+  Q1.3: Fixed Lethal-from-Outset Idiom
+regex_map:
+  Q1.1: [1.IntensifierRiskAdjV2, 1.H1.AutoIntensifierRiskAdj]
+  Q1.2: [1.IntensifierRiskAdjV2]
+  Q1.3: [1.IntensifierRiskAdjV2]
+frame: Alarmist
+summary: "Intensifier / comparative + risk-adjective"
+---
 ### QUICK DECISION CHECK
 • Contains INTENSIFIER (**SO / VERY / EXTREMELY / HIGHLY / FRIGHTENINGLY / MORE / DEADLIER**) **AND** RISK‑ADJ (**DEADLY / DANGEROUS / SEVERE / CATASTROPHIC / LETHAL / CONTAGIOUS / VIRULENT / DESTRUCTIVE**) in the **same clause**?  
 • Skip if it's the taxonomic phrase **"highly pathogenic (avian) influenza / HPAI"**.  
@@ -27,8 +40,11 @@ Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a c
 **🔍 Q1 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Alarmist** |
 |------------------|--------------|----------------|
+<!-- Q1.1 -->
 | **Intensifier + Risk-Adj** | "so deadly," "very dangerous," "extremely severe," "highly lethal," "frighteningly contagious" | ✓ |
+<!-- Q1.2 -->
 | **Comparative + Risk-Adj** | "more deadly," "deadlier," "more dangerous," "less safe," "increasingly severe" | ✓ |
+<!-- Q1.3 -->
 | **Fixed Lethal-from-Outset Idiom** | "deadly from the start," "deadly from the outset" | ✓ |
 | **Base Risk-Adj (alone)** | "deadly," "dangerous," "severe" (without intensifier) | → Neutral |
 

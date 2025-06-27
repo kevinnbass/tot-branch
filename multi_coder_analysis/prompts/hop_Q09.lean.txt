@@ -1,0 +1,19 @@
+## Q9  FACTUAL ECON METRIC
+
+Neutral when reporting prices/metrics with plain verbs (rose, fell, increased) and no vivid language.
+
+Ex Neutral  → "prices **rose 2 %** last month"
+Ex Alarmist → "prices **skyrocketed** 50 %" (would be Q2)
+
+=== SEGMENT ===
+{{text}}
+
+Q9_EconNeutral? → yes / no
+```json
+{"frame":"?", "cue":""}
+```
+
+✅ SELF-AUDIT
+1 Did you cite the cue?
+2 No double frames.
+3 Pure JSON only. 

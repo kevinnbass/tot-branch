@@ -1,3 +1,18 @@
+---
+meta_id: Q12
+row_map:
+  Q12.1: Factual Reporting
+  Q12.2: Technical Descriptions
+  Q12.3: Standard Procedures
+  Q12.4: Neutral Metrics
+regex_map:
+  Q12.1: [12.NeutralStats]
+  Q12.2: [12.NeutralStats]
+  Q12.3: [12.NeutralStats]
+  Q12.4: [12.NeutralStats]
+frame: Neutral
+summary: "Default to neutral / final comprehensive check"
+---
 ### QUICK DECISION CHECK
 • After checking Q1‑Q11, are **zero** Alarmist or Reassuring cues left?  
 → If yes → `"yes"` (Neutral); else → `"no"` and re‑evaluate higher‑priority hops.
@@ -26,9 +41,13 @@ After applying all preceding checks, are there NO remaining explicit and suffici
 **🔍 Q12 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Neutral** |
 |------------------|--------------|---------------|
+<!-- Q12.1 -->
 | **Factual Reporting** | "documented 500,000 job losses," "reported 15 cases," "detected in 3 locations" | ✓ |
+<!-- Q12.2 -->
 | **Technical Descriptions** | "high mortality rate," "R-value of 2.1," "lethal dose 50" | ✓ |
+<!-- Q12.3 -->
 | **Standard Procedures** | "officials are monitoring," "tests are ongoing," "surveillance continues" | ✓ |
+<!-- Q12.4 -->
 | **Neutral Metrics** | "prices rose 5%," "rates declined," "levels increased" | ✓ |
 | **Remaining Framing Cues** | Any missed intensifiers, potent verbs, explicit calming language | → Re-evaluate Q1-Q11 |
 

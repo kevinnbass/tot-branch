@@ -1,3 +1,14 @@
+---
+meta_id: Q6
+row_map:
+  Q6.1: Minimiser + Scale Contrast
+  Q6.2: Minimiser + Explicit Comparison
+regex_map:
+  Q6.1: [6.MinimiserScaleContrast]
+  Q6.2: [6.MinimiserScaleContrast]
+frame: Reassuring
+summary: "Minimiser + scale contrast for reassurance"
+---
 ### QUICK DECISION CHECK
 • Contains MINIMISER (**ONLY / JUST / MERELY / A SINGLE / VERY FEW / RELATIVELY FEW**) **AND** denominator marker (**OUT OF / AMONG / ONE OF / AMONG MILLIONS / NATIONWIDE**) in same sentence or immediately adjacent (≤20 chars)?  
 → If yes → `"yes"`; else → `"no"`.
@@ -37,7 +48,9 @@ Does the author or a quoted source use a 'minimiser' (e.g., 'only,' 'just,' 'mer
 **🔍 Q6 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Reassuring** |
 |------------------|--------------|------------------|
+<!-- Q6.1 -->
 | **Minimiser + Scale Contrast**(**minimiser token AND explicit denominator must both be present**) | "only one barn out of thousands," "just 3 out of 5 000 samples," "merely a few among millions" | ✓ |
+<!-- Q6.2 -->
 | **Minimiser + Explicit Comparison** | "only affecting a single facility nationwide," "just one case among the entire population" | ✓ |
 | **Minimiser without Scale** | "only three samples showed irregularity" (no "out of X") | → Neutral (missing contrast element) |
 | **Scale without Minimiser** | "one barn among thousands" (no "only/just/merely/**a single/few**") | → Neutral (missing minimising element) |

@@ -15,6 +15,23 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * **BREAKING CHANGE** – Any pipeline depending on the string "Variable"
   must update downstream enums; the label is no longer produced.
 
+### v2.19.0  (2025-06-26)
+* **FEATURE – Self-Consistency Decoding**
+  * Added `--decode-mode self-consistency` and `--decode-mode self-consistency-hop` to CLI.
+  * Supports voting rules: `majority`, `ranked`, `ranked-raw`, `irv`, `borda`, `mrr`.
+  * New flags `--sc-rule`, `--votes`, `--sc-temperature`, `--sc-top-k`, `--sc-top-p`.
+* **FEATURE – Ranked-List Answers**
+  * LLM can now output an ordered ranking via `Ranking:` line.
+  * Parser accepts `>`, arrows (`→`, `->`, `⇒`), bullet/number prefixes, and newline or comma separation.
+  * Confidence for `ranked` rule = *vote_share × cost_gap*.
+* **API CHANGE**
+  * Duplicate helper `_extract_frame_and_ranking_dupe` is **deprecated**. Import `_extract_frame_and_ranking` instead (DeprecationWarning emitted).
+  * Providers expose `reset_usage()` / `get_acc_usage()` for accurate per-instance token tracking.
+* **BUGFIX**
+  * Token-delta computation is now thread-safe and no longer drifts when running with `--concurrency>1`.
+* **TESTS**  
+  Added coverage for multiline ranking formats, cost tie-break in ranked rule, and IRV elimination tie-break.
+
 ## [1.0.0-rc1] - 2025-01-XX
 
 ### 🚀 Major Refactoring - Hexagonal Architecture

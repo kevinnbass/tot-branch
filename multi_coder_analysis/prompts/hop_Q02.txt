@@ -1,3 +1,20 @@
+---
+meta_id: Q2
+row_map:
+  Q2.1: High-Potency Verbs
+  Q2.2: Superlative + Negative Noun
+  Q2.3: Critical Alert Phrase
+  Q2.4: Potent Metaphors
+  Q2.5: Intensifier + Harm Noun
+regex_map:
+  Q2.1: [2.HighPotencyVerbMetaphor]
+  Q2.2: [2.HighPotencyVerbMetaphor]
+  Q2.3: [2.OnHighAlert.Live, 2.HighPotencyVerbMetaphor]
+  Q2.4: [2.HighPotencyVerbMetaphor]
+  Q2.5: [2.HighPotencyVerbMetaphor]
+frame: Alarmist
+summary: "High-potency verb / potent metaphor / on high alert"
+---
 ### QUICK DECISION CHECK
 • Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
   **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
@@ -27,12 +44,17 @@ Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 
 **Q2 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Alarmist** |
 |------------------|--------------|----------------|
+<!-- Q2.1 -->
 | **High-Potency Verbs** | "ravaged," "devastated," "skyrocketed," "plummeted," "crashed," "nosedived," "tanked," "crippling," "unleashed," "slaughtered," **"writhing," "convulsing," "gasping," "twitching," "screaming," "trembling," "seizing"** | ✓ |
 | **Neutral Economic Trend** | "prices are trending sharply higher/lower" | → **Neutral** |
+<!-- Q2.2 -->
 | **Superlative + Negative Noun** | "most expensive disaster," "worst crisis," "record outbreak," "record-breaking catastrophe" | ✓ |
+<!-- Q2.5 -->
 | **Intensifier + Harm Noun** | — | — |
 | *Intensifier + Harm Noun* (handled by regex ≥ 2025-06-23) | — | — |
+<!-- Q2.3 -->
 | **Critical Alert Phrase**(**same sentence must name a threat: outbreak, virus, flu, risk, danger …**) | "on high alert" (threat can appear **before or after** in ≤ 40 chars) | ✓ |
+<!-- Q2.4 -->
 | **Potent Metaphors** | "ticking time-bomb," "nightmare scenario," **"death sentence," "killer blow,"** "raging inferno," "powder keg," "house of cards" | ✓ |
 | **Moderate Verbs (alone)** | "hit," "swept," "surged" (without scale/impact details) | → Neutral |
 | **Psychological Verbs** | "spark fears," "stoke concern," "reignite worries" *without* vivid intensifier or scale | → Neutral |

@@ -1,3 +1,18 @@
+---
+meta_id: Q8
+row_map:
+  Q8.1: Development Capabilities
+  Q8.2: Response Measures
+  Q8.3: Preparedness Statements
+  Q8.4: Future Possibilities
+regex_map:
+  Q8.1: [8.CapabilityNoReassurance]
+  Q8.2: [8.CapabilityNoReassurance]
+  Q8.3: [8.CapabilityNoReassurance]
+  Q8.4: [8.CapabilityNoReassurance]
+frame: Neutral
+summary: "Capability/preparedness without active reassurance"
+---
 ### QUICK DECISION CHECK
 • Describes CAPABILITY / PREPAREDNESS (**PREPARED / PLAN / SYSTEM / PROTOCOL / RESOURCES / STOCKPILED / DEVELOPED**) **AND** no calming keyword (**SAFE / REST EASY / UNDER CONTROL / ALARM**) within 40 tokens?  
 • If the sentence already fires Q5 "Transient‑Issue Minimiser"  
@@ -30,9 +45,13 @@ Does the segment describe capabilities, preparedness measures, hopeful future po
 **🔍 Q8 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Neutral** |
 |------------------|--------------|---------------|
+<!-- Q8.1 -->
 | **Development Capabilities** | "vaccine can be made in X weeks," "researchers are developing treatments," "antiviral stockpiled" | ✓ |
+<!-- Q8.2 -->
 | **Response Measures** | "officials are working to contain," "systems are in place," "protocols are being followed" | ✓ |
+<!-- Q8.3 -->
 | **Preparedness Statements** | "we have the resources," "plans are ready," "surveillance is ongoing" | ✓ |
+<!-- Q8.4 -->
 | **Future Possibilities** | "restrictions may be short-lived," "situation could improve," "recovery expected" | ✓ |
 | **Capability + Active Reassurance** | "stockpiled 30M doses, which is excellent news and means citizens are very well protected," "systems in place, so public can rest easy" | → Reassuring |
 

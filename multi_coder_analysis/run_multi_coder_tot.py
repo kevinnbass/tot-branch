@@ -16,6 +16,7 @@ from collections import defaultdict
 import collections
 import re
 import random  # For optional shuffling of segments before batching
+import warnings  # added near top
 
 import pandas as pd
 from tqdm import tqdm
@@ -58,6 +59,22 @@ if "PROMPTS_DIR" not in globals():
     PROMPTS_DIR = Path(__file__).parent / "prompts"
 
 # ---------------------------------------------------------------------------
+# Template switcher – returns correct prompt path based on --template flag
+# ---------------------------------------------------------------------------
+
+
+def _get_hop_file(hop_idx: int, template: str = "legacy") -> Path:  # noqa: D401
+    """Return Path to hop template respecting the *template* selector.
+
+    • legacy  →  hop_Q01.txt
+    • lean    →  hop_Q01.lean.txt
+    """
+
+    stem = f"hop_Q{hop_idx:02}"
+    suffix = ".lean.txt" if template == "lean" else ".txt"
+    return PROMPTS_DIR / f"{stem}{suffix}"
+
+# ---------------------------------------------------------------------------
 # Helpers to (lazily) read header / footer each time so that tests that monkey-
 # patch PROMPTS_DIR *after* import still pick up the temporary files.
 # ---------------------------------------------------------------------------
@@ -98,10 +115,19 @@ Q_TO_FRAME = {
 
 # --- LLM Interaction ---
 
-def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
-    """Dynamically assembles the full prompt for the LLM for a given hop."""
+def _assemble_prompt(
+    ctx: HopContext,
+    *,
+    template: str = "legacy",
+    ranked: bool = False,
+    max_candidates: int = 5,
+) -> Tuple[str, str]:
+    """Return system/user prompt pair for a single segment.
+
+    The *template* selector chooses between legacy (full) and lean prompts.
+    """
     try:
-        hop_file = PROMPTS_DIR / f"hop_Q{ctx.q_idx:02}.txt"
+        hop_file = _get_hop_file(ctx.q_idx, template)
 
         # --- NEW: strip YAML front-matter and capture metadata ---
         hop_body, meta = load_prompt_and_meta(hop_file)
@@ -128,6 +154,18 @@ def _assemble_prompt(ctx: HopContext) -> Tuple[str, str]:
             local_footer = _load_global_footer()
 
         system_block = local_header + "\n\n" + hop_body
+
+        # If ranked-list mode is requested, append an explicit instruction so
+        # the LLM emits a secondary ranking line that we can later parse.
+        if ranked:
+            ranking_instr = (
+                "\nAfter the JSON object, add a new line starting with the word 'Ranking:' "
+                "followed by up to {n} frame labels in descending order of likelihood, "
+                "separated by the ' > ' character.  For example:\n"
+                "Ranking: Alarmist > Neutral > Reassuring\n".format(n=max_candidates)
+            )
+            user_prompt = user_prompt + "\n\n" + ranking_instr
+
         user_block = user_prompt + "\n\n" + local_footer
         return system_block, user_block
 
@@ -146,11 +184,12 @@ def _call_llm_single_hop(
     *,
     top_k: int | None = None,
     top_p: float | None = None,
+    template: str = "legacy",
     ranked: bool = False,
     max_candidates: int = 5,
 ) -> Dict[str, str]:
     """Makes a single, retrying API call to the LLM for one hop."""
-    sys_prompt, user_prompt = _assemble_prompt(ctx)
+    sys_prompt, user_prompt = _assemble_prompt(ctx, template=template, ranked=ranked, max_candidates=max_candidates)
     
     for attempt in range(MAX_RETRIES):
         try:
@@ -240,7 +279,7 @@ def _apply_llm_response(ctx: HopContext, llm_response: dict) -> None:
 
 # --- Core Orchestration ---
 
-def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str, token_accumulator: dict, token_lock: threading.Lock, temperature: float = TEMPERATURE) -> HopContext:
+def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str, token_accumulator: dict, token_lock: threading.Lock, temperature: float = TEMPERATURE, *, template: str = "legacy") -> HopContext:
     """Orchestrates the 12-hop reasoning chain for a single text segment."""
     ctx = HopContext(
         statement_id=segment_row["StatementID"],
@@ -290,7 +329,7 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
                 else:
                     token_accumulator['regex_yes'] += 1
         else:
-            llm_response = _call_llm_single_hop(ctx, provider, model, temperature)
+            llm_response = _call_llm_single_hop(ctx, provider, model, temperature, template=template)
             frame_override = None
             provider_called = True
             via = "llm"
@@ -404,10 +443,17 @@ def run_tot_chain(segment_row: pd.Series, provider, trace_dir: Path, model: str,
 
 # --- NEW: Batch Prompt Assembly ---
 
-def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[str, str]:
+def _assemble_prompt_batch(
+    segments: List[HopContext],
+    hop_idx: int,
+    *,
+    template: str = "legacy",
+    ranked: bool = False,
+    max_candidates: int = 5,
+) -> Tuple[str, str]:
     """Assemble a prompt that contains multiple segments for the same hop."""
     try:
-        hop_file = PROMPTS_DIR / f"hop_Q{hop_idx:02}.txt"
+        hop_file = _get_hop_file(hop_idx, template)
         hop_content, meta = load_prompt_and_meta(hop_file)
 
         # Attach same meta to every HopContext in this batch for consistency
@@ -431,6 +477,12 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
             "Respond with **one JSON array**. Each element must contain: `segment_id`, `answer`, `rationale`.\n"
             "Return NOTHING except valid JSON.\n\n"
         )
+
+        if ranked:
+            instruction += (
+                "After the JSON array, for **each segment** embed the ranked list inside the 'answer' string using the format:\n"
+                "Ranking: Frame1 > Frame2 > … (up to {n}).\n".format(n=max_candidates)
+            )
 
         # Prefer new canonical filename; fallback to legacy if absent
         header_path = hop_file.parent / "GLOBAL_HEADER.txt"
@@ -456,9 +508,9 @@ def _assemble_prompt_batch(segments: List[HopContext], hop_idx: int) -> Tuple[st
 
 # --- NEW: Batch LLM Call ---
 
-def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPERATURE, *, ranked: bool = False, max_candidates: int = 5):
+def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPERATURE, *, template: str = "legacy", ranked: bool = False, max_candidates: int = 5):
     """Call the LLM on a batch of segments for a single hop and parse the JSON list response."""
-    sys_prompt, user_prompt = _assemble_prompt_batch(batch_ctx.segments, batch_ctx.hop_idx)
+    sys_prompt, user_prompt = _assemble_prompt_batch(batch_ctx.segments, batch_ctx.hop_idx, template=template, ranked=ranked, max_candidates=max_candidates)
     batch_ctx.raw_prompt = sys_prompt
 
     unresolved = list(batch_ctx.segments)
@@ -468,7 +520,7 @@ def _call_llm_batch(batch_ctx, provider, model: str, temperature: float = TEMPER
     consecutive_none = 0  # track consecutive None/empty responses
     while unresolved and attempt < MAX_RETRIES:
         attempt += 1
-        sys_prompt, user_prompt = _assemble_prompt_batch(unresolved, batch_ctx.hop_idx)
+        sys_prompt, user_prompt = _assemble_prompt_batch(unresolved, batch_ctx.hop_idx, template=template, ranked=ranked, max_candidates=max_candidates)
         try:
             size_requested = len(unresolved)
 
@@ -589,6 +641,8 @@ def run_tot_chain_batch(
     token_accumulator: dict = None,
     token_lock: threading.Lock = None,
     temperature: float = TEMPERATURE,
+    *,
+    template: str = "legacy",
     shuffle_batches: bool = False,
     hop_range: Optional[list[int]] = None,
 ) -> List[HopContext]:
@@ -733,7 +787,7 @@ def run_tot_chain_batch(
             # --------------------------------------------------
             cooldown_cycles = 0
             while True:
-                batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
+                batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature, template=template, ranked=ranked, max_candidates=max_candidates)
 
                 if getattr(batch_ctx, "_cooldown_required", False):
                     cooldown_cycles += 1
@@ -935,7 +989,7 @@ def run_tot_chain_batch(
                 retry_ctx = BatchHopContext(batch_id=retry_batch_id, hop_idx=hop_idx, segments=missing_ctxs)
 
                 provider_retry = _provider_factory()
-                retry_resps = _call_llm_batch(retry_ctx, provider_retry, model, temperature)
+                retry_resps = _call_llm_batch(retry_ctx, provider_retry, model, temperature, template=template, ranked=ranked, max_candidates=max_candidates)
 
                 # token accounting
                 usage_r = provider_retry.get_last_usage()
@@ -1229,7 +1283,7 @@ def run_tot_chain_batch(
                 
                 # Call LLM for the batch
                 provider_inst = _provider_factory()
-                batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature)
+                batch_responses = _call_llm_batch(batch_ctx, provider_inst, model, temperature, template=template, ranked=ranked, max_candidates=max_candidates)
 
                 # Token accounting
                 usage = provider_inst.get_last_usage()
@@ -1367,7 +1421,27 @@ def run_tot_chain_batch(
 
 # --- Main Entry Point for `main.py` ---
 
-def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, limit: Optional[int] = None, start: Optional[int] = None, end: Optional[int] = None, concurrency: int = 1, model: str = "models/gemini-2.5-flash-preview-04-17", provider: str = "gemini", batch_size: int = 1, regex_mode: str = "live", shuffle_batches: bool = False, skip_eval: bool = False, only_hop: Optional[int] = None, gold_standard_file: Optional[str] = None, *, print_summary: bool = True) -> Tuple[None, Path]:
+def run_coding_step_tot(
+    config: Dict,
+    input_csv_path: Path,
+    output_dir: Path,
+    limit: Optional[int] = None,
+    start: Optional[int] = None,
+    end: Optional[int] = None,
+    concurrency: int = 1,
+    model: str = "models/gemini-2.5-flash-preview-04-17",
+    provider: str = "gemini",
+    batch_size: int = 1,
+    regex_mode: str = "live",
+    *,
+    router: bool = False,
+    template: str = "legacy",
+    shuffle_batches: bool = False,
+    skip_eval: bool = False,
+    only_hop: Optional[int] = None,
+    gold_standard_file: Optional[str] = None,
+    print_summary: bool = True,
+) -> Tuple[None, Path]:
     """
     Main function to run the ToT pipeline on an input CSV and save results.
     Matches the expected return signature for a coding step in main.py.
@@ -1479,6 +1553,14 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
         logging.info("Initialized Gemini provider")
 
     results = []
+    # --- Helper to extract hop and method for final decision ---
+    def _get_decision_info(ctx):
+        """Return (hop_idx, method) where the final 'yes' was triggered.
+        Method is 'regex' or 'llm'. If no definitive 'yes' exists, returns (None, None)."""
+        for entry in ctx.reasoning_trace:
+            if entry.get("answer") == "yes":
+                return entry.get("Q"), entry.get("via")
+        return None, None
     # --- Token accounting ---
     token_accumulator = {
         'prompt_tokens': 0,
@@ -1579,13 +1661,17 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
             concurrency=concurrency,
             token_accumulator=token_accumulator,
             token_lock=token_lock,
+            template=template,
             shuffle_batches=shuffle_batches,
             hop_range=hop_range,
         )
         for ctx in final_contexts:
+            hop_idx, method = _get_decision_info(ctx)
             final_json = {
                 "StatementID": ctx.statement_id,
                 "Pipeline_Result": ctx.dim1_frame,
+                "Decision_Hop": hop_idx,
+                "Decision_Method": method,
                 "Pipeline_Justification": ctx.final_justification,
                 "Full_Reasoning_Trace": json.dumps(ctx.reasoning_trace)
             }
@@ -1600,10 +1686,13 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
                 desc="Processing Statements (ToT)",
                 disable=True,
             ):
-                final_context = run_tot_chain(row, llm_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE)
+                final_context = run_tot_chain(row, llm_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE, template=template)
+                hop_idx, method = _get_decision_info(final_context)
                 final_json = {
                     "StatementID": final_context.statement_id,
                     "Pipeline_Result": final_context.dim1_frame,
+                    "Decision_Hop": hop_idx,
+                    "Decision_Method": method,
                     "Pipeline_Justification": final_context.final_justification,
                     "Full_Reasoning_Trace": json.dumps(final_context.reasoning_trace)
                 }
@@ -1617,10 +1706,13 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
                     thread_provider = OpenRouterProvider()
                 else:
                     thread_provider = GeminiProvider()
-                final_context = run_tot_chain(row, thread_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE)
+                final_context = run_tot_chain(row, thread_provider, trace_dir, model, token_accumulator, token_lock, TEMPERATURE, template=template)
+                hop_idx, method = _get_decision_info(final_context)
                 final_json = {
                     "StatementID": final_context.statement_id,
                     "Pipeline_Result": final_context.dim1_frame,
+                    "Decision_Hop": hop_idx,
+                    "Decision_Method": method,
                     "Pipeline_Justification": final_context.final_justification,
                     "Full_Reasoning_Trace": json.dumps(final_context.reasoning_trace)
                 }
@@ -1731,6 +1823,7 @@ def run_coding_step_tot(config: Dict, input_csv_path: Path, output_dir: Path, li
                     token_accumulator,
                     token_lock,
                     TEMPERATURE,
+                    template=template,
                 )
 
                 single_label = single_ctx.dim1_frame
@@ -2188,10 +2281,14 @@ def create_comparison_csv(df_original: pd.DataFrame, results: List[Dict],
     # Convert results to DataFrame for easier merging
     df_results = pd.DataFrame(results)
     
-    # Merge with original data
+    # Merge with original data, preserving decision metadata
+    merge_cols = ['StatementID', 'Pipeline_Result']
+    if 'Decision_Hop' in df_results.columns and 'Decision_Method' in df_results.columns:
+        merge_cols += ['Decision_Hop', 'Decision_Method']
+    
     df_comparison = df_original.merge(
-        df_results[['StatementID', 'Pipeline_Result']], 
-        on='StatementID', 
+        df_results[merge_cols],
+        on='StatementID',
         how='inner'
     )
     
@@ -2360,54 +2457,126 @@ def _log_hop(
 # ---------------------------------------------------------------------------
 # Parsing helpers
 # ---------------------------------------------------------------------------
-_RANK_RE = re.compile(r"ranking\s*[:\-]\s*(.*)", re.I | re.S)
+# Capture text following "Ranking:" until the next blank line or end of text
+_RANK_RE = re.compile(r"ranking\s*[:\-]?\s*(.*?)(?:\n\s*\n|$)", re.I | re.S)
+
+# Bullet / numbering token at *token* start, e.g. "1)", "1.", "-", "•"
+_BULLET_RE = re.compile(r"^\s*(?:\d+[\)\.\-]?|[\u2022\*\-])\s*")
+
+_DELIMS_RE = re.compile(r"[>\u2192\u279C\u27A1]|->|=>|,|\n|\r")
+
+
+def _clean_token(tok: str) -> str:
+    """Normalise *tok* by stripping bullet/numbering prefixes and punctuation."""
+    tok = _BULLET_RE.sub("", tok)  # remove leading numbering/bullets
+    return tok.strip(" .:-→")
+
 
 def _extract_frame_and_ranking(text: str) -> tuple[str | None, list[str] | None]:
-    """Extract (top_frame, ranking_list) from LLM *text*.
+    """Return ``(top_frame, ranking_list)`` parsed from *text*.
 
-    The helper supports both legacy single-answer responses and the new
-    ranked-list format of the form::
+    Supported reply formats::
 
-        Ranking: A > B > C
+        Ranking: Alarmist > Neutral > Reassuring
+        ranking – Alarmist → Neutral → Reassuring
+        Ranking:
+        1. Alarmist
+        2. Neutral
+        3. Reassuring
 
-    Returns
-    -------
-    tuple
-        (top_frame, ranking_list) where *ranking_list* may be ``None`` if no
-        ranking pattern is detected.
+    The function tolerates various arrow symbols (">", "→", "->", "⇒") and
+    newline-separated or comma-separated lists.  Numbering/bullet prefixes are
+    stripped automatically.
     """
     if not text:
         return None, None
 
+    # 1. Standard "Ranking:" prefix --------------------------------------
     m = _RANK_RE.search(text)
-    if not m:
-        # fallback: legacy answer extraction (e.g., "answer: <frame>")
+    captured: str | None = None
+    if m:
+        captured = m.group(1)
+
+    # 2. Fallback – whole answer *looks* like a list ----------------------
+    if captured is None:
+        first_line = text.strip().splitlines()[0]
+        if any(d in first_line for d in (">", "->", "→", ",")):
+            captured = first_line
+
+    # 3. Legacy single-answer "Answer:" ----------------------------------
+    if captured is None:
         m_ans = re.search(r"answer\s*[:\-]\s*([\w\s]+)", text, re.I)
         if m_ans:
-            return m_ans.group(1).strip(), None
+            top = m_ans.group(1).strip()
+            return top, None
         return None, None
 
-    seq = [s.strip(" .") for s in re.split(r"[>]", m.group(1))]
-    seq = [s for s in seq if s]
-    top = seq[0] if seq else None
-    return top, seq or None
+    # ------------------------------------------------------------------
+    raw_seq = _DELIMS_RE.split(captured)
+    seq = [_clean_token(s) for s in raw_seq if _clean_token(s)]
 
-# ---------------------------------------------
-# Ranked-list parsing helpers (early definition)
-# ---------------------------------------------
+    if not seq:
+        return None, None
+    return seq[0], seq
 
-_RANK_RE = re.compile(r"ranking\s*[:\-]\s*(.*)", re.I | re.S)
+# ---------------------------------------------------------------------------
+# Public helper – robust ranking parser
+# ---------------------------------------------------------------------------
 
+def _extract_frame_and_ranking(text: str) -> tuple[str | None, list[str] | None]:
+    """Return ``(top_frame, ranking_list)`` parsed from *text*.
 
-def _extract_frame_and_ranking(text: str) -> tuple[str | None, list[str] | None]:  # noqa: D401
-    """Return (top_frame, ranking list) parsed from *text*."""
+    Supported reply formats::
+
+        Ranking: Alarmist > Neutral > Reassuring
+        ranking – Alarmist → Neutral → Reassuring
+        Ranking:
+        1. Alarmist
+        2. Neutral
+        3. Reassuring
+
+    The function tolerates various arrow symbols (">", "→", "->", "⇒") and
+    newline-separated or comma-separated lists.  Numbering/bullet prefixes are
+    stripped automatically.
+    """
     if not text:
         return None, None
 
+    # 1. Standard "Ranking:" prefix --------------------------------------
     m = _RANK_RE.search(text)
-    if not m:
-        m_ans = re.search(r"answer\s*[:\-]\s*([\w\s]+)", text, re.I)
-        return (m_ans.group(1).strip(), None) if m_ans else (None, None)
+    captured: str | None = None
+    if m:
+        captured = m.group(1)
 
-    seq = [s.strip(" .") for s in re.split(r"[>]", m.group(1)) if s.strip()]
-    return (seq[0] if seq else None), (seq or None)
+    # 2. Fallback – whole answer *looks* like a list ----------------------
+    if captured is None:
+        first_line = text.strip().splitlines()[0]
+        if any(d in first_line for d in (">", "->", "→", ",")):
+            captured = first_line
+
+    # 3. Legacy single-answer "Answer:" ----------------------------------
+    if captured is None:
+        m_ans = re.search(r"answer\s*[:\-]\s*([\w\s]+)", text, re.I)
+        if m_ans:
+            top = m_ans.group(1).strip()
+            return top, None
+        return None, None
+
+    # ------------------------------------------------------------------
+    raw_seq = _DELIMS_RE.split(captured)
+    seq = [_clean_token(s) for s in raw_seq if _clean_token(s)]
+
+    if not seq:
+        return None, None
+    return seq[0], seq
+
+# ---------------------------------------------------------------------------
+# Backwards-compat shim – keep the old symbol name but point to the canonical
+# implementation to avoid import errors while eliminating duplicate logic.
+# ---------------------------------------------------------------------------
+warnings.warn(
+    "_extract_frame_and_ranking_dupe is deprecated; use _extract_frame_and_ranking instead.",
+    DeprecationWarning,
+    stacklevel=2,
+)
+_extract_frame_and_ranking_dupe = _extract_frame_and_ranking

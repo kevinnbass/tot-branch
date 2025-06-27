@@ -1,0 +1,579 @@
+# LLM Provider Bundle – generated 2025-06-25T22:38:31
+# Copy & paste into your AI coding assistant.
+
+```python
+# BEGIN multi_coder_analysis/providers/base.py
+# ----------------------------------
+from __future__ import annotations
+
+from typing import Protocol, runtime_checkable, Callable, Dict
+import threading
+
+__all__ = ["ProviderProtocol"]
+
+
+@runtime_checkable
+class ProviderProtocol(Protocol):
+    """Protocol defining the interface for LLM providers.
+    
+    This uses PEP 544 structural subtyping, allowing any class with the
+    required methods to be used as a provider without explicit inheritance.
+    """
+    
+    def generate(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        model: str,
+        temperature: float = 0.0,
+        *,
+        top_k: int | None = None,
+        top_p: float | None = None,
+    ) -> str:
+        """Generate a response from the LLM.
+        
+        The **public** Tree-of-Thought API passes two separate prompt strings –
+        a high-level *system/developer* instruction and the actual *user*
+        content.  Providers must therefore accept both arguments explicitly so
+        the call-site ordering is unambiguous.
+        
+        Args:
+            system_prompt: Instruction that sets assistant behaviour.
+            user_prompt: The user-visible prompt or question.
+            model: Model identifier (provider-specific).
+            temperature: Sampling temperature (``0.0`` = deterministic).
+            
+        Returns:
+            The generated response text.
+        """
+        ...
+    
+    def get_last_thoughts(self) -> str:
+        """Get thinking/reasoning traces from the last generate() call.
+        
+        Returns:
+            Thinking traces as a string, or empty string if not available.
+        """
+        ...
+    
+    def get_last_usage(self) -> dict:
+        """Get token usage statistics from the last generate() call.
+        
+        Returns:
+            Dictionary with keys like 'prompt_tokens', 'response_tokens', 
+            'total_tokens', etc. Empty dict if not available.
+        """
+        ... 
+
+    # ------------------------------------------------------------------
+    # Incremental usage helpers (v0.5.3)
+    # ------------------------------------------------------------------
+
+    def reset_usage(self) -> None:  # noqa: D401
+        """Reset the internal accumulated usage counters (per-instance)."""
+        ...
+
+    def get_acc_usage(self) -> dict:  # noqa: D401
+        """Return accumulated usage since last reset_usage()."""
+        ...
+
+# ---------------------------------------------------------------------------
+# Global usage accumulator – lightweight telemetry across providers and threads
+# ---------------------------------------------------------------------------
+
+_USAGE_ACCUMULATOR: Dict[str, float] = {
+    "prompt_tokens": 0,
+    "response_tokens": 0,
+    "thought_tokens": 0,
+    "total_tokens": 0,
+    "llm_calls": 0,
+    "regex_yes": 0,
+    "regex_hit_shadow": 0,
+    "total_hops": 0,
+    # running USD cost across the whole process
+    "cost_usd": 0.0,
+}
+
+_USAGE_LOCK = threading.Lock()
+
+def get_usage_accumulator() -> Dict[str, int]:  # noqa: D401
+    """Return the live, process-wide token usage counter (mutable)."""
+
+    with _USAGE_LOCK:
+        return dict(_USAGE_ACCUMULATOR)
+
+
+def track_usage(fn: Callable):  # type: ignore[type-arg]
+    """Decorator: after *fn* executes, merge provider.get_last_usage() into global counter."""
+
+    def _wrap(self, *args, **kwargs):  # type: ignore[no-self-use]
+        out = fn(self, *args, **kwargs)
+        if hasattr(self, "get_last_usage"):
+            usage = self.get_last_usage() or {}
+            def _safe_int(val):
+                try:
+                    return int(val or 0)
+                except Exception:
+                    return 0
+
+            with _USAGE_LOCK:
+                _USAGE_ACCUMULATOR["prompt_tokens"] += _safe_int(usage.get("prompt_tokens"))
+                _USAGE_ACCUMULATOR["response_tokens"] += _safe_int(usage.get("response_tokens"))
+                _USAGE_ACCUMULATOR["thought_tokens"] += _safe_int(usage.get("thought_tokens"))
+                _USAGE_ACCUMULATOR["total_tokens"] += _safe_int(usage.get("total_tokens"))
+                _USAGE_ACCUMULATOR["llm_calls"] += 1
+
+                # ---------- per-call cost ----------
+                try:
+                    from multi_coder_analysis.pricing import estimate_cost
+
+                    provider_name = self.__class__.__name__.replace("Provider", "").lower()
+                    # model positional arg index 2 in generate(system, user, model, ...)
+                    model_name = kwargs.get("model") if "model" in kwargs else (
+                        args[2] if len(args) > 2 else ""
+                    )
+
+                    cost_info = estimate_cost(
+                        provider=provider_name,
+                        model=model_name,
+                        prompt_tokens=_safe_int(usage.get("prompt_tokens")),
+                        response_tokens=_safe_int(usage.get("response_tokens")),
+                        cached_tokens=_safe_int(usage.get("cached_tokens", 0)),
+                    )
+
+                    _USAGE_ACCUMULATOR["cost_usd"] += cost_info["cost_total_usd"]
+
+                    # store cost back on usage dict for provider-level inspection
+                    usage["cost_usd"] = cost_info["cost_total_usd"]
+                except Exception:  # pragma: no cover – cost calc must never crash run
+                    pass
+        return out
+
+    return _wrap 
+
+# ------------------------------------------------------------
+# Convenience helper for callers interested only in the dollars
+# ------------------------------------------------------------
+
+def get_cost_accumulator() -> float:  # noqa: D401
+    """Return the running USD cost for the current Python process."""
+    with _USAGE_LOCK:
+        return float(_USAGE_ACCUMULATOR.get("cost_usd", 0.0))
+# END multi_coder_analysis/providers/base.py
+```
+
+```python
+# BEGIN multi_coder_analysis/providers/__init__.py
+# ------------------------------
+from __future__ import annotations
+
+from importlib import import_module
+from typing import TYPE_CHECKING
+
+from .base import ProviderProtocol
+
+if TYPE_CHECKING:
+    # Avoid circular imports during type checking
+    from .gemini import GeminiProvider
+    from .openrouter import OpenRouterProvider
+
+__all__ = ["ProviderProtocol", "get_provider", "GeminiProvider", "OpenRouterProvider"]
+
+
+def get_provider(name: str, **kwargs) -> ProviderProtocol:
+    """Factory function to create provider instances.
+    
+    Args:
+        name: Provider name ('gemini' or 'openrouter').
+        **kwargs: Additional arguments passed to provider constructor.
+        
+    Returns:
+        Provider instance implementing ProviderProtocol.
+        
+    Raises:
+        ValueError: If provider name is not recognized.
+        ImportError: If provider module cannot be imported.
+    """
+    provider_map = {
+        "gemini": "multi_coder_analysis.providers.gemini",
+        "openrouter": "multi_coder_analysis.providers.openrouter",
+    }
+    
+    if name not in provider_map:
+        raise ValueError(f"Unknown provider: {name}. Available: {list(provider_map.keys())}")
+    
+    try:
+        module = import_module(provider_map[name])
+
+        from inspect import isclass
+
+        # Collect *all* candidate classes that look like providers.
+        candidates = [
+            getattr(module, attr_name)
+            for attr_name in dir(module)
+            if attr_name.endswith("Provider") and isclass(getattr(module, attr_name))
+        ]
+
+        # Return the first class that satisfies the minimal interface.
+        for cls in candidates:
+            if all(hasattr(cls, m) for m in ("generate", "get_last_thoughts", "get_last_usage")):
+                return cls(**kwargs)
+
+        raise ImportError(f"No provider class found in {provider_map[name]}")
+        
+    except ImportError as e:
+        raise ImportError(f"Could not import provider {name}: {e}") from e
+
+
+# Re-export provider classes for direct import
+def __getattr__(name: str):
+    """Lazy import of provider classes."""
+    if name == "GeminiProvider":
+        from .gemini import GeminiProvider
+        return GeminiProvider
+    elif name == "OpenRouterProvider":
+        from .openrouter import OpenRouterProvider
+        return OpenRouterProvider
+    else:
+        raise AttributeError(f"module {__name__!r} has no attribute {name!r}")
+# END multi_coder_analysis/providers/__init__.py
+```
+
+```python
+# BEGIN multi_coder_analysis/providers/gemini.py
+# --------------------------------
+from __future__ import annotations
+import os
+# NOTE: Google Gemini SDK is optional in many test environments. We therefore
+# *attempt* to import it lazily and only raise a helpful error message at
+# instantiation time, not at module import time (which would break unrelated
+# unit-tests that merely import the parent package).
+import logging
+from typing import Optional, TYPE_CHECKING
+
+# Defer heavy / optional dependency import – set sentinels instead.  We rely
+# on run-time checks within `__init__` to raise when the SDK is truly needed.
+if TYPE_CHECKING:
+    # Type-hints only (ignored at run-time when type checkers are disabled)
+    from google import genai as _genai  # pragma: no cover
+    from google.genai import types as _types  # pragma: no cover
+
+genai = None  # will attempt to import lazily in __init__
+types = None
+# Import typing protocol *only* for static type-checkers – we do **not** need to
+# subclass it at runtime.
+from .base import ProviderProtocol
+from .base import track_usage
+
+class GeminiProvider:  # implements ProviderProtocol via duck-typing
+    def __init__(self, api_key: Optional[str] = None):
+        global genai, types  # noqa: PLW0603 – we intentionally mutate module globals
+
+        # Lazy-load the Google SDK only when the provider is actually
+        # instantiated (i.e. during *production* runs, not unit-tests that
+        # only touch auxiliary helpers like _assemble_prompt).
+        if genai is None or types is None:
+            try:
+                from google import genai as _genai  # type: ignore
+                from google.genai import types as _types  # type: ignore
+
+                genai = _genai  # promote to module-level for reuse
+                types = _types
+            except ImportError as e:
+                # Surface a clear, actionable message **only** when the class
+                # is actually used.  This keeps import-time side effects
+                # minimal and avoids breaking unrelated tests.
+                raise ImportError(
+                    "The google-genai SDK is required to use GeminiProvider."
+                    "\n   ➜  pip install google-genai"
+                ) from e
+
+        key = api_key or os.getenv("GOOGLE_API_KEY")
+        if not key:
+            raise ValueError("GOOGLE_API_KEY not set")
+
+        # Initialize client directly with the API key (newer SDK style)
+        self._client = genai.Client(api_key=key)
+
+    @track_usage
+    def generate(self, system_prompt: str, user_prompt: str, model: str, temperature: float = 0.0, *, top_k: int | None = None, top_p: float | None = None) -> str:
+        cfg = {"temperature": temperature}
+        # Use provided sampling params falling back to defaults
+        if top_p is not None:
+            cfg["top_p"] = float(top_p)
+        else:
+            cfg["top_p"] = 0.1
+        if top_k is not None:
+            cfg["top_k"] = int(top_k)
+        else:
+            cfg["top_k"] = 1
+        cfg["system_instruction"] = system_prompt
+
+        if "2.5" in model:
+            cfg["thinking_config"] = types.ThinkingConfig(include_thoughts=True)
+        
+        resp = self._client.models.generate_content(
+            model=model,
+            contents=user_prompt,
+            config=types.GenerateContentConfig(**cfg)
+        )
+        
+        # Capture usage metadata if available
+        usage_meta = getattr(resp, 'usage_metadata', None)
+        if usage_meta:
+            def _safe_int(val):
+                try:
+                    return int(val or 0)
+                except Exception:
+                    return 0
+
+            prompt_toks = _safe_int(getattr(usage_meta, 'prompt_token_count', 0))
+            # SDK renamed field from response_token_count → candidates_token_count
+            resp_toks = _safe_int(getattr(usage_meta, 'response_token_count', getattr(usage_meta, 'candidates_token_count', 0)))
+            thought_toks = _safe_int(getattr(usage_meta, 'thoughts_token_count', 0))
+            cached_toks  = _safe_int(getattr(usage_meta, 'cached_token_count', 0))
+            total_toks = _safe_int(getattr(usage_meta, 'total_token_count', 0))
+            self._last_usage = {
+                'prompt_tokens': prompt_toks,
+                'response_tokens': resp_toks,
+                'thought_tokens': thought_toks,
+                'cached_tokens':  cached_toks,
+                'total_tokens': total_toks or (prompt_toks + resp_toks + thought_toks),
+                'model': model,
+            }
+        else:
+            self._last_usage = {
+                'prompt_tokens': 0,
+                'response_tokens': 0,
+                'thought_tokens': 0,
+                'cached_tokens': 0,
+                'total_tokens': 0,
+                'model': model,
+            }
+        
+        # Stitch together parts (Gemini returns list‑of‑parts)
+        thoughts = ""
+        content = ""
+        
+        for part in resp.candidates[0].content.parts:
+            if not part.text:
+                continue
+            if hasattr(part, 'thought') and part.thought:
+                thoughts += part.text
+            else:
+                content += part.text
+        
+        # Store thoughts for potential retrieval
+        self._last_thoughts = thoughts
+        
+        return content.strip()
+    
+    def get_last_thoughts(self) -> str:
+        """Retrieve thinking traces from the last generate() call."""
+        return getattr(self, '_last_thoughts', '')
+
+    def get_last_usage(self) -> dict:
+        return getattr(self, '_last_usage', {'prompt_tokens': 0, 'response_tokens': 0, 'total_tokens': 0})
+# END multi_coder_analysis/providers/gemini.py
+```
+
+```python
+# BEGIN multi_coder_analysis/providers/openrouter.py
+# ----------------------------
+"""HTTP-level OpenRouter provider.
+
+Eliminates the hard dependency on the *openai* Python package so the CLI works
+out-of-the-box in minimal environments (CI, Docker).  The implementation
+conforms to ``ProviderProtocol`` via duck-typing only – no inheritance needed.
+"""
+
+from __future__ import annotations
+
+import os
+import logging
+from typing import Optional
+
+import requests
+
+from .base import ProviderProtocol
+from .base import track_usage
+
+_LOGGER = logging.getLogger(__name__)
+
+__all__ = ["OpenRouterProvider"]
+
+
+class OpenRouterProvider:
+    """Lightweight provider that talks to https://openrouter.ai via REST."""
+
+    _ENDPOINT = "https://openrouter.ai/api/v1/chat/completions"
+
+    def __init__(self, api_key: Optional[str] = None):
+        self._api_key = api_key or os.getenv("OPENROUTER_API_KEY")
+        if not self._api_key:
+            raise ValueError("OPENROUTER_API_KEY not set")
+
+        self._last_usage: dict = {}
+        self._last_thoughts: str = ""
+
+    # ------------------------------------------------------------------
+    # ProviderProtocol interface
+    # ------------------------------------------------------------------
+    @track_usage
+    def generate(
+        self,
+        system_prompt: str,
+        user_prompt: str,
+        model: str,
+        temperature: float = 0.0,
+        *,
+        top_k: int | None = None,
+        top_p: float | None = None,
+    ) -> str:
+        headers = {
+            "Authorization": f"Bearer {self._api_key}",
+            "Content-Type": "application/json",
+        }
+
+        payload = {
+            "model": model,
+            "temperature": temperature,
+            **({"top_p": float(top_p)} if top_p is not None else {}),
+            **({"top_k": int(top_k)} if top_k is not None else {}),
+            "messages": [
+                {"role": "system", "content": system_prompt},
+                {"role": "user", "content": user_prompt},
+            ],
+        }
+
+        resp = requests.post(self._ENDPOINT, json=payload, headers=headers, timeout=30)
+        try:
+            resp.raise_for_status()
+        except Exception as exc:  # pragma: no cover
+            _LOGGER.error("OpenRouter request failed: %s", exc)
+            raise
+
+        data = resp.json()
+
+        # Save usage metadata if available (OpenAI style)
+        self._last_usage = data.get("usage", {}) if isinstance(data, dict) else {}
+        # Provide schema-complete defaults
+        self._last_usage.setdefault("thought_tokens", 0)
+
+        choice = data["choices"][0]
+        self._last_thoughts = choice.get("thoughts", "")  # rarely provided
+
+        return choice["message"]["content"].strip()
+
+    # ------------------------------------------------------------------
+    # Introspection helpers
+    # ------------------------------------------------------------------
+    def get_last_thoughts(self) -> str:
+        return self._last_thoughts
+
+    def get_last_usage(self) -> dict:  # noqa: D401 – simple struct
+        # Ensure numeric fields are ints for downstream math
+        return {k: int(v) for k, v in self._last_usage.items()} if self._last_usage else {
+            "prompt_tokens": 0,
+            "response_tokens": 0,
+            "total_tokens": 0,
+        }
+# END multi_coder_analysis/providers/openrouter.py
+```
+
+```python
+# BEGIN multi_coder_analysis/pricing.py
+# -----------------------------------------
+"""
+Canonical price tables and helpers for cost estimation.
+
+All monetary amounts are stored as **USD per single token** (not per-million)
+so callers can multiply directly by token counts.
+"""
+
+from __future__ import annotations
+
+from typing import Dict, TypedDict
+import os, json
+
+# ---------------------------------------------------------------------------
+# Raw Gemini price table  (extend for other providers / models as needed)
+# ---------------------------------------------------------------------------
+
+_GEMINI_PRICES: Dict[str, Dict[str, float]] = {
+    # GA endpoint – 17 Jun 2025 announcement
+    "gemini-2.5-flash": {
+        "input":   0.30 / 1_000_000,
+        "output":  2.50 / 1_000_000,
+        "cached":  0.30 / 1_000_000 * 0.25,   # 75 % discount for cached tokens
+    },
+    # Preview endpoint – removed mid-July 2025 but some users still hit it
+    "gemini-2.5-flash-preview-04-17": {
+        "input":   0.15 / 1_000_000,
+        "output":  0.60 / 1_000_000,
+        "cached":  0.15 / 1_000_000 * 0.25,
+    },
+}
+
+# Allow runtime override via env-var JSON
+_override = os.getenv("MCA_PRICE_OVERRIDE_JSON")
+if _override:
+    try:
+        _GEMINI_PRICES.update(json.loads(_override))
+    except Exception:  # pragma: no cover – never fail hard on malformed override
+        pass
+
+# ---------------------------------------------------------------------------
+# Public helpers
+# ---------------------------------------------------------------------------
+
+class CostBreakdown(TypedDict):
+    input_tokens: int
+    output_tokens: int
+    cached_tokens: int
+    cost_input_usd: float
+    cost_cached_usd: float
+    cost_output_usd: float
+    cost_total_usd: float
+
+
+def _match_price_row(model: str) -> Dict[str, float]:
+    model_lc = model.lower()
+    for pattern, row in _GEMINI_PRICES.items():
+        if pattern in model_lc:
+            return row
+    raise KeyError(f"No price entry for model '{model}'.")
+
+
+def estimate_gemini_cost(*, model: str, prompt_tokens: int, response_tokens: int, cached_tokens: int = 0) -> CostBreakdown:
+    """Return a  detailed cost breakdown for a single Gemini call."""
+    prices = _match_price_row(model)
+
+    billed_input = max(prompt_tokens - cached_tokens, 0)
+
+    cost_input  = billed_input   * prices["input"]
+    cost_cache  = cached_tokens  * prices["cached"]
+    cost_output = response_tokens * prices["output"]
+
+    total = cost_input + cost_cache + cost_output
+
+    return {
+        "input_tokens":   prompt_tokens,
+        "output_tokens":  response_tokens,
+        "cached_tokens":  cached_tokens,
+        "cost_input_usd":  round(cost_input,  6),
+        "cost_cached_usd": round(cost_cache, 6),
+        "cost_output_usd": round(cost_output,6),
+        "cost_total_usd":  round(total, 6),
+    }
+
+
+def estimate_cost(provider: str, **kwargs):
+    """Generic dispatcher so callers don't care about provider-specific helper."""
+    provider_lc = provider.lower()
+    if provider_lc == "gemini":
+        return estimate_gemini_cost(**kwargs)
+    raise NotImplementedError(f"Cost estimator not implemented for provider '{provider}'.")
+# END multi_coder_analysis/pricing.py
+```
+

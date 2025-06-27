@@ -1,3 +1,14 @@
+---
+meta_id: Q4
+row_map:
+  Q4.1: Loaded Questions (Worry/Fear)
+  Q4.2: Loaded Questions (Inaction)
+regex_map:
+  Q4.1: [4.LoadedQuestionAlarm, 4.WhatIfQuestion]
+  Q4.2: [4.LoadedQuestionAlarm, 4.IgnoreDisasterQ]
+frame: Alarmist
+summary: "Loaded rhetorical question for alarm"
+---
 ### QUICK DECISION CHECK
 • Sentence is a QUESTION starting with **SHOULD / CAN / COULD / WILL / WHAT IF / HOW LONG** **AND** includes **WORRIED / CONCERNED / AFRAID / IGNORE / STAND BY**?  
 → If yes → `"yes"`; else → `"no"`.
@@ -27,7 +38,9 @@ Does the author or a quoted source pose a loaded rhetorical question that is cle
 **🔍 Q4 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **→ Alarmist** |
 |------------------|--------------|----------------|
+<!-- Q4.1 -->
 | **Loaded Questions (Worry/Fear)** | "Should consumers worry...?" "Are we facing a crisis?" "Is it safe to...?" | ✓ |
+<!-- Q4.2 -->
 | **Loaded Questions (Inaction)** | "Are we going to stand by while this unfolds?" "How long can we ignore this?" | ✓ |
 | **Neutral Information-Seeking** | "What are the safety protocols?" "When will results be available?" | → Neutral |
 

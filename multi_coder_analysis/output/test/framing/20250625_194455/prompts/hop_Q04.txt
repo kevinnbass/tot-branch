@@ -1,0 +1,66 @@
+### QUICK DECISION CHECK
+• Sentence is a QUESTION starting with **SHOULD / CAN / COULD / WILL / WHAT IF / HOW LONG** **AND** includes **WORRIED / CONCERNED / AFRAID / IGNORE / STAND BY**?  
+→ If yes → `"yes"`; else → `"no"`.
+• Regex now pre-catches **"Is it safe to …?"** and **"How many more … have to die?"** rhetorical questions; you can ignore those.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Should consumers be worried about buying eggs?
+## Question: Does the author/source pose a loaded rhetorical question designed to imply alarm?
+## JSON Output:
+{"answer":"yes","rationale":"'Should consumers be worried' is a loaded question implying potential danger/concern."}
+
+# NO example
+## Input Segment: What are the safety protocols in place for this situation?
+## Question: Does the author/source pose a loaded rhetorical question designed to imply alarm?
+## JSON Output:
+{"answer":"no","rationale":"This is a neutral, information-seeking question without loaded emotional language."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q4
+**Q4: Loaded Rhetorical Question for Alarm**
+Does the author or a quoted source pose a loaded rhetorical question that is clearly designed to imply an Alarmist frame, instill fear/urgency, or suggest a worrisome threat (e.g., 'Should consumers worry...?', 'Are we simply going to stand by while this disaster unfolds?') AND is it distinguishable from a neutral, purely information-seeking question, as detailed in the rules?
+
+**🔍 Q4 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Loaded Questions (Worry/Fear)** | "Should consumers worry...?" "Are we facing a crisis?" "Is it safe to...?" | ✓ |
+| **Loaded Questions (Inaction)** | "Are we going to stand by while this unfolds?" "How long can we ignore this?" | ✓ |
+| **Neutral Information-Seeking** | "What are the safety protocols?" "When will results be available?" | → Neutral |
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q5.
+
+**‼ Precedence with Q5** – If the question sentence also contains a *calming keyword* ("safe", "under control", "alarm"), Q5 wins (Reassuring) and Q4 returns **"no"**.
+
+**🔍 Detailed Rules & Examples:**
+
+**Examples:**
+* **Example (Author-driven, implying worry):** Author: "With new variants emerging rapidly, should humans be worried about the next pandemic?" → Alarmist (if context suggests framing a worrisome threat).
+* **Example (Quote-driven, implying disaster):** 'The activist asked, "Are we simply going to stand by while this disaster unfolds?"' → Alarmist.
+* **Critical Distinction:** Carefully distinguish these from neutral, purely information-seeking questions (which are Neutral).
+
+**Alarmist - Inclusion Criteria:**
+* Direct questions from the author that use explicitly loaded or emotionally charged language clearly designed to imply an Alarmist frame or instill fear/urgency in the reader.
+  * **Example:** **Author:** "With the system collapsing, can anyone truly feel safe anymore?" (Alarmist. Cues: 'system collapsing,' 'truly feel safe anymore?' - rhetorical question implying no).
+  * **Non-Example (Neutral):** Author: "What are the safety protocols in place?" (Information-seeking).
+* Use of loaded rhetorical questions by the quoted source or author that are designed to evoke fear, urgency, or strong concern by implying a severe problem or a dire lack of action.
+  * Example (Author-driven): 'How many more animals have to die before we finally act decisively?' → Alarmist. (Rationale: The rhetorical question uses emotive language 'have to die' and implies criticism of inaction, framing the situation as urgent and severe.)
+  * Example (Quote-driven): 'The activist asked, "Are we simply going to stand by while this disaster unfolds?"' → Alarmist. (Rationale: The quoted rhetorical question uses 'disaster unfolds' to frame the situation alarmingly.)
+  * **Example (Rhetorical question from author implying worry):** Author: "With new variants emerging rapidly, should humans be worried about the next pandemic?" → Alarmist (if the context suggests this is not a simple information request but a way to frame emerging variants as a worrisome threat).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – Loaded Q** | "Should consumers be worried about buying eggs?" | **Alarmist** | Loaded rhetorical question implying worry |
+| **Alarmist – Necessity cull Q** | "Is it really necessary to kill millions of animals to stop the spread?" | **Alarmist** | rhetorical 'necessary to kill millions' |
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

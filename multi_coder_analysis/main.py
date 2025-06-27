@@ -274,6 +274,8 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 provider=args.provider,
                 batch_size=args.batch_size,
                 regex_mode=args.regex_mode,
+                router=args.router,
+                template=args.template,
                 shuffle_batches=args.shuffle_batches,
                 skip_eval=args.no_eval,
                 only_hop=args.only_hop,
@@ -514,6 +516,22 @@ def main():
 
     parser.add_argument('--sc-top-p', type=float, default=0.95,
                         help='nucleus sampling p-value')
+
+    # ------------------------------------------------------------------
+    # Router / LeanHop options
+    # ------------------------------------------------------------------
+    parser.add_argument(
+        '--router',
+        action='store_true',
+        help='Enable precedence-aware regex router (early exit & hop pruning).',
+    )
+
+    parser.add_argument(
+        '--template',
+        choices=['legacy', 'lean'],
+        default='legacy',
+        help="Prompt template set: 'legacy' = full-hop prompts (default), 'lean' = per-segment LeanHop prompts.",
+    )
 
     args = parser.parse_args()
 

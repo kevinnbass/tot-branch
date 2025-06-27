@@ -84,6 +84,13 @@ def decode_paths(
     for _ in range(votes):
         local_provider = get_provider(prov_name)
 
+        # Reset per-instance usage so we can measure cost per vote precisely
+        if hasattr(local_provider, "reset_usage"):
+            try:
+                local_provider.reset_usage()  # type: ignore[attr-defined]
+            except Exception:
+                pass
+
         # Build fresh pipeline each vote to avoid state leakage
         pipeline = build_tot_pipeline(
             local_provider,
@@ -95,7 +102,7 @@ def decode_paths(
             max_candidates=max_candidates,
         )
 
-        before_usage = get_usage_accumulator().copy()
+        # ---------------- run single path ----------------
 
         ctx = HopContext(
             statement_id=base_ctx.statement_id,
@@ -103,13 +110,24 @@ def decode_paths(
             article_id=base_ctx.article_id,
         )
 
+        # Capture global usage **before** the path – used for fallback cost estimation
+        before_usage = get_usage_accumulator().copy()
+
         pipeline.run(ctx)
 
-        after_usage = get_usage_accumulator().copy()
+        # ---------------- cost estimate ----------------
+        try:
+            usage_delta = local_provider.get_acc_usage()  # type: ignore[attr-defined]
+            score_tokens = int(usage_delta.get("total_tokens", 0))
+        except Exception:
+            # Fallback to global accumulator diff (may include noise)
+            after_usage = get_usage_accumulator().copy()
+            score_tokens = max(after_usage.get("total_tokens", 0) - before_usage.get("total_tokens", 0), 1)
 
-        score = float(after_usage.get("total_tokens", 0) - before_usage.get("total_tokens", 0))
+        score = float(max(score_tokens, 1))
 
-        ans_payload = ctx.final_frame or (ctx.ranking or None)
+        # Preserve the richer ranked list when available even if a final_frame exists.
+        ans_payload = (ctx.ranking or None) or ctx.final_frame
         if ans_payload is not None:
             if isinstance(ans_payload, list):
                 ans_payload = ans_payload[: max_candidates]
@@ -119,7 +137,28 @@ def decode_paths(
 
 
 # ---------------------------------------------------------------------------
-# Voting aggregation
+# Helpers
+# ---------------------------------------------------------------------------
+
+def _canon(label: str | None) -> str:
+    """Return a canonical key for *label* (case-folded, trimmed)."""
+    return (label or "").strip().lower()
+
+
+def _remember_original(label: str, mapping: Dict[str, str]) -> str:
+    """Store *label* under its canonical form in *mapping* if first seen.
+
+    Returns the canonical key so callers can reuse it inline.  This keeps the
+    public API returning a nicely cased label (first spelling encountered)
+    while all vote bookkeeping happens on canonical keys.
+    """
+    key = _canon(label)
+    mapping.setdefault(key, label.strip())
+    return key
+
+
+# ---------------------------------------------------------------------------
+# Voting rules
 # ---------------------------------------------------------------------------
 
 def _majority(pairs):  # type: ignore[override]
@@ -129,89 +168,192 @@ def _majority(pairs):  # type: ignore[override]
     as a plain string label.
     """
 
+    original: Dict[str, str] = {}
+
     def _top(label):
-        return label[0] if isinstance(label, list) else label
+        tok = label[0] if isinstance(label, list) else label
+        return _remember_original(str(tok), original)
 
     counts = Counter(_top(a) for a, _ in pairs)
-    ans, freq = counts.most_common(1)[0]
-    return ans, freq / len(pairs)
+    winner_key, freq = counts.most_common(1)[0]
+    return original[winner_key], freq / len(pairs)
 
 
 def _ranked(pairs: List[Tuple[list[str] | str, float]], normalise: bool) -> Tuple[str, float]:
-    buckets: Dict[str, float] = defaultdict(float)
-    counts: Dict[str, int] = defaultdict(int)
+    """Vote using per-answer *counts* with optional cost tie-break.
 
+    The winner is the candidate with the most first-place votes.  If several
+    candidates tie on votes we pick the one with the **lowest average cost**
+    (fewer tokens ≙ higher likelihood).  Confidence is the product of:
+
+    1. vote share – ``winner_votes / total_votes``
+    2. relative cost gap – ``1 – (best_cost / worst_cost)`` (0 if no gap)
+
+    This keeps the return value in \[0, 1].
+    """
+
+    if not pairs:
+        return "unknown", 0.0
+
+    cost_sum: Dict[str, float] = defaultdict(float)
+    counts: Dict[str, float] = defaultdict(float)  # fractional weights per candidate
+    original: Dict[str, str] = {}
+
+    # Gather stats ---------------------------------------------------------
     for ans, score in pairs:
-        key = ans[0] if isinstance(ans, list) else ans
-        buckets[key] += score
-        counts[key] += 1
+        norm_score = max(score, 1e-6)
 
-    if normalise:
-        # Average score per candidate
-        for ans in buckets:
-            buckets[ans] /= max(counts[ans], 1)
+        # Optional length normalisation (legacy "ranked" behaviour)
+        if normalise:
+            denom = len(ans) if isinstance(ans, list) else max(len(str(ans).split()), 1)
+            norm_score /= denom
 
-    # Edge cases
-    ans = min(buckets, key=buckets.get)
-    best = buckets[ans]
-    worst = max(buckets.values()) or 1
+        # ↓↓↓ vote accumulation ↓↓↓
+        if isinstance(ans, list):
+            n = len(ans)
+            denom = n * (n + 1) / 2  # sum of 1..n  (Borda total)
+            if denom == 0:
+                denom = 1.0
+            for idx, cand in enumerate(ans):
+                key = _remember_original(str(cand), original)
+                weight = (n - idx) / denom  # scale so ballot sums to 1
+                counts[key] += weight
+                cost_sum[key] += norm_score * weight
+        else:
+            key = _remember_original(str(ans), original)
+            counts[key] += 1.0
+            cost_sum[key] += norm_score
 
-    # unanimous vote → certainty 1.0
-    if len(buckets) == 1:
-        return ans, 1.0
-    # zero-cost paths (all regex) → unknown confidence
-    if worst == 0:
-        return ans, 0.0
+    # Average cost per candidate (only used for tie-break / confidence)
+    avg_cost = {k: (cost_sum[k] / counts[k]) for k in counts}
 
-    conf = 1 - (best / worst)
-    return ans, conf
+    # ------------------------------------------------------------------
+    # Winner selection
+    # ------------------------------------------------------------------
+    max_votes = max(counts.values())
+    pool = [k for k, v in counts.items() if v == max_votes]
+    if len(pool) == 1:
+        winner = pool[0]
+    else:
+        # Tie on votes → choose lowest average cost
+        winner = min(pool, key=lambda k: (avg_cost[k], k))
+
+    # ------------------------------------------------------------------
+    # Confidence estimation
+    # ------------------------------------------------------------------
+    # Unweighted first-place ballot count for confidence
+    raw_first_counts = Counter(_canon((a[0] if isinstance(a, list) else a)) for a, _ in pairs)
+    vote_conf = raw_first_counts.get(winner, 0) / len(pairs)
+
+    if len(avg_cost) == 1:  # unanimous vote
+        cost_conf = 1.0
+    else:
+        best_c = avg_cost[winner]
+        worst_c = max(avg_cost.values())
+        if best_c == worst_c:
+            cost_conf = 1.0  # identical cost → fall back to vote share only
+        else:
+            cost_conf = max(0.0, 1.0 - (best_c / worst_c))
+
+    conf = vote_conf * cost_conf
+    return original[winner], conf
 
 
 def _irv(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
-    from collections import Counter
-    rankings = [(r if isinstance(r, list) else [r]) for r, _ in pairs]
+    original: Dict[str, str] = {}
+    rankings = [[_remember_original(c, original) for c in (r if isinstance(r, list) else [r])] for r, _ in pairs]
     if not rankings:
         return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
+
+    # Pre-compute average cost per candidate for deterministic tie-breaks
+    cost_sum, count_sum = defaultdict(float), defaultdict(int)
+    for ans, score in pairs:
+        key = _remember_original((ans[0] if isinstance(ans, list) else ans), original)
+        cost_sum[key] += max(score, 1e-6)
+        count_sum[key] += 1
+    avg_cost = {k: cost_sum[k] / count_sum[k] for k in cost_sum}
+
     while True:
         first = Counter(r[0] for r in rankings if r)
         if not first:
             return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
+
         winner, votes = first.most_common(1)[0]
         if votes > len(rankings) / 2:
-            return winner, votes / len(rankings)
-        # Determine loser deterministically (alphabetical among least votes)
+            return original[winner], votes / len(rankings)
+
+        # Identify least-voted candidates
         min_votes = min(first.values())
-        losers = sorted([c for c, v in first.items() if v == min_votes])
-        loser = losers[0]
+        tied_losers = [c for c, v in first.items() if v == min_votes]
+
+        # Break tie by highest average cost; if still tied use deterministic lexical order
+        loser = max(tied_losers, key=lambda c: (avg_cost.get(c, float("inf")), c))
+
         rankings = [[c for c in r if c != loser] for r in rankings]
 
 
 def _borda(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
-    from collections import defaultdict
-    scores = defaultdict(int)
-    for ranking, _ in pairs:
+    scores = defaultdict(float)
+    cost_sum = defaultdict(float)
+    count_sum = defaultdict(int)
+    original: Dict[str, str] = {}
+
+    for ranking, cost in pairs:
         ranking = ranking if isinstance(ranking, list) else [ranking]
         for idx, cand in enumerate(ranking):
-            scores[cand] += len(ranking) - idx
+            key = _remember_original(str(cand), original)
+            scores[key] += len(ranking) - idx
+        # Track cost for average-cost tie-breaks (use cost per ballot once)
+        top_key = _remember_original(str(ranking[0]), original)
+        cost_sum[top_key] += max(cost, 1e-6)
+        count_sum[top_key] += 1
+
     if not scores:
         return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
-    winner = max(scores, key=scores.get)
-    total = sum(scores.values()) or 1
-    return winner, scores[winner] / total
+
+    max_score = max(scores.values())
+    pool = [c for c, s in scores.items() if s == max_score]
+
+    if len(pool) == 1:
+        winner = pool[0]
+    else:
+        avg_cost = {c: (cost_sum.get(c, 0.0) / max(count_sum.get(c, 1), 1)) for c in pool}
+        winner = min(pool, key=lambda c: (avg_cost.get(c, float("inf")), c))
+
+    total = sum(scores.values()) or 1.0
+    return original[winner], scores[winner] / total
 
 
 def _mrr(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
-    from collections import defaultdict
     mrr_scores = defaultdict(float)
-    for ranking, _ in pairs:
+    cost_sum = defaultdict(float)
+    count_sum = defaultdict(int)
+    original: Dict[str, str] = {}
+
+    for ranking, cost in pairs:
         ranking = ranking if isinstance(ranking, list) else [ranking]
         for idx, cand in enumerate(ranking, 1):
-            mrr_scores[cand] += 1 / idx
+            key = _remember_original(str(cand), original)
+            mrr_scores[key] += 1 / idx
+        # Cost bookkeeping for tie-breaks (use cost once per ballot)
+        top_key = _remember_original(str(ranking[0]), original)
+        cost_sum[top_key] += max(cost, 1e-6)
+        count_sum[top_key] += 1
+
     if not mrr_scores:
         return _majority([(a[0] if isinstance(a, list) else a, s) for a, s in pairs])
-    winner = max(mrr_scores, key=mrr_scores.get)
-    total = sum(mrr_scores.values()) or 1
-    return winner, mrr_scores[winner] / total
+
+    max_score = max(mrr_scores.values())
+    pool = [c for c, s in mrr_scores.items() if s == max_score]
+
+    if len(pool) == 1:
+        winner = pool[0]
+    else:
+        avg_cost = {c: (cost_sum.get(c, 0.0) / max(count_sum.get(c, 1), 1)) for c in pool}
+        winner = min(pool, key=lambda c: (avg_cost.get(c, float("inf")), c))
+
+    total = sum(mrr_scores.values()) or 1.0
+    return original[winner], mrr_scores[winner] / total
 
 
 def aggregate(pairs, rule: str = "majority") -> tuple[str, float]:

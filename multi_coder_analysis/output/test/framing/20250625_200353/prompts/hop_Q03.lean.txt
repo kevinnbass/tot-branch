@@ -1,0 +1,19 @@
+## Q3  MODERATE VERB + SCALE
+
+Alarmist if a moderate verb (hit, swept, jumped, surged, spiked …) is **paired with** a scale token (% / million / record / unprecedented …).
+
+Ex Alarmist → "sales **jumped 27 %**"
+Ex Neutral  → "hit several farms" (no numbers)
+
+=== SEGMENT ===
+{{text}}
+
+Q3_Alarmist? → yes / no
+```json
+{"frame":"?", "cue":""}
+```
+
+✅ SELF-AUDIT
+1 Did you cite the cue?
+2 No double frames.
+3 Pure JSON only. 

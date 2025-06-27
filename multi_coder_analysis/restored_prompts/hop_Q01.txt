@@ -1,0 +1,116 @@
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The flu is so deadly that entire flocks are culled.
+## Question: Does the segment contain an intensifier directly modifying a risk-adjective?
+## JSON Output:
+{"answer":"yes","rationale":"The intensifier 'so' modifies the risk-adjective 'deadly'."}
+
+# NO example
+## Input Segment: A highly pathogenic form of bird flu was detected.
+## Question: Does the segment contain an intensifier directly modifying a risk-adjective?
+## JSON Output:
+{"answer":"no","rationale":"'highly pathogenic' is a technical term, not an authorial intensifier on a general risk-adjective."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q1
+**Q1: Intensifier/Comparative + Risk-Adjective**
+Does the segment feature an intensifier (e.g., 'so,' 'very,' 'extremely') or a comparative adjective (e.g., 'more,' 'deadlier') directly modifying a risk-adjective (e.g., 'deadly,' 'dangerous,' 'severe,' 'catastrophic') as defined in the detailed rules?
+
+**🔍 Q1 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+| **Intensifier + Risk-Adj** | "so deadly," "very dangerous," "extremely severe," "highly lethal," "frighteningly contagious" | ✓ |
+| **Comparative + Risk-Adj** | "more deadly," "deadlier," "more dangerous," "less safe," "increasingly severe" | ✓ |
+| **Fixed Lethal-from-Outset Idiom** | "deadly from the start," "deadly from the outset" | ✓ |
+| **Base Risk-Adj (alone)** | "deadly," "dangerous," "severe" (without intensifier) | → Neutral |
+
+**🔗 See also:** Q2 for high-potency verbs; Q4 for loaded questions that may contain intensified language
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q2.
+
+**🔍 Detailed Rules & Examples:**
+
+**‼ RULE 1 QUICK MEMORY HOOK**
+• "Highly/very/so/more + deadly/lethal/dangerous" ⇒ Alarmist every time
+
+| If you see… | Frame | Quick test |
+|-------------|-------|------------|
+| **Intensifier/Comparative + Risk-Adjective** | Alarmist | **Any single match is sufficient (Precedence #1)** |
+| - so/very/extremely/highly/frighteningly/particularly + deadly/lethal/dangerous/brutal/severe/contagious/virulent/destructive **(NOTE "volatile" is handled under Q9)** | | |
+| - more/less/deadlier/safer/higher/lower + same risk adjectives | | |
+| *(Risk-adjective list is illustrative, not exhaustive)* | | |
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)
+
+**Clarification on "deadly," "fatal," "lethal":** These terms when modified by an intensifier (e.g., 'so deadly,' 'extremely fatal,' 'particularly lethal,' 'frighteningly deadly') are Alarmist. Without such direct intensification, "deadly" (etc.) describing a factual characteristic (e.g., 'Avian flu can be deadly in domestic poultry') is typically Neutral unless other alarmist cues are present.
+
+**Minimal Pair Examples:**
+* **Neutral:** "The virus is contagious."
+* **Alarmist (Author):** "The virus is frighteningly contagious, spreading like wildfire." (Cue: 'frighteningly,' 'spreading like wildfire').
+
+**New Comparative Minimal Pair Example:**
+* **Alarmist:** "Scientists warn the virus is becoming deadlier each season."
+* **Neutral:** "Scientists track how the virus becomes more common each season."
+
+**⚠ TECHNICAL OR CLINICAL TERMS**  
+A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used *clinically* (e.g. "lethal dose 50").  
+**BUT** if the same term is paired with *any intensifier or emotive verb* → **Alarmist (Precedence #1)**
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – Intensifier + adjective** | "The flu is so deadly that entire flocks are culled." | **Alarmist** | "so deadly" (intensifier + risk adjective) |
+| **Alarmist – Deadly-from-outset idiom** | "H5N1 is deadly from the start, vets warn." | **Alarmist** | "deadly from the start" (fixed lethal-from-outset idiom) |
+
+**Regex Pattern  (v2.16.2):**
+```regex
+ # Ignore the fixed scientific term "highly pathogenic avian influenza (HPAI)"
+ \b(?:(?:highly(?!\s+pathogenic\s+avian(?:\s+flu|\s+influenza)?))
+     |very|deadlier|more|extremely|severely|so|particularly|frighteningly)  
+     (?:\s+\w+){0,3}\s+
+ # Risk-adj list (adding infectious, transmissible) while pruning ECON adjective "volatile"
+ (deadly|lethal|dangerous|severe|catastrophic|brutal|contagious|virulent|destructive|infectious|transmissible)\b|
+ # NEW (fixed lethal-from-outset idiom)
+ \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b
+```
+
+**EXCLUSION — "volatile"**  
+When "volatile" modifies *prices/markets/rates* it is treated as an **economic metric** (see Q9) and never triggers Q1.
+
+> **Technical-term guard** – "highly pathogenic" used as part of the formal
+> disease name (HPAI) is **Neutral** unless further alarmist cues appear.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+```
+
+# ─────────────────────────────────────────────────────────────
+#  GLOBAL FOOTER – 6-POINT SELF-AUDIT (read *after* hop logic)
+#  -----------------------------------------------------------
+✅ **SELF-AUDIT before you reply**
+1. If you answered **"yes"**, STOP processing lower hops.
+2. Quote decisive cue(s) in the *rationale*.
+3. No Alarmist on neutrally stated **bad** facts.
+4. No Reassuring on neutrally stated **good / low-risk** facts.
+5. First "yes" only – no double hits / overrides.
+6. Output must be pure JSON and **nothing else**.
+
+🔧 **Implementation hint** – add a regression test where  
+Input: "We are confident our systems are ready." → expect Q5 = yes, Reassuring.
+
+*Re-read this list; fix any violation before sending.*
+# 7. If you reach **Q12** and still cannot assign a frame with certainty,
+#    return an **Unknown** label:
+#        { "answer":"unknown",
+#          "rationale":"Q12 reached with no decisive cues; frame unresolved" }
+#    Down-stream evaluation will skip these rows.
+# ───────────────────────────────────────────────────────────── 
+

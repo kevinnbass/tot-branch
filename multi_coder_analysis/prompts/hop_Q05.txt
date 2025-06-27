@@ -1,3 +1,26 @@
+---
+meta_id: Q5
+row_map:
+  Q5.1: Direct Safety Assurances
+  Q5.2: Supply-Safety Assurances
+  Q5.3: Confidence Statements
+  Q5.4: Calming Idioms
+  Q5.5: Direct Consumption Safety
+  Q5.6: Preparedness Calming Cue
+  Q5.7: Low-Risk Evaluation (+ Intensifier)
+  Q5.8: Positive Amplification
+regex_map:
+  Q5.1: [5.ExplicitCalming, 5.DirectNoConcern.Live, 5.NothingToWorry.Live]
+  Q5.2: [5.ExplicitCalming]
+  Q5.3: [5.ExplicitCalming]
+  Q5.4: [5.ExplicitCalming]
+  Q5.5: [5.ExplicitCalming.SafeToEat.Live]
+  Q5.6: [5.ExplicitCalming]
+  Q5.7: [5.ExplicitCalming, 5.LowRiskEval.Theoretical, 5.LowRiskSimple]
+  Q5.8: [5.ExplicitCalming]
+frame: Reassuring
+summary: "Explicit calming cue for reassurance"
+---
 ### QUICK DECISION CHECK
 • Contains explicit calming keyword **SAFE / ALARM / UNDER CONTROL / REST EASY / CAUSE FOR ALARM / EXCELLENT NEWS / VERY WELL PROTECTED** in same clause as a present‑tense confidence verb?  
 → If yes → `"yes"`; else → `"no"`.
@@ -44,15 +67,23 @@ Does the author or a quoted source provide an explicit calming cue (e.g., 'no ca
 **🔍 Q5 Pattern Recognition Table (expanded):**
 | **Pattern Type** | **Examples** | **→ Reassuring** |
 |------------------|--------------|------------------|
+<!-- Q5.1 -->
 | **Direct Safety Assurances** | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" **(must mention "safe", "alarm", or "under control")** | ✓ |
+<!-- Q5.2 -->
 | **Supply‑Safety Assurances** | **"no shortage of eggs," "ample supply," "plenty of stock," "shelves remain full"** | ✓ |
+<!-- Q5.3 -->
 | **Confidence Statements** | "we are confident," "I'm encouraged," "rest assured," "situation contained," "providing relief" | ✓ |
+<!-- Q5.4 -->
 | **Calming Idioms** | **"no need to panic," "now is not the time to panic," "don't panic"** | ✓ |
+<!-- Q5.5 -->
 | **Direct Consumption Safety** | "safe to eat," "safe for (human) consumption," "remains safe to eat" | ✓ |
 | **⚠ The clause must contain the literal word "safe".** <br>Expressions that merely say something "should not pose a risk / danger" **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
+<!-- Q5.6 -->
 | **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
+<!-- Q5.7 -->
 | **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
 | **Transient-Issue Minimiser** *(now caught by regex)* | — | — |
+<!-- Q5.8 -->
 | **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
 |                            | "**welcome news**, **encouraging news**" | ✓ |
 | **Bare Positive Facts** | "no cases reported," "tests were negative," "no problems detected," **"poses no risk"**, **"not expected to…"** | → Neutral — *do not* mark Reassuring unless the same sentence also contains an explicit calming keyword from the list above (`safe`, `alarm`, `under control`, `rest easy`, `excellent news`).  🚦Rule C reminder: capability or preparedness phrases alone never count as calming.  |

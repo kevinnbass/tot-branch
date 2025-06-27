@@ -2,3 +2,63 @@
 2025-06-25 13:40:55,357 - INFO - Processing with batch size = 200 and concurrency=20
 2025-06-25 13:40:55,492 - INFO - Hop 1: processing 1 batches (size=200) with concurrency=20
 2025-06-25 13:40:55,619 - INFO - Hop 1: 6 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 13:44:20,362 - INFO - Batch batch_1_22dd80 Q01: attempt 1 succeeded for 198/194 objects; still missing 70/194
+2025-06-25 13:46:03,386 - INFO - Batch batch_1_22dd80 Q01: attempt 2 succeeded for 70/70 objects; still missing 0/70
+2025-06-25 13:46:03,734 - INFO - Hop 2: processing 1 batches (size=200) with concurrency=20
+2025-06-25 13:46:03,789 - INFO - Hop 2: 3 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 13:53:30,383 - WARNING - Batch batch_2_ea48f1 Q02: salvaged 153 objects from truncated JSON (original error: Expecting value: line 753 column 18 (char 20947))
+2025-06-25 13:53:30,384 - INFO - Batch batch_2_ea48f1 Q02: attempt 1 succeeded for 153/188 objects; still missing 37/188
+2025-06-25 13:54:14,328 - INFO - Batch batch_2_ea48f1 Q02: attempt 2 succeeded for 37/37 objects; still missing 0/37
+2025-06-25 13:54:14,598 - INFO - Hop 3: processing 1 batches (size=200) with concurrency=20
+2025-06-25 13:54:14,608 - INFO - Hop 3: 2 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 13:55:47,956 - WARNING - Batch batch_3_d97c2e Q03: attempt 1 failed: Empty response from LLM (missing 183 segments)
+2025-06-25 14:02:26,929 - INFO - Batch batch_3_d97c2e Q03: attempt 2 succeeded for 178/183 objects; still missing 5/183
+2025-06-25 14:02:42,644 - INFO - Batch batch_3_d97c2e Q03: attempt 3 succeeded for 5/5 objects; still missing 0/5
+2025-06-25 14:02:43,410 - INFO - Hop 4: processing 1 batches (size=200) with concurrency=20
+2025-06-25 14:02:43,428 - INFO - Hop 4: 2 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 14:17:02,959 - WARNING - Batch batch_4_04ab92 Q04: salvaged 218 objects from truncated JSON (original error: Invalid control character at: line 81 column 37 (char 8420))
+2025-06-25 14:17:02,960 - INFO - Batch batch_4_04ab92 Q04: attempt 1 succeeded for 218/181 objects; still missing 43/181
+2025-06-25 14:18:03,736 - INFO - Batch batch_4_04ab92 Q04: attempt 2 succeeded for 43/43 objects; still missing 0/43
+2025-06-25 14:18:04,147 - INFO - Hop 5: processing 1 batches (size=200) with concurrency=20
+2025-06-25 14:18:04,176 - INFO - Hop 5: 1 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 14:26:22,907 - WARNING - Batch batch_5_288357 Q05: salvaged 309 objects from truncated JSON (original error: Invalid control character at: line 131 column 124 (char 15772))
+2025-06-25 14:26:22,908 - INFO - Batch batch_5_288357 Q05: attempt 1 succeeded for 309/180 objects; still missing 9/180
+2025-06-25 14:26:45,697 - INFO - Batch batch_5_288357 Q05: attempt 2 succeeded for 9/9 objects; still missing 0/9
+2025-06-25 14:26:46,069 - INFO - Hop 6: processing 1 batches (size=200) with concurrency=20
+2025-06-25 14:26:46,076 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 14:32:05,675 - INFO - Batch batch_6_feabc0 Q06: attempt 1 succeeded for 40/177 objects; still missing 137/177
+2025-06-25 14:37:47,904 - WARNING - Batch batch_6_feabc0 Q06: attempt 2 failed: Empty response from LLM (missing 137 segments)
+2025-06-25 14:44:10,139 - INFO - Batch batch_6_feabc0 Q06: attempt 3 succeeded for 137/137 objects; still missing 0/137
+2025-06-25 14:44:10,404 - INFO - Hop 7: processing 1 batches (size=200) with concurrency=20
+2025-06-25 14:44:10,421 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=200) with concurrency=20
+2025-06-25 14:44:11,042 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:11,046 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:11,047 - WARNING - Batch batch_7_b16a42 Q07: attempt 1 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:44:12,916 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:12,917 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:12,918 - WARNING - Batch batch_7_b16a42 Q07: attempt 2 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:44:16,279 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:16,280 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:16,280 - WARNING - Batch batch_7_b16a42 Q07: attempt 3 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:44:22,695 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:22,696 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:22,696 - WARNING - Batch batch_7_b16a42 Q07: attempt 4 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:44:35,186 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:35,186 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:35,187 - WARNING - Batch batch_7_b16a42 Q07: attempt 5 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:44:59,635 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:59,636 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:44:59,636 - WARNING - Batch batch_7_b16a42 Q07: attempt 6 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:45:48,024 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:45:48,025 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:45:48,025 - WARNING - Batch batch_7_b16a42 Q07: attempt 7 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:47:24,631 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:47:24,632 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:47:24,633 - WARNING - Batch batch_7_b16a42 Q07: attempt 8 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:50:37,011 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:50:37,012 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:50:37,012 - WARNING - Batch batch_7_b16a42 Q07: attempt 9 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 14:57:01,398 - ERROR - OpenRouter request failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:57:01,399 - WARNING - Error generating batch response: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions
+2025-06-25 14:57:01,400 - WARNING - Batch batch_7_b16a42 Q07: attempt 10 failed: 401 Client Error: Unauthorized for url: https://openrouter.ai/api/v1/chat/completions (missing 175 segments)
+2025-06-25 15:09:49,744 - ERROR - ⌧  Ctrl-C received – aborting run immediately …

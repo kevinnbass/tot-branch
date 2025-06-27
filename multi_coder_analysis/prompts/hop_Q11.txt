@@ -1,3 +1,18 @@
+---
+meta_id: Q11
+row_map:
+  Q11.1: Alarmist – Dominant Quote
+  Q11.2: Alarmist – Intensified High-Risk
+  Q11.3: Dominant Reassuring Quote
+  Q11.4: Neutral – Bare risk-adj in quote
+regex_map:
+  Q11.1: [11.DominantQuoteAlarmist]
+  Q11.2: [11.DominantQuoteAlarmist]
+  Q11.3: [11.DominantQuoteReassuring]
+  Q11.4: [11.BaseRiskAdjQuoteNeutral]
+frame: Variable
+summary: "Primacy of framed quotations"
+---
 ### QUICK DECISION CHECK
 • Direct QUOTE contains explicit Alarmist cue (**EXTREMELY CONCERNING / IMMEDIATE ACTION / HIGH RISK / CATASTROPHIC**) **OR** explicit Reassuring cue (**NO CAUSE FOR ALARM / EXCELLENT NEWS / SAFE TO EAT / VERY WELL PROTECTED**).  
 • If both or balanced → `"no"` (mixed → Neutral).  
@@ -34,9 +49,13 @@ Does a directly quoted source within the segment provide a clear, dominant Alarm
 **🔍 Q11 Pattern Recognition Table:**
 | **Pattern Type** | **Examples** | **Outcome** |
 |------------------|--------------|-------------|
+<!-- Q11.1 -->
 | **Alarmist – Dominant Quote** | "extremely concerning and requires immediate action." | **Alarmist** | dominant alarm |
+<!-- Q11.2 -->
 | **Alarmist – Intensified High-Risk** | "definitely considered a period of high risk" | **Alarmist** | intensified risk assessment |
+<!-- Q11.4 -->
 | **Neutral – Bare risk-adj in quote** | "This virus is deadly to birds." | **Neutral** | base risk adjective without intensifier |
+<!-- Q11.3 -->
 | **Dominant Reassuring Quote** | "no cause for alarm," "excellent news," "very well protected" | → Reassuring |
 | **Balanced/Mixed Quotes** | "concerning, but viruses do not transmit easily" | → Neutral |
 | **Neutral Quotes Only** | "officials are monitoring," "tests are ongoing" | → Proceed to Q12 |

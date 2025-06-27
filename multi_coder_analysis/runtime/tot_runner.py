@@ -99,8 +99,13 @@ def execute(cfg: RunConfig) -> Path:
             engine.set_force_shadow(False)
 
         # ---------- Self-consistency mode -----------
-        if cfg.decode_mode == "self-consistency":
-            from multi_coder_analysis.core.self_consistency import decode_paths, aggregate
+        if cfg.decode_mode in {"self-consistency", "self-consistency-hop"}:
+            # Decide decoder flavour
+            if cfg.decode_mode == "self-consistency-hop":
+                from multi_coder_analysis.core.self_consistency_hop import decode_iterative as _decode_fn
+            else:
+                from multi_coder_analysis.core.self_consistency import decode_paths as _decode_fn  # type: ignore
+            from multi_coder_analysis.core.self_consistency import aggregate
 
             import pandas as pd
 
@@ -118,7 +123,27 @@ def execute(cfg: RunConfig) -> Path:
                     article_id=row_data.get("ArticleID", ""),
                 )
 
-                pairs = decode_paths(
+                if cfg.decode_mode == "self-consistency-hop":
+                    frame, conf = _decode_fn(
+                        base_ctx,
+                        local_provider,
+                        cfg.model,
+                        votes=cfg.sc_votes,
+                        temperature=cfg.sc_temperature,
+                        top_k=cfg.sc_top_k,
+                        top_p=cfg.sc_top_p,
+                        ranked_list=cfg.ranked_list,
+                        max_candidates=cfg.max_candidates,
+                        sc_rule=cfg.sc_rule,
+                    )
+                    return {
+                        "StatementID": base_ctx.statement_id,
+                        "Frame": frame,
+                        "Consistency": f"{conf:.2f}",
+                    }
+
+                # legacy full-tree sampling path
+                pairs = _decode_fn(
                     base_ctx,
                     local_provider,
                     cfg.model,

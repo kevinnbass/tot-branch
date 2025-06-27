@@ -112,22 +112,48 @@ class Engine:
                 return False
         return True
     
-    def match(self, ctx) -> Optional[Answer]:  # noqa: ANN001
+    # ------------------------------------------------------------------
+    # Backward-compatibility shim – the pre-refactor API allowed calling
+    #   engine.match("some text", hop=3)
+    # where the first argument was *plain text* and the hop number was given
+    # via a keyword (or positional) argument.  A number of integration tests –
+    # and possibly downstream scripts – still rely on this.  To avoid breaking
+    # them we detect that calling convention and internally create a minimal
+    # namespace exposing the attributes expected by the modern implementation
+    # (q_idx, segment_text).
+    # ------------------------------------------------------------------
+
+    def match(self, ctx, *args, **kwargs):  # noqa: ANN001
         """Attempt to answer the current hop deterministically.
 
-        Parameters
-        ----------
-        ctx : HopContext
-            The current hop context (expects attributes: `q_idx`, `segment_text`).
+        Supports two calling styles:
 
-        Returns
-        -------
-        Optional[Answer]
-            • Dict with keys {answer, rationale, frame} when a single live rule
-              fires with certainty.
-            • None when no rule (or >1 rules) fire, or hop not covered, or rule is
-              in shadow mode.
+        • Modern: ``match(hop_ctx)`` where *hop_ctx* has the attributes
+          ``q_idx`` (hop) and ``segment_text``.
+
+        • Legacy: ``match(text, hop=1)`` for backward compatibility.
         """
+
+        # ---------------- legacy dispatch ----------------
+        if isinstance(ctx, str):
+            text = ctx
+            hop = kwargs.get("hop")
+            if hop is None and args:
+                hop = args[0]
+            hop = int(hop or 1)
+
+            # Build a tiny ad-hoc object with the expected attributes
+            class _Shim:
+                def __init__(self, q_idx, segment_text):
+                    self.q_idx = q_idx
+                    self.segment_text = segment_text
+
+            shim = _Shim(hop, text)
+            return self.match(shim)  # recurse into modern path
+
+        # ---------------- modern path ----------------
+        # At this point *ctx* is expected to be an object with .q_idx & .segment_text
+
         hop: int = getattr(ctx, "q_idx")
         text: str = getattr(ctx, "segment_text")
 
