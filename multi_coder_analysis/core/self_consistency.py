@@ -44,6 +44,7 @@ def decode_paths(
     top_p: float,
     ranked_list: bool = False,
     max_candidates: int = 5,
+    confidence_scores: bool = False,
 ) -> List[Tuple[list[str] | str, float]]:
     """Run the ToT pipeline *votes* times with stochastic sampling.
 
@@ -66,6 +67,8 @@ def decode_paths(
         Whether to return a ranked list of candidates.
     max_candidates
         Maximum number of candidates to return in ranked list.
+    confidence_scores
+        Whether to enable confidence-enhanced prompts and data collection.
 
     Returns
     -------
@@ -100,6 +103,7 @@ def decode_paths(
             top_p=top_p,
             ranked_list=ranked_list,
             max_candidates=max_candidates,
+            confidence_scores=confidence_scores,
         )
 
         # ---------------- run single path ----------------
@@ -134,6 +138,124 @@ def decode_paths(
             samples.append((ans_payload, score))
 
     return samples
+
+
+def decode_paths_with_confidence(
+    base_ctx: HopContext,
+    provider: ProviderProtocol,
+    model: str,
+    *,
+    votes: int,
+    temperature: float,
+    top_k: int,
+    top_p: float,
+    ranked_list: bool = False,
+    max_candidates: int = 5,
+    confidence_scores: bool = False,
+) -> tuple[List[Tuple[list[str] | str, float]], List[dict] | None]:
+    """Run the ToT pipeline *votes* times with stochastic sampling, collecting confidence data.
+
+    This function extends decode_paths to also collect confidence data when confidence_scores=True.
+
+    Parameters
+    ----------
+    base_ctx
+        Template context holding the statement text + IDs.
+    provider
+        Provider implementing the generate() interface.
+    model
+        Model identifier.
+    votes
+        Number of independent samples.
+    temperature, top_k, top_p
+        Sampling hyper-parameters forwarded to the provider.  Note that the
+        internal ToT pipeline currently passes only *temperature*.  Providers
+        expose *top_k*/*top_p* anyway, so we call them directly when ToT falls
+        through to the LLM.
+    ranked_list
+        Whether to return a ranked list of candidates.
+    max_candidates
+        Maximum number of candidates to return in ranked list.
+    confidence_scores
+        Whether to enable confidence-enhanced prompts and data collection.
+
+    Returns
+    -------
+    tuple
+        (samples, confidence_data) where samples is a list of (answer, score) tuples
+        and confidence_data is a list of confidence dictionaries when confidence_scores=True,
+        or None otherwise.
+    """
+
+    # Determine provider short name once for quick cloning per vote
+    prov_name = provider.__class__.__name__.replace("Provider", "").lower()
+
+    samples: List[Tuple[list[str] | str, float]] = []
+    confidence_data: List[dict] | None = [] if confidence_scores else None
+
+    for _ in range(votes):
+        local_provider = get_provider(prov_name)
+
+        # Reset per-instance usage so we can measure cost per vote precisely
+        if hasattr(local_provider, "reset_usage"):
+            try:
+                local_provider.reset_usage()  # type: ignore[attr-defined]
+            except Exception:
+                pass
+
+        # Build fresh pipeline each vote to avoid state leakage
+        pipeline = build_tot_pipeline(
+            local_provider,
+            model,
+            temperature=temperature,
+            top_k=(None if top_k == 0 else top_k),
+            top_p=top_p,
+            ranked_list=ranked_list,
+            max_candidates=max_candidates,
+            confidence_scores=confidence_scores,
+        )
+
+        # ---------------- run single path ----------------
+
+        ctx = HopContext(
+            statement_id=base_ctx.statement_id,
+            segment_text=base_ctx.segment_text,
+            article_id=base_ctx.article_id,
+        )
+
+        # Capture global usage **before** the path – used for fallback cost estimation
+        before_usage = get_usage_accumulator().copy()
+
+        pipeline.run(ctx)
+
+        # ---------------- cost estimate ----------------
+        try:
+            usage_delta = local_provider.get_acc_usage()  # type: ignore[attr-defined]
+            score_tokens = int(usage_delta.get("total_tokens", 0))
+        except Exception:
+            # Fallback to global accumulator diff (may include noise)
+            after_usage = get_usage_accumulator().copy()
+            score_tokens = max(after_usage.get("total_tokens", 0) - before_usage.get("total_tokens", 0), 1)
+
+        score = float(max(score_tokens, 1))
+
+        # Preserve the richer ranked list when available even if a final_frame exists.
+        ans_payload = (ctx.ranking or None) or ctx.final_frame
+        if ans_payload is not None:
+            if isinstance(ans_payload, list):
+                ans_payload = ans_payload[: max_candidates]
+            samples.append((ans_payload, score))
+
+            # Collect confidence data if enabled
+            if confidence_scores and confidence_data is not None:
+                ctx_confidence = {}
+                if ctx.confidence_score is not None:
+                    ctx_confidence['confidence'] = ctx.confidence_score
+                if ctx.frame_likelihoods is not None:
+                    ctx_confidence['frame_likelihoods'] = ctx.frame_likelihoods
+                confidence_data.append(ctx_confidence)
+
+    return samples, confidence_data
 
 
 # ---------------------------------------------------------------------------
@@ -180,7 +302,7 @@ def _majority(pairs):  # type: ignore[override]
 
 
 def _ranked(pairs: List[Tuple[list[str] | str, float]], normalise: bool) -> Tuple[str, float]:
-    """Vote using per-answer *counts* with optional cost tie-break.
+    r"""Vote using per-answer *counts* with optional cost tie-break.
 
     The winner is the candidate with the most first-place votes.  If several
     candidates tie on votes we pick the one with the **lowest average cost**
@@ -356,12 +478,75 @@ def _mrr(pairs: list[tuple[list[str] | str, float]]) -> tuple[str, float]:
     return original[winner], mrr_scores[winner] / total
 
 
-def aggregate(pairs, rule: str = "majority") -> tuple[str, float]:
-    """Collapse *pairs* into (answer, confidence) according to *rule*."""
+def _confidence_weighted(pairs: list[tuple[list[str] | str, float]], confidence_data: list[dict] | None = None) -> tuple[str, float]:
+    """Confidence-weighted aggregation using frame likelihoods when available.
+    
+    This function implements true RLSC by:
+    1. Using frame_likelihoods from confidence-enhanced responses when available
+    2. Weighting votes by confidence scores
+    3. Falling back to standard aggregation for non-confidence responses
+    """
+    if not pairs:
+        return "unknown", 0.0
+    
+    # Check if we have confidence data
+    if not confidence_data or len(confidence_data) != len(pairs):
+        # Fallback to standard ranked aggregation
+        return _ranked(pairs, normalise=True)
+    
+    frame_vote_weights = defaultdict(float)
+    original: Dict[str, str] = {}
+    
+    for i, ((answer, cost), conf_data) in enumerate(zip(pairs, confidence_data)):
+        # Extract confidence score
+        confidence = conf_data.get('confidence', 50.0) / 100.0  # normalize to 0-1
+        
+        # Use frame likelihoods if available
+        if 'frame_likelihoods' in conf_data:
+            frame_likes = conf_data['frame_likelihoods']
+            for frame, likelihood in frame_likes.items():
+                canonical_frame = _remember_original(frame, original)
+                weight = (likelihood / 100.0) * confidence  # likelihood weighted by confidence
+                frame_vote_weights[canonical_frame] += weight
+        else:
+            # Use binary answer with confidence weighting
+            if isinstance(answer, list):
+                top_answer = answer[0]
+            else:
+                top_answer = str(answer)
+            
+            # Use the actual answer directly
+            canonical_frame = _remember_original(top_answer, original)
+            frame_vote_weights[canonical_frame] += confidence
+    
+    # Find winner by highest weighted vote
+    if not frame_vote_weights:
+        return "Neutral", 0.0
+    
+    winner_frame = max(frame_vote_weights.items(), key=lambda x: x[1])[0]
+    
+    # Calculate confidence as the relative weight of the winner
+    total_weight = sum(frame_vote_weights.values())
+    winner_confidence = frame_vote_weights[winner_frame] / total_weight if total_weight > 0 else 0.0
+    
+    return original.get(winner_frame, winner_frame), min(winner_confidence, 1.0)
+
+
+def aggregate(pairs, rule: str = "majority", confidence_data: list[dict] | None = None) -> tuple[str, float]:
+    """Collapse *pairs* into (answer, confidence) according to *rule*.
+    
+    Enhanced version supports confidence-weighted aggregation when confidence_data is provided.
+    """
     if not pairs:
         return "unknown", 0.0
 
     rule = rule.lower()
+    
+    # Use confidence-weighted aggregation if confidence data is available
+    if confidence_data and rule in {"confidence-weighted", "confidence"}:
+        return _confidence_weighted(pairs, confidence_data)
+    
+    # Standard aggregation rules
     if rule == "irv":
         return _irv(pairs)
     if rule == "borda":

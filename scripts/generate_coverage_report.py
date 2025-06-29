@@ -20,7 +20,7 @@ from datetime import datetime
 # Add project root to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from multi_coder_analysis.utils.prompt_loader import load_prompt_and_meta
+from scripts.annotation_prompt_loader import load_prompt_and_meta
 
 class DocumentationGenerator:
     def __init__(self, project_root: Union[str, Path], output_dir: Union[str, Path]):
@@ -106,8 +106,8 @@ class DocumentationGenerator:
                                key=lambda x: int(x[0][1:]) if x[0][1:].isdigit() else 999)
             
             for hop_id, meta in sorted_hops:
-                row_map = meta.get('row_map', {})
-                regex_map = meta.get('regex_map', {})
+                row_map = meta.get('row_map', {}) or {}
+                regex_map = meta.get('regex_map', {}) or {}
                 
                 for row_id in sorted(row_map.keys()):
                     description = row_map[row_id]

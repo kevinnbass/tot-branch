@@ -1,0 +1,28 @@
+{
+  "timestamp": "20250628_075531",
+  "layouts": [
+    "standard",
+    "recency",
+    "sandwich",
+    "minimal_system",
+    "question_first",
+    "hop_last",
+    "structured_json",
+    "segment_focus",
+    "instruction_first",
+    "parallel_analysis",
+    "evidence_based",
+    "xml_structured",
+    "primacy_recency"
+  ],
+  "input_file": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "gold_standard": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "batch_size": 10,
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "provider": "gemini",
+  "start": 1,
+  "end": 2,
+  "limit": null,
+  "concurrency": 3,
+  "regex_mode": "live"
+}

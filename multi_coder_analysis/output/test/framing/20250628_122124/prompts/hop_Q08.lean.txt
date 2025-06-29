@@ -1,0 +1,19 @@
+## Q8  CAPABILITY / PREPAREDNESS
+
+Neutral if the sentence just reports systems, plans, stockpiles, resources without explicit calming keywords.
+
+Ex Neutral → "The agency **has a rapid response plan** in place."
+Ex Reassuring → "… so consumers can **rest easy**." (would be Q5)
+
+=== SEGMENT ===
+{{text}}
+
+Q8_Capability? → yes / no
+```json
+{"frame":"?", "cue":""}
+```
+
+✅ SELF-AUDIT
+1 Did you cite the cue?
+2 No double frames.
+3 Pure JSON only. 

@@ -36,6 +36,10 @@ class HopContext:
     # Track consecutive "uncertain" responses to support early termination.
     uncertain_count: int = 0
 
+    # -------------- Confidence-Enhanced RLSC Fields --------------
+    confidence_score: Optional[float] = None   # Confidence score 0-100 for binary decision
+    frame_likelihoods: Optional[Dict[str, float]] = None  # Frame likelihood percentages (Alarmist, Neutral, Reassuring)
+
     # -------------- Logging & Audit Trails --------------
     analysis_history: AnalysisHistory = field(default_factory=list)
     reasoning_trace: ReasoningTrace = field(default_factory=list)

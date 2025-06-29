@@ -1,0 +1,50 @@
+# Layout Experiment Results
+
+Generated: 2025-06-28T11:33:05.669103
+Total experiments: 6
+Successful experiments: 6
+Failed experiments: 0
+
+## Best Layout
+**minimal_system**
+- Accuracy: 0.920
+- Average F1: 0.807
+- Duration: 324.3s
+
+## All Results (sorted by accuracy)
+                   Layout  Accuracy  Avg_F1  Duration_Seconds
+           minimal_system     0.920   0.807           324.269
+   minimal_question_twice     0.920   0.763           364.083
+    minimal_segment_first     0.900   0.758           338.070
+     minimal_json_segment     0.900   0.736           353.894
+     minimal_hop_sandwich     0.860   0.703           323.711
+minimal_parallel_criteria     0.840   0.635           328.908
+
+## Per-Frame Performance
+
+### Alarmist
+                   Layout  Precision  Recall    F1
+           minimal_system      0.667   1.000 0.800
+   minimal_question_twice      1.000   0.500 0.667
+    minimal_segment_first      0.500   1.000 0.667
+     minimal_json_segment      1.000   0.500 0.667
+     minimal_hop_sandwich      0.286   1.000 0.444
+minimal_parallel_criteria      0.500   0.500 0.500
+
+### Neutral
+                   Layout  Precision  Recall    F1
+           minimal_system      1.000   0.911 0.953
+   minimal_question_twice      0.977   0.933 0.955
+    minimal_segment_first      1.000   0.889 0.941
+     minimal_json_segment      0.976   0.911 0.943
+     minimal_hop_sandwich      1.000   0.844 0.916
+minimal_parallel_criteria      0.974   0.844 0.905
+
+### Reassuring
+                   Layout  Precision  Recall    F1
+           minimal_system      0.500   1.000 0.667
+   minimal_question_twice      0.500   1.000 0.667
+    minimal_segment_first      0.500   1.000 0.667
+     minimal_json_segment      0.429   1.000 0.600
+     minimal_hop_sandwich      0.600   1.000 0.750
+minimal_parallel_criteria      0.333   1.000 0.500

@@ -1,0 +1,52 @@
+# Layout Experiment Results
+
+Generated: 2025-06-28T08:14:52.063991
+Total experiments: 13
+Successful experiments: 13
+Failed experiments: 0
+
+## Best Layout
+**recency**
+- Accuracy: 1.000
+- Average F1: 1.000
+- Duration: 47.1s
+
+## All Results (sorted by accuracy)
+           Layout  Accuracy  Avg_F1  Duration_Seconds
+          recency     1.000   1.000            47.098
+         standard     1.000   1.000            66.542
+         sandwich     1.000   1.000            66.940
+   question_first     1.000   1.000            37.968
+         hop_last     1.000   1.000            40.174
+   minimal_system     1.000   1.000            64.207
+    segment_focus     1.000   1.000            39.325
+instruction_first     1.000   1.000            45.504
+  structured_json     1.000   1.000            61.883
+parallel_analysis     1.000   1.000            41.149
+   evidence_based     1.000   1.000            39.700
+   xml_structured     1.000   1.000            39.717
+  primacy_recency     1.000   1.000            39.683
+
+## Per-Frame Performance
+
+### Alarmist
+No data for this frame
+
+### Neutral
+           Layout  Precision  Recall    F1
+          recency      1.000   1.000 1.000
+         standard      1.000   1.000 1.000
+         sandwich      1.000   1.000 1.000
+   question_first      1.000   1.000 1.000
+         hop_last      1.000   1.000 1.000
+   minimal_system      1.000   1.000 1.000
+    segment_focus      1.000   1.000 1.000
+instruction_first      1.000   1.000 1.000
+  structured_json      1.000   1.000 1.000
+parallel_analysis      1.000   1.000 1.000
+   evidence_based      1.000   1.000 1.000
+   xml_structured      1.000   1.000 1.000
+  primacy_recency      1.000   1.000 1.000
+
+### Reassuring
+No data for this frame

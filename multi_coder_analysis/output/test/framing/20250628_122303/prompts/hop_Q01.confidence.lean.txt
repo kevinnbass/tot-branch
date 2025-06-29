@@ -1,0 +1,25 @@
+## Q1  INTENSIFIER + RISK-ADJ (Confidence Mode)
+Alarmist if an intensifier/comparative (so, very, extremely, more, deadlier …) directly modifies a risk-adjective (deadly, dangerous, severe …) **in the same clause**.
+
+Ex Alarmist → "so deadly that…"
+Ex Neutral  → "highly pathogenic avian influenza" (technical term)
+
+=== SEGMENT ===
+{{segment_text}}
+
+Q1_Alarmist? → yes / no
+**Confidence-Enhanced Response:**
+```json
+{
+  "answer": "yes|no|uncertain",
+  "confidence": <0-100>,
+  "rationale": "<decisive cue>",
+  "frame_likelihoods": {
+    "Alarmist": <0-100>,
+    "Neutral": <0-100>, 
+    "Reassuring": <0-100>
+  }
+}
+```
+
+Ranking: <Top> > <Mid> > <Low> 

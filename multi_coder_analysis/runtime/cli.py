@@ -27,6 +27,7 @@ def run(
     concurrency: int = typer.Option(1, min=1, help="Thread pool size"),
     regex_mode: str = typer.Option("live", help="Regex mode: live|shadow|off"),
     shuffle_batches: bool = typer.Option(False, help="Randomise batch order"),
+    shuffle_segments: bool = typer.Option(False, help="Randomise segments within batches"),
     phase: str = typer.Option(
         "pipeline",
         "--phase",
@@ -54,6 +55,12 @@ def run(
     sc_temperature: float = typer.Option(0.7, "--sc-temperature", help="Sampling temperature"),
     sc_top_k: int = typer.Option(40, "--sc-top-k", help="top-k sampling cutoff (0 disables)"),
     sc_top_p: float = typer.Option(0.95, "--sc-top-p", help="nucleus sampling p value"),
+    # ---- NEW: confidence scoring ----
+    confidence_scores: bool = typer.Option(
+        False, 
+        "--confidence-scores/--no-confidence-scores", 
+        help="Enable confidence scores for enhanced RLSC aggregation"
+    ),
     print_cost: bool = typer.Option(
         False,
         "--print-cost",
@@ -84,6 +91,7 @@ def run(
         concurrency=concurrency,
         regex_mode=regex_mode,
         shuffle_batches=shuffle_batches,
+        shuffle_segments=shuffle_segments,
         phase=phase,
         consensus_mode=consensus,
         decode_mode=decode_mode,
@@ -94,6 +102,7 @@ def run(
         sc_top_p=sc_top_p,
         ranked_list=ranked_list,
         max_candidates=max_candidates,
+        confidence_scores=confidence_scores,
     )
     out_path = execute(cfg)
     if print_cost:

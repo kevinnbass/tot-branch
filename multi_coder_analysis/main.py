@@ -32,6 +32,19 @@ try:
 except ImportError:
     from concat_prompts import concatenate_prompts  # script-level fallback
 
+# --- Import prompt tracker ---
+try:
+    from .utils.prompt_tracker import get_prompt_tracker, reset_prompt_tracker  # package-relative
+except ImportError:
+    try:
+        from multi_coder_analysis.utils.prompt_tracker import get_prompt_tracker, reset_prompt_tracker  # absolute
+    except ImportError:
+        # Fallback if prompt tracker not available
+        def get_prompt_tracker():
+            return None
+        def reset_prompt_tracker():
+            pass
+
 # --- Import reproducibility utils ---
 # from utils.reproducibility import generate_run_manifest, get_file_sha256  # TODO: Create this
 
@@ -178,19 +191,11 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
         base_output_dir.mkdir(parents=True, exist_ok=True)
         logging.info(f"Created output directory: {base_output_dir}")
 
-        # --- Copy prompt directory verbatim for auditability (replaces old concatenation) ---
+        # --- Set prompts directory for ToT module (don't copy yet) ---
         try:
             src_prompt_dir = Path(args.prompts_dir)
             dst_prompt_dir = base_output_dir / "prompts"
-            shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
-            logging.info("Copied prompt folder → %s", dst_prompt_dir)
-            # NEW: also write a snapshot of all prompt files concatenated into one for auditability
-            try:
-                concat_filename = f"concatenated_prompts_{pipeline_timestamp}.txt"
-                concatenate_prompts(src_prompt_dir, concat_filename, base_output_dir)
-                logging.info("Generated concatenated prompts file → %s", base_output_dir / concat_filename)
-            except Exception as _e:
-                logging.warning("Could not generate concatenated prompts file: %s", _e)
+            # Don't copy prompts yet - we'll track which ones are used
             # Override prompts dir globally for ToT module
             try:
                 _tot_mod.PROMPTS_DIR = src_prompt_dir.resolve()
@@ -198,7 +203,7 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
             except Exception as _e:
                 logging.warning("Could not override PROMPTS_DIR in run_multi_coder_tot: %s", _e)
         except Exception as e:
-            logging.warning("Could not copy prompts folder: %s", e)
+            logging.warning("Could not set prompts directory: %s", e)
 
         # ------------------------------------------------------------------
         # Copy the exact regex catalogue used for this run into the output
@@ -277,8 +282,10 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 router=args.router,
                 template=args.template,
                 shuffle_batches=args.shuffle_batches,
+                shuffle_segments=args.shuffle_segments,
                 skip_eval=args.no_eval,
                 only_hop=args.only_hop,
+                layout=args.layout if hasattr(args, "layout") else "standard",
                 gold_standard_file=args.gold_standard,
             )
         except Exception as e:
@@ -291,6 +298,40 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
         sys.exit(1)
 
     logging.info(f"LLM coding finished. Majority labels at: {majority_labels_path}")
+
+    # --- Copy only the prompts that were actually used ---
+    try:
+        # Import prompt tracker
+        try:
+            from .utils.prompt_tracker import get_prompt_tracker
+        except ImportError:
+            try:
+                from multi_coder_analysis.utils.prompt_tracker import get_prompt_tracker
+            except ImportError:
+                get_prompt_tracker = None
+        
+        if get_prompt_tracker:
+            tracker = get_prompt_tracker()
+            if hasattr(tracker, 'copy_used_prompts'):
+                logging.info("Copying only the prompts that were used in this run...")
+                tracker.copy_used_prompts(src_prompt_dir, dst_prompt_dir)
+                
+                # Generate concatenated prompts file from only used prompts
+                try:
+                    concat_filename = f"concatenated_prompts_{pipeline_timestamp}.txt"
+                    concatenate_prompts(dst_prompt_dir, concat_filename, base_output_dir)
+                    logging.info("Generated concatenated prompts file from used prompts → %s", base_output_dir / concat_filename)
+                except Exception as _e:
+                    logging.warning("Could not generate concatenated prompts file: %s", _e)
+            else:
+                logging.warning("Prompt tracker does not support copying used prompts")
+        else:
+            logging.warning("Prompt tracker not available - copying all prompts as fallback")
+            # Fallback: copy all prompts
+            shutil.copytree(src_prompt_dir, dst_prompt_dir, dirs_exist_ok=True)
+            logging.info("Copied all prompts to → %s", dst_prompt_dir)
+    except Exception as e:
+        logging.error("Error copying prompts: %s", e)
 
     # TODO: Add merge and stats steps when those modules are implemented
     logging.info("Pipeline completed successfully!")
@@ -455,6 +496,7 @@ def main():
     parser.add_argument('--individual-fallback', action='store_true', help='Re-run mismatches individually for batch-sensitivity check')
     parser.add_argument('--regex-mode', choices=['live', 'shadow', 'off'], default='live', help='Regex layer mode: live (default), shadow (evaluate but do not short-circuit), off (disable regex)')
     parser.add_argument('--shuffle-batches', action='store_true', help='Randomly shuffle active segments before batching at each hop')
+    parser.add_argument('--shuffle-segments', action='store_true', help='Randomly shuffle segments within each batch for maximum stochasticity')
 
     # NEW: eight-order permutation sweep mode
     parser.add_argument('--permutations', action='store_true',
@@ -531,6 +573,46 @@ def main():
         choices=['legacy', 'lean'],
         default='legacy',
         help="Prompt template set: 'legacy' = full-hop prompts (default), 'lean' = per-segment LeanHop prompts.",
+    )
+
+    parser.add_argument(
+        '--layout',
+        default='standard',
+        choices=[
+            'standard', 'recency', 'sandwich', 'minimal_system', 'question_first',
+            'hop_last', 'structured_json', 'segment_focus', 'instruction_first',
+            'parallel_analysis', 'evidence_based', 'xml_structured', 'primacy_recency',
+            'minimal_segment_first', 'minimal_question_twice', 'minimal_json_segment',
+            'minimal_parallel_criteria', 'minimal_hop_sandwich'
+        ],
+        help='Prompt layout strategy to use (default: standard)',
+    )
+
+    # ------------------------------------------------------------------
+    # NEW – Layout experiment mode
+    # ------------------------------------------------------------------
+    parser.add_argument(
+        '--layout-experiment',
+        action='store_true',
+        help='Run parallel experiments with all layout strategies (standard, recency, sandwich, minimal_system, question_first) and compare results.',
+    )
+
+    parser.add_argument(
+        '--layout-workers',
+        type=int,
+        default=5,
+        help='Number of layout experiments to run in parallel (default: 5)',
+    )
+
+    parser.add_argument(
+        '--layouts',
+        nargs='+',
+        help='Specific layouts to test (default: all 13 layouts). Can also use "all" to test all layouts.',
+    )
+
+    parser.add_argument(
+        '--layout-config',
+        help='Path to layout experiment configuration YAML file',
     )
 
     args = parser.parse_args()
@@ -652,6 +734,36 @@ def main():
             else:
                 logging.warning("--fallback-low-ratio requested but %s not found", low_csv)
         return  # Skip the rest of main once permutations complete
+
+    # ------------------------------------------------------------------
+    # Layout experiment mode: run all layouts in parallel and compare
+    # ------------------------------------------------------------------
+    if args.layout_experiment:
+        # Validate required arguments
+        if not args.gold_standard:
+            logging.error("--layout-experiment requires --gold-standard to compare results")
+            sys.exit(1)
+            
+        if not args.use_tot:
+            logging.error("--layout-experiment requires --use-tot flag")
+            sys.exit(1)
+            
+        # Import layout experiment module
+        try:
+            from .layout_experiment import run_layout_experiments
+        except ImportError:
+            try:
+                from multi_coder_analysis.layout_experiment import run_layout_experiments
+            except ImportError:
+                from layout_experiment import run_layout_experiments
+        
+        try:
+            experiment_dir = run_layout_experiments(config, args, shutdown_event)
+            logging.info(f"✅ Layout experiments completed. Results in: {experiment_dir}")
+            return  # Exit after experiments
+        except Exception as e:
+            logging.error(f"Layout experiments failed: {e}", exc_info=True)
+            sys.exit(1)
 
     try:
         run_pipeline(config, args.phase, args.coder_prefix, args.dimension, args, shutdown_event)

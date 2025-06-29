@@ -1,0 +1,99 @@
+---
+meta_id: Q3
+row_map:
+  Q3.1: Moderate Verb (past-tense) + Scale
+  Q3.2: Moderate Verb (past-tense) + Quantity
+regex_map:
+  Q3.1: [3.ModerateVerbPlusScale, 3.ScaleMultiplier]
+  Q3.2: [3.ModerateVerbPlusScale, 3.ScaleMultiplier]
+frame: Alarmist
+summary: "Moderate verbs + scale/impact"
+---
+### QUICK DECISION CHECK
+• Contains MODERATE VERB (**HIT / SWEPT / SOARED / SURGED / PLUMMETED / PROMPTED / SPIKED / PEAKED / JUMPED / SHOT UP / HARD HIT**) **AND** explicit SCALE token (digit / MILLION / THOUSAND / % / RECORD / UNPRECEDENTED) in same sentence?  
+• Ignore if action is only *planned* (e.g. "to consider culling").  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: The region was severely hit by the virus, resulting in record losses.
+## Question: Does the author/source use moderate verbs paired with significant scale/impact information?
+## JSON Output:
+{"answer":"yes","rationale":"'severely hit' with 'record losses' combines moderate verb with explicit large-scale impact."}
+
+# NO example
+## Input Segment: The outbreak hit several farms in the area.
+## Question: Does the author/source use moderate verbs paired with significant scale/impact information?
+## JSON Output:
+{"answer":"no","rationale":"'hit several farms' lacks specific scale/impact details to confirm alarmist framing."}
+
+# NO example (moderate verb + vague impact → Neutral)
+## Input Segment: The outbreak is hitting the market as poultry supplies are down.
+## JSON Output:
+{"answer":"no","rationale":"'hitting the market' + 'supplies are down' gives no number or record-type scale; stays Neutral."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q3
+**Q3: Moderate Verbs + Scale/Impact**
+Does the author or a quoted source use a 'moderate verb' (e.g., 'swept across,' 'hard hit,' 'soared,' 'plummeted') AND is this verb explicitly paired with information detailing significant scale or impact (e.g., 'millions culled,' 'record losses,' 'overwhelming systems'), as detailed in the rules?
+
+**🔍 Q3 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+<!-- Q3.1 -->
+| **Moderate Verb (past-tense)** **+ Scale** | "swept across + millions culled," "hard hit + record losses," "soared + overwhelming systems," **"spiked + record‑high prices," "peaked + doubled costs," "jumped + 27 percent,"** | ✓ |
+<!-- Q3.2 -->
+| **Moderate Verb (past-tense)** **+ Quantity** | "surged + 50 % increase," "plummeted + largest decline," "hit + thousands affected" | ✓ |
+| **Moderate Verb (present/future/plan)** *(e.g. "**planning to cull**", "could hit")* | → **Neutral** |
+
+**Outcome:** Yes → Label: Alarmist. No → Proceed to Q4.
+
+**🔍 Detailed Rules & Examples:**
+
+**Containment override reminder** – If the sentence already contains a containment verb (cull, slaughter …) **do not** fire Q3. The containment rule handles the scale separately.
+
+**Alarmist - Examples:**
+* Author: "The region was severely hit by the virus, resulting in record losses." (Alarmist → Author's use of "severely hit" and "record losses" to describe large-scale harm, assuming no overriding framed quote.)
+* Author: 'From Wyoming to Maine, the highly contagious bird flu swept across farms and backyard flocks, prompting millions of chickens and turkeys to be culled.' (Alarmist → The author's use of 'swept across' combined with 'highly contagious' and the large-scale consequence 'millions...culled' creates an alarmist depiction of an overwhelming, uncontrolled event, assuming no overriding framed quote.)
+* **Example (Evaluative adjective + scale from Author):** Author: "The agricultural sector was hard hit by the drought, with crop yields plummeting by over 50%." (Alarmist → 'Hard hit' coupled with the specific, severe scale of 'plummeting by over 50%' framed by the author).
+* **Example (Feared + toll from Author):** Author: "Officials feared a repeat that killed 50 million birds." (Alarmist → 'Feared' (moderate verb) paired with explicit large-scale impact '50 million birds').
+
+**Boundary Requirements:**
+1. Verb **must appear in the approved list / regex**.  
+2. The scale indicator may sit in a *tight* follow‑on clause joined by
+   semicolon, dash or full stop **when the meaning is contiguous**
+   (e.g. "plummeted — a 50 % drop in one week").  Use judgment: if a
+   human instantly links the two, accept it.  Otherwise require same
+   sentence. Generic phrases like "supplies are down / have dropped" are **not enough**.
+3. Must denote realised impact (not a plan or hypothetical).
+4. Plain outcome verbs (*killed, died, affected, reported*) are excluded—Neutral unless other cues fire.
+5. **Containment override (strict).** If the same sentence contains a
+   containment verb (*culled, destroyed, euthanised, depopulated*) the
+   clause is **Neutral**, even when preceded by *swept, hit, surged* or a
+   numeric scale; Alarmist fires only when an **additional** vivid verb or
+   metaphor appears.
+6. Sentences about **financial or trade metrics** (exports, imports, sales, production) are treated as factual price/metric reporting → Neutral, not Alarmist here.
+
+**Examples of Scale/Impact Indicators:**
+- Numerical quantities: "millions," "thousands," "50%," "record numbers"
+- Comparative terms: "largest," "highest," "most severe," "unprecedented"
+- Impact descriptors: "overwhelming," "devastating losses," "widespread damage"
+
+> **New aspect guard.** The moderate-verb must denote **realised impact** – NOT merely an intention or hypothetical.  
+
+**Clarification** — Containment actions  
+Containment verbs ("were/was culled, destroyed, euthanized, depopulated") are **Neutral even with large numbers** *unless* the author adds additional vivid or emotive language (e.g., "brutally destroyed 3 million birds").
+
+► NEW NOTE – 2025-06-18
+Containment verbs (culled, euthanised, destroyed, depopulated) **always neutralise** a preceding ModerateVerb + Scale pattern. Do NOT fire Q3 unless an additional vivid/emotive cue is present.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

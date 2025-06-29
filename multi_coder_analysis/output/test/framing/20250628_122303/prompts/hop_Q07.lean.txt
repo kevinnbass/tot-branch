@@ -1,0 +1,19 @@
+## Q7  BARE NEGATION
+
+Neutral when the segment negates risk without any calming keyword (no evidence, not expected, poses no risk …).
+
+Ex Neutral → "no human cases detected"
+Ex Reassuring (would go to Q5) → "no human cases detected, so public can rest easy"
+
+=== SEGMENT ===
+{{text}}
+
+Q7_BareNeg? → yes / no
+```json
+{"frame":"?", "cue":""}
+```
+
+✅ SELF-AUDIT
+1 Did you cite the cue?
+2 No double frames.
+3 Pure JSON only. 

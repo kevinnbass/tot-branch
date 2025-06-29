@@ -1,0 +1,252 @@
+2025-06-28 07:57:24,319 - INFO - File logging enabled → output\layout_experiments\20250628_075531\structured_json\run.log
+2025-06-28 07:57:24,323 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:57:24,326 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:24,328 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:24,361 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:24,362 - INFO - Batch batch_12_b6f8e2 Q12: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:57:24,373 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\minimal_system\model_labels_tot.csv
+2025-06-28 07:57:24,380 - INFO - Token summary written to output\layout_experiments\20250628_075531\minimal_system\token_usage_summary.json
+2025-06-28 07:57:24,383 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\minimal_system\regex_rule_stats.csv
+2025-06-28 07:57:24,414 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\minimal_system\regex_rules_snapshot.jsonl
+2025-06-28 07:57:24,418 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\minimal_system\run_parameters_summary.json
+2025-06-28 07:57:24,421 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\minimal_system\run_summary.txt
+2025-06-28 07:57:24,519 - INFO - ✅ [5/13] Layout minimal_system completed: Accuracy=1.000, Duration=63.8s
+2025-06-28 07:57:24,522 - INFO - 🧪 Starting layout experiment: segment_focus
+2025-06-28 07:57:24,528 - INFO - Regex layer in LIVE mode (default)
+2025-06-28 07:57:24,580 - INFO - Applied range filter: processing rows 1-2 (2 statements from original 2023)
+2025-06-28 07:57:24,971 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:24,972 - INFO - Batch batch_8_c871b9 Q08: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:57:24,975 - INFO - Hop 9: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:24,977 - INFO - Hop 9: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:25,074 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:25,223 - INFO - Initialized Gemini provider
+2025-06-28 07:57:25,225 - INFO - ToT trace files will be saved in: output\layout_experiments\20250628_075531\segment_focus\traces_tot
+2025-06-28 07:57:25,226 - INFO - File logging enabled → output\layout_experiments\20250628_075531\segment_focus\run.log
+2025-06-28 07:57:25,231 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:57:25,233 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:25,235 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:25,560 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:25,562 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:25,563 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:25,771 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:29,079 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:29,080 - INFO - Batch batch_9_7c7e4e Q09: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:57:29,083 - INFO - Hop 10: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:29,085 - INFO - Hop 10: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:29,574 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:29,577 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:29,579 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:30,970 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:30,971 - INFO - Batch batch_1_4c3511 Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:30,976 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:30,978 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:31,412 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:31,470 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:31,472 - INFO - Batch batch_1_8a0a7c Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:31,481 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:31,483 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:31,981 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:32,572 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:32,573 - INFO - Batch batch_10_0e32c2 Q10: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:57:32,577 - INFO - Hop 11: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:32,579 - INFO - Hop 11: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:33,162 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:33,165 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:33,166 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:36,044 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:36,045 - INFO - Batch batch_11_25f762 Q11: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:57:36,049 - INFO - Hop 12: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:36,050 - INFO - Hop 12: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:36,803 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:36,804 - INFO - Batch batch_2_42a961 Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:36,809 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:36,811 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:36,837 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:36,838 - INFO - Batch batch_2_8ed36e Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:36,844 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:36,847 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:37,051 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:37,084 - WARNING - Layout 'question_first' not fully supported in batch mode, using standard layout
+2025-06-28 07:57:37,106 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:38,082 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:38,195 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:42,140 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:42,141 - INFO - Batch batch_3_09b840 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:42,146 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:42,147 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:43,074 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:43,079 - INFO - Batch batch_12_887095 Q12: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:57:43,086 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\question_first\model_labels_tot.csv
+2025-06-28 07:57:43,089 - INFO - Token summary written to output\layout_experiments\20250628_075531\question_first\token_usage_summary.json
+2025-06-28 07:57:43,091 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\question_first\regex_rule_stats.csv
+2025-06-28 07:57:43,103 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\question_first\regex_rules_snapshot.jsonl
+2025-06-28 07:57:43,108 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\question_first\run_parameters_summary.json
+2025-06-28 07:57:43,111 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\question_first\run_summary.txt
+2025-06-28 07:57:43,130 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:43,222 - INFO - ✅ [6/13] Layout question_first completed: Accuracy=1.000, Duration=62.8s
+2025-06-28 07:57:43,224 - INFO - 🧪 Starting layout experiment: instruction_first
+2025-06-28 07:57:43,225 - INFO - Regex layer in LIVE mode (default)
+2025-06-28 07:57:43,248 - INFO - Applied range filter: processing rows 1-2 (2 statements from original 2023)
+2025-06-28 07:57:43,721 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:43,722 - INFO - Batch batch_3_b78203 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:43,727 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:43,729 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:44,333 - INFO - Initialized Gemini provider
+2025-06-28 07:57:44,347 - INFO - ToT trace files will be saved in: output\layout_experiments\20250628_075531\instruction_first\traces_tot
+2025-06-28 07:57:44,355 - INFO - File logging enabled → output\layout_experiments\20250628_075531\instruction_first\run.log
+2025-06-28 07:57:44,389 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:57:44,392 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:44,393 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:44,880 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:45,456 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:46,421 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:46,422 - INFO - Batch batch_4_8ee18e Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:46,427 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:46,430 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:46,953 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:49,396 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:49,397 - INFO - Batch batch_4_080790 Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:49,402 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:49,404 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:50,159 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:51,033 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:51,034 - INFO - Batch batch_1_680acf Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:51,039 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:51,041 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:51,952 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:52,436 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:52,438 - INFO - Batch batch_5_b07b46 Q05: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:52,443 - INFO - Hop 6: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:52,444 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:52,930 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:56,012 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:56,013 - INFO - Batch batch_5_ae6c20 Q05: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:56,018 - INFO - Hop 6: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:56,020 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:56,903 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:56,904 - INFO - Batch batch_2_6a5511 Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:56,911 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:56,913 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:58,317 - INFO - AFC remote call 1 is done.
+2025-06-28 07:57:58,331 - INFO - Batch batch_6_905c0c Q06: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:57:58,372 - INFO - Hop 7: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:57:58,374 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:57:58,572 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:58,944 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:57:59,952 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:03,395 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:03,396 - INFO - Batch batch_6_98f477 Q06: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:03,401 - INFO - Hop 7: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:03,404 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:04,082 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:04,428 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:04,429 - INFO - Batch batch_7_038dbc Q07: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:04,446 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\segment_focus\model_labels_tot.csv
+2025-06-28 07:58:04,449 - INFO - Token summary written to output\layout_experiments\20250628_075531\segment_focus\token_usage_summary.json
+2025-06-28 07:58:04,453 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\segment_focus\regex_rule_stats.csv
+2025-06-28 07:58:04,464 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\segment_focus\regex_rules_snapshot.jsonl
+2025-06-28 07:58:04,468 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\segment_focus\run_parameters_summary.json
+2025-06-28 07:58:04,471 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\segment_focus\run_summary.txt
+2025-06-28 07:58:04,564 - INFO - ✅ [7/13] Layout segment_focus completed: Accuracy=1.000, Duration=40.0s
+2025-06-28 07:58:04,566 - INFO - 🧪 Starting layout experiment: parallel_analysis
+2025-06-28 07:58:04,568 - INFO - Regex layer in LIVE mode (default)
+2025-06-28 07:58:04,593 - INFO - Applied range filter: processing rows 1-2 (2 statements from original 2023)
+2025-06-28 07:58:05,243 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:05,244 - INFO - Batch batch_3_c36412 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:05,248 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:05,250 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:05,270 - INFO - Initialized Gemini provider
+2025-06-28 07:58:05,281 - INFO - ToT trace files will be saved in: output\layout_experiments\20250628_075531\parallel_analysis\traces_tot
+2025-06-28 07:58:05,284 - INFO - File logging enabled → output\layout_experiments\20250628_075531\parallel_analysis\run.log
+2025-06-28 07:58:05,289 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:58:05,291 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:05,294 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:06,029 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:06,042 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:08,875 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:08,877 - INFO - Batch batch_7_c9df03 Q07: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:08,884 - INFO - Hop 8: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:08,886 - INFO - Hop 8: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:10,165 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:10,771 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:10,772 - INFO - Batch batch_4_c6ff91 Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:10,779 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:10,781 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:11,194 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:11,195 - INFO - Batch batch_1_bf42db Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:11,200 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:11,203 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:12,012 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:12,332 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:13,741 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:13,746 - INFO - Batch batch_8_216156 Q08: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:58:13,750 - INFO - Hop 9: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:13,753 - INFO - Hop 9: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:14,405 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:16,684 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:16,685 - INFO - Batch batch_2_90acba Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:16,691 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:16,692 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:17,923 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:18,445 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:18,461 - INFO - Batch batch_9_8aec95 Q09: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:58:18,465 - INFO - Hop 10: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:18,466 - INFO - Hop 10: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:18,973 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:19,039 - INFO - Batch batch_5_fb3977 Q05: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:19,052 - INFO - Hop 6: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:19,054 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:20,020 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:20,253 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:23,415 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:23,480 - INFO - Batch batch_10_14e863 Q10: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:58:23,483 - INFO - Hop 11: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:23,485 - INFO - Hop 11: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:23,579 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:23,655 - INFO - Batch batch_3_191c6d Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:23,662 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:23,663 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:25,772 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:25,880 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:25,926 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:26,023 - INFO - Batch batch_6_a84ad5 Q06: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:26,034 - INFO - Hop 7: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:26,037 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:28,006 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:29,378 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:29,379 - INFO - Batch batch_11_d8ff30 Q11: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:58:29,386 - INFO - Hop 12: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:29,387 - INFO - Hop 12: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:30,342 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:30,442 - INFO - Batch batch_4_ff3362 Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:30,740 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:30,956 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:31,604 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:33,749 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:35,715 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:35,716 - INFO - Batch batch_7_ae42b3 Q07: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:58:35,731 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\instruction_first\model_labels_tot.csv
+2025-06-28 07:58:35,734 - INFO - Token summary written to output\layout_experiments\20250628_075531\instruction_first\token_usage_summary.json
+2025-06-28 07:58:35,737 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\instruction_first\regex_rule_stats.csv
+2025-06-28 07:58:35,746 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\instruction_first\regex_rules_snapshot.jsonl
+2025-06-28 07:58:35,750 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\instruction_first\run_parameters_summary.json
+2025-06-28 07:58:35,753 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\instruction_first\run_summary.txt
+2025-06-28 07:58:35,846 - INFO - ✅ [8/13] Layout instruction_first completed: Accuracy=1.000, Duration=52.5s
+2025-06-28 07:58:35,847 - INFO - 🧪 Starting layout experiment: evidence_based
+2025-06-28 07:58:35,849 - INFO - Regex layer in LIVE mode (default)
+2025-06-28 07:58:35,875 - INFO - Applied range filter: processing rows 1-2 (2 statements from original 2023)
+2025-06-28 07:58:36,533 - INFO - Initialized Gemini provider
+2025-06-28 07:58:36,535 - INFO - ToT trace files will be saved in: output\layout_experiments\20250628_075531\evidence_based\traces_tot
+2025-06-28 07:58:36,536 - INFO - File logging enabled → output\layout_experiments\20250628_075531\evidence_based\run.log
+2025-06-28 07:58:36,540 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:58:36,543 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:58:36,545 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:58:37,211 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:58:38,057 - INFO - AFC remote call 1 is done.
+2025-06-28 07:58:38,058 - INFO - Batch batch_12_bfd365 Q12: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:58:38,066 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\structured_json\model_labels_tot.csv
+2025-06-28 07:58:38,069 - INFO - Token summary written to output\layout_experiments\20250628_075531\structured_json\token_usage_summary.json
+2025-06-28 07:58:38,073 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\structured_json\regex_rule_stats.csv
+2025-06-28 07:58:38,081 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\structured_json\regex_rules_snapshot.jsonl
+2025-06-28 07:58:38,085 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\structured_json\run_parameters_summary.json
+2025-06-28 07:58:38,088 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\structured_json\run_summary.txt

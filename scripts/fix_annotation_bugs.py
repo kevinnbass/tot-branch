@@ -85,7 +85,8 @@ def fix_database_cleanup():
             if conn:
                 try:
                     conn.close()
-                except:
+                except (OSError, sqlite3.Error):
+                    # Connection might already be closed or in an invalid state
                     pass"""
     
     if old_store_metrics in content and "finally:" not in content:

@@ -3,7 +3,7 @@ from __future__ import annotations
 """Pydantic Settings model for configuration (Phase 6)."""
 
 from pydantic_settings import BaseSettings
-from pydantic import Field
+from pydantic import Field, ConfigDict
 from typing import Optional
 from pathlib import Path
 
@@ -29,6 +29,7 @@ class Settings(BaseSettings):
     enable_regex: bool = Field(True, description="Enable regex short-circuiting")
     regex_mode: str = Field("live", description="Regex mode: live|shadow|off")
     shuffle_batches: bool = Field(False, description="Randomise batch order")
+    shuffle_segments: bool = Field(False, description="Randomise segments within batches")
     
     # API keys (optional - can be set via environment)
     google_api_key: Optional[str] = Field(None, description="Google Gemini API key")
@@ -48,10 +49,11 @@ class Settings(BaseSettings):
         description="Directory for JSONL archives (auto-created)",
     )
     
-    class Config:
-        env_prefix = "MCA_"
-        env_file = ".env"
-        case_sensitive = False
+    model_config = ConfigDict(
+        env_prefix="MCA_",
+        env_file=".env",
+        case_sensitive=False,
         # Accept legacy keys that are no longer explicitly modelled so that
         # users can keep an old config.yaml without breaking validation.
-        extra = "allow" 
+        extra="allow"
+    ) 

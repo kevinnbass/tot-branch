@@ -39,21 +39,38 @@
       |
       # LOW_RISK_LEADIN_GUARD (2025-06-26)
       (?i)\blow\s+risk\b[^.]{0,30}?\bbut\b
+      |
+      # VOLATILE_ECONOMIC_GUARD (2025-06-27)
+      (?ix)\bvolatile\b(?=[^.]{0,40}\b(?:prices?|markets?|rates?|trading|stocks?|commodity|commodities)\b)
+      |
+      # METAPHORICAL_USE_GUARD (2025-06-27)
+      (?i)\b(?:deadly|dangerous|severe)\s+(?:silence|quiet|calm|stillness)\b
   # Added negative look‑behind to exclude "deadly toll", "deadly cost"
   pattern: |-
     (?i)    # case-insensitive once – faster compile
     # block idioms unrelated to epidemiological danger
     (?<!toll\s|cost\s|sins\s|silence\s|so\scalled\s)
     \b(?:(?:highly(?!\s+(?:pathogenic|susceptible)\b))
-        |alarmingly|certainly|deadlier|definitely|ever[-\s]*more|extremely|
-        frighteningly|more|particularly|progressively|severely|so|unusually|very)  # A-Z order
+        |alarmingly|certainly|deadlier|definitely|ever[-\s]*more|ever[-\s]*deadlier|extremely|
+        frighteningly|incredibly|increasingly|more|particularly|progressively|really|
+        severely|so|super|too|ultra|unbelievably|unusually|very)  # A-Z order
         (?:\s+\w+){0,3}\s+
-    (?:brutal|catastrophic|contagious|dangerous|deadly|destructive|
-       infectious|lethal|severe|transmissible|virulent)\b|
+    (?:brutal|catastrophic|contagious|critical|dangerous|deadly|destructive|devastating|
+       hazardous|infectious|lethal|life[-\s]*threatening|perilous|severe|transmissible|virulent)\b|
     \bless\s+safe\b|                                       # (2025-06-23) comparative risk form
+    \bsafer\b|                                             # positive comparative form
+    \bless\s+(?:deadly|dangerous|severe|catastrophic|lethal|virulent|contagious)\b|  # risk-lowering comparatives
     \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
-    \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
-    \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
+    \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal|hazardous|critical|life[-\s]*threatening|perilous)\b|
+    # Clause boundary check - ensure intensifier and risk-adj are in same clause
+    \b(?:(?:highly(?!\s+(?:pathogenic|susceptible)\b))
+        |alarmingly|certainly|deadlier|definitely|ever[-\s]*more|ever[-\s]*deadlier|extremely|
+        frighteningly|incredibly|increasingly|more|particularly|progressively|really|
+        severely|so|super|too|ultra|unbelievably|unusually|very)
+        (?![^.;:!?]{40,})  # negative lookahead for clause boundaries
+        (?:\s+\w+){0,3}\s+
+    (?:brutal|catastrophic|contagious|critical|dangerous|deadly|destructive|devastating|
+       hazardous|infectious|lethal|life[-\s]*threatening|perilous|severe|transmissible|virulent)\b
 
 - name: H1.AutoIntensifierRiskAdj
   mode: live
@@ -67,8 +84,9 @@
            high[-\s]?path\B
         )\b
       (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
-  pattern: 
-    (?:highly|particularly)\s+(?:contagious|dangerous|deadly|infectious|lethal|transmissible)\b
+  pattern: |-
+    (?i)(?:highly|particularly|incredibly|really|extremely)\s+
+    (?:contagious|critical|dangerous|deadly|devastating|hazardous|infectious|lethal|life[-\s]*threatening|perilous|severe|transmissible|virulent)\b
 2:
 - name: HighPotencyVerbMetaphor
   mode: live
@@ -87,6 +105,15 @@
     |
     # QUOTE_MILD_PHRASES_GUARD (2025-06-26)
     (?i)\b(?:terrible\s+news|very\s+worried)\b
+    |
+    # FIGURATIVE_USE_GUARD (2025-06-27)
+    (?i)\b(?:devour(?:ed|ing|s)?|overwhelm(?:ed|ing)?|unleashed?)\s+
+        (?:attention|headlines|news\s+cycle|media|coverage|debate|controversy)\b
+    |
+    # METAPHOR_SCOPE_GUARD (2025-06-27) - blocks metaphors about non-disease topics
+    (?i)\b(?:death\s+sentence|killer\s+blow|raging\s+inferno)\s+
+        (?:to|for)\s+(?:his|her|their|the)\s+
+        (?:career|reputation|ego|campaign|presidency|business|company|economy)\b
   pattern: |-
     # Hop-2 literal guard – keep "spark shortages" Neutral
     (?i)
@@ -97,8 +124,10 @@
       # vivid verbs / alert phrases
       \b(?:ravaged|devastated|obliterated|skyrocketed|plummeted|crashed|nosedived|
          tanked|exploding|raging|tearing\sthrough|
-         overwhelmed|crippling|spiralled?|ballooned|
-         writh(?:e|ed|ing)|convuls(?:e|ed|ing)|gasp(?:ing|ed)|twitch(?:ing|ed))\b
+         overwhelmed|overwhelming|crippling|spiralled?|ballooned|
+         writh(?:e|ed|ing)|convuls(?:e|ed|ing)|gasp(?:ing|ed)|twitch(?:ing|ed)|
+         unleashed|devour(?:ed|ing|s)?|scream(?:ed|ing|s)?|trembl(?:ed|ing|e|es)|
+         seiz(?:ed|ing|e|es|ure|ures))\b
       |
       # verb first:  soar(ed/ing) + metric inside 20 chars after
       \bsoar(?:ed|ing)?\b(?=[^.]{0,20}\b(?:cases?|prices?|costs?|loss(?:es)?|
@@ -110,12 +139,13 @@
           output|supply|shortages?)\b[^.]{0,20}\bsoar(?:ed|ing)?\b
       |
       # superlative-negative nouns
-      \b(?:most|record(?:-breaking)?|worst)\s+\w{0,12}?
+      \b(?:most|record(?:-breaking)?|worst|deadliest|largest|biggest|costliest)\s+\w{0,12}?
            \s+(?:disaster|crisis|outbreak|catastrophe|calamity)\b
       |
       # potent metaphors (explicit list for deterministic hits)
       \b(?:ticking\s+time-?bomb|nightmare\s+scenario|powder\s+keg|
-         house\s+of\s+cards|train\s+wreck|collateral\s+damage)\b
+         house\s+of\s+cards|train\s+wreck|collateral\s+damage|
+         death\s+sentence|killer\s+blow|raging\s+inferno)\b
       |
       # "on high alert" forms
       (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|
@@ -125,13 +155,13 @@
        ^[^.]{0,60}\bon\s+high\s+alert\b)
       |
       # spark / stoke *panic-type* emotions  (plain "fears" stays Neutral)
-      \b(?:spark|stoke|fuel|reignit(?:e|ing|ed|es))\s+
+      \b(?:spark|stoke|fuel|ignit(?:e|ing|ed|es)|reignit(?:e|ing|ed|es))\s+
          (?:mass(?:ive)?\s+|widespread\s+|public\s+|nationwide\s+|
             global\s+)?(?:panic|alarm|outrage|anxiety)\b
       |
       # intensifier + harm-noun (alphabetised for readability)
-      \b(?:enormous|gigantic|huge|immense|major|massive|
-         record(?:-breaking)?|severe|significant|unprecedented|vast)\s+
+      \b(?:colossal|enormous|gigantic|huge|immense|major|massive|
+         overwhelming|record(?:-breaking)?|severe|significant|unprecedented|vast)\s+
          (?:crisis|damage|deaths?|disaster|fatalities|
          loss(?:es)?|mortality|outbreaks?|shortages?|toll)\b
     )
@@ -147,17 +177,31 @@
   mode: live
   frame: Alarmist
   pattern: |-
-    \b(hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
-       spiked|jumped|shot\s+up|prompted(?!\s+authorities\s+to\s+consider))\b
-    (?=[^.]{0,120}\b(?:\d|%|percent|hundred|hundreds|thousand|thousands|million|millions|billion|billions|record|
-                     largest|unprecedented|severe|significant|overwhelming|
-                     devastating|disasters?|emergenc(?:y|ies))\b)
+    (?:
+      # Forward pattern: verb followed by scale
+      \b(?:hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
+         spiked|spiking|jumped|jumping|shot\s+up|peaked|peaking|
+         hard[-\s]?hit|prompted(?!\s+authorities\s+to\s+consider))\b
+      (?=[^.]{0,120}\b(?:\d|%|percent|hundred|hundreds|thousand|thousands|million|millions|billion|billions|
+                       record(?:[-\s]?high|[-\s]?low|[-\s]?setting)?|
+                       largest|highest|worst|unprecedented|severe|significant|overwhelming|
+                       devastating|disasters?|emergenc(?:y|ies)|over\s+half)\b)
+      |
+      # Reverse pattern: scale followed by verb (within 40 chars)
+      (?<=\b(?:\d+|%|percent|hundred|thousands?|millions?|billions?|
+               record(?:[-\s]?high|[-\s]?low|[-\s]?setting)?|
+               largest|highest|worst|unprecedented|devastating|overwhelming)
+           [^.;:!?]{0,40})
+      \b(?:hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
+         spiked|spiking|jumped|jumping|shot\s+up|peaked|peaking|
+         hard[-\s]?hit|were\s+hit|was\s+hit)\b
+    )
     (?![^.]{0,20}\bfear(?:s|ed|ing)?\b)   # guard: psychological verbs ≠ impact
 
     # 2025-06-18 containment-verb veto – keeps large-scale culling Neutral
   veto_pattern: |-
     # CONTAINMENT_GUARD (pre-existing)
-    (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered|disposed|buried)\b
+    (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered|disposed|buried|burned|incinerated)\b
     |
     # ECON_METRIC_GUARD (2025-06-26)
     (?ix)
@@ -167,26 +211,47 @@
       |
       # idiom "hard hit" (false Alarmist)
       \bhard\W+hit\b
+      |
+      # HYPOTHETICAL_GUARD (2025-06-27) - blocks planned/hypothetical language
+      (?i)\b(?:could|would|may|might|should|planning\s+to|plan\s+to|plans\s+to|
+              considering|consider|expects?\s+to|expected\s+to)\s+
+         (?:hit|sweep|surge|soar|plunge|plummet|spike|jump|peak)\b
+      |
+      # EXPORT_PRODUCTION_GUARD (2025-06-27) - blocks trade/production metrics
+      (?i)\b(?:exports?|imports?|production|output|yield|supply|supplies)\s+
+         (?:hit|swept|surged|soared|plunged|plummeted|spiked|jumped|peaked)\b
 
 - name: ScaleMultiplier
   mode: live
   frame: Alarmist
   pattern: |-
-    (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+    (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold|
+            five[-\s]*fold|twenty[-\s]*fold|hundred[-\s]*fold)\b
   veto_pattern: |-
     # ECON_METRIC_GUARD (2025-06-26)
     (?ix)
       \b(?:price|prices|cost|costs|sales?|revenue|profit(?:s)?|value)\b
-      [^.]{0,40}?\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+      [^.]{0,40}?\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold|
+                     five[-\s]*fold|twenty[-\s]*fold|hundred[-\s]*fold)\b
 
 4:
 - name: LoadedQuestionAlarm
   mode: live
   frame: Alarmist
   pattern: |-
-    \b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned|afraid)\b
+    # ————————————————————————————————
+    # (A) "Should/Can/Could/Will/Do/Does … be/feel worried/concerned/afraid/alarmed?"
+    # ————————————————————————————————
+    \b(?:should|can|could|will|do|does)\s+\w+\s+
+       (?:need\s+to\s+)?(?:be\s+|feel\s+)?(?:worried|concerned|afraid|alarmed)\b
     (?=[^.?]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|
-                     risk|infection|infected)\b)
+                     risk|infection|infected|crisis|disaster|catastrophe)\b)
+    |
+    # ————————————————————————————————
+    # (B) "Are we facing/heading toward a crisis/catastrophe/threat … ?"
+    # ————————————————————————————————
+    \bare\s+we\s+(?:really\s+)?(?:facing|heading\s+towards?|on\s+the\s+brink\s+of)\s+
+         (?:a\s+)?(?:crisis|disaster|catastrophe|major\s+threat)\b
     |
     # Rhetorical necessity-of-killing question (captures 'necessary to kill millions...')
     \b(?:is|are|was|were)\s+it\s+(?:really\s+)?necessary\s+to\s+
@@ -196,7 +261,7 @@
     # safety-question pattern (2025-06-23)
     \b(?:is|are|was|were)\s+it\s+(?:really\s+)?safe\s+to\b
     |
-    # "How many more … have to die?” rhetorical question
+    # "How many more … have to die?" rhetorical question
     \bhow\s+many\s+more\s+\w+\s+have\s+to\s+(?:die|be\s+killed|be\s+culled|perish)\b
 
   # --- 2025-06-18 addition: Challenge-question over inaction ---
@@ -211,7 +276,12 @@
   mode: live
   frame: Alarmist
   pattern: |-
-    (?i)\bhow\s+long\s+can\s+we\s+(?:afford\s+to\s+)?(?:ignore|stand\s+by)\b
+    (?i)
+    # "How long can we ignore / stand by … ?" (existing)
+    \bhow\s+long\s+can\s+we\s+(?:afford\s+to\s+)?(?:ignore|stand\s+by)\b
+    |
+    # "Are / Will we (just) stand by / ignore … ?"
+    \b(?:are|will)\s+we\s+(?:going\s+to\s+)?(?:just\s+|simply\s+)?(?:stand\s+by|ignore)\b
 
 5:
 - name: ExplicitCalming
@@ -267,14 +337,40 @@
   frame: Reassuring
   pattern: (?i)\b(?:purely\s+)?theoretical\s+risk\b
 
-- name: LowRiskSimple
+- name: LowRiskBare.Neutral
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?ix)
+      \brisks?                                    # "risk" or "risks"
+      (?:\s+to\s+(?:the\s+)?(?:public|general\s+public|consumers?|people))?
+      \s+(?:is|are|remain|remains|stay|stays|
+          appears|appear|seems|seem)\s+
+      low\b
+
+# 2025-06-28 • Hop 5 extensions - explicit calming patterns
+- name: ExplicitCalming.SafeForPeople
   mode: live
   frame: Reassuring
   pattern: |-
-    (?ix)
-      \brisk
-      (?:\s+to\s+(?:the\s+)?(?:public|general\s+public|consumers?|people))?
-      \s+(?:is|remain|remains|stays?)\s+low\b
+    (?ix)\b(remains?|is|are)\s+
+    (?:entirely|completely|totally|perfectly)?\s*safe\s+
+    (?:for\s+(?:the\s+)?(?:public|people|consumers?|residents|citizens))\b
+
+- name: ExplicitCalming.UnderControl
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)\b(remains?|is|are|now|still)\s+
+    (?:well\s+)?under\s+control\b
+
+- name: ExplicitCalming.MinimalRisk
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)(?:poses?|presents?|constitutes?)\s+
+    (?:a\s+)?minimal\s+risk\b|\brisk[s]?\s+
+    (?:is|are|remains?)\s+minimal\b
 
 6:
 - name: MinimiserScaleContrast
@@ -299,6 +395,44 @@
          [^.;\n]{0,50}?\b                  # tolerant gap
          \b(out\s+of|among|in|of)\b
          [^.;\n]{0,50}?\b(total|overall|population|flocks?|barns?|nationwide|worldwide|global(?:ly)?)\b
+
+# 2025-06-28 • Hop 6 extensions - minimiser + denominator patterns
+- name: Minimiser.PerRatio
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)\b(?:only|just|merely)\s+
+          \d+(?:[.,]\d+)?\s+
+          per\s+
+          (?:\d{1,3}(?:[.,]\d{3})*|hundred|thousand|million|billion)\b
+
+- name: Minimiser.InRatio
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)\b(?:only|just|merely)\s+
+          \d+\s+
+          in\s+
+          \d+(?:[.,]\d+)?\b
+
+- name: LessFewer.Percent
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)\b(?:less|fewer)\s+than\s+
+          \d+(?:[.,]\d+)?\s*
+          (?:%|percent|per\s+cent)\b
+
+- name: LessFewer.Denominator
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?ix)\b(?:less|fewer)\s+than\s+
+          \d+(?:[.,]\d+)?\b
+          [^.;\n]{0,30}
+          \b(?:out\s+of|in|among|of)\b
+          [^.;\n]{0,30}
+          \d+(?:[.,]\d+)?\b
 
 7:
 - name: BareNegationHealthConcern
@@ -375,7 +509,7 @@
 
 8:
 - name: CapabilityNoReassurance
-  mode: shadow        # was live; rule deprecated 2025-06-26
+  mode: live        # was live; rule deprecated 2025-06-26
   frame: Neutral
   pattern: |-
     (?i)

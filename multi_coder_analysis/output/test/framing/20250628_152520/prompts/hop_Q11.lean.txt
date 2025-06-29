@@ -1,0 +1,19 @@
+## Q11  DOMINANT QUOTE
+
+If a direct quote contains a strong alarm cue (extremely concerning, requires immediate action …) **or** strong reassuring cue (no cause for alarm, excellent news …) and it dominates the sentence.
+
+Ex Alarmist → "Professor: '**extremely concerning** and requires immediate action.'"
+Ex Reassuring → "Minister: '**no cause for alarm**.'"
+
+=== SEGMENT ===
+{{text}}
+
+Q11_DominantQuote? → yes / no
+```json
+{"frame":"?", "cue":""}
+```
+
+✅ SELF-AUDIT
+1 Did you cite the cue?
+2 No double frames.
+3 Pure JSON only. 

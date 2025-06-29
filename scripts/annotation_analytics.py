@@ -26,7 +26,7 @@ import statistics
 # Add project root to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from multi_coder_analysis.utils.prompt_loader import load_prompt_and_meta
+from scripts.annotation_prompt_loader import load_prompt_and_meta
 
 class AnnotationAnalytics:
     def __init__(self, project_root: Union[str, Path], db_path: Optional[Union[str, Path]] = None):
@@ -758,7 +758,8 @@ class AnnotationAnalytics:
             if conn:
                 try:
                     conn.close()
-                except:
+                except (OSError, sqlite3.Error):
+                    # Connection might already be closed or in an invalid state
                     pass
 
 

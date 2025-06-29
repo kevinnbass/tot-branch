@@ -1,0 +1,20 @@
+{
+  "timestamp": "20250628_001455",
+  "layouts": [
+    "standard",
+    "recency",
+    "sandwich",
+    "minimal_system",
+    "question_first"
+  ],
+  "input_file": "C:\\Users\\Kevin\\tot_branch\\multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "gold_standard": "C:\\Users\\Kevin\\tot_branch\\multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "batch_size": 20,
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "provider": "gemini",
+  "start": 1,
+  "end": 20,
+  "limit": null,
+  "concurrency": 20,
+  "regex_mode": "live"
+}

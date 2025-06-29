@@ -22,7 +22,7 @@ import tempfile
 # Add project root to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from multi_coder_analysis.utils.prompt_loader import load_prompt_and_meta
+from scripts.annotation_prompt_loader import load_prompt_and_meta
 
 class AnnotationDevTools:
     def __init__(self, project_root: Union[str, Path]):

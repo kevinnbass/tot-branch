@@ -30,6 +30,14 @@ import re
 
 import yaml
 
+# Import prompt tracker
+try:
+    from .prompt_tracker import get_prompt_tracker
+except ImportError:
+    # Fallback if prompt_tracker is not available
+    def get_prompt_tracker():
+        return None
+
 # Regex to match leading front-matter.  We anchor at the very start of the
 # file so that only a header at the top is considered.
 _FM_RE = re.compile(r"^---\s*\n(.*?)\n---\s*\n?", re.DOTALL)
@@ -44,6 +52,11 @@ def load_prompt_and_meta(path: Path) -> Tuple[str, Dict[str, Any]]:
     The function never raises on YAML errors – instead it returns an empty
     dictionary so that the calling code can proceed unaffected.
     """
+    # Track that this prompt was used
+    tracker = get_prompt_tracker()
+    if tracker:
+        tracker.track_prompt(path)
+    
     text = path.read_text(encoding="utf-8")
 
     m = _FM_RE.match(text)

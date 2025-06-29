@@ -1,0 +1,155 @@
+---
+meta_id: Q5
+row_map:
+  Q5.1: Direct Safety Assurances
+  Q5.2: Supply-Safety Assurances
+  Q5.3: Confidence Statements
+  Q5.4: Calming Idioms
+  Q5.5: Direct Consumption Safety
+  Q5.6: Preparedness Calming Cue
+  Q5.7: Low-Risk Evaluation (+ Intensifier)
+  Q5.8: Positive Amplification
+regex_map:
+  Q5.1: [5.ExplicitCalming, 5.DirectNoConcern.Live, 5.NothingToWorry.Live]
+  Q5.2: [5.ExplicitCalming]
+  Q5.3: [5.ExplicitCalming]
+  Q5.4: [5.ExplicitCalming]
+  Q5.5: [5.ExplicitCalming.SafeToEat.Live]
+  Q5.6: [5.ExplicitCalming]
+  Q5.7: [5.ExplicitCalming, 5.LowRiskEval.Theoretical, 5.LowRiskSimple]
+  Q5.8: [5.ExplicitCalming]
+frame: Reassuring
+summary: "Explicit calming cue for reassurance"
+---
+### QUICK DECISION CHECK
+• Contains explicit calming keyword **SAFE / ALARM / UNDER CONTROL / REST EASY / CAUSE FOR ALARM / EXCELLENT NEWS / VERY WELL PROTECTED** in same clause as a present‑tense confidence verb?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Health officials say the outbreak is fully under control and poses no danger to the public.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'fully under control' and 'no danger to the public' are explicit calming cues communicating current safety."}
+
+# YES example (Direct Consumption Safety)
+## Input Segment: USDA said poultry products "remain safe to eat."
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'remain safe to eat' is a direct safety assurance for consumers."}
+
+# YES example (Confidence / optimism)
+## Input Segment: Officials said they *feel optimistic that the team can tackle the outbreak quickly*.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'feel optimistic' expresses explicit confidence in handling the situation, a calming cue."}
+
+# NO example
+## Input Segment: No human cases have been detected in the area.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"This reports a positive fact but lacks explicit calming/reassuring language from the source."}
+
+# NO example (Bare negation – food context)
+## Input Segment: Properly cooked poultry **should not pose a risk** to consumers.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"Lacks the keyword 'safe'; this is a bare negation and is handled under Q7."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5
+**Q5: Explicit Calming Cue for Reassurance**
+Does the author or a quoted source provide an explicit calming cue (e.g., 'no cause for alarm,' 'public can rest easy,' 'situation is fully contained,' 'excellent news and means citizens are very well protected') that directly communicates current safety, control, or significantly minimized present risk, as detailed in the Reassuring frame criteria?
+
+**🔍 Q5 Pattern Recognition Table (expanded):**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+<!-- Q5.1 -->
+| **Direct Safety Assurances** | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" **(must mention "safe", "alarm", or "under control")** | ✓ |
+<!-- Q5.2 -->
+| **Supply‑Safety Assurances** | **"no shortage of eggs," "ample supply," "plenty of stock," "shelves remain full"** | ✓ |
+<!-- Q5.3 -->
+| **Confidence Statements** | "we are confident," "I'm encouraged," "rest assured," "situation contained," "providing relief" | ✓ |
+<!-- Q5.4 -->
+| **Calming Idioms** | **"no need to panic," "now is not the time to panic," "don't panic"** | ✓ |
+<!-- Q5.5 -->
+| **Direct Consumption Safety** | "safe to eat," "safe for (human) consumption," "remains safe to eat" | ✓ |
+| **⚠ The clause must contain the literal word "safe".** <br>Expressions that merely say something "should not pose a risk / danger" **do not count** here and must fall through to **Q7 – Bare Negation.** |   |
+<!-- Q5.6 -->
+| **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
+<!-- Q5.7 -->
+| **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
+| **Transient-Issue Minimiser** *(now caught by regex)* | — | — |
+<!-- Q5.8 -->
+| **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
+|                            | "**welcome news**, **encouraging news**" | ✓ |
+| **Bare Positive Facts** | "no cases reported," "tests were negative," "no problems detected," **"poses no risk"**, **"not expected to…"** | → Neutral — *do not* mark Reassuring unless the same sentence also contains an explicit calming keyword from the list above (`safe`, `alarm`, `under control`, `rest easy`, `excellent news`).  🚦Rule C reminder: capability or preparedness phrases alone never count as calming.  |
+| **"Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q6.
+
+**🔍 Detailed Rules & Examples:**
+
+**Definition: Reassuring** (Key Elements)
+Statement, either through a directly quoted source or the author's own presentation, demonstrably employs explicit language, tone, or rhetorical devices specifically chosen by the author or quoted source to actively calm audience concerns, minimize perceived current risk, emphasize safety/control, or highlight positive aspects in a way designed to reduce worry regarding the subject or its impacts. The intent to reassure must be evident in the presentation, not inferred from the facts being merely positive.
+
+**Key Differentiators from Neutral:**
+* Neutral reports positive facts; Reassuring adds explicit calming / optimistic amplification **or an intensified *low-risk* judgement about *current human safety*.**
+* Neutral uses standard descriptive terms for positive outcomes; Reassuring frames them with active confidence or relief.
+* Neutral may state a low risk; **Reassuring explicitly highlights the *very/exceptionally low* risk level to calm the audience.**
+* Neutral reports solutions/capabilities; Reassuring links them **directly to present safety for the public/consumers** *or* comes from a recognised public authority.
+
+**Inclusion Criteria (Reassuring):**
+* A directly quoted source **or the author** uses explicit calming language **or** an *intensified low-risk evaluation* ("risk is **very low** for humans") that clearly signals current safety/minimised danger.
+* Statements that not only report positive facts but also explicitly frame these facts as reasons for reduced concern or increased confidence about safety or control.
+  * **Example:** "Vaccination rates have thankfully reached 80% in the target population, a wonderfully high figure that provides excellent protection and means the community is now much safer." (Reassuring. Cues: 'thankfully,' 'wonderfully high,' 'excellent protection,' 'much safer').
+* Direct assurances of safety, control, or manageability from the author or a quoted source.
+  * **Example:** "Quote: 'We have stockpiled 30 million doses of the antiviral, which is excellent news and means our citizens are very well protected against any immediate threat from this virus.'" (Reassuring. Cues: 'excellent news,' 'very well protected').
+**Preparedness cues fire only when BOTH conditions hold (strict guard):**
+1. *Speaker is a government or public‑health authority* **AND**  
+2. *Capability phrase links explicitly to present public/consumer safety* (≤ 40 chars span) ("…so the public can rest easy", "…meaning consumers are protected").  
+Superlative boasts alone ("strongest surveillance program") are Neutral.  
+Corporate self-statements lacking a safety link stay Neutral.  
+  * **Example (Neutral):** "Tyson Foods is prepared for situations like this and has robust plans in place."
+
+**Minimal Pair Examples for Reassuring vs. Neutral:**
+* **Neutral:** "The latest tests on the water supply showed no contaminants."
+  * Reasoning: "Reports absence of negative. No explicit reassuring language from the author/source about broader safety."
+* **Reassuring:** "Officials confirmed the latest tests on the water supply showed no contaminants, declaring, 'This is excellent news, and residents can be fully confident in the safety of their drinking water.'"
+  * Reasoning: "The official's quote explicitly frames the negative test as 'excellent news' and a reason for 'full confidence' and 'safety.' Decisive cues: 'excellent news,' 'fully confident in the safety'."
+
+**⚠️ Important Exclusion:**
+* **Neutral (NOT Reassuring):** "The cases do not present an immediate public-health concern, the agency said."
+  * Reasoning: "This is a bare negation statement without additional calming amplification."
+
+> **Precedence Note** – If a sentence matches more than one row  
+> in the table above, the order top→bottom decides.  
+>   *Example*: "We are confident we are fully prepared …" → **Confidence** row wins.
+
+> **Guard:** score as *Reassuring* only when the speaker is an official
+>  body or the author.  Indirect hearsay → Neutral.
+
+*Transient‑Issue Minimiser* rules fire **only if** the language
+  explicitly minimises duration **and** contains a positive or
+  self‑resolving verb ("blip", "resolve", "bounce back").  
+  Treat these as Reassuring because the author/source is actively
+  calming concern about persistence of the issue.
+
+**Required marker tokens** – need ≥ 1 of  
+`safe`, `safety`, `alarm`, `concern`, `worry`, `under control`, **`panic`, `shortage`**,
+`rest easy`, `excellent news`, `very well protected`,
+**`confident`, `encouraged`, `optimistic`, `bullish`, `upbeat`, `welcome`, `encouraging`**
+
+**Required low-risk tokens** – need ≥ 1 of  
+`low risk`, `minimal risk`, `very small risk`, `theoretical`, `purely academic`
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

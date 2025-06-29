@@ -1,0 +1,66 @@
+---
+meta_id: Q5B
+row_map:
+  Q5B.1: Confidence Statements
+  Q5B.2: Positive Amplification
+regex_map:
+  Q5B.1: [5.ExplicitCalming]
+  Q5B.2: [5.ExplicitCalming]
+frame: Reassuring
+summary: "Confidence and optimism expressions"
+---
+### QUICK DECISION CHECK
+• Contains explicit confidence/optimism expression **CONFIDENT / ENCOURAGED / OPTIMISTIC / EXCELLENT NEWS / VERY WELL PROTECTED / WELCOME NEWS** from author or quoted source?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Officials said they feel optimistic that the team can tackle the outbreak quickly.
+## Question: Does the segment contain explicit confidence or optimism expressions?
+## JSON Output:
+{"answer":"yes","rationale":"'feel optimistic' expresses explicit confidence in handling the situation."}
+
+# YES example (Positive Amplification)
+## Input Segment: "We have stockpiled 30 million doses, which is excellent news and means citizens are very well protected."
+## Question: Does the segment contain explicit confidence or optimism expressions?
+## JSON Output:
+{"answer":"yes","rationale":"'excellent news' and 'very well protected' are explicit positive amplifications."}
+
+# NO example
+## Input Segment: The agency is monitoring the situation closely.
+## Question: Does the segment contain explicit confidence or optimism expressions?
+## JSON Output:
+{"answer":"no","rationale":"Statement describes action but lacks explicit confidence or optimism keywords."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5B
+**Q5B: Confidence/Optimism Expressions**
+Does the author or a quoted source use explicit confidence or optimism expressions (e.g., 'we are confident,' 'I'm encouraged,' 'rest assured,' 'excellent news,' 'very well protected')?
+
+**🔍 Q5B Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+<!-- Q5B.1 -->
+| **Confidence Statements** | "we are confident," "I'm encouraged," "rest assured," "situation contained," "providing relief" | ✓ |
+<!-- Q5B.2 -->
+| **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached" | ✓ |
+|                            | "**welcome news**, **encouraging news**" | ✓ |
+| **"Fortunately for consumers …" cue** | "Fortunately for consumers …" | ✓ |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q5C.
+
+**⚠️ Important:** Bare positive facts without explicit confidence/optimism keywords remain Neutral.
+
+**Required marker tokens** – need ≥ 1 of  
+`confident`, `encouraged`, `optimistic`, `bullish`, `upbeat`, `welcome`, `encouraging`, `excellent news`, `very well protected`, `wonderfully`, `thankfully`, `fortunately`, `rest assured`
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

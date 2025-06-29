@@ -1,0 +1,162 @@
+---
+meta_id: Q5
+row_map:
+  Q5.1: Direct Safety Assurances
+  Q5.2: Supply-Safety Assurances
+  Q5.3: Confidence Statements
+  Q5.4: Calming Idioms
+  Q5.5: Direct Consumption Safety
+  Q5.6: Preparedness Calming Cue
+  Q5.7: Low-Risk Evaluation (+ Intensifier)
+  Q5.8: Positive Amplification
+regex_map:
+  Q5.1: [5.ExplicitCalming, 5.DirectNoConcern.Live, 5.NothingToWorry.Live]
+  Q5.2: [5.ExplicitCalming]
+  Q5.3: [5.ExplicitCalming]
+  Q5.4: [5.ExplicitCalming]
+  Q5.5: [5.ExplicitCalming.SafeToEat.Live]
+  Q5.6: [5.ExplicitCalming]
+  Q5.7: [5.ExplicitCalming, 5.LowRiskEval.Theoretical, 5.LowRiskSimple]
+  Q5.8: [5.ExplicitCalming]
+frame: Reassuring
+summary: "Explicit calming cue for reassurance"
+---
+### ⚡ QUICK DECISION CHECK
+Does the segment contain ANY of these explicit reassurance markers?
+• **Safety/Control**: SAFE / NO CAUSE FOR ALARM / UNDER CONTROL / REST EASY
+• **Confidence**: CONFIDENT / ENCOURAGED / OPTIMISTIC / EXCELLENT NEWS
+• **Supply**: NO SHORTAGE / AMPLE SUPPLY / PLENTY / SHELVES FULL
+• **Risk**: RISK IS *VERY* LOW / DON'T PANIC / NO NEED TO PANIC
+
+**If YES and from official/author** → Check detailed patterns below
+**If NO** → Skip to `"no"`
+
+=== 🎯 CRITICAL CONCEPT ===
+**Q5 detects EXPLICIT REASSURANCE - a single semantic concept with 8 linguistic manifestations.**
+All patterns share:
+- Common guards (official source requirement)
+- Common exclusions (bare positive facts)
+- Precedence ordering (when multiple patterns match)
+
+=== FEW-SHOT EXAMPLES ===
+# YES example (Safety - Q5.1)
+## Input Segment: Health officials say the outbreak is fully under control and poses no danger to the public.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'fully under control' and 'no danger to the public' are explicit calming cues communicating current safety."}
+
+# YES example (Consumption Safety - Q5.5)
+## Input Segment: USDA said poultry products "remain safe to eat."
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'remain safe to eat' is a direct safety assurance for consumers."}
+
+# YES example (Confidence - Q5.3)
+## Input Segment: Officials said they *feel optimistic that the team can tackle the outbreak quickly*.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'feel optimistic' expresses explicit confidence in handling the situation, a calming cue."}
+
+# NO example (Bare Positive Fact)
+## Input Segment: No human cases have been detected in the area.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"This reports a positive fact but lacks explicit calming/reassuring language from the source."}
+
+# NO example (Bare Negation)
+## Input Segment: Properly cooked poultry **should not pose a risk** to consumers.
+## Question: Does the author/source provide an explicit calming cue for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"Lacks the keyword 'safe'; this is a bare negation and is handled under Q7."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5
+**Q5: Explicit Calming Cue for Reassurance**
+Does the author or a quoted source provide an explicit calming cue (e.g., 'no cause for alarm,' 'public can rest easy,' 'situation is fully contained,' 'excellent news and means citizens are very well protected') that directly communicates current safety, control, or significantly minimized present risk?
+
+**🔍 Q5 Pattern Recognition Table (Precedence Order):**
+| **Pattern Type** | **Examples** | **→ Reassuring** | **Special Requirements** |
+|------------------|--------------|------------------|-------------------------|
+<!-- Q5.1 -->
+| **Direct Safety Assurances** | "no cause for alarm," "public can rest easy," "completely safe," "fully under control" | ✓ | Must mention "safe", "alarm", or "under control" |
+<!-- Q5.2 -->
+| **Supply‑Safety Assurances** | "no shortage of eggs," "ample supply," "plenty of stock," "shelves remain full" | ✓ | — |
+<!-- Q5.3 -->
+| **Confidence Statements** | "we are confident," "I'm encouraged," "rest assured," "situation contained," "providing relief" | ✓ | — |
+<!-- Q5.4 -->
+| **Calming Idioms** | "no need to panic," "now is not the time to panic," "don't panic" | ✓ | — |
+<!-- Q5.5 -->
+| **Direct Consumption Safety** | "safe to eat," "safe for (human) consumption," "remains safe to eat" | ✓ | **Must contain literal "safe"** |
+<!-- Q5.6 -->
+| **Preparedness Calming Cue** | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ | **Only if:** (1) Official source AND (2) Safety link ≤40 chars |
+<!-- Q5.7 -->
+| **Low‑Risk Evaluation** | "risk is *very* low," "chance remains extremely low," "likelihood is exceptionally low" | ✓ | **Requires intensifier** (very/extremely/exceptionally) |
+<!-- Q5.8 -->
+| **Positive Amplification** | "excellent news," "very well protected," "wonderfully high," "thankfully reached," "welcome news," "encouraging news" | ✓ | — |
+| **"Fortunately for consumers"** | "Fortunately for consumers …" | ✓ | Specific consumer-oriented cue |
+
+**⛔ EXCLUSIONS - These stay NEUTRAL:**
+| **Pattern** | **Example** | **Why Neutral** |
+|-------------|-------------|-----------------|
+| **Bare Positive Facts** | "no cases reported," "tests negative," "poses no risk" | No explicit calming keyword |
+| **Bare Negation** | "not a public-health concern" | No calming amplification |
+| **Unintensified Low Risk** | "risk is low" | Missing required intensifier |
+| **Corporate Preparedness** | "Tyson Foods is prepared" | No official status + no safety link |
+
+**🛡️ UNIVERSAL GUARDS (Apply to ALL patterns):**
+1. **Source Requirement**: Score as Reassuring only when speaker is:
+   - Government/public-health authority
+   - The author themselves
+   - ❌ NOT indirect hearsay/reports
+   
+2. **Precedence Rule**: If multiple patterns match, use the FIRST matching row in the table above
+
+3. **Mixed Signals**: If segment has both Reassuring and Alarmist cues → Neutral
+
+**🔧 SPECIAL RULES:**
+
+**Transient-Issue Minimizer**: 
+Language that minimizes duration AND contains positive/self-resolving verb ("blip", "resolve", "bounce back") → Reassuring
+Example: "This is just a temporary blip that will resolve quickly"
+
+**Preparedness Double-Check (Q5.6)**:
+✓ "CDC is fully prepared to handle any cases, so the public can rest easy" → Reassuring
+✗ "Tyson Foods is prepared for situations like this" → Neutral (corporate + no safety link)
+✗ "We have the strongest surveillance program" → Neutral (superlative boast without safety link)
+
+**Required Marker Tokens** (need ≥1):
+- **Safety/Control**: `safe`, `safety`, `alarm`, `under control`, `rest easy`
+- **Confidence**: `confident`, `encouraged`, `optimistic`, `bullish`, `upbeat`, `rest assured`
+- **Supply**: `shortage`, `supply`, `stock`, `shelves`, `plenty`, `ample`
+- **Risk/Calm**: `panic`, `worry`, `concern`, `low risk`, `minimal risk`, `theoretical`
+- **Amplification**: `excellent`, `wonderful`, `thankfully`, `fortunately`, `welcome`, `encouraging`
+
+**📊 KEY DIFFERENTIATORS (Reassuring vs Neutral):**
+- **Neutral**: Reports positive facts → **Reassuring**: Adds explicit calming/optimistic amplification
+- **Neutral**: States "low risk" → **Reassuring**: States "risk is *very* low" (intensified)
+- **Neutral**: Reports capabilities → **Reassuring**: Links capabilities to public safety
+- **Neutral**: Uses standard terms → **Reassuring**: Uses confidence/relief framing
+
+**🔍 MINIMAL PAIR EXAMPLES:**
+• **Neutral**: "The latest tests on the water supply showed no contaminants."
+  - Reasoning: Reports absence of negative. No explicit reassuring language.
+• **Reassuring**: "Officials confirmed the latest tests showed no contaminants, declaring, 'This is excellent news, and residents can be fully confident in the safety of their drinking water.'"
+  - Reasoning: Explicitly frames as 'excellent news' with 'full confidence' and 'safety.'
+
+• **Neutral**: "The cases do not present an immediate public-health concern, the agency said."
+  - Reasoning: Bare negation statement without calming amplification.
+• **Reassuring**: "The agency assured the public there is no cause for alarm regarding these cases."
+  - Reasoning: Uses explicit calming phrase "no cause for alarm."
+
+**Outcome:** Yes → Label: **Reassuring**. No → Proceed to Q6.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

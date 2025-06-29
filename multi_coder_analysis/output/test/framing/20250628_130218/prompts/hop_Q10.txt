@@ -1,0 +1,60 @@
+---
+meta_id: Q10
+row_map:
+  Q10.1: Future Relief Speculation
+  Q10.2: Hopeful Predictions
+  Q10.3: Timeline Speculation
+regex_map:
+  Q10.1: [10.ReliefSpeculation]
+  Q10.2: [10.ReliefSpeculation]
+  Q10.3: [10.ReliefSpeculation]
+frame: Neutral
+summary: "Speculation about relief without explicit calming"
+---
+### QUICK DECISION CHECK
+• Contains FUTURE‑RELIEF modal (**MAY / MIGHT / COULD / EXPECT / PREDICT / HOPE**) **AND** relief verb (**EASE / IMPROVE / NORMALIZE / END / RELIEF / RECOVERY**) without current calming keyword?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Experts predict that the supply chain issues could ease in the next quarter.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"yes","rationale":"'could ease in the next quarter' speculates about future relief without explicit current safety framing."}
+
+# NO example
+## Input Segment: Because these measures are working, restrictions may be short-lived, bringing welcome relief soon.
+## Question: Does the segment speculate about potential future relief or improvement?
+## JSON Output:
+{"answer":"no","rationale":"'Because these measures are working' frames current control, shifting toward reassuring rather than neutral speculation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q10
+**Q10: Speculation about Relief without Explicit Calming**
+Does the segment speculate about potential future relief or improvement (e.g., 'restrictions may be short-lived,' 'pressure could ease soon') WITHOUT an explicit calming cue from the author/source about the *current* state of risk or safety, as detailed in the rules?
+
+**🔍 Q10 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+<!-- Q10.1 -->
+| **Future Relief Speculation** | "restrictions may be short-lived," "pressure could ease soon," "situation might improve" | ✓ |
+<!-- Q10.2 -->
+| **Hopeful Predictions** | "experts predict recovery," "there is hope for improvement," "conditions may normalize" | ✓ |
+<!-- Q10.3 -->
+| **Timeline Speculation** | "issues could resolve next quarter," "problems may end soon," "recovery expected next year" | ✓ |
+| **Future Relief + Current Reassurance** | "Because measures are working, restrictions may end soon, bringing relief," "situation improving, so outlook is positive" | → Reassuring |
+
+**🔗 See also:** Q8 for capability statements; Q5 for explicit calming cues; Q12 for default neutral
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q11.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

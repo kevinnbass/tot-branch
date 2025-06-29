@@ -1,0 +1,79 @@
+# Layout Experiment Configuration
+# This file defines batches of layout experiments for hierarchical testing
+
+experiment:
+  name: "minimal_system_variations_phase1"
+  description: "Testing user prompt variations with minimal system prompt"
+  base_config:
+    # These settings apply to all layouts unless overridden
+    batch_size: 259
+    concurrency: 3
+    start: 1
+    end: 259
+    regex_mode: "live"
+    
+# Define experimental batches
+batches:
+  # Phase 1: High-impact structural changes
+  phase1_batch1:
+    enabled: true
+    description: "Core structure tests with minimal system prompt"
+    sample_size: 50  # Use smaller sample for initial testing
+    layouts:
+      - name: "minimal_segment_first"
+        description: "Segment before hop content (recency effect)"
+        base_layout: "minimal_system"
+        
+      - name: "minimal_question_twice" 
+        description: "Question at start and end (primacy-recency)"
+        base_layout: "minimal_system"
+        
+      - name: "minimal_json_segment"
+        description: "JSON structure for segment"
+        base_layout: "minimal_system"
+        
+      - name: "minimal_parallel_criteria"
+        description: "YES/NO/UNCERTAIN criteria upfront"
+        base_layout: "minimal_system"
+        
+      - name: "minimal_hop_sandwich"
+        description: "Hop content before and after segments"
+        base_layout: "minimal_system"
+        
+      - name: "minimal_system"
+        description: "Baseline for comparison"
+        base_layout: "minimal_system"
+
+  # Phase 2 batches (disabled for now)
+  phase2_segment_variants:
+    enabled: false
+    description: "Refinements if segment-first wins"
+    sample_size: 100
+    layouts:
+      - name: "minimal_segment_highlighted"
+      - name: "minimal_segment_with_id"
+      - name: "minimal_segment_then_question"
+      - name: "minimal_segment_sandwich"
+      
+  phase2_question_variants:
+    enabled: false
+    description: "Refinements if question-twice wins"
+    sample_size: 100
+    layouts:
+      - name: "minimal_question_bold"
+      - name: "minimal_question_numbered"
+      - name: "minimal_question_compressed"
+      - name: "minimal_question_with_hint"
+
+# Execution settings
+execution:
+  parallel_workers: 6  # How many layouts to run in parallel
+  fail_fast: true     # Stop batch if any layout fails
+  save_intermediate: true  # Save results after each layout
+  
+# Analysis settings  
+analysis:
+  primary_metrics: ["accuracy", "avg_f1", "duration_seconds"]
+  comparison_threshold: 0.002  # 0.2% improvement threshold
+  generate_report: true
+  report_format: "markdown" 

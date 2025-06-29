@@ -1,0 +1,17 @@
+{
+  "timestamp": "20250628_075320",
+  "layouts": [
+    "standard",
+    "hop_last"
+  ],
+  "input_file": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "gold_standard": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "batch_size": 5,
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "provider": "gemini",
+  "start": 1,
+  "end": 3,
+  "limit": null,
+  "concurrency": 5,
+  "regex_mode": "live"
+}

@@ -176,7 +176,8 @@ def _extract_patterns_from_prompts() -> list[PatternInfo]:
     def _gather_from_dir(dir_path: Path) -> None:
         if not dir_path.exists():
             return
-        for path in dir_path.glob("hop_Q*.txt"):
+        # Recursive search so that prompts/confidence/* etc. are included
+        for path in dir_path.rglob("hop_Q*.txt"):
             m = _HOP_FILE_RE.match(path.name)
             if not m:
                 continue

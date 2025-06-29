@@ -1,0 +1,69 @@
+---
+meta_id: Q5C
+row_map:
+  Q5C.1: Supply-Safety Assurances
+  Q5C.2: Preparedness Calming Cue
+regex_map:
+  Q5C.1: [5.ExplicitCalming]
+  Q5C.2: [5.ExplicitCalming]
+frame: Reassuring
+summary: "Supply assurances and preparedness with safety link"
+---
+### QUICK DECISION CHECK
+• Contains supply assurance **NO SHORTAGE / AMPLE SUPPLY / PLENTY** OR preparedness statement **FULLY PREPARED / WELL PREPARED** with explicit safety link?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example (Supply)
+## Input Segment: Officials assured consumers there is no shortage of eggs and shelves remain full.
+## Question: Does the segment contain supply assurances or preparedness with safety link?
+## JSON Output:
+{"answer":"yes","rationale":"'no shortage of eggs' and 'shelves remain full' are explicit supply assurances."}
+
+# YES example (Preparedness with safety link)
+## Input Segment: "We are fully prepared to handle any cases, so the public can rest easy," the health minister said.
+## Question: Does the segment contain supply assurances or preparedness with safety link?
+## JSON Output:
+{"answer":"yes","rationale":"'fully prepared to handle' with explicit safety link 'public can rest easy' within 40 chars."}
+
+# NO example (Preparedness without safety link)
+## Input Segment: Tyson Foods is prepared for situations like this and has robust plans in place.
+## Question: Does the segment contain supply assurances or preparedness with safety link?
+## JSON Output:
+{"answer":"no","rationale":"Corporate preparedness statement lacks explicit public safety link."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5C
+**Q5C: Supply/Preparedness Assurances**
+Does the segment contain supply assurances (e.g., 'no shortage,' 'ample supply') OR preparedness statements with an explicit public safety link?
+
+**🔍 Q5C Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+<!-- Q5C.1 -->
+| **Supply‑Safety Assurances** | **"no shortage of eggs," "ample supply," "plenty of stock," "shelves remain full"** | ✓ |
+<!-- Q5C.2 -->
+| **Preparedness Calming Cue**<br/>(official source **and** explicit public‑safety link) | "fully prepared to handle," "well prepared for," "ready to deal with" | ✓ |
+
+**⚠️ Preparedness Guard:** Preparedness cues fire only when BOTH conditions hold:
+1. *Speaker is a government or public‑health authority* **AND**  
+2. *Capability phrase links explicitly to present public/consumer safety* (≤ 40 chars span) ("…so the public can rest easy", "…meaning consumers are protected").
+
+Superlative boasts alone ("strongest surveillance program") are Neutral.  
+Corporate self-statements lacking a safety link stay Neutral.
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q5D.
+
+**Required marker tokens** – need ≥ 1 of  
+`shortage`, `supply`, `stock`, `shelves`, `plenty`, `ample`, `prepared`, `ready`
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

@@ -1,0 +1,23 @@
+{
+  "timestamp": "20250628_112701",
+  "layouts": [
+    "minimal_segment_first",
+    "minimal_question_twice",
+    "minimal_json_segment",
+    "minimal_parallel_criteria",
+    "minimal_hop_sandwich",
+    "minimal_system"
+  ],
+  "input_file": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "gold_standard": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "batch_size": 260,
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "provider": "gemini",
+  "start": 260,
+  "end": 519,
+  "limit": null,
+  "concurrency": 3,
+  "regex_mode": "live",
+  "config_file": "layout_experiment_config.yaml",
+  "experiment_name": "minimal_system_variations_phase1"
+}

@@ -33,6 +33,7 @@ class RunConfig(BaseModel):
     concurrency: int = Field(1, ge=1, description="Thread pool size for batch mode")
     regex_mode: str = Field("live", pattern="^(live|shadow|off)$", description="Regex layer mode")
     shuffle_batches: bool = Field(False, description="Randomise batch order for load spreading")
+    shuffle_segments: bool = Field(False, description="Randomise segments within each batch for maximum stochasticity")
     consensus_mode: str = Field(
         "final",
         pattern="^(hop|final)$",
@@ -52,14 +53,16 @@ class RunConfig(BaseModel):
         pattern=(
             r"^(majority|"                     # legacy
             r"ranked|ranked-raw|"              # legacy weighted
-            r"irv|borda|mrr)$"                 # new ranked-list rules
+            r"irv|borda|mrr|"                  # new ranked-list rules
+            r"confidence-weighted|confidence)$" # confidence-enhanced rules
         ),
         description=(
             "Aggregation rule:\n"
             "  • majority        – single-answer hard vote\n"
             "  • ranked          – single-answer length-norm\n"
             "  • ranked-raw      – single-answer raw score\n"
-            "  • irv|borda|mrr   – ranked-list self-consistency",
+            "  • irv|borda|mrr   – ranked-list self-consistency\n"
+            "  • confidence-weighted – uses confidence scores and frame likelihoods",
         ),
     )
     sc_top_k: int = Field(40, ge=0, description="top-k sampling cutoff (0 disables)")
@@ -85,6 +88,15 @@ class RunConfig(BaseModel):
                     "Ignored when ranked_list == False.",
     )
 
+    # ───────── Confidence-enhanced RLSC ─────────
+    confidence_scores: bool = Field(
+        False,
+        description=(
+            "If true, prompts request confidence scores (0-100%) for binary decisions "
+            "and frame likelihood scores for RLSC. Enables enhanced self-consistency aggregation."
+        ),
+    )
+
     # ─────────────────────────────────────────────────────────────
     # Root-level validator – field order requires this approach.
     # ─────────────────────────────────────────────────────────────
@@ -93,6 +105,8 @@ class RunConfig(BaseModel):
         ranked = values.get("ranked_list", False)
         rule = values.get("sc_rule")
         decode_mode = values.get("decode_mode")
+        confidence_scores = values.get("confidence_scores", False)
+        
         if ranked:
             if decode_mode != "self-consistency":
                 raise ValueError("ranked_list=True requires decode_mode='self-consistency'")
@@ -100,6 +114,14 @@ class RunConfig(BaseModel):
                 raise ValueError(
                     "When ranked_list=True, sc_rule must be one of {'irv', 'borda', 'mrr'}"
                 )
+        
+        # Validate confidence-weighted aggregation
+        if rule in {"confidence-weighted", "confidence"}:
+            if not confidence_scores:
+                raise ValueError("confidence-weighted aggregation requires confidence_scores=True")
+            if decode_mode != "self-consistency":
+                raise ValueError("confidence-weighted aggregation requires decode_mode='self-consistency'")
+        
         return values
 
     @validator("output_dir", pre=True)

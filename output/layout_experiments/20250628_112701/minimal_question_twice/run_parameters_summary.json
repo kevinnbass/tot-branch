@@ -1,0 +1,43 @@
+{
+  "timestamp": "2025-06-28T11:33:05",
+  "input_file": "multi_coder_analysis\\data\\gold_standard_preliminary.csv",
+  "total_statements": 50,
+  "provider": "gemini",
+  "model": "models/gemini-2.5-flash-preview-04-17",
+  "temperature": 0.0,
+  "top_p": 0.1,
+  "top_k": 1,
+  "batch_size": 260,
+  "concurrency": 3,
+  "individual_fallback_enabled": false,
+  "individual_fallback_note": "--individual-fallback flag NOT used",
+  "token_usage": {
+    "prompt_tokens": 63039,
+    "response_tokens": 26101,
+    "thought_tokens": 44542,
+    "total_tokens": 133682,
+    "total_hops": 440,
+    "regex_yes": 5,
+    "regex_hit_shadow": 12,
+    "llm_calls": 12,
+    "segments_regex_ids": [
+      "seg_v5_3_647_chunk0",
+      "seg_v5_17_1470_chunk0",
+      "seg_v5_1_1674_chunk0",
+      "seg_v5_4_1674_chunk0",
+      "seg_v5_9_1674_chunk0",
+      "seg_v5_9_102_chunk0",
+      "seg_v5_5_1534_chunk0",
+      "seg_v5_8_1470_chunk0"
+    ]
+  },
+  "regex_yes": 5,
+  "regex_hit_shadow": 12,
+  "llm_calls": 12,
+  "regex_coverage": 0.011363636363636364,
+  "initial_mismatch_count": 0,
+  "fixed_by_individual_fallback": 0,
+  "final_mismatch_count": 0,
+  "regex_mismatch_count": 0,
+  "llm_mismatch_count": 0
+}

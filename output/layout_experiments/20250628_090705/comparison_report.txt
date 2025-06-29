@@ -1,0 +1,78 @@
+# Layout Experiment Results
+
+Generated: 2025-06-28T09:30:12.338274
+Total experiments: 13
+Successful experiments: 13
+Failed experiments: 0
+
+## Best Layout
+**minimal_system**
+- Accuracy: 1.000
+- Average F1: 1.000
+- Duration: 1079.2s
+
+## All Results (sorted by accuracy)
+           Layout  Accuracy  Avg_F1  Duration_Seconds
+   minimal_system     1.000   1.000          1079.219
+  structured_json     0.992   0.985          1018.732
+  primacy_recency     0.992   0.976          1023.631
+parallel_analysis     0.992   0.985          1044.937
+instruction_first     0.992   0.976          1206.566
+   question_first     0.988   0.960          1075.680
+         hop_last     0.988   0.968          1131.923
+         standard     0.985   0.953          1019.862
+   xml_structured     0.981   0.943          1038.218
+         sandwich     0.981   0.943          1182.200
+          recency     0.981   0.934          1340.906
+    segment_focus     0.977   0.930          1386.092
+   evidence_based     0.965   0.904           958.506
+
+## Per-Frame Performance
+
+### Alarmist
+           Layout  Precision  Recall    F1
+   minimal_system      1.000   1.000 1.000
+  structured_json      0.920   1.000 0.958
+  primacy_recency      0.958   1.000 0.979
+parallel_analysis      0.920   1.000 0.958
+instruction_first      0.958   1.000 0.979
+   question_first      0.958   1.000 0.979
+         hop_last      0.920   1.000 0.958
+         standard      0.920   1.000 0.958
+   xml_structured      0.885   1.000 0.939
+         sandwich      1.000   0.870 0.930
+          recency      0.958   1.000 0.979
+    segment_focus      0.955   0.913 0.933
+   evidence_based      0.840   0.913 0.875
+
+### Neutral
+           Layout  Precision  Recall    F1
+   minimal_system      1.000   1.000 1.000
+  structured_json      1.000   0.991 0.996
+  primacy_recency      1.000   0.991 0.996
+parallel_analysis      1.000   0.991 0.996
+instruction_first      1.000   0.991 0.996
+   question_first      1.000   0.987 0.993
+         hop_last      1.000   0.987 0.993
+         standard      1.000   0.982 0.991
+   xml_structured      0.996   0.982 0.989
+         sandwich      0.987   0.991 0.989
+          recency      1.000   0.978 0.989
+    segment_focus      0.991   0.982 0.987
+   evidence_based      0.987   0.973 0.980
+
+### Reassuring
+           Layout  Precision  Recall    F1
+   minimal_system      1.000   1.000 1.000
+  structured_json      1.000   1.000 1.000
+  primacy_recency      0.909   1.000 0.952
+parallel_analysis      1.000   1.000 1.000
+instruction_first      0.909   1.000 0.952
+   question_first      0.833   1.000 0.909
+         hop_last      0.909   1.000 0.952
+         standard      0.833   1.000 0.909
+   xml_structured      0.900   0.900 0.900
+         sandwich      0.833   1.000 0.909
+          recency      0.714   1.000 0.833
+    segment_focus      0.769   1.000 0.870
+   evidence_based      0.818   0.900 0.857

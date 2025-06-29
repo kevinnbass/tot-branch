@@ -1,0 +1,65 @@
+---
+meta_id: Q5D
+row_map:
+  Q5D.1: Calming Idioms
+  Q5D.2: Low-Risk Evaluation (+ Intensifier)
+regex_map:
+  Q5D.1: [5.ExplicitCalming]
+  Q5D.2: [5.ExplicitCalming, 5.LowRiskEval.Theoretical, 5.LowRiskSimple]
+frame: Reassuring
+summary: "Risk minimization and calming idioms"
+---
+### QUICK DECISION CHECK
+• Contains calming idiom **NO NEED TO PANIC / DON'T PANIC** OR intensified low-risk statement **RISK IS VERY LOW / EXTREMELY LOW / EXCEPTIONALLY LOW**?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example (Calming Idiom)
+## Input Segment: Health officials stressed there is no need to panic over the isolated cases.
+## Question: Does the segment contain calming idioms or intensified low-risk evaluations?
+## JSON Output:
+{"answer":"yes","rationale":"'no need to panic' is an explicit calming idiom."}
+
+# YES example (Intensified Low Risk)
+## Input Segment: Experts say the risk to the general public remains very low.
+## Question: Does the segment contain calming idioms or intensified low-risk evaluations?
+## JSON Output:
+{"answer":"yes","rationale":"'risk...remains very low' uses intensifier 'very' with low-risk evaluation."}
+
+# NO example (Unintensified Low Risk)
+## Input Segment: The CDC considers the risk to be low at this time.
+## Question: Does the segment contain calming idioms or intensified low-risk evaluations?
+## JSON Output:
+{"answer":"no","rationale":"States 'low' risk without intensifier; needs 'very/extremely/exceptionally' to qualify."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5D
+**Q5D: Risk Minimization**
+Does the segment contain calming idioms (e.g., 'no need to panic') OR intensified low-risk evaluations (e.g., 'risk is very low')?
+
+**🔍 Q5D Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+<!-- Q5D.1 -->
+| **Calming Idioms** | **"no need to panic," "now is not the time to panic," "don't panic"** | ✓ |
+<!-- Q5D.2 -->
+| **Low‑Risk Evaluation (+ Intensifier)** | "**risk is *very* low**," "chance remains extremely low," "likelihood is exceptionally low" | ✓ |
+
+**⚠️ Important:** Low-risk statements **require an intensifier** (very, extremely, exceptionally) to trigger Reassuring. Plain "low risk" remains Neutral.
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q6.
+
+**Required marker tokens** – need ≥ 1 of  
+`panic`, `worry`, `concern` (for idioms) OR  
+`low risk`, `minimal risk`, `very small risk`, `theoretical`, `purely academic` (with intensifiers)
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

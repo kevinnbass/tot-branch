@@ -1,0 +1,95 @@
+---
+meta_id: Q6
+row_map:
+  Q6.1: Minimiser + Scale Contrast
+  Q6.2: Minimiser + Explicit Comparison
+regex_map:
+  Q6.1: [6.MinimiserScaleContrast]
+  Q6.2: [6.MinimiserScaleContrast]
+frame: Reassuring
+summary: "Minimiser + scale contrast for reassurance"
+---
+### QUICK DECISION CHECK
+• Contains MINIMISER (**ONLY / JUST / MERELY / A SINGLE / VERY FEW / RELATIVELY FEW**) **AND** denominator marker (**OUT OF / AMONG / ONE OF / AMONG MILLIONS / NATIONWIDE**) in same sentence or immediately adjacent (≤20 chars)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Only one barn was infected out of thousands nationwide.
+## Question: Does the author/source use 'minimiser + scale contrast' for reassurance?
+## JSON Output:
+{"answer":"yes","rationale":"'Only one barn...out of thousands nationwide' uses minimiser with explicit scale contrast for reassurance."}
+
+# NO example (missing denominator → Neutral)
+## Input Segment: Only three samples showed irregularity in testing.
+## Question: Does the author/source use 'minimiser + scale contrast' for reassurance?
+## JSON Output:
+{"answer":"no","rationale":"'Only three samples' has minimiser but lacks the explicit contrasting scale context (no 'out of X')."}
+
+# NO example 2 (minimiser but denominator in *different* sentence → Neutral)
+## Input Segment: Only three samples were irregular. Out of 5 000, that is a tiny share.
+## JSON Output:
+{"answer":"no","rationale":"Minimiser and denominator split across sentences; not immediately adjacent (>20 chars away)."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q6
+**Q6: 'Minimiser + Scale Contrast' for Reassurance**
+Does the author or a quoted source use a 'minimiser' (e.g., 'only,' 'just,' 'merely') in conjunction with a 'scale contrast' (e.g., 'one barn out of thousands,' 'a few cases among millions') to actively downplay an event or its significance, thereby framing it reassuringly, as detailed in the rules? (Both elements must be present and work together).
+
+• Minimiser and denominator normally appear in the same sentence.  
+  **LLM‑only exception:** if the denominator follows
+  **immediately (≤ 1 sentence, ≤ 20 chars after the period)** and
+  quantifies the very same count, treat the two as coupled → `"yes"`.
+  Any looser span keeps the answer `"no"`.
+
+**🔍 Q6 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Reassuring** |
+|------------------|--------------|------------------|
+<!-- Q6.1 -->
+| **Minimiser + Scale Contrast**(**minimiser token AND explicit denominator must both be present**) | "only one barn out of thousands," "just 3 out of 5 000 samples," "merely a few among millions" | ✓ |
+<!-- Q6.2 -->
+| **Minimiser + Explicit Comparison** | "only affecting a single facility nationwide," "just one case among the entire population" | ✓ |
+| **Minimiser without Scale** | "only three samples showed irregularity" (no "out of X") | → Neutral (missing contrast element) |
+| **Scale without Minimiser** | "one barn among thousands" (no "only/just/merely/**a single/few**") | → Neutral (missing minimising element) |
+
+**Outcome:** Yes → Label: Reassuring. No → Proceed to Q7.
+
+**🔍 Detailed Rules & Examples:**
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Reassuring – Minimiser + contrast** | "Only one barn was infected out of thousands nationwide." | **Reassuring** | "Only...out of thousands" (minimizer + scale contrast) |
+
+**Detailed Requirements:**
+The statement must contain **both** elements **within 50 characters** (allows dash/parenthesis):  
+1. A minimiser word (`only|just|merely|no more than|a single|few`) **and**  
+2. The **denominator** may also be an *implicit total* expressed with
+quantifiers like **"nationwide"**, **"state-wide"**, **"across the EU"**.
+**A % figure (e.g. "only 0.05 %") counts as an implicit denominator.**
+Example: "Only two barns nationwide have reported infections."
+Cross-clause variants within 50 chars are acceptable.
+
+> **Clarification** A **bare numeral (e.g., "1", "one") is *not* a minimiser**  
+> unless it is **preceded by** one of the lexical cues above.  
+> - Example (Neutral): "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+
+The combination should create an overall reassuring effect about the limited scope or impact of an issue.
+
+**Examples:**
+* **Reassuring:** "While there were concerns, only 3 out of 5,000 tested samples showed any irregularity, indicating the problem is not widespread." → Reassuring.
+* **Non-Example (Missing Contrast):** "Only 3 samples showed irregularity." → Could be Neutral if the "out of X" contrast is missing and no other reassuring cues are present.
+
+**Guard clause** – If no *minimiser token* **or** no explicit denominator is found, fall through to **Q7 bare‑negation**.
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

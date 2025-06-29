@@ -1,0 +1,82 @@
+2025-06-28 13:02:28,810 - INFO - File logging enabled → multi_coder_analysis\output\test\framing\20250628_130218\run.log
+2025-06-28 13:02:28,821 - INFO - Processing with batch size = 260 and concurrency=3
+2025-06-28 13:02:28,917 - INFO - Hop 1: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:02:29,059 - INFO - Hop 1: 5 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:02:30,691 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:04:20,402 - INFO - AFC remote call 1 is done.
+2025-06-28 13:04:20,406 - INFO - Batch batch_1_7cd0a2 Q01: attempt 1 succeeded for 255/255 objects; still missing 0/255
+2025-06-28 13:04:21,096 - INFO - Hop 2: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:04:21,353 - INFO - Hop 2: 3 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:04:22,391 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:05:48,767 - INFO - AFC remote call 1 is done.
+2025-06-28 13:05:48,768 - INFO - Batch batch_2_b97d7d Q02: attempt 1 succeeded for 252/252 objects; still missing 0/252
+2025-06-28 13:05:49,420 - INFO - Hop 3: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:05:49,432 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:05:50,235 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:07:28,498 - INFO - AFC remote call 1 is done.
+2025-06-28 13:07:28,505 - INFO - Batch batch_3_d7d16c Q03: attempt 1 succeeded for 248/248 objects; still missing 0/248
+2025-06-28 13:07:29,169 - INFO - Hop 4: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:07:29,267 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:07:30,267 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:08:31,094 - INFO - AFC remote call 1 is done.
+2025-06-28 13:08:31,097 - INFO - Batch batch_4_46aada Q04: attempt 1 succeeded for 248/248 objects; still missing 0/248
+2025-06-28 13:08:33,768 - INFO - Hop 5: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:08:34,022 - INFO - Hop 5: 3 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:08:35,847 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:10:22,611 - INFO - AFC remote call 1 is done.
+2025-06-28 13:10:22,620 - INFO - Batch batch_5_78512c Q05: attempt 1 succeeded for 244/244 objects; still missing 0/244
+2025-06-28 13:10:24,624 - INFO - Hop 6: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:10:24,652 - INFO - Hop 6: 1 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:10:26,887 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:13:40,424 - INFO - AFC remote call 1 is done.
+2025-06-28 13:13:40,481 - WARNING - Batch batch_6_58c29a Q06: salvaged 1071 objects from truncated JSON (original error: Expecting value: line 1 column 1 (char 0))
+2025-06-28 13:13:40,508 - INFO - Batch batch_6_58c29a Q06: attempt 1 succeeded for 1071/239 objects; still missing 131/239
+2025-06-28 13:13:40,516 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:14:32,539 - INFO - AFC remote call 1 is done.
+2025-06-28 13:14:32,541 - INFO - Batch batch_6_58c29a Q06: attempt 2 succeeded for 131/131 objects; still missing 0/131
+2025-06-28 13:14:39,090 - INFO - Hop 7: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:14:39,135 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:14:42,285 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:16:16,296 - INFO - AFC remote call 1 is done.
+2025-06-28 13:16:16,301 - INFO - Batch batch_7_e68acc Q07: attempt 1 succeeded for 233/234 objects; still missing 1/234
+2025-06-28 13:16:16,303 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:16:19,870 - INFO - AFC remote call 1 is done.
+2025-06-28 13:16:19,871 - INFO - Batch batch_7_e68acc Q07: attempt 2 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 13:16:20,592 - INFO - Hop 8: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:16:20,673 - INFO - Hop 8: 14 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:16:22,474 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:17:27,223 - INFO - AFC remote call 1 is done.
+2025-06-28 13:17:27,235 - INFO - Batch batch_8_e5b145 Q08: attempt 1 succeeded for 176/176 objects; still missing 0/176
+2025-06-28 13:17:28,680 - INFO - Hop 9: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:17:28,687 - INFO - Hop 9: 0 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:17:30,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:18:40,136 - INFO - AFC remote call 1 is done.
+2025-06-28 13:18:40,137 - INFO - Batch batch_9_d3250f Q09: attempt 1 succeeded for 122/125 objects; still missing 5/125
+2025-06-28 13:18:40,140 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:18:46,621 - INFO - AFC remote call 1 is done.
+2025-06-28 13:18:46,622 - INFO - Batch batch_9_d3250f Q09: attempt 2 succeeded for 5/5 objects; still missing 0/5
+2025-06-28 13:18:47,435 - INFO - Hop 10: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:18:47,518 - INFO - Hop 10: 12 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:18:50,091 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:19:17,691 - INFO - AFC remote call 1 is done.
+2025-06-28 13:19:17,693 - INFO - Batch batch_10_e61f0c Q10: attempt 1 succeeded for 56/56 objects; still missing 0/56
+2025-06-28 13:19:18,038 - INFO - Hop 11: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:19:18,047 - INFO - Hop 11: 0 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:19:21,219 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:19:47,789 - INFO - AFC remote call 1 is done.
+2025-06-28 13:19:47,793 - INFO - Batch batch_11_21fc0e Q11: attempt 1 succeeded for 55/55 objects; still missing 0/55
+2025-06-28 13:19:48,054 - INFO - Hop 12: processing 1 batches (size=260) with concurrency=3
+2025-06-28 13:19:48,060 - INFO - Hop 12: 1 resolved by regex, processing 1 LLM batches (size=260) with concurrency=3
+2025-06-28 13:19:50,350 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 13:20:17,764 - INFO - AFC remote call 1 is done.
+2025-06-28 13:20:17,768 - INFO - Batch batch_12_a25343 Q12: attempt 1 succeeded for 43/43 objects; still missing 0/43
+2025-06-28 13:20:18,439 - INFO - ToT processing complete. Labels saved to: multi_coder_analysis\output\test\framing\20250628_130218\model_labels_tot.csv
+2025-06-28 13:20:32,003 - INFO - 📋 Created consolidated mismatch file: multi_coder_analysis\output\test\framing\20250628_130218\traces_tot\traces_tot_mismatch\consolidated_mismatch_traces.jsonl (19 entries)
+2025-06-28 13:20:32,120 - INFO - 📋 Created consolidated match file: multi_coder_analysis\output\test\framing\20250628_130218\traces_tot\traces_tot_match\consolidated_match_traces.jsonl (241 entries)
+2025-06-28 13:20:32,122 - INFO - 📁 Reorganized traces: 241 matches → multi_coder_analysis\output\test\framing\20250628_130218\traces_tot\traces_tot_match
+2025-06-28 13:20:32,123 - INFO - 📁 Reorganized traces: 19 mismatches → multi_coder_analysis\output\test\framing\20250628_130218\traces_tot\traces_tot_mismatch
+2025-06-28 13:20:39,965 - INFO - Token summary written to multi_coder_analysis\output\test\framing\20250628_130218\token_usage_summary.json
+2025-06-28 13:20:40,004 - INFO - Regex rule stats written to multi_coder_analysis\output\test\framing\20250628_130218\regex_rule_stats.csv
+2025-06-28 13:20:40,072 - INFO - Regex rules snapshot written to multi_coder_analysis\output\test\framing\20250628_130218\regex_rules_snapshot.jsonl
+2025-06-28 13:20:40,075 - INFO - Run parameter summary written to multi_coder_analysis\output\test\framing\20250628_130218\run_parameters_summary.json
+2025-06-28 13:20:40,085 - INFO - Run-level summary written to: multi_coder_analysis\output\test\framing\20250628_130218\run_summary.txt

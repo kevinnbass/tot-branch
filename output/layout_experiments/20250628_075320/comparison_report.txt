@@ -1,0 +1,30 @@
+# Layout Experiment Results
+
+Generated: 2025-06-28T07:54:41.152347
+Total experiments: 2
+Successful experiments: 2
+Failed experiments: 0
+
+## Best Layout
+**hop_last**
+- Accuracy: 1.000
+- Average F1: 1.000
+- Duration: 62.4s
+
+## All Results (sorted by accuracy)
+  Layout  Accuracy  Avg_F1  Duration_Seconds
+hop_last     1.000   1.000            62.351
+standard     1.000   1.000            80.546
+
+## Per-Frame Performance
+
+### Alarmist
+No data for this frame
+
+### Neutral
+  Layout  Precision  Recall    F1
+hop_last      1.000   1.000 1.000
+standard      1.000   1.000 1.000
+
+### Reassuring
+No data for this frame

@@ -1,0 +1,221 @@
+2025-06-28 07:55:35,798 - INFO - File logging enabled → output\layout_experiments\20250628_075531\recency\run.log
+2025-06-28 07:55:35,801 - INFO - File logging enabled → output\layout_experiments\20250628_075531\standard\run.log
+2025-06-28 07:55:35,803 - INFO - File logging enabled → output\layout_experiments\20250628_075531\sandwich\run.log
+2025-06-28 07:55:35,806 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:55:35,806 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:55:35,811 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:55:35,814 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:35,815 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:35,816 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:35,819 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:35,820 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:35,822 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:37,071 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:37,083 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:37,086 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:37,087 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:37,115 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:41,866 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:41,869 - INFO - Batch batch_1_016df2 Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:41,881 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:41,885 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:42,150 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:42,151 - INFO - Batch batch_1_23b63e Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:42,166 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:42,168 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:42,331 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:42,333 - INFO - Batch batch_1_1a2357 Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:42,338 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:42,340 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:43,518 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:44,036 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:44,130 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:44,139 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:44,148 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:48,302 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:48,303 - INFO - Batch batch_2_faa7fc Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:48,310 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:48,311 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:48,926 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:48,927 - INFO - Batch batch_2_8aabba Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:48,932 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:48,939 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:48,943 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:49,517 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:49,520 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:49,521 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:49,772 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:49,774 - INFO - Batch batch_2_335b15 Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:49,780 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:49,783 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:50,294 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:54,017 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:54,019 - INFO - Batch batch_3_4a2e51 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:54,023 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:54,028 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:54,199 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:54,200 - INFO - Batch batch_3_b60569 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:54,210 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:54,213 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:55,496 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:55,509 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:55,522 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:55,705 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:56,079 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:56,080 - INFO - Batch batch_3_76a889 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:56,085 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:56,086 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:57,075 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:58,729 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:58,730 - INFO - Batch batch_4_73a8ac Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:58,737 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:58,739 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:59,116 - INFO - AFC remote call 1 is done.
+2025-06-28 07:55:59,117 - INFO - Batch batch_4_3f09ab Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:55:59,122 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:55:59,124 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:55:59,585 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:55:59,805 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:59,806 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:55:59,808 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:00,915 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:00,916 - INFO - Batch batch_4_e4baf4 Q04: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:00,921 - INFO - Hop 5: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:00,923 - INFO - Hop 5: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:01,366 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:05,472 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:05,473 - INFO - Batch batch_5_b10729 Q05: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:05,478 - INFO - Hop 6: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:05,480 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:05,707 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:05,710 - INFO - Batch batch_5_dd9fc3 Q05: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:05,717 - INFO - Hop 6: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:05,720 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:07,564 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:07,569 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:07,572 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:07,749 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:08,420 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:08,421 - INFO - Batch batch_5_a287e0 Q05: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:08,426 - INFO - Hop 6: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:08,428 - INFO - Hop 6: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:09,046 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:13,033 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:13,035 - INFO - Batch batch_6_45aaf9 Q06: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:13,039 - INFO - Hop 7: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:13,042 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:13,499 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:13,680 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:13,681 - INFO - Batch batch_6_65c200 Q06: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:13,686 - INFO - Hop 7: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:13,689 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:14,131 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:14,133 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:14,134 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:15,501 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:15,502 - INFO - Batch batch_6_54509a Q06: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:15,506 - INFO - Hop 7: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:15,509 - INFO - Hop 7: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:15,965 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:19,626 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:19,628 - INFO - Batch batch_7_fd4d14 Q07: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:19,632 - INFO - Hop 8: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:19,634 - INFO - Hop 8: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:20,114 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:20,447 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:20,449 - INFO - Batch batch_7_6993cc Q07: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:20,461 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\recency\model_labels_tot.csv
+2025-06-28 07:56:20,465 - INFO - Token summary written to output\layout_experiments\20250628_075531\recency\token_usage_summary.json
+2025-06-28 07:56:20,467 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\recency\regex_rule_stats.csv
+2025-06-28 07:56:20,479 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:20,481 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\recency\regex_rules_snapshot.jsonl
+2025-06-28 07:56:20,486 - INFO - Batch batch_7_2a49e0 Q07: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:20,490 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\recency\run_parameters_summary.json
+2025-06-28 07:56:20,497 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\recency\run_summary.txt
+2025-06-28 07:56:20,506 - INFO - Hop 8: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:20,513 - INFO - Hop 8: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:20,589 - INFO - ✅ [1/13] Layout recency completed: Accuracy=1.000, Duration=49.0s
+2025-06-28 07:56:20,590 - INFO - 🧪 Starting layout experiment: minimal_system
+2025-06-28 07:56:20,593 - INFO - Regex layer in LIVE mode (default)
+2025-06-28 07:56:20,615 - INFO - Applied range filter: processing rows 1-2 (2 statements from original 2023)
+2025-06-28 07:56:21,062 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:21,064 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:21,065 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:21,145 - INFO - Initialized Gemini provider
+2025-06-28 07:56:21,149 - INFO - ToT trace files will be saved in: output\layout_experiments\20250628_075531\minimal_system\traces_tot
+2025-06-28 07:56:21,152 - INFO - File logging enabled → output\layout_experiments\20250628_075531\minimal_system\run.log
+2025-06-28 07:56:21,168 - INFO - Processing with batch size = 10 and concurrency=3
+2025-06-28 07:56:21,171 - INFO - Hop 1: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:21,173 - INFO - Hop 1: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:21,681 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:23,930 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:23,931 - INFO - Batch batch_8_522d7d Q08: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:23,935 - INFO - Hop 9: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:23,937 - INFO - Hop 9: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:24,385 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:25,055 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:25,056 - INFO - Batch batch_8_9be75f Q08: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:25,059 - INFO - Hop 9: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:25,061 - INFO - Hop 9: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:25,507 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:25,510 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:25,511 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:26,849 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:26,850 - INFO - Batch batch_1_a0e7ef Q01: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:26,856 - INFO - Hop 2: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:26,860 - INFO - Hop 2: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:26,968 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:26,969 - INFO - Batch batch_9_1b09ab Q09: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:26,974 - INFO - Hop 10: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:26,979 - INFO - Hop 10: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:27,415 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:27,501 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:28,278 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:28,279 - INFO - Batch batch_9_2adf55 Q09: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:28,283 - INFO - Hop 10: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:28,285 - INFO - Hop 10: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:28,773 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:28,776 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:28,777 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:30,565 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:30,566 - INFO - Batch batch_10_884f63 Q10: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:30,570 - INFO - Hop 11: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:30,572 - INFO - Hop 11: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:31,035 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:31,534 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:31,535 - INFO - Batch batch_10_0c73bb Q10: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:31,539 - INFO - Hop 11: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:31,541 - INFO - Hop 11: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:31,975 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:31,978 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:31,979 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:33,369 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:33,371 - INFO - Batch batch_2_678c85 Q02: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:33,376 - INFO - Hop 3: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:33,379 - INFO - Hop 3: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:33,832 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:34,114 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:34,115 - INFO - Batch batch_11_18cd46 Q11: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:34,119 - INFO - Hop 12: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:34,121 - INFO - Hop 12: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:34,552 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:35,266 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:35,267 - INFO - Batch batch_11_036b6a Q11: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:35,271 - INFO - Hop 12: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:35,273 - INFO - Hop 12: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:35,715 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:35,717 - WARNING - Layout 'sandwich' not fully supported in batch mode, using standard layout
+2025-06-28 07:56:35,718 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:39,426 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:39,427 - INFO - Batch batch_3_0ba4a9 Q03: attempt 1 succeeded for 2/2 objects; still missing 0/2
+2025-06-28 07:56:39,432 - INFO - Hop 4: processing 1 batches (size=10) with concurrency=3
+2025-06-28 07:56:39,434 - INFO - Hop 4: 0 resolved by regex, processing 1 LLM batches (size=10) with concurrency=3
+2025-06-28 07:56:40,089 - INFO - AFC is enabled with max remote calls: 10.
+2025-06-28 07:56:40,101 - INFO - AFC remote call 1 is done.
+2025-06-28 07:56:40,102 - INFO - Batch batch_12_24e1d0 Q12: attempt 1 succeeded for 1/1 objects; still missing 0/1
+2025-06-28 07:56:40,113 - INFO - ToT processing complete. Labels saved to: output\layout_experiments\20250628_075531\standard\model_labels_tot.csv
+2025-06-28 07:56:40,117 - INFO - Token summary written to output\layout_experiments\20250628_075531\standard\token_usage_summary.json
+2025-06-28 07:56:40,122 - INFO - Regex rule stats written to output\layout_experiments\20250628_075531\standard\regex_rule_stats.csv
+2025-06-28 07:56:40,172 - INFO - Regex rules snapshot written to output\layout_experiments\20250628_075531\standard\regex_rules_snapshot.jsonl
+2025-06-28 07:56:40,187 - INFO - Run parameter summary written to output\layout_experiments\20250628_075531\standard\run_parameters_summary.json
+2025-06-28 07:56:40,197 - INFO - Run-level summary written to: output\layout_experiments\20250628_075531\standard\run_summary.txt

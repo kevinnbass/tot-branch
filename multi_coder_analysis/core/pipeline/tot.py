@@ -31,11 +31,12 @@ class _HopStep(Step[HopContext]):
         provider: ProviderProtocol,
         model: str,
         *,
-        temperature: float,
+        temperature: float = 0.0,
         top_k: int | None = None,
         top_p: float | None = None,
         ranked_list: bool = False,
         max_candidates: int = 5,
+        confidence_scores: bool = False,
     ):
         self.hop_idx = hop_idx
         self._provider = provider
@@ -44,7 +45,8 @@ class _HopStep(Step[HopContext]):
         self._top_k = top_k
         self._top_p = top_p
         self._ranked_list = ranked_list
-        self._max_candidates = max(1, max_candidates)
+        self._max_candidates = max_candidates
+        self._confidence_scores = confidence_scores
 
     # ------------------------------------------------------------------
     # The heavy lifting is delegated to code already battle-tested in the
@@ -73,23 +75,36 @@ class _HopStep(Step[HopContext]):
             top_p=self._top_p,
             ranked=self._ranked_list,
             max_candidates=self._max_candidates,
+            confidence_scores=self._confidence_scores,
         )  # type: ignore[arg-type]
 
         ctx.raw_llm_responses.append(llm_resp)
 
-        # --- ranked-list aware extraction ---
+        # --- confidence-enhanced and ranked-list aware extraction ---
         raw_ans = llm_resp.get("answer", "")
         try:
-            from multi_coder_analysis.run_multi_coder_tot import _extract_frame_and_ranking  # lazy import to avoid cycles
-            _, ranking = _extract_frame_and_ranking(raw_ans)
+            if self._confidence_scores:
+                from multi_coder_analysis.run_multi_coder_tot import _extract_frame_and_ranking_enhanced
+                top_choice, ranking, confidence_data = _extract_frame_and_ranking_enhanced(raw_ans, confidence_mode=True)
+                
+                # Store confidence data in context
+                if confidence_data:
+                    ctx.confidence_score = confidence_data.get('confidence')
+                    ctx.frame_likelihoods = confidence_data.get('frame_likelihoods')
+            else:
+                from multi_coder_analysis.run_multi_coder_tot import _extract_frame_and_ranking  # lazy import to avoid cycles
+                top_choice, ranking = _extract_frame_and_ranking(raw_ans)
         except Exception:
             ranking = None
+            top_choice = raw_ans
 
         if ranking:
             ranking = ranking[: self._max_candidates]
             ctx.ranking = ranking
-            top_choice = ranking[0]
-        else:
+            if not top_choice:
+                top_choice = ranking[0]
+        
+        if not top_choice:
             top_choice = raw_ans
 
         if str(top_choice).lower().strip() == "yes":
@@ -108,6 +123,7 @@ def build_tot_pipeline(
     top_p: float | None = None,
     ranked_list: bool = False,
     max_candidates: int = 5,
+    confidence_scores: bool = False,
 ) -> Pipeline[HopContext]:
     """Return a :class:`Pipeline` implementing the 12-hop deterministic chain."""
 
@@ -121,6 +137,7 @@ def build_tot_pipeline(
             top_p=top_p,
             ranked_list=ranked_list,
             max_candidates=max_candidates,
+            confidence_scores=confidence_scores,
         )
         for h in range(1, 13)
     ]

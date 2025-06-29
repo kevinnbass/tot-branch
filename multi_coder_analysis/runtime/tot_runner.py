@@ -105,6 +105,7 @@ def execute(cfg: RunConfig) -> Path:
                 from multi_coder_analysis.core.self_consistency_hop import decode_iterative as _decode_fn
             else:
                 from multi_coder_analysis.core.self_consistency import decode_paths as _decode_fn  # type: ignore
+                from multi_coder_analysis.core.self_consistency import decode_paths_with_confidence
             from multi_coder_analysis.core.self_consistency import aggregate
 
             import pandas as pd
@@ -142,20 +143,37 @@ def execute(cfg: RunConfig) -> Path:
                         "Consistency": f"{conf:.2f}",
                     }
 
-                # legacy full-tree sampling path
-                pairs = _decode_fn(
-                    base_ctx,
-                    local_provider,
-                    cfg.model,
-                    votes=cfg.sc_votes,
-                    temperature=cfg.sc_temperature,
-                    top_k=cfg.sc_top_k,
-                    top_p=cfg.sc_top_p,
-                    ranked_list=cfg.ranked_list,
-                    max_candidates=cfg.max_candidates,
-                )
+                # Use confidence-enhanced decode_paths if confidence_scores enabled
+                if cfg.confidence_scores:
+                    pairs, confidence_data = decode_paths_with_confidence(
+                        base_ctx,
+                        local_provider,
+                        cfg.model,
+                        votes=cfg.sc_votes,
+                        temperature=cfg.sc_temperature,
+                        top_k=cfg.sc_top_k,
+                        top_p=cfg.sc_top_p,
+                        ranked_list=cfg.ranked_list,
+                        max_candidates=cfg.max_candidates,
+                        confidence_scores=cfg.confidence_scores,
+                    )
+                    
+                    frame, conf = aggregate(pairs, rule=cfg.sc_rule, confidence_data=confidence_data)
+                else:
+                    # legacy full-tree sampling path
+                    pairs = _decode_fn(
+                        base_ctx,
+                        local_provider,
+                        cfg.model,
+                        votes=cfg.sc_votes,
+                        temperature=cfg.sc_temperature,
+                        top_k=cfg.sc_top_k,
+                        top_p=cfg.sc_top_p,
+                        ranked_list=cfg.ranked_list,
+                        max_candidates=cfg.max_candidates,
+                    )
 
-                frame, conf = aggregate(pairs, rule=cfg.sc_rule)
+                    frame, conf = aggregate(pairs, rule=cfg.sc_rule)
 
                 # Usage already counted via @track_usage decorator
 
@@ -405,6 +423,8 @@ def execute(cfg: RunConfig) -> Path:
         batch_size=cfg.batch_size,
         regex_mode=cfg.regex_mode,
         shuffle_batches=cfg.shuffle_batches,
+        shuffle_segments=cfg.shuffle_segments,
+        skip_eval=cfg.skip_eval,
         token_accumulator=token_accumulator,  # type: ignore[arg-type]
         token_lock=token_lock,  # type: ignore[arg-type]
     )

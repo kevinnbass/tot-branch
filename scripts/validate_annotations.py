@@ -19,7 +19,7 @@ from collections import defaultdict
 # Add project root to path for imports
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
-from multi_coder_analysis.utils.prompt_loader import load_prompt_and_meta
+from scripts.annotation_prompt_loader import load_prompt_and_meta
 
 class AnnotationValidator:
     def __init__(self, project_root: Union[str, Path]):
@@ -76,17 +76,26 @@ class AnnotationValidator:
         
         current_rule = None
         for line in lines:
-            # Check for rule name
-            if line.strip().startswith('- name:'):
+            # Check for rule name - handle both formats: "- name:" and "  name:"
+            if 'name:' in line and not line.strip().startswith('#'):
                 rule_match = re.search(r'name:\s*(\S+)', line)
                 if rule_match:
                     current_rule = rule_match.group(1)
-                    self.regex_annotations[current_rule] = []
+                    if current_rule not in self.regex_annotations:
+                        self.regex_annotations[current_rule] = []
             
-            # Extract annotations from comments
-            if current_rule and '#' in line:
+            # Extract annotations from comments - store them with the last seen rule
+            # or as orphaned if no rule context
+            if '#' in line:
                 annotations = annotation_pattern.findall(line)
-                self.regex_annotations[current_rule].extend(annotations)
+                for annotation in annotations:
+                    if current_rule:
+                        self.regex_annotations[current_rule].append(annotation)
+                    else:
+                        # Handle orphaned annotations
+                        if '__orphaned__' not in self.regex_annotations:
+                            self.regex_annotations['__orphaned__'] = []
+                        self.regex_annotations['__orphaned__'].append(annotation)
     
     def _parse_prompt_files(self):
         """Parse all prompt files and extract metadata."""
@@ -120,7 +129,7 @@ class AnnotationValidator:
                     continue
                     
                 meta = self.prompt_metadata[hop_id]
-                if 'row_map' not in meta or annotation not in meta['row_map']:
+                if 'row_map' not in meta or meta['row_map'] is None or annotation not in meta['row_map']:
                     self.errors.append(f"Regex annotation '{annotation}' in rule '{rule_name}' has no corresponding row_map entry")
     
     def _check_prompt_to_regex_mapping(self):
@@ -166,7 +175,7 @@ class AnnotationValidator:
         # Collect all annotations from prompt side
         prompt_annotations = set()
         for meta in self.prompt_metadata.values():
-            if 'row_map' in meta:
+            if 'row_map' in meta and meta['row_map'] is not None:
                 prompt_annotations.update(meta['row_map'].keys())
         
         # Check for orphans
@@ -186,7 +195,7 @@ class AnnotationValidator:
         # This would require parsing prompt content to extract table rows
         # For now, just check that row_map keys follow expected pattern
         for hop_id, meta in self.prompt_metadata.items():
-            if 'row_map' not in meta:
+            if 'row_map' not in meta or meta['row_map'] is None:
                 continue
                 
             expected_prefix = hop_id
@@ -201,7 +210,7 @@ class AnnotationValidator:
         # Collect all referenced rules from prompts
         referenced_rules = set()
         for meta in self.prompt_metadata.values():
-            if 'regex_map' in meta:
+            if 'regex_map' in meta and meta['regex_map'] is not None:
                 for rule_list in meta['regex_map'].values():
                     for rule_ref in rule_list:
                         if '.' in rule_ref:
@@ -245,7 +254,7 @@ class AnnotationValidator:
         print(f"   • Prompt hops: {len(self.prompt_metadata)}")
         total_annotations = sum(len(anns) for anns in self.regex_annotations.values())
         print(f"   • Total regex annotations: {total_annotations}")
-        total_rows = sum(len(meta.get('row_map', {})) for meta in self.prompt_metadata.values())
+        total_rows = sum(len(meta.get('row_map') or {}) for meta in self.prompt_metadata.values())
         print(f"   • Total prompt rows: {total_rows}")
 
 

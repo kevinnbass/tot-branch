@@ -1,0 +1,489 @@
+# ------------------------------------------------------------------
+# Canonical regex catalogue for 12‑hop pipeline
+# File‑name:  hop_patterns.yml        (UTF‑8, no tabs)
+# ------------------------------------------------------------------
+# Schema
+#   <hop_number> (int) :
+#     - name          : CamelCase identifier (unique within hop)
+#       mode          : live | shadow           # default = live
+#       frame         : Alarmist | Reassuring | null
+#       pattern       : |-                      # block scalar, preserves NL
+#           <raw regex, unchanged>
+#       # veto_pattern: |-                      # optional
+#           <regex that cancels a positive hit>
+#
+# Notes
+# • Newlines are significant for readability—do **not** re‑wrap patterns.
+# • Indent the block scalar exactly two spaces so YAML treats the regex
+#   as literal text (nothing is escaped).
+# • Keep ordering by hop → pattern name; the engine preserves this order.
+# ------------------------------------------------------------------
+
+1:
+- name: IntensifierRiskAdjV2
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    # TECH_TERM_GUARD (2025-06-20)
+    (?ix)
+      \b(?:
+           highly\s+(?:pathogenic|contagious|transmissible|virulent) |
+           high[-\s]?pathogenic |
+           high[-\s]?path\B
+        )\b
+      (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
+      |
+      # NEGATION_GUARD (2025-06-26)
+      (?i)\b(?:nothing|no\s+(?:evidence|indication|data)|unlikely|does\s+not|do\s+not|did\s+not)\b
+         [^.]{0,50}?\b(?:become|is|are|was|were|grow|gets?|getting)\b
+      |
+      # LOW_RISK_LEADIN_GUARD (2025-06-26)
+      (?i)\blow\s+risk\b[^.]{0,30}?\bbut\b
+  # Added negative look‑behind to exclude "deadly toll", "deadly cost"
+  pattern: |-
+    (?i)    # case-insensitive once – faster compile
+    # block idioms unrelated to epidemiological danger
+    (?<!toll\s|cost\s|sins\s|silence\s|so\scalled\s)
+    \b(?:(?:highly(?!\s+(?:pathogenic|susceptible)\b))
+        |alarmingly|certainly|deadlier|definitely|ever[-\s]*more|extremely|
+        frighteningly|more|particularly|progressively|severely|so|unusually|very)  # A-Z order
+        (?:\s+\w+){0,3}\s+
+    (?:brutal|catastrophic|contagious|dangerous|deadly|destructive|
+       infectious|lethal|severe|transmissible|virulent)\b|
+    \bless\s+safe\b|                                       # (2025-06-23) comparative risk form
+    \bdeadly\s+from\s+(?:the\s+)?(?:start|outset)\b|
+    \bmost\s+(?:\w+\s+){0,2}?(?:deadly|destructive|dangerous|severe|catastrophic|devastating|virulent|contagious|lethal)\b
+    \b(?:incredibly|unbelievably|increasingly)\s+(?:\w+\s+){0,2}?(?:deadly|dangerous|severe|lethal|catastrophic|virulent|contagious)\b
+
+- name: H1.AutoIntensifierRiskAdj
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    # TECH_TERM_GUARD (2025-06-20)
+    (?ix)
+      \b(?:
+           highly\s+(?:pathogenic|contagious|transmissible|virulent) |
+           high[-\s]?pathogenic |
+           high[-\s]?path\B
+        )\b
+      (?=\s+(?:strain|bird\s+flu|avian(?:\s+flu|\s+influenza)?|h5n1|virus))
+  pattern: 
+    (?:highly|particularly)\s+(?:contagious|dangerous|deadly|infectious|lethal|transmissible)\b
+2:
+- name: HighPotencyVerbMetaphor
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    # (a) keep price-trend guard
+    \btrending\s+sharply\s+(?:higher|lower)\b
+    |
+    # (c) macro-context guard – price/temperature/inflation backdrop ≠ impact
+    \bsoar(?:ed|ing)?\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?|prices?|costs?|sales?)) |
+    \bplung(?:ed|ing)\b(?=\s+(?:inflation|interest[-\s]?rates?|temperatures?|prices?|costs?|sales?)) |
+    # (b) **containment override** – neutralise culling verbs so they fall
+    #     through to Q3 where the containment rule already handles them
+    (?i)\b(?:slaughter(?:ed|ing)?|culled?|destroyed?|euthan(?:iz|is)ed|
+           depopulated|disposed|buried)\b
+    |
+    # QUOTE_MILD_PHRASES_GUARD (2025-06-26)
+    (?i)\b(?:terrible\s+news|very\s+worried)\b
+  pattern: |-
+    # Hop-2 literal guard – keep "spark shortages" Neutral
+    (?i)
+    # Guard — "spark shortages" stays Neutral
+    (?!\b(?:spark|sparking)\s+shortage(?:s)?\b)
+
+    (?:
+      # vivid verbs / alert phrases
+      \b(?:ravaged|devastated|obliterated|skyrocketed|plummeted|crashed|nosedived|
+         tanked|exploding|raging|tearing\sthrough|
+         overwhelmed|crippling|spiralled?|ballooned|
+         writh(?:e|ed|ing)|convuls(?:e|ed|ing)|gasp(?:ing|ed)|twitch(?:ing|ed))\b
+      |
+      # verb first:  soar(ed/ing) + metric inside 20 chars after
+      \bsoar(?:ed|ing)?\b(?=[^.]{0,20}\b(?:cases?|prices?|costs?|loss(?:es)?|
+                                    deaths?|fatalities|production|output|
+                                    supply|shortages?)\b)
+      |
+      # metric first: metric … soar(ed/ing) inside 20 chars after
+      \b(?:cases?|prices?|costs?|loss(?:es)?|deaths?|fatalities|production|
+          output|supply|shortages?)\b[^.]{0,20}\bsoar(?:ed|ing)?\b
+      |
+      # superlative-negative nouns
+      \b(?:most|record(?:-breaking)?|worst)\s+\w{0,12}?
+           \s+(?:disaster|crisis|outbreak|catastrophe|calamity)\b
+      |
+      # potent metaphors (explicit list for deterministic hits)
+      \b(?:ticking\s+time-?bomb|nightmare\s+scenario|powder\s+keg|
+         house\s+of\s+cards|train\s+wreck|collateral\s+damage)\b
+      |
+      # "on high alert" forms
+      (?:on\s+high\s+alert(?=[^.]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|
+                                           threat|danger|risk)\b)|
+       (?:outbreak|virus|flu|disease|h5n1|threat|danger|risk)
+         \b[^.]{0,40}on\s+high\s+alert|
+       ^[^.]{0,60}\bon\s+high\s+alert\b)
+      |
+      # spark / stoke *panic-type* emotions  (plain "fears" stays Neutral)
+      \b(?:spark|stoke|fuel|reignit(?:e|ing|ed|es))\s+
+         (?:mass(?:ive)?\s+|widespread\s+|public\s+|nationwide\s+|
+            global\s+)?(?:panic|alarm|outrage|anxiety)\b
+      |
+      # intensifier + harm-noun (alphabetised for readability)
+      \b(?:enormous|gigantic|huge|immense|major|massive|
+         record(?:-breaking)?|severe|significant|unprecedented|vast)\s+
+         (?:crisis|damage|deaths?|disaster|fatalities|
+         loss(?:es)?|mortality|outbreaks?|shortages?|toll)\b
+    )
+
+# 2025-06-20 • Zero-FP rule promoted to live
+- name: OnHighAlert.Live
+  mode: live
+  frame: Alarmist
+  pattern: (?ix)\bon\W+high\W+alert\b
+
+3:
+- name: ModerateVerbPlusScale
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    \b(hit|hitting|swept|sweeping|surged|soared|plunged|plummeted|
+       spiked|jumped|shot\s+up|prompted(?!\s+authorities\s+to\s+consider))\b
+    (?=[^.]{0,120}\b(?:\d|%|percent|hundred|hundreds|thousand|thousands|million|millions|billion|billions|record|
+                     largest|unprecedented|severe|significant|overwhelming|
+                     devastating|disasters?|emergenc(?:y|ies))\b)
+    (?![^.]{0,20}\bfear(?:s|ed|ing)?\b)   # guard: psychological verbs ≠ impact
+
+    # 2025-06-18 containment-verb veto – keeps large-scale culling Neutral
+  veto_pattern: |-
+    # CONTAINMENT_GUARD (pre-existing)
+    (?i)\b(?:culled?|euthani[sz]ed|destroyed|depopulated|slaughtered|disposed|buried)\b
+    |
+    # ECON_METRIC_GUARD (2025-06-26)
+    (?ix)
+      # classic price / revenue / sales language
+      \b(?:price|prices|cost|costs|sales?|revenue|profit(?:s)?)\b
+        [^.]{0,40}?\b(?:hit|hitting|jumped|jumping|spiked|shot\W+up|soared|surged|plunged|plummeted)\b
+      |
+      # idiom "hard hit" (false Alarmist)
+      \bhard\W+hit\b
+
+- name: ScaleMultiplier
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    (?i)\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+  veto_pattern: |-
+    # ECON_METRIC_GUARD (2025-06-26)
+    (?ix)
+      \b(?:price|prices|cost|costs|sales?|revenue|profit(?:s)?|value)\b
+      [^.]{0,40}?\b(?:double[ds]?|triple[ds]?|quadruple[ds]?|ten[-\s]*fold)\b
+
+4:
+- name: LoadedQuestionAlarm
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    \b(?:should|can|could|will)\s+\w+\s+(?:be\s+)?(?:worried|concerned|afraid)\b
+    (?=[^.?]{0,40}\b(?:outbreak|virus|flu|disease|h5n1|threat|danger|
+                     risk|infection|infected)\b)
+    |
+    # Rhetorical necessity-of-killing question (captures 'necessary to kill millions...')
+    \b(?:is|are|was|were)\s+it\s+(?:really\s+)?necessary\s+to\s+
+        (?:kill|cull|slaughter|destroy|euthan(?:ize|ise))\b
+        [^?]{0,60}?\b(?:millions?|thousands?|record|\d{1,3}(?:[, ]\d{3})+)\b
+    |
+    # safety-question pattern (2025-06-23)
+    \b(?:is|are|was|were)\s+it\s+(?:really\s+)?safe\s+to\b
+    |
+    # "How many more … have to die?” rhetorical question
+    \bhow\s+many\s+more\s+\w+\s+have\s+to\s+(?:die|be\s+killed|be\s+culled|perish)\b
+
+  # --- 2025-06-18 addition: Challenge-question over inaction ---
+
+- name: WhatIfQuestion
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    (?i)\bwhat\s+if\s+(?:we|this|the\s+\w+)\b
+
+- name: IgnoreDisasterQ
+  mode: live
+  frame: Alarmist
+  pattern: |-
+    (?i)\bhow\s+long\s+can\s+we\s+(?:afford\s+to\s+)?(?:ignore|stand\s+by)\b
+
+5:
+- name: ExplicitCalming
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    \bwe\b(?:\s*\[[^\]]+\]\s*)?\s+(?:are|remain|feel)\s+
+        (?:confident|positive|optimistic|hopeful)\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
+    \b(?:are|feel)\s+(?:confident|positive|optimistic|hopeful)\s+in\s+(?:\w+\s+){0,8}?(?:preparedness|readiness|ability)\b|
+    \b(?:no\s+cause\s+for\s+alarm|
+        public\s+can\s+rest\s+easy|
+        fully\s+under\s+control|
+        rest\s+assured|
+        completely\s+safe|
+        (risk|likelihood|chance)\s+(?:of\s+\w+\s+)?(?:is|are|remains|stay|stays)\s+(?:very|extremely|exceptionally|remarkably)\s+low|
+        (?:is|are|remains|remain|stay|stays)\s+(?:completely\s+|totally\s+|perfectly\s+|entirely\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption|for\s+(?:all\s+)?(?:consumers?|people|humans|residents|citizens))|
+        \b(?:encouraging|welcome|heartening|excellent)\s+news\b|
+        \bwonderfully\s+high\b|
+        \bvery\s+well\s+protected\b|
+        \bprovid(?:ing|es)\s+relief\b|
+        \bshort[-\s]?term\s+blip\b|
+        \btemporary\s+setback\b|
+        (?:expected|likely|set)\s+to\s+resolve\s+quickly\b|
+        \bthankfully\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b|
+        \b(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)
+          .{0,40}\b(?:public|consumers?|customers?|people|residents|citizens)\b|
+        \b[Ff]ortunately\b[^.]{0,40}\b(?:consumers?|public|residents|citizens|people)\b)
+    | # generic optimism/confidence without "in X" clause
+    \b(?:i|we|they|officials?|authorities?)\s+
+      (?:feel|are)\s+
+      (?:positive|optimistic|hopeful)\s+
+      (?:that|about)\b
+
+- name: ExplicitCalming.SafeToEat.Live
+  mode: live
+  frame: Reassuring
+  pattern: |
+    \b(remains?|is|are)\s+(?:perfectly\s+)?safe\s+(?:to\s+eat|for\s+(?:human\s+)?consumption)\b
+
+# 2025-06-20 • Zero-FP rules promoted to live
+- name: DirectNoConcern.Live
+  mode: live
+  frame: Reassuring
+  pattern: (?ix)\bno\W+cause\W+for\W+(?:alarm|concern)\b
+
+- name: NothingToWorry.Live
+  mode: live
+  frame: Reassuring
+  pattern: (?ix)\bnothing\W+to\W+worry\W+about\b
+
+- name: LowRiskEval.Theoretical
+  mode: live
+  frame: Reassuring
+  pattern: (?i)\b(?:purely\s+)?theoretical\s+risk\b
+
+- name: LowRiskBare.Neutral
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?ix)
+      \brisks?                                    # "risk" or "risks"
+      (?:\s+to\s+(?:the\s+)?(?:public|general\s+public|consumers?|people))?
+      \s+(?:is|are|remain|remains|stay|stays|
+          appears|appear|seems|seem)\s+
+      low\b
+
+6:
+- name: MinimiserScaleContrast
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    # minimiser MUST be paired with an explicit denominator token
+    (?i)
+    \b(?:only|just|merely|a\s+single|very\s+few|relatively\s+few|no\s+more\s+than)\b
+         [^.;\n]{0,30}
+         \b(?:out\s+of|one\s+of|one\s+in|among|nationwide|statewide|across|worldwide|globally)\b
+         [^.;\n]{0,30}\b(?:hundred|thousand|million|billion|
+                        \d{1,3}(?:[, ]\d{3})*|\d+)\b
+    |
+    \b(?:only|just|merely)\s+\d+(?:[.,]\d+)?\s*(?:%|percent|per\s+cent)\b
+    |
+    \b(?:only|just|merely)\s+one\b[^.]{0,120}
+         \b(?:of|in|among)\b[^.]{0,20}\bthousands?\b
+    |
+    # allow dash or parenthesis between parts
+    \b(?:only|just|merely|a\s+single|very\s+few)\b
+         [^.;\n]{0,50}?\b                  # tolerant gap
+         \b(out\s+of|among|in|of)\b
+         [^.;\n]{0,50}?\b(total|overall|population|flocks?|barns?|nationwide|worldwide|global(?:ly)?)\b
+
+7:
+- name: BareNegationHealthConcern
+  mode: live
+  frame: Neutral
+  pattern: |-
+    \b(?:do|does|did|is|are|was|were|will|would|should)\s+(?:not|n't)\s+
+       (?:pose|present|constitute)\s+(?:an?\s+)?(?:immediate\s+)?(?:public\s+)?health\s+concern\b
+    |
+    \bno\s+(?:human|americans?|animal|bird|poultry)\s+cases?\s+
+       (?:have|has|are|were)\s+(?:been\s+)?(?:detected|reported|
+                                          recorded|found|identified)\b
+    |
+    \b(?:will|would|can|could)\s+not\s+enter\s+the\s+food\s+(?:system|chain|supply)\b
+    |
+    \b(?:tests?|samples?)\s+(?:came|come|were|was)\s+negative\b
+    |
+    \b(?:does|do|is|are|will|would|should)\s+(?:not|n't)\s+
+       pose\s+(?:an?\s+)?(?:any\s+)?risk\b
+    |
+    \b(?:pose|present|constitute)\s+no\s+(?:public\s+)?health\s+(?:threat|risk)\b
+    |
+    \bno\s+(?:sign|indication|evidence)\s+of\s+(?:spread|transmission)\b
+    |
+    \b(?:is|are|was|were|will|would|could|may|might|should)\s+unlikely\s+to\s+
+       (?:affect|impact|cause|pose|present|enter|spread|infect)\b
+    |
+    \b(?:has|have|had|did)\s+(?:not|n't)\s+
+        detect(?:ed)?\s+(?:any\s+)?(?:further|additional|new)\s+
+        (?:positive\s+)?samples?\b
+
+- name: BareNegation.PosesNoRisk.Live
+  mode: live
+  frame: Neutral
+  pattern: |
+    \b(?:poses?|present(?:s)?)\s+no\s+risk\b
+
+- name: BareNegation.NotContaminate.Live
+  mode: live
+  frame: Reassuring        # was Neutral, changed 2025-06-26
+  pattern: |-
+    (?ix)
+    \b(?:has|have|does|do|did)\b
+    \s+(?:not|n't|never|yet\s+to)\s+
+    (?:contaminat(?:e|ed)|infect(?:ed)?)\b
+    (?=[^.]{0,40}\b(?:food\s+(?:system|chain|supply)|table)\b)
+
+# NEW — 2025-06-20 -----------------------------------------------------------
+- name: BareNegation.NoFurtherCases.Live
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?i)\b(?:has|have|had|did)\s+(?:not|n't)\s+
+         (?:detected|identified|reported|found)\s+
+         (?:any\s+)?(?:further|additional|new)\s+cases?\b
+
+# NEW — 2025-06-20 -----------------------------------------------------------  
+- name: BareNegation.NothingSuggests.Live
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?ix)
+    \bnothing\s+(?:currently\s+)?(?:in\s+the\s+)?
+    (?:data|evidence|sequence|analysis|results)?\s*suggests?
+    \s+(?:that\s+)?(?:the\s+)?(?:virus|situation)?\s+
+    (?:has\s+become|is|will\s+be|has\s+grown)\s+
+    (?:more\s+)?(?:dangerous|contagious|infectious|severe|deadly|threatening)\b
+
+# 2025-06-20 • Zero-FP rule promoted to live
+- name: NoThreatNeutral.Live
+  mode: live
+  frame: Neutral
+  pattern: (?ix)\bdoes\W+not\W+pose\W+a?\W+threat\b
+
+8:
+- name: CapabilityNoReassurance
+  mode: shadow        # was live; rule deprecated 2025-06-26
+  frame: Neutral
+  pattern: |-
+    (?i)
+    \b(?:(?:fully|well)\s+(?:prepared|ready)\s+(?:to\s+(?:handle|deal\s+with)|for)\b(?![^.]{0,40}\b(?:consumers?|customers?|people|public|residents|citizens)\b)|
+       (?:capability|contain|develop|implement|measure|
+       monitor(?:ing)?|officials|plan|prepare|protocol|
+       resource(?:s)?|safeguard|stockpile(?:d|s|ing)?|
+       surveillance|system|vaccine|work))\b
+
+9:
+- name: NeutralPriceMetrics
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?is)
+    \b(?:
+          # economic nouns
+          (?:prices?|rates?|costs?|loss(?:es)?|profit(?:s)?|revenue|
+             value|export(?:s)?|import(?:s)?|sale(?:s)?|output|production)
+          \b[^.]{0,120}?                     # allow anything up to the verb (≤ one sentence)
+          (?:rose|declined|increased|fell|dropped|gained|lost)\b
+        | # "prices were up /down 2 %" form
+          (?:prices?|rates?)\s+(?:were|was)\s+(?:up|down)\s+\d+(?:[.,]\d+)?\s*%
+        | # PATCH 2b – claim "trending sharply higher/lower" as Neutral
+          \b(?:prices?|costs?|rates?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)\b
+            [^.]{0,50}?\btrending\s+sharply\s+(?:higher|lower)\b
+        | # volatility (neutral)
+          \b(?:prices?|rates?|costs?|values?|export(?:s)?|import(?:s)?|sale(?:s)?)\b
+            [^.]{0,80}?\b(?:be(?:come|came|coming)|are|were)\s+(?:more\s+)?volatile\b
+    )
+
+10:
+- name: ReliefSpeculation
+  mode: live
+  frame: Neutral
+  pattern: |-
+    \b(may\ be|could|might|expect.{1,15}improve|predict.{1,15}ease|hope.{1,15}better)\b
+
+11:
+  # ─────────────────────────────────────────────────────────────
+  #  Hop 11 – "Primacy of Framed Quotations"
+  #  Two explicit patterns:
+  #    • DominantQuoteAlarmist     → frame: Alarmist
+  #    • DominantQuoteReassuring   → frame: Reassuring
+  #  First match wins; if both miss, the LLM prompt executes.
+  # ─────────────────────────────────────────────────────────────
+
+- name: DominantQuoteAlarmist
+  mode: live
+  frame: Alarmist
+  veto_pattern: |-
+    (?i)\bhighly\s+pathogenic\s+(?:avian\s+flu|influenza|avian)\b
+  pattern: |-
+    (?is)                                    # i=ignore case, s=dot=nl
+    ["'\u2018\u2019\u201C\u201D]             # opening quote (straight or curly)
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?    # up to 600 chars inside
+    \b(?:                                     # key alarmist cues
+         (?:extremely|highly|very|deeply|incredibly|particularly|
+            frighteningly|definitely|certainly)\s+\w{0,3}\s+
+               (?:concerning|alarming|worrying|dangerous|severe|
+                  catastrophic|critical|high[-\s]*risk)
+       | period\s+of\s+high[-\s]*risk
+       | requires\s+immediate\s+action
+       | (?:troubling|dire)\s+situation
+      )\b
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    ["'\u2018\u2019\u201C\u201D]             # closing quote
+
+- name: DominantQuoteReassuring
+  mode: live
+  frame: Reassuring
+  pattern: |-
+    (?is)
+    ["'\u2018\u2019\u201C\u201D]
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    \b(?:                                     # key reassuring cues
+         no\s+cause\s+for\s+alarm
+       | fully\s+under\s+control
+       | excellent\s+news
+       | very\s+well\s+protected
+       | risk\s+(?:is|remains|stays)\s+
+             (?:very|extremely|exceptionally|remarkably)\s+low
+       | (?:completely|totally|entirely|perfectly|absolutely)\s+safe
+       | wholly\s+under\s+control
+       | safe\s+to\s+eat
+      )\b
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    ["'\u2018\u2019\u201C\u201D]
+
+- name: BaseRiskAdjQuoteNeutral          # NEW – blocks base risk adj only
+  mode: live
+  frame: Neutral
+  pattern: |-
+    (?is)
+    ["'\u2018\u2019\u201C\u201D]             # opening quote
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?    # quote body
+    \b(?:deadly|dangerous|severe|lethal|virulent|contagious|catastrophic)\b
+    (?![^"'\u2018\u2019\u201C\u201D]{0,60}?
+        (?:extremely|highly|very|deeply|incredibly|particularly|
+           frighteningly|definitely|certainly|so|more|deadlier)\b)
+    [^"'\u2018\u2019\u201C\u201D]{0,600}?
+    ["'\u2018\u2019\u201C\u201D]
+
+12:
+- name: NeutralStats
+  mode: live
+  frame: Neutral
+  pattern: |-
+    \b(report|document|state|announce|confirm|detect|identify|record)\w*\b.*\b(cases|deaths|losses|rates|numbers|percent)\b

@@ -1,0 +1,41 @@
+{
+  "best_layout": "hop_last",
+  "best_accuracy": 1.0,
+  "best_avg_f1": 1.0,
+  "results": [
+    {
+      "Layout": "hop_last",
+      "Accuracy": 1.0,
+      "Precision_Alarmist": 0,
+      "Recall_Alarmist": 0,
+      "F1_Alarmist": 0,
+      "Precision_Neutral": 1.0,
+      "Recall_Neutral": 1.0,
+      "F1_Neutral": 1.0,
+      "Precision_Reassuring": 0,
+      "Recall_Reassuring": 0,
+      "F1_Reassuring": 0,
+      "Duration_Seconds": 62.351288,
+      "Avg_F1": 1.0
+    },
+    {
+      "Layout": "standard",
+      "Accuracy": 1.0,
+      "Precision_Alarmist": 0,
+      "Recall_Alarmist": 0,
+      "F1_Alarmist": 0,
+      "Precision_Neutral": 1.0,
+      "Recall_Neutral": 1.0,
+      "F1_Neutral": 1.0,
+      "Precision_Reassuring": 0,
+      "Recall_Reassuring": 0,
+      "F1_Reassuring": 0,
+      "Duration_Seconds": 80.54584,
+      "Avg_F1": 1.0
+    }
+  ],
+  "experiment_dir": "output\\layout_experiments\\20250628_075320",
+  "total_experiments": 2,
+  "successful_experiments": 2,
+  "failed_experiments": 0
+}

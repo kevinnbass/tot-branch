@@ -1,0 +1,90 @@
+---
+meta_id: Q7
+row_map:
+  Q7.1: Expectation Negations
+  Q7.2: Evidence Negations
+  Q7.3: Risk Negations
+  Q7.4: Capability Negations
+regex_map:
+  Q7.1: [7.BareNegationHealthConcern, 7.BareNegation.NothingSuggests.Live]
+  Q7.2: [7.BareNegationHealthConcern, 7.BareNegation.NoFurtherCases.Live]
+  Q7.3: [7.BareNegationHealthConcern, 7.BareNegation.PosesNoRisk.Live, 7.NoThreatNeutral.Live]
+  Q7.4: [7.BareNegationHealthConcern, 7.BareNegation.NotContaminate.Live]
+frame: Neutral
+summary: "Bare negation without explicit calming cue"
+---
+### QUICK DECISION CHECK
+• Sentence shows BARE NEGATION (**NO / NOT / UNLIKELY / POSES NO RISK / NO EVIDENCE / DOES NOT**) **AND** lacks any calming keyword **or optimism adjective** (**welcome / encouraging / heartening / positive / optimistic / upbeat**)?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: Officials stated the new variant is not expected to be more severe.
+## Question: Does the segment contain a 'bare negation' without explicit calming cue?
+## JSON Output:
+{"answer":"yes","rationale":"'not expected to be more severe' is a bare negation without additional calming language."}
+
+# NO example
+## Input Segment: Officials stated the variant is not expected to be more severe, so there's no need for public concern.
+## Question: Does the segment contain a 'bare negation' without explicit calming cue?
+## JSON Output:
+{"answer":"no","rationale":"'so there's no need for public concern' adds explicit calming cue to the negation."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q7
+**Q7: Bare Negation without Explicit Calming Cue**
+Does the segment merely state a 'bare negation' (e.g., 'not expected to cause problems,' 'unlikely to affect X,' 'no human cases detected,' 'tests were negative') WITHOUT any accompanying explicit calming cue from the author/source that actively frames this as reassuring about the broader situation, as detailed in the rules?
+
+**🔍 Q7 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Neutral** |
+|------------------|--------------|---------------|
+<!-- Q7.1 -->
+| **Expectation Negations** | "not expected to cause problems," "unlikely to affect consumers," "not anticipated to impact" | ✓ |
+<!-- Q7.2 -->
+| **Evidence Negations** | "no evidence of transmission," "no human cases detected," "tests were negative" | ✓ |
+<!-- Q7.3 -->
+| **Risk Negations** | "doesn't pose a risk," "will not impact food supply," "not expected to enter" | ✓ |
+<!-- Q7.4 -->
+| **Capability Negations** | "viruses do not transmit easily," "cannot survive in," "does not spread through" | ✓ |
+| **Bare Negation + Calming Cue** | "no cases detected, so consumers can be confident," "unlikely to affect supply, keeping risk very low" | → Reassuring |
+
+**Outcome:** Yes → Label: Neutral. No → Proceed to Q8.
+
+**🔍 Detailed Rules & Examples:**
+
+**⚠️ Additional problematic phrasings that remain NEUTRAL:**
+- "unlikely to affect consumers"
+- "no evidence of transmission"  
+- "doesn't pose a risk to humans"
+- "not expected to cause problems"
+- "will not impact food supply"
+
+**Reassurance requires a second clause that explicitly spells out calm/safety.**
+
+**Examples:**
+* **Neutral (Bare Negation):** "Officials stated the new variant is not expected to be more severe."
+* **Reassuring (Bare Negation + Calming Cue):** "Officials stated the new variant is not expected to be more severe, meaning current health measures remain effective and there's no need for additional public concern."
+
+### Additional example
+* "The cases **do not present an immediate public-health concern**." → Neutral (bare negation).
+
+**CLARIFICATION** – "will **not** enter the food system" and similar bare-negation
+statements remain **Neutral** unless followed by an explicit calming cue
+(e.g., "…so consumers can rest easy").
+
+**Canonical bare‑negation cheat‑sheet (memorise):**  
+`poses no risk`, `unlikely to cause`, `no evidence of`, `not expected to`,
+`does not affect`, `cannot spread to`, **"does not pose a threat"**
+
+*If you see one of these **and no calming keywords from Q5** → answer "yes".*
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

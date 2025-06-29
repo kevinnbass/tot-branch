@@ -1,0 +1,18 @@
+## Q12  DEFAULT NEUTRAL
+
+If none of Q1–Q11 fired, label Neutral.
+
+Ex Neutral → factual report with no intensifiers or calming language.
+
+=== SEGMENT ===
+{{text}}
+
+Q12_DefaultNeutral? → yes / no
+```json
+{"frame":"Neutral", "cue":""}
+```
+
+✅ SELF-AUDIT
+1 Did you cite the cue?
+2 No double frames.
+3 Pure JSON only. 
