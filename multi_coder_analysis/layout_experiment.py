@@ -17,13 +17,17 @@ from .run_multi_coder_tot import run_coding_step_tot, calculate_metrics
 from .layout_config import LayoutExperimentConfig
 
 
-# All 13 available layouts
+# All 17 available layouts (including enhanced cue detection JSON and machine-readable variants)
 ALL_LAYOUTS = [
     # Original 5
     'standard', 'recency', 'sandwich', 'minimal_system', 'question_first',
     # New 8
     'hop_last', 'structured_json', 'segment_focus', 'instruction_first',
-    'parallel_analysis', 'evidence_based', 'xml_structured', 'primacy_recency'
+    'parallel_analysis', 'evidence_based', 'xml_structured', 'primacy_recency',
+    # Enhanced cue detection JSON layouts
+    'cue_detection_enhanced_json', 'cue_detection_enhanced_json_batch',
+    # Machine-readable ultra-compact layouts
+    'cue_detection_enhanced_machine', 'cue_detection_enhanced_machine_batch'
 ]
 
 # New minimal_system variations for Phase 1

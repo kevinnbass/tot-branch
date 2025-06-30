@@ -1,0 +1,20 @@
+---
+meta_id: Q9
+frame: Neutral
+summary: "Factual reporting of prices/metrics"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q9 – Neutral Economic Metrics
+If CUE_MAP shows a *Neutral Economic Metric* cue (standard verbs like "rose", "%", "decreased by", etc.) **and** no vivid verbs or risk adjectives, answer "yes".
+
+Otherwise "no" (or "uncertain").
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote metric if yes>"
+}
+``` 

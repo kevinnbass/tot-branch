@@ -1,0 +1,24 @@
+---
+meta_id: Q4
+frame: Alarmist
+summary: "Loaded rhetorical question for alarm"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q4
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q4.1: Loaded Questions (Worry/Fear)`
+- `Q4.2: Loaded Questions (Inaction)`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

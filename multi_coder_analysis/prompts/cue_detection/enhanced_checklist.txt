@@ -1,0 +1,402 @@
+# ENHANCED CUE DETECTION CHECKLIST
+This checklist contains ALL rules, guards, exclusions, and examples from the original hop prompts.
+It serves as the single source of truth for frame detection.
+
+## HOW TO USE THIS CHECKLIST
+
+1. Read the segment carefully
+2. For each pattern below, check if it applies
+3. Pay attention to ALL exclusions and guards
+4. Mark patterns as PRESENT or ABSENT in your CUE_MAP
+5. Use the CUE_MAP to answer hop questions
+
+---
+
+# ALARMIST CUES
+Patterns that indicate an alarmist framing of the information.
+
+---
+### Pattern: Q1: Base Risk-Adj (alone)
+**Frame:** Alarmist
+**Hop:** Q1
+**QUICK CHECK:** • Contains INTENSIFIER (**SO / VERY / EXTREMELY / HIGHLY / FRIGHTENINGLY / MORE / DEADLIER**) **AND** RISK‑ADJ (**DEADLY / DANGEROUS / SEVERE / CATASTROPHIC / LETHAL / CONTAGIOUS / VIRULENT / DESTRUCTIVE**) in the **same clause**?  
+• Skip if it's the taxonomic phrase **"highly pathogenic (avian) influenza / HPAI"**.  
+→ If yes → `"yes"`; else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "deadly," "dangerous," "severe" (without intensifier)
+
+**INCLUSION CRITERIA:**
+- Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)
+
+**GUARDS & REQUIREMENTS:**
+- *BUT** if the same term is paired with *any intensifier or emotive verb* → **Alarmist (Precedence #1)**
+- (See **TECH_TERM_GUARD** in `global_header.txt`.)*
+
+**CLARIFICATIONS:**
+- ** These terms when modified by an intensifier (e.g., 'so deadly,' 'extremely fatal,' 'particularly lethal,' 'frighteningly deadly') are Alarmist. Without such direct intensification, "deadly" (etc.) describing a factual characteristic (e.g., 'Avian flu can be deadly in domestic poultry') is typically Neutral unless other alarmist cues are present.
+- TECHNICAL OR CLINICAL TERMS**  
+A term like *deadly, lethal, fatal* **by itself** can still be Neutral when used *clinically* (e.g. "lethal dose 50").  
+**BUT** if the same term is paired with *any intensifier or emotive verb* → **Alarmist (Precedence #1)**
+
+
+---
+### Pattern: Q2: Neutral Economic Trend
+**Frame:** Alarmist
+**Hop:** Q2
+**QUICK CHECK:** • Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
+  **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "prices are trending sharply higher/lower"
+
+**INCLUSION CRITERIA:**
+- Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+- Superlative
+- "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+- Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+
+**DETAILED EXAMPLES:**
+- Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+- Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+
+**CLARIFICATIONS:**
+- Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+- Emotional reactions alone ≠ vivid language:** Simple emotional descriptors without vivid verbs/metaphors stay Neutral.
+- ✗ "very sad" (bare emotion)
+- ✓ "devastating heartbreak" (vivid + emotion)
+
+
+---
+### Pattern: Q2: Moderate Verbs (alone)
+**Frame:** Alarmist
+**Hop:** Q2
+**QUICK CHECK:** • Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
+  **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "hit," "swept," "surged" (without scale/impact details)
+
+**INCLUSION CRITERIA:**
+- Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+- Superlative
+- "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+- Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+
+**DETAILED EXAMPLES:**
+- Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+- Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+
+**CLARIFICATIONS:**
+- Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+- Emotional reactions alone ≠ vivid language:** Simple emotional descriptors without vivid verbs/metaphors stay Neutral.
+- ✗ "very sad" (bare emotion)
+- ✓ "devastating heartbreak" (vivid + emotion)
+
+
+---
+### Pattern: Q2: Psychological Verbs
+**Frame:** Alarmist
+**Hop:** Q2
+**QUICK CHECK:** • Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
+  **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "spark fears," "stoke concern," "reignite worries" *without* vivid intensifier or scale
+
+**INCLUSION CRITERIA:**
+- Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+- Superlative
+- "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+- Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+
+**DETAILED EXAMPLES:**
+- Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+- Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+
+**CLARIFICATIONS:**
+- Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+- Emotional reactions alone ≠ vivid language:** Simple emotional descriptors without vivid verbs/metaphors stay Neutral.
+- ✗ "very sad" (bare emotion)
+- ✓ "devastating heartbreak" (vivid + emotion)
+
+
+---
+### Pattern: Q3: Moderate verbs + scale/impact
+**Frame:** Alarmist
+**Hop:** Q3
+**QUICK CHECK:** • Contains MODERATE VERB (**HIT / SWEPT / SOARED / SURGED / PLUMMETED / PROMPTED / SPIKED / PEAKED / JUMPED / SHOT UP / HARD HIT**) **AND** explicit SCALE token (digit / MILLION / THOUSAND / % / RECORD / UNPRECEDENTED) in same sentence?  
+• Ignore if action is only *planned* (e.g. "to consider culling").  
+→ If yes → `"yes"`; else → `"no"`.
+
+**INCLUSION CRITERIA:**
+- Author: "The region was severely hit by the virus, resulting in record losses." (Alarmist → Author's use of "severely hit" and "record losses" to describe large-scale harm, assuming no overriding framed quote.)
+- Author: 'From Wyoming to Maine, the highly contagious bird flu swept across farms and backyard flocks, prompting millions of chickens and turkeys to be culled.' (Alarmist → The author's use of 'swept across' combined with 'highly contagious' and the large-scale consequence 'millions...culled' creates an alarmist depiction of an overwhelming, uncontrolled event, assuming no overriding framed quote.)
+
+**DETAILED EXAMPLES:**
+- Numerical quantities: "millions," "thousands," "50%," "record numbers"
+- Comparative terms: "largest," "highest," "most severe," "unprecedented"
+- Impact descriptors: "overwhelming," "devastating losses," "widespread damage"
+
+>
+
+**CLARIFICATIONS:**
+- **
+The containment-override is **suspended** if the scale is described with extreme language (e.g., "brutally destroyed 3 million", "devastating culling of millions"). In such cases, Q3 can still fire for the extreme framing of the scale itself.
+- NEW NOTE – 2025-06-18
+Containment verbs (culled, euthanised, destroyed, depopulated) **always neutralise** a preceding ModerateVerb + Scale pattern. Do NOT fire Q3 unless an additional vivid/emotive cue is present.
+- Containment-Override Exception:**
+The containment-override is **suspended** if the scale is described with extreme language (e.g., "brutally destroyed 3 million", "devastating culling of millions"). In such cases, Q3 can still fire for the extreme framing of the scale itself.
+
+
+---
+### Pattern: Q4: Neutral Information-Seeking
+**Frame:** Alarmist
+**Hop:** Q4
+**QUICK CHECK:** • Sentence is a QUESTION starting with **SHOULD / CAN / COULD / WILL / WHAT IF / HOW LONG** **AND** includes **WORRIED / CONCERNED / AFRAID / IGNORE / STAND BY**?  
+→ If yes → `"yes"`; else → `"no"`.
+• Regex now pre-catches **"Is it safe to …?"** and **"How many more … have to die?"** rhetorical questions; you can ignore those.
+
+**PATTERN EXAMPLES:**
+- "What are the safety protocols?" "When will results be available?"
+
+**INCLUSION CRITERIA:**
+- Direct questions from the author that use explicitly loaded or emotionally charged language clearly designed to imply an Alarmist frame or instill fear/urgency in the reader.
+
+
+---
+
+# REASSURING CUES
+Patterns that indicate a reassuring framing of the information.
+
+---
+### Pattern: Q5: Explicit calming cue for reassurance
+**Frame:** Reassuring
+**Hop:** Q5
+**QUICK CHECK:** Does the segment contain ANY of these explicit reassurance markers?
+• **Safety/Control**: SAFE / NO CAUSE FOR ALARM / UNDER CONTROL / REST EASY
+• **Confidence**: CONFIDENT / ENCOURAGED / OPTIMISTIC / EXCELLENT NEWS
+• **Supply**: NO SHORTAGE / AMPLE SUPPLY / PLENTY / SHELVES FULL
+• **Risk**: RISK IS *VERY* LOW / DON'T PANIC / NO NEED TO PANIC
+
+**If YES and from official/author** → Check detailed patterns below
+**If NO** → Skip to `"no"`
+
+**CLARIFICATIONS:**
+- ** (1) Official source AND (2) Safety link ≤40 chars |
+- **
+
+
+---
+### Pattern: Q6: Minimiser without Scale
+**Frame:** Reassuring
+**Hop:** Q6
+**QUICK CHECK:** • Contains MINIMISER (**ONLY / JUST / MERELY / A SINGLE / VERY FEW / RELATIVELY FEW**) **AND** denominator marker (**OUT OF / AMONG / ONE OF / AMONG MILLIONS / NATIONWIDE**) in same sentence or immediately adjacent (≤20 chars)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "only three samples showed irregularity" (no "out of X")
+
+**GUARDS & REQUIREMENTS:**
+- ✓ "Only 3 farms out of 1000" (minimizes outbreak scope)
+- ✗ "The lone symptom was conjunctivitis" (describes single patient)
+
+> **Clarification** A **bare numeral (e.g., "1", "one") is *not* a minimiser**  
+> unless it is **preceded by** one of the lexical cues above.  
+> - Example (Neutral): "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+
+The combination should create an overall reassuring effect about the limited scope or impact of an issue.
+- *Examples:**
+- **Reassuring:** "While there were concerns, only 3 out of 5,000 tested samples showed any irregularity, indicating the problem is not widespread." → Reassuring.
+- **Non-Example (Missing Contrast):** "Only 3 samples showed irregularity." → Could be Neutral if the "out of X" contrast is missing and no other reassuring cues are present.
+- *Guard clause** – If no *minimiser token* **or** no explicit denominator is found, fall through to **Q7 bare‑negation**.
+
+**CLARIFICATIONS:**
+- "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+- Scope Requirement:** The minimizer must apply to outbreak/population risk, NOT individual case descriptions.
+- ✓ "Only 3 farms out of 1000" (minimizes outbreak scope)
+- ✗ "The lone symptom was conjunctivitis" (describes single patient)
+
+
+---
+### Pattern: Q6: Scale without Minimiser
+**Frame:** Reassuring
+**Hop:** Q6
+**QUICK CHECK:** • Contains MINIMISER (**ONLY / JUST / MERELY / A SINGLE / VERY FEW / RELATIVELY FEW**) **AND** denominator marker (**OUT OF / AMONG / ONE OF / AMONG MILLIONS / NATIONWIDE**) in same sentence or immediately adjacent (≤20 chars)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "one barn among thousands" (no "only/just/merely/**a single/few**")
+
+**GUARDS & REQUIREMENTS:**
+- ✓ "Only 3 farms out of 1000" (minimizes outbreak scope)
+- ✗ "The lone symptom was conjunctivitis" (describes single patient)
+
+> **Clarification** A **bare numeral (e.g., "1", "one") is *not* a minimiser**  
+> unless it is **preceded by** one of the lexical cues above.  
+> - Example (Neutral): "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+
+The combination should create an overall reassuring effect about the limited scope or impact of an issue.
+- *Examples:**
+- **Reassuring:** "While there were concerns, only 3 out of 5,000 tested samples showed any irregularity, indicating the problem is not widespread." → Reassuring.
+- **Non-Example (Missing Contrast):** "Only 3 samples showed irregularity." → Could be Neutral if the "out of X" contrast is missing and no other reassuring cues are present.
+- *Guard clause** – If no *minimiser token* **or** no explicit denominator is found, fall through to **Q7 bare‑negation**.
+
+**CLARIFICATIONS:**
+- "One barn among thousands was infected."  
+> - Example (Reassuring): "Only one barn among thousands was infected."
+- Scope Requirement:** The minimizer must apply to outbreak/population risk, NOT individual case descriptions.
+- ✓ "Only 3 farms out of 1000" (minimizes outbreak scope)
+- ✗ "The lone symptom was conjunctivitis" (describes single patient)
+
+
+---
+### Pattern: Q11: Dominant Reassuring Quote
+**Frame:** Variable
+**Hop:** Q11
+**QUICK CHECK:** • Direct QUOTE contains explicit Alarmist cue (**EXTREMELY CONCERNING / IMMEDIATE ACTION / HIGH RISK / CATASTROPHIC**) **OR** explicit Reassuring cue (**NO CAUSE FOR ALARM / EXCELLENT NEWS / SAFE TO EAT / VERY WELL PROTECTED**).  
+• If both or balanced → `"no"` (mixed → Neutral).  
+→ If one side dominant → `"yes"` and append `||FRAME=Alarmist` or `||FRAME=Reassuring`.
+
+**PATTERN EXAMPLES:**
+- "no cause for alarm," "excellent news," "very well protected"
+
+**CLARIFICATIONS:**
+- Primacy of Framed Quotations"?
+- Primacy of Framed Quotations (SUPERSEDES PREVIOUS QUOTE RULES)**
+**Technical-term override**  
+Before deciding that a quoted risk-adjective is Alarmist under Q11,  
+**skip** the cue if the adjective is immediately preceded (≤ 3 tokens) by the
+whitelisted biomedical collocations:  
+*"highly pathogenic"*, *"highly pathogenic avian"*, *"HPAI"*.  
+Rationale: Q1 technical-term guard has higher precedence and treats these
+as neutral taxonomy, not intensification.
+- Descriptive vs Amplifying:** Expert descriptions of biological/scientific facts are NEUTRAL unless they use explicit framing language.
+- ✗ "The virus doesn't just locate in the lungs" (neutral description)
+- ✓ "This is extremely concerning - the virus spreads beyond lungs" (explicit alarm)
+
+
+---
+
+# NEUTRAL INDICATORS
+Patterns that indicate neutral, factual reporting.
+
+---
+### Pattern: Q7: Bare Negation + Calming Cue
+**Frame:** Neutral
+**Hop:** Q7
+**QUICK CHECK:** • Sentence shows BARE NEGATION (**NO / NOT / UNLIKELY / POSES NO RISK / NO EVIDENCE / DOES NOT**) **AND** lacks any calming keyword **or optimism adjective** (**welcome / encouraging / heartening / positive / optimistic / upbeat**)?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "no cases detected, so consumers can be confident," "unlikely to affect supply, keeping risk very low"
+
+**CLARIFICATIONS:**
+- **  
+`poses no risk`, `unlikely to cause`, `no evidence of`, `not expected to`,
+`does not affect`, `cannot spread to`, **"does not pose a threat"**
+- ️ Additional problematic phrasings that remain NEUTRAL:**
+- "unlikely to affect consumers"
+- "no evidence of transmission"  
+- "doesn't pose a risk to humans"
+- "not expected to cause problems"
+- "will not impact food supply"
+
+
+---
+### Pattern: Q8: Capability + Active Reassurance
+**Frame:** Neutral
+**Hop:** Q8
+**QUICK CHECK:** • Describes CAPABILITY / PREPAREDNESS (**PREPARED / PLAN / SYSTEM / PROTOCOL / RESOURCES / STOCKPILED / DEVELOPED**) **AND** no calming keyword (**SAFE / REST EASY / UNDER CONTROL / ALARM**) within 40 tokens?  
+• If the sentence already fires Q5 "Transient‑Issue Minimiser"  
+  (e.g. contains "short‑term blip", "resolve quickly"), **skip Q8**.
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "stockpiled 30M doses, which is excellent news and means citizens are very well protected," "systems in place, so public can rest easy"
+
+
+---
+### Pattern: Q9: Vivid Economic Verbs
+**Frame:** Neutral
+**Hop:** Q9
+**QUICK CHECK:** • Reports ECON metric with standard verb (**ROSE / FELL / INCREASED / DECLINED / WERE UP / WERE DOWN / %**) **AND** lacks vivid verbs (**SKYROCKETED / PLUMMETED / CRASHED**) or risk adjectives?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "prices skyrocketed," "costs plummeted," "markets crashed"
+
+**CLARIFICATIONS:**
+- Trade/Price Reporting Rule:** Statements about financial metrics (exports, imports, sales, production) are treated as factual reporting → Neutral, even if they contain numbers or comparisons, unless explicit framing language is added.
+
+
+---
+### Pattern: Q9: Risk Adjectives + Economics
+**Frame:** Neutral
+**Hop:** Q9
+**QUICK CHECK:** • Reports ECON metric with standard verb (**ROSE / FELL / INCREASED / DECLINED / WERE UP / WERE DOWN / %**) **AND** lacks vivid verbs (**SKYROCKETED / PLUMMETED / CRASHED**) or risk adjectives?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "catastrophic losses," "devastating decline," "crippling costs"
+
+**CLARIFICATIONS:**
+- Trade/Price Reporting Rule:** Statements about financial metrics (exports, imports, sales, production) are treated as factual reporting → Neutral, even if they contain numbers or comparisons, unless explicit framing language is added.
+
+
+---
+### Pattern: Q10: Future Relief + Current Reassurance
+**Frame:** Neutral
+**Hop:** Q10
+**QUICK CHECK:** • Contains FUTURE‑RELIEF modal (**MAY / MIGHT / COULD / EXPECT / PREDICT / HOPE**) **AND** relief verb (**EASE / IMPROVE / NORMALIZE / END / RELIEF / RECOVERY**) without current calming keyword?  
+→ If yes → `"yes"` (Neutral); else → `"no"`.
+
+**PATTERN EXAMPLES:**
+- "Because measures are working, restrictions may end soon, bringing relief," "situation improving, so outlook is positive"
+
+
+---
+### Pattern: Q12: Remaining Framing Cues
+**Frame:** Neutral
+**Hop:** Q12
+**QUICK CHECK:** • After checking Q1‑Q11, are **zero** Alarmist or Reassuring cues left?  
+→ If yes → `"yes"` (Neutral); else → `"no"` and re‑evaluate higher‑priority hops.
+
+**PATTERN EXAMPLES:**
+- Any missed intensifiers, potent verbs, explicit calming language
+
+**CLARIFICATIONS:**
+- ** This rule applies if both the author's presentation and the presentation by any quoted sources are neutral.
+
+
+---
+
+# PRECEDENCE RULES
+
+When multiple patterns match, apply these rules:
+1. If both Alarmist and Reassuring cues present → Neutral (mixed signals)
+2. Higher-numbered questions (Q1-Q4) take precedence over lower ones
+3. Explicit quotes (Q11) can override authorial framing
+4. Technical terms (e.g., "highly pathogenic avian influenza") never count as intensifiers
+
+---
+
+# UNIVERSAL GUARDS
+
+These apply to ALL patterns:
+1. **Source Requirement**: For reassuring cues, speaker must be official/authority or author
+2. **Context Requirement**: Cues must relate to the main threat, not background conditions
+3. **Technical Term Guard**: "highly pathogenic (avian) influenza" and "HPAI" are neutral taxonomy
+4. **Containment Override**: Containment verbs (culled, destroyed) can neutralize some patterns

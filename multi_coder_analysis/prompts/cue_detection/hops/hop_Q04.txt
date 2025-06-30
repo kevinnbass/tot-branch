@@ -1,0 +1,22 @@
+---
+meta_id: Q4
+frame: Alarmist
+summary: "Loaded rhetorical question for alarm"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q4 – Loaded Rhetorical Question for Alarm
+Using your CUE_MAP, decide if the segment includes a *Loaded Question* cue (e.g., "Should consumers be worried?", "How long can we ignore this?").
+
+• If yes → answer "yes".  
+• If not → "no".  
+• "uncertain" only when unclear.
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite cue if yes>"
+}
+``` 

@@ -1,0 +1,20 @@
+---
+meta_id: Q7
+frame: Neutral
+summary: "Bare negation without explicit calming cue"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q7 – Bare Negation (Neutral)
+Answer "yes" if your CUE_MAP shows a *Bare Negation* cue (e.g., "no evidence", "does not pose a risk", "unlikely to affect") **and** the segment does NOT contain any explicit calming or alarmist cues.
+
+Otherwise "no" (or "uncertain").
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote negation if yes>"
+}
+``` 

@@ -1,0 +1,111 @@
+---
+meta_id: Q2
+row_map:
+  Q2.1: High-Potency Verbs
+  Q2.2: Superlative + Negative Noun
+  Q2.3: Critical Alert Phrase
+  Q2.4: Potent Metaphors
+  Q2.5: Intensifier + Harm Noun
+regex_map:
+  Q2.1: [2.HighPotencyVerbMetaphor]
+  Q2.2: [2.HighPotencyVerbMetaphor]
+  Q2.3: [2.OnHighAlert.Live, 2.HighPotencyVerbMetaphor]
+  Q2.4: [2.HighPotencyVerbMetaphor]
+  Q2.5: [2.HighPotencyVerbMetaphor]
+frame: Alarmist
+summary: "High-potency verb / potent metaphor / on high alert"
+---
+### QUICK DECISION CHECK
+• Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
+  **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: An outbreak ravaged farms across three states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"yes","rationale":"The high-potency verb 'ravaged' actively frames the situation alarmingly."}
+
+# NO example
+## Input Segment: The outbreak affected farms in several states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"no","rationale":"'affected' is a moderate verb without dramatic framing - lacks high potency alone."}
+
+=== USER TASK ===
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q2
+**Q2: High-Potency Verb/Metaphor**
+Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 'skyrocketed,' 'crippling') or a potent metaphor (e.g., 'ticking time-bomb,' 'nightmare scenario') to describe the event or its impacts, where such language actively frames the situation alarmingly, as detailed in the rules?
+
+**Q2 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+<!-- Q2.1 -->
+| **High-Potency Verbs** | "ravaged," "devastated," "skyrocketed," "plummeted," "crashed," "nosedived," "tanked," "crippling," "unleashed," "slaughtered," **"writhing," "convulsing," "gasping," "twitching," "screaming," "trembling," "seizing"** | ✓ |
+| **Neutral Economic Trend** | "prices are trending sharply higher/lower" | → **Neutral** |
+<!-- Q2.2 -->
+| **Superlative + Negative Noun** | "most expensive disaster," "worst crisis," "record outbreak," "record-breaking catastrophe" | ✓ |
+<!-- Q2.5 -->
+| **Intensifier + Harm Noun** | — | — |
+| *Intensifier + Harm Noun* (handled by regex ≥ 2025-06-23) | — | — |
+<!-- Q2.3 -->
+| **Critical Alert Phrase**(**same sentence must name a threat: outbreak, virus, flu, risk, danger …**) | "on high alert" (threat can appear **before or after** in ≤ 40 chars) | ✓ |
+<!-- Q2.4 -->
+| **Potent Metaphors** | "ticking time-bomb," "nightmare scenario," **"death sentence," "killer blow,"** "raging inferno," "powder keg," "house of cards" | ✓ |
+| **Moderate Verbs (alone)** | "hit," "swept," "surged" (without scale/impact details) | → Neutral |
+| **Psychological Verbs** | "spark fears," "stoke concern," "reignite worries" *without* vivid intensifier or scale | → Neutral |
+
+**Outcome:**
+**Outcome when Yes :** Label = Alarmist
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+
+**🔍 Detailed Rules & Examples:**
+
+**Containment override reminder** – If the sentence already contains a containment verb (cull, slaughter …) **do not** fire Q2. Let it drop to Q3, which handles the scale rule.
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+* Superlative **or intensifier** preceding a **harm noun**
+  (mortality, losses, disaster, outbreak, crisis, toll, etc.)
+  communicates scale the same way a superlative does; treat it as
+  Alarmist under Q2 unless a higher‑precedence cue fires.
+
+**Alarmist - Examples:**
+* "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+* Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+* **Example (Author-driven, vivid metaphor & intensifier):**
+  * Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+  * Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+* **Example (Vivid verb + scale from Author):** Author: "The disease ravaged poultry flocks across three states, leading to immense economic losses." (Alarmist → 'Ravaged' + 'across three states' + 'immense economic losses' create a strong alarmist frame).
+* **Example (Vivid verb + scale from Author):** Author: "Confirmed cases soared past one million, overwhelming healthcare systems." (Alarmist → 'Soared past one million' + 'overwhelming healthcare systems' creates a strong alarmist frame).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – High-potency verb** | "An outbreak ravaged farms across three states." | **Alarmist** | "ravaged" (vivid, destructive verb) |
+| **Alarmist – Vivid symptom verb** | "Ducks **writhed on the ground**, convulsing before death." | **Alarmist** | "writhed", "convulsing" |
+| **Alarmist – Superlative-negative-noun** | "The H5N1 wave is now considered the most expensive animal-health disaster in U.S. history." | **Alarmist** | "most expensive...disaster" (superlative + negative noun) |
+| **Alarmist – Critical alert phrase** | "State authorities remain on high alert for new cases." | **Alarmist** | "on high alert" (critical alert phrase) |
+| **Neutral – price trend** | "Egg prices have been *trending sharply higher* in recent weeks." | **Neutral** | ordinary price verb |
+
+**Boundary guard:** If the verb is "hit / hitting / swept / surged" but the segment gives no numbers, adjectives or metaphors that convey magnitude, treat it as Neutral. Alarmist fires only when a concrete scale/impact phrase is coupled.
+
+**⚠ Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+
+**⚠ Emotional reactions alone ≠ vivid language:** Simple emotional descriptors without vivid verbs/metaphors stay Neutral.
+- ✗ "very sad" (bare emotion)
+- ✓ "devastating heartbreak" (vivid + emotion)
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 

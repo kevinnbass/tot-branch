@@ -1,0 +1,20 @@
+---
+meta_id: Q3
+frame: Alarmist
+summary: "Moderate verb + scale / impact"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q3 – Moderate Verb + Scale/Impact
+Consult your CUE_MAP. If it contains "Moderate verb + scale/impact" cues (e.g., swept + millions, hit + record losses), answer "yes".
+
+If none present answer "no". Use "uncertain" if not sure.
+
+Return JSON in form:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite cue>"
+}
+``` 

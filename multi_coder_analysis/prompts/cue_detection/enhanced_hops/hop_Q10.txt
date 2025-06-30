@@ -1,0 +1,25 @@
+---
+meta_id: Q10
+frame: Neutral
+summary: "Speculation about relief without explicit calming"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q10
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q10.1: Future Relief Speculation`
+- `Q10.2: Hopeful Predictions`
+- `Q10.3: Timeline Speculation`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

@@ -1,0 +1,24 @@
+---
+meta_id: Q6
+frame: Reassuring
+summary: "Minimiser + scale contrast for reassurance"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q6
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q6.1: Minimiser + Scale Contrast`
+- `Q6.2: Minimiser + Explicit Comparison`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

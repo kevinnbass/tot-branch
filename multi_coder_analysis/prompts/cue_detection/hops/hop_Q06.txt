@@ -1,0 +1,20 @@
+---
+meta_id: Q6
+frame: Reassuring
+summary: "Minimiser + scale contrast for reassurance"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q6 – Minimiser + Scale Contrast
+Check your CUE_MAP. Answer "yes" if the segment uses a minimiser ("only", "just", "merely", etc.) *and* an explicit scale contrast/denominator ("out of", "%", "nationwide", etc.) that together downplay the scope.
+
+Otherwise "no" (or "uncertain" if unclear).
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite cue if yes>"
+}
+``` 

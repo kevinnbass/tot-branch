@@ -1,0 +1,166 @@
+{
+  "Q1.I1": {
+    "type": "inclusion",
+    "text": "Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)"
+  },
+  "Q1.E1": {
+    "type": "exclusion",
+    "text": "When \"volatile\" modifies *prices/markets/rates* it is treated as an **economic metric** and never triggers Q1."
+  },
+  "Q1.E2": {
+    "type": "exclusion",
+    "text": "> **Technical-term guard** – \"highly pathogenic\" used as part of the formal"
+  },
+  "Q1.E3": {
+    "type": "exclusion",
+    "text": "> disease name (HPAI) is **Neutral** unless further alarmist cues appear."
+  },
+  "Q1.E4": {
+    "type": "exclusion",
+    "text": "### Your JSON Reply:"
+  },
+  "Q1.E5": {
+    "type": "exclusion",
+    "text": "```json"
+  },
+  "Q1.E6": {
+    "type": "exclusion",
+    "text": "{"
+  },
+  "Q1.E7": {
+    "type": "exclusion",
+    "text": "\"answer\": \"yes|no|uncertain\","
+  },
+  "Q1.E8": {
+    "type": "exclusion",
+    "text": "\"rationale\": \"<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>\""
+  },
+  "Q1.E9": {
+    "type": "exclusion",
+    "text": "}"
+  },
+  "Q1.E10": {
+    "type": "exclusion",
+    "text": "```"
+  },
+  "Q1.S1": {
+    "type": "special",
+    "text": "Adjacency requirement: elements must be in same clause or adjacent"
+  },
+  "Q1.P1": {
+    "type": "precedence",
+    "text": "**\n* Authorial use of intensifiers (e.g., 'so,' 'very,' 'extremely,' 'incredibly,' 'particularly,' 'frighteningly') coupled with high-valence negative adjectives (e.g., 'destructive,' 'contagious') to describe the subject or its characteristics. The intensifier must clearly serve to heighten the emotional impact of the negative descriptor, pushing it beyond a factual statement of degree. Example: Author: 'Because the virus is *so deadly* to this species, culling is the only option.' → Alarmist. (Rationale: The intensifier 'so' amplifies 'deadly,' emphasizing the extreme nature and justifying the severe consequence, thereby framing the virus itself in alarming terms.)"
+  },
+  "Q1.P2": {
+    "type": "precedence",
+    "text": "**\n| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |\n|--------------|---------------------|-------------------|--------------|\n| **Alarmist – Intensifier + adjective** | \"The flu is so deadly that entire flocks are culled.\" | **Alarmist** | \"so deadly\" (intensifier + risk adjective) |\n| **Alarmist – Deadly-from-outset idiom** | \"H5N1 is deadly from the start, vets warn.\" | **Alarmist** | \"deadly from the start\" (fixed lethal-from-outset idiom) |\n| **NON-EXAMPLE** | \"Experts are *more worried* now.\" | **Neutral** | comparative + psychological adjective |"
+  },
+  "Q2.I1": {
+    "type": "inclusion",
+    "text": "Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)"
+  },
+  "Q2.I2": {
+    "type": "inclusion",
+    "text": "Superlative **or intensifier** preceding a **harm noun** (mortality, losses, disaster, outbreak, crisis, toll, etc.) communicates scale the same way a superlative does; treat it as Alarmist under Q2 unless a higher‑precedence cue fires."
+  },
+  "Q2.S1": {
+    "type": "special",
+    "text": "Distance requirement: within 40 characters"
+  },
+  "Q4.I1": {
+    "type": "inclusion",
+    "text": "Direct questions from the author that use explicitly loaded or emotionally charged language clearly designed to imply an Alarmist frame or instill fear/urgency in the reader."
+  },
+  "Q4.I2": {
+    "type": "inclusion",
+    "text": "**Example:** **Author:** \"With the system collapsing, can anyone truly feel safe anymore?\" (Alarmist. Cues: 'system collapsing,' 'truly feel safe anymore?' - rhetorical question implying no)."
+  },
+  "Q4.I3": {
+    "type": "inclusion",
+    "text": "**Non-Example (Neutral):** Author: \"What are the safety protocols in place?\" (Information-seeking)."
+  },
+  "Q4.I4": {
+    "type": "inclusion",
+    "text": "Use of loaded rhetorical questions by the quoted source or author that are designed to evoke fear, urgency, or strong concern by implying a severe problem or a dire lack of action."
+  },
+  "Q4.I5": {
+    "type": "inclusion",
+    "text": "Example (Author-driven): 'How many more animals have to die before we finally act decisively?' → Alarmist. (Rationale: The rhetorical question uses emotive language 'have to die' and implies criticism of inaction, framing the situation as urgent and severe.)"
+  },
+  "Q4.I6": {
+    "type": "inclusion",
+    "text": "Example (Quote-driven): 'The activist asked, \"Are we simply going to stand by while this disaster unfolds?\"' → Alarmist. (Rationale: The quoted rhetorical question uses 'disaster unfolds' to frame the situation alarmingly.)"
+  },
+  "Q4.I7": {
+    "type": "inclusion",
+    "text": "**Example (Rhetorical question from author implying worry):** Author: \"With new variants emerging rapidly, should humans be worried about the next pandemic?\" → Alarmist (if the context suggests this is not a simple information request but a way to frame emerging variants as a worrisome threat)."
+  },
+  "Q5.E1": {
+    "type": "exclusion",
+    "text": "**"
+  },
+  "Q5.E2": {
+    "type": "exclusion",
+    "text": "| **Pattern** | **Example** | **Why Neutral** |"
+  },
+  "Q5.E3": {
+    "type": "exclusion",
+    "text": "|-------------|-------------|-----------------|"
+  },
+  "Q5.E4": {
+    "type": "exclusion",
+    "text": "| **Bare Positive Facts** | \"no cases reported,\" \"tests negative,\" \"poses no risk\" | No explicit calming keyword |"
+  },
+  "Q5.E5": {
+    "type": "exclusion",
+    "text": "| **Bare Negation** | \"not a public-health concern\" | No calming amplification |"
+  },
+  "Q5.E6": {
+    "type": "exclusion",
+    "text": "| **Unintensified Low Risk** | \"risk is low,\" \"risks remain low,\" \"lower risk\" | Missing required intensifier - must have very/extremely/exceptionally |"
+  },
+  "Q5.E7": {
+    "type": "exclusion",
+    "text": "| **Corporate Preparedness** | \"Tyson Foods is prepared\" | No official status + no safety link |"
+  },
+  "Q5.S1": {
+    "type": "special",
+    "text": "Distance requirement: within 40 characters"
+  },
+  "Q6.S1": {
+    "type": "special",
+    "text": "Distance requirement: within 20 characters"
+  },
+  "Q6.S2": {
+    "type": "special",
+    "text": "Distance requirement: within 20 characters"
+  },
+  "Q6.S3": {
+    "type": "special",
+    "text": "Distance requirement: within 50 characters"
+  },
+  "Q6.S4": {
+    "type": "special",
+    "text": "Distance requirement: within 50 characters"
+  },
+  "Q6.S5": {
+    "type": "special",
+    "text": "Adjacency requirement: elements must be in same clause or adjacent"
+  },
+  "Q8.S1": {
+    "type": "special",
+    "text": "Distance requirement: within 40 characters"
+  },
+  "Q11.S1": {
+    "type": "special",
+    "text": "Distance requirement: within 3 characters"
+  },
+  "Q11.S2": {
+    "type": "special",
+    "text": "Distance requirement: within 40 characters"
+  },
+  "Q11.S3": {
+    "type": "special",
+    "text": "Distance requirement: within 5 characters"
+  }
+}

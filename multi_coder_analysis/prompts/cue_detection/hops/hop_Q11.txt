@@ -1,0 +1,20 @@
+---
+meta_id: Q11
+frame: Variable
+summary: "Primacy of framed quotations"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q11 – Dominant Quote Check
+If the segment contains a *dominant* Alarmist or Reassuring quotation (as reflected in your CUE_MAP), answer "yes" and append `||FRAME=Alarmist` or `||FRAME=Reassuring` accordingly.
+
+If quotations are balanced or absent, answer "no" (or "uncertain").
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote and token if yes>"
+}
+``` 

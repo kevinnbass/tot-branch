@@ -1,0 +1,27 @@
+---
+meta_id: Q12
+frame: Neutral
+summary: "Default to neutral / final comprehensive check"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q12
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Are there NO remaining explicit framing cues, with facts presented purely factually?
+Check if the segment contains only:
+- `Q12.1: Factual Reporting`
+- `Q12.2: Technical Descriptions`
+- `Q12.3: Standard Procedures`
+- `Q12.4: Neutral Metrics`
+
+If yes (only neutral patterns, no alarmist/reassuring cues), answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – explaining why no explicit framing cues remain and facts are presented neutrally>"
+}
+```

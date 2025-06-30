@@ -1,0 +1,63 @@
+experiment:
+  name: "Enhanced Cue Detection 4-Way Comparison"
+  description: "Compare four cue detection formats: minimal_system, markdown slice, JSON parameterized, machine-readable"
+  date: "2024-12-29"
+
+execution:
+  parallel_workers: 4  # Run all 4 layouts in parallel
+  timeout_minutes: 40
+
+layouts:
+  # Baseline: minimal system prompt (long markdown)
+  minimal_system:
+    enabled: true
+    description: "Full minimal-system layout (header+rules in user prompt)"
+    sample_size: 100
+
+  # A: Traditional markdown with JSON rule slice
+  cue_detection_enhanced:
+    enabled: true
+    description: "Markdown format with injected rule slice"
+    sample_size: 100
+
+  # B: JSON parameterized format
+  cue_detection_enhanced_json:
+    enabled: true
+    description: "Fully parameterized JSON format"
+    sample_size: 100
+
+  # C: Ultra-compact machine-readable format
+  cue_detection_enhanced_machine:
+    enabled: true
+    description: "Ultra-compact machine-readable JSON format"
+    sample_size: 100
+
+# Batch variants (disabled by default)
+batch_layouts:
+  cue_detection_enhanced_batch:
+    enabled: false
+    description: "Batch markdown format"
+    sample_size: 100
+  cue_detection_enhanced_json_batch:
+    enabled: false
+    description: "Batch JSON format"
+    sample_size: 100
+  cue_detection_enhanced_machine_batch:
+    enabled: false
+    description: "Batch machine-readable format"
+    sample_size: 100
+
+# Disable other layouts
+other_layouts:
+  standard: {enabled: false}
+  recency: {enabled: false}
+  sandwich: {enabled: false}
+  question_first: {enabled: false}
+  hop_last: {enabled: false}
+  structured_json: {enabled: false}
+  segment_focus: {enabled: false}
+  instruction_first: {enabled: false}
+  parallel_analysis: {enabled: false}
+  evidence_based: {enabled: false}
+  xml_structured: {enabled: false}
+  primacy_recency: {enabled: false} 

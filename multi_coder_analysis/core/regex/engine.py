@@ -67,6 +67,13 @@ class Engine:
         self._rules = rules if rules is not None else COMPILED_RULES
         self._global_enabled = global_enabled
         self._force_shadow = force_shadow
+        # ------------------------------------------------------------------
+        # Backward-compatibility: vintage callers (e.g. run_multi_coder_tot)
+        # still poke a private attribute named `_FORCE_SHADOW`.  Maintain an
+        # alias so that those references keep working until the call-sites
+        # are migrated to the new camel-case name.
+        # ------------------------------------------------------------------
+        self._FORCE_SHADOW = force_shadow  # type: ignore[attr-defined]
         self._hit_logger = hit_logger
         self._rule_stats: dict[str, Counter] = {}
         self._stat_lock = threading.Lock()
@@ -88,6 +95,8 @@ class Engine:
     def set_force_shadow(self, flag: bool) -> None:
         """When True, regex runs but never short-circuits (shadow mode)."""
         self._force_shadow = flag
+        # Keep the legacy alias in sync
+        self._FORCE_SHADOW = flag  # type: ignore[attr-defined]
     
     def set_hit_logger(self, fn: Optional[Callable[[dict], None]]) -> None:
         """Register a callback to receive detailed match information."""

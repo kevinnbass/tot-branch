@@ -1,0 +1,30 @@
+---
+meta_id: Q5
+frame: Reassuring
+summary: "Explicit calming cue for reassurance"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q5.1: Direct Safety Assurances`
+- `Q5.2: Supply‑Safety Assurances`
+- `Q5.3: Confidence Statements`
+- `Q5.4: Calming Idioms`
+- `Q5.5: Direct Consumption Safety`
+- `Q5.6: Preparedness Calming Cue`
+- `Q5.7: Low‑Risk Evaluation`
+- `Q5.8: Positive Amplification`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

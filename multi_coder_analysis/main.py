@@ -287,6 +287,8 @@ def run_pipeline(config: Dict, phase: str, coder_prefix: str, dimension: str, ar
                 only_hop=args.only_hop,
                 layout=args.layout if hasattr(args, "layout") else "standard",
                 gold_standard_file=args.gold_standard,
+                examples_policy=args.examples,
+                reply_schema=args.reply_schema,
             )
         except Exception as e:
             logging.error(f"Tree-of-Thought pipeline failed with error: {e}", exc_info=True)
@@ -560,6 +562,12 @@ def main():
                         help='nucleus sampling p-value')
 
     # ------------------------------------------------------------------
+    # NEW – Confidence scoring for enhanced self-consistency
+    # ------------------------------------------------------------------
+    parser.add_argument('--confidence-scores', action='store_true',
+                        help='Enable confidence scores (0-100) and explanations for uncertain decisions')
+
+    # ------------------------------------------------------------------
     # Router / LeanHop options
     # ------------------------------------------------------------------
     parser.add_argument(
@@ -583,7 +591,8 @@ def main():
             'hop_last', 'structured_json', 'segment_focus', 'instruction_first',
             'parallel_analysis', 'evidence_based', 'xml_structured', 'primacy_recency',
             'minimal_segment_first', 'minimal_question_twice', 'minimal_json_segment',
-            'minimal_parallel_criteria', 'minimal_hop_sandwich'
+            'minimal_parallel_criteria', 'minimal_hop_sandwich',
+            'cue_detection_enhanced', 'cue_detection_enhanced_batch'
         ],
         help='Prompt layout strategy to use (default: standard)',
     )
@@ -614,6 +623,10 @@ def main():
         '--layout-config',
         help='Path to layout experiment configuration YAML file',
     )
+
+    # --- New experimental knobs for cue-detection mirror layouts ---
+    parser.add_argument('--examples', choices=['full', 'trim', 'none'], default='full', help='Control how many illustrative examples are injected into prompts')
+    parser.add_argument('--reply-schema', action='store_true', help='Append an RFC-8927 JSON-Schema block after the response format section (JSON layouts only)')
 
     args = parser.parse_args()
 

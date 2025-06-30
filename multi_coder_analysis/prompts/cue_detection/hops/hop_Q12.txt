@@ -1,0 +1,20 @@
+---
+meta_id: Q12
+frame: Neutral
+summary: "Default catch-all neutral"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q12 – Default Neutral
+If none of the previous cues fired (CUE_MAP contains no Alarmist or Reassuring cues) and no other rule applies, answer "yes" (Neutral by default).
+
+Otherwise "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<optional brief rationale>"
+}
+``` 

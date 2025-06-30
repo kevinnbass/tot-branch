@@ -1,0 +1,25 @@
+---
+meta_id: Q2
+frame: Alarmist
+summary: "High-potency verb / potent metaphor"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q2 – High-Potency Verb / Potent Metaphor
+Check your CUE_MAP. If it lists any of these cue labels, answer "yes":
+• High-potency verb  
+• Superlative + negative noun  
+• Critical alert phrase  
+• Potent metaphor  
+• Intensifier + harm noun
+
+Otherwise answer "no". Use "uncertain" only when genuinely unsure.
+
+Return JSON only:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens quoting cue if yes>"
+}
+``` 

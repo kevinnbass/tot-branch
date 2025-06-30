@@ -1,0 +1,27 @@
+---
+meta_id: Q2
+frame: Alarmist
+summary: "High-potency verb / potent metaphor / on high alert"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q2
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q2.1: High-Potency Verbs`
+- `Q2.2: Superlative + Negative Noun`
+- `Q2.3: Critical Alert Phrase`
+- `Q2.4: Potent Metaphors`
+- `Q2.5: Intensifier + Harm Noun`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

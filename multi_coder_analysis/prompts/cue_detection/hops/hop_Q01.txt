@@ -1,0 +1,23 @@
+---
+meta_id: Q1
+frame: Alarmist
+summary: "Intensifier / comparative + risk-adjective"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q1 – Intensifier + Risk-Adjective
+Refer to the CUE_MAP you produced in *Step 1*. If the map includes any of the following cue labels, answer "yes":
+• Intensifier + risk adjective  
+• Comparative + risk adjective  
+• Fixed lethal-from-outset idiom
+
+Otherwise answer "no". If uncertain, answer "uncertain".
+
+Your JSON reply **MUST** follow this schema exactly:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote the decisive phrase if 'yes'>"
+}
+``` 

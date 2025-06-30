@@ -1,0 +1,26 @@
+---
+meta_id: Q11
+frame: Variable
+summary: "Primacy of framed quotations"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q11
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q11.1: Alarmist – Dominant Quote`
+- `Q11.2: Alarmist – Intensified High-Risk`
+
+If the segment contains a dominant alarmist quote, answer "yes" and append `||FRAME=Alarmist`.
+If the segment contains a dominant reassuring quote, answer "yes" and append `||FRAME=Reassuring`.
+If quotes are balanced/mixed or neutral only, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

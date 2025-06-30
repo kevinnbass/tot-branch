@@ -1,0 +1,25 @@
+---
+meta_id: Q1
+frame: Alarmist
+summary: "Intensifier / comparative + risk-adjective"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q1
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q1.1: Intensifier + Risk-Adj`
+- `Q1.2: Comparative + Risk-Adj`
+- `Q1.3: Fixed Lethal-from-Outset Idiom`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

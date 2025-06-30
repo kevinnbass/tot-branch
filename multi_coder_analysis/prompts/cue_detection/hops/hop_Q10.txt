@@ -1,0 +1,20 @@
+---
+meta_id: Q10
+frame: Neutral
+summary: "Speculation about relief without explicit calming"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q10 – Future Relief Speculation (Neutral)
+Answer "yes" if CUE_MAP contains a *Future Relief Speculation* cue (modal verbs with relief terms like "could ease", "may improve", "recovery expected") and the segment lacks explicit calming or alarmist language.
+
+Otherwise "no" / "uncertain".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote cue if yes>"
+}
+``` 

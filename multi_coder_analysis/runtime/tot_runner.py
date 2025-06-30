@@ -410,6 +410,31 @@ def execute(cfg: RunConfig) -> Path:
         except Exception as _e:
             logging.warning("Could not write determinative traces: %s", _e)
 
+        # --------------------------------------------------------------
+        # Consolidated LOW-CONFIDENCE trace export (confidence ≤4 on 5-pt scale
+        # or ≤80 on 0-100 scale).  Export only when confidence_scores flag on.
+        # --------------------------------------------------------------
+        if cfg.confidence_scores:
+            try:
+                _low_conf_path = cfg.output_dir / f"low_confidence_traces_{datetime.now():%Y%m%d_%H%M%S}.jsonl"
+                with _low_conf_path.open("w", encoding="utf-8") as _fh:
+                    for _ctx in all_ctxs:
+                        for _tr in _ctx.reasoning_trace:
+                            conf = _tr.get("confidence")
+                            if conf is None:
+                                continue
+                            try:
+                                conf_val = float(conf)
+                            except Exception:
+                                # Skip unparsable confidence values
+                                continue
+                            low = (conf_val <= 4) if conf_val <= 5 else (conf_val < 80)
+                            if low:
+                                _fh.write(_json.dumps(_tr, ensure_ascii=False) + "\n")
+                logging.info("Low-confidence traces (≤4 or <80) written ➜ %s", _low_conf_path)
+            except Exception as _e:
+                logging.warning("Could not write low-confidence traces: %s", _e)
+
         return out_path
 
     # --- Legacy path (default) ---

@@ -1,0 +1,26 @@
+---
+meta_id: Q8
+frame: Neutral
+summary: "Capability/preparedness without active reassurance"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q8
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q8.1: Development Capabilities`
+- `Q8.2: Response Measures`
+- `Q8.3: Preparedness Statements`
+- `Q8.4: Future Possibilities`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

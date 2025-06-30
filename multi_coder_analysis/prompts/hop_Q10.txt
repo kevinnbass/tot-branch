@@ -5,9 +5,9 @@ row_map:
   Q10.2: Hopeful Predictions
   Q10.3: Timeline Speculation
 regex_map:
-  Q10.1: [10.ReliefSpeculation]
-  Q10.2: [10.ReliefSpeculation]
-  Q10.3: [10.ReliefSpeculation]
+  Q10.1: [10.ModalReliefVerb.Live, 10.ExpectedRelief.Live, 10.ShortLivedSpeculation.Live, 10.TimeboxedRelief.Live, 10.OutlookImprovement.Live]
+  Q10.2: [10.PredictRelief.Live, 10.HopeForRelief.Live]
+  Q10.3: [10.TimeboxedRelief.Live, 10.ExpectedRelief.Live]
 frame: Neutral
 summary: "Speculation about relief without explicit calming"
 ---

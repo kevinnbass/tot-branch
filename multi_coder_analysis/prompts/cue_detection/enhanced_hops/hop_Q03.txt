@@ -1,0 +1,24 @@
+---
+meta_id: Q3
+frame: Alarmist
+summary: "Moderate verbs + scale/impact"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q3
+Review the CUE_MAP you generated using the ENHANCED CHECKLIST.
+
+Does the segment trigger any of the following patterns according to their detailed rules?
+- `Q3.1: Moderate Verb (past-tense) + Scale`
+- `Q3.2: Moderate Verb (past-tense) + Quantity`
+
+If yes, and no exclusions apply, answer "yes". Otherwise, answer "no".
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – cite pattern and cue if yes>"
+}
+```

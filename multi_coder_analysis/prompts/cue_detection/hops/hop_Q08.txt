@@ -1,0 +1,20 @@
+---
+meta_id: Q8
+frame: Neutral
+summary: "Capability/preparedness without active reassurance"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q8 – Capability / Preparedness (Neutral)
+If CUE_MAP indicates a *Capability / Preparedness* cue (e.g., "systems in place", "vaccine can be developed") **without** an explicit calming keyword, answer "yes".
+
+If the capability statement includes calming language (then it belonged to Q5) or if no capability cue, answer "no" (or "uncertain").
+
+Return JSON:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote cue if yes>"
+}
+``` 

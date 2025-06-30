@@ -1,0 +1,26 @@
+---
+meta_id: Q5
+frame: Reassuring
+summary: "Explicit calming cue for reassurance"
+---
+### Segment (StatementID: {{statement_id}})
+{{segment_text}}
+
+### Question Q5 – Explicit Calming Cue for Reassurance
+Using your CUE_MAP, determine whether the segment contains any *Explicit Calming* cues such as:
+• Direct safety assurances (e.g., "no cause for alarm", "fully under control")
+• Confidence/optimism statements ("we are confident", "rest assured")
+• Supply-safety assurances ("no shortage", "ample supply")
+• Calming idioms ("don't panic")
+• Low-risk with intensifier ("risk is *very* low")
+• Positive amplification ("excellent news")
+
+If present → "yes"; if absent → "no"; otherwise "uncertain".
+
+Return JSON only:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens – quote cue if yes>"
+}
+``` 

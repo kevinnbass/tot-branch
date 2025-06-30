@@ -1,0 +1,212 @@
+===== SYSTEM PROMPT =====
+You are an expert claim-framing coder following a mandatory 12-step decision tree.
+
+===== USER PROMPT =====
+# === GLOBAL BEDROCK PRINCIPLE (DO NOT DELETE) ===
+# You are an expert claim-framing coder following a mandatory 12-step decision tree.
+# Your analysis must be grounded *only* in the provided text and rules.
+# You will be asked one question at a time.
+#
+# Bedrock Principle: CODE THE PRESENTATION, NOT THE FACTS.
+# The frame is determined by explicit linguistic choices, not the objective severity of the facts.
+# A severe fact presented factually is Neutral. A reassuring fact presented factually is Neutral.
+# ─────────────────────────────────────────────────────────────
+#  SYMMETRY RULE  (central, referenced not repeated)
+#  -----------------------------------------------------------
+#  Alarmist ≠ "any negative fact"; Reassuring ≠ "any positive fact".
+#  • **Alarmist fires only when a negative / hazardous fact is explicitly
+#    amplified** (intensifier, vivid verb, scale exaggeration, loaded metaphor).
+#  • **Reassuring fires only when a positive / low-risk fact is explicitly
+#    framed for calm or safety** ("public can rest easy", "risk is *very* low",
+#    "fully under control", "only 1 out of 1 000 cases", etc.).
+#  • Positive or low-risk facts stated neutrally → **Neutral**.
+#  • Negative or high-risk facts stated neutrally → **Neutral**.
+#
+#  🔄 **ACTIVE-RHETORIC PRINCIPLE** — a cue fires only when the
+#  wording itself frames perception (intensifier, minimiser, "safe", etc.).
+#  Stating a good/bad fact neutrally ≡ Neutral.
+
+# === NEW CROSS‑HOP PRINCIPLE – SEMANTIC CONTEXT HANDLING ===
+# Where a *quantifier / denominator* or *impact scale* lands in an
+# **immediately adjacent clause or sentence** that is inseparable from
+# the first (e.g. "Only three samples were irregular. Out of 5 000 that
+# is a tiny share.") the model **may treat the pair as one rhetorical
+# unit**.  Use this leeway **only when**  
+# • the second clause is ≤ 20 characters away after the period/dash, **and**  
+# • it unambiguously quantifies the *same* event.  
+# Regex cannot reason over adjacency; the LLM must decide.
+
+# === TECH_TERM_GUARD  (canonical, single source of truth) ===
+# The biomedical collocations below are neutral taxonomic labels and
+# NEVER count as intensifiers:  
+#     "highly pathogenic (avian) influenza", "HPAI",
+#     "highly pathogenic / virulent / contagious / transmissible"
+# when occurring ≤ 3 tokens before a pathogen name.  A separate alarm
+# cue must fire for Alarmist coding.
+# ─────────────────────────────────────────────────────────────
+
+## Context guard for vivid language
+> A vivid verb/adjective that colours a **background condition**  
+> (e.g. "amid **soaring** inflation", "during a **plunging** market")  
+> is **ignored** for Alarmist coding.  
+> Alarmist cues fire only when the vivid language depicts the threat's
+> **own realised impact** (cases, deaths, prices, losses, shortages, etc.).
+
+> **Context guard for psychological verbs**
+> *Spark, stoke, reignite,* or *raise fears* describe a **public reaction**, not the realised impact of the threat itself.
+> Treat them as **Neutral** unless the sentence either  
+> (a) uses a vivid intensifier (*"mass panic"*, *"public alarm"*) **or**  
+> (b) couples the verb with a concrete scale of realised harm  
+> (e.g. "sparked panic **after** 5 million birds died").
+> Plain "reigniting fears of another outbreak" is Neutral.
+
+#
+# ⇩ Precedence Ladder (authoritative; other hops now *reference* this ID)
+# Precedence Ladder: If multiple cues appear, the highest-ranking rule (lowest Q number) determines the frame.
+# 1. INTENSIFIER + RISK-ADJECTIVE -> Alarmist
+# 2. VIVID-VERB -> Alarmist
+# 3. MODERATE-VERB + SCALE/METRIC -> Alarmist
+# 4. EXPLICIT CALMING -> Reassuring  
+#    (Inside Q5 the row order Confidence > Preparedness > Low-Risk > Amplification)
+#   • Direct food-safety assurances ("safe to eat/for consumption") belong here.
+# 5. BARE NEGATION / CAPABILITY -> Neutral
+# 6. DEFAULT -> Neutral
+# If a segment simultaneously triggers an Alarmist cue **and** a Reassuring cue,
+# the presentation is **mixed** → code **Neutral** (see Q12 default rule).
+# **Technical‑term guard is absolute** – "highly pathogenic (avian) influenza"
+# and similar taxonomy never functions as an intensifier, even inside quotes.
+#
+# You MUST reply in JSON format ONLY. Your entire response must be a single JSON object.
+
+# ─────────────────────────────────────────────────────────────
+#  MANDATORY STEP-BY-STEP DECISION PROCESS  (applies to every hop)
+#  -----------------------------------------------------------
+#  1. Start with Q1 and evaluate strictly against its rule text.
+#  2. **If** your answer is **"yes"**:  
+#       • Emit the frame dictated by the Precedence Ladder.  
+#       • **Immediately STOP** evaluating lower-numbered hops.  
+#       • Proceed to the self-audit checks below.  
+#  3. Else → move to the next hop (Q {n + 1}) and repeat.
+#
+#  ✅ The 6-point self-audit checklist has been moved to a shared
+#  **GLOBAL_FOOTER.txt** fragment that is appended *after* the
+#  `YOUR JSON REPLY` stub inside every hop prompt so the model
+#  reads it immediately before generating its answer.
+# ───────────────────────────────────────────────────────────── 
+
+### QUICK DECISION CHECK
+• Contains any HIGH‑POTENCY VERB (**RAVAGED / DEVASTATED / SKYROCKETED / PLUMMETED / CRASHED / NOSEDIVED / TANKED / CRIPPLING / SPIRALLED / BALLOONED / ROCKETED**)  
+  **OR** ALERT phrase (**ON HIGH ALERT**) **OR** METAPHOR (**TICKING TIME‑BOMB / NIGHTMARE SCENARIO**)?  
+→ If yes → `"yes"`; else → `"no"`.
+
+=== FEW-SHOT EXAMPLES ===
+# YES example
+## Input Segment: An outbreak ravaged farms across three states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"yes","rationale":"The high-potency verb 'ravaged' actively frames the situation alarmingly."}
+
+# NO example
+## Input Segment: The outbreak affected farms in several states.
+## Question: Does the author/source employ a high-potency verb or potent metaphor?
+## JSON Output:
+{"answer":"no","rationale":"'affected' is a moderate verb without dramatic framing - lacks high potency alone."}
+
+=== USER TASK ===
+### Segment (StatementID: seg_v5_19_269_chunk0)
+'The initial strain then adapted and became endemic in the human population, giving rise to the seasonal flu viruses,' said Professor Massimo Palmarini, director of the Centre for Virus Research, Glasgow University.
+
+### Question Q2
+**Q2: High-Potency Verb/Metaphor**
+Does the author or a quoted source employ a high-potency verb (e.g., 'ravaged,' 'skyrocketed,' 'crippling') or a potent metaphor (e.g., 'ticking time-bomb,' 'nightmare scenario') to describe the event or its impacts, where such language actively frames the situation alarmingly, as detailed in the rules?
+
+**Q2 Pattern Recognition Table:**
+| **Pattern Type** | **Examples** | **→ Alarmist** |
+|------------------|--------------|----------------|
+<!-- Q2.1 -->
+| **High-Potency Verbs** | "ravaged," "devastated," "skyrocketed," "plummeted," "crashed," "nosedived," "tanked," "crippling," "unleashed," "slaughtered," **"writhing," "convulsing," "gasping," "twitching," "screaming," "trembling," "seizing"** | ✓ |
+| **Neutral Economic Trend** | "prices are trending sharply higher/lower" | → **Neutral** |
+<!-- Q2.2 -->
+| **Superlative + Negative Noun** | "most expensive disaster," "worst crisis," "record outbreak," "record-breaking catastrophe" | ✓ |
+<!-- Q2.5 -->
+| **Intensifier + Harm Noun** | — | — |
+| *Intensifier + Harm Noun* (handled by regex ≥ 2025-06-23) | — | — |
+<!-- Q2.3 -->
+| **Critical Alert Phrase**(**same sentence must name a threat: outbreak, virus, flu, risk, danger …**) | "on high alert" (threat can appear **before or after** in ≤ 40 chars) | ✓ |
+<!-- Q2.4 -->
+| **Potent Metaphors** | "ticking time-bomb," "nightmare scenario," **"death sentence," "killer blow,"** "raging inferno," "powder keg," "house of cards" | ✓ |
+| **Moderate Verbs (alone)** | "hit," "swept," "surged" (without scale/impact details) | → Neutral |
+| **Psychological Verbs** | "spark fears," "stoke concern," "reignite worries" *without* vivid intensifier or scale | → Neutral |
+
+**Outcome:**
+**Outcome when Yes :** Label = Alarmist
+**Outcome when No  :** Return `{ "answer":"no", "rationale": … }`
+
+**🔍 Detailed Rules & Examples:**
+
+**Containment override reminder** – If the sentence already contains a containment verb (cull, slaughter …) **do not** fire Q2. Let it drop to Q3, which handles the scale rule.
+
+**Alarmist - Inclusion Criteria:**
+* Authorial use of vivid, active verbs or metaphors to describe the spread or impact of a threat, especially when combined with its scale or severity, thereby emphasizing its uncontrolled, rapid, or overwhelming nature. Example: Author: 'The wildfire swept across the valley, devouring homes and forcing thousands to flee.' → Alarmist. (Rationale: 'Swept across' and 'devouring' are vivid, active verbs creating a sense of uncontrolled destructive power.)
+* Superlative **or intensifier** preceding a **harm noun**
+  (mortality, losses, disaster, outbreak, crisis, toll, etc.)
+  communicates scale the same way a superlative does; treat it as
+  Alarmist under Q2 unless a higher‑precedence cue fires.
+
+**Alarmist - Examples:**
+* "The economic impact of the subject on the agricultural sector is a ticking time-bomb for food security," said the analyst. (Alarmist → The analyst's quote uses a potent metaphor "ticking time-bomb," framing the economic impact with fear/urgency.)
+* Author: "Political inaction is steering us towards a catastrophic crisis related to the subject." (Alarmist → Author's framing of political aspect through loaded language like "catastrophic crisis," assuming no overriding framed quote.)
+* **Example (Author-driven, vivid metaphor & intensifier):**
+  * Author: "The virus is a raging inferno, tearing through populations with terrifying speed, leaving devastation in its wake."
+  * Reasoning: "Alarmist (Author-driven). Author uses vivid metaphor 'raging inferno,' 'tearing through,' 'terrifying speed,' and 'devastation in its wake.' Decisive cues: 'raging inferno,' 'terrifying speed'."
+* **Example (Vivid verb + scale from Author):** Author: "The disease ravaged poultry flocks across three states, leading to immense economic losses." (Alarmist → 'Ravaged' + 'across three states' + 'immense economic losses' create a strong alarmist frame).
+* **Example (Vivid verb + scale from Author):** Author: "Confirmed cases soared past one million, overwhelming healthcare systems." (Alarmist → 'Soared past one million' + 'overwhelming healthcare systems' creates a strong alarmist frame).
+
+**Few-Shot Exemplars:**
+| **Category** | **Example Sentence** | **Correct Label** | **Key Cue** |
+|--------------|---------------------|-------------------|--------------|
+| **Alarmist – High-potency verb** | "An outbreak ravaged farms across three states." | **Alarmist** | "ravaged" (vivid, destructive verb) |
+| **Alarmist – Vivid symptom verb** | "Ducks **writhed on the ground**, convulsing before death." | **Alarmist** | "writhed", "convulsing" |
+| **Alarmist – Superlative-negative-noun** | "The H5N1 wave is now considered the most expensive animal-health disaster in U.S. history." | **Alarmist** | "most expensive...disaster" (superlative + negative noun) |
+| **Alarmist – Critical alert phrase** | "State authorities remain on high alert for new cases." | **Alarmist** | "on high alert" (critical alert phrase) |
+| **Neutral – price trend** | "Egg prices have been *trending sharply higher* in recent weeks." | **Neutral** | ordinary price verb |
+
+**Boundary guard:** If the verb is "hit / hitting / swept / surged" but the segment gives no numbers, adjectives or metaphors that convey magnitude, treat it as Neutral. Alarmist fires only when a concrete scale/impact phrase is coupled.
+
+**⚠ Context caveat for "soaring/soared/soar":**  
+Treat "amid **soaring inflation**" or any usage where *soaring* modifies a **background, macro context** (inflation, interest-rates, temperatures, etc.) as **contextual — ignore for Alarmist coding**.  
+Only count it when the vivid verb modifies a **direct impact noun** of the threat (cases, prices, losses, deaths, production, shortages …).
+
+**⚠ Emotional reactions alone ≠ vivid language:** Simple emotional descriptors without vivid verbs/metaphors stay Neutral.
+- ✗ "very sad" (bare emotion)
+- ✓ "devastating heartbreak" (vivid + emotion)
+
+### Your JSON Reply:
+```json
+{
+  "answer": "yes|no|uncertain",
+  "rationale": "<max 80 tokens, must quote the decisive cue(s) from the text if answering 'yes'>"
+}
+``` 
+
+# ─────────────────────────────────────────────────────────────
+#  GLOBAL FOOTER – 6-POINT SELF-AUDIT (auto-appended to every hop)
+#  -----------------------------------------------------------
+✅ **SELF-AUDIT before you reply**
+1. If you answered **"yes"**, STOP processing further questions.
+2. Quote decisive cue(s) in the *rationale*.
+3. No Alarmist on neutrally stated **bad** facts.
+4. No Reassuring on neutrally stated **good / low-risk** facts.
+5. First "yes" only – no double hits / overrides.
+6. Output must be pure JSON and **nothing else**.
+
+🔧 **Implementation hint** – add a regression test where  
+Input: "We are confident our systems are ready." → expect Q5 = yes, Reassuring.
+
+*Re-read this list; fix any violation before sending.*
+# 7. If you reach **Q12** and still cannot assign a frame with certainty,
+#    return an **Unknown** label:
+#        { "answer":"unknown",
+#          "rationale":"Q12 reached with no decisive cues; frame unresolved" }
+#    Down-stream evaluation will skip these rows.
+# ───────────────────────────────────────────────────────────── 
